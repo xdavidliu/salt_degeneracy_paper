@@ -202,7 +202,14 @@ reference "fig:cylinder_modes"
 \begin_inset Formula $\cos m\phi$
 \end_inset
 
- [refs???].
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-cao_review,modeswitching2014,ref-matsko,ref-pnas_whispering"
+
+\end_inset
+
+.
  However, more recent microcavities often have other symmetry groups supporting
  degeneracies 
 \begin_inset CommandInset citation
@@ -212,7 +219,14 @@ key "inui_group"
 \end_inset
 
 , such as the 6-fold symmetry that commonly occurs in photonic-crystal resonator
-s [refs???] (as seen in Fig.
+s 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "englund"
+
+\end_inset
+
+ (as seen in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -267,7 +281,14 @@ key "ref-rotter_degeneracy"
  to check whether the steady state was stable, and they also checked the
  stability of the solution when the degeneracy was broken by a perturbation.
  This generalized many earlier works on ring-laser solutions and perturbations
- thereof [refs???].
+ thereof 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-risken_instability,ref-bidirectional,ref-MBring,ref-breaking_cylindrical_symmetry,ref-tamm"
+
+\end_inset
+
+.
  They reproduced the stability of the circulating solution near threshold,
  and found that far above the lasing threshold where nonlinearities are
  strong the circulating solution may become unstable (and is typically replaced
@@ -894,158 +915,6 @@ reference "eq:2mode_salt"
 \end_inset
 
 , and in the following sections we will explain how to implement this constraint.
-\end_layout
-
-\begin_layout Standard
-Overall, our approach to solving for degenerate SALT solutions has three
- conceptual pieces: (i) using perturbation theory to find the approximate
- solution near threshold in Sec.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Threshold-perturbation-theory"
-
-\end_inset
-
-, (ii) solving the nonlinear single-mode problem 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:1mode_salt"
-
-\end_inset
-
- above threshold in cases where symmetry guarantees the degeneracy, and
- (iii) restoring the degeneracy in cases where it is artificially broken
- (e.g.
- by the discretization of space in the numerical solver) in Sec.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Forcing-the-degeneracy"
-
-\end_inset
-
-.
- As described in Ref.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "direct_salt"
-
-\end_inset
-
-, we can employ Newton's method to solve the SALT equations because we can
- continuously vary the solution starting from the linear solution at threshold,
- which guarantees convergence if a small enough increment of the pump strength
- is chosen (since Newton always converges whenever the initial guess is
- sufficiently close to the root).
- In the case where the threshold solution is degenerate, however, in order
- to obtain an appropriate initial guess for the Newton iteration we must
- choose the 
-\emph on
-correct
-\emph default
- linear combination of the degenerate modes.
- We find this linear combination 
-\emph on
-analytically
-\emph default
- in Sec.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Threshold-perturbation-theory"
-
-\end_inset
-
- by employing perturbation theory in the pump strength around threshold.
- Furthermore, show that 
-\begin_inset Quotes eld
-\end_inset
-
-circulating
-\begin_inset Quotes erd
-\end_inset
-
- solutions (like 
-\begin_inset Formula $e^{im\phi}$
-\end_inset
-
-, but more generally a 
-\begin_inset Formula $\mathbf{E}_{1}+i\mathbf{E}_{2}$
-\end_inset
-
- combination of orthogonal standing-wave solutions) are the correct (stable)
- choice in typical 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- symmetry groups.
- Given this initial solution, in cases where the degeneracy arises from
- symmetry it turns out that the above-threshold nonlinear solutions preserve
- the degeneracy.
- However, a problem arises when the Maxwell-Bloch equations are discretized
- (e.g.
- with finite-difference or finite-element methods): often, the discretization
- will break the symmetry and hence the degeneracy, preventing us from finding
- a degenerate solution to Eqs.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:1mode_salt"
-
-\end_inset
-
- or 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:2mode_salt"
-
-\end_inset
-
-.
- For example, a finite-difference grid typically has square symmetry, but
- breaks the sixfold symmetry of a hexagonal cavity as in the photonic-crystal
- example from Ref.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "direct_salt"
-
-\end_inset
-
-.
- To solve this problem, we describe a general and convergent technique in
- Sec.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Forcing-the-degeneracy"
-
-\end_inset
-
- to restore the degeneracy: we find the 
-\emph on
-smallest
-\emph default
- perturbation 
-\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
-\end_inset
-
- that coalesces the poles (with only slightly more computational effort
- than the ordinary SALT solver).
- For simplicity, most of our discussion will focus on the case of a single
- degenerate lasing mode.
- Once this case is solved, however, we show in Sec.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Multi-mode-degenerate-lasing"
-
-\end_inset
-
- that the extension to multiple degenerate and non-degenerate lasing modes
- is straightforward, and is closely analogous to standard multi-mode SALT.
 \end_layout
 
 \begin_layout Section
