@@ -1,0 +1,5812 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass revtex4-1
+\options aps,article,twocolumn,superscriptaddress
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Degenerate lasing modes
+\end_layout
+
+\begin_layout Author
+D.
+ Liu
+\end_layout
+
+\begin_layout Affiliation
+Department of Physics, Massachusetts Institute of Technology, Cambridge,
+ Massachusetts 01239, USA
+\end_layout
+
+\begin_layout Author
+B.
+ Zhen
+\end_layout
+
+\begin_layout Affiliation
+Department of Physics, Massachusetts Institute of Technology, Cambridge,
+ Massachusetts 01239, USA
+\end_layout
+
+\begin_layout Author
+L.
+ Ge
+\end_layout
+
+\begin_layout Affiliation
+Department of Engineering Science and Physics, College of Staten Island,
+ and The Graduate Center, CUNY, Staten Island, New York 10314, USA
+\end_layout
+
+\begin_layout Author
+F.
+ Hernandez
+\end_layout
+
+\begin_layout Affiliation
+Department of Mathematics, Massachusetts Institute of Technology, Cambridge,
+ Massachusetts 01239, USA
+\end_layout
+
+\begin_layout Author
+A.
+ Pick
+\end_layout
+
+\begin_layout Affiliation
+Department of Physics, Harvard University, Cambridge, Massachusetts 01238,
+ USA
+\end_layout
+
+\begin_layout Author
+Stephan Burkhardt
+\end_layout
+
+\begin_layout Affiliation
+Institute for Theoretical Physics, Vienna University of Technology, Wiedner
+ Hauptstraβe 8-10/136, A-1040 Vienna, Austria
+\end_layout
+
+\begin_layout Author
+Matthias Liertzer
+\end_layout
+
+\begin_layout Affiliation
+Institute for Theoretical Physics, Vienna University of Technology, Wiedner
+ Hauptstraβe 8-10/136, A-1040 Vienna, Austria
+\end_layout
+
+\begin_layout Author
+Stefan Rotter
+\end_layout
+
+\begin_layout Affiliation
+Institute for Theoretical Physics, Vienna University of Technology, Wiedner
+ Hauptstraβe 8-10/136, A-1040 Vienna, Austria
+\end_layout
+
+\begin_layout Author
+S.
+ G.
+ Johnson
+\end_layout
+
+\begin_layout Affiliation
+Department of Mathematics, Massachusetts Institute of Technology, Cambridge,
+ Massachusetts 01239, USA
+\end_layout
+
+\begin_layout Abstract
+We introduce a theory of degenerate lasing modes based on SALT.
+ We present an analytical method to determine the stable superposition of
+ lasing modes, and also a numerical method for cases in which the degeneracy
+ is unphysically broken by the discretization.
+ We demonstrate these ideas in examples such as a uniform dielectric cylinder,
+ a metallic rectangular cavity, and a hexagonal cavity made of air holes.
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Many lasers are formed from high-symmetry microcavity geometries that have
+ degenerate resonant modes, most famously ring and disc resonators (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cylinder_modes"
+
+\end_inset
+
+) in which the clockwise and counterclockwise circulating modes are degenerate
+ (have the same complex resonant frequency).
+ In a linear system, any linear combination of these solutions also satisfies
+ Maxwell's equations, but above-threshold lasers have nonlinear gain, and
+ it is well known that the only stable lasing solutions of a ring are the
+ circulating solutions 
+\begin_inset Formula $\mathbf{E}\sim e^{im\phi}$
+\end_inset
+
+, as opposed to the standing-wave modes 
+\begin_inset Formula $\mathbf{E}\sim\sin m\phi$
+\end_inset
+
+, 
+\begin_inset Formula $\cos m\phi$
+\end_inset
+
+ [refs???].
+ However, more recent microcavities often have other symmetry groups supporting
+ degeneracies 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "inui_group"
+
+\end_inset
+
+, such as the 6-fold symmetry that commonly occurs in photonic-crystal resonator
+s [refs???] (as seen in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:phc_geometry"
+
+\end_inset
+
+) and much less is known about the lasing solutions in such cases.
+ In this paper, we describe the first general technique to solve for the
+ nonlinear degenerate steady-state lasing modes (above threshold) of any
+ such geometry, based on both analytical perturbative results near threshold
+ (Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+) and a numerical solver (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Forcing-the-degeneracy"
+
+\end_inset
+
+) generalizing the scalable SALT (steady-state ab-initio lasing theory)
+ method of our previous work 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "direct_salt"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Previous work has already dealt with the question of analyzing the stability
+ of a degenerate SALT solution 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+, but it assumed that the degenerate solution was already known and did
+ not address the problem of finding it; as a result, they explicitly studied
+ only the ring-resonator case in which the circulating solution was known.
+ In that work, given a SALT solution, a full linear-stability analysis was
+ applied numerically to the Maxwell--Bloch equations of lasing in order
+ to check whether the steady state was stable, and they also checked the
+ stability of the solution when the degeneracy was broken by a perturbation.
+ This generalized many earlier works on ring-laser solutions and perturbations
+ thereof [refs???].
+ They reproduced the stability of the circulating solution near threshold,
+ and found that far above the lasing threshold where nonlinearities are
+ strong the circulating solution may become unstable (and is typically replaced
+ by a oscillating limit-cycle solution).
+ Conversely, they found that breaking the degeneracy typically caused the
+ solution to become unstable (e.g.
+ oscillating between clockwise and counterclockwise modes), but that in
+ certain regimes (well above threshold) a stable solution re-appears.
+ Our work complements those results in two ways.
+ First, near threshold, we are able to both solve for the steady-state lasing
+ modes (Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+) 
+\emph on
+and
+\emph default
+ analyze their stability (Appendix B) 
+\emph on
+analytically
+\emph default
+, by perturbation theory in the basis of the degenerate linear solutions
+ at lasing threshold, and we generalize the notion of a circulating laser
+ mode to other symmetry groups and establish its stability near threshold.
+ (Even the degeneracy itself is somewhat unusual above threshold, because
+ the nonlinear gain breaks some of the symmetry in noncircular geometries,
+ leaving one with a 
+\begin_inset Quotes eld
+\end_inset
+
+chiral
+\begin_inset Quotes erd
+\end_inset
+
+ degeneracy as discussed in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-of-circulating"
+
+\end_inset
+
+, Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dichroism"
+
+\end_inset
+
+, and Appendix A.) Second, we develop a numerical solution technique above
+ threshold in Sec 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Forcing-the-degeneracy"
+
+\end_inset
+
+, generalizing earlier SALT methods, where a numerical nonlinear solver
+ is the only option; in this regime, our focus is on finding a degenerate
+ lasing mode in SALT (if one exists), and we defer to the results of Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+ for checking its stability after a solution is found.
+\end_layout
+
+\begin_layout Standard
+Far above threshold, the SALT equations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tureci_self-consistent_2006,ge_steady-state_2010,tureci_ab_2009"
+
+\end_inset
+
+ provide an elegant formulation of the problem of steady-state lasing modes:
+ they analytically eliminate the time dependence from the Maxwell–Bloch
+ equations to obtain a nonlinear Maxwell-like eigenproblem 
+\begin_inset Formula $\nabla\times\nabla\times\mathbf{E}_{\mu}=\omega_{\mu}^{2}\varepsilon_{\mathrm{SALT}}\mathbf{E}_{\mu}$
+\end_inset
+
+ for the lasing electric fields 
+\begin_inset Formula $\mathbf{E}_{\mu}$
+\end_inset
+
+ and frequencies 
+\begin_inset Formula $\omega_{\mu}$
+\end_inset
+
+, in which the permittivity 
+\begin_inset Formula $\varepsilon_{\mathrm{SALT}}$
+\end_inset
+
+ depends nonlinearly on both the field and frequency, and this equation
+ can be efficiently solved numerically by adapting standard techniques from
+ computational electromagnetism 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "direct_salt"
+
+\end_inset
+
+.
+ As described below and also in previous work 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy,modeswitching2014"
+
+\end_inset
+
+, the SALT framework applies very naturally to lasing of degenerate microcavitie
+s, assuming a stable degenerate steady state exists, but it turn out that
+ there there is a difficult complication that arises purely from 
+\emph on
+numerical
+\emph default
+ effects when a practical computation solver is applied.
+ In principle, what one would like to find from a degenerate SALT solver
+ is a lasing mode (e.g.
+ the clockwise circulating mode of a ring) with a passive pole (a pole of
+ the Green's function linearized around the lasing solution) that coincides
+ with the lasing frequency (e.g.
+ the counterclockwise resonance).
+ (There will be two possible lasing modes, e.g.
+ clockwise and counterclockwise, but only one solution can exist at a time
+ with nonzero amplitude due to the nonlinearity; which one is found will
+ depend on the starting "guess" of the SALT solver.
+ This guess is supplied by our perturbative solutions from Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+) However, when one discretizes a microcavity geometry for a numerical solver,
+ e.g.
+ in a finite-difference or finite-element method, often the discretization
+ itself breaks the symmetry and hence breaks the degeneracy slightly, causing
+ the passive pole to separate from the lasing frequency.
+ In a linear eigenproblem, this is at worst a minor annoyance, because from
+ the symmetry group one can easily identify resonance modes that 
+\begin_inset Quotes eld
+\end_inset
+
+should
+\begin_inset Quotes erd
+\end_inset
+
+ be degenerate 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "inui_group,tinkham"
+
+\end_inset
+
+.
+ In the nonlinear problem, however, the splitting prevents the desired solution
+ (e.g.
+ the circulating mode) from even existing in the SALT equations, because
+ the solver can no longer pick arbitrary superpositions of the formerly
+ degenerate modes, as described in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Forcing-the-degeneracy"
+
+\end_inset
+
+.
+ To fix this problem, we found a simple way to uniquely restore any degeneracy
+ broken by the discretization in a way that both guarantees convergence
+ to the correct solution as the discretization is refined and which generalizes
+ to an arbitrary number of lasing modes (in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Multi-mode-degenerate-lasing"
+
+\end_inset
+
+), and which is at worst a few times more computationally expensive than
+ our non-degenerate solver.
+\end_layout
+
+\begin_layout Section
+Background
+\end_layout
+
+\begin_layout Standard
+In Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "direct_salt"
+
+\end_inset
+
+, we presented a direct method to solve the equations of steady-state ab-initio
+ lasing theory (SALT).
+ So far, most cases in which SALT has been applied has dealt with either
+ single lasing modes or multimode regimes in which frequencies are far apart.
+ This is necessary for SALT because the stationary-inversion approximation
+ requires that any beating-terms average out over time .
+ When frequencies are close but not exactly degenerate, there is non-negligible
+ beating and SALT is invalid.
+ However, when two lasing modes are 
+\emph on
+exactly
+\emph default
+ degenerate, it turns out that SALT is still perfectly valid, because there
+ is an exact steady-state solution of the MB equations (for a single-mode
+ pair), provided that interference between the two degenerate modes is taken
+ into account.
+ Of course, it is possible that a degeneracy in the linear regime may split
+ in the presence of the laser nonlinearity above threshold.
+ However, if a degeneracy persists (and we have consistently observed this
+ for symmetry-induced degeneracies), our method will find it.
+ The literature on degenerate lasing modes has almost invariably dealt with
+ whispering-gallery modes in microdisks and ring resonators 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-cao_review,modeswitching2014,ref-matsko,ref-pnas_whispering"
+
+\end_inset
+
+.
+ Many of these earlier works discussed the stability of travelling-wave
+ modes in ring resonators under perturbations that break the symmetry 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-risken_instability,ref-bidirectional,ref-MBring,ref-breaking_cylindrical_symmetry,ref-tamm"
+
+\end_inset
+
+.
+ A very limited number of other works on degenerate lasing modes in other
+ geometries exist, such as Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-braun"
+
+\end_inset
+
+.
+ However, the microdisk is only a single example of a setting where one
+ can find degenerate resonant modes that can lase: there is a great variety
+ of other symmetric geometries where degeneracies can occur 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-svetlana"
+
+\end_inset
+
+.
+ So far, the  problem of degenerate modes in lasers has not been studied
+ systematically for the general case.
+ 
+\end_layout
+
+\begin_layout Standard
+The Maxwell--Bloch equation describing the inversion is
+\begin_inset Formula 
+\begin{equation}
+\dot{D}=D_{0}-D-D\sum_{\mu\nu}\left(\mathbf{E}_{\mu}\cdot\mathbf{E}_{\nu}^{\star}e^{i(\omega_{\nu}-\omega_{\mu})t}-cc\right).\label{eq:eq:Ddot_simplified_again}
+\end{equation}
+
+\end_inset
+
+Ordinarily, SALT assumes that all distinct modes have distinct frequencies,
+ i.e.
+ 
+\begin_inset Formula $\omega_{\mu}\neq\omega_{\nu}$
+\end_inset
+
+ when 
+\begin_inset Formula $\mu\neq\nu$
+\end_inset
+
+, which gives the stationary-inversion expression 
+\begin_inset Formula 
+\begin{equation}
+D=\frac{D_{0}}{1+\sum\left|\mathbf{E}_{\mu}\right|^{2}}.\label{eq:Dwrong}
+\end{equation}
+
+\end_inset
+
+when higher-frequency 
+\begin_inset Formula $\omega_{\mu}-\omega_{\nu}$
+\end_inset
+
+ (
+\begin_inset Formula $\nu\neq\mu$
+\end_inset
+
+) terms are dropped.
+ However, when there are degeneracies, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eq:Ddot_simplified_again"
+
+\end_inset
+
+ will have terms of the form 
+\begin_inset Formula $\mathbf{E}_{\mu}\cdot\mathbf{E}_{\nu}^{\star}$
+\end_inset
+
+ where 
+\begin_inset Formula $\mu\neq\nu$
+\end_inset
+
+, since 
+\begin_inset Formula $\omega_{\mu}=\omega_{\nu}$
+\end_inset
+
+ and one can no longer drop the 
+\begin_inset Formula $e^{i(\omega_{\mu}-\omega_{\nu})t}$
+\end_inset
+
+ term.
+ The correct expression for the stationary inversion will then be
+\begin_inset Formula 
+\begin{equation}
+D=\frac{D_{0}}{1+\sum^{\prime}\mathbf{E}_{\mu}\cdot\mathbf{E}_{\nu}^{\star}},\label{eq:Dcorrect}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\sum^{\prime}$
+\end_inset
+
+ indicates a summation over all 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $\nu$
+\end_inset
+
+ for which 
+\begin_inset Formula $\omega_{\mu}=\omega_{\nu}$
+\end_inset
+
+, not just for 
+\begin_inset Formula $\mu=\nu$
+\end_inset
+
+.
+ To illustrate the difference between the two, we examine a case in which
+ there are three lasing modes, two of which are degenerate with each other
+ (
+\begin_inset Formula $\omega_{1}=\omega_{2}\neq\omega_{3}$
+\end_inset
+
+).
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Dwrong"
+
+\end_inset
+
+ will have
+\begin_inset Formula 
+\[
+\left|\mathbf{E}_{1}\right|^{2}+\left|\mathbf{E}_{2}\right|^{2}+\left|\mathbf{E}_{3}\right|^{2}
+\]
+
+\end_inset
+
+ in the denominator, while eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Dcorrect"
+
+\end_inset
+
+ will have
+\begin_inset Formula 
+\begin{equation}
+\left|\mathbf{E}_{1}+\mathbf{E}_{2}\right|^{2}+\left|\mathbf{E}_{3}\right|^{2}.\label{eq:E123}
+\end{equation}
+
+\end_inset
+
+From Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:E123"
+
+\end_inset
+
+ we see that the degenerate pair can be thought of as a single-mode that
+ is a superposition of 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+.
+ This equivalence means that the solution to the lasing degenerate problem
+ can be thought of in two equivalent pictures.
+ First, we can think of the linear combination 
+\begin_inset Formula $\mathbf{E}=\mathbf{E}_{1}+\mathbf{E}_{2}$
+\end_inset
+
+ as a single mode that satisfies the equation
+\begin_inset Formula 
+\begin{align}
+-\nabla\times\nabla\times\mathbf{E} & =\omega^{2}\left(\varepsilon_{c}+DF\gamma(\omega)H\right)\mathbf{E}\label{eq:1mode_salt}\\
+H & \equiv\frac{1}{1+\left|\mathbf{E}\right|^{2}},\nonumber 
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $\varepsilon_{c}$
+\end_inset
+
+ is the 
+\begin_inset Quotes eld
+\end_inset
+
+cold cavity
+\begin_inset Quotes erd
+\end_inset
+
+ permittivity.
+ However, if there were originally a degenerate pair of modes at threshold
+ and we only have one lasing on pole on the real-
+\begin_inset Formula $\omega$
+\end_inset
+
+ axis, it may be unstable if the other pole is above the real axis.
+ Second, we can think of the two modes as 
+\emph on
+separately 
+\emph default
+satisfying the equations
+\begin_inset Formula 
+\begin{align}
+-\nabla\times\nabla\times\mathbf{E}_{\mu} & =\omega^{2}\left(\varepsilon_{c}+DF\gamma(\omega)H\right)\mathbf{E}_{\mu}\label{eq:2mode_salt}\\
+H & \equiv\frac{1}{1+\left|\mathbf{E}_{1}+\mathbf{E}_{2}\right|^{2}}.\nonumber 
+\end{align}
+
+\end_inset
+
+Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1mode_salt"
+
+\end_inset
+
+ is a less strict condition than Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2mode_salt"
+
+\end_inset
+
+.
+ Not all solutions that satisfy the former satisfy the latter.
+ If a lasing mode 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ satisfies the former there may be a second pole above the real-
+\begin_inset Formula $\omega$
+\end_inset
+
+ axis, rendering the lasing mode unstable to the second pole coming in.
+ However, if a pair of solutions satisfy Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2mode_salt"
+
+\end_inset
+
+, then both degenerate modes are accounted for and lie on the real-
+\begin_inset Formula $\omega$
+\end_inset
+
+ axis, and there is at least no instability due to the degeneracy.
+ We now describe this idea in detail.
+\end_layout
+
+\begin_layout Standard
+Prior to lasing, suppose that we have a 2-fold degenerate solution, correspondin
+g to a double pole in the Green function.
+ As the gain increases, and even when the system passes threshold and becomes
+ nonlinear, poles can shift (and degeneracies may split) but poles do not
+ appear or disappear discontinuously, so we should always expect there to
+ be two poles (in the linearized Green's function around the SALT solution)
+ arising from the original degenerate pair.
+ Given this fact, if we solve the single-mode SALT equations as in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1mode_salt"
+
+\end_inset
+
+, there is the danger that the other pole is pushed above the real-
+\begin_inset Formula $\omega$
+\end_inset
+
+ axis, in which case the lasing solution is unstable.
+ We give an example of this (an unstable 
+\begin_inset Quotes eld
+\end_inset
+
+standing-wave
+\begin_inset Quotes erd
+\end_inset
+
+ SALT solution) in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:threshold_perturbation_Examples"
+
+\end_inset
+
+.
+ On the other hand, if we find a solution of the two-mode SALT equations
+ as in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2mode_salt"
+
+\end_inset
+
+, then by construction we have placed both poles together on the real-
+\begin_inset Formula $\omega$
+\end_inset
+
+ axis and the degeneracy is not a source of instability (and the overall
+ stability of the Maxwell–Bloch equations can be checked as in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+).
+ However, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2mode_salt"
+
+\end_inset
+
+ has a drawback: the hole-burning term now depends on the relative phase
+ of 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+.
+ In the original SALT equations, even for multimode problems, the phase
+ was irrelevant and was chosen arbitrarily in order to obtain a solvable
+ system of equations.
+ If we remove the arbitrary phase choice, our equations (derived in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "direct_salt"
+
+\end_inset
+
+) become undetermined, so in this paper we will need to devise a modified
+ approach to solve Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2mode_salt"
+
+\end_inset
+
+.
+ Equivalently, if we solve the single-mode equation (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1mode_salt"
+
+\end_inset
+
+) but simultaneously constrain the other pole (the linearly independent
+ degenerate partner) to be degenerate with the lasing pole, then we will
+ effectively have solved Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2mode_salt"
+
+\end_inset
+
+, and in the following sections we will explain how to implement this constraint.
+\end_layout
+
+\begin_layout Standard
+Overall, our approach to solving for degenerate SALT solutions has three
+ conceptual pieces: (i) using perturbation theory to find the approximate
+ solution near threshold in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+, (ii) solving the nonlinear single-mode problem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1mode_salt"
+
+\end_inset
+
+ above threshold in cases where symmetry guarantees the degeneracy, and
+ (iii) restoring the degeneracy in cases where it is artificially broken
+ (e.g.
+ by the discretization of space in the numerical solver) in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Forcing-the-degeneracy"
+
+\end_inset
+
+.
+ As described in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "direct_salt"
+
+\end_inset
+
+, we can employ Newton's method to solve the SALT equations because we can
+ continuously vary the solution starting from the linear solution at threshold,
+ which guarantees convergence if a small enough increment of the pump strength
+ is chosen (since Newton always converges whenever the initial guess is
+ sufficiently close to the root).
+ In the case where the threshold solution is degenerate, however, in order
+ to obtain an appropriate initial guess for the Newton iteration we must
+ choose the 
+\emph on
+correct
+\emph default
+ linear combination of the degenerate modes.
+ We find this linear combination 
+\emph on
+analytically
+\emph default
+ in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+ by employing perturbation theory in the pump strength around threshold.
+ Furthermore, show that 
+\begin_inset Quotes eld
+\end_inset
+
+circulating
+\begin_inset Quotes erd
+\end_inset
+
+ solutions (like 
+\begin_inset Formula $e^{im\phi}$
+\end_inset
+
+, but more generally a 
+\begin_inset Formula $\mathbf{E}_{1}+i\mathbf{E}_{2}$
+\end_inset
+
+ combination of orthogonal standing-wave solutions) are the correct (stable)
+ choice in typical 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry groups.
+ Given this initial solution, in cases where the degeneracy arises from
+ symmetry it turns out that the above-threshold nonlinear solutions preserve
+ the degeneracy.
+ However, a problem arises when the Maxwell-Bloch equations are discretized
+ (e.g.
+ with finite-difference or finite-element methods): often, the discretization
+ will break the symmetry and hence the degeneracy, preventing us from finding
+ a degenerate solution to Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1mode_salt"
+
+\end_inset
+
+ or 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2mode_salt"
+
+\end_inset
+
+.
+ For example, a finite-difference grid typically has square symmetry, but
+ breaks the sixfold symmetry of a hexagonal cavity as in the photonic-crystal
+ example from Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "direct_salt"
+
+\end_inset
+
+.
+ To solve this problem, we describe a general and convergent technique in
+ Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Forcing-the-degeneracy"
+
+\end_inset
+
+ to restore the degeneracy: we find the 
+\emph on
+smallest
+\emph default
+ perturbation 
+\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
+\end_inset
+
+ that coalesces the poles (with only slightly more computational effort
+ than the ordinary SALT solver).
+ For simplicity, most of our discussion will focus on the case of a single
+ degenerate lasing mode.
+ Once this case is solved, however, we show in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Multi-mode-degenerate-lasing"
+
+\end_inset
+
+ that the extension to multiple degenerate and non-degenerate lasing modes
+ is straightforward, and is closely analogous to standard multi-mode SALT.
+\end_layout
+
+\begin_layout Section
+Threshold perturbation theory
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because degenerate pairs of lasing modes can always be thought of as a single-mo
+de superposition, we solve the single mode case slightly above threshold.
+ The equation is
+\begin_inset Formula 
+\begin{align}
+0 & =-\nabla\times\nabla\times\mathbf{E}+\omega^{2}\tilde{\varepsilon}\mathbf{E}\label{eq:thresholdSALT}\\
+\tilde{\varepsilon} & \equiv\varepsilon_{c}+\frac{D_{0}\gamma(\omega)F}{1+\left|\mathbf{E}\right|^{2}}\label{eq:epstilde}\\
+\gamma(\omega) & \equiv\frac{\gamma_{\perp}}{\omega-\omega_{a}+i\gamma_{\perp}}.\nonumber 
+\end{align}
+
+\end_inset
+
+ Suppose that at threshold (
+\begin_inset Formula $D_{0}=D_{0}^{t})$
+\end_inset
+
+, the solutions are 
+\begin_inset Formula $\mathbf{E}_{1}^{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{2}^{t}$
+\end_inset
+
+, both with frequency 
+\begin_inset Formula $\omega_{t}$
+\end_inset
+
+ and zero amplitude.
+ Now perturb the pump to 
+\begin_inset Formula $D_{0}=D_{0}^{t}\left(1+d\right)$
+\end_inset
+
+, and we expect the single-mode solution to be
+\begin_inset Formula 
+\begin{align*}
+\mathbf{E} & =\sqrt{d}\left(a_{1}\mathbf{E}_{1}^{t}+a_{2}\mathbf{E}_{2}^{t}\right)+\delta\mathbf{E}\\
+\omega & =\omega_{t}+\delta\omega.
+\end{align*}
+
+\end_inset
+
+Insert into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:epstilde"
+
+\end_inset
+
+ and we have
+\begin_inset Formula 
+\begin{align*}
+\tilde{\varepsilon} & =\varepsilon_{c}+D_{0}^{t}\gamma(\omega_{t})F\left[1+d\right.\\
+ & \left.-d\left|\sum a_{\eta}\mathbf{E}_{\eta}^{t}\right|^{2}+\frac{\gamma^{\prime}(\omega_{t})}{\gamma(\omega_{t})}\delta\omega\right]+\mathcal{O}(d^{2}).
+\end{align*}
+
+\end_inset
+
+Now multiply both sides of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:thresholdSALT"
+
+\end_inset
+
+ by 
+\begin_inset Formula $\mathbf{E}_{\mu}^{t}$
+\end_inset
+
+ and integrate.
+ Note that
+\begin_inset Formula 
+\[
+\int\mathbf{E}_{\mu}^{t}\cdot\nabla\times\nabla\times\delta\mathbf{E}=\int\mathbf{E}_{\mu}^{t}\cdot\left[\omega^{2}\varepsilon_{c}+D_{0}^{t}\gamma(\omega_{t})F\right]\delta\mathbf{E}.
+\]
+
+\end_inset
+
+This is because the operators are complex-symmetric and can be transposed
+ to act to the left, annihilating 
+\begin_inset Formula $\mathbf{E}_{\nu}^{t}$
+\end_inset
+
+ because it solves the SALT equation at threshold.
+ Hence, all 
+\begin_inset Formula $\delta\mathbf{E}$
+\end_inset
+
+ terms vanish after integration, and we have
+\begin_inset Formula 
+\begin{align}
+0 & =\sum_{\nu}\left[\frac{\delta\omega}{d}\left(A_{\mu\nu}+\Gamma B_{\mu\nu}\right)+B_{\mu\nu}-\sum_{\rho\eta}C_{\rho\eta\mu\nu}a_{\rho}a_{\eta}^{\star}\right]a_{\nu},\label{eq:aaa}
+\end{align}
+
+\end_inset
+
+which is a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ nonlinear eigenproblem in the unknown eigenvector 
+\begin_inset Formula $a_{\mu}$
+\end_inset
+
+ and eigenvalue 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+, in terms of the known coefficients:
+\begin_inset Formula 
+\begin{align}
+\Gamma & \equiv\frac{2}{\omega_{t}}+\frac{\gamma^{\prime}(\omega_{t})}{\gamma(\omega_{t})},\nonumber \\
+A_{\mu\nu} & \equiv\frac{2}{\omega_{t}D_{0}^{t}\gamma(\omega_{t})}\int\mathbf{E}_{\mu}^{t}\cdot\varepsilon_{c}\mathbf{E}_{\nu}^{t},\nonumber \\
+B_{\mu\nu} & \equiv\int\mathbf{E}_{\mu}^{t}\cdot F\mathbf{E}_{\nu}^{t},\nonumber \\
+C_{\rho\eta\mu\nu} & \equiv\int\left(\mathbf{E}_{\rho}^{t}\cdot\mathbf{E}_{\eta}^{t\star}\right)\left(\mathbf{E}_{\mu}^{t}\cdot F\mathbf{E}_{\nu}^{t}\right).\label{eq:matrix_elements}
+\end{align}
+
+\end_inset
+
+Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:aaa"
+
+\end_inset
+
+ is an eigenvalue problem that is linear in the eigenvalue 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+ (which in this case is constrained to be real) and 
+\emph on
+cubic 
+\emph default
+in the components of the eigenvector 
+\begin_inset Formula $a_{\nu}$
+\end_inset
+
+.
+ In general, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:aaa"
+
+\end_inset
+
+ could be solved numerically by a low-dimensional root-finding algorithm.
+ In fact, it has the same structure (number of unknowns) as the SALT equation
+ (with two 
+\begin_inset Quotes eld
+\end_inset
+
+spatial
+\begin_inset Quotes erd
+\end_inset
+
+ degrees of freedom) and can therefore be solved with the same techniques
+ as in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "direct_salt"
+
+\end_inset
+
+ (but much more quickly).
+ In practice, however, realistic degeneracies will almost always arise from
+ symmetry, and in this case we can solve Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:aaa"
+
+\end_inset
+
+ analytically.
+ (Degeneracies that do 
+\emph on
+not
+\emph default
+ arise from symmetry are known as 
+\begin_inset Quotes eld
+\end_inset
+
+accidental
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "inui_group,tinkham"
+
+\end_inset
+
+, and because accidental degeneracies are broken by generic perturbations
+ they will generally not survive above threshold unless there is some other
+ constraint that enforces the degeneracy as in Appendix A.).
+ Usually, there are only discrete sets of linear combinations that satisfy
+ the single-mode SALT equations; i.e.
+ there is not a continuous manifold of linear combinations (not including
+ the overall phase choice or an arbitrary continuous rotation in 
+\begin_inset Formula $C_{\infty\mathrm{v}}$
+\end_inset
+
+).
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cylinder_modes"
+
+\end_inset
+
+ shows an example of a degenerate pair from a  dielectric cylinder satisfying
+ opposite mirror conditions.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename cylinder/psicos.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Graphics
+	filename cylinder/psisin.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Odd-
+\begin_inset Formula $m$
+\end_inset
+
+ threshold modes for dielectric cylinder; proportional to 
+\begin_inset Formula $\cos m\phi$
+\end_inset
+
+ (left) and 
+\begin_inset Formula $\sin m\phi$
+\end_inset
+
+ (right).
+ The real part of 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ has been plotted.
+ Like in the metallic square, the modes are 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ rotations from each other so there is an exact degeneracy even for the
+ numerical solution.
+ This is true for all odd-
+\begin_inset Formula $m$
+\end_inset
+
+ whispering gallery modes, but not for even-
+\begin_inset Formula $m$
+\end_inset
+
+ modes.
+ We treat the latter in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:discretization_breaking"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:cylinder_modes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Only certain linear combinations of the threshold modes solve Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:aaa"
+
+\end_inset
+
+.
+ For example, in the dielectric cylinder, only purely standing-wave solutions
+ proportional to 
+\begin_inset Formula $\cos m(\phi-\phi_{0})$
+\end_inset
+
+, where 
+\begin_inset Formula $\phi_{0}$
+\end_inset
+
+ is an arbitrary shift in angle, and purely circulating solutions proportional
+ to 
+\begin_inset Formula $e^{im\phi}$
+\end_inset
+
+ are solutions.
+ However, it is known that the standing solutions are unstable, while the
+ circulating ones are stable.
+ This can be seen by looking at the passive poles 
+\begin_inset Formula $\delta\omega^{\prime}$
+\end_inset
+
+ of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:aaa"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+0=\sum_{\nu}\left[\frac{\delta\omega^{\prime}}{d}\left(A_{\mu\nu}+\Gamma B_{\mu\nu}\right)+B_{\mu\nu}-\sum_{\rho\eta}C_{\rho\eta\mu\nu}a_{\rho}a_{\eta}^{\star}\right]a_{\nu}^{\prime}\label{eq:aaa_passive}
+\end{equation}
+
+\end_inset
+
+For a given lasing solution 
+\begin_inset Formula $a_{\mu}$
+\end_inset
+
+ and frequency-shift eigenvalue 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+, it is easy to see that one solution to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:aaa_passive"
+
+\end_inset
+
+ is 
+\begin_inset Formula $a_{\mu}^{\prime}=a_{\mu}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta\omega^{\prime}=\delta\omega$
+\end_inset
+
+.
+ However, the 
+\emph on
+other 
+\emph default
+passive eigenvalue 
+\begin_inset Formula $\delta\omega^{\prime}$
+\end_inset
+
+ partially determines the stability of this lasing solution.
+ If 
+\begin_inset Formula $\delta\omega^{\prime}$
+\end_inset
+
+ is above the real axis, then that lasing solution is unstable.
+ For example, if we let 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ indicate the coefficient of 
+\begin_inset Formula $\cos m\phi$
+\end_inset
+
+, with 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ being the coefficient of 
+\begin_inset Formula $\sin m\phi$
+\end_inset
+
+, it can be shown that with a lasing 
+\begin_inset Formula $\cos m\phi$
+\end_inset
+
+ mode (i.e.
+ 
+\begin_inset Formula $a_{2}=0$
+\end_inset
+
+), there is a passive 
+\begin_inset Formula $\sin m\phi$
+\end_inset
+
+ pole with 
+\begin_inset Formula $\mathrm{Im}\delta\omega^{\prime}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{1}^{\prime}=0$
+\end_inset
+
+.
+ However, for the circulating mode (
+\begin_inset Formula $a_{1}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{2}=\pm i$
+\end_inset
+
+), the second pole 
+\begin_inset Formula $\delta\omega^{\prime}$
+\end_inset
+
+ is 
+\emph on
+also 
+\emph default
+degenerate with the lasing pole 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+, so this mode is stable.
+ We note that Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+ found examples of steady-state lasing modes with passive poles above the
+ real axis, which is seemingly contrary to what we have just claimed.
+ However, we point out that in that case, the lasing modes were significantly
+ above threshold, while our theory specifically discusses the case slightly
+ above threshold.
+ We show rigorously using a linear stability analysis in Appendix B that
+ linear combinations of degenerate modes slightly above threshold are 
+\emph on
+always
+\emph default
+ unstable if their passive pole goes above the real axis.
+\end_layout
+
+\begin_layout Subsection
+Stable circulating solutions
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Stability-of-circulating"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the case of the ring resonator, it is known that the 
+\begin_inset Quotes eld
+\end_inset
+
+circulating
+\begin_inset Quotes erd
+\end_inset
+
+ solutions 
+\begin_inset Formula $e^{\pm im\phi}$
+\end_inset
+
+ are the stable solutions, and it turns out that a close analogue of this
+ result holds for any 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry group.
+ We use 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+ to denote the degenerate eigenfunctions (at threshold) chosen to be even/odd
+ with respect to one of the mirror planes, analogous to 
+\begin_inset Formula $\cos m\phi$
+\end_inset
+
+ and 
+\begin_inset Formula $\sin m\phi$
+\end_inset
+
+ in the 
+\begin_inset Formula $C_{\infty\mathrm{v}}$
+\end_inset
+
+ group.
+ In terms of these eigenfunctions, the generalized 
+\begin_inset Quotes eld
+\end_inset
+
+circulating
+\begin_inset Quotes erd
+\end_inset
+
+ modes are 
+\begin_inset Formula $\mathbf{E}_{\pm}\equiv\mathbf{E}_{1}\pm i\mathbf{E}_{2}$
+\end_inset
+
+, and it turns out that writing the solution in terms of this always yields
+ a stable lasing mode with a degenerate passive mode.
+\end_layout
+
+\begin_layout Standard
+Before we show stability, we must first check that the circulating modes
+ are solutions.
+ One possible method is to work in the basis 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+ and exploit the mirror symmetry so that many matrix elements 
+\begin_inset Formula $A_{\mu\nu}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{\mu\nu}$
+\end_inset
+
+, and 
+\begin_inset Formula $C_{\rho\eta\mu\nu}$
+\end_inset
+
+ vanish by symmetry.
+ This method has two disadvantages: first, in cases in which 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+ are not simple 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ rotations of each other (for example, dipole partners in 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ for any 
+\begin_inset Formula $n$
+\end_inset
+
+ that is not a multiple of 4) the relation between matrix elements such
+ as 
+\begin_inset Formula $C_{1111}$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{2222}$
+\end_inset
+
+ is more complicated.
+ Second, when 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+ are no longer mirror symmetric (as we will see in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Multi-mode-degenerate-lasing"
+
+\end_inset
+
+, in the case where gain is already chiral, with 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry rather than 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+), the matrix elements that usually vanish by symmetry no longer do.
+ 
+\end_layout
+
+\begin_layout Standard
+Fortunately, working in the basis 
+\begin_inset Formula $\mathbf{E}_{\pm}$
+\end_inset
+
+ greatly simplifies the calculations.
+ We look for the solution 
+\begin_inset Formula $a_{+}\mathbf{E}_{+}+a_{-}\mathbf{E}_{-}$
+\end_inset
+
+ with 
+\begin_inset Formula $a_{+}\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{-}=0$
+\end_inset
+
+ or vice versa.
+ First, we see that 
+\begin_inset Formula $A_{\pm\pm}$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{\pm\pm}$
+\end_inset
+
+ both involve integrals of 
+\begin_inset Formula $\mathbf{E}_{\pm}\cdot\mathbf{E}_{\pm}=\mathbf{E}_{\pm}\cdot(\mathbf{E}_{\pm}^{\star})^{\star}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathbf{E_{\pm}^{\star}}$
+\end_inset
+
+ transforms as the irrep with opposite chirality from 
+\begin_inset Formula $\mathbf{E}_{\pm}$
+\end_inset
+
+, and partner functions of different irreps have zero (conjugated) inner
+ product due to the great orthogonality theorem 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tinkham,inui_group"
+
+\end_inset
+
+, both 
+\begin_inset Formula $A_{\pm\pm}$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{\pm\pm}$
+\end_inset
+
+ vanish.
+ Inserting these facts and 
+\begin_inset Formula $a_{-}=0$
+\end_inset
+
+ into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:aaa"
+
+\end_inset
+
+, we have the two equations (
+\begin_inset Formula $\mu=1,2$
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{align*}
+0 & =C_{++++}\\
+0 & =\frac{\delta\omega}{d}\left(A_{-+}+\Gamma B_{-+}\right)+B_{-+}-C_{++-+}\left|a_{+}\right|^{2}.
+\end{align*}
+
+\end_inset
+
+The first equation is satisfied because 
+\begin_inset Formula $C_{++++}=\int F\left|\mathbf{E}_{+}\right|^{2}\mathbf{E}_{+}\cdot\left(\mathbf{E}_{+}^{\star}\right)^{\star}=0$
+\end_inset
+
+ by the great orthogonality theorem again (since 
+\begin_inset Formula $\left|\mathbf{E}_{+}\right|^{2}$
+\end_inset
+
+ has 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry; equivalently, one could use product representation theory 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "inui_group"
+
+\end_inset
+
+).
+ The real and imaginary parts of the second equation exactly specify the
+ values of the two real unknowns 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+ and 
+\begin_inset Formula $\left|a_{+}\right|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Now, to show that 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ is stable, we can exploit some group theory combined with a recent result
+ regarding degeneracies in chiral structures 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dichroism"
+
+\end_inset
+
+ that is reviewed and generalized in appendix A.
+ In representation-theory terms, the circulating modes 
+\begin_inset Formula $\mathbf{E}_{\pm}$
+\end_inset
+
+ diagonalize the rotation operations 
+\begin_inset Formula $R_{n}^{k}$
+\end_inset
+
+ with eigenvalues 
+\begin_inset Formula $e^{\mp2\pi imk/n}$
+\end_inset
+
+, or equivalently are partners of 1d irreducible representations (irreps)
+ of the 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ subgroup (the rotation symmetries without the mirror planes).
+ In order to understand the passive mode of the 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ lasing solution above threshold, the key point is to realize that 
+\begin_inset Formula $\left|\mathbf{E}_{+}\right|^{2}$
+\end_inset
+
+ has 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry (because rotation is just a phase shift) but does 
+\emph on
+not
+\emph default
+ in general have 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry: the intensity pattern of the radiation from a circulating mode
+ is typically a 
+\begin_inset Quotes eld
+\end_inset
+
+spiral
+\begin_inset Quotes erd
+\end_inset
+
+ pattern (as shown e.g.
+ in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:lowQ_chirality"
+
+\end_inset
+
+ for a dielectric-square cavity) that breaks the mirror symmetries.
+ Naively, since the 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ group does not have 2d irreps 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tinkham,inui_group"
+
+\end_inset
+
+, we should not expect a degenerate passive mode, or any degeneracies for
+ that matter.
+ However, as was recently shown in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dichroism"
+
+\end_inset
+
+ and is reviewed in appendix A, the 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry group combined with Lorentz reciprocity (the fact that the Maxwell
+ operator is complex-symmetric for symmetric matrices 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu$
+\end_inset
+
+) means that the circulating modes are in fact degenerate.
+ This degeneracy (which is technically 
+\begin_inset Quotes eld
+\end_inset
+
+accidental
+\begin_inset Quotes erd
+\end_inset
+
+ since it does not arise from symmetry alone 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "phc_book"
+
+\end_inset
+
+) guarantees stability of the 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ partner.
+\end_layout
+
+\begin_layout Standard
+More specifically, as the pump strength varies continuously from 
+\begin_inset Formula $d=0$
+\end_inset
+
+ to 
+\begin_inset Formula $d>0$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ (but not 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+) symmetry is preserved, the solutions cannot jump discontinuously from
+ one irrep of 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ to another.
+ The 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ degenerate partners at threshold fall into the 
+\begin_inset Formula $D(k)=\exp\left(\mp\frac{2\pi imk}{n}\right)$
+\end_inset
+
+ irreps of the 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ group and the above-threshold solutions therefore stay in these complex-conjuga
+te irreps.
+ As reviewed in appendix A , whenever there is an eigenfunction of the reciproca
+l Maxwell operator in a complex irrep 
+\begin_inset Formula $D(k)$
+\end_inset
+
+ (such as the 
+\begin_inset Formula $\mathbf{E}_{+}+\delta\mathbf{E}_{+}$
+\end_inset
+
+ lasing solution), there is always a degenerate (equal-frequency) eigenfunction
+ in the complex-conjugated irrep 
+\begin_inset Formula $\bar{D}(k)$
+\end_inset
+
+.
+ (Remarkably, these degenerate eigenfunction are not mirror flips of one
+ another, because the degeneracy does not arise arise from geometric symmetry
+ alone.) So, there must a passive pole coinciding with the lasing solution.
+ Since the poles move continuously with pump strength, and at 
+\begin_inset Formula $d=0$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ was degenerate with 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+, this other passive pole must be the 
+\begin_inset Formula $\mathbf{E}_{-}+\delta\mathbf{E}_{-}$
+\end_inset
+
+ solution (which is a partner of the conjugated irrep).
+ Hence, the poles must stick together as the pump is increased continuously,
+ even though the two solutions are no longer mirror images of one another.
+\end_layout
+
+\begin_layout Standard
+Of course, there is also a mirror-image lasing solution that can be found,
+ exactly as above, by starting with 
+\begin_inset Formula $a_{+}=0$
+\end_inset
+
+.
+ Because of the symmetry of the underlying problem, this is simply the mirror
+ flip of the 
+\begin_inset Formula $\mathbf{E}_{+}+\delta\mathbf{E}_{+}$
+\end_inset
+
+ lasing solution.
+ It is important not to confuse this mirror-flipped lasing solution with
+ the 
+\begin_inset Formula $\mathbf{E}_{-}+\delta\mathbf{E}_{-}$
+\end_inset
+
+ passive solution above, which is not the mirror flip of the lasing solution.
+ The system is nonlinear, so the passive left-circulating solution of the
+ right-circulating lasing mode is not a solution for the left-circulating
+ lasing mode.
+\end_layout
+
+\begin_layout Standard
+As a practical matter, in order to obtain the 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ solutions at threshold, one must remember that a numerical eigensolver
+ will generally return a random an arbitrary superposition 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+.
+ But, given such a superposition, one can obtain 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ merely by acting the projection operator 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "inui_group"
+
+\end_inset
+
+ of that irrep of the 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ group on 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\mathbf{E}_{+}=\sum_{k=0}^{n-1}\exp\left(-\frac{2\pi imk}{n}\right)R_{n}^{k}\mathbf{E},\label{eq:chiral_projection}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $R_{n}$
+\end_inset
+
+ is the operator rotating by 
+\begin_inset Formula $2\pi/n$
+\end_inset
+
+.
+ In a numerical grid that breaks the 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry as in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:phc_geometry"
+
+\end_inset
+
+, implementing 
+\begin_inset Formula $R_{n}$
+\end_inset
+
+ requires rotating the grid and then interpolating back to the original
+ grid, but the small interpolation errors introduced by this process are
+ irrelevant---for the Newton solver to converge, all we need is a solution
+ that is sufficiently close to the 
+\begin_inset Quotes eld
+\end_inset
+
+true
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+.
+ The key point is that the stable and unstable solutions above threshold
+ are not connected by a continuous manifold, so if you are close to a stable
+ solution then there is no nearby unstable solution for Newton to find.
+ Note also that the choice of 
+\begin_inset Formula $m$
+\end_inset
+
+ in the projection depends on which irrep one is projecting into, and this
+ can be determined easily by inspection of the 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+: 
+\begin_inset Formula $m=1$
+\end_inset
+
+ for a dipole-like mode, 
+\begin_inset Formula $m=2$
+\end_inset
+
+ for quadrupole-like, etcetera.
+ Alternatively, a completely automated procedure would be to simply try
+ projecting for 
+\begin_inset Formula $m=1,2,\ldots,\mathrm{floor}(\frac{n-1}{2})$
+\end_inset
+
+: for all but the correct 
+\begin_inset Formula $m$
+\end_inset
+
+, the projected function should be nearly zero.
+\end_layout
+
+\begin_layout Standard
+Given 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ via the projection operator, the mirror flip of 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ (because at threshold these are partners of 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+, not just 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+).
+ From these two eigenfunctions, one can construct 
+\begin_inset Formula $\mathbf{E}_{1}=\frac{\mathbf{E}_{+}+\mathbf{E}_{-}}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{1}=\frac{\mathbf{E}_{+}+\mathbf{E}_{-}}{2}$
+\end_inset
+
+ if desired.
+ It is best to apply the perturbation theory to either even/odd or circulating
+ partner functions, and not just to whatever random superposition a numerical
+ eigensolver produces, because this basis leads to the simplest analytical
+ results.
+ 
+\end_layout
+
+\begin_layout Subsection
+Threshold perturbation examples
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:threshold_perturbation_Examples"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, we illustrate the ideas of threshold perturbation theory with an example
+ of a symmetric geometry with degeneracies: a dielectric square.
+ We first present the threshold modes (solutions of a linear problem at
+ threshold) which are exactly degenerate.
+ Then, we compute the matrix elements 
+\begin_inset Formula $A_{\mu\nu}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{\mu\nu}$
+\end_inset
+
+, and 
+\begin_inset Formula $C_{\rho\eta\mu\nu}$
+\end_inset
+
+ in the perturbation theory.
+ Next, we directly construct the circulating modes predicted in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-of-circulating"
+
+\end_inset
+
+.
+ We compare the results obtained by perturbation theory to numerical solution
+ of the SALT equation.
+\end_layout
+
+\begin_layout Standard
+To see an example in which the interference term of the two-mode SALT equation
+ has a very noticeable effect, we look at a pair of low-
+\begin_inset Formula $Q$
+\end_inset
+
+ modes of a homogeneous dielectric square (
+\begin_inset Formula $Q$
+\end_inset
+
+ is defined as the ratio 
+\begin_inset Formula $\mathrm{Re}\omega^{\prime}/\mathrm{Im}\omega^{\prime}$
+\end_inset
+
+ of the cold cavity at zero pump strength).
+ Unlike the metal square, the equation for the electric field is not separable
+ in the 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ directions.
+ The modes 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+ are shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:lowQ_modes"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename lowQ_square/lowQsquare_psi0.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Graphics
+	filename lowQ_square/lowQsquare_psi1.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A pair of low-
+\begin_inset Formula $Q$
+\end_inset
+
+ modes (
+\begin_inset Formula $Q\approx15$
+\end_inset
+
+) at threshold for dielectric square and homogeneous dielectric 
+\begin_inset Formula $\varepsilon_{c}=5$
+\end_inset
+
+.
+ The square has a side of 
+\begin_inset Formula $1$
+\end_inset
+
+, and the lasing parameters have been chosen to be 
+\begin_inset Formula $\omega_{a}=3.5$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma_{\perp}=1.0$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ rotation is an exact symmetry of the geometry, so there is an exact degeneracy
+ even for the numerical grid.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:lowQ_modes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The stable linear combination of 
+\begin_inset Formula $\mathbf{E}\propto\mathbf{E}_{1}+i\mathbf{E}_{2}$
+\end_inset
+
+ is the circulating mode predicted by Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-of-circulating"
+
+\end_inset
+
+.
+ Although the field is neither real nor separable, the relative phase is
+ still 
+\begin_inset Formula $i$
+\end_inset
+
+ because of the four-fold rotation symmetry.
+ From the fact that 
+\begin_inset Formula $\mathbf{E}_{2}=R_{4}\mathbf{E}_{1}$
+\end_inset
+
+ (where 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ is a four-fold rotation), we see that
+\begin_inset Formula 
+\[
+\mathbf{E}_{1}+i\mathbf{E}_{2}\propto\left(1+iR_{4}-R_{4}^{2}-iR_{4}^{3}\right)\mathbf{E}_{1},
+\]
+
+\end_inset
+
+and this intensity pattern is chiral (with 
+\begin_inset Formula $C_{4}$
+\end_inset
+
+ symmetry rather than 
+\begin_inset Formula $C_{4\mathrm{v}}$
+\end_inset
+
+).
+ This chirality is an important consequence of including the interference
+ terms in the degenerate formulation of SALT.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:lowQ_chirality"
+
+\end_inset
+
+ shows the intensity pattern for the result without interference compared
+ to the correct solution.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:counterclockwise"
+
+\end_inset
+
+ shows the intensity pattern of the degenerate partner.
+ Since this degeneracy does not come from geometric symmetry along, there
+ is no clear symmetry operation that takes the lasing mode (right panel
+ of Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:lowQ_chirality"
+
+\end_inset
+
+) to its degenerate partner (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:counterclockwise"
+
+\end_inset
+
+), but there is still an exact degeneracy as explained in appendix A.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename lowQ_square/lowQsquare_wrong.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Graphics
+	filename lowQ_square/lowQsquare_intensity.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The incorrect (left) intensity pattern and correct (right) intensity pattern
+ for the pair of low-
+\begin_inset Formula $Q$
+\end_inset
+
+ dielectric square modes, slightly above threshold.
+ The left intensity pattern was obtained by solving two-mode SALT without
+ any interference effects, while the right pattern was obtained by constructing
+ the stable linear combination predicted by symmetry and perturbation theory
+ and then solving single-mode SALT.
+ The correct pattern clearly has a chirality, which the incorrect pattern
+ lacks.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:lowQ_chirality"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename lowQ_square/counter.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Degenerate passive mode of opposite chirality of low-
+\begin_inset Formula $Q$
+\end_inset
+
+ dielectric square for lasing very high above threshold (
+\begin_inset Formula $D_{0}=100D_{0}^{t})$
+\end_inset
+
+.
+ The profile is not simply a mirror flip of the lasing intensity pattern
+ in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:lowQ_chirality"
+
+\end_inset
+
+, since there is no symmetry that connects the two modes.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:counterclockwise"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Symmetries broken by discretization
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:discretization_breaking"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In many cases the geometry we are trying to solve has some symmetry, which
+ results in a pair of degenerate modes, but the degeneracy is broken when
+ the geometry is projected onto the discretized grid, since the grid no
+ longer has the symmetry.
+ For linear equations, this unphysical splitting is not an issue because
+ it is usually straightforward to tell whether a pair of modes is 
+\begin_inset Quotes eld
+\end_inset
+
+really
+\begin_inset Quotes erd
+\end_inset
+
+ degenerate, and since all linear superpositions solve the equation in the
+ infinite-resolution limit, we can construct arbitrary superpositions 
+\emph on
+after 
+\emph default
+solving for both of the modes.
+ However, for SALT (which is nonlinear), the coefficients of the superposition
+ is a physical quantity that must be found by our solution method, as explained
+ in Secs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-of-circulating"
+
+\end_inset
+
+.
+ As explained in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "direct_salt"
+
+\end_inset
+
+, the process for solving for lasing modes begin with the linear problem
+ for the passive poles.
+ Because both the real and imaginary parts of the passive poles are split
+ by the discretization error, the modes will lase at different pump strengths,
+ and even after both modes lase we cannot construct a linear combination
+ of them because the two modes satisfy equations with different real eigenfreque
+ncies.
+ Consequently, degeneracy-splitting caused by discretization is a major
+ practical problem for our SALT solver and requires a nontrivial solution.
+\end_layout
+
+\begin_layout Standard
+A good example is the uniform cylinder projected onto a square grid, which
+ has 
+\begin_inset Formula $C_{4\mathrm{v}}$
+\end_inset
+
+ symmetry but not the 
+\begin_inset Formula $C_{\infty\mathrm{v}}$
+\end_inset
+
+ symmetry of the cylinder (another example, as we will see later in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Forcing-the-degeneracy"
+
+\end_inset
+
+ and in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:phc_geometry"
+
+\end_inset
+
+, is a hexagonal photonic crystal defect cavity that has 
+\begin_inset Formula $C_{6\mathrm{v}}$
+\end_inset
+
+ symmetry).
+ For odd angular momentum whispering-gallery modes, the sine mode is simply
+ a 90-degree rotation of the cosine mode, as seen in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cylinder_modes"
+
+\end_inset
+
+.
+ This symmetry is still exact for the grid, so odd angular momentum modes
+ are exactly degenerate even when discretized.
+ However, for even angular momentum modes, the operation that takes sine
+ to cosine is not a member of 
+\begin_inset Formula $C_{4\mathrm{v}}$
+\end_inset
+
+.
+ Hence, there is a small splitting in both the real and imaginary parts
+ of the frequencies.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:even_cylinder_modes"
+
+\end_inset
+
+ gives an example of this effect.
+ There are two potential methods to solve this problem: one is to solve
+ a two-mode equation with an interference term in the spatial hole-burning
+ denominator, while allowing the frequencies to split.
+ This method is conceptually simpler, but is more difficult to use in practice
+ because it is difficult to choose the correct relative phase.
+ The second method is to construct a small perturbation to the dielectric
+ function to force a degeneracy in both the pump strength and the frequencies
+ at threshold.
+ We discuss both methods below.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename even_cylinder/evencos.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Graphics
+	filename even_cylinder/evensin.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Even-
+\begin_inset Formula $m$
+\end_inset
+
+ threshold modes for dielectric cylinder.
+ The real part of 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ has been plotted.
+ The geometry and parameters are the same as in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cylinder_modes"
+
+\end_inset
+
+, except with the gain shifted to 
+\begin_inset Formula $\omega_{a}=3.8$
+\end_inset
+
+, which is near the threshold frequency for the even-
+\begin_inset Formula $m$
+\end_inset
+
+ modes.
+ Unlike in the previous case, however, the discretized modes are 
+\emph on
+not
+\emph default
+ 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ rotations from each other.
+ Consequently, there is an unphysical splitting of 
+\begin_inset Formula $0.11\%$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathrm{Re}(\omega_{1}-\omega_{2})$
+\end_inset
+
+ and 
+\begin_inset Formula $11.5\%$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathrm{Im}(\omega_{1}-\omega_{2})$
+\end_inset
+
+ (the latter being larger only because these are high-Q modes and 
+\begin_inset Formula $\mathrm{Im}\omega_{\mu}$
+\end_inset
+
+ is already very small).
+ A difference in imaginary parts also means a splitting in the threshold
+ pump strength 
+\begin_inset Formula $D_{t}$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:even_cylinder_modes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/cylinder_resolution.pdf
+	lyxscale 30
+	scale 40
+	BoundingBox 0bp 160bp 612bp 630bp
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Splitting in degeneracy due to discretization error for even-
+\begin_inset Formula $m$
+\end_inset
+
+ modes of dielectric cylinder versus the resolution 
+\begin_inset Formula $1/h$
+\end_inset
+
+ of the discretization, where 
+\begin_inset Formula $h$
+\end_inset
+
+ is the distance between adjacent gridpoints.
+ The oscillations, which are due to the discontinuous interfaces between
+ dielectric and air that 
+\begin_inset Quotes eld
+\end_inset
+
+jump
+\begin_inset Quotes erd
+\end_inset
+
+ when the resolution is changed, could in principle be smoothed by using
+ subpixel averaging techniques for the discretization 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-subpixel"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:cylinder_resolution"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Restoring the degeneracy using a dielectric perturbation
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Forcing-the-degeneracy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The basic idea is that we construct an artificial perturbation 
+\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
+\end_inset
+
+ to the dielectric that forces the degeneracy in both the frequency and
+ threshold, and then we solve the perturbed single-mode SALT equation.
+ There are infinitely many possible functions that do this, so we look for
+ the one with the smallest 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ norm 
+\begin_inset Formula $\left\Vert \delta\varepsilon(\mathbf{x})\right\Vert _{2}^{2}=\int\left|\delta\varepsilon(\mathbf{x})\right|^{2}$
+\end_inset
+
+.
+ This is also reasonable because in the limit of infinite resolution, the
+ perturbation required to force the degeneracy must approach zero.
+ We construct the perturbation by solving a 
+\emph on
+quadratic program
+\emph default
+ with linear constraints which we obtain using perturbation theory.
+\end_layout
+
+\begin_layout Standard
+Not only does this uniquely (and cheaply) determine 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+, as described below, but it also guarantees convergence to the solution
+ of the unperturbed (physical) single-mode SALT equation in the limit of
+ infinite resolution.
+ The reason it guarantees convergence is that the frequency splitting vanishes
+ in the limit of infinite resolution, and so the minimum-norm 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ to force a degeneracy also vanishes in the limit of infinite resolution,
+ recovering the unperturbed SALT.
+\end_layout
+
+\begin_layout Standard
+It turns out that determining the minimum-norm 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ requires only that we solve a sequence of 
+\begin_inset Quotes eld
+\end_inset
+
+quadratic programming
+\begin_inset Quotes erd
+\end_inset
+
+ (QP) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "boyd"
+
+\end_inset
+
+ problems: minimizing a convex quadratic function (
+\begin_inset Formula $\left\Vert \delta\varepsilon\right\Vert _{2}^{2}$
+\end_inset
+
+) of 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ subject to an affine constraint on 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+.
+ QPs are 
+\begin_inset Quotes eld
+\end_inset
+
+convex
+\begin_inset Quotes erd
+\end_inset
+
+ optimization problems with a unique global minimum that can be efficiently
+ found simply by solving a system of linear equations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "boyd"
+
+\end_inset
+
+.
+ In particular, the affine constraint (the equation on 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ that makes it coalesce the eigenvalues) can be derived from perturbation
+ theory as explained below.
+ Because the perturbation theory is only first-order, however, the 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ that we find by solving the QP only approximately eliminate the degeneracy,
+ but we can simply re-solve SALT and solve a new QP, iterating the process
+ a few times (twice is typically enough) to force a degeneracy to machine
+ precision.
+\end_layout
+
+\begin_layout Standard
+We analyze the effect of a small 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ on the eigenfrequencies (of the lasing mode and the passive pole) by well-known
+ first-order perturbation theory for Maxwell's equations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "phc_book"
+
+\end_inset
+
+, but some modification is required to handle the nonlinearity of the hole-burni
+ng term above threshold.
+ However, we begin by forcing the degeneracy below threshold (repeating
+ as needed as the pump strength is increased), so that both passive poles
+ reach threshold simultaneously.
+ (In practice, we achieved the fastest convergence by allowing passive poles
+ to have positive imaginary parts, and then setting the pump strength so
+ that the two poles 
+\begin_inset Quotes eld
+\end_inset
+
+straddle
+\begin_inset Quotes erd
+\end_inset
+
+ the real axis; this way, when they meet in the middle they are both exactly
+ at threshold.) Below threshold, the eigenproblem is linear, and we can apply
+ standard perturbation theory (albeit for a complex-symmetric operator,
+ not a Hermitian operator) as follows:
+\end_layout
+
+\begin_layout Standard
+Consider two nonlasing modes that satisfy
+\begin_inset Formula 
+\begin{align*}
+0 & =-\nabla\times\nabla\times\mathbf{E}_{\mu}+\omega_{\mu}^{2}\varepsilon_{\mu}\mathbf{E}_{\mu}\\
+\varepsilon_{\mu} & \equiv\varepsilon_{c}+D_{0}\gamma(\omega_{\mu})F
+\end{align*}
+
+\end_inset
+
+Adding a perturbation to the dielectric 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ will result in corresponding responses 
+\begin_inset Formula $\delta\mathbf{E}_{\mu}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta\omega_{\mu}$
+\end_inset
+
+.
+ As in the threshold perturbation theory, we multiply both sides by 
+\begin_inset Formula $\mathbf{E}_{\mu}$
+\end_inset
+
+ and keep only first-order terms.
+ Terms involving 
+\begin_inset Formula $\delta\mathbf{E}_{\mu}$
+\end_inset
+
+ again vanish because the operators act to the left, and we are left with
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-raman,ref-microcavity,ref-adi"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\delta\omega_{\mu}=-\frac{\int\mathbf{E}_{\mu}\cdot\delta\varepsilon\mathbf{E}_{\mu}}{\int\mathbf{E}_{\mu}\cdot\left(\frac{2\varepsilon_{\mu}}{\omega_{\mu}}+\frac{\partial\varepsilon_{\mu}}{\partial\omega_{\mu}}\right)\mathbf{E}_{\mu}}.\label{eq:delta_omega_QP}
+\end{equation}
+
+\end_inset
+
+We write this frequency shift as an inner product 
+\begin_inset Formula 
+\begin{equation}
+\delta\omega_{\mu}=-p_{\mu}^{T}\delta\varepsilon.\label{eq:delta_omega_mu}
+\end{equation}
+
+\end_inset
+
+As an aside, while it is fine to use a scalar 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ function for this procedure, in the case when the 
+\begin_inset Formula $\mathbf{E}_{\mu}$
+\end_inset
+
+ are TE modes or fully-vectorial fields, then it is also possible to allow
+ 
+\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
+\end_inset
+
+ to be a diagonally anisotropic tensor
+\begin_inset Formula 
+\begin{equation}
+\overleftrightarrow{\delta\varepsilon}(\mathbf{x})=\left(\begin{array}{ccc}
+\delta\varepsilon_{xx}(\mathbf{x}) & 0 & 0\\
+0 & \delta\varepsilon_{yy}(\mathbf{x}) & 0\\
+0 & 0 & \delta\varepsilon_{zz}(\mathbf{x})
+\end{array}\right).\label{eq:tensor_delta_epsilon}
+\end{equation}
+
+\end_inset
+
+The column-vector form of 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:delta_omega_mu"
+
+\end_inset
+
+ would then have as its elements all the real and imaginary components of
+ 
+\begin_inset Formula $\overleftrightarrow{\delta\varepsilon}(\mathbf{x})$
+\end_inset
+
+ at each Yee point 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "taflove"
+
+\end_inset
+
+ [
+\begin_inset Formula $\delta\varepsilon_{xx}(\mathbf{x})$
+\end_inset
+
+, 
+\begin_inset Formula $\delta\varepsilon_{yy}(\mathbf{x})$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta\varepsilon_{zz}(\mathbf{x})$
+\end_inset
+
+ for all the grid points 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+], while the row-vector 
+\begin_inset Formula $p_{\mu}^{T}$
+\end_inset
+
+ would have as its elements the real and imaginary parts of 
+\begin_inset Formula $E_{x}(\mathbf{x})^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{y}(\mathbf{x})^{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $E_{z}(\mathbf{x})^{2}$
+\end_inset
+
+ at all the grid points.
+ If we take this option, then the norm we minimize would be
+\begin_inset Formula 
+\[
+\left\Vert \delta\varepsilon\right\Vert _{2}^{2}=\int d^{3}\mathbf{x}\left\Vert \overleftrightarrow{\delta\varepsilon}(\mathbf{x})\right\Vert _{F}^{2},
+\]
+
+\end_inset
+
+where the Frobenius norm 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "trefethen"
+
+\end_inset
+
+ at each point 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ is defined as
+\begin_inset Formula 
+\[
+\left\Vert \overleftrightarrow{\delta\varepsilon}(\mathbf{x})\right\Vert _{F}^{2}\equiv\left|\delta\varepsilon_{xx}(\mathbf{x})\right|^{2}+\left|\delta\varepsilon_{yy}(\mathbf{x})\right|^{2}+\left|\delta\varepsilon_{zz}(\mathbf{x})\right|^{2}.
+\]
+
+\end_inset
+
+Whether we take 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ to be scalar or tensor, the degeneracy-forcing condition 
+\begin_inset Formula $\omega_{1}+\delta\omega_{1}=\omega_{2}+\delta\omega_{2}$
+\end_inset
+
+ then becomes
+\begin_inset Formula 
+\[
+(p_{2}-p_{1})^{T}\delta\varepsilon=\omega_{2}-\omega_{1}.
+\]
+
+\end_inset
+
+It turns out that the solution of a quadratic program with equality constraints
+ can be obtained directly by solving a linear 
+\emph on
+dual
+\emph default
+ problem 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "boyd"
+
+\end_inset
+
+, which in this case is
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccc}
+1 & 0 & q^{R} & q^{I}\\
+0 & 1 & -q^{I} & q^{R}\\
+\left(q^{R}\right)^{T} & -\left(q^{I}\right)^{T} & 0 & 0\\
+\left(q^{I}\right)^{T} & \left(q^{R}\right)^{T} & 0 & 0
+\end{array}\right)\left(\begin{array}{c}
+\delta\varepsilon^{R}\\
+\delta\varepsilon^{I}\\
+\lambda_{1}\\
+\lambda_{2}
+\end{array}\right)=\left(\begin{array}{c}
+0\\
+0\\
+\omega_{2}^{R}-\omega_{1}^{R}\\
+\omega_{2}^{I}-\omega_{1}^{I}
+\end{array}\right).
+\]
+
+\end_inset
+
+Here, the superscripts 
+\begin_inset Formula $^{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $^{I}$
+\end_inset
+
+ denote real and imaginary parts, and we have defined 
+\begin_inset Formula $q\equiv p_{2}-p_{1}$
+\end_inset
+
+, and the 
+\begin_inset Formula $\lambda_{1,2}$
+\end_inset
+
+ are Lagrange multipliers that are not needed.
+ When 
+\begin_inset Formula $\omega_{2}$
+\end_inset
+
+ is very close to 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+, we can improve the condition number of the matrix by freely multiplying
+ the second-to-last row and column of the matrix by a constant factor, provided
+ that the second-to-last element of the right-hand side is 
+\emph on
+divided 
+\emph default
+by the same factor.
+ The same can be done for the last row and column, with the last element
+ of the right-hand side.
+ The resulting 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ of this procedure applied to the odd-
+\begin_inset Formula $m$
+\end_inset
+
+ threshold modes in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:even_cylinder_modes"
+
+\end_inset
+
+ are shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:even_cylinder_deps"
+
+\end_inset
+
+, and the convergence of the splitting to zero is shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:even_cylinder_QP"
+
+\end_inset
+
+.
+ As verified in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:deps_scale"
+
+\end_inset
+
+, the 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ norm decreases with higher resolution, satisfying our requirement that
+ the dielectric perturbation should go to zero in the continuum limit.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename even_cylinder/redeps.png
+	lyxscale 20
+	scale 27
+
+\end_inset
+
+
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Graphics
+	filename even_cylinder/imdeps.png
+	lyxscale 20
+	scale 27
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dielectric perturbation 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ obtained by solving QP for even-
+\begin_inset Formula $m$
+\end_inset
+
+ threshold modes.
+ The real part (left) has a dependence 
+\begin_inset Formula $\cos(2m\phi)$
+\end_inset
+
+, while the imaginary part (right) is a more complicated function.
+ Only two iterations of QP were required to obtain a 
+\begin_inset Formula $10^{-15}$
+\end_inset
+
+ degeneracy in both the threshold frequency 
+\begin_inset Formula $\omega_{t}$
+\end_inset
+
+ and the threshold pump strength 
+\begin_inset Formula $D_{t}$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:even_cylinder_deps"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/qp.pdf
+	lyxscale 30
+	scale 40
+	BoundingBox 0bp 160bp 612bp 630bp
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Relative splitting in threshold pump strength 
+\begin_inset Formula $D_{t}$
+\end_inset
+
+ and frequency 
+\begin_inset Formula $\omega_{t}$
+\end_inset
+
+ for even-
+\begin_inset Formula $m$
+\end_inset
+
+ cylinder modes after QP iterations.
+ The relative splitting in frequency is defined in the usual way as 
+\begin_inset Formula $2\left|\frac{\omega_{1}-\omega_{2}}{\omega_{1}+\omega_{2}}\right|$
+\end_inset
+
+, and similarly for the pump strength.
+ Two solves for 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ is all that is needed to force the degeneracy to nearly machine precision.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:even_cylinder_QP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/deps_scale.pdf
+	lyxscale 30
+	scale 40
+	BoundingBox 0bp 160bp 612bp 630bp
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ norm of resulting 
+\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
+\end_inset
+
+ function obtained from QP procedure versus discretization resolution 
+\begin_inset Formula $1/h$
+\end_inset
+
+ for nearly degenerate even-
+\begin_inset Formula $m$
+\end_inset
+
+ modes of cylinder, where 
+\begin_inset Formula $h$
+\end_inset
+
+ is the spacing between adjacent gridpoints.
+ The same resolutions as in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cylinder_resolution"
+
+\end_inset
+
+ were used, and the oscillations resemble the curve for splitting very closely.
+ This is because the larger the splitting 
+\begin_inset Formula $\omega_{2}-\omega_{1}$
+\end_inset
+
+, the larger the 
+\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
+\end_inset
+
+ function needed to enforce the degeneracy.
+ The fact that 
+\begin_inset Formula $\left\Vert \delta\varepsilon\right\Vert _{2}^{2}$
+\end_inset
+
+ appears to be going to zero as the resolution increases indicates that
+ our QP procedure is convergent.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:deps_scale"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that even after the thresholds and threshold frequencies have been
+ made exactly degenerate using the QP procedure illustrated above, we are
+ still in principle forcing the degeneracy.
+ Above threshold, the delicate balance created by 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ to force the frequencies together is slightly broken.
+ This results in an 
+\emph on
+approximate 
+\emph default
+degeneracy that is maintained very far above threshold, as shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:QP_stability"
+
+\end_inset
+
+, with only a 
+\begin_inset Formula $10^{-8}$
+\end_inset
+
+ splitting for pump strengths up to 100 times threshold.
+ In practice, these results are already accurate enough to give all the
+ desired physical information about the degenerate pair.
+ If we wanted to be absolutely correct and force the degeneracy to machine
+ precision (as it was in the exactly symmetric case for odd-
+\begin_inset Formula $m$
+\end_inset
+
+ modes), we could simply perform QP again at some given 
+\begin_inset Formula $d>0$
+\end_inset
+
+ to force 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta\omega^{\prime}$
+\end_inset
+
+ back together.
+ One extra caveat in this case is that 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+ is now a lasing pole, so the spatial hole-burning term need to be taken
+ account for the perturbation theory (
+\begin_inset Formula $\delta\omega^{\prime}$
+\end_inset
+
+ is still a passive pole, so the previous perturbation theory still applies),
+ and instead of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:delta_omega_QP"
+
+\end_inset
+
+ we now have
+\begin_inset Formula 
+\begin{align*}
+\delta\omega & =-\frac{\int\mathbf{E}\cdot\left(\delta\varepsilon+D_{0}\gamma(\omega_{\mu})F\delta H\right)\mathbf{E}}{\int\mathbf{E}\cdot\left(\frac{2\varepsilon}{\omega}+\frac{\partial\varepsilon}{\partial\omega}\right)\mathbf{E}}\\
+\varepsilon & \equiv\varepsilon_{c}+D_{0}\gamma(\omega)FH\\
+\delta H & \equiv\frac{1}{1+\left|\mathbf{E}+\delta\mathbf{E}\right|^{2}}-\frac{1}{1+\left|\mathbf{E}\right|^{2}}.
+\end{align*}
+
+\end_inset
+
+Here, 
+\begin_inset Formula $\delta H$
+\end_inset
+
+ is the change in the spatial-hole burning term arising from the dielectric
+ perturbation 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+.
+ However, since there is no easy way to determine 
+\begin_inset Formula $\delta\mathbf{E}$
+\end_inset
+
+ without numerically solving the full problem, 
+\begin_inset Formula $\delta H$
+\end_inset
+
+ is hard to determine semi-analytically.
+ A simple work-around is to set 
+\begin_inset Formula $\delta H=0$
+\end_inset
+
+ above, which makes this procedure no longer a true first-order perturbation
+ theory.
+ However, since the splitting is already so small as shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:QP_stability"
+
+\end_inset
+
+, the 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ needed is also extremely small, so 
+\begin_inset Formula $\delta H$
+\end_inset
+
+ is also negligible.
+ Although 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+ is not zero to first order, the 
+\begin_inset Formula $\delta H=0$
+\end_inset
+
+ approximation is enough to find a 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ that greatly decreases 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+.
+ We find empirically that it usually takes one iteration of this above-threshold
+ QP procedure to restore the degeneracy of the lasing pole 
+\begin_inset Formula $\omega$
+\end_inset
+
+ and its passive mode 
+\begin_inset Formula $\omega^{\prime}$
+\end_inset
+
+ to machine precision, since 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+ is already very small.
+ Practically speaking, this entire extra step is rarely needed since the
+ solutions obtained from 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ for the linear problem below threshold are already close enough for most
+ pump strengths of physical interest.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/even_cylinder_stability.pdf
+	lyxscale 30
+	scale 40
+	BoundingBox 0bp 160bp 612bp 630bp
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Above-threshold splitting in real and imaginary parts of 
+\begin_inset Formula $\delta\omega^{\prime}$
+\end_inset
+
+ after performing QP procedure for even-
+\begin_inset Formula $m$
+\end_inset
+
+ modes.
+ The magnitude is very small because the intensity profile, as shown in
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:even_cylinder_intensity"
+
+\end_inset
+
+, is very close to
+\emph on
+ 
+\emph default
+rotationally symmetric.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:QP_stability"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename even_cylinder/even_psiexpsq.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Graphics
+	filename even_cylinder/even_psisq_pass.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Intensity profiles for even-
+\begin_inset Formula $m$
+\end_inset
+
+ lasing mode and its second passive pole at 
+\begin_inset Formula $d=100$
+\end_inset
+
+.
+ The intensity of the lasing mode (left) differs imperceptibly from that
+ of that of the passive eigenfunction.
+ This difference is unphysical because it is solely due to discretization
+ error, and is usually so small that it can be neglected.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:even_cylinder_intensity"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We show another example, of a hexagonal cavity as shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:phc_geometry"
+
+\end_inset
+
+.
+ This geometry was adapted from an infinite lattice of period 
+\begin_inset Formula $a$
+\end_inset
+
+ with air holes of radius 
+\begin_inset Formula $0.3a$
+\end_inset
+
+.
+ A single hole in the middle has a reduced radius 
+\begin_inset Formula $0.2a$
+\end_inset
+
+ to create a defect in the band gap.
+ The dielectric is 
+\begin_inset Formula $\varepsilon_{c}=11.56$
+\end_inset
+
+ everywhere except in the holes, where there is air.
+ Here, the lasing modes are TE (electric field in-plane and magnetic field
+ out of plane), but there is a pair of degenerate threshold modes from the
+ hexagon's 
+\begin_inset Formula $C_{6\mathrm{v}}$
+\end_inset
+
+ symmetry, as shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:phc_modes"
+
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename phc/phc_geometry.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dielectric function for hexagonal cavity.
+ This cavity has 
+\begin_inset Formula $C_{6\mathrm{v}}$
+\end_inset
+
+ symmetry and supports a pair of degenerate TE (
+\begin_inset Formula $\mathbf{E}=E_{x}\hat{\mathbf{x}}+E_{y}\hat{\mathbf{y}})$
+\end_inset
+
+ modes that transform as 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ under symmetry operations.
+ All but two rows of holes have been removed to create a lower-
+\begin_inset Formula $Q$
+\end_inset
+
+ structure.
+ A PML is added to the boundaries to capture the radiation loss.
+ The axes of the hexagon have been aligned with the diagonals rather than
+ the 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ axes, because the finite-difference discretization happens to only have
+ mirror symmetry along the diagonals.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:phc_geometry"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename phc/phc_modexR.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Graphics
+	filename phc/phc_modeyR.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Magnetic fields 
+\begin_inset Formula $H_{z}$
+\end_inset
+
+ for pair of degenerate TE threshold modes for hexagonal cavity.
+ The modes are not simple 90-degree rotations of one another, because that
+ rotation is not a member of the 
+\begin_inset Formula $C_{6\mathrm{v}}$
+\end_inset
+
+ symmetry group.
+ However, these modes 
+\emph on
+can
+\emph default
+ be constructed by taking linear combinations of threefold and sixfold rotations
+ of each other.
+ Not shown are the imaginary parts of 
+\begin_inset Formula $H_{z}$
+\end_inset
+
+ which are non-negligible because this is not a high-
+\begin_inset Formula $Q$
+\end_inset
+
+ cavity.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:phc_modes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The two are related to each other by linear combinations of sixfold and
+ threefold rotations.
+ However, these operations do not belong in the 
+\begin_inset Formula $C_{4\mathrm{v}}$
+\end_inset
+
+ symmetry group of the discretized grid, so the degeneracy here is again
+ only approximate.
+ For a 
+\begin_inset Formula $100\times100$
+\end_inset
+
+ finite-difference discretization, there is about a 1.5% splitting between
+ the threshold eigenvalues, so again we must use the QP procedure to force
+ the threshold degeneracy.
+ Since these are TE modes, we now have 
+\emph on
+two 
+\emph default
+components of the electric field, and consequently we may treat 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ as a tensor, as in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:tensor_delta_epsilon"
+
+\end_inset
+
+.
+ We only consider the diagonal components 
+\begin_inset Formula $\delta\varepsilon_{xx}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta\varepsilon_{xy}$
+\end_inset
+
+ here for simplicity.
+ Again, only two iterations of QP are necessary to force the degeneracy
+ down to machine precision.
+ We use Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:chiral_projection"
+
+\end_inset
+
+ to predict the stable linear combination above threshold to use as an initial
+ guess.
+ The intensity pattern obtained in simulation is shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:phc_stable"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename phc/phc_depsxxR.png
+	lyxscale 20
+	scale 27
+
+\end_inset
+
+
+\begin_inset Formula $\qquad$
+\end_inset
+
+
+\begin_inset Graphics
+	filename phc/phc_depsxxI.png
+	lyxscale 20
+	scale 27
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dielectric perturbation obtained from QP procedure for hexagonal cavity.
+ Since the mode is TE (
+\begin_inset Formula $\mathbf{E}=E_{x}\hat{\mathbf{x}}+E_{y}\hat{\mathbf{y}}$
+\end_inset
+
+), we have allowed the perturbation to be a diagonally-anisotropic tenosr,
+ as in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:tensor_delta_epsilon"
+
+\end_inset
+
+.
+ Shown here are the real (left) and imaginary (right) parts of 
+\begin_inset Formula $\delta\varepsilon_{xx}$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\delta\varepsilon_{yy}$
+\end_inset
+
+ looks similar except rotated by 60 degrees.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:phc_deps"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename phc/phc_stableIntensity.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Intensity pattern for stable lasing mode for hexagonal cavity.
+ The pattern appears to be six-fold symmetric, which is expected.
+ Unlike in the right panel of Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:lowQ_chirality"
+
+\end_inset
+
+ however, the chirality is not significant enough to be visible because
+ the 
+\begin_inset Formula $Q\approx100$
+\end_inset
+
+ is much higher.
+ In the ideal system, the second pole 
+\begin_inset Formula $\delta\omega^{\prime}$
+\end_inset
+
+ stays degenerate with the lasing eigenvalue 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+, and this linear combination stays stable for all pump strengths above
+ threshold.
+ In the discretized system, there is not a true 
+\begin_inset Formula $C_{6\mathrm{v}}$
+\end_inset
+
+ symmetry, so there is a small splitting similar to that of the even-
+\begin_inset Formula $m$
+\end_inset
+
+ cylinder modes.
+ Again, this splitting is too small to affect physically meaningful results
+ of the simulation, but can be removed using the QP procedure if desired.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:phc_stable"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Multi-mode degenerate lasing
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Multi-mode-degenerate-lasing"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So far, the discussion and examples in this paper have dealt with the case
+ in which only one pair of degenerate modes are lasing.
+ The generalization to the case of multimode lasing (i.e.
+ multiple nondegenerate and degenerate lasing modes all lasing simultaneously)
+ is straightforward.
+ Since our method combines degenerate pairs into a single mode that is the
+ stable linear combination (as given by the perturbation theory in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+, the multimode treatment is exactly the same as for SALT without degeneracies:
+ the degenerate pairs are always treated as a single mode.
+ As in previous work on SALT 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ge_steady-state_2010,tureci_self-consistent_2006,direct_salt"
+
+\end_inset
+
+, all lasing modes are solved simultaneously at first, and there the collective
+ effect of their spatial hole-burning is used to track the passive modes
+ and add any mode (degenerate or nondegenerate) that crosses threshold to
+ the list of lasing modes.
+ The only aspects of our method requiring generalization are the threshold
+ perturbation theory of Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+ and the QP method of Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Forcing-the-degeneracy"
+
+\end_inset
+
+.
+ For both aspects, we describe small tweaks to the methods presented in
+ those sections that make them valid for the case of multimode lasing.
+\end_layout
+
+\begin_layout Standard
+A general situation in which multimode-lasing is occuring can be described
+ by the equations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ge_steady-state_2010,tureci_self-consistent_2006"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+0 & =\left(\nabla\times\nabla\times-\omega_{\mu}^{2}\varepsilon_{\mu}\right)\mathbf{E}\label{eq:multimode_SALT}\\
+\varepsilon_{\mu} & \equiv\varepsilon_{c}+D_{0}F\gamma(\omega_{\mu})H\nonumber \\
+H & \equiv\frac{1}{1+\sum\left|\mathbf{E}_{\nu}\right|^{2}},\nonumber 
+\end{align}
+
+\end_inset
+
+where there are 
+\begin_inset Formula $M$
+\end_inset
+
+ lasing modes (
+\begin_inset Formula $\mu=1,2,\ldots,M$
+\end_inset
+
+).
+ If we start with 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry and have lasing modes that are either circulating modes (as in
+ Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-of-circulating"
+
+\end_inset
+
+) or non-degenerate modes [partners of 
+\emph on
+real
+\emph default
+ 1d irreps 
+\begin_inset Formula $D(k)$
+\end_inset
+
+ without a corresponding complex-conjugate irrep 
+\begin_inset Formula $\bar{D}(k)$
+\end_inset
+
+ of the opposite chirality], then each of the 
+\begin_inset Formula $\left|\mathbf{E}_{\nu}\right|^{2}$
+\end_inset
+
+ terms has at least 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry, so 
+\begin_inset Formula $H$
+\end_inset
+
+ has 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry.
+ Suppose that the pump strength is at the threshold of mode 
+\begin_inset Formula $M$
+\end_inset
+
+ so that this mode has just started lasing, and the sum in 
+\begin_inset Formula $H$
+\end_inset
+
+ ranges from 
+\begin_inset Formula $\nu=1$
+\end_inset
+
+ to 
+\begin_inset Formula $\nu=M-1$
+\end_inset
+
+.
+ Then all results in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+ still hold, except with gain profile 
+\begin_inset Formula $F(\mathbf{x})$
+\end_inset
+
+ replaced by 
+\begin_inset Formula $FH$
+\end_inset
+
+.
+ While the gain profile is now 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetric rather than 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+, the presence of chiral degenerate pairs (which requires only 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry and Lorentz reciprocity, as explained in appendix A) still remains,
+ as explained in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-of-circulating"
+
+\end_inset
+
+ (the arguments in that section do not assume 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry, so they still hold even if 
+\begin_inset Formula $F(\mathbf{x})$
+\end_inset
+
+ is replaced by a function with only 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry.
+\end_layout
+
+\begin_layout Standard
+Now we consider how to treat the problem of discretization-broken symmetry
+ (Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:discretization_breaking"
+
+\end_inset
+
+) in the case of multimode lasing.
+ The method of Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Forcing-the-degeneracy"
+
+\end_inset
+
+ gives a 
+\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
+\end_inset
+
+ that forces the threshold degeneracy for a 
+\emph on
+single 
+\emph default
+mode pair.
+ When there are multiple pairs of nearly degenerate modes the generalization
+ is straightforward: we allow each pair to have its 
+\emph on
+own
+\emph default
+ 
+\begin_inset Formula $\delta\varepsilon_{\mu}$
+\end_inset
+
+, so that their degeneracies can be forced 
+\emph on
+independently
+\emph default
+.
+ As a result, the dielectric for each pair in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:multimode_SALT"
+
+\end_inset
+
+ will become
+\begin_inset Formula 
+\[
+\varepsilon_{\mu}=\varepsilon_{c}+\delta\varepsilon_{\mu}+D_{0}F\gamma(\omega_{\mu})H.
+\]
+
+\end_inset
+
+Since our QP method finds the 
+\begin_inset Formula $\delta\varepsilon_{\mu}$
+\end_inset
+
+ with the lowest 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ norm (as described in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Forcing-the-degeneracy"
+
+\end_inset
+
+) and the splitting decreases with resolution as seen in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cylinder_resolution"
+
+\end_inset
+
+, each 
+\begin_inset Formula $\delta\varepsilon_{\mu}$
+\end_inset
+
+ will independently go to zero as we increase the resolution, so this generalize
+d method is also 
+\emph on
+convergent
+\emph default
+: the unphysical frequency-dependent 
+\begin_inset Formula $\delta\varepsilon_{\mu}$
+\end_inset
+
+ vanishes with increasing resolution.
+\end_layout
+
+\begin_layout Section
+Concluding Remarks
+\end_layout
+
+\begin_layout Standard
+To do...
+\end_layout
+
+\begin_layout Section*
+Appendix A
+\end_layout
+
+\begin_layout Standard
+We review the result, given in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dichroism"
+
+\end_inset
+
+, of the fact that there are two-fold degeneracies (due to Lorentz reciprocity)
+ in geometries with 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ but not 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry, even though there are only one-dimensional irreps.
+ We give a slightly simpler and more general proof by exploiting the differentia
+l form of Maxwell's equations, as opposed to the integral form in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dichroism"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Consider a field 
+\begin_inset Formula $\mathbf{E}^{+}$
+\end_inset
+
+ that satisfies the equation 
+\begin_inset Formula $\hat{L}(\omega^{+})\mathbf{E}^{+}=0$
+\end_inset
+
+, where we define the linear operator (as in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-adi"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\[
+\hat{L}(\omega)\equiv-\nabla\times\frac{1}{\mu(\mathbf{x},\omega)}\nabla\times+\omega^{2}\varepsilon(\mathbf{x},\omega)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is the eigenfrequency and 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ have 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry: that is, 
+\begin_inset Formula $R_{n}\varepsilon R_{n}^{-1}=\varepsilon$
+\end_inset
+
+, where 
+\begin_inset Formula $R_{n}$
+\end_inset
+
+ is an 
+\begin_inset Formula $n$
+\end_inset
+
+-fold rotation and 
+\begin_inset Formula $R_{n}^{n}=1$
+\end_inset
+
+, the identity operator.
+ Suppose that the field transforms like one of the chiral irreps of 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+: that is, 
+\begin_inset Formula $R_{n}\mathbf{E}^{+}=\exp\left(-\frac{2\pi im}{n}\right)\mathbf{E}^{+}$
+\end_inset
+
+, with 
+\begin_inset Formula $0<\left|m\right|\leq\mathrm{floor}(\frac{n-1}{2})$
+\end_inset
+
+.
+ We want to show that there exists some other function 
+\begin_inset Formula $\mathbf{E}^{-}$
+\end_inset
+
+ that transforms according to the irrep of the opposite chirality 
+\emph on
+and 
+\emph default
+has the same eigenfrequency: that is, 
+\begin_inset Formula $R_{n}\mathbf{E}^{-}=\exp\left(\frac{2\pi im}{n}\right)\mathbf{E}^{-}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{L}(\omega^{+})\mathbf{E}^{-}=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The key step is to use the right basis: we 
+\emph on
+could 
+\emph default
+find the Maxwell eigenfrequencies (Green's-function poles) by solving the
+ nonlinear (in 
+\begin_inset Formula $\omega$
+\end_inset
+
+) eigenvalue problem 
+\begin_inset Formula $\hat{L}(\omega)\mathbf{E}=0$
+\end_inset
+
+.
+ However, these make a poor basis because they diagonalize 
+\emph on
+different 
+\emph default
+operators 
+\begin_inset Formula $\hat{L}(\omega)$
+\end_inset
+
+ with 
+\begin_inset Formula $\omega\neq\omega^{+}$
+\end_inset
+
+.
+ Instead, we fix 
+\begin_inset Formula $\omega=\omega^{+}$
+\end_inset
+
+ and examine the set of eigenfunctions 
+\begin_inset Formula $\mathbf{E}_{j}^{-}$
+\end_inset
+
+ that satisfy 
+\begin_inset Formula $\hat{L}(\omega^{+})\mathbf{E}_{j}^{-}=\lambda_{j}\mathbf{E}_{j}^{-}$
+\end_inset
+
+ and that transform as the 
+\begin_inset Formula $\exp\left(\frac{2\pi im}{n}\right)$
+\end_inset
+
+ irrep.
+ Note that 
+\begin_inset Formula $\lambda_{j}$
+\end_inset
+
+ are 
+\emph on
+not 
+\emph default
+squared eigenfrequencies and 
+\begin_inset Formula $\mathbf{E}_{j}^{-}$
+\end_inset
+
+ are 
+\emph on
+not 
+\emph default
+Maxwell solutions, except for 
+\begin_inset Formula $\lambda_{j}=0$
+\end_inset
+
+.
+ Because this set is a complete basis for functions of this chirality, the
+ function 
+\begin_inset Formula $(\mathbf{E}^{+})^{\star}$
+\end_inset
+
+ (which transforms in the same way as 
+\begin_inset Formula $\mathbf{E}_{j}^{-}$
+\end_inset
+
+ because the rotation operator 
+\begin_inset Formula $R_{n}$
+\end_inset
+
+ is real) can be expanded in this basis:
+\begin_inset Formula 
+\[
+\left(\mathbf{E}^{+}\right)^{\star}=\sum b_{j}\mathbf{E}_{j}^{-},
+\]
+
+\end_inset
+
+assuming that 
+\begin_inset Formula $\hat{L}(\omega^{+})$
+\end_inset
+
+ is diagonalizable (which is generically true for matrices except at exceptional
+ points; the situation for infinite-dimensional operators is more complicated,
+ but diagonalizability is typically assumed there too in physics).
+ We will now show that at least 
+\emph on
+one 
+\emph default
+of these 
+\begin_inset Formula $\mathbf{E}_{j}^{-}$
+\end_inset
+
+ is exactly the 
+\begin_inset Formula $\mathbf{E}^{-}$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $\hat{L}(\omega^{+})\mathbf{E}^{-}=0$
+\end_inset
+
+ that we are looking for.
+\end_layout
+
+\begin_layout Standard
+First, we define the 
+\emph on
+unconjugated 
+\emph default
+inner product 
+\begin_inset Formula $\left(\mathbf{f},\mathbf{g}\right)\equiv\int d^{3}x\mathbf{f}\cdot\mathbf{g}$
+\end_inset
+
+.
+ Then, for appropriate boundary conditions, 
+\begin_inset Formula $\hat{L}(\omega^{+})$
+\end_inset
+
+ is complex symmetric, that is: 
+\begin_inset Formula $\left(\mathbf{f},\hat{L}\mathbf{g}\right)=\left(\hat{L}\mathbf{f},\mathbf{g}\right)$
+\end_inset
+
+ for reciprocal materials 
+\begin_inset Formula $\varepsilon=\varepsilon^{T}$
+\end_inset
+
+, 
+\begin_inset Formula $\mu=\mu^{T}$
+\end_inset
+
+, and this is known as Lorentz reciprocity 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "phc_book"
+
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $\hat{L}(\omega^{+})$
+\end_inset
+
+ is complex symmetric, its eigenfunctions with distinct eigenvalues are
+ orthogonal; that is: 
+\begin_inset Formula $\left(\mathbf{E}_{i}^{-},\mathbf{E}_{j}^{-}\right)=0$
+\end_inset
+
+ for 
+\begin_inset Formula $\lambda_{i}\neq\lambda_{j}$
+\end_inset
+
+.
+ Now write
+\begin_inset Formula 
+\begin{align*}
+\int\left|\mathbf{E}^{+}\right|^{2} & =\sum b_{j}\left(\mathbf{E}^{+},\mathbf{E}_{j}^{-}\right).
+\end{align*}
+
+\end_inset
+
+If all 
+\begin_inset Formula $\mathbf{E}_{j}^{-}$
+\end_inset
+
+ had 
+\begin_inset Formula $\lambda_{j}\neq0$
+\end_inset
+
+, then 
+\begin_inset Formula $\left(\mathbf{E}^{+}\cdot\mathbf{E}_{j}^{-}\right)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ However, the left-hand side is obviously positive, so at least one term
+ in the sum on the right-hand side must be non-vanishing.
+ Hence, this term has the eigenvalue 
+\begin_inset Formula $\lambda_{j}=0$
+\end_inset
+
+, and it is precisely the 
+\begin_inset Formula $\mathbf{E}^{-}$
+\end_inset
+
+ that is degenerate to 
+\begin_inset Formula $\mathbf{E}^{+}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section*
+Appendix B
+\end_layout
+
+\begin_layout Standard
+In this appendix, we give the result that passive poles in SALT above the
+ real axis for lasing modes 
+\emph on
+near threshold
+\emph default
+ are unstable even when the full Maxwell--Bloch equations are taken into
+ account.
+ This instability is in contrast to examples in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+ where SALT modes with passive poles above the real axis were shown in full
+ time-domain simulations of the MB equations to actually be stable.
+ 
+\end_layout
+
+\begin_layout Standard
+We begin with the Maxwell--Bloch equations:
+\begin_inset Formula 
+\begin{align*}
+\varepsilon\ddot{\mathbf{E}}^{+} & =-\nabla\times\nabla\times\mathbf{E}^{+}-\ddot{\mathbf{P}}^{+}\\
+i\dot{\mathbf{P}}^{+} & =(\omega_{a}-i\gamma_{\perp})\mathbf{P}^{+}+\gamma_{\perp}\mathbf{E}^{+}D\\
+\frac{\dot{D}_{MB}}{\gamma_{\parallel}} & =D_{T}(1+d)-D+\frac{i}{2}(\mathbf{E}^{+}\cdot\mathbf{P}^{+\star}-\mathbf{E}^{+\star}\cdot\mathbf{P}^{+}),
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $D_{T}$
+\end_inset
+
+ is the threshold pump.
+ Now use the ansatz
+\begin_inset Formula 
+\begin{align}
+\mathbf{E}^{+}(x,t) & =\left[\sqrt{d}\mathbf{E}(x)+\delta\mathbf{E}(x)e^{\sigma t}\right]e^{-i\omega t}\nonumber \\
+\mathbf{P}^{+}(x,t) & =\left[\sqrt{d}\mathbf{P}(x)+\delta\mathbf{P}(x)e^{\sigma t}\right]e^{-i\omega t}\nonumber \\
+D_{MB}(x,t) & =D(x)+\delta De^{\sigma t}.\label{eq:ansatz}
+\end{align}
+
+\end_inset
+
+We expand the field 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ in power series in 
+\begin_inset Formula $d$
+\end_inset
+
+: 
+\begin_inset Formula $\mathbf{E}(x)=\mathbf{E}_{0}(x)+\mathbf{E}_{1}(x)d+\mathbf{E}_{2}(x)d^{2}+\mathcal{O}(d^{3})$
+\end_inset
+
+, and same for 
+\begin_inset Formula $\mathbf{P}(x)$
+\end_inset
+
+, 
+\begin_inset Formula $D(x)$
+\end_inset
+
+, and 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ We now solve for the steady-state 
+\emph on
+lasing 
+\emph default
+solution 
+\begin_inset Formula $\mathbf{E},\mathbf{P},D,\omega$
+\end_inset
+
+ to first order in 
+\begin_inset Formula $d$
+\end_inset
+
+, and then we linearize about this lasing solution, i.e.
+ find 
+\begin_inset Formula $\delta\mathbf{E}$
+\end_inset
+
+, 
+\begin_inset Formula $\delta\mathbf{P}$
+\end_inset
+
+, and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, also to first order in 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Lasing modes 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Inserting the ansatz (without any 
+\begin_inset Formula $\delta$
+\end_inset
+
+ terms) into the MB equations and keeping only zero-order terms, we have
+\begin_inset Formula 
+\begin{align}
+\nabla\times\nabla\times\mathbf{E}_{0} & =\omega_{0}^{2}\left(\varepsilon\mathbf{E}_{0}+\mathbf{P}_{0}\right)\nonumber \\
+\mathbf{P}_{0} & =\gamma(\omega_{0})D_{T}\mathbf{E}_{0}\nonumber \\
+0 & =D_{T}-D_{T}.\label{eq:lowest}
+\end{align}
+
+\end_inset
+
+The solution for 
+\begin_inset Formula $\mathbf{E}_{0}$
+\end_inset
+
+ is any linear combination of 
+\begin_inset Formula $\mathbf{E}_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{B}$
+\end_inset
+
+, the two degenerate modes predicted by SALT at threshold.
+ Now insert the ansatz into MB again and this time keep 
+\begin_inset Formula $\mathcal{O}(d)$
+\end_inset
+
+ terms.
+ We have
+\begin_inset Formula 
+\begin{align*}
+\nabla\times\nabla\times\mathbf{E}_{1} & =\omega_{0}^{2}\left(\varepsilon\mathbf{E}_{1}+\mathbf{P}_{1}\right)+2\omega_{0}\omega_{1}\left(\varepsilon\mathbf{E}_{0}+\mathbf{P}_{0}\right)\\
+\omega_{1}\mathbf{P}_{0} & =\left(\omega_{a}-\omega_{0}-i\gamma_{\perp}\right)\mathbf{P}_{1}+\gamma_{\perp}\left(D_{T}\mathbf{E}_{1}+D_{1}\mathbf{E}_{0}\right)\\
+0 & =-D_{1}+\frac{i}{2}\left(\mathbf{E}_{0}\cdot\mathbf{P}_{0}^{\star}-\mathbf{E}_{0}^{\star}\cdot\mathbf{P}_{0}\right).
+\end{align*}
+
+\end_inset
+
+Inserting the zeroth order result in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lowest"
+
+\end_inset
+
+, we obtain 
+\begin_inset Formula $D_{1}=-D_{T}\left|\gamma(\omega_{0})\mathbf{E}_{0}\right|^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{align}
+0 & =\omega_{0}^{2}\gamma(\omega_{0})D_{T}\left[\frac{\omega_{1}}{\gamma_{\perp}}\gamma(\omega_{0})+\left|\gamma(\omega_{0})\mathbf{E}_{0}\right|^{2}\right]\mathbf{E}_{0}\nonumber \\
+ & \ldots-\left(-\nabla\times\nabla\times+\omega_{0}^{2}\varepsilon_{T}\right)\mathbf{E}_{1}-2\omega_{0}\omega_{1}\varepsilon_{T}\mathbf{E}_{0}\label{eq:long}
+\end{align}
+
+\end_inset
+
+with 
+\begin_inset Formula $\varepsilon_{T}\equiv\varepsilon+\gamma(\omega_{0})D_{T}$
+\end_inset
+
+.
+ Inserting 
+\begin_inset Formula $\mathbf{E}_{0}=a_{A}\mathbf{E}_{A}+a_{B}\mathbf{E}_{B}$
+\end_inset
+
+, and taking the inner product (integral) with 
+\begin_inset Formula $\mathbf{E}_{A,B}$
+\end_inset
+
+ we recover Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:aaa"
+
+\end_inset
+
+ from our previous threshold perturbation theory based on SALT, as expected.
+\end_layout
+
+\begin_layout Subsection*
+Linearized modes 
+\begin_inset Formula $\delta\mathbf{E}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now for a given lasing mode specified by the coefficients in 
+\begin_inset Formula $\mathbf{E}_{0}=a_{A}\mathbf{E}_{A}+a_{B}\mathbf{E}_{B}$
+\end_inset
+
+, we insert the ansatz Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ansatz"
+
+\end_inset
+
+ into the MB equations and keep terms to first order in 
+\begin_inset Formula $\delta$
+\end_inset
+
+.
+ After some algebra, we obtain
+\begin_inset Formula 
+\begin{equation}
+\left(A+\sigma B+\sigma^{2}C\right)v=0,\label{eq:ABC}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+v\equiv\left(\begin{array}{c}
+\delta\mathbf{E}_{R}\\
+\delta\mathbf{E}_{I}\\
+\delta\mathbf{P}_{R}\\
+\delta\mathbf{P}_{I}\\
+\delta D
+\end{array}\right)
+\]
+
+\end_inset
+
+(with 
+\begin_inset Formula $R,I$
+\end_inset
+
+ subscripts indicating real and imaginary parts).
+ The matrices are 
+\begin_inset Formula $A\equiv$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\begin{array}{ccccc}
+A_{11} & -\omega^{2}\varepsilon_{I} & \omega^{2} & 0 & 0\\
+\omega^{2}\varepsilon_{I} & A_{22} & 0 & \omega^{2} & 0\\
+\gamma_{\perp}D & 0 & \omega_{a}-\omega & \gamma_{\perp} & \gamma_{\perp}\sqrt{d}\mathbf{E}_{R}\\
+0 & \gamma_{\perp}D & -\gamma_{\perp} & \omega_{a}-\omega & \gamma_{\perp}\sqrt{d}\mathbf{E}_{I}\\
+\sqrt{d}\mathbf{P}_{I} & -\sqrt{d}\mathbf{P}_{R} & \sqrt{d}\mathbf{E}_{I} & -\sqrt{d}\mathbf{E}_{R} & 1
+\end{array}\right),
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $A_{11}=A_{22}=-\nabla\times\nabla\times+\omega^{2}\varepsilon_{R}$
+\end_inset
+
+, and
+\begin_inset Formula 
+\[
+B\equiv\left(\begin{array}{ccccc}
+-2\omega\varepsilon_{I} & -2\omega\varepsilon_{R} & 0 & -2\omega & 0\\
+2\omega\varepsilon_{R} & -2\omega\varepsilon_{I} & 2\omega & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & -1 & 0 & 0\\
+0 & 0 & 0 & 0 & \gamma_{\parallel}^{-1}
+\end{array}\right),
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+C\equiv\left(\begin{array}{ccccc}
+-\varepsilon_{R} & \varepsilon_{I} & -1 & 0 & 0\\
+-\varepsilon_{I} & -\varepsilon_{R} & 0 & -1 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right).
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\omega$
+\end_inset
+
+, 
+\begin_inset Formula $D$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ can all be expanded in powers of 
+\begin_inset Formula $d$
+\end_inset
+
+, we see that 
+\begin_inset Formula 
+\begin{align*}
+A & =A_{0}+A_{1/2}\sqrt{d}+A_{1}d+\mathcal{O}(d^{3/2})\\
+B & =B_{0}+B_{1}d+\mathcal{O}(d^{2})\\
+C & =C_{0}.
+\end{align*}
+
+\end_inset
+
+Since there are terms in half-integer powers of 
+\begin_inset Formula $d$
+\end_inset
+
+, we also have
+\begin_inset Formula 
+\begin{align*}
+v & =v_{0}+v_{1/2}\sqrt{d}+v_{1}d+\mathcal{O}(d^{3/2})\\
+\sigma & =\sigma_{0}+\sigma_{1/2}\sqrt{d}+\sigma_{1}d+\mathcal{O}(d^{3/2}).
+\end{align*}
+
+\end_inset
+
+Now perform degenerate perturbation theory on Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ABC"
+
+\end_inset
+
+ order-by-order in 
+\begin_inset Formula $\sqrt{d}$
+\end_inset
+
+.
+ To zeroth order, we have 
+\begin_inset Formula $\left(A_{0}+\sigma_{0}B_{0}+\sigma_{0}^{2}C_{0}\right)v_{0}=0$
+\end_inset
+
+.
+ This equation corresponds to linearizing MB at threshold, and for 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ geometries, we have the degenerate pairs:
+\begin_inset Formula 
+\[
+\sigma_{0}=\sigma_{0}^{m},\;v_{0}=\left(\begin{array}{c}
+\mathbf{E}_{(A,B)R}^{m}\\
+\mathbf{E}_{(A,B)I}^{m}\\
+\mathbf{P}_{(A,B)R}^{m}\\
+\mathbf{P}_{(A,B)I}^{m}\\
+0
+\end{array}\right),
+\]
+
+\end_inset
+
+where one pair has 
+\begin_inset Formula $\sigma_{0}=0$
+\end_inset
+
+, corresponding to the threshold lasing pair, while the rest of the pairs
+ have 
+\begin_inset Formula $\mathrm{Re}\sigma_{0}^{m}<0$
+\end_inset
+
+, which correspond to the other pairs below threshold.
+ There are also decaying solutions 
+\begin_inset Formula $\sigma_{0}=-\gamma_{\parallel}$
+\end_inset
+
+ for arbitrary deviations 
+\begin_inset Formula $\delta D$
+\end_inset
+
+, but these do not play any significant role.
+ Now expand Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ABC"
+
+\end_inset
+
+ about the 
+\begin_inset Formula $\sigma_{0}=0$
+\end_inset
+
+ pair of solutions to 
+\begin_inset Formula $\mathcal{O}(\sqrt{d})$
+\end_inset
+
+, and we have
+\begin_inset Formula 
+\begin{equation}
+A_{1/2}v_{0}+A_{0}v_{1/2}+\sigma_{1/2}B_{0}v_{0}=0.\label{eq:half}
+\end{equation}
+
+\end_inset
+
+To annihilate the term with 
+\begin_inset Formula $v_{1/2}$
+\end_inset
+
+, we want two left null vectors of 
+\begin_inset Formula $A_{0}$
+\end_inset
+
+, satisfying 
+\begin_inset Formula $A_{0}^{T}u_{A,B}=0$
+\end_inset
+
+.
+ It can be easily shown that these null vectors are
+\begin_inset Formula 
+\[
+u_{A,B}=\left(\begin{array}{c}
+\mathbf{E}_{(A,B)R}\\
+-\mathbf{E}_{(A,B)I}\\
+\frac{\omega_{0}^{2}}{\gamma_{\perp}D_{T}}\mathbf{P}_{(A,B)R}\\
+-\frac{\omega_{0}^{2}}{\gamma_{\perp}D_{T}}\mathbf{P}_{(A,B)I}\\
+0
+\end{array}\right).
+\]
+
+\end_inset
+
+By simple inspection of the positions of the matrix elements of 
+\begin_inset Formula $A_{1/2}$
+\end_inset
+
+, we also have 
+\begin_inset Formula $u_{A,B}^{T}A_{1/2}v_{0}=0$
+\end_inset
+
+.
+ Hence, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:half"
+
+\end_inset
+
+ becomes 
+\begin_inset Formula $\sigma_{1/2}u_{A,B}^{T}B_{0}v_{0}=0$
+\end_inset
+
+.
+ Since the matrix given by 
+\begin_inset Formula $u_{\mu}^{T}B_{0}v_{\nu}$
+\end_inset
+
+ is not singular, we have both degenerate eigenvalues 
+\begin_inset Formula $\sigma_{1/2}=0$
+\end_inset
+
+, i.e.
+ there is no splitting or shift of 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathcal{O}(\sqrt{d})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Next, we move onto 
+\begin_inset Formula $\mathcal{O}(d)$
+\end_inset
+
+.
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ABC"
+
+\end_inset
+
+ becomes 
+\begin_inset Formula $A_{1}v_{0}+A_{0}v_{1}+A_{1/2}v_{1/2}+\sigma_{1}B_{0}v_{0}=0$
+\end_inset
+
+, where we have used the fact that 
+\begin_inset Formula $\sigma_{0}=\sigma_{1/2}=0$
+\end_inset
+
+ for the linearized solutions 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ that we are perturbing about.
+ Again, multiplying both sides by 
+\begin_inset Formula $u_{A,B}^{T}$
+\end_inset
+
+, and writing 
+\begin_inset Formula $v_{0}=a_{A}^{\prime}v_{A}+a_{B}^{\prime}v_{B}$
+\end_inset
+
+, we see that 
+\begin_inset Formula $A_{1/2}$
+\end_inset
+
+ drops out again and we have 
+\begin_inset Formula $\sum u_{\mu}^{T}\left(A_{1}+\sigma_{1}B_{0}\right)v_{\nu}a_{\nu}^{\prime}=0$
+\end_inset
+
+, which is equivalent to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:aaa_passive"
+
+\end_inset
+
+, the threshold perturbation theory based on SALT.
+ Hence, if the passive poles in our threshold perturbation theory cross
+ the real axis, then that is equivalent to 
+\begin_inset Formula $\mathrm{Re}\sigma_{1}>0$
+\end_inset
+
+ in our linear stability analysis for the full MB equations, which necessarily
+ means instability.
+ On the other hand, note that having a passive pole of SALT 
+\emph on
+on 
+\emph default
+the real axis, which is equivalent to 
+\begin_inset Formula $\mathrm{Re}\sigma_{1}=0$
+\end_inset
+
+ (a condition sometimes referred to as 
+\begin_inset Quotes eld
+\end_inset
+
+neutrally stable
+\begin_inset Quotes erd
+\end_inset
+
+) does not necessarily imply stability, because higher order corrections
+ can still push the pole above the real axis, rendering it unstable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "references"
+options "apsrev4-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,23 @@
+found mode #0: w = 1.7004659 + (-0.028040055) i; pumped fraction = 0.72247
+found mode #1: w = 1.7219168 + (-0.028469761) i; pumped fraction = 0.707069
+
+thresh0 at D = 0.224689: w = 1.7022759310084 + i(1.07061e-09)
+Threshold found for mode "thresh0" at D = 0.2246888511
+
+thresh1 at D = 0.216419: w = 1.72209803172662 + i(9.23502e-11)
+Threshold found for mode "thresh1" at D = 0.2164191772
+
+========
+
+now using "epsphcmanual0.txt"
+
+found mode #0: w = 1.7074667 + (-0.028572772) i; pumped fraction = 0.724537
+found mode #1: w = 1.7073366 + (-0.028256965) i; pumped fraction = 0.703664
+
+thresh0 at D = 0.223862: w = 1.70875708812474 + i(1.08437e-10)
+Threshold found for mode "thresh0" at D = 0.223861516
+
+thresh1 at D = 0.223862: w = 1.70875708832456 + i(1.02779e-10)
+Threshold found for mode "thresh1" at D = 0.223861516
+
+

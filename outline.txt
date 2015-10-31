@@ -1,0 +1,13 @@
+background
+
+1) what SALT is
+2) degenerate solution in ring known, but other geometries unsolved
+3) Stefan's work studied stability of GIVEN solutions
+4) lots of work on slightly broken degeneracies, in general, no steady state
+
+New:
+- general way to find degenerate lasing solutions, if they exist, Scalable SALT
+- analytical solution near threshold, analytic stability of "circulating" solutions and its generalization
+- starting point for SALT above threshold
+- compensate for numerical symmetry breaking
+
