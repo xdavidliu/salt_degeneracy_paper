@@ -5463,19 +5463,27 @@ reference "eq:ABC"
  geometries, we have the degenerate pairs:
 \begin_inset Formula 
 \[
-\sigma_{0}=\sigma_{0}^{m},\;v_{0}=\left(\begin{array}{c}
-\mathbf{E}_{(A,B)R}^{m}\\
-\mathbf{E}_{(A,B)I}^{m}\\
-\mathbf{P}_{(A,B)R}^{m}\\
-\mathbf{P}_{(A,B)I}^{m}\\
+\sigma_{0}=\sigma_{0}^{m},\;v_{0}=v_{0i}^{m}=\left(\begin{array}{c}
+\mathbf{E}_{iR}^{m}\\
+\mathbf{E}_{iI}^{m}\\
+\mathbf{P}_{iR}^{m}\\
+\mathbf{P}_{iI}^{m}\\
 0
 \end{array}\right),
 \]
 
 \end_inset
 
-where one pair has 
-\begin_inset Formula $\sigma_{0}=0$
+for 
+\begin_inset Formula $i=A,B$
+\end_inset
+
+, where the 
+\begin_inset Formula $m=0$
+\end_inset
+
+ pair has 
+\begin_inset Formula $\sigma_{0}^{0}=0$
 \end_inset
 
 , corresponding to the threshold lasing pair, while the rest of the pairs
@@ -5502,7 +5510,7 @@ reference "eq:ABC"
 \end_inset
 
  about the 
-\begin_inset Formula $\sigma_{0}=0$
+\begin_inset Formula $m=0$
 \end_inset
 
  pair of solutions to 
@@ -5512,13 +5520,13 @@ reference "eq:ABC"
 , and we have
 \begin_inset Formula 
 \begin{equation}
-A_{1/2}v_{0}+A_{0}v_{1/2}+\sigma_{1/2}B_{0}v_{0}=0.\label{eq:half}
+A_{1/2}v_{0}^{0}+A_{0}v_{1/2}^{0}+\sigma_{1/2}^{0}B_{0}v_{0}^{0}=0.\label{eq:half}
 \end{equation}
 
 \end_inset
 
 To annihilate the term with 
-\begin_inset Formula $v_{1/2}$
+\begin_inset Formula $v_{1/2}^{0}$
 \end_inset
 
 , we want two left null vectors of 
@@ -5526,30 +5534,61 @@ To annihilate the term with
 \end_inset
 
 , satisfying 
-\begin_inset Formula $A_{0}^{T}u_{A,B}=0$
+\begin_inset Formula $A_{0}^{T}u_{i}^{0}=0$
 \end_inset
 
 .
  It can be easily shown that these null vectors are
 \begin_inset Formula 
 \[
-u_{A,B}=\left(\begin{array}{c}
-\mathbf{E}_{(A,B)R}\\
--\mathbf{E}_{(A,B)I}\\
-\frac{\omega_{0}^{2}}{\gamma_{\perp}D_{T}}\mathbf{P}_{(A,B)R}\\
--\frac{\omega_{0}^{2}}{\gamma_{\perp}D_{T}}\mathbf{P}_{(A,B)I}\\
+u_{i}^{0}=\left(\begin{array}{c}
+\mathbf{E}_{iR}^{0}\\
+-\mathbf{E}_{iI}^{0}\\
+\frac{\omega_{0}^{2}}{\gamma_{\perp}D_{T}}\mathbf{P}_{iR}^{0}\\
+-\frac{\omega_{0}^{2}}{\gamma_{\perp}D_{T}}\mathbf{P}_{iI}^{0}\\
 0
 \end{array}\right).
 \]
 
 \end_inset
 
-By simple inspection of the positions of the matrix elements of 
+Note that left null vectors of 
+\begin_inset Formula $u_{i}^{m}$
+\end_inset
+
+ for 
+\begin_inset Formula $m\neq0$
+\end_inset
+
+ can be similarly defined, and satisfy 
+\begin_inset Formula $(A_{0}^{T}+\sigma_{0}^{m}B_{0}^{T}+\sigma_{0}^{m2}C_{0}^{T})u_{i}^{m}=0$
+\end_inset
+
+.
+ As an aside, note from the equations
+\begin_inset Formula 
+\begin{align*}
+0 & =u_{i}^{nT}\left(A_{0}+\sigma_{0}^{m}B_{0}+\sigma_{0}^{m2}C_{0}\right)v_{j}^{m}\\
+ & =u_{i}^{nT}\left(A_{0}+\sigma_{0}^{n}B_{0}+\sigma_{0}^{n2}C_{0}\right)v_{j}^{m}
+\end{align*}
+
+\end_inset
+
+that the right and left eigenvectors can be chosen to satisfy the orthonormality
+ relation
+\begin_inset Formula 
+\begin{equation}
+u_{i}^{nT}\left[B_{0}+(\sigma_{0}^{m}+\sigma_{0}^{n})C_{0}\right]v_{j}^{m}=\delta_{ij}\delta_{mn}.\label{eq:orthonormality}
+\end{equation}
+
+\end_inset
+
+Next, by simple inspection of the positions of the matrix elements of 
 \begin_inset Formula $A_{1/2}$
 \end_inset
 
 , we also have 
-\begin_inset Formula $u_{A,B}^{T}A_{1/2}v_{0}=0$
+\begin_inset Formula $u_{i}^{0T}A_{1/2}v_{0}^{0}=0$
 \end_inset
 
 .
@@ -5562,21 +5601,21 @@ reference "eq:half"
 \end_inset
 
  becomes 
-\begin_inset Formula $\sigma_{1/2}u_{A,B}^{T}B_{0}v_{0}=0$
+\begin_inset Formula $\sigma_{1/2}^{0}u_{i}^{0T}B_{0}v_{0}^{0}=0$
 \end_inset
 
 .
  Since the matrix given by 
-\begin_inset Formula $u_{\mu}^{T}B_{0}v_{\nu}$
+\begin_inset Formula $u_{i}^{0T}B_{0}v_{j}^{0}$
 \end_inset
 
  is not singular, we have both degenerate eigenvalues 
-\begin_inset Formula $\sigma_{1/2}=0$
+\begin_inset Formula $\sigma_{1/2}^{0}=0$
 \end_inset
 
 , i.e.
  there is no splitting or shift of 
-\begin_inset Formula $\sigma$
+\begin_inset Formula $\sigma^{0}$
 \end_inset
 
  to 
@@ -5602,24 +5641,24 @@ reference "eq:ABC"
 \end_inset
 
  becomes 
-\begin_inset Formula $A_{1}v_{0}+A_{0}v_{1}+A_{1/2}v_{1/2}+\sigma_{1}B_{0}v_{0}=0$
+\begin_inset Formula $A_{1}v_{0}^{0}+A_{0}v_{1}^{0}+A_{1/2}v_{1/2}^{0}+\sigma_{1}^{0}B_{0}v_{0}^{0}=0$
 \end_inset
 
 , where we have used the fact that 
-\begin_inset Formula $\sigma_{0}=\sigma_{1/2}=0$
+\begin_inset Formula $\sigma_{0}^{0}=\sigma_{1/2}^{0}=0$
 \end_inset
 
  for the linearized solutions 
-\begin_inset Formula $v_{0}$
+\begin_inset Formula $v_{0}^{0}$
 \end_inset
 
  that we are perturbing about.
  Again, multiplying both sides by 
-\begin_inset Formula $u_{A,B}^{T}$
+\begin_inset Formula $u_{i}^{0T}$
 \end_inset
 
 , and writing 
-\begin_inset Formula $v_{0}=a_{A}^{\prime}v_{A}+a_{B}^{\prime}v_{B}$
+\begin_inset Formula $v_{0}^{0}=a_{A}^{\prime}v_{A}^{0}+a_{B}^{\prime}v_{B}^{0}$
 \end_inset
 
 , we see that 
@@ -5627,7 +5666,7 @@ reference "eq:ABC"
 \end_inset
 
  drops out again and we have 
-\begin_inset Formula $\sum u_{\mu}^{T}\left(A_{1}+\sigma_{1}B_{0}\right)v_{\nu}a_{\nu}^{\prime}=0$
+\begin_inset Formula $\sum u_{i}^{0T}\left(A_{1}+\sigma_{1}^{0}B_{0}\right)v_{j}^{0}a_{j}^{\prime}=0$
 \end_inset
 
 , which is equivalent to Eq.
@@ -5641,17 +5680,21 @@ reference "eq:aaa_passive"
 , the threshold perturbation theory based on SALT.
  Hence, if the passive poles in our threshold perturbation theory cross
  the real axis, then that is equivalent to 
-\begin_inset Formula $\mathrm{Re}\sigma_{1}>0$
+\begin_inset Formula $\mathrm{Re}\sigma_{1}^{0}>0$
 \end_inset
 
  in our linear stability analysis for the full MB equations, which necessarily
  means instability.
- On the other hand, note that having a passive pole of SALT 
+ 
+\end_layout
+
+\begin_layout Standard
+On the other hand, note that having a passive pole of SALT 
 \emph on
 on 
 \emph default
 the real axis, which is equivalent to 
-\begin_inset Formula $\mathrm{Re}\sigma_{1}=0$
+\begin_inset Formula $\mathrm{Re}\sigma_{1}^{0}=0$
 \end_inset
 
  (a condition sometimes referred to as 
@@ -5664,6 +5707,160 @@ neutrally stable
 
 ) does not necessarily imply stability, because higher order corrections
  can still push the pole above the real axis, rendering it unstable.
+ For this case, we must go to the next order, 
+\begin_inset Formula $\sigma_{3/2}^{0}$
+\end_inset
+
+.
+ The equation to this order is
+\begin_inset Formula 
+\[
+A_{3/2}v_{0}^{0}+A_{0}v_{3/2}^{0}+A_{1}v_{1/2}^{0}+A_{1/2}v_{1}^{0}+\sigma_{3/2}^{0}B_{0}v_{0}^{0}=0.
+\]
+
+\end_inset
+
+Now take 
+\begin_inset Formula $u_{i}^{0T}$
+\end_inset
+
+ of both sides, and we have
+\begin_inset Formula 
+\begin{equation}
+u_{i}^{T}\left(A_{1}v_{1/2}^{0}+\sigma_{3/2}^{0}B_{0}v_{0}^{0}\right)=0.\label{eq:sigma_3/2}
+\end{equation}
+
+\end_inset
+
+Hence, to obtain 
+\begin_inset Formula $\sigma_{3/2}^{0}$
+\end_inset
+
+, we must obtain an expression for the correction in the eigenvector, 
+\begin_inset Formula $v_{1/2}^{0}$
+\end_inset
+
+.
+ To do this, we go back to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:half"
+
+\end_inset
+
+, keeping in mind that since 
+\begin_inset Formula $\sigma_{1/2}^{0}=0$
+\end_inset
+
+, the eigenvectors 
+\begin_inset Formula $v_{0}^{0}$
+\end_inset
+
+ also remain degenerate to this next order, so we can write 
+\emph on
+separate 
+\emph default
+equations for 
+\begin_inset Formula $i=A,B$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+A_{1/2}v_{0i}^{0}+A_{0}v_{1/2i}^{0}=0.\label{eq:half again}
+\end{equation}
+
+\end_inset
+
+Now write
+\begin_inset Formula 
+\[
+v_{1/2i}^{0}=\sum_{mk}c_{ik}^{m}v_{k}^{m},
+\]
+
+\end_inset
+
+and multiply both sides of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:half again"
+
+\end_inset
+
+ by 
+\begin_inset Formula $u_{j}^{nT}$
+\end_inset
+
+ with 
+\begin_inset Formula $n\neq0$
+\end_inset
+
+, and we have
+\begin_inset Formula 
+\[
+\sum_{mk}c_{ik}^{m}\left(u_{j}^{nT}A_{0}v_{k}^{m}\right)=0.
+\]
+
+\end_inset
+
+If the matrix 
+\begin_inset Formula $u_{j}^{nT}A_{0}v_{k}^{m}$
+\end_inset
+
+ were singular, then this equation can be solved for the coefficients 
+\begin_inset Formula $c_{ik}^{m}$
+\end_inset
+
+, and from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sigma_3/2"
+
+\end_inset
+
+ we would obtain the 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ eigenproblem
+\begin_inset Formula 
+\[
+u_{i}^{T}\left(A_{1}\sum_{mk}c_{ik}^{m}v_{k}^{m}+\sigma_{3/2}^{0}B_{0}v_{j}^{0}\right)=0,
+\]
+
+\end_inset
+
+which could then be diagonalized to obtain the split eigenvalues 
+\begin_inset Formula $\sigma_{3/2}^{0}$
+\end_inset
+
+.
+ However, if the matrix 
+\begin_inset Formula $u_{j}^{nT}A_{0}v_{k}^{m}$
+\end_inset
+
+ were non-singular, then the only allowed coefficients would be 
+\begin_inset Formula $c_{ik}^{m}=0$
+\end_inset
+
+, giving 
+\begin_inset Formula $v_{1/2}^{0}=0$
+\end_inset
+
+ and consequently 
+\begin_inset Formula $\sigma_{3/2}^{0}=0$
+\end_inset
+
+ also.
+ In this case, we would need to go further, to 
+\begin_inset Formula $\sigma_{2}^{0}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
