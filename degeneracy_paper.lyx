@@ -5217,7 +5217,7 @@ Inserting the ansatz (without any
 \begin_inset Formula 
 \begin{align}
 \nabla\times\nabla\times\mathbf{E}_{0} & =\omega_{0}^{2}\left(\varepsilon\mathbf{E}_{0}+\mathbf{P}_{0}\right)\nonumber \\
-\mathbf{P}_{0} & =\gamma(\omega_{0})D_{T}\mathbf{E}_{0}\nonumber \\
+\mathbf{P}_{0} & =\gamma_{0}D_{T}\mathbf{E}_{0}\nonumber \\
 0 & =D_{T}-D_{T}.\label{eq:lowest}
 \end{align}
 
@@ -5228,11 +5228,11 @@ The solution for
 \end_inset
 
  is any linear combination of 
-\begin_inset Formula $\mathbf{E}_{A}$
+\begin_inset Formula $\mathbf{E}_{\alpha}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{E}_{B}$
+\begin_inset Formula $\mathbf{E}_{\beta}$
 \end_inset
 
 , the two degenerate modes predicted by SALT at threshold.
@@ -5260,29 +5260,33 @@ reference "eq:lowest"
 \end_inset
 
 , we obtain 
-\begin_inset Formula $D_{1}=-D_{T}\left|\gamma(\omega_{0})\mathbf{E}_{0}\right|^{2}$
+\begin_inset Formula $D_{1}=-D_{T}\left|\gamma_{0}\mathbf{E}_{0}\right|^{2}$
+\end_inset
+
+ where 
+\begin_inset Formula $\gamma_{0}\equiv\gamma(\omega_{0})$
 \end_inset
 
  and 
 \begin_inset Formula 
 \begin{align}
-0 & =\omega_{0}^{2}\gamma(\omega_{0})D_{T}\left[\frac{\omega_{1}}{\gamma_{\perp}}\gamma(\omega_{0})+\left|\gamma(\omega_{0})\mathbf{E}_{0}\right|^{2}\right]\mathbf{E}_{0}\nonumber \\
+0 & =\omega_{0}^{2}\gamma_{0}D_{T}\left[\frac{\omega_{1}}{\gamma_{\perp}}\gamma_{0}+\left|\gamma_{0}\mathbf{E}_{0}\right|^{2}\right]\mathbf{E}_{0}\nonumber \\
  & \ldots-\left(-\nabla\times\nabla\times+\omega_{0}^{2}\varepsilon_{T}\right)\mathbf{E}_{1}-2\omega_{0}\omega_{1}\varepsilon_{T}\mathbf{E}_{0}\label{eq:long}
 \end{align}
 
 \end_inset
 
 with 
-\begin_inset Formula $\varepsilon_{T}\equiv\varepsilon+\gamma(\omega_{0})D_{T}$
+\begin_inset Formula $\varepsilon_{T}\equiv\varepsilon+\gamma_{0}D_{T}$
 \end_inset
 
 .
  Inserting 
-\begin_inset Formula $\mathbf{E}_{0}=a_{A}\mathbf{E}_{A}+a_{B}\mathbf{E}_{B}$
+\begin_inset Formula $\mathbf{E}_{0}=a_{\alpha}\mathbf{E}_{\alpha}+a_{\beta}\mathbf{E}_{\beta}$
 \end_inset
 
 , and taking the inner product (integral) with 
-\begin_inset Formula $\mathbf{E}_{A,B}$
+\begin_inset Formula $\mathbf{E}_{\alpha,\beta}$
 \end_inset
 
  we recover Eq.
@@ -5306,7 +5310,7 @@ Linearized modes
 
 \begin_layout Standard
 Now for a given lasing mode specified by the coefficients in 
-\begin_inset Formula $\mathbf{E}_{0}=a_{A}\mathbf{E}_{A}+a_{B}\mathbf{E}_{B}$
+\begin_inset Formula $\mathbf{E}_{0}=a_{\alpha}\mathbf{E}_{\alpha}+a_{\beta}\mathbf{E}_{\beta}$
 \end_inset
 
 , we insert the ansatz Eq.
@@ -5684,13 +5688,44 @@ v_{1/2}=\left(\begin{array}{c}
 0\\
 0\\
 g
-\end{array}\right)\label{eq:v1/2}
+\end{array}\right).\label{eq:v1/2}
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $g=???$
+\begin_inset Formula $g\equiv\frac{2(\omega_{0}-\omega_{a})}{\gamma_{\perp}}\left|\gamma_{0}\right|^{2}\mathrm{Im(}\mathbf{E}_{0}^{\prime\star}\cdot\mathbf{E}_{0})$
+\end_inset
+
+.
+ From the nonzero pattern of 
+\begin_inset Formula $A$
+\end_inset
+
+, we see that for all integers 
+\begin_inset Formula $N>0$
+\end_inset
+
+, 
+\begin_inset Formula $A_{N}v_{1/2}=0$
+\end_inset
+
+ , and 
+\begin_inset Formula 
+\[
+A_{(2N-1)/2}v_{1/2}=\gamma_{\perp}g\left(\begin{array}{c}
+0\\
+0\\
+E_{(N-1)R}\\
+E_{(N-1)I}\\
+0
+\end{array}\right),
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $A_{0}v_{1/2}=v_{1/2}$
 \end_inset
 
 .
@@ -5791,7 +5826,25 @@ neutrally stable
 \end_inset
 
 .
- 
+ From now on, we consider only the chiral modes with both passive poles
+ having 
+\begin_inset Formula $\sigma_{1}=0$
+\end_inset
+
+.
+ For these modes, the first-order equation can be solved for 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+A_{0}v_{1}=-A_{1}v_{0}+A_{1/2}v_{1/2}.\label{eq:v1_equation}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -5806,32 +5859,73 @@ Three-halves order
 The equation to this order is
 \begin_inset Formula 
 \[
-A_{3/2}v_{0}+A_{0}v_{3/2}+A_{1}v_{1/2}+A_{1/2}v_{1}+\sigma_{3/2}B_{0}v_{0}=0.
+A_{3/2}v_{0}+A_{0}v_{3/2}+A_{1/2}v_{1}+\sigma_{3/2}B_{0}v_{0}=0.
 \]
 
 \end_inset
 
 Now take 
-\begin_inset Formula $u_{i}^{T}$
+\begin_inset Formula $u_{j}^{T}$
 \end_inset
 
  of both sides, and we have
 \begin_inset Formula 
 \begin{equation}
-u_{i}^{T}\left(A_{1}v_{1/2}+\sigma_{3/2}B_{0}v_{0}\right)=0.\label{eq:sigma_3/2}
+\sigma_{3/2}\sum\left(u_{i}^{T}B_{0}v_{k}\right)b_{k}=0.\label{eq:sigma_3/2}
 \end{equation}
 
 \end_inset
 
-Inserting Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:v1/2"
+Again, since the matrix 
+\begin_inset Formula $u_{i}^{T}B_{0}v_{k}$
+\end_inset
+
+ is nonsingular, we must have 
+\begin_inset Formula $\sigma_{3/2}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Second order 
+\begin_inset Formula $\mathcal{O}(d^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The equation to this order is
+\begin_inset Formula 
+\[
+A_{2}v_{0}+A_{0}v_{2}+A_{1}v_{1}+A_{3/2}v_{1/2}+A_{1/2}v_{3/2}+\sigma_{2}B_{0}v_{0}=0.
+\]
 
 \end_inset
 
-, we obtain ???
+Multiplying both sides by 
+\begin_inset Formula $u_{j}^{T}$
+\end_inset
+
+ as before, we obtain
+\begin_inset Formula 
+\[
+-u_{j}^{T}\left(A_{2}v_{0}+A_{1}v_{1}\right)=\sigma_{2}\left(u_{j}^{T}B_{0}v_{0}\right)
+\]
+
+\end_inset
+
+This gives a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ degenerate eigenproblem for 
+\begin_inset Formula $\sigma_{2}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
