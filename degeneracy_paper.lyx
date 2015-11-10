@@ -5176,7 +5176,7 @@ solution
 \begin_inset Formula $\mathbf{E},\mathbf{P},D,\omega$
 \end_inset
 
- to first order in 
+ to the first few orders in 
 \begin_inset Formula $d$
 \end_inset
 
@@ -5193,7 +5193,7 @@ solution
 \begin_inset Formula $\sigma$
 \end_inset
 
-, also to first order in 
+, also to the first few orders in 
 \begin_inset Formula $d$
 \end_inset
 
@@ -5228,11 +5228,11 @@ The solution for
 \end_inset
 
  is any linear combination of 
-\begin_inset Formula $\mathbf{E}_{\alpha}$
+\begin_inset Formula $\mathbf{e}_{1}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{E}_{\beta}$
+\begin_inset Formula $\mathbf{e}_{2}$
 \end_inset
 
 , the two degenerate modes predicted by SALT at threshold.
@@ -5282,11 +5282,11 @@ with
 
 .
  Inserting 
-\begin_inset Formula $\mathbf{E}_{0}=a_{\alpha}\mathbf{E}_{\alpha}+a_{\beta}\mathbf{E}_{\beta}$
+\begin_inset Formula $\mathbf{E}_{0}=a_{1}\mathbf{e}_{1}+a_{2}\mathbf{e}_{2}$
 \end_inset
 
 , and taking the inner product (integral) with 
-\begin_inset Formula $\mathbf{E}_{\alpha,\beta}$
+\begin_inset Formula $\mathbf{e}_{1,2}$
 \end_inset
 
  we recover Eq.
@@ -5310,7 +5310,7 @@ Linearized modes
 
 \begin_layout Standard
 Now for a given lasing mode specified by the coefficients in 
-\begin_inset Formula $\mathbf{E}_{0}=a_{\alpha}\mathbf{E}_{\alpha}+a_{\beta}\mathbf{E}_{\beta}$
+\begin_inset Formula $\mathbf{E}_{0}=a_{1}\mathbf{e}_{1}+a_{2}\mathbf{e}_{2}$
 \end_inset
 
 , we insert the ansatz Eq.
@@ -5474,11 +5474,11 @@ To zeroth order, we have
 .
  This equation corresponds to linearizing MB at threshold, and we have the
  threshold modes 
-\begin_inset Formula $v_{0}=\sum b_{k}v_{k}$
+\begin_inset Formula $v_{0}=v_{k}$
 \end_inset
 
  with 
-\begin_inset Formula $k=\alpha,\beta$
+\begin_inset Formula $k=1,2$
 \end_inset
 
 , and 
@@ -5507,23 +5507,66 @@ To zeroth order, we have
 \begin_inset Formula 
 \[
 v_{k}=\left(\begin{array}{c}
-\mathbf{E}_{kR}\\
-\mathbf{E}_{kI}\\
-\mathbf{P}_{kR}\\
-\mathbf{P}_{kI}\\
+\mathbf{e}_{kR}\\
+\mathbf{e}_{kI}\\
+\mathbf{p}_{kR}\\
+\mathbf{p}_{kI}\\
 0
 \end{array}\right),\;u_{k}=\left(\begin{array}{c}
-\mathbf{E}_{kR}\\
--\mathbf{E}_{kI}\\
-\frac{\omega_{0}^{2}}{\gamma_{\perp}D_{T}}\mathbf{P}_{kR}\\
--\frac{\omega_{0}^{2}}{\gamma_{\perp}D_{T}}\mathbf{P}_{kI}\\
+\mathbf{e}_{kR}\\
+-\mathbf{e}_{kI}\\
+\frac{\omega_{0}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}_{kR}\\
+-\frac{\omega_{0}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}_{kI}\\
 0
 \end{array}\right).
 \]
 
 \end_inset
 
-Assuming that the geometry has 
+Note that because 
+\begin_inset Formula $A_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{0}$
+\end_inset
+
+, and 
+\begin_inset Formula $C_{0}$
+\end_inset
+
+ are block-complex matrices and 
+\begin_inset Formula $v_{1,2}$
+\end_inset
+
+ are degenerate, then any vector 
+\begin_inset Formula $v_{0}=b_{1}v_{1}+b_{2}R(\theta)v_{2}$
+\end_inset
+
+ also satisfies the quadratic eigenvalue equation, where 
+\begin_inset Formula $b_{1,2}$
+\end_inset
+
+ are real and
+\begin_inset Formula 
+\[
+R(\theta)\equiv\left(\begin{array}{ccccc}
+\cos\theta & -\sin\theta & 0 & 0 & 0\\
+\sin\theta & \cos\theta & 0 & 0 & 0\\
+0 & 0 & \cos\theta & -\sin\theta & 0\\
+0 & 0 & \sin\theta & \cos\theta & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right).
+\]
+
+\end_inset
+
+This is equivalent to forming the linear combination 
+\begin_inset Formula $\delta\mathbf{E}_{0}=b_{1}\mathbf{e}_{1}+b_{2}e^{i\theta}\mathbf{e}_{2}$
+\end_inset
+
+.
+ Assuming that the geometry has 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
@@ -5541,15 +5584,6 @@ Assuming that the geometry has
 \end_inset
 
 .
- We assume that the vectors 
-\begin_inset Formula $v_{k}^{m}$
-\end_inset
-
- and 
-\begin_inset Formula $v_{k}$
-\end_inset
-
- form a complete basis.
  Note also because of the nonzero pattern for 
 \begin_inset Formula $A_{N/2}$
 \end_inset
@@ -5633,21 +5667,60 @@ A_{1/2}v_{0}+A_{0}v_{1/2}+\sigma_{1/2}B_{0}v_{0}=0.\label{eq:half}
 
 \end_inset
 
-Making the substitution 
-\begin_inset Formula $v_{0}=\sum b_{k}v_{k}$
-\end_inset
-
- and Multiplying both sides by 
+Multiplying both sides by 
 \begin_inset Formula $u_{j}^{T}$
 \end_inset
 
 , the first two terms vanish and we obtain 
-\begin_inset Formula $\sigma_{1/2}\sum(u_{j}^{T}B_{0}v_{k})b_{k}$
+\begin_inset Formula $\sigma_{1/2}(u_{j}^{T}B_{0}v_{0})=0$
 \end_inset
 
 .
+ Since the last element is not involved, we write 
+\begin_inset Formula $B_{0}$
+\end_inset
+
+, and 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ in terms of complex basis
+\begin_inset Formula 
+\begin{equation}
+B_{0}\rightarrow i\left(\begin{array}{cc}
+2\omega\varepsilon & 2\omega\\
+0 & -1
+\end{array}\right),\;v_{0}\rightarrow\left(\begin{array}{c}
+b_{1}\mathbf{e}_{1}+b_{2}e^{i\theta}\mathbf{e}_{2}\\
+b_{1}\mathbf{p}_{1}+b_{2}e^{i\theta}\mathbf{p}_{2}
+\end{array}\right),\label{eq:B0_complex}
+\end{equation}
+
+\end_inset
+
+ and we obtain 
+\begin_inset Formula $\sigma_{1/2}\sum\beta_{jk}\tilde{b}_{k}=0$
+\end_inset
+
+, where 
+\begin_inset Formula $\tilde{b}_{1}\equiv b_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{b}_{2}\equiv b_{2}e^{i\theta}$
+\end_inset
+
+, and 
+\begin_inset Formula $\beta_{jk}$
+\end_inset
+
+ are the matrix elements of 
+\begin_inset Formula $u_{j}^{T}B_{0}v_{0}$
+\end_inset
+
+ in the complex basis.
  The matrix 
-\begin_inset Formula $u_{j}^{T}B_{0}v_{k}$
+\begin_inset Formula $\beta_{jk}$
 \end_inset
 
  is non-singular, so we conclude that 
@@ -5655,7 +5728,11 @@ Making the substitution
 \end_inset
 
 .
- Eq.
+ By inspection, we have 
+\begin_inset Formula $A_{0}v_{1/2}=v_{1/2}$
+\end_inset
+
+, so Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5663,38 +5740,22 @@ reference "eq:half"
 
 \end_inset
 
- becomes 
-\begin_inset Formula $A_{0}v_{1/2}=-A_{1/2}v_{0}$
-\end_inset
-
-, and can be solved very easily for 
-\begin_inset Formula $v_{1/2}$
-\end_inset
-
- by inspecting the nonzero patterns of 
-\begin_inset Formula $A_{0}$
-\end_inset
-
- and 
-\begin_inset Formula $A_{1/2}$
-\end_inset
-
-:
+ gives
 \begin_inset Formula 
 \begin{equation}
-v_{1/2}=\left(\begin{array}{c}
+v_{1/2}=-A_{1/2}v_{0}=\left(\begin{array}{c}
 0\\
 0\\
 0\\
 0\\
 g
-\end{array}\right).\label{eq:v1/2}
+\end{array}\right),\label{eq:v1/2}
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $g\equiv\frac{2(\omega_{0}-\omega_{a})}{\gamma_{\perp}}\left|\gamma_{0}\right|^{2}\mathrm{Im(}\mathbf{E}_{0}^{\prime\star}\cdot\mathbf{E}_{0})$
+\begin_inset Formula $g\equiv\frac{2(\omega_{0}-\omega_{a})}{\gamma_{\perp}}\left|\gamma_{0}\right|^{2}\mathrm{Im(\delta}\mathbf{E}_{0}^{\star}\cdot\mathbf{E}_{0})$
 \end_inset
 
 .
@@ -5716,20 +5777,15 @@ where
 A_{(2N-1)/2}v_{1/2}=\gamma_{\perp}g\left(\begin{array}{c}
 0\\
 0\\
-E_{(N-1)R}\\
-E_{(N-1)I}\\
+\mathbf{E}_{(N-1)R}\\
+\mathbf{E}_{(N-1)I}\\
 0
-\end{array}\right),
+\end{array}\right).
 \]
 
 \end_inset
 
-and 
-\begin_inset Formula $A_{0}v_{1/2}=v_{1/2}$
-\end_inset
 
-.
- 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -5771,19 +5827,28 @@ reference "eq:ABC"
 \begin_inset Formula $u_{j}^{T}$
 \end_inset
 
-, and writing 
-\begin_inset Formula $v_{0}=\sum b_{k}v_{k}$
-\end_inset
-
 , we see that 
 \begin_inset Formula $A_{1/2}$
 \end_inset
 
  drops out again and we have 
-\begin_inset Formula $\sum\left[u_{j}^{T}\left(A_{1}+\sigma_{1}B_{0}\right)v_{k}\right]b_{k}=0$
+\begin_inset Formula $u_{j}^{T}\left(A_{1}+\sigma_{1}B_{0}\right)v_{0}=0$
 \end_inset
 
-, which is equivalent to Eq.
+.
+ Writing 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ in the complex basis and using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:B0_complex"
+
+\end_inset
+
+, we recover Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5871,16 +5936,20 @@ Now take
  of both sides, and we have
 \begin_inset Formula 
 \begin{equation}
-\sigma_{3/2}\sum\left(u_{i}^{T}B_{0}v_{k}\right)b_{k}=0.\label{eq:sigma_3/2}
+\sigma_{3/2}\left(u_{j}^{T}B_{0}v_{0}\right)=0.\label{eq:sigma_3/2}
 \end{equation}
 
 \end_inset
 
-Again, since the matrix 
-\begin_inset Formula $u_{i}^{T}B_{0}v_{k}$
+Using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:B0_complex"
+
 \end_inset
 
- is nonsingular, we must have 
+ as before, we see that the matrix is nonsingular, so we must have 
 \begin_inset Formula $\sigma_{3/2}=0$
 \end_inset
 
@@ -5916,16 +5985,7 @@ Multiplying both sides by
 
 \end_inset
 
-This gives a 
-\begin_inset Formula $2\times2$
-\end_inset
 
- degenerate eigenproblem for 
-\begin_inset Formula $\sigma_{2}$
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Standard
