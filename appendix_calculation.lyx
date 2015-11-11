@@ -74,499 +74,91 @@
 \begin_body
 
 \begin_layout Standard
-In this appendix, we give the result that passive poles in SALT above the
- real axis for lasing modes 
-\emph on
-near threshold
-\emph default
- are unstable even when the full Maxwell--Bloch equations are taken into
- account.
- This instability is in contrast to examples in Ref.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ref-rotter_degeneracy"
+The Maxwell--Bloch equations are
+\begin_inset Formula 
+\begin{align}
+\varepsilon\ddot{\mathbf{E}}^{+} & =-\nabla\times\nabla\times\mathbf{E}^{+}-\ddot{\mathbf{P}}^{+}\nonumber \\
+i\dot{\mathbf{P}}^{+} & =(\omega_{a}-i\gamma_{\perp})\mathbf{P}^{+}+\gamma_{\perp}\mathbf{E}^{+}D^{+}\label{eq:MB}\\
+\frac{\dot{D}^{+}}{\gamma_{\parallel}} & =D_{T}(1+d)-D^{+}+\mathrm{Im}(\mathbf{E}^{-}\cdot\mathbf{P}^{+}).\nonumber 
+\end{align}
 
 \end_inset
 
- where SALT modes with passive poles above the real axis were shown in full
- time-domain simulations of the MB equations to actually be stable.
- 
-\end_layout
 
-\begin_layout Standard
-We begin with the Maxwell--Bloch equations:
+\begin_inset Formula $D_{T}$
+\end_inset
+
+ is some threshold pump strength, and 
+\begin_inset Formula $d$
+\end_inset
+
+ is a small deviation above threshold.
+ The 
+\begin_inset Formula $+$
+\end_inset
+
+ superscript on the real function 
+\begin_inset Formula $D^{+}(\mathbf{x},t)$
+\end_inset
+
+ is somewhat inconsistent with the originally meaning, which is the 
+\begin_inset Quotes eld
+\end_inset
+
+positive-frequency
+\begin_inset Quotes erd
+\end_inset
+
+ component, however we use this notation for simplicity.
+ We use the ansatz
 \begin_inset Formula 
 \begin{align*}
-\varepsilon\ddot{\mathbf{E}}^{+} & =-\nabla\times\nabla\times\mathbf{E}^{+}-\ddot{\mathbf{P}}^{+}\\
-i\dot{\mathbf{P}}^{+} & =(\omega_{a}-i\gamma_{\perp})\mathbf{P}^{+}+\gamma_{\perp}\mathbf{E}^{+}D\\
-\frac{\dot{D}_{MB}}{\gamma_{\parallel}} & =D_{T}(1+d)-D+\frac{i}{2}(\mathbf{E}^{+}\cdot\mathbf{P}^{+\star}-\mathbf{E}^{+\star}\cdot\mathbf{P}^{+}),
+\mathbf{E}^{+}(\mathbf{x},t) & =\mathbf{E}(\mathbf{x})e^{-i\omega t}+\delta\mathbf{E}(\mathbf{x})e^{(\sigma-i\omega)t}\\
+\mathbf{P}^{+}(\mathbf{x},t) & =\mathbf{P}(\mathbf{x})e^{-i\omega t}+\delta\mathbf{P}(\mathbf{x})e^{(\sigma-i\omega)t}\\
+D^{+}(\mathbf{x},t) & =D(\mathbf{x})+\delta D(\mathbf{x})e^{\sigma t}
 \end{align*}
 
 \end_inset
 
 where 
-\begin_inset Formula $D_{T}$
-\end_inset
-
- is the threshold pump.
- Now use the ansatz
-\begin_inset Formula 
-\begin{align}
-\mathbf{E}^{+}(x,t) & =\left[\sqrt{d}\mathbf{E}(x)+\delta\mathbf{E}(x)e^{\sigma t}\right]e^{-i\omega t}\nonumber \\
-\mathbf{P}^{+}(x,t) & =\left[\sqrt{d}\mathbf{P}(x)+\delta\mathbf{P}(x)e^{\sigma t}\right]e^{-i\omega t}\nonumber \\
-D_{MB}(x,t) & =D(x)+\delta De^{\sigma t}.\label{eq:ansatz}
-\end{align}
-
-\end_inset
-
-We expand the field 
-\begin_inset Formula $\mathbf{E}$
-\end_inset
-
- in power series in 
-\begin_inset Formula $d$
-\end_inset
-
-: 
-\begin_inset Formula $\mathbf{E}(x)=\mathbf{E}_{0}(x)+\mathbf{E}_{1}(x)d+\mathbf{E}_{2}(x)d^{2}+\mathcal{O}(d^{3})$
-\end_inset
-
-, and same for 
-\begin_inset Formula $\mathbf{P}(x)$
-\end_inset
-
-, 
-\begin_inset Formula $D(x)$
-\end_inset
-
-, and 
-\begin_inset Formula $\omega$
+\begin_inset Formula $\mathbf{E},\mathbf{P},D\gg\delta\mathbf{E},\delta\mathbf{P},\delta D$
 \end_inset
 
 .
- We now solve for the steady-state 
+ Because of this scale difference, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MB"
+
+\end_inset
+
+ separates into 
 \emph on
-lasing 
+two 
 \emph default
-solution 
-\begin_inset Formula $\mathbf{E},\mathbf{P},D,\omega$
-\end_inset
-
- to first order in 
-\begin_inset Formula $d$
-\end_inset
-
-, and then we linearize about this lasing solution, i.e.
- find 
-\begin_inset Formula $\delta\mathbf{E}$
-\end_inset
-
-, 
-\begin_inset Formula $\delta\mathbf{P}$
-\end_inset
-
-, and 
-\begin_inset Formula $\sigma$
-\end_inset
-
-, also to first order in 
-\begin_inset Formula $d$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection*
-Lasing modes 
-\begin_inset Formula $\mathbf{E}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Inserting the ansatz (without any 
-\begin_inset Formula $\delta$
-\end_inset
-
- terms) into the MB equations and keeping only zero-order terms, we have
+equations:
 \begin_inset Formula 
 \begin{align}
-\nabla\times\nabla\times\mathbf{E}_{0} & =\omega_{0}^{2}\left(\varepsilon\mathbf{E}_{0}+\mathbf{P}_{0}\right)\nonumber \\
-\mathbf{P}_{0} & =\gamma(\omega_{0})D_{T}\mathbf{E}_{0}\nonumber \\
-0 & =D_{T}-D_{T}.\label{eq:lowest}
+0 & =-\nabla\times\nabla\times\mathbf{E}+\omega^{2}(\varepsilon\mathbf{E}+\mathbf{P})\nonumber \\
+\mathbf{P} & =\gamma(\omega)D\mathbf{E}\label{eq:MBE}\\
+0 & =D_{T}(1+d)-D+\mathrm{Im}(\mathbf{E}^{\star}\cdot\mathbf{P})\nonumber 
 \end{align}
-
-\end_inset
-
-The solution for 
-\begin_inset Formula $\mathbf{E}_{0}$
-\end_inset
-
- is any linear combination of 
-\begin_inset Formula $\mathbf{E}_{A}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{E}_{B}$
-\end_inset
-
-, the two degenerate modes predicted by SALT at threshold.
- Now insert the ansatz into MB again and this time keep 
-\begin_inset Formula $\mathcal{O}(d)$
-\end_inset
-
- terms.
- We have
-\begin_inset Formula 
-\begin{align*}
-\nabla\times\nabla\times\mathbf{E}_{1} & =\omega_{0}^{2}\left(\varepsilon\mathbf{E}_{1}+\mathbf{P}_{1}\right)+2\omega_{0}\omega_{1}\left(\varepsilon\mathbf{E}_{0}+\mathbf{P}_{0}\right)\\
-\omega_{1}\mathbf{P}_{0} & =\left(\omega_{a}-\omega_{0}-i\gamma_{\perp}\right)\mathbf{P}_{1}+\gamma_{\perp}\left(D_{T}\mathbf{E}_{1}+D_{1}\mathbf{E}_{0}\right)\\
-0 & =-D_{1}+\frac{i}{2}\left(\mathbf{E}_{0}\cdot\mathbf{P}_{0}^{\star}-\mathbf{E}_{0}^{\star}\cdot\mathbf{P}_{0}\right).
-\end{align*}
-
-\end_inset
-
-Inserting the zeroth order result in Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:lowest"
-
-\end_inset
-
-, we obtain 
-\begin_inset Formula $D_{1}=-D_{T}\left|\gamma(\omega_{0})\mathbf{E}_{0}\right|^{2}$
-\end_inset
-
- and 
-\begin_inset Formula 
-\begin{align}
-0 & =\omega_{0}^{2}\gamma(\omega_{0})D_{T}\left[\frac{\omega_{1}}{\gamma_{\perp}}\gamma(\omega_{0})+\left|\gamma(\omega_{0})\mathbf{E}_{0}\right|^{2}\right]\mathbf{E}_{0}\nonumber \\
- & \ldots-\left(-\nabla\times\nabla\times+\omega_{0}^{2}\varepsilon_{T}\right)\mathbf{E}_{1}-2\omega_{0}\omega_{1}\varepsilon_{T}\mathbf{E}_{0}\label{eq:long}
-\end{align}
-
-\end_inset
-
-with 
-\begin_inset Formula $\varepsilon_{T}\equiv\varepsilon+\gamma(\omega_{0})D_{T}$
-\end_inset
-
-.
- Inserting 
-\begin_inset Formula $\mathbf{E}_{0}=a_{A}\mathbf{E}_{A}+a_{B}\mathbf{E}_{B}$
-\end_inset
-
-, and taking the inner product (integral) with 
-\begin_inset Formula $\mathbf{E}_{A,B}$
-\end_inset
-
- we recover Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:aaa"
-
-\end_inset
-
- from our previous threshold perturbation theory based on SALT, as expected.
-\end_layout
-
-\begin_layout Subsection*
-Linearized modes 
-\begin_inset Formula $\delta\mathbf{E}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Now for a given lasing mode specified by the coefficients in 
-\begin_inset Formula $\mathbf{E}_{0}=a_{A}\mathbf{E}_{A}+a_{B}\mathbf{E}_{B}$
-\end_inset
-
-, we insert the ansatz Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ansatz"
-
-\end_inset
-
- into the MB equations and keep terms to first order in 
-\begin_inset Formula $\delta$
-\end_inset
-
-.
- After some algebra, we obtain
-\begin_inset Formula 
-\begin{equation}
-\left(A+\sigma B+\sigma^{2}C\right)v=0,\label{eq:ABC}
-\end{equation}
-
-\end_inset
-
-where
-\begin_inset Formula 
-\[
-v\equiv\left(\begin{array}{c}
-\delta\mathbf{E}_{R}\\
-\delta\mathbf{E}_{I}\\
-\delta\mathbf{P}_{R}\\
-\delta\mathbf{P}_{I}\\
-\delta D
-\end{array}\right)
-\]
-
-\end_inset
-
-(with 
-\begin_inset Formula $R,I$
-\end_inset
-
- subscripts indicating real and imaginary parts).
- The matrices are 
-\begin_inset Formula $A\equiv$
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\left(\begin{array}{ccccc}
-A_{11} & -\omega^{2}\varepsilon_{I} & \omega^{2} & 0 & 0\\
-\omega^{2}\varepsilon_{I} & A_{22} & 0 & \omega^{2} & 0\\
-\gamma_{\perp}D & 0 & \omega_{a}-\omega & \gamma_{\perp} & \gamma_{\perp}\sqrt{d}\mathbf{E}_{R}\\
-0 & \gamma_{\perp}D & -\gamma_{\perp} & \omega_{a}-\omega & \gamma_{\perp}\sqrt{d}\mathbf{E}_{I}\\
-\sqrt{d}\mathbf{P}_{I} & -\sqrt{d}\mathbf{P}_{R} & \sqrt{d}\mathbf{E}_{I} & -\sqrt{d}\mathbf{E}_{R} & 1
-\end{array}\right),
-\]
-
-\end_inset
-
-with 
-\begin_inset Formula $A_{11}=A_{22}=-\nabla\times\nabla\times+\omega^{2}\varepsilon_{R}$
-\end_inset
-
-, and
-\begin_inset Formula 
-\[
-B\equiv\left(\begin{array}{ccccc}
--2\omega\varepsilon_{I} & -2\omega\varepsilon_{R} & 0 & -2\omega & 0\\
-2\omega\varepsilon_{R} & -2\omega\varepsilon_{I} & 2\omega & 0 & 0\\
-0 & 0 & 0 & 1 & 0\\
-0 & 0 & -1 & 0 & 0\\
-0 & 0 & 0 & 0 & \gamma_{\parallel}^{-1}
-\end{array}\right),
-\]
 
 \end_inset
 
 and
 \begin_inset Formula 
-\[
-C\equiv\left(\begin{array}{ccccc}
--\varepsilon_{R} & \varepsilon_{I} & -1 & 0 & 0\\
--\varepsilon_{I} & -\varepsilon_{R} & 0 & -1 & 0\\
-0 & 0 & 0 & 0 & 0\\
-0 & 0 & 0 & 0 & 0\\
-0 & 0 & 0 & 0 & 0
-\end{array}\right).
-\]
+\begin{align}
+0 & =-\nabla\times\nabla\times\delta\mathbf{E}+(\omega+i\sigma)^{2}(\varepsilon\delta\mathbf{E}+\delta\mathbf{P})\nonumber \\
+\delta\mathbf{P} & =\gamma(\omega+i\sigma)(D\delta\mathbf{E}+\mathbf{E}\delta D)\label{eq:MBdelta}\\
+\frac{\delta\dot{D}}{\gamma_{\parallel}} & =-\delta D+\mathrm{Im}(\delta\mathbf{E}^{\star}\cdot\mathbf{P}+\mathbf{E}^{\star}\cdot\delta\mathbf{P}).\nonumber 
+\end{align}
 
 \end_inset
 
-Since 
-\begin_inset Formula $\omega$
-\end_inset
-
-, 
-\begin_inset Formula $D$
-\end_inset
-
-, and 
-\begin_inset Formula $\mathbf{E}$
-\end_inset
-
- can all be expanded in powers of 
-\begin_inset Formula $d$
-\end_inset
-
-, we see that 
-\begin_inset Formula 
-\begin{align*}
-A & =A_{0}+A_{1/2}\sqrt{d}+A_{1}d+\mathcal{O}(d^{3/2})\\
-B & =B_{0}+B_{1}d+\mathcal{O}(d^{2})\\
-C & =C_{0}.
-\end{align*}
-
-\end_inset
-
-Since there are terms in half-integer powers of 
-\begin_inset Formula $d$
-\end_inset
-
-, we also have
-\begin_inset Formula 
-\begin{align*}
-v & =v_{0}+v_{1/2}\sqrt{d}+v_{1}d+\mathcal{O}(d^{3/2})\\
-\sigma & =\sigma_{0}+\sigma_{1/2}\sqrt{d}+\sigma_{1}d+\mathcal{O}(d^{3/2}).
-\end{align*}
-
-\end_inset
-
-Now perform degenerate perturbation theory on Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ABC"
-
-\end_inset
-
- order-by-order in 
-\begin_inset Formula $\sqrt{d}$
-\end_inset
-
-.
- To zeroth order, we have 
-\begin_inset Formula $\left(A_{0}+\sigma_{0}B_{0}+\sigma_{0}^{2}C_{0}\right)v_{0}=0$
-\end_inset
-
-.
- This equation corresponds to linearizing MB at threshold, and for 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- geometries, we have the degenerate pairs:
-\begin_inset Formula 
-\[
-\sigma_{0}=\sigma_{0}^{m},\;v_{0}=\left(\begin{array}{c}
-\mathbf{E}_{(A,B)R}^{m}\\
-\mathbf{E}_{(A,B)I}^{m}\\
-\mathbf{P}_{(A,B)R}^{m}\\
-\mathbf{P}_{(A,B)I}^{m}\\
-0
-\end{array}\right),
-\]
-
-\end_inset
-
-where one pair has 
-\begin_inset Formula $\sigma_{0}=0$
-\end_inset
-
-, corresponding to the threshold lasing pair, while the rest of the pairs
- have 
-\begin_inset Formula $\mathrm{Re}\sigma_{0}^{m}<0$
-\end_inset
-
-, which correspond to the other pairs below threshold.
- There are also decaying solutions 
-\begin_inset Formula $\sigma_{0}=-\gamma_{\parallel}$
-\end_inset
-
- for arbitrary deviations 
-\begin_inset Formula $\delta D$
-\end_inset
-
-, but these do not play any significant role.
- Now expand Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ABC"
-
-\end_inset
-
- about the 
-\begin_inset Formula $\sigma_{0}=0$
-\end_inset
-
- pair of solutions to 
-\begin_inset Formula $\mathcal{O}(\sqrt{d})$
-\end_inset
-
-, and we have
-\begin_inset Formula 
-\begin{equation}
-A_{1/2}v_{0}+A_{0}v_{1/2}+\sigma_{1/2}B_{0}v_{0}=0.\label{eq:half}
-\end{equation}
-
-\end_inset
-
-To annihilate the term with 
-\begin_inset Formula $v_{1/2}$
-\end_inset
-
-, we want two left null vectors of 
-\begin_inset Formula $A_{0}$
-\end_inset
-
-, satisfying 
-\begin_inset Formula $A_{0}^{T}u_{A,B}=0$
-\end_inset
-
-.
- It can be easily shown that these null vectors are
-\begin_inset Formula 
-\[
-u_{A,B}=\left(\begin{array}{c}
-\mathbf{E}_{(A,B)R}\\
--\mathbf{E}_{(A,B)I}\\
-\frac{\omega_{0}^{2}}{\gamma_{\perp}D_{T}}\mathbf{P}_{(A,B)R}\\
--\frac{\omega_{0}^{2}}{\gamma_{\perp}D_{T}}\mathbf{P}_{(A,B)I}\\
-0
-\end{array}\right).
-\]
-
-\end_inset
-
-By simple inspection of the positions of the matrix elements of 
-\begin_inset Formula $A_{1/2}$
-\end_inset
-
-, we also have 
-\begin_inset Formula $u_{A,B}^{T}A_{1/2}v_{0}=0$
-\end_inset
-
-.
- Hence, Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:half"
-
-\end_inset
-
- becomes 
-\begin_inset Formula $\sigma_{1/2}u_{A,B}^{T}B_{0}v_{0}=0$
-\end_inset
-
-.
- Since the matrix given by 
-\begin_inset Formula $u_{\mu}^{T}B_{0}v_{\nu}$
-\end_inset
-
- is not singular, we have both degenerate eigenvalues 
-\begin_inset Formula $\sigma_{1/2}=0$
-\end_inset
-
-, i.e.
- there is no splitting or shift of 
-\begin_inset Formula $\sigma$
-\end_inset
-
- to 
-\begin_inset Formula $\mathcal{O}(\sqrt{d})$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Next, we move onto 
-\begin_inset Formula $\mathcal{O}(d)$
+We have defined 
+\begin_inset Formula $\gamma(\omega)=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
 \end_inset
 
 .
@@ -574,73 +166,25 @@ Next, we move onto
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:ABC"
+reference "eq:MBE"
 
 \end_inset
 
- becomes 
-\begin_inset Formula $A_{1}v_{0}+A_{0}v_{1}+A_{1/2}v_{1/2}+\sigma_{1}B_{0}v_{0}=0$
-\end_inset
-
-, where we have used the fact that 
-\begin_inset Formula $\sigma_{0}=\sigma_{1/2}=0$
-\end_inset
-
- for the linearized solutions 
-\begin_inset Formula $v_{0}$
-\end_inset
-
- that we are perturbing about.
- Again, multiplying both sides by 
-\begin_inset Formula $u_{A,B}^{T}$
-\end_inset
-
-, and writing 
-\begin_inset Formula $v_{0}=a_{A}^{\prime}v_{A}+a_{B}^{\prime}v_{B}$
-\end_inset
-
-, we see that 
-\begin_inset Formula $A_{1/2}$
-\end_inset
-
- drops out again and we have 
-\begin_inset Formula $\sum u_{\mu}^{T}\left(A_{1}+\sigma_{1}B_{0}\right)v_{\nu}a_{\nu}^{\prime}=0$
-\end_inset
-
-, which is equivalent to Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:aaa_passive"
+ further reduces to the SALT equation:
+\begin_inset Formula 
+\begin{align*}
+0 & =-\nabla\times\nabla\times\mathbf{E}+\omega^{2}(\varepsilon+\gamma(\omega)D)\mathbf{E}\\
+D & =\frac{D_{T}(1+d)}{1+\left|\gamma(\omega)\mathbf{E}\right|^{2}}.
+\end{align*}
 
 \end_inset
 
-, the threshold perturbation theory based on SALT.
- Hence, if the passive poles in our threshold perturbation theory cross
- the real axis, then that is equivalent to 
-\begin_inset Formula $\mathrm{Re}\sigma_{1}>0$
+It can be shown that the solution to this equation has 
+\begin_inset Formula $\mathbf{E},\mathbf{P}\sim\mathcal{O}(\sqrt{d})$
 \end_inset
 
- in our linear stability analysis for the full MB equations, which necessarily
- means instability.
- On the other hand, note that having a passive pole of SALT 
-\emph on
-on 
-\emph default
-the real axis, which is equivalent to 
-\begin_inset Formula $\mathrm{Re}\sigma_{1}=0$
-\end_inset
-
- (a condition sometimes referred to as 
-\begin_inset Quotes eld
-\end_inset
-
-neutrally stable
-\begin_inset Quotes erd
-\end_inset
-
-) does not necessarily imply stability, because higher order corrections
- can still push the pole above the real axis, rendering it unstable.
+.
+  
 \end_layout
 
 \end_body
