@@ -25,7 +25,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize 12
-\spacing onehalf
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry true
@@ -152,7 +152,7 @@ and
 \begin{align}
 0 & =-\nabla\times\nabla\times\delta\mathbf{E}+(\omega+i\sigma)^{2}(\varepsilon\delta\mathbf{E}+\delta\mathbf{P})\nonumber \\
 \delta\mathbf{P} & =\gamma(\omega+i\sigma)(D\delta\mathbf{E}+\mathbf{E}\delta D)\label{eq:MBdelta}\\
-\frac{\delta\dot{D}}{\gamma_{\parallel}} & =-\delta D+\mathrm{Im}(\delta\mathbf{E}^{\star}\cdot\mathbf{P}+\mathbf{E}^{\star}\cdot\delta\mathbf{P}).\nonumber 
+\delta D & =-\frac{\sigma}{\gamma_{\parallel}}\delta D+\mathrm{Im}(\delta\mathbf{E}^{\star}\cdot\mathbf{P}+\mathbf{E}^{\star}\cdot\delta\mathbf{P}).\nonumber 
 \end{align}
 
 \end_inset
@@ -162,7 +162,7 @@ We have defined
 \end_inset
 
 .
- Eq.
+ In Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -170,21 +170,270 @@ reference "eq:MBE"
 
 \end_inset
 
- further reduces to the SALT equation:
+, both 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ can be written in terms of 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ and the equation further reduces to the SALT equation:
+\begin_inset Formula 
+\begin{equation}
+0=-\nabla\times\nabla\times\mathbf{E}+\omega^{2}\left[\varepsilon+\frac{D_{T}\gamma(\omega)(1+d)}{1+\left|\gamma(\omega)\mathbf{E}\right|^{2}}\right]\mathbf{E}.\label{eq:SALT}
+\end{equation}
+
+\end_inset
+
+We now solve Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SALT"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MBdelta"
+
+\end_inset
+
+ order-by-order in 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ First, because the nonlinearity is in the form 
+\begin_inset Formula $\left|\gamma(\omega)\mathbf{E}\right|^{2}$
+\end_inset
+
+, dimensional analysis tells us that 
+\begin_inset Formula $\mathbf{E}=\mathcal{O}(\sqrt{d})$
+\end_inset
+
+.
+ Hence, write 
+\begin_inset Formula $\mathbf{E}=\sqrt{d}\left(\mathbf{E}_{0}+\mathbf{E}_{1}d+\mathbf{E}_{2}d^{2}+\ldots\right)$
+\end_inset
+
+.
+ The frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathcal{O}(1)$
+\end_inset
+
+, so it can be expanded as 
+\begin_inset Formula $\omega=\omega_{0}+\omega_{1}d+\omega_{2}d^{2}+\ldots$
+\end_inset
+
+, and same for 
+\begin_inset Formula $D=D_{T}(1+d)(1+\left|\gamma(\omega)\mathbf{E}\right|^{2})^{-1}$
+\end_inset
+
+.
+ On the other hand, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MBdelta"
+
+\end_inset
+
+ has terms of 
+\begin_inset Formula $\mathcal{O}(\sqrt{d}\times\delta)$
+\end_inset
+
+ combined with terms of 
+\begin_inset Formula $\mathcal{O}(\delta)$
+\end_inset
+
+, so the unknowns must be expanded as
+\begin_inset Formula 
+\[
+\sigma=\sigma_{0}+\sigma_{1/2}d^{1/2}+\sigma_{1}d+\sigma_{3/2}d^{3/2}+\ldots,
+\]
+
+\end_inset
+
+and same for 
+\begin_inset Formula $\delta\mathbf{E}$
+\end_inset
+
+, 
+\begin_inset Formula $\delta\mathbf{P}$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta D$
+\end_inset
+
+.
+ To zeroth order in 
+\begin_inset Formula $d$
+\end_inset
+
+, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SALT"
+
+\end_inset
+
+ becomes
+\begin_inset Formula 
+\[
+0=-\nabla\times\nabla\times\mathbf{E}_{0}+\omega_{0}^{2}\left[\varepsilon+D_{T}\gamma(\omega_{0})\right]\mathbf{E}_{0}.
+\]
+
+\end_inset
+
+The solution is some linear combination of the threshold modes 
+\begin_inset Formula $\mathbf{E}_{0}=c_{a}\mathbf{e}_{a}+c_{b}\mathbf{e}_{b}$
+\end_inset
+
+ with real threshold frequency 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+.
+ We don't know anything about the coefficients yet, except that they are
+ 
+\begin_inset Formula $\mathcal{O}(1)$
+\end_inset
+
+ because the 
+\begin_inset Formula $d$
+\end_inset
+
+ dependence has already been scaled out.
+ To zeroth order in 
+\begin_inset Formula $d$
+\end_inset
+
+, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MBdelta"
+
+\end_inset
+
+ becomes
+\begin_inset Formula 
+\begin{align}
+0 & =-\nabla\times\nabla\times\delta\mathbf{E}_{0}+(\omega_{0}+i\sigma_{0})^{2}(\varepsilon\delta\mathbf{E}_{0}+\delta\mathbf{P}_{0})\nonumber \\
+\delta\mathbf{P}_{0} & =\gamma(\omega_{0}+i\sigma_{0})D_{T}\delta\mathbf{E}_{0}\label{eq:MBdelta0}\\
+0 & =\left(1+\frac{\sigma_{0}}{\gamma_{\parallel}}\right)\delta D_{0}.\nonumber 
+\end{align}
+
+\end_inset
+
+The first two equations can be reduced to the passive SALT equation
+\begin_inset Formula 
+\[
+0=-\nabla\times\nabla\times\delta\mathbf{E}_{0}+(\omega_{0}+i\sigma_{0})^{2}[\varepsilon+\gamma(\omega_{0}+i\sigma_{0})D_{T}]\delta\mathbf{E}_{0},
+\]
+
+\end_inset
+
+which have as solutions both the lasing modes 
+\begin_inset Formula $\delta\mathbf{E}_{0}=\mathbf{e}_{a,b}$
+\end_inset
+
+ themselves, with 
+\begin_inset Formula $\sigma_{0}=0$
+\end_inset
+
+ as well as the rest of the below-threshold passive modes 
+\begin_inset Formula $\mathbf{e}^{m}$
+\end_inset
+
+ with 
+\begin_inset Formula $\mathrm{Re}\sigma_{0}<0$
+\end_inset
+
+.
+ The third of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MBdelta0"
+
+\end_inset
+
+ gives a separate, decaying family of solutions, with 
+\begin_inset Formula $\sigma_{0}=-\gamma_{\parallel}$
+\end_inset
+
+, 
+\begin_inset Formula $\delta\mathbf{E}=0$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta D_{0}(\mathbf{x})$
+\end_inset
+
+ any arbitrary function.
+ We would like to investigate the stability of the 
+\begin_inset Formula $\sigma_{0}=0$
+\end_inset
+
+ solutions, so we take 
+\begin_inset Formula $\delta\mathbf{E}_{0}=g_{a}\mathbf{e}_{a}+g_{b}\mathbf{e}_{b}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{0}=0$
+\end_inset
+
+ from this point.
+\end_layout
+
+\begin_layout Standard
+Next, we move on to 
+\begin_inset Formula $\mathcal{O}(\sqrt{d})$
+\end_inset
+
+.
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SALT"
+
+\end_inset
+
+ has no additional terms, but Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MBdelta"
+
+\end_inset
+
+ does.
+ We have
 \begin_inset Formula 
 \begin{align*}
-0 & =-\nabla\times\nabla\times\mathbf{E}+\omega^{2}(\varepsilon+\gamma(\omega)D)\mathbf{E}\\
-D & =\frac{D_{T}(1+d)}{1+\left|\gamma(\omega)\mathbf{E}\right|^{2}}.
+0 & =-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}(\varepsilon\delta\mathbf{E}_{1/2}+\delta\mathbf{P}_{1/2})+2\omega_{0}i\sigma_{1/2}[\varepsilon+\gamma(\omega_{0})D_{T}]\delta\mathbf{E}_{0}\\
+\delta\mathbf{P}_{1/2} & =\gamma(\omega_{0})(D_{T}\delta\mathbf{E}_{1/2}+\mathbf{E}_{0}\delta D_{0})+\gamma^{\prime}(\omega_{0})(\omega_{1/2}+i\sigma_{1/2})D_{T}\delta\mathbf{E}_{0}\\
+\delta D_{1/2} & =-\frac{1}{\gamma_{\parallel}}\sigma_{1/2}\delta D_{0}+\mathrm{Im}(\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{P}_{0}+\mathbf{E}_{0}^{\star}\cdot\delta\mathbf{P}_{0}).
 \end{align*}
 
 \end_inset
 
-It can be shown that the solution to this equation has 
-\begin_inset Formula $\mathbf{E},\mathbf{P}\sim\mathcal{O}(\sqrt{d})$
-\end_inset
 
-.
-  
 \end_layout
 
 \end_body
