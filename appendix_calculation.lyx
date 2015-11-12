@@ -364,6 +364,11 @@ which have as solutions both the lasing modes
 \end_inset
 
 .
+ These solutions also all have 
+\begin_inset Formula $\delta D_{0}=0$
+\end_inset
+
+.
  The third of Eq.
  
 \begin_inset CommandInset ref
@@ -393,7 +398,11 @@ reference "eq:MBdelta0"
 \begin_inset Formula $\delta\mathbf{E}_{0}=g_{a}\mathbf{e}_{a}+g_{b}\mathbf{e}_{b}$
 \end_inset
 
- and 
+, 
+\begin_inset Formula $\delta D_{0}=0$
+\end_inset
+
+, and 
 \begin_inset Formula $\sigma_{0}=0$
 \end_inset
 
@@ -426,14 +435,70 @@ reference "eq:MBdelta"
  We have
 \begin_inset Formula 
 \begin{align*}
-0 & =-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}(\varepsilon\delta\mathbf{E}_{1/2}+\delta\mathbf{P}_{1/2})+2\omega_{0}i\sigma_{1/2}[\varepsilon+\gamma(\omega_{0})D_{T}]\delta\mathbf{E}_{0}\\
-\delta\mathbf{P}_{1/2} & =\gamma(\omega_{0})(D_{T}\delta\mathbf{E}_{1/2}+\mathbf{E}_{0}\delta D_{0})+\gamma^{\prime}(\omega_{0})(\omega_{1/2}+i\sigma_{1/2})D_{T}\delta\mathbf{E}_{0}\\
-\delta D_{1/2} & =-\frac{1}{\gamma_{\parallel}}\sigma_{1/2}\delta D_{0}+\mathrm{Im}(\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{P}_{0}+\mathbf{E}_{0}^{\star}\cdot\delta\mathbf{P}_{0}).
+0 & =-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}(\varepsilon\delta\mathbf{E}_{1/2}+\delta\mathbf{P}_{1/2})+2\omega_{0}i\sigma_{1/2}\varepsilon_{0}\delta\mathbf{E}_{0}\\
+\delta\mathbf{P}_{1/2} & =\gamma(\omega_{0})D_{T}\delta\mathbf{E}_{1/2}+\gamma^{\prime}(\omega_{0})i\sigma_{1/2}D_{T}\delta\mathbf{E}_{0}\\
+\delta D_{1/2} & =\mathrm{Im}(\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{P}_{0}+\mathbf{E}_{0}^{\star}\cdot\delta\mathbf{P}_{0}),
 \end{align*}
 
 \end_inset
 
+where we have defined 
+\begin_inset Formula $\varepsilon_{0}\equiv\varepsilon+\gamma(\omega_{0})D_{T}$
+\end_inset
 
+.
+ Eliminating 
+\begin_inset Formula $\delta\mathbf{P}_{1/2}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+0=-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}\varepsilon_{0}\delta\mathbf{E}_{1/2}+i\sigma_{1/2}\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\varepsilon_{0})\delta\mathbf{E}_{0}.
+\]
+
+\end_inset
+
+Now multiply by 
+\begin_inset Formula $\mathbf{e}_{a,b}$
+\end_inset
+
+ and integrate.
+ Since 
+\begin_inset Formula $\nabla\times\nabla\times$
+\end_inset
+
+ is complex-symmetric, we have
+\begin_inset Formula 
+\[
+\int d^{3}x\mathbf{e}_{a,b}\cdot(-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}\varepsilon_{0}\delta\mathbf{E}_{1/2})=0.
+\]
+
+\end_inset
+
+We then have
+\begin_inset Formula 
+\[
+\sigma_{1/2}\sum_{k=a,b}M_{jk}g_{k}=0,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $M_{jk}\equiv\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\int d^{3}x\mathbf{e}_{j}\cdot\varepsilon_{0}\mathbf{e}_{k})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $M_{jk}$
+\end_inset
+
+ is non-singular, we have 
+\begin_inset Formula $\sigma_{1/2}=0$
+\end_inset
+
+.
+  
 \end_layout
 
 \end_body
