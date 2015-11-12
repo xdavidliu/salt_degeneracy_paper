@@ -137,40 +137,18 @@ reference "eq:MB"
 \emph on
 two 
 \emph default
-equations:
+equations.
+ The first is
 \begin_inset Formula 
 \begin{align}
 0 & =-\nabla\times\nabla\times\mathbf{E}+\omega^{2}(\varepsilon\mathbf{E}+\mathbf{P})\nonumber \\
 \mathbf{P} & =\gamma(\omega)D\mathbf{E}\label{eq:MBE}\\
-0 & =D_{T}(1+d)-D+\mathrm{Im}(\mathbf{E}^{\star}\cdot\mathbf{P})\nonumber 
+0 & =D_{T}(1+d)-D+\mathrm{Im}(\mathbf{E}^{\star}\cdot\mathbf{P}),\nonumber 
 \end{align}
 
 \end_inset
 
-and
-\begin_inset Formula 
-\begin{align}
-0 & =-\nabla\times\nabla\times\delta\mathbf{E}+(\omega+i\sigma)^{2}(\varepsilon\delta\mathbf{E}+\delta\mathbf{P})\nonumber \\
-\delta\mathbf{P} & =\gamma(\omega+i\sigma)(D\delta\mathbf{E}+\mathbf{E}\delta D)\label{eq:MBdelta}\\
-\delta D & =-\frac{\sigma}{\gamma_{\parallel}}\delta D+\mathrm{Im}(\delta\mathbf{E}^{\star}\cdot\mathbf{P}+\mathbf{E}^{\star}\cdot\delta\mathbf{P}).\nonumber 
-\end{align}
-
-\end_inset
-
-We have defined 
-\begin_inset Formula $\gamma(\omega)=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
-\end_inset
-
-.
- In Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:MBE"
-
-\end_inset
-
-, both 
+in which both 
 \begin_inset Formula $\mathbf{P}$
 \end_inset
 
@@ -190,7 +168,22 @@ reference "eq:MBE"
 
 \end_inset
 
-We now solve Eqs.
+The second is
+\begin_inset Formula 
+\begin{align}
+0 & =-\nabla\times\nabla\times\delta\mathbf{E}+(\omega+i\sigma)^{2}(\varepsilon\delta\mathbf{E}+\delta\mathbf{P})\nonumber \\
+\delta\mathbf{P} & =\gamma(\omega+i\sigma)(D\delta\mathbf{E}+\mathbf{E}\delta D)\label{eq:MBdelta}\\
+\delta D & =-\frac{\sigma}{\gamma_{\parallel}}\delta D+\mathrm{Im}(\delta\mathbf{E}^{\star}\cdot\mathbf{P}+\mathbf{E}^{\star}\cdot\delta\mathbf{P}).\nonumber 
+\end{align}
+
+\end_inset
+
+We have defined 
+\begin_inset Formula $\gamma(\omega)=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
+\end_inset
+
+.
+ We now solve Eqs.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -293,12 +286,17 @@ reference "eq:SALT"
  becomes
 \begin_inset Formula 
 \[
-0=-\nabla\times\nabla\times\mathbf{E}_{0}+\omega_{0}^{2}\left[\varepsilon+D_{T}\gamma(\omega_{0})\right]\mathbf{E}_{0}.
+0=-\nabla\times\nabla\times\mathbf{E}_{0}+\omega_{0}^{2}\varepsilon_{0}\mathbf{E}_{0},
 \]
 
 \end_inset
 
-The solution is some linear combination of the threshold modes 
+where we have defined 
+\begin_inset Formula $\varepsilon_{0}\equiv\varepsilon+\gamma(\omega_{0})D_{T}$
+\end_inset
+
+.
+ The solution is some linear combination of the threshold modes 
 \begin_inset Formula $\mathbf{E}_{0}=c_{a}\mathbf{e}_{a}+c_{b}\mathbf{e}_{b}$
 \end_inset
 
@@ -434,28 +432,48 @@ reference "eq:MBdelta"
  does.
  We have
 \begin_inset Formula 
-\begin{align*}
-0 & =-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}(\varepsilon\delta\mathbf{E}_{1/2}+\delta\mathbf{P}_{1/2})+2\omega_{0}i\sigma_{1/2}\varepsilon_{0}\delta\mathbf{E}_{0}\\
-\delta\mathbf{P}_{1/2} & =\gamma(\omega_{0})D_{T}\delta\mathbf{E}_{1/2}+\gamma^{\prime}(\omega_{0})i\sigma_{1/2}D_{T}\delta\mathbf{E}_{0}\\
-\delta D_{1/2} & =\mathrm{Im}(\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{P}_{0}+\mathbf{E}_{0}^{\star}\cdot\delta\mathbf{P}_{0}),
-\end{align*}
+\begin{align}
+0 & =-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}(\varepsilon\delta\mathbf{E}_{1/2}+\delta\mathbf{P}_{1/2})+2\omega_{0}i\sigma_{1/2}\varepsilon_{0}\delta\mathbf{E}_{0}\nonumber \\
+\delta\mathbf{P}_{1/2} & =\gamma(\omega_{0})D_{T}\delta\mathbf{E}_{1/2}+\gamma^{\prime}(\omega_{0})i\sigma_{1/2}D_{T}\delta\mathbf{E}_{0}\label{eq:MBdelta1/2}\\
+\delta D_{1/2} & =\mathrm{Im}(\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{P}_{0}+\mathbf{E}_{0}^{\star}\cdot\delta\mathbf{P}_{0}).\nonumber 
+\end{align}
 
 \end_inset
 
-where we have defined 
-\begin_inset Formula $\varepsilon_{0}\equiv\varepsilon+\gamma(\omega_{0})D_{T}$
+From the last equation, we immediately have
+\begin_inset Formula 
+\[
+\delta D_{1/2}=D_{T}\mathrm{Im}[\gamma(\omega_{0})\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{E}_{0}+\gamma(\omega_{0})^{\star}\mathbf{E}_{0}^{\star}\cdot\delta\mathbf{E}_{0}].
+\]
+
 \end_inset
 
-.
- Eliminating 
+Since we don't know the coefficients 
+\begin_inset Formula $c_{a,b}$
+\end_inset
+
+ nor 
+\begin_inset Formula $g_{a,b}$
+\end_inset
+
+, we temporarily cannot reduce this expression any further.
+ Next, eliminating 
 \begin_inset Formula $\delta\mathbf{P}_{1/2}$
+\end_inset
+
+ in the first two of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MBdelta1/2"
+
 \end_inset
 
 , we have
 \begin_inset Formula 
-\[
-0=-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}\varepsilon_{0}\delta\mathbf{E}_{1/2}+i\sigma_{1/2}\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\varepsilon_{0})\delta\mathbf{E}_{0}.
-\]
+\begin{equation}
+0=-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}\varepsilon_{0}\delta\mathbf{E}_{1/2}+i\sigma_{1/2}\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\varepsilon_{0})\delta\mathbf{E}_{0}.\label{eq:SALTdelta1/2}
+\end{equation}
 
 \end_inset
 
@@ -498,7 +516,42 @@ where
 \end_inset
 
 .
-  
+ Inserting this result into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SALTdelta1/2"
+
+\end_inset
+
+, we see that 
+\begin_inset Formula $\delta\mathbf{E}_{1/2}$
+\end_inset
+
+ satisfies the same equation as 
+\begin_inset Formula $\mathbf{e}_{a,b}$
+\end_inset
+
+.
+ However, 
+\begin_inset Formula $\delta\mathbf{E}_{1/2}$
+\end_inset
+
+ cannot contain any component in 
+\begin_inset Formula $\mathbf{e}_{a,b}$
+\end_inset
+
+, because if it did, then it could always be absorbed in to 
+\begin_inset Formula $\delta\mathbf{E}_{0}$
+\end_inset
+
+.
+ Hence, we must have 
+\begin_inset Formula $\delta\mathbf{E}_{1/2}=0$
+\end_inset
+
+.
+ 
 \end_layout
 
 \end_body
