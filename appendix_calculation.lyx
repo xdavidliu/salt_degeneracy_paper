@@ -137,73 +137,121 @@ reference "eq:MB"
 \emph on
 two 
 \emph default
-equations.
- The first is
+equations: one for the lasing field
 \begin_inset Formula 
 \begin{align}
 0 & =-\nabla\times\nabla\times\mathbf{E}+\omega^{2}(\varepsilon\mathbf{E}+\mathbf{P})\nonumber \\
-\mathbf{P} & =\gamma(\omega)D\mathbf{E}\label{eq:MBE}\\
+\omega\mathbf{P} & =(\omega_{a}-i\gamma_{\perp})\mathbf{P}+\gamma_{\perp}D\mathbf{E}\label{eq:MBE}\\
 0 & =D_{T}(1+d)-D+\mathrm{Im}(\mathbf{E}^{\star}\cdot\mathbf{P}),\nonumber 
 \end{align}
 
 \end_inset
 
-in which both 
-\begin_inset Formula $\mathbf{P}$
-\end_inset
-
- and 
-\begin_inset Formula $D$
-\end_inset
-
- can be written in terms of 
-\begin_inset Formula $\mathbf{E}$
-\end_inset
-
- and the equation further reduces to the SALT equation:
-\begin_inset Formula 
-\begin{equation}
-0=-\nabla\times\nabla\times\mathbf{E}+\omega^{2}\left[\varepsilon+\frac{D_{T}\gamma(\omega)(1+d)}{1+\left|\gamma(\omega)\mathbf{E}\right|^{2}}\right]\mathbf{E}.\label{eq:SALT}
-\end{equation}
-
-\end_inset
-
-The second is
+and the other for the linearization around the lasing field
 \begin_inset Formula 
 \begin{align}
 0 & =-\nabla\times\nabla\times\delta\mathbf{E}+(\omega+i\sigma)^{2}(\varepsilon\delta\mathbf{E}+\delta\mathbf{P})\nonumber \\
-\delta\mathbf{P} & =\gamma(\omega+i\sigma)(D\delta\mathbf{E}+\delta D\mathbf{E})\label{eq:MBdelta}\\
-\delta D & =-\frac{\sigma}{\gamma_{\parallel}}\delta D+\mathrm{Im}(\delta\mathbf{E}^{\star}\cdot\mathbf{P}+\mathbf{E}^{\star}\cdot\delta\mathbf{P}).\nonumber 
+(\omega+i\sigma)\delta\mathbf{P} & =(\omega_{a}-i\gamma_{\perp})\delta\mathbf{P}+\gamma_{\perp}(D\delta\mathbf{E}+\delta D\mathbf{E})\label{eq:MBdelta}\\
+\frac{\sigma}{\gamma_{\parallel}}\delta D & =-\delta D+\mathrm{Im}(\delta\mathbf{E}^{\star}\cdot\mathbf{P}+\mathbf{E}^{\star}\cdot\delta\mathbf{P}).\nonumber 
 \end{align}
 
 \end_inset
 
-We have defined 
-\begin_inset Formula $\gamma(\omega)=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
-\end_inset
-
-.
- We now solve Eqs.
+In previous works, Eq.
  
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:SALT"
-
-\end_inset
-
- and 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:MBdelta"
 
 \end_inset
 
- order-by-order in 
-\begin_inset Formula $d$
+ was written in terms of real variables, with only 
+\begin_inset Formula $\mathbf{E}=\mathbf{E}_{R}+i\mathbf{E}_{I}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+, 
+\begin_inset Formula $\delta\mathbf{E}$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta\mathbf{P}$
+\end_inset
+
+ assumed to be complex.
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MBdelta"
+
+\end_inset
+
+ then gives a 
+\begin_inset Formula $5\times5$
+\end_inset
+
+ quadratic eigenvalue problem in 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, with the eigenvector given by 
+\begin_inset Formula $(\delta\mathbf{E}_{R},\delta\mathbf{E}_{I},\delta\mathbf{P}_{R},\delta\mathbf{P}_{I},\delta D)$
 \end_inset
 
 .
- First, because the nonlinearity is in the form 
+ However, both the eigenvector and eigenvalue may eventually turn out to
+ be complex, with the understanding the true perturbation will be in the
+ form 
+\begin_inset Formula $\mathrm{Re}(\delta\mathbf{E}e^{\sigma t})$
+\end_inset
+
+, and so on.
+ We ignore the details of this for the time being.
+ Defining 
+\begin_inset Formula $\gamma(\omega)=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
+\end_inset
+
+, the two equations can each be simplified to give
+\begin_inset Formula 
+\begin{align}
+\mathbf{P} & =\gamma(\omega)D\mathbf{E}\\
+D & =\frac{D_{T}(1+d)}{1+\left|\gamma(\omega)\mathbf{E}\right|^{2}}\label{eq:D}
+\end{align}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{align}
+\delta\mathbf{P} & =\gamma(\omega+i\sigma)(D\delta\mathbf{E}+\delta D\mathbf{E})\\
+\left(1+\frac{\sigma}{\gamma_{\parallel}}\right)\delta D & =D\mathrm{Im}([\gamma(\omega+i\sigma)-\gamma(\omega)^{\star}]\mathbf{E}^{\star}\cdot\delta\mathbf{E})+|\mathbf{E}|^{2}\mathrm{Im}[\gamma(\omega+i\sigma)\delta D].\label{eq:deltaD}
+\end{align}
+
+\end_inset
+
+If one takes 
+\begin_inset Formula $\delta D$
+\end_inset
+
+ to be real, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:deltaD"
+
+\end_inset
+
+ can further be simplified.
+ However, we do not do that here, to maintain generality.
+ 
+\end_layout
+
+\begin_layout Standard
+First, because the nonlinearity is in the form 
 \begin_inset Formula $\left|\gamma(\omega)\mathbf{E}\right|^{2}$
 \end_inset
 
@@ -230,10 +278,27 @@ reference "eq:MBdelta"
 \end_inset
 
 , and same for 
-\begin_inset Formula $D=D_{T}(1+d)(1+\left|\gamma(\omega)\mathbf{E}\right|^{2})^{-1}$
+\begin_inset Formula $D$
 \end_inset
 
 .
+ From Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:D"
+
+\end_inset
+
+, we see that 
+\begin_inset Formula $D_{0}=D_{T}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{1}=D_{T}(1-|\gamma(\omega_{0})\mathbf{E}_{0}|^{2})$
+\end_inset
+
+, and so on.
  On the other hand, Eq.
  
 \begin_inset CommandInset ref
@@ -243,7 +308,7 @@ reference "eq:MBdelta"
 \end_inset
 
  has terms of 
-\begin_inset Formula $\mathcal{O}(\sqrt{d}\times\delta)$
+\begin_inset Formula $\mathcal{O}(\sqrt{d}\delta)$
 \end_inset
 
  combined with terms of 
@@ -279,20 +344,20 @@ and same for
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:SALT"
+reference "eq:MBE"
 
 \end_inset
 
  becomes
 \begin_inset Formula 
 \[
-0=-\nabla\times\nabla\times\mathbf{E}_{0}+\omega_{0}^{2}\varepsilon_{0}\mathbf{E}_{0},
+0=-\nabla\times\nabla\times\mathbf{E}_{0}+\omega_{0}^{2}\varepsilon_{T}\mathbf{E}_{0},
 \]
 
 \end_inset
 
 where we have defined 
-\begin_inset Formula $\varepsilon_{0}\equiv\varepsilon+\gamma(\omega_{0})D_{T}$
+\begin_inset Formula $\varepsilon_{T}=\varepsilon+\gamma(\omega_{0})D_{T}$
 \end_inset
 
 .
@@ -323,21 +388,23 @@ where we have defined
  
 \begin_inset CommandInset ref
 LatexCommand ref
+reference "eq:deltaD"
+
+\end_inset
+
+ gives 
+\begin_inset Formula $\delta D_{0}=0$
+\end_inset
+
+ and Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:MBdelta"
 
 \end_inset
 
- becomes
-\begin_inset Formula 
-\begin{align}
-0 & =-\nabla\times\nabla\times\delta\mathbf{E}_{0}+(\omega_{0}+i\sigma_{0})^{2}(\varepsilon\delta\mathbf{E}_{0}+\delta\mathbf{P}_{0})\nonumber \\
-\delta\mathbf{P}_{0} & =\gamma(\omega_{0}+i\sigma_{0})D_{T}\delta\mathbf{E}_{0}\label{eq:MBdelta0}\\
-0 & =\left(1+\frac{\sigma_{0}}{\gamma_{\parallel}}\right)\delta D_{0}.\nonumber 
-\end{align}
-
-\end_inset
-
-The first two equations can be reduced to the passive SALT equation
+ gives
 \begin_inset Formula 
 \[
 0=-\nabla\times\nabla\times\delta\mathbf{E}_{0}+(\omega_{0}+i\sigma_{0})^{2}[\varepsilon+\gamma(\omega_{0}+i\sigma_{0})D_{T}]\delta\mathbf{E}_{0},
@@ -362,32 +429,6 @@ which have as solutions both the lasing modes
 \end_inset
 
 .
- These solutions also all have 
-\begin_inset Formula $\delta D_{0}=0$
-\end_inset
-
-.
- The third of Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:MBdelta0"
-
-\end_inset
-
- gives a separate, decaying family of solutions, with 
-\begin_inset Formula $\sigma_{0}=-\gamma_{\parallel}$
-\end_inset
-
-, 
-\begin_inset Formula $\delta\mathbf{E}=0$
-\end_inset
-
-, and 
-\begin_inset Formula $\delta D_{0}(\mathbf{x})$
-\end_inset
-
- any arbitrary function.
  We would like to investigate the stability of the 
 \begin_inset Formula $\sigma_{0}=0$
 \end_inset
@@ -417,7 +458,7 @@ Next, we move on to
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:SALT"
+reference "eq:MBdelta"
 
 \end_inset
 
@@ -433,7 +474,7 @@ reference "eq:MBdelta"
  We have
 \begin_inset Formula 
 \begin{align}
-0 & =-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}(\varepsilon\delta\mathbf{E}_{1/2}+\delta\mathbf{P}_{1/2})+2\omega_{0}i\sigma_{1/2}\varepsilon_{0}\delta\mathbf{E}_{0}\nonumber \\
+0 & =-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}(\varepsilon\delta\mathbf{E}_{1/2}+\delta\mathbf{P}_{1/2})+2\omega_{0}i\sigma_{1/2}\varepsilon_{T}\delta\mathbf{E}_{0}\nonumber \\
 \delta\mathbf{P}_{1/2} & =\gamma(\omega_{0})D_{T}\delta\mathbf{E}_{1/2}+\gamma^{\prime}(\omega_{0})i\sigma_{1/2}D_{T}\delta\mathbf{E}_{0}\label{eq:MBdelta1/2}\\
 \delta D_{1/2} & =\mathrm{Im}(\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{P}_{0}+\mathbf{E}_{0}^{\star}\cdot\delta\mathbf{P}_{0}).\nonumber 
 \end{align}
@@ -472,7 +513,7 @@ reference "eq:MBdelta1/2"
 , we have
 \begin_inset Formula 
 \begin{equation}
-0=-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}\varepsilon_{0}\delta\mathbf{E}_{1/2}+i\sigma_{1/2}\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\varepsilon_{0})\delta\mathbf{E}_{0}.\label{eq:SALTdelta1/2}
+0=-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}\varepsilon_{T}\delta\mathbf{E}_{1/2}+i\sigma_{1/2}\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\varepsilon_{T})\delta\mathbf{E}_{0}.\label{eq:SALTdelta1/2}
 \end{equation}
 
 \end_inset
@@ -489,7 +530,7 @@ Now multiply by
  is complex-symmetric, we have
 \begin_inset Formula 
 \[
-\int d^{3}x\mathbf{e}_{a,b}\cdot(-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}\varepsilon_{0}\delta\mathbf{E}_{1/2})=0.
+\int d^{3}x\mathbf{e}_{a,b}\cdot(-\nabla\times\nabla\times\delta\mathbf{E}_{1/2}+\omega_{0}^{2}\varepsilon_{T}\delta\mathbf{E}_{1/2})=0.
 \]
 
 \end_inset
@@ -503,7 +544,7 @@ We then have
 \end_inset
 
 where 
-\begin_inset Formula $M_{jk}\equiv\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\int d^{3}x\mathbf{e}_{j}\cdot\varepsilon_{0}\mathbf{e}_{k})$
+\begin_inset Formula $M_{jk}\equiv\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\int d^{3}x\mathbf{e}_{j}\cdot\varepsilon_{T}\mathbf{e}_{k})$
 \end_inset
 
 .
@@ -559,14 +600,14 @@ To the next order, Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:SALT"
+reference "eq:MBdelta"
 
 \end_inset
 
  is
 \begin_inset Formula 
 \[
-0=-\nabla\times\nabla\times\mathbf{E}_{1}+\omega_{0}^{2}\varepsilon_{0}\mathbf{E}_{1}+\omega_{1}\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\varepsilon_{0})\mathbf{E}_{0}+\omega_{0}^{2}D_{T}\gamma(\omega_{0})(1-|\gamma(\omega_{0})\mathbf{E}_{0}|^{2}).
+0=-\nabla\times\nabla\times\mathbf{E}_{1}+\omega_{0}^{2}\varepsilon_{T}\mathbf{E}_{1}+\omega_{1}\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\varepsilon_{T})\mathbf{E}_{0}+\omega_{0}^{2}D_{T}\gamma(\omega_{0})(1-|\gamma(\omega_{0})\mathbf{E}_{0}|^{2}).
 \]
 
 \end_inset
@@ -617,7 +658,7 @@ reference "eq:MBdelta"
  becomes
 \begin_inset Formula 
 \begin{align*}
-0 & =-\nabla\times\nabla\times\delta\mathbf{E}_{1}+\omega_{0}^{2}(\varepsilon\delta\mathbf{E}_{1}+\delta\mathbf{P}_{1})+2\omega_{0}(\omega_{1}+i\sigma_{1})\varepsilon_{0}\delta\mathbf{E}_{0}\\
+0 & =-\nabla\times\nabla\times\delta\mathbf{E}_{1}+\omega_{0}^{2}(\varepsilon\delta\mathbf{E}_{1}+\delta\mathbf{P}_{1})+2\omega_{0}(\omega_{1}+i\sigma_{1})\varepsilon_{T}\delta\mathbf{E}_{0}\\
 \delta\mathbf{P}_{1} & =\gamma^{\prime}(\omega_{0})(\omega_{1}+i\sigma_{1})D_{T}\delta\mathbf{E}_{0}+\gamma(\omega_{0})(D_{1}\delta\mathbf{E}_{0}+D_{T}\delta\mathbf{E}_{1}+\delta D_{1/2}\mathbf{E}_{0}),
 \end{align*}
 
@@ -636,7 +677,7 @@ with
 , we have
 \begin_inset Formula 
 \[
-0=-\nabla\times\nabla\times\delta\mathbf{E}_{1}+\omega_{0}^{2}\varepsilon_{0}\delta\mathbf{E}_{1}+(\omega_{1}+i\sigma_{1})\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\varepsilon_{0})\delta\mathbf{E}_{0}+\omega_{0}^{2}\gamma(\omega_{0})(D_{1}\delta\mathbf{E}_{0}+\delta D_{1/2}\mathbf{E}_{0}).
+0=-\nabla\times\nabla\times\delta\mathbf{E}_{1}+\omega_{0}^{2}\varepsilon_{T}\delta\mathbf{E}_{1}+(\omega_{1}+i\sigma_{1})\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\varepsilon_{T})\delta\mathbf{E}_{0}+\omega_{0}^{2}\gamma(\omega_{0})(D_{1}\delta\mathbf{E}_{0}+\delta D_{1/2}\mathbf{E}_{0}).
 \]
 
 \end_inset
