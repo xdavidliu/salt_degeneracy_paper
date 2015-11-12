@@ -85,7 +85,7 @@ i\dot{\mathbf{P}}^{+} & =(\omega_{a}-i\gamma_{\perp})\mathbf{P}^{+}+\gamma_{\per
 \end_inset
 
 
-\begin_inset Formula $D_{T}$
+\begin_inset Formula $D_{T}(\mathbf{x})$
 \end_inset
 
  is some threshold pump strength, and 
@@ -172,7 +172,7 @@ The second is
 \begin_inset Formula 
 \begin{align}
 0 & =-\nabla\times\nabla\times\delta\mathbf{E}+(\omega+i\sigma)^{2}(\varepsilon\delta\mathbf{E}+\delta\mathbf{P})\nonumber \\
-\delta\mathbf{P} & =\gamma(\omega+i\sigma)(D\delta\mathbf{E}+\mathbf{E}\delta D)\label{eq:MBdelta}\\
+\delta\mathbf{P} & =\gamma(\omega+i\sigma)(D\delta\mathbf{E}+\delta D\mathbf{E})\label{eq:MBdelta}\\
 \delta D & =-\frac{\sigma}{\gamma_{\parallel}}\delta D+\mathrm{Im}(\delta\mathbf{E}^{\star}\cdot\mathbf{P}+\mathbf{E}^{\star}\cdot\delta\mathbf{P}).\nonumber 
 \end{align}
 
@@ -443,7 +443,7 @@ reference "eq:MBdelta"
 From the last equation, we immediately have
 \begin_inset Formula 
 \[
-\delta D_{1/2}=D_{T}\mathrm{Im}[\gamma(\omega_{0})\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{E}_{0}+\gamma(\omega_{0})^{\star}\mathbf{E}_{0}^{\star}\cdot\delta\mathbf{E}_{0}].
+\delta D_{1/2}=-D_{T}|\gamma(\omega_{0})|^{2}\mathrm{Re}(\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{E}_{0}).
 \]
 
 \end_inset
@@ -552,6 +552,113 @@ reference "eq:SALTdelta1/2"
 
 .
  
+\end_layout
+
+\begin_layout Standard
+To the next order, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SALT"
+
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+0=-\nabla\times\nabla\times\mathbf{E}_{1}+\omega_{0}^{2}\varepsilon_{0}\mathbf{E}_{1}+\omega_{1}\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\varepsilon_{0})\mathbf{E}_{0}+\omega_{0}^{2}D_{T}\gamma(\omega_{0})(1-|\gamma(\omega_{0})\mathbf{E}_{0}|^{2}).
+\]
+
+\end_inset
+
+Multiply by 
+\begin_inset Formula $\mathbf{e}_{j}$
+\end_inset
+
+ and integrate.
+ The first two terms vanish like before, and after substituting 
+\begin_inset Formula $\mathbf{E}_{0}=\sum c_{k}\mathbf{e}_{k}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+\sum_{k=a,b}\left(\omega_{1}M_{jk}+N_{jk}-\sum_{\ell m}P_{jk\ell m}c_{\ell}c_{m}^{\star}\right)c_{k}=0,
+\]
+
+\end_inset
+
+where the matrices are
+\begin_inset Formula 
+\begin{align*}
+N_{jk} & =\omega_{0}^{2}\gamma(\omega_{0})\int d^{3}x(\mathbf{e}_{j}\cdot\mathbf{e}_{k})D_{T}\\
+P_{jk\ell m} & =\omega_{0}^{2}\gamma(\omega_{0})|\gamma(\omega_{0})|^{2}\int d^{3}x(\mathbf{e}_{j}\cdot\mathbf{e}_{k})(\mathbf{e}_{\ell}\cdot\mathbf{e}_{m}^{\star})D_{T}.
+\end{align*}
+
+\end_inset
+
+This equation is the same as the one in threshold perturbation theory for
+ SALT, and can be solved for 
+\begin_inset Formula $c_{j}$
+\end_inset
+
+, the allowed lasing linear combinations.
+\end_layout
+
+\begin_layout Standard
+Next, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MBdelta"
+
+\end_inset
+
+ becomes
+\begin_inset Formula 
+\begin{align*}
+0 & =-\nabla\times\nabla\times\delta\mathbf{E}_{1}+\omega_{0}^{2}(\varepsilon\delta\mathbf{E}_{1}+\delta\mathbf{P}_{1})+2\omega_{0}(\omega_{1}+i\sigma_{1})\varepsilon_{0}\delta\mathbf{E}_{0}\\
+\delta\mathbf{P}_{1} & =\gamma^{\prime}(\omega_{0})(\omega_{1}+i\sigma_{1})D_{T}\delta\mathbf{E}_{0}+\gamma(\omega_{0})(D_{1}\delta\mathbf{E}_{0}+D_{T}\delta\mathbf{E}_{1}+\delta D_{1/2}\mathbf{E}_{0}),
+\end{align*}
+
+\end_inset
+
+with 
+\begin_inset Formula $\delta D_{1}=0$
+\end_inset
+
+ because all terms on the right-hand side of the third equation vanish from
+ previous orders.
+ Eliminating 
+\begin_inset Formula $\delta\mathbf{P}_{1}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+0=-\nabla\times\nabla\times\delta\mathbf{E}_{1}+\omega_{0}^{2}\varepsilon_{0}\delta\mathbf{E}_{1}+(\omega_{1}+i\sigma_{1})\frac{\partial}{\partial\omega_{0}}(\omega_{0}^{2}\varepsilon_{0})\delta\mathbf{E}_{0}+\omega_{0}^{2}\gamma(\omega_{0})(D_{1}\delta\mathbf{E}_{0}+\delta D_{1/2}\mathbf{E}_{0}).
+\]
+
+\end_inset
+
+If it were not for the 
+\begin_inset Formula $\delta D_{1/2}$
+\end_inset
+
+ term, this equation would be the same as that in the SALT threshold perturbatio
+n theory for the passive modes.
+ This is because the linearization in SALT neglects the possibility of a
+ time-dependent deviation in the inversion, which would be inconsistent
+ with SALT's assumption of steady-state inversion.
+ From previous orders, we have
+\begin_inset Formula 
+\[
+D_{1}\delta\mathbf{E}_{0}+\delta D_{1/2}\mathbf{E}_{0}=D_{T}\delta\mathbf{E}_{0}-D_{T}|\gamma(\omega_{0})|^{2}[|\mathbf{E}_{0}|^{2}\delta\mathbf{E}_{0}-\mathrm{Re}(\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{E}_{0})\mathbf{E}_{0}].
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
