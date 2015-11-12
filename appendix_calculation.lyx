@@ -653,7 +653,7 @@ n theory for the passive modes.
  From previous orders, we have
 \begin_inset Formula 
 \[
-D_{1}\delta\mathbf{E}_{0}+\delta D_{1/2}\mathbf{E}_{0}=D_{T}\delta\mathbf{E}_{0}-D_{T}|\gamma(\omega_{0})|^{2}[|\mathbf{E}_{0}|^{2}\delta\mathbf{E}_{0}-\mathrm{Re}(\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{E}_{0})\mathbf{E}_{0}].
+D_{1}\delta\mathbf{E}_{0}+\delta D_{1/2}\mathbf{E}_{0}=D_{T}\delta\mathbf{E}_{0}-D_{T}|\gamma(\omega_{0})|^{2}[|\mathbf{E}_{0}|^{2}\delta\mathbf{E}_{0}+\mathrm{Re}(\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{E}_{0})\mathbf{E}_{0}].
 \]
 
 \end_inset
