@@ -218,7 +218,7 @@ reference "eq:MBdelta"
 , the two equations can each be simplified to give
 \begin_inset Formula 
 \begin{align}
-\mathbf{P} & =\gamma(\omega)D\mathbf{E}\\
+\mathbf{P} & =\gamma(\omega)D\mathbf{E}\label{eq:P}\\
 D & =\frac{D_{T}(1+d)}{1+\left|\gamma(\omega)\mathbf{E}\right|^{2}}\label{eq:D}
 \end{align}
 
@@ -227,13 +227,45 @@ D & =\frac{D_{T}(1+d)}{1+\left|\gamma(\omega)\mathbf{E}\right|^{2}}\label{eq:D}
 and
 \begin_inset Formula 
 \begin{align}
-\delta\mathbf{P} & =\gamma(\omega+i\sigma)(D\delta\mathbf{E}+\delta D\mathbf{E})\\
+\delta\mathbf{P} & =\gamma(\omega+i\sigma)(D\delta\mathbf{E}+\delta D\mathbf{E})\label{eq:deltaP}\\
 \left(1+\frac{\sigma}{\gamma_{\parallel}}\right)\delta D & =D\mathrm{Im}([\gamma(\omega+i\sigma)-\gamma(\omega)^{\star}]\mathbf{E}^{\star}\cdot\delta\mathbf{E})+|\mathbf{E}|^{2}\mathrm{Im}[\gamma(\omega+i\sigma)\delta D].\label{eq:deltaD}
 \end{align}
 
 \end_inset
 
-If one takes 
+Inserting Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:P"
+
+\end_inset
+
+ and Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:D"
+
+\end_inset
+
+ into the first of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MBE"
+
+\end_inset
+
+ yields the original SALT equations
+\begin_inset Formula 
+\begin{equation}
+\nabla\times\nabla\times\mathbf{E}=\omega^{2}\left[\varepsilon+\frac{D_{T}(1+d)\gamma(\omega)}{1+|\gamma(\omega)\mathbf{E}|^{2}}\right]\mathbf{E}.\label{eq:SALT}
+\end{equation}
+
+\end_inset
+
+Taking 
 \begin_inset Formula $\delta D$
 \end_inset
 
@@ -245,12 +277,46 @@ reference "eq:deltaD"
 
 \end_inset
 
- can further be simplified.
- However, we do not do that here, to maintain generality.
+ further simplifies to
+\begin_inset Formula 
+\[
+\delta D=\frac{D\mathrm{Im}([\gamma(\omega+i\sigma)-\gamma(\omega)^{\star}]\mathbf{E}^{\star}\cdot\delta\mathbf{E})}{1+\frac{\sigma}{\gamma_{\parallel}}+(1+\frac{\sigma}{\gamma_{\perp}})|\gamma(\omega+i\sigma)\mathbf{E}|^{2}}.
+\]
+
+\end_inset
+
+Inserting Eq.
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:deltaP"
+
+\end_inset
+
+ into the first of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:MBdelta"
+
+\end_inset
+
+, we obtain the self-consistent equation
+\begin_inset Formula 
+\begin{equation}
+\nabla\times\nabla\times\delta\mathbf{E}=(\omega+i\sigma)^{2}([\varepsilon+\gamma(\omega+i\sigma)D]\delta\mathbf{E}+\delta D\mathbf{E}).\label{eq:SALTdelta}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
 First, because the nonlinearity is in the form 
 \begin_inset Formula $\left|\gamma(\omega)\mathbf{E}\right|^{2}$
 \end_inset
@@ -448,7 +514,7 @@ which have as solutions both the lasing modes
  from this point.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Next, we move on to 
 \begin_inset Formula $\mathcal{O}(\sqrt{d})$
 \end_inset
@@ -595,7 +661,7 @@ reference "eq:SALTdelta1/2"
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 To the next order, Eq.
  
 \begin_inset CommandInset ref
@@ -646,7 +712,7 @@ This equation is the same as the one in threshold perturbation theory for
 , the allowed lasing linear combinations.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Next, Eq.
  
 \begin_inset CommandInset ref
@@ -696,6 +762,11 @@ n theory for the passive modes.
 \[
 D_{1}\delta\mathbf{E}_{0}+\delta D_{1/2}\mathbf{E}_{0}=D_{T}\delta\mathbf{E}_{0}-D_{T}|\gamma(\omega_{0})|^{2}[|\mathbf{E}_{0}|^{2}\delta\mathbf{E}_{0}+\mathrm{Re}(\delta\mathbf{E}_{0}^{\star}\cdot\mathbf{E}_{0})\mathbf{E}_{0}].
 \]
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
