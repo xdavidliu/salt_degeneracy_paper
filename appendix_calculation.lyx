@@ -79,7 +79,7 @@ The Maxwell--Bloch equations are
 \begin{align}
 \varepsilon\ddot{\mathbf{E}}^{+} & =-\nabla\times\nabla\times\mathbf{E}^{+}-\ddot{\mathbf{P}}^{+}\nonumber \\
 i\dot{\mathbf{P}}^{+} & =(\omega_{a}-i\gamma_{\perp})\mathbf{P}^{+}+\gamma_{\perp}\mathbf{E}^{+}\tilde{D}\label{eq:MB}\\
-\gamma_{\parallel}^{-1}\dot{\tilde{D}} & =D_{0}-\tilde{D}+\mathrm{Im}(\mathbf{E}^{-}\cdot\mathbf{P}^{+}).\nonumber 
+\dot{\tilde{D}} & =\gamma_{\parallel}(D_{0}-\tilde{D})+\mathrm{Im}(\mathbf{E}^{-}\cdot\mathbf{P}^{+}).\nonumber 
 \end{align}
 
 \end_inset
@@ -138,7 +138,7 @@ reference "eq:MB"
 \begin{align*}
 \varepsilon\delta\ddot{\mathbf{E}}^{+}+\delta\ddot{\mathbf{P}}^{+} & =-\nabla\times\nabla\times\delta\mathbf{E}^{+}+2i\omega(\varepsilon\delta\dot{\mathbf{E}}^{+}+\delta\dot{\mathbf{P}}^{+})+\omega^{2}(\varepsilon\delta\mathbf{E}^{+}+\delta\mathbf{P}^{+})\\
 i\delta\dot{\mathbf{P}}^{+} & =(\omega_{a}-\omega-i\gamma_{\perp})\delta\mathbf{P}^{+}+\gamma_{\perp}(\mathbf{E}\delta\tilde{D}+D\delta\mathbf{E}^{+})\\
-\gamma_{\parallel}^{-1}\delta\dot{\tilde{D}} & =-\delta\tilde{D}+\mathrm{Im}(\mathbf{E}^{\star}\cdot\delta\mathbf{P}^{+}+\mathbf{P}\cdot\delta\mathbf{E}^{-}).
+\delta\dot{\tilde{D}} & =-\gamma_{\parallel}\delta\tilde{D}+\mathrm{Im}(\mathbf{E}^{\star}\cdot\delta\mathbf{P}^{+}+\mathbf{P}\cdot\delta\mathbf{E}^{-}).
 \end{align*}
 
 \end_inset
@@ -170,7 +170,7 @@ A=\left(\begin{array}{ccccc}
 \omega^{2}\varepsilon_{I} & \alpha(\omega) & 0 & \omega^{2} & 0\\
 \gamma_{\perp}D & 0 & \omega_{a}-\omega & \gamma_{\perp} & \gamma_{\perp}\mathbf{E}_{R}\\
 0 & \gamma_{\perp}D & -\gamma_{\perp} & \omega_{a}-\omega & \gamma_{\perp}\mathbf{E}_{I}\\
-\mathbf{P}_{I} & -\mathbf{P}_{R} & \mathbf{E}_{I} & -\mathbf{E}_{R} & 1
+\mathbf{P}_{I} & -\mathbf{P}_{R} & \mathbf{E}_{I} & -\mathbf{E}_{R} & \gamma_{\parallel}
 \end{array}\right),\left|u(t)\right\rangle =\left(\begin{array}{c}
 \delta\mathbf{E}_{R}^{+}\\
 \delta\mathbf{E}_{I}^{+}\\
@@ -194,7 +194,7 @@ B=\left(\begin{array}{ccccc}
 2\omega\varepsilon_{R} & -2\omega\varepsilon_{I} & 2\omega & 0 & 0\\
 0 & 0 & 0 & 1 & 0\\
 0 & 0 & -1 & 0 & 0\\
-0 & 0 & 0 & 0 & \gamma_{\parallel}^{-1}
+0 & 0 & 0 & 0 & 1
 \end{array}\right),C=\left(\begin{array}{ccccc}
 -\varepsilon_{R} & \varepsilon_{I} & -1 & 0 & 0\\
 -\varepsilon_{I} & -\varepsilon_{R} & 0 & -1 & 0\\
@@ -344,7 +344,7 @@ A_{T}=\left(\begin{array}{ccccc}
 \omega_{T}^{2}\varepsilon_{I} & \alpha(\omega_{T}) & 0 & \omega_{T}^{2} & 0\\
 \gamma_{\perp}D_{T} & 0 & \omega_{a}-\omega_{T} & \gamma_{\perp} & 0\\
 0 & \gamma_{\perp}D_{T} & -\gamma_{\perp} & \omega_{a}-\omega_{T} & 0\\
-0 & 0 & 0 & 0 & 1
+0 & 0 & 0 & 0 & \gamma_{\parallel}
 \end{array}\right),A_{1/2}=\left(\begin{array}{ccccc}
 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0\\
@@ -382,7 +382,7 @@ B_{T}=\left(\begin{array}{ccccc}
 2\omega_{T}\varepsilon_{R} & -2\omega_{T}\varepsilon_{I} & 2\omega_{T} & 0 & 0\\
 0 & 0 & 0 & 1 & 0\\
 0 & 0 & -1 & 0 & 0\\
-0 & 0 & 0 & 0 & \gamma_{\parallel}^{-1}
+0 & 0 & 0 & 0 & 1
 \end{array}\right),B_{1}=2\omega_{1}\left(\begin{array}{ccccc}
 -\varepsilon_{I} & -\varepsilon_{R} & 0 & -1 & 0\\
 \varepsilon_{R} & -\varepsilon_{I} & 1 & 0 & 0\\
@@ -593,13 +593,13 @@ reference "eq:sqrt(d)"
 \end_inset
 
 , we see that it must be true that 
-\begin_inset Formula $A_{T}\left|v_{1/2}\right\rangle =\left|v_{1/2}\right\rangle $
+\begin_inset Formula $A_{T}\left|v_{1/2}\right\rangle =\gamma_{\parallel}\left|v_{1/2}\right\rangle $
 \end_inset
 
 , so we have 
 \begin_inset Formula 
 \begin{equation}
-\left|v_{1/2}\right\rangle =-A_{1/2}\left|v_{T}\right\rangle .\label{eq:identity}
+\left|v_{1/2}\right\rangle =-\gamma_{\parallel}^{-1}A_{1/2}\left|v_{T}\right\rangle .\label{eq:identity}
 \end{equation}
 
 \end_inset
@@ -643,7 +643,7 @@ reference "eq:identity"
 , we obtain
 \begin_inset Formula 
 \[
-\sum_{k}\left\langle u^{j}\right|A_{1}+A_{1/2}^{2}+\sigma_{1}B_{T}\left|v^{k}\right\rangle b_{k}=0.
+\sum_{k}\left\langle u^{j}\right|A_{1}-\gamma_{\parallel}^{-1}A_{1/2}^{2}+\sigma_{1}B_{T}\left|v^{k}\right\rangle b_{k}=0.
 \]
 
 \end_inset
