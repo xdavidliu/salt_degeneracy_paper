@@ -298,7 +298,7 @@ Now suppose we have a geometry
 \begin_inset Formula 
 \begin{align*}
 \mathbf{E}(\mathbf{x}) & =\sqrt{d}\mathbf{e}+\mathcal{O}(d^{3/2})\\
-\omega & =\omega_{T}+\omega_{1}d,
+\omega & =\omega_{T}+\omega_{1}d+\mathcal{O}(d^{2}),
 \end{align*}
 
 \end_inset
@@ -519,7 +519,7 @@ A_{1/2}\left|v_{T}\right\rangle +A_{T}\left|v_{1/2}\right\rangle +\sigma_{1/2}B_
 
 \end_inset
 
-We directly evalute the first term, and obtain, where
+We directly evalute the first term, and obtain
 \begin_inset Formula 
 \[
 A_{1/2}\left|v_{T}\right\rangle =\left(\begin{array}{c}
