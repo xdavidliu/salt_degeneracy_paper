@@ -481,7 +481,7 @@ Note that
 
 The left eigenvector of this matrix with eigenvalue zero is 
 \begin_inset Formula $\left(\begin{array}{cc}
-\mathbf{e}^{j} & -\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}^{j}\end{array}\right)$
+\mathbf{e}^{j} & \frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}^{j}\end{array}\right)$
 \end_inset
 
 , so it can be seen that the left eigenvector separated into real and imaginary
@@ -494,7 +494,7 @@ The left eigenvector of this matrix with eigenvalue zero is
 \begin_inset Formula 
 \[
 \left\langle u^{j}\right|=\left(\begin{array}{ccccc}
-\mathbf{e}_{R}^{j} & -\mathbf{e}_{I}^{j} & \frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}_{R} & -\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}_{R} & 0\end{array}\right).
+\mathbf{e}_{R}^{j} & -\mathbf{e}_{I}^{j} & \frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}_{R} & -\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}_{I} & 0\end{array}\right).
 \]
 
 \end_inset
