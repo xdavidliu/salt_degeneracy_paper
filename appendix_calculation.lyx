@@ -136,7 +136,7 @@ reference "eq:MB"
  The linear part becomes
 \begin_inset Formula 
 \begin{align*}
-\varepsilon\delta\ddot{\mathbf{E}}^{+} & =-\nabla\times\nabla\times\delta\mathbf{E}^{+}+2i\omega(\varepsilon\delta\dot{\mathbf{E}}^{+}+\delta\dot{\mathbf{P}}^{+})+\omega^{2}(\varepsilon\delta\mathbf{E}^{+}+\delta\mathbf{P}^{+})\\
+\varepsilon\delta\ddot{\mathbf{E}}^{+}+\delta\ddot{\mathbf{P}}^{+} & =-\nabla\times\nabla\times\delta\mathbf{E}^{+}+2i\omega(\varepsilon\delta\dot{\mathbf{E}}^{+}+\delta\dot{\mathbf{P}}^{+})+\omega^{2}(\varepsilon\delta\mathbf{E}^{+}+\delta\mathbf{P}^{+})\\
 i\delta\dot{\mathbf{P}}^{+} & =(\omega_{a}-\omega-i\gamma_{\perp})\delta\mathbf{P}^{+}+\gamma_{\perp}(\mathbf{E}\delta\tilde{D}+D\delta\mathbf{E}^{+})\\
 \gamma_{\parallel}^{-1}\delta\dot{\tilde{D}} & =-\delta\tilde{D}+\mathrm{Im}(\mathbf{E}^{\star}\cdot\delta\mathbf{P}^{+}+\mathbf{P}\cdot\delta\mathbf{E}^{-}).
 \end{align*}
@@ -145,10 +145,19 @@ i\delta\dot{\mathbf{P}}^{+} & =(\omega_{a}-\omega-i\gamma_{\perp})\delta\mathbf{
 
 Because the coefficients are not analytic, we separate into real and imaginary
  parts.
+ Though we would like to eliminate 
+\begin_inset Formula $\delta\mathbf{P}^{+}$
+\end_inset
+
+ as a variable, we cannot insert solutions with time dependence 
+\begin_inset Formula $e^{(\sigma-i\omega)t}$
+\end_inset
+
+ here because the analysis would not work later, for technical reasons.
  We obtain
 \begin_inset Formula 
 \begin{equation}
-\left(A+B\frac{d}{dt}+C\frac{d^{2}}{dt^{2}}\right)u(t)=0,\label{eq:ABC}
+\left(A+B\frac{d}{dt}+C\frac{d^{2}}{dt^{2}}\right)\left|u(t)\right\rangle =0,\label{eq:ABCu}
 \end{equation}
 
 \end_inset
@@ -156,13 +165,13 @@ Because the coefficients are not analytic, we separate into real and imaginary
 where
 \begin_inset Formula 
 \[
-A\equiv\left(\begin{array}{ccccc}
-A_{11} & -\omega^{2}\varepsilon_{I} & \omega^{2} & 0 & 0\\
-\omega^{2}\varepsilon_{I} & A_{11} & 0 & \omega^{2} & 0\\
+A=\left(\begin{array}{ccccc}
+\alpha(\omega) & -\omega^{2}\varepsilon_{I} & \omega^{2} & 0 & 0\\
+\omega^{2}\varepsilon_{I} & \alpha(\omega) & 0 & \omega^{2} & 0\\
 \gamma_{\perp}D & 0 & \omega_{a}-\omega & \gamma_{\perp} & \gamma_{\perp}\mathbf{E}_{R}\\
 0 & \gamma_{\perp}D & -\gamma_{\perp} & \omega_{a}-\omega & \gamma_{\perp}\mathbf{E}_{I}\\
 \mathbf{P}_{I} & -\mathbf{P}_{R} & \mathbf{E}_{I} & -\mathbf{E}_{R} & 1
-\end{array}\right),u(t)=\left(\begin{array}{c}
+\end{array}\right),\left|u(t)\right\rangle =\left(\begin{array}{c}
 \delta\mathbf{E}_{R}^{+}\\
 \delta\mathbf{E}_{I}^{+}\\
 \delta\mathbf{P}_{R}^{+}\\
@@ -174,19 +183,19 @@ A_{11} & -\omega^{2}\varepsilon_{I} & \omega^{2} & 0 & 0\\
 \end_inset
 
 with 
-\begin_inset Formula $A_{11}=\omega^{2}\varepsilon_{R}-\nabla\times\nabla\times$
+\begin_inset Formula $\alpha(\omega)=\omega^{2}\varepsilon_{R}-\nabla\times\nabla\times$
 \end_inset
 
 , and
 \begin_inset Formula 
 \[
-B\equiv\left(\begin{array}{ccccc}
+B=\left(\begin{array}{ccccc}
 -2\omega\varepsilon_{I} & -2\omega\varepsilon_{R} & 0 & -2\omega & 0\\
 2\omega\varepsilon_{R} & -2\omega\varepsilon_{I} & 2\omega & 0 & 0\\
 0 & 0 & 0 & 1 & 0\\
 0 & 0 & -1 & 0 & 0\\
 0 & 0 & 0 & 0 & \gamma_{\parallel}^{-1}
-\end{array}\right),C\equiv\left(\begin{array}{ccccc}
+\end{array}\right),C=\left(\begin{array}{ccccc}
 -\varepsilon_{R} & \varepsilon_{I} & -1 & 0 & 0\\
 -\varepsilon_{I} & -\varepsilon_{R} & 0 & -1 & 0\\
 0 & 0 & 0 & 0 & 0\\
@@ -197,8 +206,17 @@ B\equiv\left(\begin{array}{ccccc}
 
 \end_inset
 
-Now insert a solution of the form 
-\begin_inset Formula $u(t)=ve^{\sigma t}+v^{\star}e^{\sigma^{\star}t}$
+Everything in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ABCu"
+
+\end_inset
+
+ is real.
+ Now insert a solution of the form 
+\begin_inset Formula $\left|u(t)\right\rangle =\left|v\right\rangle e^{\sigma t}+\left|v^{\star}\right\rangle e^{\sigma^{\star}t}$
 \end_inset
 
 , with both 
@@ -214,12 +232,16 @@ Now insert a solution of the form
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:ABC"
+reference "eq:ABCu"
 
 \end_inset
 
  then becomes 
-\begin_inset Formula $\left(A+B\sigma+C\sigma^{2}\right)v=0$
+\begin_inset Formula 
+\begin{equation}
+\left(A+B\sigma+C\sigma^{2}\right)\left|v\right\rangle =0\label{eq:ABCv}
+\end{equation}
+
 \end_inset
 
  (technically, only the real part of the left-hand side need be zero for
@@ -227,7 +249,7 @@ reference "eq:ABC"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:ABC"
+reference "eq:ABCu"
 
 \end_inset
 
@@ -236,7 +258,237 @@ reference "eq:ABC"
 \end_inset
 
  that makes the whole thing zero).
+\end_layout
+
+\begin_layout Standard
+Now suppose we have a geometry 
+\begin_inset Formula $\varepsilon(\mathbf{x})$
+\end_inset
+
+ with 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry with an external pump 
+\begin_inset Formula $D_{0}(\mathbf{x})=D_{T}(\mathbf{x})(1+d)$
+\end_inset
+
+, where 
+\begin_inset Formula $D_{T}(\mathbf{x})$
+\end_inset
+
+ is some threshold pump profile (also with 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry) for which one pair of degenerate modes 
+\begin_inset Formula $\mathbf{e}^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{e}^{2}$
+\end_inset
+
+ have reached threshold, and 
+\begin_inset Formula $d$
+\end_inset
+
+ is a small increment above threshold.
+ The steady-state mode slightly above threshold is given by
+\begin_inset Formula 
+\begin{align*}
+\mathbf{E}(\mathbf{x}) & =\sqrt{d}\mathbf{e}+\mathcal{O}(d^{3/2})\\
+\omega & =\omega_{T}+\omega_{1}d,
+\end{align*}
+
+\end_inset
+
+where we have defined 
+\begin_inset Formula $\mathbf{e}=a_{1}\mathbf{e}^{1}+a_{2}\mathbf{e}^{2}$
+\end_inset
+
+, and the stationary inversion is given by
+\begin_inset Formula 
+\[
+D=D_{T}[1+d-d|\gamma(\omega_{T})\mathbf{e}|^{2}]+\mathcal{O}(d^{2}).
+\]
+
+\end_inset
+
+Suppose we have solved for 
+\begin_inset Formula $\omega_{T},\omega_{1},\mathbf{e}_{T}^{1},\mathbf{e}_{T}^{2}$
+\end_inset
+
+, so that the matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ are known to first order in 
+\begin_inset Formula $d$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+A & =A_{T}+A_{1/2}\sqrt{d}+A_{1}d+\mathcal{O}(d^{3/2})\\
+B & =B_{T}+B_{1}d+\mathcal{O}(d^{2}),
+\end{align*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+A_{T}=\left(\begin{array}{ccccc}
+\alpha(\omega_{T}) & -\omega_{T}^{2}\varepsilon_{I} & \omega_{T}^{2} & 0 & 0\\
+\omega_{T}^{2}\varepsilon_{I} & \alpha(\omega_{T}) & 0 & \omega_{T}^{2} & 0\\
+\gamma_{\perp}D_{T} & 0 & \omega_{a}-\omega_{T} & \gamma_{\perp} & 0\\
+0 & \gamma_{\perp}D_{T} & -\gamma_{\perp} & \omega_{a}-\omega_{T} & 0\\
+0 & 0 & 0 & 0 & 1
+\end{array}\right),A_{1/2}=\left(\begin{array}{ccccc}
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & \gamma_{\perp}\mathbf{e}_{R}\\
+0 & 0 & 0 & 0 & \gamma_{\perp}\mathbf{e}_{I}\\
+\mathbf{p}_{I} & -\mathbf{p}_{R} & \mathbf{e}_{I} & -\mathbf{e}_{R} & 0
+\end{array}\right),
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+A_{1}=\left(\begin{array}{ccccc}
+2\omega_{T}\omega_{1}\varepsilon_{R} & -2\omega_{T}\omega_{1}\varepsilon_{I} & 2\omega_{T}\omega_{1} & 0 & 0\\
+2\omega_{T}\omega_{1}\varepsilon_{I} & 2\omega_{T}\omega_{1}\varepsilon_{R} & 0 & 2\omega_{T}\omega_{1} & 0\\
+\gamma_{\perp}(1-|\gamma(\omega_{T})\mathbf{e}|^{2}) & 0 & -2\omega_{T}\omega_{1} & 0 & 0\\
+0 & \gamma_{\perp}(1-|\gamma(\omega_{T})\mathbf{e}|^{2}) & 0 & -2\omega_{T}\omega_{1} & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right),
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+B_{T}=\left(\begin{array}{ccccc}
+-2\omega_{T}\varepsilon_{I} & -2\omega_{T}\varepsilon_{R} & 0 & -2\omega_{T} & 0\\
+2\omega_{T}\varepsilon_{R} & -2\omega_{T}\varepsilon_{I} & 2\omega_{T} & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & -1 & 0 & 0\\
+0 & 0 & 0 & 0 & \gamma_{\parallel}^{-1}
+\end{array}\right),B_{1}=2\omega_{1}\left(\begin{array}{ccccc}
+-\varepsilon_{I} & -\varepsilon_{R} & 0 & -1 & 0\\
+\varepsilon_{R} & -\varepsilon_{I} & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right).
+\]
+
+\end_inset
+
+We now solve Eq.
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ABCv"
+
+\end_inset
+
+ order-by-order in 
+\begin_inset Formula $\sqrt{d}$
+\end_inset
+
+.
+ Write
+\begin_inset Formula 
+\begin{align*}
+\left|v\right\rangle  & =\left|v_{T}\right\rangle +\left|v_{1/2}\right\rangle \sqrt{d}+\left|v_{1}\right\rangle d+\mathcal{O}(d^{3/2})\\
+\sigma & =\sigma_{T}+\sigma_{1/2}\sqrt{d}+\sigma_{1}d+\mathcal{O}(d^{3/2}).
+\end{align*}
+
+\end_inset
+
+To lowest order, we have 
+\begin_inset Formula $(A_{T}+\sigma_{T}B_{T}+\sigma_{T}^{2}C)\left|v_{T}\right\rangle =0$
+\end_inset
+
+.
+ By inspection, the solution is 
+\begin_inset Formula $\sigma_{T}=0$
+\end_inset
+
+, with 
+\begin_inset Formula $\left|v_{T}\right\rangle =b_{1}\left|v^{1}\right\rangle +b_{2}\left|v^{2}\right\rangle $
+\end_inset
+
+, where 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{2}$
+\end_inset
+
+ are both complex numbers, and
+\begin_inset Formula 
+\[
+\left|v^{k}\right\rangle =\left(\begin{array}{c}
+\mathbf{e}_{R}^{j}\\
+\mathbf{e}_{I}^{j}\\
+\mathbf{p}_{R}^{j}\\
+\mathbf{p}_{I}^{j}\\
+0
+\end{array}\right).
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\left|v^{k}\right\rangle $
+\end_inset
+
+ is real.
+ The left eigenvectors with 
+\begin_inset Formula $\sigma_{T}=0$
+\end_inset
+
+ can be easily seen by writing the 
+\begin_inset Formula $4\times4$
+\end_inset
+
+ upper-left block of 
+\begin_inset Formula $A_{T}$
+\end_inset
+
+ as the complex matrix
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+\omega_{T}^{2}\varepsilon-\nabla\times\nabla\times & \omega_{T}^{2}\\
+\gamma_{\perp}D_{T} & -(\omega_{T}-\omega_{a}+i\gamma_{\perp})
+\end{array}\right).
+\]
+
+\end_inset
+
+It can be seen that the left eigenvector, which satisfies 
+\begin_inset Formula $\left\langle u^{k}\right|A_{T}=0$
+\end_inset
+
+, is
+\begin_inset Formula 
+\[
+\left\langle u^{k}\right|=\left(\begin{array}{ccccc}
+\mathbf{e}_{R}^{j} & -\mathbf{e}_{I}^{j} & \frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}_{R} & -\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}_{R} & 0\end{array}\right).
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
