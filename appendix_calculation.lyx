@@ -521,24 +521,19 @@ A_{1/2}\left|v_{T}\right\rangle +A_{T}\left|v_{1/2}\right\rangle +\sigma_{1/2}B_
 
 We directly evalute the first term, and obtain
 \begin_inset Formula 
-\[
-A_{1/2}\left|v_{T}\right\rangle =\left(\begin{array}{c}
+\begin{equation}
+A_{1/2}\left|v^{k}\right\rangle =-2D_{T}\mathrm{Re}[\gamma(\omega_{T})]\left(\begin{array}{c}
 0\\
 0\\
 0\\
 0\\
--\sum g_{k}
-\end{array}\right),
-\]
+\mathrm{Im}(\mathbf{e}^{k}\cdot\mathbf{e}^{\star})
+\end{array}\right).\label{eq:g}
+\end{equation}
 
 \end_inset
 
-where 
-\begin_inset Formula $g_{k}=\mathrm{Im}(\mathbf{p}^{\star}\cdot\mathbf{e}^{k}+\mathbf{p}^{k}\cdot\mathbf{e}^{\star})$
-\end_inset
-
-.
- Clearly, 
+Clearly, 
 \begin_inset Formula $\left\langle u^{j}\right|A_{1/2}\left|v_{T}\right\rangle =0$
 \end_inset
 
@@ -675,7 +670,15 @@ For example,
 \end_inset
 
 .
- This way, we have 
+ Comparing to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:g"
+
+\end_inset
+
+, it is easy to confirm that 
 \begin_inset Formula $A_{1/2}^{2}\left|v^{k}\right\rangle =A_{1/2}(A_{1/2}\left|v^{k}\right\rangle )$
 \end_inset
 
