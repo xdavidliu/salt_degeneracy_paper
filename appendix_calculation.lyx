@@ -519,33 +519,30 @@ A_{1/2}\left|v_{T}\right\rangle +A_{T}\left|v_{1/2}\right\rangle +\sigma_{1/2}B_
 
 \end_inset
 
-We directly evalute the first term, and obtain 
-\begin_inset Formula $A_{1/2}\left|v_{T}\right\rangle =-\sum b_{k}\left|g^{k}\right\rangle $
-\end_inset
-
-, where
+We directly evalute the first term, and obtain, where
 \begin_inset Formula 
 \[
-\left|g_{k}\right\rangle =\left(\begin{array}{c}
+A_{1/2}\left|v_{T}\right\rangle =\left(\begin{array}{c}
 0\\
 0\\
 0\\
 0\\
--G_{k}
+-\sum g_{k}
 \end{array}\right),
 \]
 
 \end_inset
 
 where 
-\begin_inset Formula $G_{k}=\mathrm{Im}(\mathbf{p}^{\star}\cdot\mathbf{e}^{k}+\mathbf{p}^{k}\cdot\mathbf{e}^{\star})$
+\begin_inset Formula $g_{k}=\mathrm{Im}(\mathbf{p}^{\star}\cdot\mathbf{e}^{k}+\mathbf{p}^{k}\cdot\mathbf{e}^{\star})$
 \end_inset
 
 .
  Clearly, 
-\begin_inset Formula $\left\langle u^{j}\left|g^{k}\right\rangle =0.\right.$
+\begin_inset Formula $\left\langle u^{j}\right|A_{1/2}\left|v_{T}\right\rangle =0$
 \end_inset
 
+.
  Hence, taking 
 \begin_inset Formula $\left\langle u^{j}\right|$
 \end_inset
@@ -588,18 +585,22 @@ reference "eq:sqrt(d)"
 \end_inset
 
  then becomes 
-\begin_inset Formula $\sum b_{k}\left|g^{k}\right\rangle =A_{T}\left|v_{1/2}\right\rangle $
+\begin_inset Formula $A_{T}\left|v_{1/2}\right\rangle =-A_{1/2}\left|v_{T}\right\rangle $
 \end_inset
 
-, but from the non-zero structure from 
+, but from the non-zero structure of 
 \begin_inset Formula $A_{T}$
 \end_inset
 
-, we immediately obtain 
+, we see that it must be true that 
+\begin_inset Formula $A_{T}\left|v_{1/2}\right\rangle =\left|v_{1/2}\right\rangle $
+\end_inset
+
+, so we have 
 \begin_inset Formula 
-\[
-\left|v_{1/2}\right\rangle =\sum b_{k}\left|g^{k}\right\rangle .
-\]
+\begin{equation}
+\left|v_{1/2}\right\rangle =-A_{1/2}\left|v_{T}\right\rangle .\label{eq:identity}
+\end{equation}
 
 \end_inset
 
@@ -627,50 +628,27 @@ A_{1}\left|v_{T}\right\rangle +A_{T}\left|v_{1}\right\rangle +A_{1/2}\left|v_{1/
 
 \end_inset
 
-Evaluating the third term directly, we have 
-\begin_inset Formula $A_{1/2}\left|v_{1/2}\right\rangle =-\gamma_{\perp}\sum b_{k}\left|w^{k}\right\rangle $
-\end_inset
-
-, where
-\begin_inset Formula 
-\[
-\left|w^{k}\right\rangle =\left(\begin{array}{c}
-0\\
-0\\
-G_{k}\mathbf{e}_{R}\\
-G_{k}\mathbf{e}_{I}\\
-0
-\end{array}\right).
-\]
-
-\end_inset
-
 Multiplying both sides by 
 \begin_inset Formula $\left\langle u^{j}\right|$
+\end_inset
+
+ and evoking Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:identity"
+
 \end_inset
 
 , we obtain
 \begin_inset Formula 
 \[
-\sum_{k}\left(\left\langle u^{j}\right|A_{1}+\sigma_{1}B_{T}\left|v^{k}\right\rangle +\right)b_{k}=\gamma_{\perp}\sum_{k}\left\langle u^{j}\left|g^{k}\right\rangle b_{k}.\right.
+\sum_{k}\left\langle u^{j}\right|A_{1}+A_{1/2}^{2}+\sigma_{1}B_{T}\left|v^{k}\right\rangle b_{k}=0.
 \]
 
 \end_inset
 
-Note that even though the term on the right-hand side has 
-\begin_inset Formula $\left|g^{k}\right\rangle $
-\end_inset
 
- instead of 
-\begin_inset Formula $\left|v^{k}\right\rangle $
-\end_inset
-
-, this is still an ordinary linear eigenproblem in 
-\begin_inset Formula $\sigma_{1}$
-\end_inset
-
-.
- 
 \end_layout
 
 \end_body
