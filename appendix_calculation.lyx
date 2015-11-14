@@ -136,7 +136,7 @@ reference "eq:MB"
  The linear part becomes
 \begin_inset Formula 
 \begin{align*}
-\varepsilon\delta\ddot{\mathbf{E}}^{+}+\delta\ddot{\mathbf{P}}^{+} & =-\nabla\times\nabla\times\delta\mathbf{E}^{+}+2i\omega(\varepsilon\delta\dot{\mathbf{E}}^{+}+\delta\dot{\mathbf{P}}^{+})+\omega^{2}(\varepsilon\delta\mathbf{E}^{+}+\delta\mathbf{P}^{+})\\
+0 & =-\nabla\times\nabla\times\delta\mathbf{E}^{+}-\left(\frac{d}{dt}-i\omega\right)^{2}(\varepsilon\delta\mathbf{E}^{+}+\delta\mathbf{P}^{+})\\
 i\delta\dot{\mathbf{P}}^{+} & =(\omega_{a}-\omega-i\gamma_{\perp})\delta\mathbf{P}^{+}+\gamma_{\perp}(\mathbf{E}\delta\tilde{D}+D\delta\mathbf{E}^{+})\\
 \delta\dot{\tilde{D}} & =-\gamma_{\parallel}\delta\tilde{D}+\mathrm{Im}(\mathbf{E}^{\star}\cdot\delta\mathbf{P}^{+}+\mathbf{P}\cdot\delta\mathbf{E}^{-}).
 \end{align*}
@@ -316,7 +316,7 @@ D=D_{T}[1+d-d|\gamma(\omega_{T})\mathbf{e}|^{2}]+\mathcal{O}(d^{2}).
 \end_inset
 
 Suppose we have solved for 
-\begin_inset Formula $\omega_{T},\omega_{1},\mathbf{e}_{T}^{1},\mathbf{e}_{T}^{2}$
+\begin_inset Formula $\omega_{T},\omega_{1},\mathbf{e}^{1},\mathbf{e}^{2}$
 \end_inset
 
 , so that the matrices 
@@ -643,12 +643,43 @@ reference "eq:identity"
 , we obtain
 \begin_inset Formula 
 \[
-\sum_{k}\left\langle u^{j}\right|A_{1}-\gamma_{\parallel}^{-1}A_{1/2}^{2}+\sigma_{1}B_{T}\left|v^{k}\right\rangle b_{k}=0.
+\sum_{k}\left\langle u^{j}\right|A_{1}-\gamma_{\parallel}^{-1}A_{1/2}^{2}+\sigma_{1}B_{T}\left|v^{k}\right\rangle b_{k}=0,
 \]
 
 \end_inset
 
+where the matrix 
+\begin_inset Formula $A_{1/2}^{2}$
+\end_inset
 
+ is given by squaring 
+\begin_inset Formula $A_{1/2}$
+\end_inset
+
+ with outer products:
+\begin_inset Formula 
+\[
+A_{1/2}^{2}=\gamma_{\perp}\left(\begin{array}{ccccc}
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+\mathbf{e}_{R}\otimes\mathbf{p}_{I} & -\mathbf{e}_{R}\otimes\mathbf{p}_{R} & \mathbf{e}_{R}\otimes\mathbf{e}_{I} & -\mathbf{e}_{R}\otimes\mathbf{e}_{I} & 0\\
+\mathbf{e}_{I}\otimes\mathbf{p}_{I} & -\mathbf{e}_{I}\otimes\mathbf{p}_{R} & \mathbf{e}_{I}\otimes\mathbf{e}_{I} & -\mathbf{e}_{I}\otimes\mathbf{e}_{I} & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right).
+\]
+
+\end_inset
+
+For example, 
+\begin_inset Formula $(\mathbf{e}_{R}\otimes\mathbf{p}_{I})\mathbf{e}_{R}^{k}=(\mathbf{p}_{I}\cdot\mathbf{e}_{R}^{k})\mathbf{e}_{R}$
+\end_inset
+
+.
+ This way, we have 
+\begin_inset Formula $A_{1/2}^{2}\left|v^{k}\right\rangle =A_{1/2}(A_{1/2}\left|v^{k}\right\rangle )$
+\end_inset
+
+.
 \end_layout
 
 \end_body
