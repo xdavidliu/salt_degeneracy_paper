@@ -561,23 +561,14 @@ g_{k}
 where 
 \begin_inset Formula 
 \begin{align}
-g_{1} & =\mathbf{p}_{I}\cdot\mathbf{e}_{R}^{1}-\mathbf{p}_{R}\cdot\mathbf{e}_{I}^{1}+\mathbf{e}_{I}\cdot\mathbf{p}_{R}^{1}-\mathbf{e}_{R}\cdot\mathbf{p}_{I}^{1}\nonumber \\
- & =-\mathrm{Im}(\mathbf{p}^{\star}\cdot\mathbf{e}^{1}+\mathbf{e}^{\star}\cdot\mathbf{p}^{1})\nonumber \\
- & =-2D_{T}\mathrm{Re}\gamma(\omega_{T})\mathrm{Im}(\mathbf{e}^{\star}\cdot\mathbf{e}^{k})\label{eq:g_expression}
+g_{k} & =\mathbf{p}_{I}\cdot\mathbf{e}_{R}^{k}-\mathbf{p}_{R}\cdot\mathbf{e}_{I}^{k}+\mathbf{e}_{I}\cdot\mathbf{p}_{R}^{k}-\mathbf{e}_{R}\cdot\mathbf{p}_{I}^{k}\nonumber \\
+ & =-\mathrm{Im}(\mathbf{p}^{\star}\cdot\mathbf{e}^{k}+\mathbf{e}^{\star}\cdot\mathbf{p}^{k})\label{eq:g_expression}\\
+ & =-2D_{T}\mathrm{Re}\gamma(\omega_{T})\mathrm{Im}(\mathbf{e}^{\star}\cdot\mathbf{e}^{k})\nonumber 
 \end{align}
 
 \end_inset
 
-If 
-\begin_inset Formula $a_{1}$
-\end_inset
-
- is chosen real, the last line simplifies further into 
-\begin_inset Formula $-2D_{T}\mathrm{Re}\gamma(\omega_{T})\mathrm{Im}(a_{2}^{\star}\mathbf{e}^{1}\cdot\mathbf{e}^{2\star})$
-\end_inset
-
-.
- Clearly, 
+Clearly, 
 \begin_inset Formula $\left\langle u^{j}\right|A_{1/2}\left|v_{T}\right\rangle =0$
 \end_inset
 
@@ -739,6 +730,8 @@ reference "eq:eigenproblem"
 \end_inset
 
 .
+ Fortunately, most of them can be written as inner products of complex matrices
+ and vectors.
  First, we define 
 \begin_inset Formula $f(\mathbf{x})=\frac{\gamma_{\perp}}{2\omega_{T}\omega_{1}}(1-|\gamma(\omega_{T})\mathbf{e}|^{2})$
 \end_inset
@@ -783,6 +776,14 @@ reference "eq:g"
 
 \end_inset
 
+ and Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:g_expression"
+
+\end_inset
+
 , the remaining matrix element is
 \begin_inset Formula 
 \begin{align*}
@@ -792,7 +793,7 @@ reference "eq:g"
 g_{k}\mathbf{e}
 \end{array}\right)\\
  & =\omega_{T}^{2}\gamma(\omega_{T})\int d^{3}x(\mathbf{e}^{j}\cdot\mathbf{e})g_{k}.\\
- & =-2\omega_{T}^{2}\gamma(\omega_{T})\mathrm{Re}\gamma(\omega_{T})\int d^{3}x(\mathbf{e}^{j}\cdot\mathbf{e})\mathrm{Im}(\mathbf{e}^{\star}\cdot\mathbf{e}^{k}).
+ & =-2\omega_{T}^{2}\gamma(\omega_{T})\mathrm{Re}\gamma(\omega_{T})\int d^{3}x(\mathbf{e}^{j}\cdot\mathbf{e})\mathrm{Im}(\mathbf{e}^{\star}\cdot\mathbf{e}^{k})D_{T}.
 \end{align*}
 
 \end_inset
