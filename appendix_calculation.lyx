@@ -133,6 +133,15 @@ reference "eq:MB"
 \end_inset
 
  expressed in terms of the former.
+ The result is
+\begin_inset Formula 
+\begin{align*}
+0 & =-\nabla\times\nabla\times\mathbf{E}+\omega^{2}[\varepsilon+\gamma(\omega)D]\mathbf{E}\\
+D & =\frac{D_{0}}{1+\gamma_{\parallel}^{-1}|\gamma(\omega)\mathbf{E}|^{2}}.
+\end{align*}
+
+\end_inset
+
  The linear part becomes
 \begin_inset Formula 
 \begin{align*}
@@ -755,7 +764,7 @@ f & -1
 and
 \begin_inset Formula 
 \begin{align*}
-\left\langle u^{j}\right|B_{1}\left|v^{k}\right\rangle  & =i\left(\begin{array}{cc}
+\left\langle u^{j}\right|B_{T}\left|v^{k}\right\rangle  & =i\left(\begin{array}{cc}
 \mathbf{e}^{j} & \frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}^{j}\end{array}\right)\left(\begin{array}{cc}
 2\omega_{T}\varepsilon & 2\omega_{T}\\
 0 & -1
