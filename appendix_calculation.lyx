@@ -497,8 +497,7 @@ The left eigenvector of this matrix with eigenvalue zero is
 \end_inset
 
 , so it can be seen that the left eigenvector separated into real and imaginary
- parts (with the imaginary part having the opposite sign), which satisfies
- 
+ parts, satisfying 
 \begin_inset Formula $\left\langle u^{j}\right|A_{T}=0$
 \end_inset
 
@@ -506,12 +505,26 @@ The left eigenvector of this matrix with eigenvalue zero is
 \begin_inset Formula 
 \[
 \left\langle u^{j}\right|=\left(\begin{array}{ccccc}
-\mathbf{e}_{R}^{j} & -\mathbf{e}_{I}^{j} & \frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}_{R} & -\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}_{I} & 0\end{array}\right).
+\mathbf{e}_{R}^{j} & -\mathbf{e}_{I}^{j} & \frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}_{R}^{j} & -\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}_{I}^{j} & 0\end{array}\right).
 \]
 
 \end_inset
 
-To the next order, 
+Note that the imaginary parts have the opposite sign, because the complex
+ left eigenvector has been conjugated, so that the complex 
+\emph on
+right 
+\emph default
+eigenvector actually has 
+\begin_inset Formula $\mathbf{e}^{j\star}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{p}^{j\star}$
+\end_inset
+
+.
+ To the next order, 
 \begin_inset Formula $\sqrt{d}$
 \end_inset
 
@@ -547,20 +560,23 @@ g_{k}
 
 where 
 \begin_inset Formula 
-\begin{align*}
-g_{1} & =\mathbf{p}_{I}\cdot\mathbf{e}_{R}^{1}-\mathbf{p}_{R}\cdot\mathbf{e}_{I}^{1}+\mathbf{e}_{I}\cdot\mathbf{p}_{R}^{1}-\mathbf{e}_{R}\cdot\mathbf{p}_{I}^{1}\\
- & =-\mathrm{Im}(\mathbf{p}^{\star}\cdot\mathbf{e}^{1}+\mathbf{e}^{\star}\cdot\mathbf{p}^{1})\\
- & =-D_{T}[\gamma(\omega_{T})^{\star}+\gamma(\omega_{T})]\mathrm{Im}(\mathbf{e}^{\star}\cdot\mathbf{e}^{k})\\
- & =-2D_{T}\mathrm{Re}\gamma(\omega_{T})\mathrm{Im}(a_{2}^{\star}\mathbf{e}^{1}\cdot\mathbf{e}^{2\star}),
-\end{align*}
+\begin{align}
+g_{1} & =\mathbf{p}_{I}\cdot\mathbf{e}_{R}^{1}-\mathbf{p}_{R}\cdot\mathbf{e}_{I}^{1}+\mathbf{e}_{I}\cdot\mathbf{p}_{R}^{1}-\mathbf{e}_{R}\cdot\mathbf{p}_{I}^{1}\nonumber \\
+ & =-\mathrm{Im}(\mathbf{p}^{\star}\cdot\mathbf{e}^{1}+\mathbf{e}^{\star}\cdot\mathbf{p}^{1})\nonumber \\
+ & =-2D_{T}\mathrm{Re}\gamma(\omega_{T})\mathrm{Im}(\mathbf{e}^{\star}\cdot\mathbf{e}^{k})\label{eq:g_expression}
+\end{align}
 
 \end_inset
 
-where we have assumed that 
+If 
 \begin_inset Formula $a_{1}$
 \end_inset
 
- is chosen real.
+ is chosen real, the last line simplifies further into 
+\begin_inset Formula $-2D_{T}\mathrm{Re}\gamma(\omega_{T})\mathrm{Im}(a_{2}^{\star}\mathbf{e}^{1}\cdot\mathbf{e}^{2\star})$
+\end_inset
+
+.
  Clearly, 
 \begin_inset Formula $\left\langle u^{j}\right|A_{1/2}\left|v_{T}\right\rangle =0$
 \end_inset
@@ -665,9 +681,9 @@ reference "eq:identity"
 
 , we obtain
 \begin_inset Formula 
-\[
-\sum_{k}\left\langle u^{j}\right|A_{1}-\gamma_{\parallel}^{-1}A_{1/2}^{2}+\sigma_{1}B_{T}\left|v^{k}\right\rangle b_{k}=0,
-\]
+\begin{equation}
+\sum_{k}\left\langle u^{j}\right|A_{1}-\gamma_{\parallel}^{-1}A_{1/2}^{2}+\sigma_{1}B_{T}\left|v^{k}\right\rangle b_{k}=0,\label{eq:eigenproblem}
+\end{equation}
 
 \end_inset
 
@@ -685,8 +701,8 @@ where the matrix
 A_{1/2}^{2}=\gamma_{\perp}\left(\begin{array}{ccccc}
 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0\\
-\mathbf{e}_{R}\otimes\mathbf{p}_{I} & -\mathbf{e}_{R}\otimes\mathbf{p}_{R} & \mathbf{e}_{R}\otimes\mathbf{e}_{I} & -\mathbf{e}_{R}\otimes\mathbf{e}_{I} & 0\\
-\mathbf{e}_{I}\otimes\mathbf{p}_{I} & -\mathbf{e}_{I}\otimes\mathbf{p}_{R} & \mathbf{e}_{I}\otimes\mathbf{e}_{I} & -\mathbf{e}_{I}\otimes\mathbf{e}_{I} & 0\\
+\mathbf{e}_{R}\otimes\mathbf{p}_{I} & -\mathbf{e}_{R}\otimes\mathbf{p}_{R} & \mathbf{e}_{R}\otimes\mathbf{e}_{I} & -\mathbf{e}_{R}\otimes\mathbf{e}_{R} & 0\\
+\mathbf{e}_{I}\otimes\mathbf{p}_{I} & -\mathbf{e}_{I}\otimes\mathbf{p}_{R} & \mathbf{e}_{I}\otimes\mathbf{e}_{I} & -\mathbf{e}_{I}\otimes\mathbf{e}_{R} & 0\\
 0 & 0 & 0 & 0 & 0
 \end{array}\right).
 \]
@@ -711,6 +727,77 @@ reference "eq:g"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+We now compute the matrix elements of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eigenproblem"
+
+\end_inset
+
+.
+ First, we define 
+\begin_inset Formula $f(\mathbf{x})=\frac{\gamma_{\perp}}{2\omega_{T}\omega_{1}}(1-|\gamma(\omega_{T})\mathbf{e}|^{2})$
+\end_inset
+
+, and we have
+\begin_inset Formula 
+\begin{align*}
+\left\langle u^{j}\right|A_{1}\left|v^{k}\right\rangle  & =2\omega_{T}\omega_{1}\left(\begin{array}{cc}
+\mathbf{e}^{j} & \frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}^{j}\end{array}\right)\left(\begin{array}{cc}
+\varepsilon & 1\\
+f & -1
+\end{array}\right)\left(\begin{array}{c}
+\mathbf{e}^{k}\\
+\mathbf{p}^{k}
+\end{array}\right)\\
+ & =2\omega_{T}\omega_{1}\int d^{3}x\left[\varepsilon+\gamma(\omega_{T})D_{T}+\frac{\omega_{T}^{2}}{\gamma_{\perp}}\gamma(\omega_{T})(f-\gamma(\omega_{T})D_{T})\right]\mathbf{e}^{j}\cdot\mathbf{e}^{k},
+\end{align*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{align*}
+\left\langle u^{j}\right|B_{1}\left|v^{k}\right\rangle  & =i\left(\begin{array}{cc}
+\mathbf{e}^{j} & \frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}^{j}\end{array}\right)\left(\begin{array}{cc}
+2\omega_{T}\varepsilon & 2\omega_{T}\\
+0 & -1
+\end{array}\right)\left(\begin{array}{c}
+\mathbf{e}^{k}\\
+\mathbf{p}^{k}
+\end{array}\right)\\
+ & =i\int d^{3}x\left[2\omega_{T}(\varepsilon+\gamma(\omega_{T})D_{T})-\frac{\omega_{T}^{2}D_{T}}{\gamma_{\perp}}\gamma(\omega_{T})^{2}\right]\mathbf{e}^{j}\cdot\mathbf{e}^{k}.
+\end{align*}
+
+\end_inset
+
+Using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:g"
+
+\end_inset
+
+, the remaining matrix element is
+\begin_inset Formula 
+\begin{align*}
+\left\langle u^{j}\right|A_{1/2}^{2}\left|v^{k}\right\rangle  & =\gamma_{\perp}\left(\begin{array}{cc}
+\mathbf{e}^{j} & \frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\mathbf{p}^{j}\end{array}\right)\left(\begin{array}{c}
+0\\
+g_{k}\mathbf{e}
+\end{array}\right)\\
+ & =\omega_{T}^{2}\gamma(\omega_{T})\int d^{3}x(\mathbf{e}^{j}\cdot\mathbf{e})g_{k}.\\
+ & =-2\omega_{T}^{2}\gamma(\omega_{T})\mathrm{Re}\gamma(\omega_{T})\int d^{3}x(\mathbf{e}^{j}\cdot\mathbf{e})\mathrm{Im}(\mathbf{e}^{\star}\cdot\mathbf{e}^{k}).
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
