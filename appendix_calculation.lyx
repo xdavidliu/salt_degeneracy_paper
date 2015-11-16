@@ -320,14 +320,26 @@ Suppose we have solved for
 \end_inset
 
 , so that the matrices 
-\begin_inset Formula $A,B,C$
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
 \end_inset
 
  are known to first order in 
 \begin_inset Formula $d$
 \end_inset
 
-:
+ (
+\begin_inset Formula $C$
+\end_inset
+
+ is a constant matrix independent of 
+\begin_inset Formula $d$
+\end_inset
+
+):
 \begin_inset Formula 
 \begin{align*}
 A & =A_{T}+A_{1/2}\sqrt{d}+A_{1}d+\mathcal{O}(d^{3/2})\\
@@ -366,8 +378,8 @@ with
 A_{1}=\left(\begin{array}{ccccc}
 2\omega_{T}\omega_{1}\varepsilon_{R} & -2\omega_{T}\omega_{1}\varepsilon_{I} & 2\omega_{T}\omega_{1} & 0 & 0\\
 2\omega_{T}\omega_{1}\varepsilon_{I} & 2\omega_{T}\omega_{1}\varepsilon_{R} & 0 & 2\omega_{T}\omega_{1} & 0\\
-\gamma_{\perp}(1-|\gamma(\omega_{T})\mathbf{e}|^{2}) & 0 & -2\omega_{T}\omega_{1} & 0 & 0\\
-0 & \gamma_{\perp}(1-|\gamma(\omega_{T})\mathbf{e}|^{2}) & 0 & -2\omega_{T}\omega_{1} & 0\\
+\gamma_{\perp}D_{T}(1-|\gamma(\omega_{T})\mathbf{e}|^{2}) & 0 & -2\omega_{T}\omega_{1} & 0 & 0\\
+0 & \gamma_{\perp}D_{T}(1-|\gamma(\omega_{T})\mathbf{e}|^{2}) & 0 & -2\omega_{T}\omega_{1} & 0\\
 0 & 0 & 0 & 0 & 0
 \end{array}\right),
 \]
@@ -522,18 +534,34 @@ A_{1/2}\left|v_{T}\right\rangle +A_{T}\left|v_{1/2}\right\rangle +\sigma_{1/2}B_
 We directly evalute the first term, and obtain
 \begin_inset Formula 
 \begin{equation}
-A_{1/2}\left|v^{k}\right\rangle =-2D_{T}\mathrm{Re}[\gamma(\omega_{T})]\left(\begin{array}{c}
+A_{1/2}\left|v^{k}\right\rangle =\left(\begin{array}{c}
 0\\
 0\\
 0\\
 0\\
-\mathrm{Im}(\mathbf{e}^{k}\cdot\mathbf{e}^{\star})
+g_{k}
 \end{array}\right).\label{eq:g}
 \end{equation}
 
 \end_inset
 
-Clearly, 
+where 
+\begin_inset Formula 
+\begin{align*}
+g_{1} & =\mathbf{p}_{I}\cdot\mathbf{e}_{R}^{1}-\mathbf{p}_{R}\cdot\mathbf{e}_{I}^{1}+\mathbf{e}_{I}\cdot\mathbf{p}_{R}^{1}-\mathbf{e}_{R}\cdot\mathbf{p}_{I}^{1}\\
+ & =-\mathrm{Im}(\mathbf{p}^{\star}\cdot\mathbf{e}^{1}+\mathbf{e}^{\star}\cdot\mathbf{p}^{1})\\
+ & =-D_{T}[\gamma(\omega_{T})^{\star}+\gamma(\omega_{T})]\mathrm{Im}(\mathbf{e}^{\star}\cdot\mathbf{e}^{k})\\
+ & =-2D_{T}\mathrm{Re}\gamma(\omega_{T})\mathrm{Im}(a_{2}^{\star}\mathbf{e}^{1}\cdot\mathbf{e}^{2\star}),
+\end{align*}
+
+\end_inset
+
+where we have assumed that 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ is chosen real.
+ Clearly, 
 \begin_inset Formula $\left\langle u^{j}\right|A_{1/2}\left|v_{T}\right\rangle =0$
 \end_inset
 
