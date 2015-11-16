@@ -222,8 +222,37 @@ We then have
  The really interesting matrix element is the new one:
 \begin_inset Formula 
 \[
-\left\langle u^{j}\right|A_{1/2}^{2}\left|v^{k}\right\rangle =-2\omega_{T}^{2}\gamma_{\parallel}\mathrm{Re}\gamma(\omega_{T})\int d^{3}x(\psi^{j}e^{2\pi ix})\mathrm{Im}\left[\frac{e^{-2\pi ix}\psi^{k}}{\gamma(\omega_{T})^{\star}}\right].
+\left\langle u^{j}\right|A_{1/2}^{2}\left|v^{k}\right\rangle =-2\omega_{T}^{2}\gamma_{\parallel}\mathrm{Re}\gamma(\omega_{T})\int d^{3}x(\psi^{j}e^{2\pi ix})\psi^{k}\mathrm{Im}\left[\frac{e^{-2\pi ix}}{\gamma(\omega_{T})^{\star}}\right].
 \]
+
+\end_inset
+
+We examine the integral, which we denote
+\begin_inset Formula 
+\begin{align*}
+I_{jk} & =\int d^{3}x(\psi^{j}e^{2\pi ix})\psi^{k}\left[\mathrm{Im}\left(\frac{\cos2\pi x}{\gamma(\omega_{T})^{\star}}\right)-\mathrm{Re}\left(\frac{\sin2\pi x}{\gamma(\omega_{T})}\right)\right]\\
+ & =\int d^{3}x(\psi^{j}e^{2\pi ix})\psi^{k}\left[\cos2\pi x+\frac{\omega_{T}-\omega_{a}}{\gamma_{\perp}}\sin2\pi x\right].
+\end{align*}
+
+\end_inset
+
+We note that
+\begin_inset Formula 
+\begin{align*}
+\int d^{3}x\cos^{4}(2\pi x) & =\frac{3}{8}\\
+\int d^{3}x\cos^{2}(2\pi x)\sin^{2}(2\pi x) & =\frac{1}{8},
+\end{align*}
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{align*}
+I_{11} & =\frac{1}{8}\left[3+i\left(\frac{\omega_{T}-\omega_{a}}{\gamma_{\perp}}\right)\right]\\
+I_{22} & =\frac{1}{8}\left[1+3i\left(\frac{\omega_{T}-\omega_{a}}{\gamma_{\perp}}\right)\right]\\
+I_{12} & =\frac{1}{8}\left[i+3\left(\frac{\omega_{T}-\omega_{a}}{\gamma_{\perp}}\right)\right]\\
+I_{21} & =I_{12}.
+\end{align*}
 
 \end_inset
 
