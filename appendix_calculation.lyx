@@ -192,8 +192,8 @@ A=\left(\begin{array}{ccccc}
 \end_inset
 
 (TODO??? note there is a typo here.
- The 3rd and 4th elements of the last row have their signs switched.
- It should be -E_I and +E_R.) 
+ The 1st and 2nd elements of the last row have their signs switched.
+ It should be -P_I and +P_R.) 
 \begin_inset Note Comment
 status open
 
