@@ -5371,6 +5371,13 @@ A_{11} & -\omega^{2}\varepsilon_{I} & \omega^{2} & 0 & 0\\
 
 \end_inset
 
+(TODO??? note there is a typo here.
+ The 3rd and 4th elements of the last row have their signs switched.
+ It should be -E_I and +E_R.)
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
 with 
 \begin_inset Formula $A_{11}=A_{22}=-\nabla\times\nabla\times+\omega^{2}\varepsilon_{R}$
 \end_inset
@@ -5466,7 +5473,7 @@ Zeroth order
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 To zeroth order, we have 
 \begin_inset Formula $\left(A_{0}+\sigma_{0}B_{0}+\sigma_{0}^{2}C_{0}\right)v_{0}=0$
 \end_inset
@@ -5642,7 +5649,7 @@ Half order
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Now expand Eq.
  
 \begin_inset CommandInset ref
@@ -5796,7 +5803,7 @@ First order
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 For 
 \begin_inset Formula $\mathcal{O}(d)$
 \end_inset
@@ -5867,7 +5874,7 @@ reference "eq:aaa_passive"
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 On the other hand, note that having a passive pole of SALT 
 \emph on
 on 
@@ -5920,7 +5927,7 @@ Three-halves order
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The equation to this order is
 \begin_inset Formula 
 \[
@@ -5964,7 +5971,7 @@ Second order
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The equation to this order is
 \begin_inset Formula 
 \[
@@ -5982,6 +5989,11 @@ Multiplying both sides by
 \[
 -u_{j}^{T}\left(A_{2}v_{0}+A_{1}v_{1}\right)=\sigma_{2}\left(u_{j}^{T}B_{0}v_{0}\right)
 \]
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

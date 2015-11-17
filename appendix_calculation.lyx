@@ -191,6 +191,13 @@ A=\left(\begin{array}{ccccc}
 
 \end_inset
 
+(TODO??? note there is a typo here.
+ The 3rd and 4th elements of the last row have their signs switched.
+ It should be -E_I and +E_R.) 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
 with 
 \begin_inset Formula $\alpha(\omega)=\omega^{2}\varepsilon_{R}-\nabla\times\nabla\times$
 \end_inset
@@ -269,7 +276,7 @@ reference "eq:ABCu"
  that makes the whole thing zero).
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Now suppose we have a geometry 
 \begin_inset Formula $\varepsilon(\mathbf{x})$
 \end_inset
@@ -646,7 +653,7 @@ reference "eq:sqrt(d)"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 To the next order, 
 \begin_inset Formula $d$
 \end_inset
@@ -729,7 +736,7 @@ reference "eq:g"
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 We now compute the matrix elements of Eq.
  
 \begin_inset CommandInset ref
@@ -804,6 +811,11 @@ g_{k}\mathbf{e}
  & =\omega_{T}^{2}\gamma(\omega_{T})\int d^{3}x(\mathbf{e}^{j}\cdot\mathbf{e})g_{k}.\\
  & =-2\omega_{T}^{2}\gamma(\omega_{T})\mathrm{Re}\gamma(\omega_{T})\int d^{3}x(\mathbf{e}^{j}\cdot\mathbf{e})\mathrm{Im}(\mathbf{e}^{\star}\cdot\mathbf{e}^{k})D_{T}.
 \end{align*}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
