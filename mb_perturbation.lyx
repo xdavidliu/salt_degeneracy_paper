@@ -1819,10 +1819,18 @@ For
 \end_inset
 
  and 
-\begin_inset Formula $\beta=-i(\frac{2}{\ell}D_{T}+\frac{1}{\gamma_{\perp}})^{-1}$
+\begin_inset Formula $\beta=-i(\frac{2}{\ell D_{T}}+\frac{1}{\gamma_{\perp}})^{-1}$
 \end_inset
 
- is purely imaginary with 
+ (note also that for finite-difference systems, 
+\begin_inset Formula $\omega=\frac{2}{h}\sin\frac{\ell h}{2}$
+\end_inset
+
+, so this expression for 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is no longer valid) is purely imaginary with 
 \begin_inset Formula $\mathrm{Im}\beta<0$
 \end_inset
 
