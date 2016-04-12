@@ -237,8 +237,8 @@ reference "fig:phc_geometry"
 ) and much less is known about the lasing solutions in such cases.
  In this paper, we describe the first general technique to solve for the
  nonlinear degenerate steady-state lasing modes (above threshold) of any
- such geometry, based on both analytical perturbative results near threshold
- (Sec.
+ such geometry, based on both symmetry principles and analytical perturbative
+ results near threshold (Sec.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -246,7 +246,8 @@ reference "sec:Threshold-perturbation-theory"
 
 \end_inset
 
-) and a numerical solver (Section 
+).
+ We also present a modified numerical solver (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Forcing-the-degeneracy"
@@ -307,17 +308,10 @@ reference "sec:Threshold-perturbation-theory"
 
 \end_inset
 
-) 
-\emph on
-and
-\emph default
- analyze their stability (Appendix B) 
-\emph on
-analytically
-\emph default
-, by perturbation theory in the basis of the degenerate linear solutions
- at lasing threshold, and we generalize the notion of a circulating laser
- mode to other symmetry groups and establish its stability near threshold.
+) and analyze their stability (Appendix B) analytically, by perturbation
+ theory in the basis of the degenerate linear solutions at lasing threshold,
+ and we generalize the notion of a circulating laser mode to other symmetry
+ groups and establish its stability near threshold.
  (Even the degeneracy itself is somewhat unusual above threshold, because
  the nonlinear gain breaks some of the symmetry in noncircular geometries,
  leaving one with a 
@@ -568,14 +562,6 @@ key "ref-svetlana"
 \end_layout
 
 \begin_layout Standard
-The Maxwell--Bloch equation describing the inversion is
-\begin_inset Formula 
-\begin{equation}
-\dot{D}=D_{0}-D-D\sum_{\mu\nu}\left(\mathbf{E}_{\mu}\cdot\mathbf{E}_{\nu}^{\star}e^{i(\omega_{\nu}-\omega_{\mu})t}-cc\right).\label{eq:eq:Ddot_simplified_again}
-\end{equation}
-
-\end_inset
-
 Ordinarily, SALT assumes that all distinct modes have distinct frequencies,
  i.e.
  
@@ -589,7 +575,7 @@ Ordinarily, SALT assumes that all distinct modes have distinct frequencies,
 , which gives the stationary-inversion expression 
 \begin_inset Formula 
 \begin{equation}
-D=\frac{D_{0}}{1+\sum\left|\mathbf{E}_{\mu}\right|^{2}}.\label{eq:Dwrong}
+D=\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\sum\left|\gamma_{\mu}\mathbf{E}_{\mu}\right|^{2}}.\label{eq:Dwrong}
 \end{equation}
 
 \end_inset
@@ -603,15 +589,8 @@ when higher-frequency
 \end_inset
 
 ) terms are dropped.
- However, when there are degeneracies, Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:eq:Ddot_simplified_again"
-
-\end_inset
-
- will have terms of the form 
+ However, when there are degeneracies, the MB equations will have terms
+ of the form 
 \begin_inset Formula $\mathbf{E}_{\mu}\cdot\mathbf{E}_{\nu}^{\star}$
 \end_inset
 
@@ -631,7 +610,7 @@ reference "eq:eq:Ddot_simplified_again"
  The correct expression for the stationary inversion will then be
 \begin_inset Formula 
 \begin{equation}
-D=\frac{D_{0}}{1+\sum^{\prime}\mathbf{E}_{\mu}\cdot\mathbf{E}_{\nu}^{\star}},\label{eq:Dcorrect}
+D=\frac{D_{0}}{1+\sum^{\prime}\gamma_{\mu}\mathbf{E}_{\mu}\cdot\gamma_{\nu}^{\star}\mathbf{E}_{\nu}^{\star}},\label{eq:Dcorrect}
 \end{equation}
 
 \end_inset
@@ -724,7 +703,7 @@ reference "eq:E123"
 \begin_inset Formula 
 \begin{align}
 -\nabla\times\nabla\times\mathbf{E} & =\omega^{2}\left(\varepsilon_{c}+DF\gamma(\omega)H\right)\mathbf{E}\label{eq:1mode_salt}\\
-H & \equiv\frac{1}{1+\left|\mathbf{E}\right|^{2}},\nonumber 
+H & \equiv\frac{1}{1+\gamma_{\parallel}\left|\gamma\mathbf{E}\right|^{2}},\nonumber 
 \end{align}
 
 \end_inset
@@ -756,7 +735,7 @@ satisfying the equations
 \begin_inset Formula 
 \begin{align}
 -\nabla\times\nabla\times\mathbf{E}_{\mu} & =\omega^{2}\left(\varepsilon_{c}+DF\gamma(\omega)H\right)\mathbf{E}_{\mu}\label{eq:2mode_salt}\\
-H & \equiv\frac{1}{1+\left|\mathbf{E}_{1}+\mathbf{E}_{2}\right|^{2}}.\nonumber 
+H & \equiv\frac{1}{1+\gamma_{\parallel}\left|\gamma(\mathbf{E}_{1}+\mathbf{E}_{2})\right|^{2}}.\nonumber 
 \end{align}
 
 \end_inset
@@ -937,132 +916,136 @@ name "sec:Threshold-perturbation-theory"
 \end_layout
 
 \begin_layout Standard
-Because degenerate pairs of lasing modes can always be thought of as a single-mo
-de superposition, we solve the single mode case slightly above threshold.
- The equation is
+At threshold, we have a degenerate pair of zero-amplitude modes, both with
+ frequency 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+, corresponding to a two-dimensional irreps of the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry group.
+ We consider the case where the external pump is slightly above threshold:
+ 
+\begin_inset Formula $D_{0}(1+d)$
+\end_inset
+
+, for small 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ For convenience, define a basis of 
+\emph on
+clockwise 
+\emph default
+and 
+\emph on
+counterclockwise 
+\emph default
+circulating modes
 \begin_inset Formula 
-\begin{align}
-0 & =-\nabla\times\nabla\times\mathbf{E}+\omega^{2}\tilde{\varepsilon}\mathbf{E}\label{eq:thresholdSALT}\\
-\varepsilon_{SALT} & \equiv\varepsilon_{c}+\frac{D_{0}\gamma(\omega)F}{1+\left|\mathbf{E}\right|^{2}}\label{eq:epstilde}\\
-\gamma(\omega) & \equiv\frac{\gamma_{\perp}}{\omega-\omega_{a}+i\gamma_{\perp}}.\nonumber 
-\end{align}
+\begin{align*}
+\mathbf{E}_{+} & =\sum_{k=1}^{n}\exp\left(\frac{2\pi imk}{n}\right)R_{k/n}\mathbf{E}_{0}\\
+\mathbf{E}_{-} & =\mathrm{mirror\,flip}(\mathbf{E}_{+}),
+\end{align*}
 
 \end_inset
 
- Suppose that at threshold (
-\begin_inset Formula $D_{0}=D_{0}^{t})$
+where 
+\begin_inset Formula $\mathbf{E}_{0}$
 \end_inset
 
-, the solutions are 
-\begin_inset Formula $\mathbf{E}_{1}^{t}$
+ is one of the partner functions of the 2d irrep, 
+\begin_inset Formula $m$
+\end_inset
+
+ is an integer from 
+\begin_inset Formula $1$
+\end_inset
+
+ to 
+\begin_inset Formula $n$
+\end_inset
+
+, and 
+\begin_inset Formula $R_{k/n}$
+\end_inset
+
+ is 
+\begin_inset Formula $k/n$
+\end_inset
+
+ of a full rotation.
+ 
+\begin_inset Formula $\mathbf{E}_{+}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{E}_{2}^{t}$
+\begin_inset Formula $\mathbf{E}_{-}$
 \end_inset
 
-, both with frequency 
-\begin_inset Formula $\omega_{t}$
+ transform like the chiral irreps of the 
+\begin_inset Formula $C_{n}$
 \end_inset
 
- and zero amplitude.
- Now perturb the pump to 
-\begin_inset Formula $D_{0}=D_{0}^{t}\left(1+d\right)$
+ symmetry group, with eigenvalues 
+\begin_inset Formula $\exp\left(-\frac{2\pi imk}{n}\right)$
 \end_inset
 
-, and we expect the single-mode solution to be
+ and 
+\begin_inset Formula $\exp\left(\frac{2\pi imk}{n}\right)$
+\end_inset
+
+, respectively.
+ It can be shown that the lasing mode will be of the form
 \begin_inset Formula 
-\begin{align*}
-\mathbf{E} & =\sqrt{d}\left(a_{1}\mathbf{E}_{1}^{t}+a_{2}\mathbf{E}_{2}^{t}\right)+\delta\mathbf{E}\\
-\omega & =\omega_{t}+\delta\omega.
-\end{align*}
+\begin{equation}
+\mathbf{E}=\frac{\sqrt{\gamma_{\parallel}d}}{\gamma_{0}}\left(a_{+}\mathbf{E}_{+}+a_{-}\mathbf{E}_{-}\right)+\mathcal{O}(d^{3/2}),\label{eq:form}
+\end{equation}
 
 \end_inset
 
-Insert into Eq.
+for unknown coefficients 
+\begin_inset Formula $a_{\pm}$
+\end_inset
+
+, and the frequency will be of the form
+\begin_inset Formula 
+\begin{equation}
+\omega=\omega_{0}+\omega_{1}d+\mathcal{O}(d^{2}).\label{eq:omega}
+\end{equation}
+
+\end_inset
+
+We insert this form into Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:epstilde"
+reference "eq:salt"
 
 \end_inset
 
- and we have
-\begin_inset Formula 
-\begin{align*}
-\varepsilon_{SALT} & =\varepsilon_{c}+D_{0}^{t}\gamma(\omega_{t})F\left[1+d\right.\\
- & \left.-d\left|\sum a_{\eta}\mathbf{E}_{\eta}^{t}\right|^{2}+\frac{\gamma^{\prime}(\omega_{t})}{\gamma(\omega_{t})}\delta\omega\right]+\mathcal{O}(d^{2}).
-\end{align*}
-
-\end_inset
-
-Now multiply both sides of Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:thresholdSALT"
-
-\end_inset
-
- by 
-\begin_inset Formula $\mathbf{E}_{\mu}^{t}$
-\end_inset
-
- and integrate.
- Note that
-\begin_inset Formula 
-\[
-\int\mathbf{E}_{\mu}^{t}\cdot\nabla\times\nabla\times\delta\mathbf{E}=\int\mathbf{E}_{\mu}^{t}\cdot\left[\omega^{2}\varepsilon_{c}+D_{0}^{t}\gamma(\omega_{t})F\right]\delta\mathbf{E}.
-\]
-
-\end_inset
-
-This is because the operators are complex-symmetric and can be transposed
- to act to the left, annihilating 
-\begin_inset Formula $\mathbf{E}_{\nu}^{t}$
-\end_inset
-
- because it solves the SALT equation at threshold.
- Hence, all 
-\begin_inset Formula $\delta\mathbf{E}$
-\end_inset
-
- terms vanish after integration, and we have
+.
+ After some algebra, we have
 \begin_inset Formula 
 \begin{align}
-0 & =\sum_{\nu}\left[\frac{\delta\omega}{d}\left(A_{\mu\nu}+\Gamma B_{\mu\nu}\right)+B_{\mu\nu}-\sum_{\rho\eta}C_{\rho\eta\mu\nu}a_{\rho}a_{\eta}^{\star}\right]a_{\nu},\label{eq:aaa}
+ & \int d^{3}\mathbf{x}\left[\omega_{0}^{2}\gamma_{0}D_{0}+\omega_{1}\frac{\partial}{\partial\omega_{0}}\omega_{0}^{2}\left(\varepsilon+\gamma_{0}D_{0}\right)\right]\left(\mathbf{E}_{j}\cdot\mathbf{E}_{k}\right)a_{k}\nonumber \\
+ & =\int d^{3}\mathbf{x}\omega_{0}^{2}\gamma_{0}D_{0}\left|a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right|^{2}\left(\mathbf{E}_{j}\cdot\mathbf{E}_{k}\right)a_{k}.\label{eq:coefficients}
 \end{align}
 
 \end_inset
 
-which is a 
-\begin_inset Formula $2\times2$
-\end_inset
 
- nonlinear eigenproblem in the unknown eigenvector 
-\begin_inset Formula $a_{\mu}$
-\end_inset
+\end_layout
 
- and eigenvalue 
-\begin_inset Formula $\delta\omega$
-\end_inset
-
-, in terms of the known coefficients:
-\begin_inset Formula 
-\begin{align}
-\Gamma & \equiv\frac{2}{\omega_{t}}+\frac{\gamma^{\prime}(\omega_{t})}{\gamma(\omega_{t})},\nonumber \\
-A_{\mu\nu} & \equiv\frac{2}{\omega_{t}D_{0}^{t}\gamma(\omega_{t})}\int\mathbf{E}_{\mu}^{t}\cdot\varepsilon_{c}\mathbf{E}_{\nu}^{t},\nonumber \\
-B_{\mu\nu} & \equiv\int\mathbf{E}_{\mu}^{t}\cdot F\mathbf{E}_{\nu}^{t},\nonumber \\
-C_{\rho\eta\mu\nu} & \equiv\int\left(\mathbf{E}_{\rho}^{t}\cdot\mathbf{E}_{\eta}^{t\star}\right)\left(\mathbf{E}_{\mu}^{t}\cdot F\mathbf{E}_{\nu}^{t}\right).\label{eq:matrix_elements}
-\end{align}
-
-\end_inset
-
+\begin_layout Standard
 Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:aaa"
+reference "eq:coefficients"
 
 \end_inset
 
@@ -1083,7 +1066,7 @@ in the components of the eigenvector
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:aaa"
+reference "eq:coefficients"
 
 \end_inset
 
@@ -1112,7 +1095,7 @@ key "direct_salt"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:aaa"
+reference "eq:coefficients"
 
 \end_inset
 
@@ -1139,7 +1122,52 @@ key "inui_group,tinkham"
 , and because accidental degeneracies are broken by generic perturbations
  they will generally not survive above threshold unless there is some other
  constraint that enforces the degeneracy as in Appendix A.).
+\end_layout
+
+\begin_layout Standard
+For convenience, we define the quantities
+\begin_inset Formula 
+\begin{align*}
+G_{F} & =\int d^{3}\mathbf{x}(\mathbf{E}_{+}\cdot\mathbf{E}_{-})F\\
+R & =(\omega_{0}^{2}\gamma_{0})^{-1}\frac{\partial}{\partial\omega_{0}}\omega_{0}^{2}\left(G_{\varepsilon}+\gamma_{0}G_{D_{0}}\right)\\
+I & =\int d^{3}\mathbf{x}|\mathbf{E}_{+}|^{2}(\mathbf{E}_{+}\cdot\mathbf{E}_{-})D_{0}\\
+J & =\int d^{3}\mathbf{x}(\mathbf{E}_{+}\cdot\mathbf{E}_{+})(\mathbf{E}_{+}^{\star}\cdot\mathbf{E}_{-})D_{0}\\
+K & =\int d^{3}\mathbf{x}(\mathbf{E}_{+}\cdot\mathbf{E}_{+})(\mathbf{E}_{+}\cdot\mathbf{E}_{-}^{\star})D_{0}.
+\end{align*}
+
+\end_inset
+
+It can be shown (with a substantial amount of algebra) that the only solutions
+ to Eq.
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients"
+
+\end_inset
+
+ are
+\begin_inset Formula 
+\begin{align}
+a_{+} & =\sqrt{\frac{\omega_{1}R+G_{D_{0}}}{I}},\;a_{-}=0\;\mathrm{``circulating\,mode"}\nonumber \\
+a_{+} & =\sqrt{\frac{\omega_{1}R+G_{D_{0}}}{2I+J+K}},\;a_{-}=a_{+}\;``x,y\,\mathrm{standing\,mode"}\label{eq:lasing_modes}\\
+a_{+} & =\sqrt{\frac{\omega_{1}R+G_{D_{0}}}{2I+J-K}},\,a_{-}=ia_{+}\,``x+y\,\mathrm{standing\,mode}",\nonumber 
+\end{align}
+
+\end_inset
+
+where in each case, the frequency eigenvalue 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ is the unique real number such that 
+\begin_inset Formula $a_{+}$
+\end_inset
+
+ is real.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -1260,7 +1288,7 @@ Only certain linear combinations of the threshold modes solve Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:aaa"
+reference "eq:coefficients"
 
 \end_inset
 
@@ -1300,15 +1328,16 @@ reference "fig:cylinder_modes"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:aaa"
+reference "eq:coefficients"
 
 \end_inset
 
 :
 \begin_inset Formula 
-\begin{equation}
-0=\sum_{\nu}\left[\frac{\delta\omega^{\prime}}{d}\left(A_{\mu\nu}+\Gamma B_{\mu\nu}\right)+B_{\mu\nu}-\sum_{\rho\eta}C_{\rho\eta\mu\nu}a_{\rho}a_{\eta}^{\star}\right]a_{\nu}^{\prime}\label{eq:aaa_passive}
-\end{equation}
+\begin{align}
+ & \int d^{3}\mathbf{x}\left[\omega_{0}^{2}\gamma_{0}D_{0}+(\omega_{1}+i\sigma_{1})\frac{\partial}{\partial\omega_{0}}\omega_{0}^{2}\left(\varepsilon+\gamma_{0}D_{0}\right)\right]\left(\mathbf{E}_{j}\cdot\mathbf{E}_{k}\right)b_{k}\nonumber \\
+ & =\int d^{3}\mathbf{x}\omega_{0}^{2}\gamma_{0}D_{0}\left|a_{\ell}\mathbf{E}_{\ell}\right|^{2}\left(\mathbf{E}_{j}\cdot\mathbf{E}_{k}\right)b_{k}.\label{eq:aaa_passive}
+\end{align}
 
 \end_inset
 
@@ -1329,11 +1358,11 @@ reference "eq:aaa_passive"
 \end_inset
 
  is 
-\begin_inset Formula $a_{\mu}^{\prime}=a_{\mu}$
+\begin_inset Formula $b_{\mu}=a_{\mu}$
 \end_inset
 
  and 
-\begin_inset Formula $\delta\omega^{\prime}=\delta\omega$
+\begin_inset Formula $\sigma_{1}=0$
 \end_inset
 
 .
@@ -1342,12 +1371,12 @@ reference "eq:aaa_passive"
 other 
 \emph default
 passive eigenvalue 
-\begin_inset Formula $\delta\omega^{\prime}$
+\begin_inset Formula $\sigma_{1}$
 \end_inset
 
  partially determines the stability of this lasing solution.
  If 
-\begin_inset Formula $\delta\omega^{\prime}$
+\begin_inset Formula $\sigma_{1}$
 \end_inset
 
  is above the real axis, then that lasing solution is unstable.
@@ -1381,11 +1410,11 @@ passive eigenvalue
 \end_inset
 
  pole with 
-\begin_inset Formula $\mathrm{Im}\delta\omega^{\prime}>0$
+\begin_inset Formula $\mathrm{Re}\sigma_{1}>0$
 \end_inset
 
  and 
-\begin_inset Formula $a_{1}^{\prime}=0$
+\begin_inset Formula $b_{1}=0$
 \end_inset
 
 .
@@ -4513,179 +4542,6 @@ where
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Subsection
-Lasing mode
-\end_layout
-
-\begin_layout Standard
-own as the SALT equation.
- At threshold, we have a degenerate pair of zero-amplitude modes 
-\begin_inset Formula $\mathbf{E}_{1,2}$
-\end_inset
-
-,, both with frequency 
-\begin_inset Formula $\omega_{0}$
-\end_inset
-
-, corresponding to a two-dimensional irreps of the 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- symmetry group.
- We consider the case where the external pump is slightly above threshold:
- 
-\begin_inset Formula $D_{0}(1+d)$
-\end_inset
-
-, for small 
-\begin_inset Formula $d$
-\end_inset
-
-.
- It can be shown that the lasing mode will be of the form
-\begin_inset Formula 
-\begin{equation}
-\mathbf{E}=\frac{\sqrt{\gamma_{\parallel}d}}{\gamma_{0}}\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right)+\mathcal{O}(d^{3/2}),\label{eq:form}
-\end{equation}
-
-\end_inset
-
-for unknown coefficients 
-\begin_inset Formula $a_{1,2}$
-\end_inset
-
-, and the frequency will be of the form
-\begin_inset Formula 
-\begin{equation}
-\omega=\omega_{0}+\omega_{1}d+\mathcal{O}(d^{2}).\label{eq:omega}
-\end{equation}
-
-\end_inset
-
-We insert this form into Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:salt"
-
-\end_inset
-
-.
- After some algebra, we have
-\begin_inset Formula 
-\begin{align}
- & \int d^{3}\mathbf{x}\left[\omega_{0}^{2}\gamma_{0}D_{0}+\omega_{1}\frac{\partial}{\partial\omega_{0}}\omega_{0}^{2}\left(\varepsilon+\gamma_{0}D_{0}\right)\right]\left(\mathbf{E}_{j}\cdot\mathbf{E}_{k}\right)a_{k}\nonumber \\
- & =\int d^{3}\mathbf{x}\omega_{0}^{2}\gamma_{0}D_{0}\left|a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right|^{2}\left(\mathbf{E}_{j}\cdot\mathbf{E}_{k}\right)a_{k}.\label{eq:coefficients}
-\end{align}
-
-\end_inset
-
-To solve this equation for the unknown coefficients, we choose a basis of
- 
-\emph on
-clockwise 
-\emph default
-and 
-\emph on
-counterclockwise 
-\emph default
-circulating modes, defined as
-\begin_inset Formula 
-\begin{align*}
-\mathbf{E}_{+} & =\sum_{k=1}^{n}\exp\left(\frac{2\pi imk}{n}\right)R_{k/n}\mathbf{E}_{1}\\
-\mathbf{E}_{-} & =\mathrm{mirror\,flip}(\mathbf{E}_{+}),
-\end{align*}
-
-\end_inset
-
-where 
-\begin_inset Formula $m$
-\end_inset
-
- is an integer from 
-\begin_inset Formula $1$
-\end_inset
-
- to 
-\begin_inset Formula $n$
-\end_inset
-
-, and 
-\begin_inset Formula $R_{k/n}$
-\end_inset
-
- is 
-\begin_inset Formula $k/n$
-\end_inset
-
- of a full rotation.
- 
-\begin_inset Formula $\mathbf{E}_{+}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{E}_{-}$
-\end_inset
-
- transform like the chiral irreps of the 
-\begin_inset Formula $C_{n}$
-\end_inset
-
- symmetry group, with eigenvalues 
-\begin_inset Formula $\exp\left(-\frac{2\pi imk}{n}\right)$
-\end_inset
-
- and 
-\begin_inset Formula $\exp\left(\frac{2\pi imk}{n}\right)$
-\end_inset
-
-, respectively.
-\end_layout
-
-\begin_layout Standard
-For convenience, we define the quantities
-\begin_inset Formula 
-\begin{align*}
-G_{F} & =\int d^{3}\mathbf{x}(\mathbf{E}_{+}\cdot\mathbf{E}_{-})F\\
-R & =(\omega_{0}^{2}\gamma_{0})^{-1}\frac{\partial}{\partial\omega_{0}}\omega_{0}^{2}\left(G_{\varepsilon}+\gamma_{0}G_{D_{0}}\right)\\
-I & =\int d^{3}\mathbf{x}|\mathbf{E}_{+}|^{2}(\mathbf{E}_{+}\cdot\mathbf{E}_{-})D_{0}\\
-J & =\int d^{3}\mathbf{x}(\mathbf{E}_{+}\cdot\mathbf{E}_{+})(\mathbf{E}_{+}^{\star}\cdot\mathbf{E}_{-})D_{0}\\
-K & =\int d^{3}\mathbf{x}(\mathbf{E}_{+}\cdot\mathbf{E}_{+})(\mathbf{E}_{+}\cdot\mathbf{E}_{-}^{\star})D_{0}.
-\end{align*}
-
-\end_inset
-
-It can be shown (with a substantial amount of algebra) that the only solutions
- to Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:coefficients"
-
-\end_inset
-
- are
-\begin_inset Formula 
-\begin{align}
-a_{+} & =\sqrt{\frac{\omega_{1}R+G_{D_{0}}}{I}},\;a_{-}=0\;\mathrm{``circulating\,mode"}\nonumber \\
-a_{+} & =\sqrt{\frac{\omega_{1}R+G_{D_{0}}}{2I+J+K}},\;a_{-}=a_{+}\;``x,y\,\mathrm{standing\,mode"}\label{eq:lasing_modes}\\
-a_{+} & =\sqrt{\frac{\omega_{1}R+G_{D_{0}}}{2I+J-K}},\,a_{-}=ia_{+}\,``x+y\,\mathrm{standing\,mode}",\nonumber 
-\end{align}
-
-\end_inset
-
-where in each case, the frequency eigenvalue 
-\begin_inset Formula $\omega_{1}$
-\end_inset
-
- is the unique real number such that 
-\begin_inset Formula $a_{+}$
-\end_inset
-
- is real.
- 
 \end_layout
 
 \begin_layout Subsection
