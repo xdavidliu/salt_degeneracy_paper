@@ -424,7 +424,15 @@ numerical
  (There will be two possible lasing modes, e.g.
  clockwise and counterclockwise, but only one solution can exist at a time
  with nonzero amplitude due to the nonlinearity; which one is found will
- depend on the starting "guess" of the SALT solver.
+ depend on the starting 
+\begin_inset Quotes eld
+\end_inset
+
+guess
+\begin_inset Quotes erd
+\end_inset
+
+ of the SALT solver.
  This guess is supplied by our perturbative solutions from Sec.
  
 \begin_inset CommandInset ref
@@ -935,7 +943,7 @@ de superposition, we solve the single mode case slightly above threshold.
 \begin_inset Formula 
 \begin{align}
 0 & =-\nabla\times\nabla\times\mathbf{E}+\omega^{2}\tilde{\varepsilon}\mathbf{E}\label{eq:thresholdSALT}\\
-\tilde{\varepsilon} & \equiv\varepsilon_{c}+\frac{D_{0}\gamma(\omega)F}{1+\left|\mathbf{E}\right|^{2}}\label{eq:epstilde}\\
+\varepsilon_{SALT} & \equiv\varepsilon_{c}+\frac{D_{0}\gamma(\omega)F}{1+\left|\mathbf{E}\right|^{2}}\label{eq:epstilde}\\
 \gamma(\omega) & \equiv\frac{\gamma_{\perp}}{\omega-\omega_{a}+i\gamma_{\perp}}.\nonumber 
 \end{align}
 
@@ -982,7 +990,7 @@ reference "eq:epstilde"
  and we have
 \begin_inset Formula 
 \begin{align*}
-\tilde{\varepsilon} & =\varepsilon_{c}+D_{0}^{t}\gamma(\omega_{t})F\left[1+d\right.\\
+\varepsilon_{SALT} & =\varepsilon_{c}+D_{0}^{t}\gamma(\omega_{t})F\left[1+d\right.\\
  & \left.-d\left|\sum a_{\eta}\mathbf{E}_{\eta}^{t}\right|^{2}+\frac{\gamma^{\prime}(\omega_{t})}{\gamma(\omega_{t})}\delta\omega\right]+\mathcal{O}(d^{2}).
 \end{align*}
 
@@ -1131,24 +1139,6 @@ key "inui_group,tinkham"
 , and because accidental degeneracies are broken by generic perturbations
  they will generally not survive above threshold unless there is some other
  constraint that enforces the degeneracy as in Appendix A.).
- Usually, there are only discrete sets of linear combinations that satisfy
- the single-mode SALT equations; i.e.
- there is not a continuous manifold of linear combinations (not including
- the overall phase choice or an arbitrary continuous rotation in 
-\begin_inset Formula $C_{\infty\mathrm{v}}$
-\end_inset
-
-).
- Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:cylinder_modes"
-
-\end_inset
-
- shows an example of a degenerate pair from a  dielectric cylinder satisfying
- opposite mirror conditions.
  
 \begin_inset Float figure
 wide false
@@ -1290,6 +1280,16 @@ reference "eq:aaa"
 \end_inset
 
  are solutions.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cylinder_modes"
+
+\end_inset
+
+ shows an example of a degenerate pair from a  dielectric cylinder satisfying
+ opposite mirror conditions.
  However, it is known that the standing solutions are unstable, while the
  circulating ones are stable.
  This can be seen by looking at the passive poles 
