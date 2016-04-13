@@ -4459,403 +4459,6 @@ name "fig:phc_stable"
 \end_layout
 
 \begin_layout Section
-Linearization of Maxwell--Bloch Equations
-\end_layout
-
-\begin_layout Standard
-In this note, we examine the dynamics of a degenerate pair of lasing modes
- slightly above threshold.
- We begin with the Maxwell--Bloch equations:
-\begin_inset Formula 
-\begin{align*}
--\varepsilon\ddot{\mathbf{E}}^{+} & =\nabla\times\nabla\times\mathbf{E}^{+}+\ddot{\mathbf{P}}^{+}\\
-i\dot{\mathbf{P}}^{+} & =(\omega_{a}-i\gamma_{\perp})\mathbf{P}^{+}+\gamma_{\perp}\mathbf{E}^{+}D\\
-\dot{D} & =\gamma_{\parallel}(D_{0}-D)+\mathrm{Im}(\mathbf{E}^{-}\cdot\mathbf{P}^{+})
-\end{align*}
-
-\end_inset
-
-Insert linearized solution of the formSolving to zeroth order in 
-\begin_inset Formula $\delta$
-\end_inset
-
-, we have
-\begin_inset Formula 
-\begin{align}
-0 & =\nabla\times\nabla\times\mathbf{E}-\omega^{2}(\varepsilon\mathbf{E}+\mathbf{P})\label{eq:lasing}\\
-\mathbf{P} & =\gamma D\mathbf{E}\nonumber \\
-D & =\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left|\gamma\mathbf{E}\right|^{2}}\nonumber \\
-\gamma & =\frac{\gamma_{\perp}}{\omega-\omega_{a}+i\gamma_{\perp}}.\nonumber 
-\end{align}
-
-\end_inset
-
-Solve for 
-\begin_inset Formula $D$
-\end_inset
-
-, and we have the SALT equation
-\begin_inset Formula 
-\[
-\nabla\times\nabla\times\mathbf{E}=\omega^{2}\left(\varepsilon+\frac{\gamma D_{0}}{1+\gamma_{\parallel}^{-1}|\gamma\mathbf{E}|^{2}}\right)\mathbf{E},
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $\gamma(\omega)=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Linearization about lasing mode
-\end_layout
-
-\begin_layout Standard
-Suppose the lasing solution is known to lowest order in 
-\begin_inset Formula $d$
-\end_inset
-
-.
- Linearize about the SALT solution by inserting Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ansatz-1"
-
-\end_inset
-
- into Maxwell--Bloch and keeping the 
-\begin_inset Formula $\delta$
-\end_inset
-
- terms.
- We haveSeparate into real and imaginary parts and obtain
-\begin_inset Formula 
-\[
-\left(C\frac{d^{2}}{dt^{2}}+B\frac{d}{dt}+A\right)u(t)=0
-\]
-
-\end_inset
-
-with
-\begin_inset Formula 
-\[
-u(t)=\left(\begin{array}{c}
-\delta E_{R}\\
-\delta E_{I}\\
-\delta P_{R}\\
-\delta P_{I}\\
-\delta D
-\end{array}\right),
-\]
-
-\end_inset
-
-
-\begin_inset Formula $A=$
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\left(\begin{array}{ccccc}
-\Delta & -\varepsilon_{I}\omega^{2} & \omega^{2} & 0 & 0\\
-\varepsilon_{I}\omega^{2} & \Delta & 0 & \omega^{2} & 0\\
-\gamma_{\perp}D & 0 & \omega_{a}-\omega & \gamma_{\perp} & \gamma_{\perp}\mathbf{E}_{R}\\
-0 & \gamma_{\perp}D & -\gamma_{\perp} & \omega_{a}-\omega & \gamma_{\perp}\mathbf{E}_{I}\\
--\mathbf{P}_{I} & \mathbf{P}_{R} & \mathbf{E}_{I} & -\mathbf{E}_{R} & \gamma_{\parallel}
-\end{array}\right),
-\]
-
-\end_inset
-
-with 
-\begin_inset Formula $\Delta=-\nabla\times\nabla\times+\varepsilon_{R}\omega^{2}$
-\end_inset
-
-, and
-\begin_inset Formula 
-\[
-C=\left(\begin{array}{ccccc}
--\varepsilon_{R} & \varepsilon_{I} & -1 & 0 & 0\\
--\varepsilon_{I} & -\varepsilon_{R} & 0 & -1 & 0\\
-0 & 0 & 0 & 0 & 0\\
-0 & 0 & 0 & 0 & 0\\
-0 & 0 & 0 & 0 & 0
-\end{array}\right),
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-B=\left(\begin{array}{ccccc}
--2\varepsilon_{I}\omega & -2\varepsilon_{R}\omega & 0 & -2\omega & 0\\
-2\varepsilon_{R}\omega & -2\varepsilon_{I}\omega & 2\omega & 0 & 0\\
-0 & 0 & 0 & 1 & 0\\
-0 & 0 & -1 & 0 & 0\\
-0 & 0 & 0 & 0 & 1
-\end{array}\right),
-\]
-
-\end_inset
-
-and 
-\begin_inset Formula 
-\[
-\left|u(t)\right\rangle =\left(\begin{array}{c}
-\mathrm{Re}\delta\mathbf{E}(\mathbf{x},t)\\
-\mathrm{Im}\delta\mathbf{E}(\mathbf{x},t)\\
-\mathrm{Re}\delta\mathbf{P}(\mathbf{x},t)\\
-\mathrm{Im}\delta\mathbf{P}(\mathbf{x},t)\\
-\delta D(\mathbf{x},t)
-\end{array}\right).
-\]
-
-\end_inset
-
-Using the form 
-\begin_inset Formula $\left|u(t)\right\rangle =\left|v\right\rangle e^{\sigma t}+cc$
-\end_inset
-
- with a complex vector 
-\begin_inset Formula $\left|v\right\rangle $
-\end_inset
-
-, Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ABC"
-
-\end_inset
-
- then becomes the quadratic eigenvalue problem
-\begin_inset Formula 
-\begin{equation}
-(C\sigma^{2}+B\sigma+A)\left|v\right\rangle =0.\label{eq:quadratic}
-\end{equation}
-
-\end_inset
-
-The matrices depend on the lasing fields 
-\begin_inset Formula $\mathbf{E}$
-\end_inset
-
- and frequency 
-\begin_inset Formula $\omega$
-\end_inset
-
-, which we assume that we have already solved for using the procedure from
- the previous section.
- Define the time-independent vectors
-\begin_inset Formula 
-\[
-\left|v_{j}\right\rangle =\left(\begin{array}{c}
-\mathrm{Re}\mathbf{E}_{j}\\
-\mathrm{Im}\mathbf{E}_{j}\\
-D_{0}\mathrm{Re}(\gamma_{0}\mathbf{E}_{j})\\
-D_{0}\mathrm{Im}(\gamma_{0}\mathbf{E}_{j})\\
-0
-\end{array}\right),
-\]
-
-\end_inset
-
-where we now use a four-component basis 
-\begin_inset Formula $\mathbf{E}_{j}=\mathbf{E}_{+},\mathbf{E}_{-},i\mathbf{E}_{+},i\mathbf{E}_{-}$
-\end_inset
-
-.
- It can be shown (in the Appendix) that the solution to Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:quadratic"
-
-\end_inset
-
- is given by
-\begin_inset Formula 
-\begin{align*}
-\sigma & =\sigma_{1}d+\mathcal{O}(d^{3/2})\\
-\left|v\right\rangle  & =\sum b_{j}\left|v_{j}\right\rangle +\mathcal{O}(\sqrt{d}),
-\end{align*}
-
-\end_inset
-
-where the coefficients satisfy the matrix equations
-\begin_inset Formula 
-\begin{align}
- & \int d^{3}\mathbf{x}(\omega_{0}^{2}\gamma_{0})^{-1}(\omega_{1}+i\sigma_{1})\frac{\partial}{\partial\omega_{0}}\omega_{0}^{2}\left(\varepsilon+\gamma_{0}D_{0}\right)\left(\mathbf{E}_{j}\cdot\mathbf{E}_{k}\right)b_{k}\nonumber \\
- & =\int d^{3}\mathbf{x}D_{0}\left(\left|a_{\ell}\mathbf{E}_{\ell}\right|^{2}-1\right)\left(\mathbf{E}_{j}\cdot\mathbf{E}_{k}\right)b_{k}\label{eq:quadratic_b}\\
- & \ldots+\int d^{3}\mathbf{x}D_{0}\mathbf{E}_{j}\cdot\left(a_{\ell}\mathbf{E}_{\ell}\right)2\mathrm{Re}\left[\mathbf{E}_{k}\cdot\left(a_{+}\mathbf{E}_{+}+a_{-}\mathbf{E}_{-}\right)^{\star}\right]b_{k}.\nonumber 
-\end{align}
-
-\end_inset
-
-We now present the solution to this eigenvalue problem, both the eigenvectors
- (which consist of the coefficients 
-\begin_inset Formula $b_{k}$
-\end_inset
-
-) and the eigenvalues 
-\begin_inset Formula $\sigma_{1}$
-\end_inset
-
-, for all three types of lasing modes from Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:lasing_modes"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection*
-Circulating lasing mode
-\end_layout
-
-\begin_layout Standard
-With a circulating lasing mode, the solutions to Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:quadratic_b"
-
-\end_inset
-
- are
-\begin_inset Formula 
-\begin{align*}
-\left|b\right\rangle  & =\left(\begin{array}{c}
-1\\
-0\\
-0\\
-0
-\end{array}\right),\;i\sigma_{1}=\omega_{1}+\frac{G_{D_{0}}}{R}\\
-\left|b\right\rangle  & =\left(\begin{array}{c}
-0\\
-1\\
-0\\
-0
-\end{array}\right),\;i\sigma_{1}=\left(\omega_{1}+\frac{G_{D_{0}}}{R}\right)\frac{J+K}{2I}\\
-\left|b\right\rangle  & =\left(\begin{array}{c}
-0\\
-0\\
-1\\
-0
-\end{array}\right),\;i\sigma_{1}=0\\
-\left|b\right\rangle  & =\left(\begin{array}{c}
-0\\
-0\\
-0\\
-1
-\end{array}\right),\;i\sigma_{1}=\left(\omega_{1}+\frac{G_{D_{0}}}{R}\right)\frac{J-K}{2I}.
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-Standing lasing mode (
-\begin_inset Formula $E_{+}+E_{-}$
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Standard
-With a standing lasing mode of the 
-\begin_inset Formula $E_{+}+E_{-}$
-\end_inset
-
- pattern, the solutions are
-\begin_inset Formula 
-\begin{align*}
-\left|b\right\rangle  & =\left(\begin{array}{c}
-1\\
-1\\
-0\\
-0
-\end{array}\right),\;i\sigma_{1}=\omega_{1}+\frac{G_{D_{0}}}{R}\\
-\left|b\right\rangle  & =\left(\begin{array}{c}
-1\\
--1\\
-0\\
-0
-\end{array}\right),\;i\sigma_{1}=-\left(\omega_{1}+\frac{G_{D_{0}}}{R}\right)\frac{J+K}{4I+2J+2K}\\
-\left|b\right\rangle  & =\left(\begin{array}{c}
-0\\
-0\\
-1\\
-1
-\end{array}\right),\;i\sigma_{1}=0\\
-\left|b\right\rangle  & =\left(\begin{array}{c}
-0\\
-0\\
-1\\
--1
-\end{array}\right),\;i\sigma_{1}=-2\left(\omega_{1}+\frac{R}{G_{D_{0}}}\right)\frac{K}{2I+J+K}.
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-Standing lasing mode (
-\begin_inset Formula $E_{+}+iE_{-}$
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Standard
-With a standing lasing mode of the other pattern, the solutions are
-\begin_inset Formula 
-\begin{align*}
-\left|b\right\rangle  & =\left(\begin{array}{c}
-1\\
-0\\
-0\\
-1
-\end{array}\right),\;i\sigma_{1}=\omega_{1}+\frac{G_{D_{0}}}{R}\\
-\left|b\right\rangle  & =\left(\begin{array}{c}
-1\\
-0\\
-0\\
--1
-\end{array}\right),\;i\sigma_{1}=-\left(\omega_{1}+\frac{G_{D_{0}}}{R}\right)\frac{J-K}{2I+J-K}\\
-\left|b\right\rangle  & =\left(\begin{array}{c}
-0\\
-1\\
--1\\
-0
-\end{array}\right),\;i\sigma_{1}=0\\
-\left|b\right\rangle  & =\left(\begin{array}{c}
-0\\
-1\\
-1\\
-0
-\end{array}\right),\;i\sigma_{1}=2\left(\omega_{1}+\frac{R}{G_{D_{0}}}\right)\frac{K}{2I+J-K}.
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
 Multi-mode degenerate lasing
 \begin_inset CommandInset label
 LatexCommand label
@@ -5495,6 +5098,13 @@ If all
 
 \begin_layout Section
 Appendix
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Appendix_lasing 2x2"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6098,12 +5708,182 @@ where again, in each case
  
 \end_layout
 
+\begin_layout Section
+Appendix
+\end_layout
+
+\begin_layout Standard
+In this appendix, we test the stability of the three types of lasing modes
+ found in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Appendix_lasing 2x2"
+
+\end_inset
+
+.
+ We do so by linearizing the Maxwell--Bloch equations about these steady-state
+ solutions, and examining the sign of the resulting stability eigenvalues.
+ We begin by writing Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:delta"
+
+\end_inset
+
+ as a linear matrix equation, with real and imaginary components separated:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(C\frac{d^{2}}{dt^{2}}+B\frac{d}{dt}+A\right)\left|u(t)\right\rangle =0,\label{eq:ABC}
+\end{equation}
+
+\end_inset
+
+with
+\begin_inset Formula 
+\[
+\left|u(t)\right\rangle =\left(\begin{array}{c}
+\mathrm{Re}\delta\mathbf{E}(\mathbf{x},t)\\
+\mathrm{Im}\delta\mathbf{E}(\mathbf{x},t)\\
+\mathrm{Re}\delta\mathbf{P}(\mathbf{x},t)\\
+\mathrm{Im}\delta\mathbf{P}(\mathbf{x},t)\\
+\delta D(\mathbf{x},t)
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A=\left(\begin{array}{ccccc}
+\Delta & -\varepsilon_{I}\omega^{2} & \omega^{2} & 0 & 0\\
+\varepsilon_{I}\omega^{2} & \Delta & 0 & \omega^{2} & 0\\
+\gamma_{\perp}D & 0 & \omega_{a}-\omega & \gamma_{\perp} & \gamma_{\perp}\mathbf{E}_{R}\\
+0 & \gamma_{\perp}D & -\gamma_{\perp} & \omega_{a}-\omega & \gamma_{\perp}\mathbf{E}_{I}\\
+-\mathbf{P}_{I} & \mathbf{P}_{R} & \mathbf{E}_{I} & -\mathbf{E}_{R} & \gamma_{\parallel}
+\end{array}\right),
+\]
+
+\end_inset
+
+(where 
+\begin_inset Formula $\Delta=-\nabla\times\nabla\times+\varepsilon_{R}\omega^{2}$
+\end_inset
+
+), and
+\begin_inset Formula 
+\[
+C=\left(\begin{array}{ccccc}
+-\varepsilon_{R} & \varepsilon_{I} & -1 & 0 & 0\\
+-\varepsilon_{I} & -\varepsilon_{R} & 0 & -1 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B=\left(\begin{array}{ccccc}
+-2\varepsilon_{I}\omega & -2\varepsilon_{R}\omega & 0 & -2\omega & 0\\
+2\varepsilon_{R}\omega & -2\varepsilon_{I}\omega & 2\omega & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & -1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1
+\end{array}\right),
+\]
+
+\end_inset
+
+Using the form 
+\begin_inset Formula $\left|u(t)\right\rangle =\left|v\right\rangle e^{\sigma t}+cc$
+\end_inset
+
+ with a complex vector 
+\begin_inset Formula $\left|v\right\rangle $
+\end_inset
+
+, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ABC"
+
+\end_inset
+
+ then becomes the quadratic eigenvalue problem
+\begin_inset Formula 
+\begin{equation}
+(C\sigma^{2}+B\sigma+A)\left|v\right\rangle =0.\label{eq:quadratic}
+\end{equation}
+
+\end_inset
+
+The matrices depend on the lasing fields 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ and frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+, which we assume that we have already solved for using the procedure from
+ the previous section.
+ Since the lasing fields are 
+\begin_inset Formula $\mathcal{O}(\sqrt{d})$
+\end_inset
+
+ and the frequencies are 
+\begin_inset Formula $\omega=\omega_{0}+\omega_{1}d$
+\end_inset
+
+, we expect the solutions to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic"
+
+\end_inset
+
+ to be of the form
+\begin_inset Formula 
+\begin{align*}
+\left|v\right\rangle  & =\left|v_{0}\right\rangle +\left|v_{1/2}\right\rangle \sqrt{d}+\left|v_{1}\right\rangle d+\mathcal{O}(d^{3/2})\\
+\sigma & =\sigma_{0}+\sigma_{1/2}\sqrt{d}+\sigma_{1}d+\mathcal{O}(d^{3/2}).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Zeroth order
 \end_layout
 
 \begin_layout Standard
-To lowest order, we have
+We now solve Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic"
+
+\end_inset
+
+ order-by-order in 
+\begin_inset Formula $\sqrt{d}$
+\end_inset
+
+.
+ To zeroth order, we have 
 \begin_inset Formula 
 \[
 (C\sigma_{0}^{2}+B_{0}\sigma_{0}+A_{0})v_{0}=0
@@ -6136,58 +5916,55 @@ A_{0}=\left(\begin{array}{ccccc}
 \gamma_{\perp}D & 0 & \omega_{a}-\omega_{0} & \gamma_{\perp} & 0\\
 0 & \gamma_{\perp}D & -\gamma_{\perp} & \omega_{a}-\omega_{0} & 0\\
 0 & 0 & 0 & 0 & \gamma_{\parallel}
-\end{array}\right)
+\end{array}\right).
 \]
 
 \end_inset
 
-It is straightforward to show that there are four linearly-independent solutions
- with 
+These equations are equivalent to the SALT equation at threshold, so the
+ solution is just 
 \begin_inset Formula $\sigma_{0}=0$
 \end_inset
 
-: 
+, and 
+\begin_inset Formula $\left|v_{0}\right\rangle $
+\end_inset
+
+ is an arbitrary linear combination of the vectors
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-w_{1,2,3,4}=\left(\begin{array}{c}
-\psi_{1R}\\
-\psi_{1I}\\
-\phi_{1R}\\
-\phi_{1I}\\
+\[
+\left|w_{j}\right\rangle =\left(\begin{array}{c}
+\mathrm{Re}\mathbf{E}_{j}\\
+\mathrm{Im}\mathbf{E}_{j}\\
+D_{0}\mathrm{Re}(\gamma_{0}\mathbf{E}_{j})\\
+D_{0}\mathrm{Im}(\gamma_{0}\mathbf{E}_{j})\\
 0
-\end{array}\right),\,\left(\begin{array}{c}
-\psi_{2R}\\
-\psi_{2I}\\
-\phi_{2R}\\
-\phi_{2I}\\
-0
-\end{array}\right),\,\left(\begin{array}{c}
--\psi_{1I}\\
-\psi_{1R}\\
--\phi_{1I}\\
-\phi_{1R}\\
-0
-\end{array}\right),\,\left(\begin{array}{c}
--\psi_{2I}\\
-\psi_{2R}\\
--\phi_{2I}\\
-\phi_{2R}\\
-0
-\end{array}\right).\label{eq:w}
-\end{equation}
+\end{array}\right).
+\]
 
 \end_inset
 
-where we define 
-\begin_inset Formula $\phi=D_{0}\gamma(\omega_{0})\psi$
+We use a four-component basis 
+\begin_inset Formula $\mathbf{E}_{j}=\mathbf{E}_{+},\mathbf{E}_{-},i\mathbf{E}_{+},i\mathbf{E}_{-}$
 \end_inset
 
-.
- The eigenvector is then some linear combination 
-\begin_inset Formula $v_{0}=\sum b_{k}w_{k}$
+, because the matrix 
+\begin_inset Formula $A$
 \end_inset
 
- with the coefficients determined by higher-order calculations.
+ has matrix elements that respect the phase of the linearized eigenfunction.
+ Hence, we have 
+\begin_inset Formula $\left|v_{0}\right\rangle =\sum b_{k}\left|w_{k}\right\rangle $
+\end_inset
+
+, where the four coefficients 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ are to be determined by higher-order calculations.
 \end_layout
 
 \begin_layout Subsection
@@ -6197,82 +5974,63 @@ Half order
 \begin_layout Standard
 To next order, we have
 \begin_inset Formula 
-\[
-(A_{1/2}+\sigma_{1/2}B_{0})v_{0}+A_{0}v_{1/2}=0
-\]
+\begin{equation}
+(A_{1/2}+\sigma_{1/2}B_{0})\left|v_{0}\right\rangle +A_{0}\left|v_{1/2}\right\rangle =0,\label{eq:half order}
+\end{equation}
 
 \end_inset
 
 where
 \begin_inset Formula 
 \[
-A_{1/2}=\left(\begin{array}{ccccc}
+A_{1/2}\sqrt{d}=\left(\begin{array}{ccccc}
 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0\\
-0 & 0 & 0 & 0 & \gamma_{\perp}\psi_{R}\\
-0 & 0 & 0 & 0 & \gamma_{\perp}\psi_{I}\\
--\phi_{I} & \phi_{R} & \psi_{I} & -\psi_{R} & 0
-\end{array}\right)
+0 & 0 & 0 & 0 & \gamma_{\perp}\mathbf{e}_{R}\\
+0 & 0 & 0 & 0 & \gamma_{\perp}\mathbf{e}_{I}\\
+-\mathbf{p}_{I} & \mathbf{p}_{R} & \mathbf{e}_{I} & -\mathbf{e}_{R} & 0
+\end{array}\right),
 \]
 
 \end_inset
 
-and 
-\begin_inset Formula $\psi=a_{1}\psi_{1}+a_{2}\psi_{2}$
+where 
+\begin_inset Formula $\mathbf{e}=\frac{\sqrt{\gamma_{\parallel}}}{\gamma_{0}}(a_{+}\mathbf{E}_{+}+a_{-}\mathbf{E}_{-})$
 \end_inset
 
-, the lasing linear combination.
- To proceed, we want left eigenvectors satisfying 
-\begin_inset Formula $u_{k}^{T}A_{0}=0$
+, and 
+\begin_inset Formula $\mathbf{p}=\gamma_{0}D_{0}\mathbf{e}$
 \end_inset
 
 .
- It's easy to show that the left eigenvectors are
-\begin_inset Formula 
-\[
-u_{1,2}=\left(\begin{array}{c}
-\psi_{1R}\\
--\psi_{1I}\\
-\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\phi_{1R}\\
--\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\phi_{1I}\\
-0
-\end{array}\right),\,\left(\begin{array}{c}
-\psi_{2R}\\
--\psi_{2I}\\
-\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\phi_{2R}\\
--\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\phi_{2I}\\
-0
-\end{array}\right)
-\]
-
+ To proceed, we want left eigenvectors satisfying 
+\begin_inset Formula $\left\langle u_{j}\right|A_{0}=0$
 \end_inset
 
-and
+.
+ It's easy to show that the four left eigenvectors are
 \begin_inset Formula 
 \[
-u_{3,4}=\left(\begin{array}{c}
-\psi_{1I}\\
-\psi_{1R}\\
-\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\phi_{1I}\\
--\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\phi_{1R}\\
-0
-\end{array}\right),\,\left(\begin{array}{c}
-\psi_{2I}\\
-\psi_{2R}\\
-\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\phi_{2I}\\
--\frac{\omega_{T}^{2}}{\gamma_{\perp}D_{T}}\phi_{2R}\\
-0
-\end{array}\right)
+\left\langle u_{j}\right|=\left(\begin{array}{ccccc}
+\mathrm{Re}\mathbf{E}_{j} & -\mathrm{Im}\mathbf{E}_{j} & \frac{\omega_{0}^{2}\mathrm{Re}\mathbf{P}_{j}}{\gamma_{\perp}D_{0}} & -\frac{\omega_{0}^{2}\mathrm{Im}\mathbf{P}_{j}}{\gamma_{\perp}D_{0}} & 0\end{array}\right).
 \]
 
 \end_inset
 
 Applying 
-\begin_inset Formula $u_{k}^{T}$
+\begin_inset Formula $\left\langle u_{j}\right|$
 \end_inset
 
- to the equation, and noting that 
-\begin_inset Formula $u_{j}^{T}A_{1/2}w_{k}=0$
+ to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:half order"
+
+\end_inset
+
+ and noting that 
+\begin_inset Formula $\left\langle u_{j}\right|A_{1/2}\left|w_{k}\right\rangle =0$
 \end_inset
 
  because of the non-zero pattern of 
@@ -6282,74 +6040,45 @@ Applying
 , we have
 \begin_inset Formula 
 \[
-\sigma_{1/2}\sum_{k=1}^{4}\left(u_{j}^{T}B_{0}w_{k}\right)b_{k}=0
+\sigma_{1/2}\sum_{k=1}^{4}\left\langle u_{j}\right|B_{0}\left|w_{k}\right\rangle b_{k}=0,
 \]
 
 \end_inset
 
-The matrix 
-\begin_inset Formula $u_{k}^{T}B_{0}w_{j}$
-\end_inset
-
- is probably always non-singular, so we have 
+giving 
 \begin_inset Formula $\sigma_{1/2}=0$
 \end_inset
 
 .
  The half-order equation then becomes 
-\begin_inset Formula $A_{1/2}\sum b_{k}w_{k}+A_{0}v_{1/2}=0$
+\begin_inset Formula $A_{1/2}\sum b_{k}\left|w_{k}\right\rangle +A_{0}\left|v_{1/2}\right\rangle =0$
 \end_inset
 
 .
  By straightfoward computation we obtain
 \begin_inset Formula 
 \[
-A_{1/2}w_{k}=\left(\begin{array}{c}
+A_{1/2}\left|w_{k}\right\rangle =2\left|\gamma(\omega_{0})\right|^{2}\left(\begin{array}{c}
 0\\
 0\\
 0\\
 0\\
-g_{k}
-\end{array}\right)
+D_{0}\mathrm{Re}(\mathbf{E}_{k}\cdot\mathbf{e}^{\star})
+\end{array}\right),
 \]
 
 \end_inset
 
-with
+which yields
 \begin_inset Formula 
 \[
-g_{k}=2D_{0}\left|\gamma(\omega_{0})\right|^{2}\mathrm{Re}(\psi_{k}\psi^{\star})
-\]
-
-\end_inset
-
-and to conveniently cover the latter half of Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:w"
-
-\end_inset
-
- we have defined 
-\begin_inset Formula $\psi_{3}=i\psi_{1}$
-\end_inset
-
- and 
-\begin_inset Formula $\psi_{4}=i\psi_{2}$
-\end_inset
-
-.
- Hence, we have
-\begin_inset Formula 
-\[
-v_{1/2}=-\gamma_{\parallel}^{-1}A_{1/2}v_{0}=\left(\begin{array}{c}
+\left|v_{1/2}\right\rangle =-\gamma_{\parallel}^{-1}A_{1/2}\left|v_{0}\right\rangle =2\left|\gamma(\omega_{0})\right|^{2}\gamma_{\parallel}^{-1}\sum\left(\begin{array}{c}
 0\\
 0\\
 0\\
 0\\
-\gamma_{\parallel}^{-1}\sum b_{k}g_{k}
-\end{array}\right)
+D_{0}\mathrm{Re}(\mathbf{E}_{k}\cdot\mathbf{e}^{\star})
+\end{array}\right).
 \]
 
 \end_inset
@@ -6365,13 +6094,13 @@ First order
 The next order equation is
 \begin_inset Formula 
 \[
-A_{0}v_{1}+(A_{1}+\sigma_{1}B_{0}-\gamma_{\parallel}^{-1}A_{1/2}^{2})v_{0}=0
+A_{0}\left|v_{1}\right\rangle +(A_{1}+\sigma_{1}B_{0}-\gamma_{\parallel}^{-1}A_{1/2}^{2})\left|v_{0}\right\rangle =0
 \]
 
 \end_inset
 
 Applying 
-\begin_inset Formula $u_{k}^{T}$
+\begin_inset Formula $\left\langle u_{j}\right|$
 \end_inset
 
  to both sides, we obtain the 
@@ -6394,7 +6123,7 @@ b_{1}\\
 b_{2}\\
 b_{3}\\
 b_{4}
-\end{array}\right),\;G_{jk}=\frac{\partial}{\partial\omega_{0}}\int d^{3}x\omega_{0}^{2}\left[\varepsilon+D_{0}\gamma(\omega_{0})\right]\psi_{j}\psi_{k}
+\end{array}\right),\;G_{jk}=\frac{\partial}{\partial\omega_{0}}\int d^{3}x\omega_{0}^{2}\left(\varepsilon+D_{0}\gamma_{0}\right)\mathbf{E}_{j}\cdot\mathbf{E}_{k}
 \]
 
 \end_inset
@@ -6402,22 +6131,13 @@ b_{4}
 and
 \begin_inset Formula 
 \begin{align*}
-H_{jk} & =\omega_{0}^{2}\gamma(\omega_{0})\int d^{3}xD_{0}\left(1-\gamma_{\parallel}^{-1}\left|\gamma(\omega_{0})\psi\right|^{2}\right)\psi_{j}\psi_{k}\ldots\\
- & \ldots-\frac{2\omega_{0}^{2}\gamma(\omega_{0})\left|\gamma(\omega_{0})\right|^{2}}{\gamma_{\parallel}}\int d^{3}xD_{0}\psi\psi_{j}\mathrm{Re}(\psi_{k}\psi^{\star})
+H_{jk} & =\omega_{0}^{2}\gamma_{0}\int d^{3}xD_{0}\left(1-\gamma_{\parallel}^{-1}\left|\gamma_{0}\mathbf{e}\right|^{2}\right)\mathbf{E}_{j}\cdot\mathbf{E}_{k}\ldots\\
+ & \ldots-\frac{2\omega_{0}^{2}\gamma_{0}\left|\gamma_{0}\right|^{2}}{\gamma_{\parallel}}\int d^{3}xD_{0}(\mathbf{e}\cdot\mathbf{E}_{j})\mathrm{Re}(\mathbf{E}_{k}\cdot\mathbf{e}^{\star}).
 \end{align*}
 
 \end_inset
 
-again, we have defined 
-\begin_inset Formula $\psi_{3}=i\psi_{1}$
-\end_inset
-
- and 
-\begin_inset Formula $\psi_{4}=i\psi_{2}$
-\end_inset
-
- for convenience.
- The sign of the real part of 
+The sign of the real part of 
 \begin_inset Formula $\sigma_{1}$
 \end_inset
 
@@ -6427,6 +6147,164 @@ again, we have defined
 
 .
  
+\end_layout
+
+\begin_layout Standard
+We now present the solution to this eigenvalue problem, both the eigenvectors
+ (which consist of the coefficients 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+) and the eigenvalues 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+, for all three types of lasing modes from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lasing_modes"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Circulating lasing mode
+\end_layout
+
+\begin_layout Standard
+With a circulating lasing mode, the solutions to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:4x4"
+
+\end_inset
+
+ are
+\begin_inset Formula 
+\begin{align*}
+\left|b\right\rangle  & =\left(\begin{array}{c}
+1\\
+0\\
+0\\
+0
+\end{array}\right),\;i\sigma_{1}=\omega_{1}+\frac{G_{D_{0}}}{R}\\
+\left|b\right\rangle  & =\left(\begin{array}{c}
+0\\
+1\\
+0\\
+0
+\end{array}\right),\;i\sigma_{1}=\left(\omega_{1}+\frac{G_{D_{0}}}{R}\right)\frac{J+K}{2I}\\
+\left|b\right\rangle  & =\left(\begin{array}{c}
+0\\
+0\\
+1\\
+0
+\end{array}\right),\;i\sigma_{1}=0\\
+\left|b\right\rangle  & =\left(\begin{array}{c}
+0\\
+0\\
+0\\
+1
+\end{array}\right),\;i\sigma_{1}=\left(\omega_{1}+\frac{G_{D_{0}}}{R}\right)\frac{J-K}{2I}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Standing lasing mode (
+\begin_inset Formula $E_{+}+E_{-}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+With a standing lasing mode of the 
+\begin_inset Formula $E_{+}+E_{-}$
+\end_inset
+
+ pattern, the solutions are
+\begin_inset Formula 
+\begin{align*}
+\left|b\right\rangle  & =\left(\begin{array}{c}
+1\\
+1\\
+0\\
+0
+\end{array}\right),\;i\sigma_{1}=\omega_{1}+\frac{G_{D_{0}}}{R}\\
+\left|b\right\rangle  & =\left(\begin{array}{c}
+1\\
+-1\\
+0\\
+0
+\end{array}\right),\;i\sigma_{1}=-\left(\omega_{1}+\frac{G_{D_{0}}}{R}\right)\frac{J+K}{4I+2J+2K}\\
+\left|b\right\rangle  & =\left(\begin{array}{c}
+0\\
+0\\
+1\\
+1
+\end{array}\right),\;i\sigma_{1}=0\\
+\left|b\right\rangle  & =\left(\begin{array}{c}
+0\\
+0\\
+1\\
+-1
+\end{array}\right),\;i\sigma_{1}=-2\left(\omega_{1}+\frac{R}{G_{D_{0}}}\right)\frac{K}{2I+J+K}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Standing lasing mode (
+\begin_inset Formula $E_{+}+iE_{-}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+With a standing lasing mode of the other pattern, the solutions are
+\begin_inset Formula 
+\begin{align*}
+\left|b\right\rangle  & =\left(\begin{array}{c}
+1\\
+0\\
+0\\
+1
+\end{array}\right),\;i\sigma_{1}=\omega_{1}+\frac{G_{D_{0}}}{R}\\
+\left|b\right\rangle  & =\left(\begin{array}{c}
+1\\
+0\\
+0\\
+-1
+\end{array}\right),\;i\sigma_{1}=-\left(\omega_{1}+\frac{G_{D_{0}}}{R}\right)\frac{J-K}{2I+J-K}\\
+\left|b\right\rangle  & =\left(\begin{array}{c}
+0\\
+1\\
+-1\\
+0
+\end{array}\right),\;i\sigma_{1}=0\\
+\left|b\right\rangle  & =\left(\begin{array}{c}
+0\\
+1\\
+1\\
+0
+\end{array}\right),\;i\sigma_{1}=2\left(\omega_{1}+\frac{R}{G_{D_{0}}}\right)\frac{K}{2I+J-K}.
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
