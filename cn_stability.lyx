@@ -738,7 +738,57 @@ We first compute the last (and only nonzero) element of
 \begin_inset Formula 
 \begin{align*}
 h_{\pm} & =\omt^{2}\left[\Re\vec{E}\cdot\Re\left(\Epm\gamt\right)-\Im\vec{E}\cdot\Im\left(\Epm\gamt\right)\right]/\sqrt{d}\\
- & =\omt^{2}\left|\gamt\right|^{-1}\sqrt{\gamma_{\parallel}}\Re\left[(a_{+}\Ep+a_{-}\Em)\cdot\Epm\gamt\right]
+ & =\omt^{2}\left|\gamt\right|^{-1}\sqrt{\gamma_{\parallel}}\Re\left[(a_{+}\Ep+a_{-}\Em)\cdot\Epm\gamt\right].
+\end{align*}
+
+\end_inset
+
+Hence, we have
+\begin_inset Formula 
+\begin{align*}
+w_{\pm}^{T}A_{1/2}v_{1/2} & =-\gamma_{\parallel}^{-1}\left(b_{+}\int h_{\pm}g_{+}+b_{-}\int h_{\pm}g_{-}\right)\\
+ & =-\gamma_{\parallel}^{-1}\left(b_{\pm}\int h_{\pm}g_{\pm}+b_{\mp}\int h_{\pm}g_{\mp}\right)
+\end{align*}
+
+\end_inset
+
+Now evaluate the integrals.
+ We first have
+\begin_inset Formula 
+\begin{align*}
+\gamma_{\parallel}^{-1}\int h_{+}g_{+} & =2\omt^{2}\int\Dt\Re\left[(a_{+}\Ep+a_{-}\Em)\cdot\Ep\gamt\right]\Re\left(a_{+}\left|\Ep\right|^{2}+a_{-}\Ep^{\star}\cdot\Em\right)\\
+ & =2\omt^{2}\Re\int\Dt\gamt\left[a_{-}(\Em\cdot\Ep)\left|\Ep\right|^{2}\Re(a_{+})+a_{+}(\Ep\cdot\Ep)\Re\left(a_{-}\Ep^{\star}\cdot\Em\right)\right]\\
+ & =2\omt^{2}\Re(a_{+})\Re(a_{-}\gamt I_{+})+\omt^{2}\Re\left(a_{+}a_{-}J_{+}+a_{+}a_{-}^{\star}K_{+}\right).
+\end{align*}
+
+\end_inset
+
+Next, we have
+\begin_inset Formula 
+\begin{align*}
+\gamma_{\parallel}^{-1}\int h_{-}g_{+} & =2\omt^{2}\int\Dt\Re\left[(a_{+}\Ep+a_{-}\Em)\cdot\Em\gamt\right]\Re\left(a_{+}\left|\Ep\right|^{2}+a_{-}\Ep^{\star}\cdot\Em\right)\\
+ & =2\omt^{2}\Re\int\Dt\gamt\left[a_{+}(\Em\cdot\Ep)\left|\Ep\right|^{2}\Re(a_{+})+a_{-}(\Em\cdot\Em)\Re\left(a_{-}\Ep^{\star}\cdot\Em\right)\right]\\
+ & =2\omt^{2}\Re(a_{+})\Re(a_{+}\gamt I_{+})+\omt^{2}\Re\left(a_{-}^{2}J_{+}+\left|a_{-}\right|^{2}K_{+}\right).
+\end{align*}
+
+\end_inset
+
+The other two integrals can be obtained simply by switching plus and minus
+ symbols:
+\begin_inset Formula 
+\begin{align*}
+\gamma_{\parallel}^{-1}\int h_{-}g_{-} & =2\omt^{2}\Re(a_{-})\Re(a_{+}\gamt I_{-})+\omt^{2}\Re\left(a_{+}a_{-}J_{-}+a_{-}a_{+}^{\star}K_{-}\right)\\
+\gamma_{\parallel}^{-1}\int h_{+}g_{-} & =2\omt^{2}\Re(a_{-})\Re(a_{-}\gamt I_{-})+\omt^{2}\Re\left(a_{+}^{2}J_{-}+\left|a_{+}\right|^{2}K_{-}\right).
+\end{align*}
+
+\end_inset
+
+Hence, we have
+\begin_inset Formula 
+\begin{align*}
+ & w_{\pm}^{T}A_{1/2}v_{1/2}\\
+ & =-\omt^{2}b_{\pm}\left[2\Re(a_{\pm})\Re(a_{\mp}\gamt I_{\pm})+\Re\left(a_{+}a_{-}J_{\pm}+a_{\pm}a_{\mp}^{\star}K_{\pm}\right)\right]\\
+ & \ldots-\omt^{2}b_{\mp}\left[2\Re(a_{\mp})\Re(a_{\mp}\gamt I_{\mp})+\Re\left(a_{\pm}^{2}J_{\mp}+\left|a_{\pm}\right|^{2}K_{\mp}\right)\right].
 \end{align*}
 
 \end_inset
