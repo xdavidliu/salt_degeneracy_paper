@@ -455,9 +455,10 @@ Using the fact that
 
  are real, we obtain the circulating lasing solutions
 \begin_inset Formula 
-\begin{equation}
-\vec{E}=\sqrt{\left(\omega_{1}H+G_{D}\right)d/I_{\mp}}\Emp,\omega_{1}=-\frac{\Im\left(G_{D}/I_{\mp}\right)}{\Im\left(H/I_{\mp}\right)}\label{eq:circulating_frequency}
-\end{equation}
+\begin{align*}
+\vec{E} & =\sqrt{\left(\omega_{1}H+G_{D}\right)d/I_{\mp}}\Epm\\
+\omega & =\omt-\frac{\Im\left(G_{D}/I_{\mp}\right)d}{\Im\left(H/I_{\mp}\right)}
+\end{align*}
 
 \end_inset
 
@@ -473,16 +474,12 @@ The fact that
 
 \end_inset
 
-Note that the frequencies in Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:circulating_frequency"
-
+Note that the frequencies of the two lasing modes differ in the 
+\begin_inset Formula $C_{n}$
 \end_inset
 
- differ, indicating that the lasing modes will split, which seems to contradict
- the fact that 
+ case, indicating that they will split, which seems to contradict the fact
+ that 
 \begin_inset Formula $C_{n}$
 \end_inset
 
@@ -495,15 +492,7 @@ reference "eq:circulating_frequency"
 \emph on
 will 
 \emph default
-have the same frequency, not that of Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:circulating_frequency"
-
-\end_inset
-
- with the opposite sign.
+have the same frequency, not that of the other lasing mode.
  This is because the degenerate partner only satisfies the SALT equation
  
 \begin_inset Quotes eld
@@ -715,16 +704,18 @@ reference "eq:omega1"
 , and giving the standing lasing modes
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J+K}}\left(\Ep\pm\Em\right),\omega_{1}=-\frac{\Im\left[G_{D}/(2I+J+K)\right]}{\Im\left[H/(2I+J+K)\right]}
+\vec{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J+K}}\left(\Ep\pm\Em\right)\\
+\omega & =\omt-\frac{\Im\left[G_{D}/(2I+J+K)\right]d}{\Im\left[H/(2I+J+K)\right]}
 \end{align*}
 
 \end_inset
 
 and
 \begin_inset Formula 
-\[
-\vec{E}=\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J-K}}\left(\Ep\pm i\Em\right),\omega_{1}=-\frac{\Im\left[G_{D}/(2I+J-K)\right]}{\Im\left[H/(2I+J-K)\right]}
-\]
+\begin{align*}
+\vec{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J-K}}\left(\Ep\pm i\Em\right)\\
+\omega & =\omt-\frac{\Im\left[G_{D}/(2I+J-K)\right]d}{\Im\left[H/(2I+J-K)\right]}
+\end{align*}
 
 \end_inset
 
@@ -817,9 +808,10 @@ reference "eq:omega1"
 
 We then obtain the lasing solutions
 \begin_inset Formula 
-\[
-\vec{E}=\sqrt{\frac{(\omega_{1}H+G_{D})d}{J+2I}}\left(\Ep+e^{i\theta}\Em\right),\omega_{1}=-\frac{\Im\left[G/(J+2I)\right]}{\Im\left[H/(J+2I)\right]},
-\]
+\begin{align*}
+\vec{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{J+2I}}\left(\Ep+e^{i\theta}\Em\right)\\
+\omega & =\omt-\frac{\Im\left[G/(J+2I)\right]d}{\Im\left[H/(J+2I)\right]},
+\end{align*}
 
 \end_inset
 
