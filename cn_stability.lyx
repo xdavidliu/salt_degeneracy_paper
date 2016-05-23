@@ -477,17 +477,16 @@ One possible solution is
 \end_inset
 
 , so these solutions are stable and can be ignored.
- Finally, we have the manifold of degenerate solutions
-\begin_inset Formula 
-\begin{align*}
-\sigma_{0} & =0\\
-\delE_{0} & =b_{+}\Ep+b_{-}\Em,
-\end{align*}
-
+ Finally, we have the degenerate solutions 
+\begin_inset Formula $\delE_{0}=\Epm$
 \end_inset
 
-again with 
-\begin_inset Formula $\delP_{0}=\gamt\Dt\delE_{0}$
+ with 
+\begin_inset Formula $\sigma_{0}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\delP_{0}=\gamt\Dt\Epm$
 \end_inset
 
 , and 
@@ -495,14 +494,212 @@ again with
 \end_inset
 
 .
- Since the eigenvalues are zero, we cannot make any conclusions about the
- stability, so we must go to higher order.
- The coefficients 
+ This forms the manifold 
+\begin_inset Formula $v_{0}=b_{+}v_{+}+b_{-}v_{-}$
+\end_inset
+
+, where 
+\begin_inset Formula 
+\begin{equation}
+v_{\pm}=\left(\begin{array}{c}
+\Re\Epm\\
+\Im\Epm\\
+\Dt\Re(\gamt\Epm)\\
+\Dt\Im(\gamt\Epm)\\
+0
+\end{array}\right).\label{eq:manifold}
+\end{equation}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\sigma_{0}=0$
+\end_inset
+
+, we cannot make any conclusions about the stability, so we must go to higher
+ order.
+ The (possibly complex) coefficients 
 \begin_inset Formula $b_{\pm}$
 \end_inset
 
  are undetermined at this order, but will be determined at higher orders,
- similarly to those of degenerate perturbation theory in quantum mechanics.
+ similarly to those in degenerate perturbation theory in quantum mechanics.
+\end_layout
+
+\begin_layout Subsubsection*
+Half order
+\end_layout
+
+\begin_layout Standard
+To order 
+\begin_inset Formula $\sqrt{d}$
+\end_inset
+
+, the eigenvalue equation for the 
+\begin_inset Formula $\sigma_{0}=0$
+\end_inset
+
+ solution becomes
+\begin_inset Formula 
+\begin{equation}
+(B_{0}\sigma_{1/2}+A_{1/2})(b_{+}v_{+}+b_{-}v_{-})+A_{0}v_{1/2}=0.\label{eq:half}
+\end{equation}
+
+\end_inset
+
+Now define the vectors
+\begin_inset Formula 
+\[
+(b_{+}v_{+}+b_{-}v_{-})w_{\pm}=\left(\begin{array}{c}
+\Re\Epm\\
+-\Im\Epm\\
+\omt^{2}\Re\left(\Epm\gamt/\gamma_{\perp}\right)\\
+-\omt^{2}\Im\left(\Epm\gamt/\gamma_{\perp}\right)\\
+0
+\end{array}\right).
+\]
+
+\end_inset
+
+It can be shown that 
+\begin_inset Formula $A_{0}^{T}w_{\pm}=0$
+\end_inset
+
+.
+ Also, from the non-zero pattern of 
+\begin_inset Formula $A_{1/2}$
+\end_inset
+
+, it is evident that matrix elements 
+\begin_inset Formula $w_{\pm}^{T}A_{1/2}v_{\pm}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{\pm}^{T}A_{1/2}v_{\mp}$
+\end_inset
+
+ all vanish.
+ Hence, multiplying Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:half"
+
+\end_inset
+
+ by 
+\begin_inset Formula $w_{\pm}^{T}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+\sigma_{1/2}\left(\begin{array}{cc}
+w_{+}^{T}B_{0}v_{+} & w_{+}^{T}B_{0}v_{-}\\
+w_{-}^{T}B_{0}v_{+} & w_{-}^{T}B_{0}v_{-}
+\end{array}\right)\left(\begin{array}{c}
+b_{+}\\
+b_{-}
+\end{array}\right)=\left(\begin{array}{c}
+0\\
+0
+\end{array}\right).
+\]
+
+\end_inset
+
+In general, the matrix is nonsingular, so we conclude that 
+\begin_inset Formula $\sigma_{1/2}=0$
+\end_inset
+
+.
+ Next, we use direct evaluation to obtain the last element of 
+\begin_inset Formula $A_{1/2}v_{\pm}$
+\end_inset
+
+ (the other elements are zero due to the nonzero structure of 
+\begin_inset Formula $A_{1/2}$
+\end_inset
+
+), which is
+\begin_inset Formula 
+\begin{align*}
+g_{\pm} & =-\Im\vec{P}\cdot\Re\Epm+\Re\vec{P}\cdot\Im\Epm+\Dt\left[\Im\vec{E}\cdot\Re(\gamt\Epm)-\Re\vec{E}\cdot\Im(\gamt\Epm)\right]\\
+ & =-\Im\left(\Epm^{\star}\cdot\vec{P}\right)-\Dt\Im\left[\vec{E}^{\star}\cdot\gamt\Epm\right]\\
+ & =-2\Dt\Im\gamt\Re(\Epm^{\star}\cdot\vec{E})\\
+ & =2\Dt\left|\gamt\right|^{2}\Re\left[\Epm^{\star}\cdot(a_{+}\Ep+a_{-}\Em)\right].
+\end{align*}
+
+\end_inset
+
+Inserting 
+\begin_inset Formula $\sigma_{1/2}=0$
+\end_inset
+
+ into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:half"
+
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+A_{0}v_{1/2}=-A_{1/2}(b_{+}v_{+}+b_{-}v_{-})=-\left(\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+b_{+}g_{+}+b_{-}g_{-}
+\end{array}\right).
+\]
+
+\end_inset
+
+The vector 
+\begin_inset Formula $v_{1/2}$
+\end_inset
+
+ must also have this same nonzero pattern (only last element nonzero).
+ This is because if 
+\begin_inset Formula $v_{1/2}$
+\end_inset
+
+ had any nonzeros in the first four elements, they must be annihilated by
+ 
+\begin_inset Formula $A_{0}$
+\end_inset
+
+, and only 
+\begin_inset Formula $v_{\pm}$
+\end_inset
+
+ satisfy that property.
+ However, if 
+\begin_inset Formula $v_{1/2}$
+\end_inset
+
+ had any component in 
+\begin_inset Formula $v_{\pm}$
+\end_inset
+
+, then it can simply be absorbed into the solution 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ to the previous order.
+ We can then conclude, by simply inspecting the last row of 
+\begin_inset Formula $A_{0}$
+\end_inset
+
+, that 
+\begin_inset Formula $v_{1/2}=-\gamma_{\parallel}^{-1}A_{1/2}(b_{+}v_{+}+b_{-}v_{-})$
+\end_inset
+
+.
+ 
 \end_layout
 
 \end_body
