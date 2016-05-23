@@ -1,0 +1,376 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\Cnv}{C_{n\mathrm{v}}}
+\renewcommand\vec{\mathbf}
+\newcommand{\Ee}{\vec{E}_\mathrm{even}}
+\newcommand{\Eo}{\vec{E}_\mathrm{odd}}
+\DeclareMathOperator{\floor}{floor}
+\newcommand{\Dt}{D_\mathrm{t}}
+\newcommand{\Ep}{\vec{E}_{+}}
+\newcommand{\Em}{\vec{E}_{-}}
+\newcommand{\Epm}{\vec{E}_{\pm}}
+\newcommand{\Emp}{\vec{E}_{\mp}}
+\newcommand{\omt}{\omega_\mathrm{t}}
+\newcommand{\gamt}{\gamma_\mathrm{t}}
+\renewcommand{\Im}{\mathrm{Im}}
+\renewcommand{\Re}{\mathrm{Re}}
+\newcommand{\delE}{\delta \vec{E}}
+\newcommand{\delP}{\delta \vec{P}}
+\newcommand{\delD}{\delta D}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+Linearization of Maxwell--Bloch equations
+\end_layout
+
+\begin_layout Standard
+We begin with the Maxwell--Bloch equations
+\begin_inset Formula 
+\begin{align*}
+-\varepsilon\ddot{\vec{E}}^{+} & =\nabla\times\nabla\times\vec{E}^{+}+\ddot{\vec{P}}^{+}\\
+i\dot{\vec{P}}^{+} & =(\omega_{a}-i\gamma_{\perp})\dot{\vec{P}}+\gamma_{\perp}\vec{E}^{+}D\\
+\dot{D}_{\mathrm{MB}} & =\gamma_{\parallel}(D_{0}-D)+\mathrm{Im}(\vec{E}^{-}\cdot\vec{P}^{+}).
+\end{align*}
+
+\end_inset
+
+Let 
+\begin_inset Formula $D_{0}=\Dt(1+d)$
+\end_inset
+
+, with 
+\begin_inset Formula $\varepsilon(\vec{x})$
+\end_inset
+
+ and 
+\begin_inset Formula $\Dt(\vec{x})$
+\end_inset
+
+ having either 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ or 
+\begin_inset Formula $\Cnv$
+\end_inset
+
+ symmetry and 
+\begin_inset Formula $d=0$
+\end_inset
+
+ being the first threshold for a degenerate pair 
+\begin_inset Formula $\Epm(\vec{x})$
+\end_inset
+
+ in the 
+\begin_inset Formula $\ell th$
+\end_inset
+
+ pair of chiral irreps in 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+, or the 
+\begin_inset Formula $\ell th$
+\end_inset
+
+ 2d irrep in 
+\begin_inset Formula $\Cnv$
+\end_inset
+
+.
+ Expand 
+\begin_inset Formula $\vec{E}^{+}(\vec{x},t)$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{P}^{+}(\vec{x},t)$
+\end_inset
+
+, and 
+\begin_inset Formula $D_{\mathrm{MB}}(\vec{x},t)$
+\end_inset
+
+ about steady-state SALT solutions: 
+\begin_inset Formula 
+\begin{align}
+\vec{E}^{+}(\vec{x},t) & =\left[\vec{E}(\vec{x})+\delE(\vec{x},t)\right]e^{-i\omega t}\nonumber \\
+\vec{P}^{+}(\vec{x},t) & =\left[\vec{P}(\vec{x})+\delP(\vec{x},t)\right]e^{-i\omega t}\label{eq:perturbations}\\
+\dot{D}_{\mathrm{MB}}(\vec{x},t) & =D(\vec{x})+\delD(\vec{x},t).\nonumber 
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $\vec{P}=\gamma D\vec{E}$
+\end_inset
+
+, 
+\begin_inset Formula $D=D_{0}\left(1+\gamma_{\parallel}^{-1}\left|\gamma\vec{E}\right|\right)^{-1}$
+\end_inset
+
+, and 
+\begin_inset Formula $\gamma=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
+\end_inset
+
+.
+ To lowest order in 
+\begin_inset Formula $d$
+\end_inset
+
+, the SALT solution is 
+\begin_inset Formula 
+\begin{align*}
+\vec{E} & =\gamt^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{+}\Ep+a_{-}\Em\right)\\
+\omega & =\omt+\omega_{1}d\\
+\vec{P} & =\Dt\sqrt{\gamma_{\parallel}d}\left(a_{+}\Ep+a_{-}\Em\right)\\
+D & =\Dt\left(1+d-d\left|a_{+}\Ep+a_{-}\Em\right|^{2}\right),
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\omt$
+\end_inset
+
+ is the threshold frequency.
+ Assume that the solutions 
+\begin_inset Formula $a_{\pm},\omega_{1}$
+\end_inset
+
+ to this problem have already been found.
+ We test the stability of these solutions by examining the signs of the
+ stability eigenvalues.
+ First, insert Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:perturbations"
+
+\end_inset
+
+ into the Maxwell--Bloch equations, and keep terms up to first order.
+ The zeroth order terms vanish because they are SALT solutions.
+ We end up with
+\begin_inset Formula 
+\begin{align}
+0 & =\nabla\times\nabla\times\delE+\left(\frac{d}{dt}-i\omega\right)^{2}(\varepsilon\delE+\delP)\nonumber \\
+i\delta\dot{\vec{P}} & =(\omega_{a}-\omega-i\gamma_{\perp})\delP+\gamma_{\perp}(D\delE+\vec{E}\delD)\label{eq:linearize}\\
+\delta\dot{\vec{D}} & =-\gamma_{\parallel}\delD+\Im(\vec{P}\cdot\delE^{\star}+\vec{E}^{\star}\cdot\delP).\nonumber 
+\end{align}
+
+\end_inset
+
+By inspection, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:linearize"
+
+\end_inset
+
+ has coefficients in orders 1, 
+\begin_inset Formula $\sqrt{d}$
+\end_inset
+
+, and 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ We write Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:linearize"
+
+\end_inset
+
+ as the matrix equation
+\begin_inset Formula 
+\[
+\left(C\frac{d^{2}}{dt^{2}}+B\frac{d}{dt}+A\right)u(t)=0,
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+u(t)=\left(\begin{array}{c}
+\Re\delE\\
+\Im\delE\\
+\Re\delP\\
+\Im\delP\\
+\delD
+\end{array}\right)
+\]
+
+\end_inset
+
+and the matrices are 
+\begin_inset Formula $A=A_{0}+A_{1/2}\sqrt{d}+A_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $B=B_{0}+B_{1}d$
+\end_inset
+
+, where 
+\begin_inset Formula 
+\begin{align*}
+A_{0} & =\left(\begin{array}{ccccc}
+\omt^{2}\Re\varepsilon-\nabla\times\nabla\times & -\omt^{2}\Im\varepsilon & \omt^{2} & 0 & 0\\
+\omt^{2}\Im\varepsilon & \omt^{2}\Re\varepsilon-\nabla\times\nabla\times & 0 & \omt^{2} & 0\\
+\gamma_{\perp}\Dt & 0 & \omega_{a}-\omt & \gamma_{\perp} & 0\\
+0 & \gamma_{\perp}\Dt & -\gamma_{\perp} & \omega_{a}-\omt & 0\\
+0 & 0 & 0 & 0 & \gamma_{\parallel}
+\end{array}\right)\\
+A_{1/2} & =\left(\begin{array}{ccccc}
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & \gamma_{\perp}\Re\vec{E}\\
+0 & 0 & 0 & 0 & \gamma_{\perp}\Im\vec{E}\\
+-\Im\vec{P} & \Re\vec{P} & \Im\vec{E} & -\Re\vec{E} & 0
+\end{array}\right)\frac{1}{\sqrt{d}}\\
+A_{1} & =\left(\begin{array}{ccccc}
+2\omt\omega_{1}\Re\varepsilon & -2\omt\omega_{1}\Im\varepsilon & 2\omt\omega_{1} & 0 & 0\\
+2\omt\omega_{1}\Im\varepsilon & 2\omt\omega_{1}\Re\varepsilon & 0 & 2\omt\omega_{1} & 0\\
+\gamma_{\perp}\Dt\left(1-\left|a_{+}\Ep+a_{-}\Em\right|^{2}\right) & 0 & -\omega_{1} & 0 & 0\\
+0 & \gamma_{\perp}\Dt\left(1-\left|a_{+}\Ep+a_{-}\Em\right|^{2}\right) & 0 & -\omega_{1} & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right)\\
+B_{0} & =\left(\begin{array}{ccccc}
+-2\omt\Im\varepsilon & -2\omt\Re\varepsilon & 0 & -2\omt & 0\\
+2\omt\Re\varepsilon & -2\omt\Im\varepsilon & 2\omt & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & -1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1
+\end{array}\right)\\
+B_{1} & =\left(\begin{array}{ccccc}
+-2\omega_{1}\Im\varepsilon & -2\omega_{1}\Re\varepsilon & 0 & -2\omega_{1} & 0\\
+2\omega_{1}\Re\varepsilon & -2\omega_{1}\Im\varepsilon & 2\omega_{1} & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right)\\
+C & =\left(\begin{array}{ccccc}
+-\Re\varepsilon & \Im\varepsilon & -1 & 0 & 0\\
+-\Im\varepsilon & -\Re\varepsilon & 0 & -1 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+Now write 
+\begin_inset Formula $u(t)=ve^{\sigma t}+\mathrm{complex\,conjugate}$
+\end_inset
+
+, where
+\begin_inset Formula 
+\begin{align*}
+v & =v_{0}+v_{1/2}\sqrt{d}+v_{1}d\\
+\sigma & =\sigma_{0}+\sigma_{1/2}\sqrt{d}+\sigma_{1}d,
+\end{align*}
+
+\end_inset
+
+and solve for 
+\begin_inset Formula $v$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ order-by-order in 
+\begin_inset Formula $\sqrt{d}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_body
+\end_document
