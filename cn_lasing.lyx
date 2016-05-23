@@ -680,19 +680,24 @@ reference "eq:matrix_further"
 , and obtain
 \begin_inset Formula 
 \[
-\left|a_{-}\right|^{2}I_{-}+\left|a_{+}\right|^{2}\left(I_{+}+J_{+}+e^{2i(\theta_{+}-\theta_{-})}K_{+}\right)=\omega_{1}H+G_{D}.
+\left|a_{-}\right|^{2}I_{-}+\left|a_{+}\right|^{2}\left(I_{+}+J_{+}+z^{\star}K_{+}\right)=\omega_{1}H+G_{D},
 \]
 
 \end_inset
 
-As always, a second equation can be obtained by switching the plus and minus
- symbols.
+where 
+\begin_inset Formula $z=e^{2i(\theta_{-}-\theta_{+})}$
+\end_inset
+
+.
+ As always, a second equation can be obtained by switching the plus and
+ minus symbols.
  Combining the two into a matrix equation, we have
 \begin_inset Formula 
 \[
 \left(\begin{array}{cc}
-I_{+}+J_{+}+e^{2i(\theta_{+}-\theta_{-})}K_{+} & I_{-}\\
-I_{+} & I_{-}+J_{-}+e^{2i(\theta_{-}-\theta_{+})}K_{-}
+I_{+}+J_{+}+z^{\star}K_{+} & I_{-}\\
+I_{+} & I_{-}+J_{-}+zK_{-}
 \end{array}\right)\left(\begin{array}{c}
 \left|a_{+}\right|^{2}\\
 \left|a_{-}\right|^{2}
@@ -715,7 +720,7 @@ Inverting the matrix, we have
 where
 \begin_inset Formula 
 \begin{equation}
-T_{\pm}=\frac{J_{\mp}+e^{2i(\theta_{\mp}-\theta_{\pm})}K_{\mp}}{\left(I_{+}+J_{+}+e^{2i(\theta_{+}-\theta_{-})}K_{+}\right)\left(I_{-}+J_{-}+e^{2i(\theta_{-}-\theta_{+})}K_{-}\right)-I_{+}I_{-}}.\label{eq:T}
+T_{\pm}=\frac{J_{\mp}+z^{\pm1}K_{\mp}}{\left(I_{+}+J_{+}+z^{\star}K_{+}\right)\left(I_{-}+J_{-}+zK_{-}\right)-I_{+}I_{-}}.\label{eq:T}
 \end{equation}
 
 \end_inset
@@ -731,28 +736,16 @@ Again, since
  are real, we have
 \begin_inset Formula 
 \begin{equation}
-\omega_{1}=-\frac{\Im\left(G_{D}T_{\pm}\right)}{\Im\left(HT_{\pm}\right)}.\label{eq:omega1}
+\omega_{1}=-\frac{\Im\left(G_{D}T_{+}\right)}{\Im\left(HT_{+}\right)}=-\frac{\Im\left(G_{D}T_{-}\right)}{\Im\left(HT_{-}\right)}.\label{eq:omega1}
 \end{equation}
 
 \end_inset
 
-Since there is only one 
-\begin_inset Formula $\omega_{1}$
-\end_inset
-
-, this equation must hold for both signs, i.e.
- 
-\begin_inset Formula 
-\begin{equation}
-\frac{\Im\left(G_{D}T_{+}\right)}{\Im\left(HT_{+}\right)}=\frac{\Im\left(G_{D}T_{-}\right)}{\Im\left(HT_{-}\right)}.\label{eq:requirement}
-\end{equation}
-
-\end_inset
-
-Since the amplitudes must be positive, there is also the cutoff condition
+The second equality is a constraint that must be satisfied.
+ Since the amplitudes must be positive, there are also the two cutoff conditions
 \begin_inset Formula 
 \[
-\Re(G_{D}T_{+})-\frac{\Im\left(G_{D}T_{+}\right)}{\Im\left(HT_{+}\right)}\Re(HT_{+})>0.
+\Re(G_{D}T_{\pm})-\frac{\Im\left(G_{D}T_{\pm}\right)}{\Im\left(HT_{\pm}\right)}\Re(HT_{\pm})>0.
 \]
 
 \end_inset
@@ -794,7 +787,7 @@ In this case, there are no further simplifications to Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:requirement"
+reference "eq:omega1"
 
 \end_inset
 
@@ -836,7 +829,7 @@ reference "eq:T"
  then becomes
 \begin_inset Formula 
 \[
-T_{\pm}=\frac{J+e^{2i(\theta_{\mp}-\theta_{\pm})}K}{\left(I+J+e^{2i(\theta_{+}-\theta_{-})}K\right)\left(I+J+e^{2i(\theta_{-}-\theta_{+})}K\right)-I^{2}}.
+T_{\pm}=\frac{J+z^{\pm1}K}{\left(I+J+z^{\star}K\right)\left(I+J+zK\right)-I^{2}}.
 \]
 
 \end_inset
@@ -845,19 +838,15 @@ Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:requirement"
+reference "eq:omega1"
 
 \end_inset
 
- then results in
-\begin_inset Formula 
-\[
-e^{2i(\theta_{+}-\theta_{-})}=\pm1,
-\]
-
+ then results in 
+\begin_inset Formula $z=\pm1$
 \end_inset
 
-giving the usual standing lasing modes 
+, giving the usual standing lasing modes 
 \begin_inset Formula $\vec{E}\propto\Ep\pm\Em$
 \end_inset
 
@@ -885,27 +874,20 @@ In this case, we have
 \begin_inset Formula $K_{\pm}=0$
 \end_inset
 
-, and Eq.
+, and 
+\begin_inset Formula $T\pm$
+\end_inset
+
+ becomes independent of 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Now, the constraint in Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:T"
-
-\end_inset
-
- becomes
-\begin_inset Formula 
-\[
-T_{\pm}=\frac{J_{\mp}}{\left(I_{+}+J_{+}\right)\left(I_{-}+J_{-}\right)-I_{+}I_{-}}.
-\]
-
-\end_inset
-
-Now, Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:requirement"
+reference "eq:omega1"
 
 \end_inset
 
@@ -943,16 +925,12 @@ In this case, we have
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:requirement"
+reference "eq:omega1"
 
 \end_inset
 
  is then automatically satisfied for all 
-\begin_inset Formula $\theta_{+}$
-\end_inset
-
- and 
-\begin_inset Formula $\theta_{-}$
+\begin_inset Formula $z$
 \end_inset
 
 , and we have
