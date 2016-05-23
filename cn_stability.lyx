@@ -212,11 +212,11 @@ where
 \end_inset
 
  is the threshold frequency.
- Assume that the solutions 
+ Assume that the coefficients 
 \begin_inset Formula $a_{\pm},\omega_{1}$
 \end_inset
 
- to this problem have already been found.
+ have already been found.
  We test the stability of these solutions by examining the signs of the
  stability eigenvalues.
  First, insert Eq.
@@ -266,9 +266,9 @@ reference "eq:linearize"
 
  as the matrix equation
 \begin_inset Formula 
-\[
-\left(C\frac{d^{2}}{dt^{2}}+B\frac{d}{dt}+A\right)u(t)=0,
-\]
+\begin{equation}
+\left(C\frac{d^{2}}{dt^{2}}+B\frac{d}{dt}+A\right)u(t)=0,\label{eq:ode}
+\end{equation}
 
 \end_inset
 
@@ -344,7 +344,7 @@ C & =\left(\begin{array}{ccccc}
 \end_inset
 
 Now write 
-\begin_inset Formula $u(t)=ve^{\sigma t}+\mathrm{complex\,conjugate}$
+\begin_inset Formula $u(t)=ve^{\sigma t}+v^{\star}e^{\sigma^{\star}t}$
 \end_inset
 
 , where
@@ -356,7 +356,28 @@ v & =v_{0}+v_{1/2}\sqrt{d}+v_{1}d\\
 
 \end_inset
 
-and solve for 
+and Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ode"
+
+\end_inset
+
+ becomes 
+\begin_inset Formula $\Re\left[\left(C\sigma^{2}+B\sigma+A\right)v\right]=0$
+\end_inset
+
+.
+ We replace this with the equation 
+\begin_inset Formula $\left(C\sigma^{2}+B\sigma+A\right)v=0$
+\end_inset
+
+ and solve order-by-order in 
+\begin_inset Formula $\sqrt{d}$
+\end_inset
+
+ for 
 \begin_inset Formula $v$
 \end_inset
 
@@ -364,12 +385,124 @@ and solve for
 \begin_inset Formula $\sigma$
 \end_inset
 
- order-by-order in 
-\begin_inset Formula $\sqrt{d}$
+.
+ If a lasing mode, given by the coefficients 
+\begin_inset Formula $a_{\pm},\omega_{1}$
+\end_inset
+
+, has only solutions with 
+\begin_inset Formula $\sigma<0$
+\end_inset
+
+, then it must be stable.
+ On the other hand, if at least one solution has 
+\begin_inset Formula $\sigma>0$
+\end_inset
+
+, then the lasing solution is unstable.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Zeroth order
+\end_layout
+
+\begin_layout Standard
+The zeroth order equation is 
+\begin_inset Formula $\left(C\sigma_{0}^{2}+B_{0}\sigma_{0}+A_{0}\right)v_{0}=0$
 \end_inset
 
 .
- 
+ First, write
+\begin_inset Formula 
+\[
+v_{0}=\left(\begin{array}{c}
+\Re\delE_{0}\\
+\Im\delE_{0}\\
+\Re\delP_{0}\\
+\Im\delP_{0}\\
+\delD_{0}
+\end{array}\right).
+\]
+
+\end_inset
+
+The matrix equation then becomes
+\begin_inset Formula 
+\begin{align*}
+0 & =-\nabla\times\nabla\times\delE_{0}+(\omt+i\sigma_{0})^{2}(\varepsilon\delE_{0}+\delP_{0})\\
+0 & =\gamma_{\perp}\Dt\delE_{0}-(\omt+i\sigma_{0}-\omega_{a}+i\gamma_{\perp})\delP_{0}\\
+0 & =(\gamma_{\parallel}+\sigma_{0})\delD_{0}.
+\end{align*}
+
+\end_inset
+
+One possible solution is 
+\begin_inset Formula $\sigma_{0}=-\gamma_{\parallel}$
+\end_inset
+
+, with 
+\begin_inset Formula $\delD_{0}=\mathrm{anything}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delE_{0}=\delP_{0}=0$
+\end_inset
+
+.
+ We ignore this solution, because it is stable.
+ Next, we have the solutions 
+\begin_inset Formula $\sigma_{0}=i(\omt-\omega_{\mu}^{\mathrm{below}})$
+\end_inset
+
+, with 
+\begin_inset Formula $\delE_{0}=\vec{E}_{\mu}^{\mathrm{below}}$
+\end_inset
+
+, 
+\begin_inset Formula $\delP_{0}=\gamt\Dt\delE_{0}$
+\end_inset
+
+, and 
+\begin_inset Formula $\delD_{0}=0$
+\end_inset
+
+, where 
+\begin_inset Formula $\omega_{\mu}^{\mathrm{below}},\vec{E}_{\mu}^{\mathrm{below}}$
+\end_inset
+
+ are the passive SALT modes below threshold.
+ Here, 
+\begin_inset Formula $\Re\sigma_{0}<0$
+\end_inset
+
+, so these solutions are stable and can be ignored.
+ Finally, we have the manifold of degenerate solutions
+\begin_inset Formula 
+\begin{align*}
+\sigma_{0} & =0\\
+\delE_{0} & =b_{+}\Ep+b_{-}\Em,
+\end{align*}
+
+\end_inset
+
+again with 
+\begin_inset Formula $\delP_{0}=\gamt\Dt\delE_{0}$
+\end_inset
+
+, and 
+\begin_inset Formula $\delD_{0}=0$
+\end_inset
+
+.
+ Since the eigenvalues are zero, we cannot make any conclusions about the
+ stability, so we must go to higher order.
+ The coefficients 
+\begin_inset Formula $b_{\pm}$
+\end_inset
+
+ are undetermined at this order, but will be determined at higher orders,
+ similarly to those of degenerate perturbation theory in quantum mechanics.
 \end_layout
 
 \end_body
