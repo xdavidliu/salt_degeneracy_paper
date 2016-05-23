@@ -1,0 +1,1036 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\Cnv}{C_{n\mathrm{v}}}
+\renewcommand\vec{\mathbf}
+\newcommand{\Ee}{\vec{E}_\mathrm{even}}
+\newcommand{\Eo}{\vec{E}_\mathrm{odd}}
+\DeclareMathOperator{\floor}{floor}
+\newcommand{\Dt}{D_\mathrm{t}}
+\newcommand{\Ep}{\vec{E}_{+1}}
+\newcommand{\Em}{\vec{E}_{-1}}
+\newcommand{\Epm}{\vec{E}_{\pm1}}
+\newcommand{\Emp}{\vec{E}_{\mp1}}
+\newcommand{\omt}{\omega_\mathrm{t}}
+\newcommand{\gamt}{\gamma_\mathrm{t}}
+\renewcommand{\Im}{\mathrm{Im}}
+\renewcommand{\Re}{\mathrm{Re}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+Construction of chiral modes
+\end_layout
+
+\begin_layout Standard
+We first construct the clockwise and counterclockwise chiral modes.
+ Consider a partner 
+\begin_inset Formula $\Ee$
+\end_inset
+
+ of a 
+\begin_inset Formula $\Cnv$
+\end_inset
+
+ geometry that satisfies 
+\begin_inset Formula $\sigma\Ee=\Ee$
+\end_inset
+
+ for one of the mirror-plane operations 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ in the group.
+ Now define
+\begin_inset Formula 
+\[
+\vec{E}_{\pm\ell}=\frac{2}{n}\sum_{m=1}^{n}e^{\pm2\pi im\ell/n}R_{m/n}\Ee,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $R_{m/n}$
+\end_inset
+
+ is a counter-clockwise rotation about angle 
+\begin_inset Formula $2\pi m/n$
+\end_inset
+
+, and
+\begin_inset Formula 
+\[
+\ell=1,2\ldots\floor\left(\frac{n-1}{2}\right).
+\]
+
+\end_inset
+
+ From the relation (presented without proof)
+\begin_inset Formula 
+\[
+\sigma R_{m/n}\Ee=R_{1-m/n}\Ee,
+\]
+
+\end_inset
+
+we have the relation 
+\begin_inset Formula $\sigma\vec{E}_{+\ell}=\vec{E}_{-\ell}$
+\end_inset
+
+.
+ The chiral modes are easily seen to satisfy the property
+\begin_inset Formula 
+\[
+R_{1/n}\vec{E}_{\pm\ell}=e^{\mp2\pi i\ell/n}\vec{E}_{\pm}.
+\]
+
+\end_inset
+
+For 
+\begin_inset Formula $\Cnv$
+\end_inset
+
+, there are 
+\begin_inset Formula $\floor(\frac{n-1}{2})$
+\end_inset
+
+ 2d irreps.
+ These 2d irreps will be separated in frequency.
+ From each of these 2d irreps, we can further construct 
+\begin_inset Formula $\floor(\frac{n-1}{2})$
+\end_inset
+
+ pairs of chiral modes, all with the same frequency.
+ In principle, these chiral modes all are possible candidates for lasing.
+\end_layout
+
+\begin_layout Standard
+Note further that 
+\begin_inset Formula $\vec{E}_{\pm\ell}$
+\end_inset
+
+ modes with 
+\begin_inset Formula $\ell>1$
+\end_inset
+
+ can be constructed from linear combinations of 
+\begin_inset Formula $\Epm$
+\end_inset
+
+.
+ This may seem incorrect, because in 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{E}_{\pm\ell}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Epm$
+\end_inset
+
+ belong to different irreps.
+ However, in 
+\begin_inset Formula $\Cnv$
+\end_inset
+
+, they are in the same 2d irrep, so linear combinations of one pair can
+ be used to construct the other pair.
+\end_layout
+
+\begin_layout Subsection*
+Construction of standing modes
+\end_layout
+
+\begin_layout Standard
+From above, we have
+\begin_inset Formula 
+\[
+\frac{\Ep+\Em}{2}=\frac{2}{n}\sum_{m=1}^{n}\cos\frac{2\pi m}{n}R_{m/n}\Ee=\Ee.
+\]
+
+\end_inset
+
+The last equality is non-trivial and presented without proof.
+ We can also define the odd partner
+\begin_inset Formula 
+\[
+\Eo=\frac{\Ep-\Em}{2i}.
+\]
+
+\end_inset
+
+It can be shown that 
+\begin_inset Formula $\sigma\Eo=-\Eo$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ geometries
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ geometries, there are only 1d irreps, not 2d.
+ However, because of reciprocity in Maxwell's equations, the 1d irreps still
+ come in 
+\begin_inset Formula $\floor(\frac{n-1}{2})$
+\end_inset
+
+ degenerate pairs, transforming like the 
+\begin_inset Formula $E_{\pm\ell}$
+\end_inset
+
+ defined above.
+ However, unlike the case above, 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ does not take a chiral mode to one of the opposite chirality.
+\end_layout
+
+\begin_layout Subsection*
+Computation of allowed lasing modes
+\end_layout
+
+\begin_layout Standard
+We begin with the SALT equation, with the small parameter 
+\begin_inset Formula $d$
+\end_inset
+
+ indicating the relative pump strength above threshold 
+\begin_inset Formula $\Dt$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\nabla\times\nabla\times\vec{E}=\omega^{2}\left[\varepsilon+\frac{\Dt(1+d)\gamma}{1+\left|\vec{E}\right|^{2}}\right]\vec{E},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\gamma=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
+\end_inset
+
+.
+ Write the solutions to lowest order in 
+\begin_inset Formula $d$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\vec{E} & =\sqrt{d}\left(a_{+}\Ep+a_{-}\Em\right)\hfill\\
+\omega & =\omt+\omega_{1}d.
+\end{align*}
+
+\end_inset
+
+Insert these solutions, multiply both sides by 
+\begin_inset Formula $\Epm$
+\end_inset
+
+, and integrate.
+ We have the two equations (from 
+\begin_inset Formula $\Epm$
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{align}
+0 & =\int\Epm\cdot\left(a_{+}\Ep+a_{-}\Em\right)\times\nonumber \\
+ & \left[\omega_{1}\frac{\partial}{\partial\omt}\omt^{2}(\varepsilon+\Dt\gamt)+\omt^{2}\Dt\gamt\left(1-\left|a_{+}\Ep+a_{-}\Em\right|^{2}\right)\right].\label{eq:matrix}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We now solve for the unknowns 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{\pm}$
+\end_inset
+
+, beginning by calculating the integrals.
+ We assume only 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry in 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ and 
+\begin_inset Formula $\Dt$
+\end_inset
+
+, only adding mirror symmetry when we cannot proceed any further.
+ First, we have
+\begin_inset Formula 
+\[
+\int\Dt\Ep\cdot\Ep=\int\Dt\Ep\cdot(\Ep^{\star})^{\star}=0,
+\]
+
+\end_inset
+
+since 
+\begin_inset Formula $\Ep^{\star}$
+\end_inset
+
+ transforms like 
+\begin_inset Formula $\Em$
+\end_inset
+
+.
+ Similarly, 
+\begin_inset Formula $\int\Dt\Em\cdot\Em$
+\end_inset
+
+ also vanishes.
+ In addition, 
+\begin_inset Formula $\left|\Epm\right|$
+\end_inset
+
+ has 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry, so integrals like 
+\begin_inset Formula $\int\Dt\left|\Ep\right|^{2}\Ep\cdot\Ep$
+\end_inset
+
+ and 
+\begin_inset Formula $\int\Dt\left|\Ep\right|^{2}\Em\cdot\Em$
+\end_inset
+
+ also vanish.
+ Finally, there are vanishing integrals of the form 
+\begin_inset Formula $\int\Dt(\Ep^{\star}\cdot\Em)\Ep\cdot\Em$
+\end_inset
+
+, for the same reason.
+\end_layout
+
+\begin_layout Standard
+We define the non-vanishing integrals as
+\begin_inset Formula 
+\begin{align*}
+G_{D} & =\int\Dt\Ep\cdot\Em\\
+G_{\varepsilon} & =\int\varepsilon\Ep\cdot\Em\\
+I_{\pm} & =\int\Dt\left|\Epm\right|^{2}\Ep\cdot\Em.\\
+J_{\pm} & =\int\Dt(\Epm^{\star}\cdot\Emp)\Epm\cdot\Epm.
+\end{align*}
+
+\end_inset
+
+Interestingly, there is an integral that is non-vanishing only for 
+\begin_inset Formula $C_{4}$
+\end_inset
+
+ (but not 
+\begin_inset Formula $C_{8}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{12}$
+\end_inset
+
+, etc.):
+\begin_inset Formula 
+\[
+K_{\pm}=\int\Dt(\Emp^{\star}\cdot\Epm)\Epm\cdot\Epm.
+\]
+
+\end_inset
+
+With these definitions, the first equation in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:matrix"
+
+\end_inset
+
+ becomes
+\begin_inset Formula 
+\begin{equation}
+0=a_{-}\left(\omega_{1}H+G_{D}\right)-a_{-}\left|a_{+}\right|^{2}\left(I_{+}+J_{+}\right)-a_{-}\left|a_{-}\right|^{2}I_{-}-a_{+}^{2}a_{-}^{\star}K_{+}\label{eq:matrix_further}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+H=\left(\omega_{t}^{2}\gamt\right)^{-1}\frac{\partial}{\partial\omt}\omt^{2}\left(G_{\varepsilon}+G_{D}\gamt\right).
+\]
+
+\end_inset
+
+The second equation in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:matrix"
+
+\end_inset
+
+ is the same except with plus and minus symbols exchanged.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Circulating lasing solutions with 
+\begin_inset Formula $\ell=1$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+One set of solutions has 
+\begin_inset Formula $a_{+}=0$
+\end_inset
+
+.
+ Inserting this into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:matrix_further"
+
+\end_inset
+
+, we obtain
+\begin_inset Formula 
+\[
+\left|a_{-}\right|^{2}=\frac{\omega_{1}H+G_{D}}{I_{-}}.
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\left|a_{-}\right|$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ are real, we have
+\begin_inset Formula 
+\begin{equation}
+\omega_{1}=-\frac{\Im\left(G_{D}/I_{-}\right)}{\Im\left(H/I_{-}\right)}.\label{eq:circulating_frequency}
+\end{equation}
+
+\end_inset
+
+This gives a lasing mode 
+\begin_inset Formula $\vec{E}\propto\Em$
+\end_inset
+
+.
+ The fact that 
+\begin_inset Formula $\left|a_{-}\right|^{2}$
+\end_inset
+
+ must be positive for 
+\begin_inset Formula $a_{+}=0$
+\end_inset
+
+ also gives a cutoff condition for lasing
+\begin_inset Formula 
+\begin{equation}
+\Re(G_{D}/I_{-})-\frac{\Im\left(G_{D}/I_{-}\right)}{\Im\left(H/I_{-}\right)}\Re(H/I_{-})>0.\label{eq:cutoff}
+\end{equation}
+
+\end_inset
+
+For 
+\begin_inset Formula $a_{-}=0$
+\end_inset
+
+, there is another lasing mode 
+\begin_inset Formula $\vec{E}\propto\Ep$
+\end_inset
+
+, with a different amplitude and different frequency obtained by interchanging
+ plus and minus symbols.
+ Since 
+\begin_inset Formula $I_{+}\neq I_{-}$
+\end_inset
+
+ for 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+, and the frequency in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circulating_frequency"
+
+\end_inset
+
+ depends on the sign of 
+\begin_inset Formula $I_{\pm}$
+\end_inset
+
+, this suggests that the two lasing modes split in frequency.
+ This may seem incorrect, because we expect there to still be a degeneracy,
+ since 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ and reciprocity are both preserved above threshold.
+ To resolve this, we note that from stability analysis, at most one of the
+ modes 
+\begin_inset Formula $\vec{E}\propto\Ep$
+\end_inset
+
+ or 
+\begin_inset Formula $\vec{E}\propto\Em$
+\end_inset
+
+ will actually lase.
+ Suppose the mode that lases is
+\begin_inset Formula 
+\begin{align*}
+\vec{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{I_{+}}}\Ep\\
+\omega_{1} & =-\frac{\Im\left(G_{D}/I_{+}\right)}{\Im\left(H/I_{+}\right)}.
+\end{align*}
+
+\end_inset
+
+There will then be a degenerate mode that is approximately 
+\begin_inset Formula $\Em$
+\end_inset
+
+, but with the 
+\emph on
+same
+\emph default
+ 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ as the 
+\begin_inset Formula $\Ep$
+\end_inset
+
+ lasing mode here, and 
+\emph on
+not 
+\emph default
+that of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circulating_frequency"
+
+\end_inset
+
+.
+ This is because unlike the 
+\begin_inset Formula $a_{+}=0$
+\end_inset
+
+ lasing mode, the 
+\begin_inset Formula $\Em$
+\end_inset
+
+ degenerate partner of the 
+\begin_inset Formula $a_{-}=0$
+\end_inset
+
+ lasing mode does not itself have to satisfy the SALT equation.
+\end_layout
+
+\begin_layout Subsubsection*
+Lasing solutions with both 
+\begin_inset Formula $a_{\pm}\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Having considered the separate cases 
+\begin_inset Formula $a_{+}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{-}=0$
+\end_inset
+
+, we now look for solutions where both 
+\begin_inset Formula $a_{\pm}$
+\end_inset
+
+ are nonzero.
+ Write 
+\begin_inset Formula $a_{\pm}=\left|a_{\pm}\right|e^{i\theta_{\pm}}$
+\end_inset
+
+ and divide the first equation in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:matrix_further"
+
+\end_inset
+
+ by 
+\begin_inset Formula $a_{-}$
+\end_inset
+
+, and obtain
+\begin_inset Formula 
+\[
+\left|a_{-}\right|^{2}I_{-}+\left|a_{+}\right|^{2}\left(I_{+}+J_{+}+e^{2i(\theta_{+}-\theta_{-})}K_{+}\right)=\omega_{1}H+G_{D}.
+\]
+
+\end_inset
+
+As always, a second equation can be obtained by switching the plus and minus
+ symbols.
+ Combining the two into a matrix equation, we have
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+I_{+}+J_{+}+e^{2i(\theta_{+}-\theta_{-})}K_{+} & I_{-}\\
+I_{+} & I_{-}+J_{-}+e^{2i(\theta_{-}-\theta_{+})}K_{-}
+\end{array}\right)\left(\begin{array}{c}
+\left|a_{+}\right|^{2}\\
+\left|a_{-}\right|^{2}
+\end{array}\right)=\left(\omega_{1}H+G_{D}\right)\left(\begin{array}{c}
+1\\
+1
+\end{array}\right).
+\]
+
+\end_inset
+
+Inverting the matrix, we have 
+\begin_inset Formula 
+\[
+\left|a_{\pm}\right|^{2}=(\omega_{1}H+G_{D})T_{\pm},
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+T_{\pm}=\frac{J_{\mp}+e^{2i(\theta_{\mp}-\theta_{\pm})}K_{\mp}}{\left(I_{+}+J_{+}+e^{2i(\theta_{+}-\theta_{-})}K_{+}\right)\left(I_{-}+J_{-}+e^{2i(\theta_{-}-\theta_{+})}K_{-}\right)-I_{+}I_{-}}.\label{eq:T}
+\end{equation}
+
+\end_inset
+
+Again, since 
+\begin_inset Formula $\left|a_{\pm}\right|^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ are real, we have
+\begin_inset Formula 
+\begin{equation}
+\omega_{1}=-\frac{\Im\left(G_{D}T_{\pm}\right)}{\Im\left(HT_{\pm}\right)}.\label{eq:omega1}
+\end{equation}
+
+\end_inset
+
+Since there is only one 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+, this equation must hold for both signs, i.e.
+ 
+\begin_inset Formula 
+\begin{equation}
+\frac{\Im\left(G_{D}T_{+}\right)}{\Im\left(HT_{+}\right)}=\frac{\Im\left(G_{D}T_{-}\right)}{\Im\left(HT_{-}\right)}.\label{eq:requirement}
+\end{equation}
+
+\end_inset
+
+Since the amplitudes must be positive, there is also the cutoff condition
+\begin_inset Formula 
+\[
+\Re(G_{D}T_{+})-\frac{\Im\left(G_{D}T_{+}\right)}{\Im\left(HT_{+}\right)}\Re(HT_{+})>0.
+\]
+
+\end_inset
+
+We now look at four cases: 
+\begin_inset Formula $C_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{4\mathrm{v}}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+, and 
+\begin_inset Formula $\Cnv$
+\end_inset
+
+ (where 
+\begin_inset Formula $n\neq4$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Paragraph
+The 
+\begin_inset Formula $C_{4}$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+In this case, there are no further simplifications to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:requirement"
+
+\end_inset
+
+, and the relative phase 
+\begin_inset Formula $\theta_{+}-\theta_{-}$
+\end_inset
+
+ must satisfy that equation as-is.
+ It is unknown whether there is always a solution, or whether it ever has
+ a solution at all.
+\end_layout
+
+\begin_layout Paragraph
+The 
+\begin_inset Formula $C_{4\mathrm{v}}$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+In this case, we have 
+\begin_inset Formula $J_{-}=J_{+}=J$
+\end_inset
+
+ and 
+\begin_inset Formula $K_{-}=K_{+}=K$
+\end_inset
+
+.
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:T"
+
+\end_inset
+
+ then becomes
+\begin_inset Formula 
+\[
+T_{\pm}=\frac{J+e^{2i(\theta_{\mp}-\theta_{\pm})}K}{\left(I+J+e^{2i(\theta_{+}-\theta_{-})}K\right)\left(I+J+e^{2i(\theta_{-}-\theta_{+})}K\right)-I^{2}}.
+\]
+
+\end_inset
+
+Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:requirement"
+
+\end_inset
+
+ then results in
+\begin_inset Formula 
+\[
+e^{2i(\theta_{+}-\theta_{-})}=\pm1,
+\]
+
+\end_inset
+
+giving the usual standing lasing modes 
+\begin_inset Formula $\vec{E}\propto\Ep\pm\Em$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{E}\propto\Ep\pm i\Em$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+The 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ case for all 
+\begin_inset Formula $n\neq4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case, we have 
+\begin_inset Formula $K_{\pm}=0$
+\end_inset
+
+, and Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:T"
+
+\end_inset
+
+ becomes
+\begin_inset Formula 
+\[
+T_{\pm}=\frac{J_{\mp}}{\left(I_{+}+J_{+}\right)\left(I_{-}+J_{-}\right)-I_{+}I_{-}}.
+\]
+
+\end_inset
+
+Now, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:requirement"
+
+\end_inset
+
+ has no free parameters and is in general not satisfied, meaning there is
+ no solution.
+\end_layout
+
+\begin_layout Paragraph
+The 
+\begin_inset Formula $\Cnv$
+\end_inset
+
+ case for all 
+\begin_inset Formula $n\neq4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case, we have 
+\begin_inset Formula $J_{-}=J_{+}=J$
+\end_inset
+
+ and 
+\begin_inset Formula $K_{-}=K_{+}=0$
+\end_inset
+
+, which gives 
+\begin_inset Formula $T_{+}=T_{-}$
+\end_inset
+
+.
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:requirement"
+
+\end_inset
+
+ is then automatically satisfied for all 
+\begin_inset Formula $\theta_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{-}$
+\end_inset
+
+, and we have
+\begin_inset Formula 
+\[
+\left|a_{\pm}\right|^{2}=\frac{J\left(\omega_{1}H+G_{D}\right)}{\left(I+J\right)^{2}-I^{2}}=\frac{\omega_{1}H+G_{D}}{J+2I}.
+\]
+
+\end_inset
+
+The rotations 
+\begin_inset Formula $C^{m}\Ee$
+\end_inset
+
+ and 
+\begin_inset Formula $C^{m}\Eo$
+\end_inset
+
+ should come from this case, as well as the higher-chirality circulating
+ modes 
+\begin_inset Formula $\vec{E}_{\pm\ell}$
+\end_inset
+
+ with 
+\begin_inset Formula $\ell>1$
+\end_inset
+
+.
+ However, now there is no constraint on 
+\begin_inset Formula $\theta_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{-}$
+\end_inset
+
+ at all.
+ For the 
+\begin_inset Formula $C_{\infty\mathrm{v}}$
+\end_inset
+
+ case, this works because we have 
+\begin_inset Formula $\Epm=e^{\pm i\ell\phi}$
+\end_inset
+
+, and
+\begin_inset Formula 
+\[
+e^{i\theta_{+}}e^{i\ell\phi}+e^{i\theta_{-}}e^{-i\ell\phi}\propto\cos\left(\ell\phi+\frac{\theta_{+}-\theta_{-}}{2}\right),
+\]
+
+\end_inset
+
+which give a continuum of standing lasing modes.
+ However, for 
+\begin_inset Formula $\Cnv$
+\end_inset
+
+ with finite 
+\begin_inset Formula $n$
+\end_inset
+
+, this phase freedom seems unphysical and indicates there may be an additional
+ relation that must be satisfied to fix the phase to allow only the discrete
+ rotations 
+\begin_inset Formula $C^{m}\Ee$
+\end_inset
+
+ and 
+\begin_inset Formula $C^{m}\Eo$
+\end_inset
+
+ and circulating modes 
+\begin_inset Formula $\vec{E}_{\pm\ell}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
