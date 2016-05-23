@@ -274,7 +274,7 @@ where
 :
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\gamt^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{+}\Ep+a_{-}\Em\right)\\
+\vec{E} & =\left|\gamt\right|^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{+}\Ep+a_{-}\Em\right)\\
 \omega & =\omt+\omega_{1}d,
 \end{align*}
 
@@ -469,7 +469,7 @@ Using the fact that
  are real, we obtain the circulating lasing solutions
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\gamt^{-1}\sqrt{\left(\omega_{1}H+G_{D}\right)\gamma_{\parallel}d/I_{\mp}}\Epm\\
+\vec{E} & =\left|\gamt\right|^{-1}\sqrt{\left(\omega_{1}H+G_{D}\right)\gamma_{\parallel}d/I_{\mp}}\Epm\\
 \omega & =\omt-\frac{\Im\left(G_{D}/I_{\mp}\right)d}{\Im\left(H/I_{\mp}\right)}
 \end{align*}
 
@@ -717,7 +717,7 @@ reference "eq:omega1"
 , and giving the standing lasing modes
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\gamt^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J+K}}\left(\Ep\pm\Em\right)\\
+\vec{E} & =\left|\gamt\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J+K}}\left(\Ep\pm\Em\right)\\
 \omega & =\omt-\frac{\Im\left[G_{D}/(2I+J+K)\right]d}{\Im\left[H/(2I+J+K)\right]}
 \end{align*}
 
@@ -726,7 +726,7 @@ reference "eq:omega1"
 and
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\gamt^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J-K}}\left(\Ep\pm i\Em\right)\\
+\vec{E} & =\left|\gamt\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J-K}}\left(\Ep\pm i\Em\right)\\
 \omega & =\omt-\frac{\Im\left[G_{D}/(2I+J-K)\right]d}{\Im\left[H/(2I+J-K)\right]}
 \end{align*}
 
@@ -822,7 +822,7 @@ reference "eq:omega1"
 We then obtain the lasing solutions
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\gamt^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{J+2I}}\left(\Ep+e^{i\theta}\Em\right)\\
+\vec{E} & =\left|\gamt\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{J+2I}}\left(\Ep+e^{i\theta}\Em\right)\\
 \omega & =\omt-\frac{\Im\left[G/(J+2I)\right]d}{\Im\left[H/(J+2I)\right]},
 \end{align*}
 

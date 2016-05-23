@@ -199,7 +199,7 @@ where
 , the SALT solution is 
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\gamt^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{+}\Ep+a_{-}\Em\right)\\
+\vec{E} & =\left|\gamt\right|^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{+}\Ep+a_{-}\Em\right)\\
 \omega & =\omt+\omega_{1}d\\
 \vec{P} & =\Dt\sqrt{\gamma_{\parallel}d}\left(a_{+}\Ep+a_{-}\Em\right)\\
 D & =\Dt\left(1+d-d\left|a_{+}\Ep+a_{-}\Em\right|^{2}\right),
@@ -550,11 +550,11 @@ To order
 Now define the vectors
 \begin_inset Formula 
 \[
-(b_{+}v_{+}+b_{-}v_{-})w_{\pm}=\left(\begin{array}{c}
+w_{\pm}=\left(\begin{array}{c}
 \Re\Epm\\
 -\Im\Epm\\
-\omt^{2}\Re\left(\Epm\gamt/\gamma_{\perp}\right)\\
--\omt^{2}\Im\left(\Epm\gamt/\gamma_{\perp}\right)\\
+\omt^{2}\Re\left(\Epm\gamt\right)/\gamma_{\perp}\\
+-\omt^{2}\Im\left(\Epm\gamt\right)/\gamma_{\perp}\\
 0
 \end{array}\right).
 \]
@@ -624,10 +624,10 @@ In general, the matrix is nonsingular, so we conclude that
 ), which is
 \begin_inset Formula 
 \begin{align*}
-g_{\pm} & =-\Im\vec{P}\cdot\Re\Epm+\Re\vec{P}\cdot\Im\Epm+\Dt\left[\Im\vec{E}\cdot\Re(\gamt\Epm)-\Re\vec{E}\cdot\Im(\gamt\Epm)\right]\\
- & =-\Im\left(\Epm^{\star}\cdot\vec{P}\right)-\Dt\Im\left[\vec{E}^{\star}\cdot\gamt\Epm\right]\\
- & =-2\Dt\Im\gamt\Re(\Epm^{\star}\cdot\vec{E})\\
- & =2\Dt\left|\gamt\right|^{2}\Re\left[\Epm^{\star}\cdot(a_{+}\Ep+a_{-}\Em)\right].
+g_{\pm} & =\left(-\Im\vec{P}\cdot\Re\Epm+\Re\vec{P}\cdot\Im\Epm\right)/\sqrt{d}+\Dt\left[\Im\vec{E}\cdot\Re(\gamt\Epm)-\Re\vec{E}\cdot\Im(\gamt\Epm)\right]/\sqrt{d}\\
+ & =-\Im\left(\Epm^{\star}\cdot\vec{P}\right)/\sqrt{d}-\Dt\Im\left[\vec{E}^{\star}\cdot\gamt\Epm\right]/\sqrt{d}\\
+ & =-2\Dt\Im\gamt\Re(\Epm^{\star}\cdot\vec{E})/\sqrt{d}\\
+ & =2\Dt\left|\gamt\right|\sqrt{\gamma_{\parallel}}\Re\left[\Epm^{\star}\cdot(a_{+}\Ep+a_{-}\Em)\right].
 \end{align*}
 
 \end_inset
@@ -676,7 +676,7 @@ The vector
 \begin_inset Formula $v_{\pm}$
 \end_inset
 
- satisfy that property.
+ satisfies that property.
  However, if 
 \begin_inset Formula $v_{1/2}$
 \end_inset
@@ -699,7 +699,51 @@ The vector
 \end_inset
 
 .
- 
+\end_layout
+
+\begin_layout Standard
+Since we have found that 
+\begin_inset Formula $\sigma_{1/2}=0$
+\end_inset
+
+, we must move to the next order.
+\end_layout
+
+\begin_layout Subsubsection*
+First order
+\end_layout
+
+\begin_layout Standard
+To order 
+\begin_inset Formula $d$
+\end_inset
+
+, the stability eigenvalue problem for the 
+\begin_inset Formula $\sigma_{0}=0$
+\end_inset
+
+ solutions is
+\begin_inset Formula 
+\[
+(B_{0}\sigma_{1}+A_{1})v_{0}+A_{1/2}v_{1/2}+A_{0}v_{1}=0.
+\]
+
+\end_inset
+
+We first compute the last (and only nonzero) element of 
+\begin_inset Formula $A_{1/2}^{T}w_{\pm}$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{align*}
+h_{\pm} & =\omt^{2}\left[\Re\vec{E}\cdot\Re\left(\Epm\gamt\right)-\Im\vec{E}\cdot\Im\left(\Epm\gamt\right)\right]/\sqrt{d}\\
+ & =\omt^{2}\left|\gamt\right|^{-1}\sqrt{\gamma_{\parallel}}\Re\left[(a_{+}\Ep+a_{-}\Em)\cdot\Epm\gamt\right]
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
