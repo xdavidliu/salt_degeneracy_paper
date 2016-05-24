@@ -4,23 +4,10 @@
 \begin_header
 \textclass article
 \begin_preamble
-\newcommand{\Cnv}{C_{n\mathrm{v}}}
 \renewcommand\vec{\mathbf}
-\newcommand{\Ee}{\vec{E}_\mathrm{even}}
-\newcommand{\Eo}{\vec{E}_\mathrm{odd}}
 \DeclareMathOperator{\floor}{floor}
-\newcommand{\Dt}{D_\mathrm{t}}
-\newcommand{\Ep}{\vec{E}_{+}}
-\newcommand{\Em}{\vec{E}_{-}}
-\newcommand{\Epm}{\vec{E}_{\pm}}
-\newcommand{\Emp}{\vec{E}_{\mp}}
-\newcommand{\omt}{\omega_\mathrm{t}}
-\newcommand{\gamt}{\gamma_\mathrm{t}}
 \renewcommand{\Im}{\mathrm{Im}}
 \renewcommand{\Re}{\mathrm{Re}}
-\newcommand{\delE}{\delta \vec{E}}
-\newcommand{\delP}{\delta \vec{P}}
-\newcommand{\delD}{\delta D}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -113,7 +100,7 @@ i\dot{\vec{P}}^{+} & =(\omega_{a}-i\gamma_{\perp})\dot{\vec{P}}+\gamma_{\perp}\v
 \end_inset
 
 Let 
-\begin_inset Formula $D_{0}=\Dt(1+d)$
+\begin_inset Formula $D_{0}= D_\mathrm{t}(1+d)$
 \end_inset
 
 , with 
@@ -121,7 +108,7 @@ Let
 \end_inset
 
  and 
-\begin_inset Formula $\Dt(\vec{x})$
+\begin_inset Formula $ D_\mathrm{t}(\vec{x})$
 \end_inset
 
  having either 
@@ -129,7 +116,7 @@ Let
 \end_inset
 
  or 
-\begin_inset Formula $\Cnv$
+\begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
  symmetry and 
@@ -137,7 +124,7 @@ Let
 \end_inset
 
  being the first threshold for a degenerate pair 
-\begin_inset Formula $\Epm(\vec{x})$
+\begin_inset Formula $\vec{E}_{\pm}(\vec{x})$
 \end_inset
 
  in the 
@@ -153,7 +140,7 @@ Let
 \end_inset
 
  2d irrep in 
-\begin_inset Formula $\Cnv$
+\begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
 .
@@ -172,9 +159,9 @@ Let
  about steady-state SALT solutions: 
 \begin_inset Formula 
 \begin{align}
-\vec{E}^{+}(\vec{x},t) & =\left[\vec{E}(\vec{x})+\delE(\vec{x},t)\right]e^{-i\omega t}\nonumber \\
-\vec{P}^{+}(\vec{x},t) & =\left[\vec{P}(\vec{x})+\delP(\vec{x},t)\right]e^{-i\omega t}\label{eq:perturbations}\\
-\dot{D}_{\mathrm{MB}}(\vec{x},t) & =D(\vec{x})+\delD(\vec{x},t).\nonumber 
+\vec{E}^{+}(\vec{x},t) & =\left[\vec{E}(\vec{x})+\delta \vec{E}(\vec{x},t)\right]e^{-i\omega t}\nonumber \\
+\vec{P}^{+}(\vec{x},t) & =\left[\vec{P}(\vec{x})+\delta \vec{P}(\vec{x},t)\right]e^{-i\omega t}\label{eq:perturbations}\\
+\dot{D}_{\mathrm{MB}}(\vec{x},t) & =D(\vec{x})+\delta \vec{D}(\vec{x},t).\nonumber 
 \end{align}
 
 \end_inset
@@ -199,16 +186,16 @@ where
 , the SALT solution is 
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\left|\gamt\right|^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{+}\Ep+a_{-}\Em\right)\\
-\omega & =\omt+\omega_{1}d\\
-\vec{P} & =\Dt\sqrt{\gamma_{\parallel}d}\left(a_{+}\Ep+a_{-}\Em\right)\\
-D & =\Dt\left(1+d-d\left|a_{+}\Ep+a_{-}\Em\right|^{2}\right),
+\vec{E} & =\left|\gamma_\mathrm{t}\right|^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right)\\
+\omega & =\omega_\mathrm{t}+\omega_{1}d\\
+\vec{P} & = D_\mathrm{t}\sqrt{\gamma_{\parallel}d}\left(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right)\\
+D & = D_\mathrm{t}\left(1+d-d\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|^{2}\right),
 \end{align*}
 
 \end_inset
 
 where 
-\begin_inset Formula $\omt$
+\begin_inset Formula $\omega_\mathrm{t}$
 \end_inset
 
  is the threshold frequency.
@@ -232,9 +219,9 @@ reference "eq:perturbations"
  We end up with
 \begin_inset Formula 
 \begin{align}
-0 & =\nabla\times\nabla\times\delE+\left(\frac{d}{dt}-i\omega\right)^{2}(\varepsilon\delE+\delP)\nonumber \\
-i\delta\dot{\vec{P}} & =(\omega_{a}-\omega-i\gamma_{\perp})\delP+\gamma_{\perp}(D\delE+\vec{E}\delD)\label{eq:linearize}\\
-\delta\dot{\vec{D}} & =-\gamma_{\parallel}\delD+\Im(\vec{P}\cdot\delE^{\star}+\vec{E}^{\star}\cdot\delP).\nonumber 
+0 & =\nabla\times\nabla\times\delta \vec{E}+\left(\frac{d}{dt}-i\omega\right)^{2}(\varepsilon\delta \vec{E}+\delta \vec{P})\nonumber \\
+i\delta\dot{\vec{P}} & =(\omega_{a}-\omega-i\gamma_{\perp})\delta \vec{P}+\gamma_{\perp}(D\delta \vec{E}+\vec{E}\delta \vec{D})\label{eq:linearize}\\
+\delta\dot{\vec{D}} & =-\gamma_{\parallel}\delta \vec{D}+\Im(\vec{P}\cdot\delta \vec{E}^{\star}+\vec{E}^{\star}\cdot\delta \vec{P}).\nonumber 
 \end{align}
 
 \end_inset
@@ -276,11 +263,11 @@ where
 \begin_inset Formula 
 \[
 u(t)=\left(\begin{array}{c}
-\Re\delE\\
-\Im\delE\\
-\Re\delP\\
-\Im\delP\\
-\delD
+\Re\delta \vec{E}\\
+\Im\delta \vec{E}\\
+\Re\delta \vec{P}\\
+\Im\delta \vec{P}\\
+\delta \vec{D}
 \end{array}\right)
 \]
 
@@ -298,10 +285,10 @@ and the matrices are
 \begin_inset Formula 
 \begin{align*}
 A_{0} & =\left(\begin{array}{ccccc}
-\omt^{2}\Re\varepsilon-\nabla\times\nabla\times & -\omt^{2}\Im\varepsilon & \omt^{2} & 0 & 0\\
-\omt^{2}\Im\varepsilon & \omt^{2}\Re\varepsilon-\nabla\times\nabla\times & 0 & \omt^{2} & 0\\
-\gamma_{\perp}\Dt & 0 & \omega_{a}-\omt & \gamma_{\perp} & 0\\
-0 & \gamma_{\perp}\Dt & -\gamma_{\perp} & \omega_{a}-\omt & 0\\
+\omega_\mathrm{t}^{2}\Re\varepsilon-\nabla\times\nabla\times & -\omega_\mathrm{t}^{2}\Im\varepsilon & \omega_\mathrm{t}^{2} & 0 & 0\\
+\omega_\mathrm{t}^{2}\Im\varepsilon & \omega_\mathrm{t}^{2}\Re\varepsilon-\nabla\times\nabla\times & 0 & \omega_\mathrm{t}^{2} & 0\\
+\gamma_{\perp} D_\mathrm{t} & 0 & \omega_{a}-\omega_\mathrm{t} & \gamma_{\perp} & 0\\
+0 & \gamma_{\perp} D_\mathrm{t} & -\gamma_{\perp} & \omega_{a}-\omega_\mathrm{t} & 0\\
 0 & 0 & 0 & 0 & \gamma_{\parallel}
 \end{array}\right)\\
 A_{1/2} & =\left(\begin{array}{ccccc}
@@ -312,15 +299,15 @@ A_{1/2} & =\left(\begin{array}{ccccc}
 -\Im\vec{P} & \Re\vec{P} & \Im\vec{E} & -\Re\vec{E} & 0
 \end{array}\right)\frac{1}{\sqrt{d}}\\
 A_{1} & =\left(\begin{array}{ccccc}
-2\omt\omega_{1}\Re\varepsilon & -2\omt\omega_{1}\Im\varepsilon & 2\omt\omega_{1} & 0 & 0\\
-2\omt\omega_{1}\Im\varepsilon & 2\omt\omega_{1}\Re\varepsilon & 0 & 2\omt\omega_{1} & 0\\
-\gamma_{\perp}\Dt\left(1-\left|a_{+}\Ep+a_{-}\Em\right|^{2}\right) & 0 & -\omega_{1} & 0 & 0\\
-0 & \gamma_{\perp}\Dt\left(1-\left|a_{+}\Ep+a_{-}\Em\right|^{2}\right) & 0 & -\omega_{1} & 0\\
+2\omega_\mathrm{t}\omega_{1}\Re\varepsilon & -2\omega_\mathrm{t}\omega_{1}\Im\varepsilon & 2\omega_\mathrm{t}\omega_{1} & 0 & 0\\
+2\omega_\mathrm{t}\omega_{1}\Im\varepsilon & 2\omega_\mathrm{t}\omega_{1}\Re\varepsilon & 0 & 2\omega_\mathrm{t}\omega_{1} & 0\\
+\gamma_{\perp} D_\mathrm{t}\left(1-\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|^{2}\right) & 0 & -\omega_{1} & 0 & 0\\
+0 & \gamma_{\perp} D_\mathrm{t}\left(1-\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|^{2}\right) & 0 & -\omega_{1} & 0\\
 0 & 0 & 0 & 0 & 0
 \end{array}\right)\\
 B_{0} & =\left(\begin{array}{ccccc}
--2\omt\Im\varepsilon & -2\omt\Re\varepsilon & 0 & -2\omt & 0\\
-2\omt\Re\varepsilon & -2\omt\Im\varepsilon & 2\omt & 0 & 0\\
+-2\omega_\mathrm{t}\Im\varepsilon & -2\omega_\mathrm{t}\Re\varepsilon & 0 & -2\omega_\mathrm{t} & 0\\
+2\omega_\mathrm{t}\Re\varepsilon & -2\omega_\mathrm{t}\Im\varepsilon & 2\omega_\mathrm{t} & 0 & 0\\
 0 & 0 & 0 & 1 & 0\\
 0 & 0 & -1 & 0 & 0\\
 0 & 0 & 0 & 0 & 1
@@ -417,11 +404,11 @@ The zeroth order equation is
 \begin_inset Formula 
 \[
 x_{0}=\left(\begin{array}{c}
-\Re\delE_{0}\\
-\Im\delE_{0}\\
-\Re\delP_{0}\\
-\Im\delP_{0}\\
-\delD_{0}
+\Re\delta \vec{E}_{0}\\
+\Im\delta \vec{E}_{0}\\
+\Re\delta \vec{P}_{0}\\
+\Im\delta \vec{P}_{0}\\
+\delta \vec{D}_{0}
 \end{array}\right).
 \]
 
@@ -430,9 +417,9 @@ x_{0}=\left(\begin{array}{c}
 The matrix equation then becomes
 \begin_inset Formula 
 \begin{align*}
-0 & =-\nabla\times\nabla\times\delE_{0}+(\omt+i\sigma_{0})^{2}(\varepsilon\delE_{0}+\delP_{0})\\
-0 & =\gamma_{\perp}\Dt\delE_{0}-(\omt+i\sigma_{0}-\omega_{a}+i\gamma_{\perp})\delP_{0}\\
-0 & =(\gamma_{\parallel}+\sigma_{0})\delD_{0}.
+0 & =-\nabla\times\nabla\times\delta \vec{E}_{0}+(\omega_\mathrm{t}+i\sigma_{0})^{2}(\varepsilon\delta \vec{E}_{0}+\delta \vec{P}_{0})\\
+0 & =\gamma_{\perp} D_\mathrm{t}\delta \vec{E}_{0}-(\omega_\mathrm{t}+i\sigma_{0}-\omega_{a}+i\gamma_{\perp})\delta \vec{P}_{0}\\
+0 & =(\gamma_{\parallel}+\sigma_{0})\delta \vec{D}_{0}.
 \end{align*}
 
 \end_inset
@@ -442,29 +429,29 @@ One possible solution is
 \end_inset
 
 , with 
-\begin_inset Formula $\delD_{0}=\mathrm{anything}$
+\begin_inset Formula $\delta \vec{D}_{0}=\mathrm{anything}$
 \end_inset
 
  and 
-\begin_inset Formula $\delE_{0}=\delP_{0}=0$
+\begin_inset Formula $\delta \vec{E}_{0}=\delta \vec{P}_{0}=0$
 \end_inset
 
 .
  We ignore this solution, because it is stable.
  Next, we have the solutions 
-\begin_inset Formula $\sigma_{0}=i(\omt-\omega_{\mu}^{\mathrm{below}})$
+\begin_inset Formula $\sigma_{0}=i(\omega_\mathrm{t}-\omega_{\mu}^{\mathrm{below}})$
 \end_inset
 
 , with 
-\begin_inset Formula $\delE_{0}=\vec{E}_{\mu}^{\mathrm{below}}$
+\begin_inset Formula $\delta \vec{E}_{0}=\vec{E}_{\mu}^{\mathrm{below}}$
 \end_inset
 
 , 
-\begin_inset Formula $\delP_{0}=\gamt\Dt\delE_{0}$
+\begin_inset Formula $\delta \vec{P}_{0}=\gamma_\mathrm{t} D_\mathrm{t}\delta \vec{E}_{0}$
 \end_inset
 
 , and 
-\begin_inset Formula $\delD_{0}=0$
+\begin_inset Formula $\delta \vec{D}_{0}=0$
 \end_inset
 
 , where 
@@ -478,7 +465,7 @@ One possible solution is
 
 , so these solutions are stable and can be ignored.
  Finally, we have the degenerate solutions 
-\begin_inset Formula $\delE_{0}=\Epm$
+\begin_inset Formula $\delta \vec{E}_{0}=\vec{E}_{\pm}$
 \end_inset
 
  with 
@@ -486,11 +473,11 @@ One possible solution is
 \end_inset
 
 , 
-\begin_inset Formula $\delP_{0}=\gamt\Dt\Epm$
+\begin_inset Formula $\delta \vec{P}_{0}=\gamma_\mathrm{t} D_\mathrm{t}\vec{E}_{\pm}$
 \end_inset
 
 , and 
-\begin_inset Formula $\delD_{0}=0$
+\begin_inset Formula $\delta \vec{D}_{0}=0$
 \end_inset
 
 .
@@ -502,16 +489,16 @@ One possible solution is
 \begin_inset Formula 
 \begin{equation}
 v_{1\pm}=\left(\begin{array}{c}
-\Re\Epm\\
-\Im\Epm\\
-\Dt\Re(\gamt\Epm)\\
-\Dt\Im(\gamt\Epm)\\
+\Re\vec{E}_{\pm}\\
+\Im\vec{E}_{\pm}\\
+ D_\mathrm{t}\Re(\gamma_\mathrm{t}\vec{E}_{\pm})\\
+ D_\mathrm{t}\Im(\gamma_\mathrm{t}\vec{E}_{\pm})\\
 0
 \end{array}\right),v_{i\pm}=\left(-\begin{array}{c}
--\Im\Epm\\
-\Re\Epm\\
-\Dt\Im(\gamt\Epm)\\
-\Dt\Re(\gamt\Epm)\\
+-\Im\vec{E}_{\pm}\\
+\Re\vec{E}_{\pm}\\
+ D_\mathrm{t}\Im(\gamma_\mathrm{t}\vec{E}_{\pm})\\
+ D_\mathrm{t}\Re(\gamma_\mathrm{t}\vec{E}_{\pm})\\
 0
 \end{array}\right)\label{eq:manifold}
 \end{equation}
@@ -557,16 +544,16 @@ Now define the vectors
 \begin_inset Formula 
 \[
 w_{1\pm}=\left(\begin{array}{c}
-\Re\Epm\\
--\Im\Epm\\
-\omt^{2}\Re\left(\Epm\gamt\right)/\gamma_{\perp}\\
--\omt^{2}\Im\left(\Epm\gamt\right)/\gamma_{\perp}\\
+\Re\vec{E}_{\pm}\\
+-\Im\vec{E}_{\pm}\\
+\omega_\mathrm{t}^{2}\Re\left(\vec{E}_{\pm}\gamma_\mathrm{t}\right)/\gamma_{\perp}\\
+-\omega_\mathrm{t}^{2}\Im\left(\vec{E}_{\pm}\gamma_\mathrm{t}\right)/\gamma_{\perp}\\
 0
 \end{array}\right),w_{i\pm}=\left(\begin{array}{c}
-\Im\Epm\\
-\Re\Epm\\
-\omt^{2}\Im\left(\Epm\gamt\right)/\gamma_{\perp}\\
-\omt^{2}\Re\left(\Epm\gamt\right)/\gamma_{\perp}\\
+\Im\vec{E}_{\pm}\\
+\Re\vec{E}_{\pm}\\
+\omega_\mathrm{t}^{2}\Im\left(\vec{E}_{\pm}\gamma_\mathrm{t}\right)/\gamma_{\perp}\\
+\omega_\mathrm{t}^{2}\Re\left(\vec{E}_{\pm}\gamma_\mathrm{t}\right)/\gamma_{\perp}\\
 0
 \end{array}\right).
 \]
@@ -627,10 +614,10 @@ In general, the matrix is nonsingular, so we conclude that
 ), which is
 \begin_inset Formula 
 \begin{align*}
-g_{1\pm} & =\left(-\Im\vec{P}\cdot\Re\Epm+\Re\vec{P}\cdot\Im\Epm\right)/\sqrt{d}+\Dt\left[\Im\vec{E}\cdot\Re(\gamt\Epm)-\Re\vec{E}\cdot\Im(\gamt\Epm)\right]/\sqrt{d}\\
- & =-\Im\left(\Epm^{\star}\cdot\vec{P}\right)/\sqrt{d}-\Dt\Im\left[\vec{E}^{\star}\cdot\gamt\Epm\right]/\sqrt{d}\\
- & =-2\Dt\Im\gamt\Re(\Epm^{\star}\cdot\vec{E})/\sqrt{d}\\
- & =2\Dt\left|\gamt\right|\sqrt{\gamma_{\parallel}}\Re\left[\Epm^{\star}\cdot(a_{+}\Ep+a_{-}\Em)\right].
+g_{1\pm} & =\left(-\Im\vec{P}\cdot\Re\vec{E}_{\pm}+\Re\vec{P}\cdot\Im\vec{E}_{\pm}\right)/\sqrt{d}+ D_\mathrm{t}\left[\Im\vec{E}\cdot\Re(\gamma_\mathrm{t}\vec{E}_{\pm})-\Re\vec{E}\cdot\Im(\gamma_\mathrm{t}\vec{E}_{\pm})\right]/\sqrt{d}\\
+ & =-\Im\left(\vec{E}_{\pm}^{\star}\cdot\vec{P}\right)/\sqrt{d}- D_\mathrm{t}\Im\left[\vec{E}^{\star}\cdot\gamma_\mathrm{t}\vec{E}_{\pm}\right]/\sqrt{d}\\
+ & =-2 D_\mathrm{t}\Im\gamma_\mathrm{t}\Re(\vec{E}_{\pm}^{\star}\cdot\vec{E})/\sqrt{d}\\
+ & =2 D_\mathrm{t}\left|\gamma_\mathrm{t}\right|\sqrt{\gamma_{\parallel}}\Re\left[\vec{E}_{\pm}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].
 \end{align*}
 
 \end_inset
@@ -638,10 +625,10 @@ g_{1\pm} & =\left(-\Im\vec{P}\cdot\Re\Epm+\Re\vec{P}\cdot\Im\Epm\right)/\sqrt{d}
 For the other two vectors in the basis, we have
 \begin_inset Formula 
 \begin{align*}
-g_{i\pm} & =(\Im\vec{P}\cdot\Im\Epm+\Re\vec{P}\cdot\Re\Epm)/\sqrt{d}-D\left[\Im\vec{E}\cdot\Im(\gamt\Epm)+\Re\vec{E}\cdot\Re(\gamt\Epm)\right]/\sqrt{d}\\
- & =\Re\left(\Epm^{\star}\cdot\vec{P}\right)/\sqrt{d}-\Dt\Re\left[\vec{E}^{\star}\cdot\gamt\Epm\right]/\sqrt{d}\\
- & =2\Dt\Re(i\gamt)\Im(\Epm^{\star}\cdot\vec{E})/\sqrt{d}\\
- & =2\Dt\left|\gamt\right|\sqrt{\gamma_{\parallel}}\Im\left[\Epm^{\star}\cdot(a_{+}\Ep+a_{-}\Em)\right].
+g_{i\pm} & =(\Im\vec{P}\cdot\Im\vec{E}_{\pm}+\Re\vec{P}\cdot\Re\vec{E}_{\pm})/\sqrt{d}-D\left[\Im\vec{E}\cdot\Im(\gamma_\mathrm{t}\vec{E}_{\pm})+\Re\vec{E}\cdot\Re(\gamma_\mathrm{t}\vec{E}_{\pm})\right]/\sqrt{d}\\
+ & =\Re\left(\vec{E}_{\pm}^{\star}\cdot\vec{P}\right)/\sqrt{d}- D_\mathrm{t}\Re\left[\vec{E}^{\star}\cdot\gamma_\mathrm{t}\vec{E}_{\pm}\right]/\sqrt{d}\\
+ & =2 D_\mathrm{t}\Re(i\gamma_\mathrm{t})\Im(\vec{E}_{\pm}^{\star}\cdot\vec{E})/\sqrt{d}\\
+ & =2 D_\mathrm{t}\left|\gamma_\mathrm{t}\right|\sqrt{\gamma_{\parallel}}\Im\left[\vec{E}_{\pm}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].
 \end{align*}
 
 \end_inset
@@ -761,8 +748,8 @@ h_{k}
 where we have
 \begin_inset Formula 
 \begin{align*}
-h_{1\pm} & =\omt^{2}\left[\Re\vec{E}\cdot\Re\left(\Epm\gamt\right)-\Im\vec{E}\cdot\Im\left(\Epm\gamt\right)\right]/\sqrt{d}\\
- & =\omt^{2}\left|\gamt\right|^{-1}\sqrt{\gamma_{\parallel}}\Re\left[(a_{+}\Ep+a_{-}\Em)\cdot\Epm\gamt\right],
+h_{1\pm} & =\omega_\mathrm{t}^{2}\left[\Re\vec{E}\cdot\Re\left(\vec{E}_{\pm}\gamma_\mathrm{t}\right)-\Im\vec{E}\cdot\Im\left(\vec{E}_{\pm}\gamma_\mathrm{t}\right)\right]/\sqrt{d}\\
+ & =\omega_\mathrm{t}^{2}\left|\gamma_\mathrm{t}\right|^{-1}\sqrt{\gamma_{\parallel}}\Re\left[(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\cdot\vec{E}_{\pm}\gamma_\mathrm{t}\right],
 \end{align*}
 
 \end_inset
@@ -770,8 +757,8 @@ h_{1\pm} & =\omt^{2}\left[\Re\vec{E}\cdot\Re\left(\Epm\gamt\right)-\Im\vec{E}\cd
 and for the other two basis vectors, we have
 \begin_inset Formula 
 \begin{align*}
-h_{i\pm} & =\omt^{2}\left[\Re\vec{E}\cdot\Im(\Epm\gamt)+\Im\vec{E}\cdot\Re(\Epm\gamt)\right]/\sqrt{d}\\
- & =\omt^{2}\left|\gamt\right|^{-1}\sqrt{\gamma_{\parallel}}\Im\left[(a_{+}\Ep+a_{-}\Em)\cdot\Epm\gamt\right].
+h_{i\pm} & =\omega_\mathrm{t}^{2}\left[\Re\vec{E}\cdot\Im(\vec{E}_{\pm}\gamma_\mathrm{t})+\Im\vec{E}\cdot\Re(\vec{E}_{\pm}\gamma_\mathrm{t})\right]/\sqrt{d}\\
+ & =\omega_\mathrm{t}^{2}\left|\gamma_\mathrm{t}\right|^{-1}\sqrt{\gamma_{\parallel}}\Im\left[(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\cdot\vec{E}_{\pm}\gamma_\mathrm{t}\right].
 \end{align*}
 
 \end_inset
@@ -787,8 +774,8 @@ w_{j}^{T}A_{1/2}x_{1/2}=-\gamma_{\parallel}^{-1}\sum_{k}b_{k}\int h_{j}g_{k}.
 To facilitate evaluating these integrals, write
 \begin_inset Formula 
 \begin{align*}
-\Epm\gamt\cdot(a_{+}\Ep+a_{-}\Em) & =a_{\mp}\gamt(\Ep\cdot\Em)+a_{\pm}\gamt(\Epm\cdot\Epm)\\
-\Epm^{\star}\cdot(a_{+}\Ep+a_{-}\Em) & =a_{\pm}\left|\Epm\right|^{2}+a_{\mp}(\Epm^{\star}\cdot\Emp),
+\vec{E}_{\pm}\gamma_\mathrm{t}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}) & =a_{\mp}\gamma_\mathrm{t}(\vec{E}_{+}\cdot\vec{E}_{-})+a_{\pm}\gamma_\mathrm{t}(\vec{E}_{\pm}\cdot\vec{E}_{\pm})\\
+\vec{E}_{\pm}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}) & =a_{\pm}\left|\vec{E}_{\pm}\right|^{2}+a_{\mp}(\vec{E}_{\pm}^{\star}\cdot\vec{E}_{\mp}),
 \end{align*}
 
 \end_inset
@@ -806,7 +793,7 @@ where the first term on each row of the right-hand side transforms as the
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\gamma_{\parallel}^{-1}\int h_{1+}g_{1+} & =2\omt^{2}\int D\Re\left[a_{\mp}\gamt(\Ep\cdot\Em)\right]\left|\Epm\right|^{2}\Re(a_{\pm})\\
+\gamma_{\parallel}^{-1}\int h_{1+}g_{1+} & =2\omega_\mathrm{t}^{2}\int D\Re\left[a_{\mp}\gamma_\mathrm{t}(\vec{E}_{+}\cdot\vec{E}_{-})\right]\left|\vec{E}_{\pm}\right|^{2}\Re(a_{\pm})\\
 \end{align*}
 
 \end_inset
@@ -814,9 +801,9 @@ where the first term on each row of the right-hand side transforms as the
 
 \begin_inset Formula 
 \begin{align*}
-\gamma_{\parallel}^{-1}\int h_{1+}g_{1+} & =2\omt^{2}\int\Dt\Re\left[(a_{+}\Ep+a_{-}\Em)\cdot\Ep\gamt\right]\Re\left(a_{+}\left|\Ep\right|^{2}+a_{-}\Ep^{\star}\cdot\Em\right)\\
- & =2\omt^{2}\Re\int\Dt\gamt\left[a_{-}(\Em\cdot\Ep)\left|\Ep\right|^{2}\Re(a_{+})+a_{+}(\Ep\cdot\Ep)\Re\left(a_{-}\Ep^{\star}\cdot\Em\right)\right]\\
- & =2\omt^{2}\Re(a_{+})\Re(a_{-}\gamt I_{+})+\omt^{2}\Re\left(a_{+}a_{-}J_{+}+a_{+}a_{-}^{\star}K_{+}\right).
+\gamma_{\parallel}^{-1}\int h_{1+}g_{1+} & =2\omega_\mathrm{t}^{2}\int D_\mathrm{t}\Re\left[(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\cdot\vec{E}_{+}\gamma_\mathrm{t}\right]\Re\left(a_{+}\left|\vec{E}_{+}\right|^{2}+a_{-}\vec{E}_{+}^{\star}\cdot\vec{E}_{-}\right)\\
+ & =2\omega_\mathrm{t}^{2}\Re\int D_\mathrm{t}\gamma_\mathrm{t}\left[a_{-}(\vec{E}_{-}\cdot\vec{E}_{+})\left|\vec{E}_{+}\right|^{2}\Re(a_{+})+a_{+}(\vec{E}_{+}\cdot\vec{E}_{+})\Re\left(a_{-}\vec{E}_{+}^{\star}\cdot\vec{E}_{-}\right)\right]\\
+ & =2\omega_\mathrm{t}^{2}\Re(a_{+})\Re(a_{-}\gamma_\mathrm{t} I_{+})+\omega_\mathrm{t}^{2}\Re\left(a_{+}a_{-}J_{+}+a_{+}a_{-}^{\star}K_{+}\right).
 \end{align*}
 
 \end_inset
@@ -824,9 +811,9 @@ where the first term on each row of the right-hand side transforms as the
 Next, we have
 \begin_inset Formula 
 \begin{align*}
-\gamma_{\parallel}^{-1}\int h_{-}g_{+} & =2\omt^{2}\int\Dt\Re\left[(a_{+}\Ep+a_{-}\Em)\cdot\Em\gamt\right]\Re\left(a_{+}\left|\Ep\right|^{2}+a_{-}\Ep^{\star}\cdot\Em\right)\\
- & =2\omt^{2}\Re\int\Dt\gamt\left[a_{+}(\Em\cdot\Ep)\left|\Ep\right|^{2}\Re(a_{+})+a_{-}(\Em\cdot\Em)\Re\left(a_{-}\Ep^{\star}\cdot\Em\right)\right]\\
- & =2\omt^{2}\Re(a_{+})\Re(a_{+}\gamt I_{+})+\omt^{2}\Re\left(a_{-}^{2}J_{+}+\left|a_{-}\right|^{2}K_{+}\right).
+\gamma_{\parallel}^{-1}\int h_{-}g_{+} & =2\omega_\mathrm{t}^{2}\int D_\mathrm{t}\Re\left[(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\cdot\vec{E}_{-}\gamma_\mathrm{t}\right]\Re\left(a_{+}\left|\vec{E}_{+}\right|^{2}+a_{-}\vec{E}_{+}^{\star}\cdot\vec{E}_{-}\right)\\
+ & =2\omega_\mathrm{t}^{2}\Re\int D_\mathrm{t}\gamma_\mathrm{t}\left[a_{+}(\vec{E}_{-}\cdot\vec{E}_{+})\left|\vec{E}_{+}\right|^{2}\Re(a_{+})+a_{-}(\vec{E}_{-}\cdot\vec{E}_{-})\Re\left(a_{-}\vec{E}_{+}^{\star}\cdot\vec{E}_{-}\right)\right]\\
+ & =2\omega_\mathrm{t}^{2}\Re(a_{+})\Re(a_{+}\gamma_\mathrm{t} I_{+})+\omega_\mathrm{t}^{2}\Re\left(a_{-}^{2}J_{+}+\left|a_{-}\right|^{2}K_{+}\right).
 \end{align*}
 
 \end_inset
@@ -835,8 +822,8 @@ The other two integrals can be obtained simply by switching plus and minus
  symbols:
 \begin_inset Formula 
 \begin{align*}
-\gamma_{\parallel}^{-1}\int h_{-}g_{-} & =2\omt^{2}\Re(a_{-})\Re(a_{+}\gamt I_{-})+\omt^{2}\Re\left(a_{+}a_{-}J_{-}+a_{-}a_{+}^{\star}K_{-}\right)\\
-\gamma_{\parallel}^{-1}\int h_{+}g_{-} & =2\omt^{2}\Re(a_{-})\Re(a_{-}\gamt I_{-})+\omt^{2}\Re\left(a_{+}^{2}J_{-}+\left|a_{+}\right|^{2}K_{-}\right).
+\gamma_{\parallel}^{-1}\int h_{-}g_{-} & =2\omega_\mathrm{t}^{2}\Re(a_{-})\Re(a_{+}\gamma_\mathrm{t} I_{-})+\omega_\mathrm{t}^{2}\Re\left(a_{+}a_{-}J_{-}+a_{-}a_{+}^{\star}K_{-}\right)\\
+\gamma_{\parallel}^{-1}\int h_{+}g_{-} & =2\omega_\mathrm{t}^{2}\Re(a_{-})\Re(a_{-}\gamma_\mathrm{t} I_{-})+\omega_\mathrm{t}^{2}\Re\left(a_{+}^{2}J_{-}+\left|a_{+}\right|^{2}K_{-}\right).
 \end{align*}
 
 \end_inset
@@ -845,8 +832,8 @@ Hence, we have
 \begin_inset Formula 
 \begin{align*}
  & w_{\pm}^{T}A_{1/2}v_{1/2}\\
- & =-\omt^{2}b_{\pm}\left[2\Re(a_{\pm})\Re(a_{\mp}\gamt I_{\pm})+\Re\left(a_{+}a_{-}J_{\pm}+a_{\pm}a_{\mp}^{\star}K_{\pm}\right)\right]\\
- & \ldots-\omt^{2}b_{\mp}\left[2\Re(a_{\mp})\Re(a_{\mp}\gamt I_{\mp})+\Re\left(a_{\pm}^{2}J_{\mp}+\left|a_{\pm}\right|^{2}K_{\mp}\right)\right].
+ & =-\omega_\mathrm{t}^{2}b_{\pm}\left[2\Re(a_{\pm})\Re(a_{\mp}\gamma_\mathrm{t} I_{\pm})+\Re\left(a_{+}a_{-}J_{\pm}+a_{\pm}a_{\mp}^{\star}K_{\pm}\right)\right]\\
+ & \ldots-\omega_\mathrm{t}^{2}b_{\mp}\left[2\Re(a_{\mp})\Re(a_{\mp}\gamma_\mathrm{t} I_{\mp})+\Re\left(a_{\pm}^{2}J_{\mp}+\left|a_{\pm}\right|^{2}K_{\mp}\right)\right].
 \end{align*}
 
 \end_inset
