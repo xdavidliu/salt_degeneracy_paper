@@ -4,18 +4,8 @@
 \begin_header
 \textclass article
 \begin_preamble
-\newcommand{\Cnv}{C_{n\mathrm{v}}}
 \renewcommand\vec{\mathbf}
-\newcommand{\Ee}{\vec{E}_\mathrm{even}}
-\newcommand{\Eo}{\vec{E}_\mathrm{odd}}
 \DeclareMathOperator{\floor}{floor}
-\newcommand{\Dt}{D_\mathrm{t}}
-\newcommand{\Ep}{\vec{E}_{+}}
-\newcommand{\Em}{\vec{E}_{-}}
-\newcommand{\Epm}{\vec{E}_{\pm}}
-\newcommand{\Emp}{\vec{E}_{\mp}}
-\newcommand{\omt}{\omega_\mathrm{t}}
-\newcommand{\gamt}{\gamma_\mathrm{t}}
 \renewcommand{\Im}{\mathrm{Im}}
 \renewcommand{\Re}{\mathrm{Re}}
 \end_preamble
@@ -101,7 +91,7 @@ Construction of chiral modes
 \begin_layout Standard
 We first construct the clockwise and counterclockwise chiral modes.
  Consider a partner 
-\begin_inset Formula $\Ee$
+\begin_inset Formula $\vec{E}_{\mathrm{even}}$
 \end_inset
 
  of the 
@@ -109,11 +99,11 @@ We first construct the clockwise and counterclockwise chiral modes.
 \end_inset
 
 th 2d irrep of a 
-\begin_inset Formula $\Cnv$
+\begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
  geometry that satisfies 
-\begin_inset Formula $\sigma\Ee=\Ee$
+\begin_inset Formula $\sigma\vec{E}_{\mathrm{even}}=\vec{E}_{\mathrm{even}}$
 \end_inset
 
  for one of the mirror-plane operations 
@@ -122,7 +112,7 @@ th 2d irrep of a
 
  in the group.
  For 
-\begin_inset Formula $\Cnv$
+\begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
 , there are 
@@ -143,7 +133,7 @@ th 2d irrep of a
  Now define
 \begin_inset Formula 
 \[
-\vec{E}_{\pm}=\frac{2}{n}\sum_{m=1}^{n}e^{\pm2\pi im\ell/n}R_{m/n}\Ee,
+\vec{E}_{\pm}=\frac{2}{n}\sum_{m=1}^{n}e^{\pm2\pi im\ell/n}R_{m/n}\vec{E}_{\mathrm{even}},
 \]
 
 \end_inset
@@ -160,7 +150,7 @@ where
  From the relation (presented without proof)
 \begin_inset Formula 
 \[
-\sigma R_{m/n}\Ee=R_{1-m/n}\Ee,
+\sigma R_{m/n}\vec{E}_{\mathrm{even}}=R_{1-m/n}\vec{E}_{\mathrm{even}},
 \]
 
 \end_inset
@@ -189,7 +179,7 @@ Construction of standing modes
 From above, we have
 \begin_inset Formula 
 \[
-\frac{\Ep+\Em}{2}=\frac{2}{n}\sum_{m=1}^{n}\cos\frac{2\pi m\ell}{n}R_{m/n}\Ee=\Ee.
+\frac{\vec{E}_{+}+\vec{E}_{-}}{2}=\frac{2}{n}\sum_{m=1}^{n}\cos\frac{2\pi m\ell}{n}R_{m/n}\vec{E}_{\mathrm{even}}=\vec{E}_{\mathrm{even}}.
 \]
 
 \end_inset
@@ -198,13 +188,13 @@ The last equality is non-trivial and presented without proof.
  We can also define the odd partner
 \begin_inset Formula 
 \[
-\Eo=\frac{\Ep-\Em}{2i}.
+\vec{E}_{\mathrm{odd}}=\frac{\vec{E}_{+}-\vec{E}_{-}}{2i}.
 \]
 
 \end_inset
 
 It can be shown that 
-\begin_inset Formula $\sigma\Eo=-\Eo$
+\begin_inset Formula $\sigma\vec{E}_{\mathrm{odd}}=-\vec{E}_{\mathrm{odd}}$
 \end_inset
 
 .
@@ -251,13 +241,13 @@ We begin with the SALT equation, with the small parameter
 \end_inset
 
  indicating the relative pump strength above threshold 
-\begin_inset Formula $\Dt$
+\begin_inset Formula $D_{\mathrm{t}}$
 \end_inset
 
 .
 \begin_inset Formula 
 \[
-\nabla\times\nabla\times\vec{E}=\omega^{2}\left[\varepsilon+\frac{\Dt(1+d)\gamma}{1+\gamma_{\parallel}^{-1}\left|\gamma\vec{E}\right|^{2}}\right]\vec{E},
+\nabla\times\nabla\times\vec{E}=\omega^{2}\left[\varepsilon+\frac{D_{\mathrm{t}}(1+d)\gamma}{1+\gamma_{\parallel}^{-1}\left|\gamma\vec{E}\right|^{2}}\right]\vec{E},
 \]
 
 \end_inset
@@ -274,18 +264,18 @@ where
 :
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\left|\gamt\right|^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{+}\Ep+a_{-}\Em\right)\\
-\omega & =\omt+\omega_{1}d,
+\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right)\\
+\omega & =\omega_{\mathrm{t}}+\omega_{1}d,
 \end{align*}
 
 \end_inset
 
 where 
-\begin_inset Formula $\omt$
+\begin_inset Formula $\omega_{\mathrm{t}}$
 \end_inset
 
  is the threshold frequency and 
-\begin_inset Formula $\gamt$
+\begin_inset Formula $\gamma_{\mathrm{t}}$
 \end_inset
 
  is 
@@ -294,19 +284,19 @@ where
 
  at that frequency.
  Insert these solutions, multiply both sides by 
-\begin_inset Formula $\Epm$
+\begin_inset Formula $\vec{E}_{\pm}$
 \end_inset
 
 , and integrate.
  We have the two equations (from 
-\begin_inset Formula $\Epm$
+\begin_inset Formula $\vec{E}_{\pm}$
 \end_inset
 
 )
 \begin_inset Formula 
 \begin{align}
-0 & =\int\Epm\cdot\left(a_{+}\Ep+a_{-}\Em\right)\times\nonumber \\
- & \left[\omega_{1}\frac{\partial}{\partial\omt}\omt^{2}(\varepsilon+\Dt\gamt)+\omt^{2}\Dt\gamt\left(1-\left|a_{+}\Ep+a_{-}\Em\right|^{2}\right)\right].\label{eq:matrix}
+0 & =\int\vec{E}_{\pm}\cdot\left(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right)\times\nonumber \\
+ & \left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}})+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(1-\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|^{2}\right)\right].\label{eq:matrix}
 \end{align}
 
 \end_inset
@@ -333,29 +323,29 @@ We now solve for the unknowns
 \end_inset
 
  and 
-\begin_inset Formula $\Dt$
+\begin_inset Formula $D_{\mathrm{t}}$
 \end_inset
 
 , only adding mirror symmetry when we cannot proceed any further.
  First, we have
 \begin_inset Formula 
 \[
-\int\Dt\Epm\cdot\Epm=\int\Dt\Epm\cdot(\Epm^{\star})^{\star}=0,
+\int D_{\mathrm{t}}\vec{E}_{\pm}\cdot\vec{E}_{\pm}=\int D_{\mathrm{t}}\vec{E}_{\pm}\cdot(\vec{E}_{\pm}^{\star})^{\star}=0,
 \]
 
 \end_inset
 
 since 
-\begin_inset Formula $\Epm^{\star}$
+\begin_inset Formula $\vec{E}_{\pm}^{\star}$
 \end_inset
 
  transforms like 
-\begin_inset Formula $\Emp$
+\begin_inset Formula $\vec{E}_{\mp}$
 \end_inset
 
 .
  In addition, 
-\begin_inset Formula $\left|\Epm\right|$
+\begin_inset Formula $\left|\vec{E}_{\pm}\right|$
 \end_inset
 
  has 
@@ -363,16 +353,16 @@ since
 \end_inset
 
  symmetry, so the integrals 
-\begin_inset Formula $\int\Dt\left|\Epm\right|^{2}\Epm\cdot\Epm$
+\begin_inset Formula $\int D_{\mathrm{t}}\left|\vec{E}_{\pm}\right|^{2}\vec{E}_{\pm}\cdot\vec{E}_{\pm}$
 \end_inset
 
  and 
-\begin_inset Formula $\int\Dt\left|\Epm\right|^{2}\Emp\cdot\Emp$
+\begin_inset Formula $\int D_{\mathrm{t}}\left|\vec{E}_{\pm}\right|^{2}\vec{E}_{\mp}\cdot\vec{E}_{\mp}$
 \end_inset
 
  also vanish.
  Finally, there are vanishing integrals of the forms 
-\begin_inset Formula $\int\Dt(\Epm^{\star}\cdot\Emp)\Ep\cdot\Em$
+\begin_inset Formula $\int D_{\mathrm{t}}(\vec{E}_{\pm}^{\star}\cdot\vec{E}_{\mp})\vec{E}_{+}\cdot\vec{E}_{-}$
 \end_inset
 
 , for the same reason.
@@ -382,10 +372,10 @@ since
 We define the non-vanishing integrals as
 \begin_inset Formula 
 \begin{align*}
-G_{D} & =\int\Dt\Ep\cdot\Em\\
-G_{\varepsilon} & =\int\varepsilon\Ep\cdot\Em\\
-I_{\pm} & =\int\Dt\left|\Epm\right|^{2}\Ep\cdot\Em.\\
-J_{\pm} & =\int\Dt(\Epm^{\star}\cdot\Emp)\Epm\cdot\Epm.
+G_{D} & =\int D_{\mathrm{t}}\vec{E}_{+}\cdot\vec{E}_{-}\\
+G_{\varepsilon} & =\int\varepsilon\vec{E}_{+}\cdot\vec{E}_{-}\\
+I_{\pm} & =\int D_{\mathrm{t}}\left|\vec{E}_{\pm}\right|^{2}\vec{E}_{+}\cdot\vec{E}_{-}.\\
+J_{\pm} & =\int D_{\mathrm{t}}(\vec{E}_{\pm}^{\star}\cdot\vec{E}_{\mp})\vec{E}_{\pm}\cdot\vec{E}_{\pm}.
 \end{align*}
 
 \end_inset
@@ -395,7 +385,7 @@ Interestingly, there is an integral that is non-vanishing only for
 \end_inset
 
  and 
-\begin_inset Formula $\Cnv$
+\begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
  with 
@@ -405,7 +395,7 @@ Interestingly, there is an integral that is non-vanishing only for
 :
 \begin_inset Formula 
 \[
-K_{\pm}=\int\Dt(\Emp^{\star}\cdot\Epm)\Epm\cdot\Epm.
+K_{\pm}=\int D_{\mathrm{t}}(\vec{E}_{\mp}^{\star}\cdot\vec{E}_{\pm})\vec{E}_{\pm}\cdot\vec{E}_{\pm}.
 \]
 
 \end_inset
@@ -429,7 +419,7 @@ reference "eq:matrix"
 where
 \begin_inset Formula 
 \[
-H=\left(\omega_{t}^{2}\gamt\right)^{-1}\frac{\partial}{\partial\omt}\omt^{2}\left(G_{\varepsilon}+G_{D}\gamt\right).
+H=\left(\omega_{t}^{2}\gamma_{\mathrm{t}}\right)^{-1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\left(G_{\varepsilon}+G_{D}\gamma_{\mathrm{t}}\right).
 \]
 
 \end_inset
@@ -469,8 +459,8 @@ Using the fact that
  are real, we obtain the circulating lasing solutions
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\left|\gamt\right|^{-1}\sqrt{\left(\omega_{1}H+G_{D}\right)\gamma_{\parallel}d/I_{\mp}}\Epm\\
-\omega & =\omt-\frac{\Im\left(G_{D}/I_{\mp}\right)d}{\Im\left(H/I_{\mp}\right)}
+\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\left(\omega_{1}H+G_{D}\right)\gamma_{\parallel}d/I_{\mp}}\vec{E}_{\pm}\\
+\omega & =\omega_{\mathrm{t}}-\frac{\Im\left(G_{D}/I_{\mp}\right)d}{\Im\left(H/I_{\mp}\right)}
 \end{align*}
 
 \end_inset
@@ -498,7 +488,7 @@ Note that the frequencies of the two lasing modes differ in the
 
  still should have degeneracies due to reciprocity of Maxwell's equations.
  This is resolved by the fact that from stability, only one of the 
-\begin_inset Formula $\Epm$
+\begin_inset Formula $\vec{E}_{\pm}$
 \end_inset
 
  will actually lase, and the degenerate partner 
@@ -717,8 +707,8 @@ reference "eq:omega1"
 , and giving the standing lasing modes
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\left|\gamt\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J+K}}\left(\Ep\pm\Em\right)\\
-\omega & =\omt-\frac{\Im\left[G_{D}/(2I+J+K)\right]d}{\Im\left[H/(2I+J+K)\right]}
+\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J+K}}\left(\vec{E}_{+}\pm\vec{E}_{-}\right)\\
+\omega & =\omega_{\mathrm{t}}-\frac{\Im\left[G_{D}/(2I+J+K)\right]d}{\Im\left[H/(2I+J+K)\right]}
 \end{align*}
 
 \end_inset
@@ -726,8 +716,8 @@ reference "eq:omega1"
 and
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\left|\gamt\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J-K}}\left(\Ep\pm i\Em\right)\\
-\omega & =\omt-\frac{\Im\left[G_{D}/(2I+J-K)\right]d}{\Im\left[H/(2I+J-K)\right]}
+\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J-K}}\left(\vec{E}_{+}\pm i\vec{E}_{-}\right)\\
+\omega & =\omega_{\mathrm{t}}-\frac{\Im\left[G_{D}/(2I+J-K)\right]d}{\Im\left[H/(2I+J-K)\right]}
 \end{align*}
 
 \end_inset
@@ -775,7 +765,7 @@ reference "eq:omega1"
 
 \begin_layout Paragraph
 The 
-\begin_inset Formula $\Cnv$
+\begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
  case for all 
@@ -822,8 +812,8 @@ reference "eq:omega1"
 We then obtain the lasing solutions
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\left|\gamt\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{J+2I}}\left(\Ep+e^{i\theta}\Em\right)\\
-\omega & =\omt-\frac{\Im\left[G/(J+2I)\right]d}{\Im\left[H/(J+2I)\right]},
+\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{J+2I}}\left(\vec{E}_{+}+e^{i\theta}\vec{E}_{-}\right)\\
+\omega & =\omega_{\mathrm{t}}-\frac{\Im\left[G/(J+2I)\right]d}{\Im\left[H/(J+2I)\right]},
 \end{align*}
 
 \end_inset

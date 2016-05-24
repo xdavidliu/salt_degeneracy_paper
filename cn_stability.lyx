@@ -344,13 +344,13 @@ C & =\left(\begin{array}{ccccc}
 \end_inset
 
 Now write 
-\begin_inset Formula $u(t)=ve^{\sigma t}+v^{\star}e^{\sigma^{\star}t}$
+\begin_inset Formula $u(t)=xe^{\sigma t}+x^{\star}e^{\sigma^{\star}t}$
 \end_inset
 
 , where
 \begin_inset Formula 
 \begin{align*}
-v & =v_{0}+v_{1/2}\sqrt{d}+v_{1}d\\
+x & =x_{0}+x_{1/2}\sqrt{d}+x_{1}d\\
 \sigma & =\sigma_{0}+\sigma_{1/2}\sqrt{d}+\sigma_{1}d,
 \end{align*}
 
@@ -365,12 +365,12 @@ reference "eq:ode"
 \end_inset
 
  becomes 
-\begin_inset Formula $\Re\left[\left(C\sigma^{2}+B\sigma+A\right)v\right]=0$
+\begin_inset Formula $\Re\left[\left(C\sigma^{2}+B\sigma+A\right)x\right]=0$
 \end_inset
 
 .
  We replace this with the equation 
-\begin_inset Formula $\left(C\sigma^{2}+B\sigma+A\right)v=0$
+\begin_inset Formula $\left(C\sigma^{2}+B\sigma+A\right)x=0$
 \end_inset
 
  and solve order-by-order in 
@@ -378,7 +378,7 @@ reference "eq:ode"
 \end_inset
 
  for 
-\begin_inset Formula $v$
+\begin_inset Formula $x$
 \end_inset
 
  and 
@@ -409,14 +409,14 @@ Zeroth order
 
 \begin_layout Standard
 The zeroth order equation is 
-\begin_inset Formula $\left(C\sigma_{0}^{2}+B_{0}\sigma_{0}+A_{0}\right)v_{0}=0$
+\begin_inset Formula $\left(C\sigma_{0}^{2}+B_{0}\sigma_{0}+A_{0}\right)x_{0}=0$
 \end_inset
 
 .
  First, write
 \begin_inset Formula 
 \[
-v_{0}=\left(\begin{array}{c}
+x_{0}=\left(\begin{array}{c}
 \Re\delE_{0}\\
 \Im\delE_{0}\\
 \Re\delP_{0}\\
@@ -494,20 +494,26 @@ One possible solution is
 \end_inset
 
 .
- This forms the manifold 
-\begin_inset Formula $v_{0}=b_{+}v_{+}+b_{-}v_{-}$
+ This forms the set of solutions 
+\begin_inset Formula $x_{0}=\sum b_{k}v_{k}=b_{1+}v_{1+}+b_{1-}v_{1-}+b_{i+}v_{i+}+b_{i-}v_{i-}$
 \end_inset
 
 , where 
 \begin_inset Formula 
 \begin{equation}
-v_{\pm}=\left(\begin{array}{c}
+v_{1\pm}=\left(\begin{array}{c}
 \Re\Epm\\
 \Im\Epm\\
 \Dt\Re(\gamt\Epm)\\
 \Dt\Im(\gamt\Epm)\\
 0
-\end{array}\right).\label{eq:manifold}
+\end{array}\right),v_{i\pm}=\left(-\begin{array}{c}
+-\Im\Epm\\
+\Re\Epm\\
+\Dt\Im(\gamt\Epm)\\
+\Dt\Re(\gamt\Epm)\\
+0
+\end{array}\right)\label{eq:manifold}
 \end{equation}
 
 \end_inset
@@ -542,7 +548,7 @@ To order
  solution becomes
 \begin_inset Formula 
 \begin{equation}
-(B_{0}\sigma_{1/2}+A_{1/2})(b_{+}v_{+}+b_{-}v_{-})+A_{0}v_{1/2}=0.\label{eq:half}
+(B_{0}\sigma_{1/2}+A_{1/2})\sum b_{k}v_{k}+A_{0}v_{1/2}=0.\label{eq:half}
 \end{equation}
 
 \end_inset
@@ -550,11 +556,17 @@ To order
 Now define the vectors
 \begin_inset Formula 
 \[
-w_{\pm}=\left(\begin{array}{c}
+w_{1\pm}=\left(\begin{array}{c}
 \Re\Epm\\
 -\Im\Epm\\
 \omt^{2}\Re\left(\Epm\gamt\right)/\gamma_{\perp}\\
 -\omt^{2}\Im\left(\Epm\gamt\right)/\gamma_{\perp}\\
+0
+\end{array}\right),w_{i\pm}=\left(\begin{array}{c}
+\Im\Epm\\
+\Re\Epm\\
+\omt^{2}\Im\left(\Epm\gamt\right)/\gamma_{\perp}\\
+\omt^{2}\Re\left(\Epm\gamt\right)/\gamma_{\perp}\\
 0
 \end{array}\right).
 \]
@@ -562,7 +574,7 @@ w_{\pm}=\left(\begin{array}{c}
 \end_inset
 
 It can be shown that 
-\begin_inset Formula $A_{0}^{T}w_{\pm}=0$
+\begin_inset Formula $A_{0}^{T}w_{k}=0$
 \end_inset
 
 .
@@ -571,11 +583,11 @@ It can be shown that
 \end_inset
 
 , it is evident that matrix elements 
-\begin_inset Formula $w_{\pm}^{T}A_{1/2}v_{\pm}$
+\begin_inset Formula $w_{j}^{T}A_{1/2}v_{k}$
 \end_inset
 
  and 
-\begin_inset Formula $w_{\pm}^{T}A_{1/2}v_{\mp}$
+\begin_inset Formula $w_{j}^{T}A_{1/2}v_{k}$
 \end_inset
 
  all vanish.
@@ -594,16 +606,7 @@ reference "eq:half"
 , we have
 \begin_inset Formula 
 \[
-\sigma_{1/2}\left(\begin{array}{cc}
-w_{+}^{T}B_{0}v_{+} & w_{+}^{T}B_{0}v_{-}\\
-w_{-}^{T}B_{0}v_{+} & w_{-}^{T}B_{0}v_{-}
-\end{array}\right)\left(\begin{array}{c}
-b_{+}\\
-b_{-}
-\end{array}\right)=\left(\begin{array}{c}
-0\\
-0
-\end{array}\right).
+\sigma_{1/2}\sum_{k}(w_{j}^{T}B_{0}v_{k})b_{k}=0.
 \]
 
 \end_inset
@@ -614,7 +617,7 @@ In general, the matrix is nonsingular, so we conclude that
 
 .
  Next, we use direct evaluation to obtain the last element of 
-\begin_inset Formula $A_{1/2}v_{\pm}$
+\begin_inset Formula $A_{1/2}v_{k}$
 \end_inset
 
  (the other elements are zero due to the nonzero structure of 
@@ -624,10 +627,21 @@ In general, the matrix is nonsingular, so we conclude that
 ), which is
 \begin_inset Formula 
 \begin{align*}
-g_{\pm} & =\left(-\Im\vec{P}\cdot\Re\Epm+\Re\vec{P}\cdot\Im\Epm\right)/\sqrt{d}+\Dt\left[\Im\vec{E}\cdot\Re(\gamt\Epm)-\Re\vec{E}\cdot\Im(\gamt\Epm)\right]/\sqrt{d}\\
+g_{1\pm} & =\left(-\Im\vec{P}\cdot\Re\Epm+\Re\vec{P}\cdot\Im\Epm\right)/\sqrt{d}+\Dt\left[\Im\vec{E}\cdot\Re(\gamt\Epm)-\Re\vec{E}\cdot\Im(\gamt\Epm)\right]/\sqrt{d}\\
  & =-\Im\left(\Epm^{\star}\cdot\vec{P}\right)/\sqrt{d}-\Dt\Im\left[\vec{E}^{\star}\cdot\gamt\Epm\right]/\sqrt{d}\\
  & =-2\Dt\Im\gamt\Re(\Epm^{\star}\cdot\vec{E})/\sqrt{d}\\
  & =2\Dt\left|\gamt\right|\sqrt{\gamma_{\parallel}}\Re\left[\Epm^{\star}\cdot(a_{+}\Ep+a_{-}\Em)\right].
+\end{align*}
+
+\end_inset
+
+For the other two vectors in the basis, we have
+\begin_inset Formula 
+\begin{align*}
+g_{i\pm} & =(\Im\vec{P}\cdot\Im\Epm+\Re\vec{P}\cdot\Re\Epm)/\sqrt{d}-D\left[\Im\vec{E}\cdot\Im(\gamt\Epm)+\Re\vec{E}\cdot\Re(\gamt\Epm)\right]/\sqrt{d}\\
+ & =\Re\left(\Epm^{\star}\cdot\vec{P}\right)/\sqrt{d}-\Dt\Re\left[\vec{E}^{\star}\cdot\gamt\Epm\right]/\sqrt{d}\\
+ & =2\Dt\Re(i\gamt)\Im(\Epm^{\star}\cdot\vec{E})/\sqrt{d}\\
+ & =2\Dt\left|\gamt\right|\sqrt{\gamma_{\parallel}}\Im\left[\Epm^{\star}\cdot(a_{+}\Ep+a_{-}\Em)\right].
 \end{align*}
 
 \end_inset
@@ -647,24 +661,24 @@ reference "eq:half"
 , we have 
 \begin_inset Formula 
 \[
-A_{0}v_{1/2}=-A_{1/2}(b_{+}v_{+}+b_{-}v_{-})=-\left(\begin{array}{c}
+A_{0}x_{1/2}=-A_{1/2}\sum b_{k}v_{k}=\left(\begin{array}{c}
 0\\
 0\\
 0\\
 0\\
-b_{+}g_{+}+b_{-}g_{-}
+-\sum b_{k}g_{k}
 \end{array}\right).
 \]
 
 \end_inset
 
 The vector 
-\begin_inset Formula $v_{1/2}$
+\begin_inset Formula $x_{1/2}$
 \end_inset
 
  must also have this same nonzero pattern (only last element nonzero).
  This is because if 
-\begin_inset Formula $v_{1/2}$
+\begin_inset Formula $x_{1/2}$
 \end_inset
 
  had any nonzeros in the first four elements, they must be annihilated by
@@ -673,20 +687,20 @@ The vector
 \end_inset
 
 , and only 
-\begin_inset Formula $v_{\pm}$
+\begin_inset Formula $v_{k}$
 \end_inset
 
  satisfies that property.
  However, if 
-\begin_inset Formula $v_{1/2}$
+\begin_inset Formula $x_{1/2}$
 \end_inset
 
  had any component in 
-\begin_inset Formula $v_{\pm}$
+\begin_inset Formula $v_{k}$
 \end_inset
 
 , then it can simply be absorbed into the solution 
-\begin_inset Formula $v_{0}$
+\begin_inset Formula $x_{0}$
 \end_inset
 
  to the previous order.
@@ -695,7 +709,7 @@ The vector
 \end_inset
 
 , that 
-\begin_inset Formula $v_{1/2}=-\gamma_{\parallel}^{-1}A_{1/2}(b_{+}v_{+}+b_{-}v_{-})$
+\begin_inset Formula $x_{1/2}=-\gamma_{\parallel}^{-1}A_{1/2}\sum b_{k}v_{k}$
 \end_inset
 
 .
@@ -725,38 +739,82 @@ To order
  solutions is
 \begin_inset Formula 
 \[
-(B_{0}\sigma_{1}+A_{1})v_{0}+A_{1/2}v_{1/2}+A_{0}v_{1}=0.
+(B_{0}\sigma_{1}+A_{1})x_{0}+A_{1/2}x_{1/2}+A_{0}x_{1}=0.
 \]
 
 \end_inset
 
-We first compute the last (and only nonzero) element of 
-\begin_inset Formula $A_{1/2}^{T}w_{\pm}$
+We first note that
+\begin_inset Formula 
+\[
+A_{1/2}^{T}w_{k}=\left(\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+h_{k}
+\end{array}\right),
+\]
+
 \end_inset
 
- as
+where we have
 \begin_inset Formula 
 \begin{align*}
-h_{\pm} & =\omt^{2}\left[\Re\vec{E}\cdot\Re\left(\Epm\gamt\right)-\Im\vec{E}\cdot\Im\left(\Epm\gamt\right)\right]/\sqrt{d}\\
- & =\omt^{2}\left|\gamt\right|^{-1}\sqrt{\gamma_{\parallel}}\Re\left[(a_{+}\Ep+a_{-}\Em)\cdot\Epm\gamt\right].
+h_{1\pm} & =\omt^{2}\left[\Re\vec{E}\cdot\Re\left(\Epm\gamt\right)-\Im\vec{E}\cdot\Im\left(\Epm\gamt\right)\right]/\sqrt{d}\\
+ & =\omt^{2}\left|\gamt\right|^{-1}\sqrt{\gamma_{\parallel}}\Re\left[(a_{+}\Ep+a_{-}\Em)\cdot\Epm\gamt\right],
+\end{align*}
+
+\end_inset
+
+and for the other two basis vectors, we have
+\begin_inset Formula 
+\begin{align*}
+h_{i\pm} & =\omt^{2}\left[\Re\vec{E}\cdot\Im(\Epm\gamt)+\Im\vec{E}\cdot\Re(\Epm\gamt)\right]/\sqrt{d}\\
+ & =\omt^{2}\left|\gamt\right|^{-1}\sqrt{\gamma_{\parallel}}\Im\left[(a_{+}\Ep+a_{-}\Em)\cdot\Epm\gamt\right].
 \end{align*}
 
 \end_inset
 
 Hence, we have
 \begin_inset Formula 
+\[
+w_{j}^{T}A_{1/2}x_{1/2}=-\gamma_{\parallel}^{-1}\sum_{k}b_{k}\int h_{j}g_{k}.
+\]
+
+\end_inset
+
+To facilitate evaluating these integrals, write
+\begin_inset Formula 
 \begin{align*}
-w_{\pm}^{T}A_{1/2}v_{1/2} & =-\gamma_{\parallel}^{-1}\left(b_{+}\int h_{\pm}g_{+}+b_{-}\int h_{\pm}g_{-}\right)\\
- & =-\gamma_{\parallel}^{-1}\left(b_{\pm}\int h_{\pm}g_{\pm}+b_{\mp}\int h_{\pm}g_{\mp}\right)
+\Epm\gamt\cdot(a_{+}\Ep+a_{-}\Em) & =a_{\mp}\gamt(\Ep\cdot\Em)+a_{\pm}\gamt(\Epm\cdot\Epm)\\
+\Epm^{\star}\cdot(a_{+}\Ep+a_{-}\Em) & =a_{\pm}\left|\Epm\right|^{2}+a_{\mp}(\Epm^{\star}\cdot\Emp),
 \end{align*}
 
 \end_inset
 
-Now evaluate the integrals.
- We first have
+where the first term on each row of the right-hand side transforms as the
+ trivial irrep of 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ under rotations (and so do both its real and imaginary parts), and the
+ second term is a product of two partners in the same irrep.
+ We then have
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\gamma_{\parallel}^{-1}\int h_{+}g_{+} & =2\omt^{2}\int\Dt\Re\left[(a_{+}\Ep+a_{-}\Em)\cdot\Ep\gamt\right]\Re\left(a_{+}\left|\Ep\right|^{2}+a_{-}\Ep^{\star}\cdot\Em\right)\\
+\gamma_{\parallel}^{-1}\int h_{1+}g_{1+} & =2\omt^{2}\int D\Re\left[a_{\mp}\gamt(\Ep\cdot\Em)\right]\left|\Epm\right|^{2}\Re(a_{\pm})\\
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\gamma_{\parallel}^{-1}\int h_{1+}g_{1+} & =2\omt^{2}\int\Dt\Re\left[(a_{+}\Ep+a_{-}\Em)\cdot\Ep\gamt\right]\Re\left(a_{+}\left|\Ep\right|^{2}+a_{-}\Ep^{\star}\cdot\Em\right)\\
  & =2\omt^{2}\Re\int\Dt\gamt\left[a_{-}(\Em\cdot\Ep)\left|\Ep\right|^{2}\Re(a_{+})+a_{+}(\Ep\cdot\Ep)\Re\left(a_{-}\Ep^{\star}\cdot\Em\right)\right]\\
  & =2\omt^{2}\Re(a_{+})\Re(a_{-}\gamt I_{+})+\omt^{2}\Re\left(a_{+}a_{-}J_{+}+a_{+}a_{-}^{\star}K_{+}\right).
 \end{align*}
