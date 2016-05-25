@@ -186,10 +186,11 @@ where
 , the SALT solution is 
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right)\\
+\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\gamma_{\parallel}d}\vec{f}\\
+\vec{f} & =a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\\
 \omega & =\omega_{\mathrm{t}}+\omega_{1}d\\
-\vec{P} & =D_{\mathrm{t}}\sqrt{\gamma_{\parallel}d}\left(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right)\\
-D & =D_{\mathrm{t}}\left(1+d-d\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|^{2}\right),
+\vec{P} & =D_{\mathrm{t}}\sqrt{\gamma_{\parallel}d}\vec{f}\\
+D & =D_{\mathrm{t}}\left(1+d-d\left|\vec{f}\right|^{2}\right),
 \end{align*}
 
 \end_inset
@@ -301,8 +302,8 @@ A_{1/2} & =\left(\begin{array}{ccccc}
 A_{1} & =\left(\begin{array}{ccccc}
 2\omega_{\mathrm{t}}\omega_{1}\Re\varepsilon & -2\omega_{\mathrm{t}}\omega_{1}\Im\varepsilon & 2\omega_{\mathrm{t}}\omega_{1} & 0 & 0\\
 2\omega_{\mathrm{t}}\omega_{1}\Im\varepsilon & 2\omega_{\mathrm{t}}\omega_{1}\Re\varepsilon & 0 & 2\omega_{\mathrm{t}}\omega_{1} & 0\\
-\gamma_{\perp}D_{\mathrm{t}}\left(1-\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|^{2}\right) & 0 & -\omega_{1} & 0 & 0\\
-0 & \gamma_{\perp}D_{\mathrm{t}}\left(1-\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|^{2}\right) & 0 & -\omega_{1} & 0\\
+\gamma_{\perp}D_{\mathrm{t}}\left(1-\left|\vec{f}\right|^{2}\right) & 0 & -\omega_{1} & 0 & 0\\
+0 & \gamma_{\perp}D_{\mathrm{t}}\left(1-\left|\vec{f}\right|^{2}\right) & 0 & -\omega_{1} & 0\\
 0 & 0 & 0 & 0 & 0
 \end{array}\right)\\
 B_{0} & =\left(\begin{array}{ccccc}
@@ -730,8 +731,8 @@ We now want to hit both sides with
 A_{1}v_{k}=\left(\begin{array}{c}
 2\omega_{\mathrm{t}}\omega_{1}\Re\left[(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]\\
 2\omega_{\mathrm{t}}\omega_{1}\Im\left[(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]\\
-D_{\mathrm{t}}\left(1-\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|^{2}-\omega_{1}\right)\Re\left(\gamma_{\mathrm{t}}\vec{e}_{k}\right)\\
-D_{\mathrm{t}}\left(1-\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|^{2}-\omega_{1}\right)\Im\left(\gamma_{\mathrm{t}}\vec{e}_{k}\right)\\
+D_{\mathrm{t}}\left(1-\left|\vec{f}\right|^{2}-\omega_{1}\right)\Re\left(\gamma_{\mathrm{t}}\vec{e}_{k}\right)\\
+D_{\mathrm{t}}\left(1-\left|\vec{f}\right|^{2}-\omega_{1}\right)\Im\left(\gamma_{\mathrm{t}}\vec{e}_{k}\right)\\
 0
 \end{array}\right),B_{0}v_{k}=\left(\begin{array}{c}
 2\omega_{\mathrm{t}}\Re\left[i(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]\\
@@ -747,8 +748,7 @@ D_{\mathrm{t}}\Im(-i\gamma_{\mathrm{t}}\vec{e}_{k})\\
 Hence, we have
 \begin_inset Formula 
 \begin{align*}
-w_{j}^{T}A_{1}v_{k} & =\omega_{1}\Re\left[\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]\\
- & \ldots+\frac{\omega_{\mathrm{t}}^{2}}{\gamma_{\perp}}\Re\left[\gamma_{\mathrm{t}}^{2}\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|\right)\vec{e}_{k}\right]\\
+w_{j}^{T}A_{1}v_{k} & =\Re\left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}+\frac{\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}^{2}}{\gamma_{\perp}}\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|\vec{f}\right|\right)\vec{e}_{k}\right]\\
 w_{j}^{T}B_{0}v_{k} & =-\Im\left[\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right].
 \end{align*}
 
@@ -798,7 +798,7 @@ X=\left(\begin{array}{cc}
 Next, we have
 \begin_inset Formula 
 \[
-\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|\vec{e}_{k}=\left(\begin{array}{cc}
+\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left|\vec{f}\right|^{2}\vec{e}_{k}=\left(\begin{array}{cc}
 M & iM\\
 iM & -M
 \end{array}\right),
@@ -821,7 +821,7 @@ Hence, we have
 \begin_inset Formula 
 \begin{align*}
 w_{j}^{T}A_{1}v_{k} & =\omega_{1}\Re\left[\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]\\
- & \ldots+\frac{\omega_{\mathrm{t}}^{2}}{\gamma_{\perp}}\Re\left[\gamma_{\mathrm{t}}^{2}\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|\right)\vec{e}_{k}\right]\\
+ & \ldots+\frac{\omega_{\mathrm{t}}^{2}}{\gamma_{\perp}}\Re\left[\gamma_{\mathrm{t}}^{2}\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|\vec{f}\right|\right)\vec{e}_{k}\right]\\
 w_{j}^{T}B_{0}v_{k} & =-\Im\left[\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right].
 \end{align*}
 
@@ -872,7 +872,7 @@ where we have
 \begin_inset Formula 
 \begin{align}
 h_{j}\sqrt{d} & =\omega_{\mathrm{t}}^{2}\left[\Re\vec{E}\cdot\Re\left(\vec{e}_{j}\gamma_{\mathrm{t}}\right)-\Im\vec{E}\cdot\Im\left(\vec{e}_{j}\gamma_{\mathrm{t}}\right)\right]\nonumber \\
- & =\omega_{\mathrm{t}}^{2}\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\gamma_{\parallel}d}\Re\left[(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\cdot\vec{e}_{j}\gamma_{\mathrm{t}}\right].\label{eq:hj}
+ & =\omega_{\mathrm{t}}^{2}\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\gamma_{\parallel}d}\Re\left[\vec{f}\cdot\vec{e}_{j}\gamma_{\mathrm{t}}\right].\label{eq:hj}
 \end{align}
 
 \end_inset
