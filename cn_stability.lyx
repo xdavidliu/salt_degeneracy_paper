@@ -606,12 +606,12 @@ In general, the matrix is nonsingular, so we conclude that
 
 ), which is
 \begin_inset Formula 
-\begin{align*}
-g_{1\pm}\sqrt{d} & =\left(-\Im\vec{P}\cdot\Re\vec{e}_{k}+\Re\vec{P}\cdot\Im\vec{e}_{k}\right)/+D_{\mathrm{t}}\left[\Im\vec{E}\cdot\Re(\gamma_{\mathrm{t}}\vec{e}_{k})-\Re\vec{E}\cdot\Im(\gamma_{\mathrm{t}}\vec{e}_{k})\right]\\
- & =-\Im\left(\vec{e}_{k}^{\star}\cdot\vec{P}\right)-D_{\mathrm{t}}\Im\left[\vec{E}^{\star}\cdot\gamma_{\mathrm{t}}\vec{e}_{k}\right]\\
- & =-2D_{\mathrm{t}}\Im\gamma_{\mathrm{t}}\Re(\vec{e}_{k}^{\star}\cdot\vec{E})\\
- & =2D_{\mathrm{t}}\left|\gamma_{\mathrm{t}}\right|\sqrt{\gamma_{\parallel}d}\Re\left[\vec{e}_{k}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].
-\end{align*}
+\begin{align}
+g_{1\pm}\sqrt{d} & =\left(-\Im\vec{P}\cdot\Re\vec{e}_{k}+\Re\vec{P}\cdot\Im\vec{e}_{k}\right)/+D_{\mathrm{t}}\left[\Im\vec{E}\cdot\Re(\gamma_{\mathrm{t}}\vec{e}_{k})-\Re\vec{E}\cdot\Im(\gamma_{\mathrm{t}}\vec{e}_{k})\right]\nonumber \\
+ & =-\Im\left(\vec{e}_{k}^{\star}\cdot\vec{P}\right)-D_{\mathrm{t}}\Im\left[\vec{E}^{\star}\cdot\gamma_{\mathrm{t}}\vec{e}_{k}\right]\nonumber \\
+ & =-2D_{\mathrm{t}}\Im\gamma_{\mathrm{t}}\Re(\vec{e}_{k}^{\star}\cdot\vec{E})\label{eq:gk}\\
+ & =2D_{\mathrm{t}}\left|\gamma_{\mathrm{t}}\right|\sqrt{\gamma_{\parallel}d}\Re\left[\vec{e}_{k}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].\nonumber 
+\end{align}
 
 \end_inset
 
@@ -857,12 +857,12 @@ Now compute the
  We first note that
 \begin_inset Formula 
 \[
-A_{1/2}^{T}w_{k}=\left(\begin{array}{c}
+A_{1/2}^{T}w_{j}=\left(\begin{array}{c}
 0\\
 0\\
 0\\
 0\\
-h_{k}
+h_{j}
 \end{array}\right),
 \]
 
@@ -870,10 +870,10 @@ h_{k}
 
 where we have
 \begin_inset Formula 
-\begin{align*}
-h_{k}\sqrt{d} & =\omega_{\mathrm{t}}^{2}\left[\Re\vec{E}\cdot\Re\left(\vec{e}_{k}\gamma_{\mathrm{t}}\right)-\Im\vec{E}\cdot\Im\left(\vec{e}_{k}\gamma_{\mathrm{t}}\right)\right]\\
- & =\omega_{\mathrm{t}}^{2}\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\gamma_{\parallel}d}\Re\left[(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\cdot\vec{e}_{k}\gamma_{\mathrm{t}}\right].
-\end{align*}
+\begin{align}
+h_{j}\sqrt{d} & =\omega_{\mathrm{t}}^{2}\left[\Re\vec{E}\cdot\Re\left(\vec{e}_{j}\gamma_{\mathrm{t}}\right)-\Im\vec{E}\cdot\Im\left(\vec{e}_{j}\gamma_{\mathrm{t}}\right)\right]\nonumber \\
+ & =\omega_{\mathrm{t}}^{2}\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\gamma_{\parallel}d}\Re\left[(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\cdot\vec{e}_{j}\gamma_{\mathrm{t}}\right].\label{eq:hj}
+\end{align}
 
 \end_inset
 
@@ -885,70 +885,111 @@ w_{j}^{T}A_{1/2}x_{1/2}=\sum_{k}\left(-\gamma_{\parallel}^{-1}\int h_{j}g_{k}\ri
 
 \end_inset
 
-To facilitate evaluating these integrals, write
+From Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gk"
+
+\end_inset
+
+ and Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hj"
+
+\end_inset
+
+, the matrix element is
 \begin_inset Formula 
 \begin{align*}
-\vec{E}_{\pm}\gamma_{\mathrm{t}}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}) & =a_{\mp}\gamma_{\mathrm{t}}(\vec{E}_{+}\cdot\vec{E}_{-})+a_{\pm}\gamma_{\mathrm{t}}(\vec{E}_{\pm}\cdot\vec{E}_{\pm})\\
-\vec{E}_{\pm}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}) & =a_{\pm}\left|\vec{E}_{\pm}\right|^{2}+a_{\mp}(\vec{E}_{\pm}^{\star}\cdot\vec{E}_{\mp}),
+-\gamma_{\parallel}^{-1}\int h_{j}g_{k} & =2\omega_{\mathrm{t}}^{2}\int D_{\mathrm{t}}\Re\left(\vec{f}\cdot\vec{e}_{j}\gamma_{\mathrm{t}}\right)\Re\left(\vec{f}\cdot\vec{e}_{k}^{\star}\right)\\
+ & =\omega_{\mathrm{t}}^{2}\Re\int D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}+\vec{f}^{\star}\cdot\vec{e}_{k}\right).
 \end{align*}
 
 \end_inset
 
-where the first term on each row of the right-hand side transforms as the
- trivial irrep of 
-\begin_inset Formula $C_{n}$
+Now compute the first two matrix elements of 
+\begin_inset Formula $\int D_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}\right),$
 \end_inset
 
- under rotations (and so do both its real and imaginary parts), and the
- second term is a product of two partners in the same irrep.
- We then have
+ we have
+\begin_inset Formula 
+\begin{align*}
+\int D_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{1}\right)\left(\vec{f}\cdot\vec{e}_{1}^{\star}\right) & =\int D_{\mathrm{t}}\left(a_{+}\vec{E}_{+}^{2}+a_{-}\vec{E}_{+}\cdot\vec{E}_{-}\right)\left(a_{+}\left|\vec{E}_{+}\right|^{2}+a_{-}\vec{E}_{-}\cdot\vec{E}_{+}^{\star}\right)\\
+ & =a_{+}a_{-}(I_{+}+J_{+})\\
+\int D_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{1}\right)\left(\vec{f}\cdot\vec{e}_{2}^{\star}\right) & =\int D_{\mathrm{t}}\left(a_{+}\vec{E}_{+}^{2}+a_{-}\vec{E}_{+}\cdot\vec{E}_{-}\right)\left(a_{-}\left|\vec{E}_{-}\right|^{2}+a_{+}\vec{E}_{+}\cdot\vec{E}_{-}^{\star}\right)\\
+ & =a_{-}^{2}I_{-}+a_{+}^{2}K_{+}.
+\end{align*}
+
+\end_inset
+
+The other two matrix elements can then be obtained by switching plus and
+ minus, and we have
+\begin_inset Formula 
+\[
+\int D_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}\right)=\left(\begin{array}{cc}
+Q & -iQ\\
+iQ & Q
+\end{array}\right),Q=\left(\begin{array}{cc}
+a_{+}a_{-}(I_{+}+J_{+}) & a_{-}^{2}I_{-}+a_{+}^{2}K_{+}\\
+a_{+}^{2}I_{+}+a_{-}^{2}K_{-} & a_{+}a_{-}(I_{-}+J_{-})
+\end{array}\right).
+\]
+
+\end_inset
+
+Note the unconventional sign on the 
+\begin_inset Formula $i$
+\end_inset
+
+ due to the 
+\begin_inset Formula $\vec{e}_{k}^{\star}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
+Next, we compute the first two matrix elements of 
+\begin_inset Formula $\int D_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}^{\star}\cdot\vec{e}_{k}\right).$
+\end_inset
+
+ We have
 \begin_inset Formula 
 \begin{align*}
-\gamma_{\parallel}^{-1}\int h_{1+}g_{1+} & =2\omega_{\mathrm{t}}^{2}\int D_{\mathrm{t}}\Re\left[a_{\mp}\gamma_{\mathrm{t}}(\vec{E}_{+}\cdot\vec{E}_{-})\right]\left|\vec{E}_{\pm}\right|^{2}\Re(a_{\pm})\\
+\int D_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{1}\right)\left(\vec{f}^{\star}\cdot\vec{e}_{1}\right) & =\int D_{\mathrm{t}}\left(a_{+}\vec{E}_{+}^{2}+a_{-}\vec{E}_{+}\cdot\vec{E}_{-}\right)\left(a_{+}^{\star}\left|\vec{E}_{+}\right|^{2}+a_{-}^{\star}\vec{E}_{-}^{\star}\cdot\vec{E}_{+}\right)\\
+ & =a_{-}a_{+}^{\star}I_{+}+a_{+}a_{-}^{\star}K_{+}\\
+\int D_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{1}\right)\left(\vec{f}^{\star}\cdot\vec{e}_{2}\right) & =\int D_{\mathrm{t}}\left(a_{+}\vec{E}_{+}^{2}+a_{-}\vec{E}_{+}\cdot\vec{E}_{-}\right)\left(a_{-}^{\star}\left|\vec{E}_{-}\right|^{2}+a_{+}^{\star}\vec{E}_{+}^{\star}\cdot\vec{E}_{-}\right)\\
+ & =\left|a_{-}\right|^{2}I_{-}+\left|a_{+}\right|^{2}J_{+}.
 \end{align*}
 
 \end_inset
 
-
+Again, the other two matrix elements can be obtained by switching plus and
+ minus, and we have
 \begin_inset Formula 
-\begin{align*}
-\gamma_{\parallel}^{-1}\int h_{1+}g_{1+} & =2\omega_{\mathrm{t}}^{2}\int D_{\mathrm{t}}\Re\left[(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\cdot\vec{E}_{+}\gamma_{\mathrm{t}}\right]\Re\left(a_{+}\left|\vec{E}_{+}\right|^{2}+a_{-}\vec{E}_{+}^{\star}\cdot\vec{E}_{-}\right)\\
- & =2\omega_{\mathrm{t}}^{2}\Re\int D_{\mathrm{t}}\gamma_{\mathrm{t}}\left[a_{-}(\vec{E}_{-}\cdot\vec{E}_{+})\left|\vec{E}_{+}\right|^{2}\Re(a_{+})+a_{+}(\vec{E}_{+}\cdot\vec{E}_{+})\Re\left(a_{-}\vec{E}_{+}^{\star}\cdot\vec{E}_{-}\right)\right]\\
- & =2\omega_{\mathrm{t}}^{2}\Re(a_{+})\Re(a_{-}\gamma_{\mathrm{t}}I_{+})+\omega_{\mathrm{t}}^{2}\Re\left(a_{+}a_{-}J_{+}+a_{+}a_{-}^{\star}K_{+}\right).
-\end{align*}
+\[
+\int D_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}^{\star}\cdot\vec{e}_{k}\right)=\left(\begin{array}{cc}
+P & iP\\
+iP & -P
+\end{array}\right),P=\left(\begin{array}{cc}
+a_{-}a_{+}^{\star}I_{+}+a_{+}a_{-}^{\star}K_{+} & \left|a_{-}\right|^{2}I_{-}+\left|a_{+}\right|^{2}J_{+}\\
+\left|a_{+}\right|^{2}I_{+}+\left|a_{-}\right|^{2}J_{-} & a_{+}a_{-}^{\star}I_{-}+a_{-}a_{+}^{\star}K_{-}
+\end{array}\right).
+\]
 
 \end_inset
 
-Next, we have
+Putting this all together, we have
 \begin_inset Formula 
-\begin{align*}
-\gamma_{\parallel}^{-1}\int h_{-}g_{+} & =2\omega_{\mathrm{t}}^{2}\int D_{\mathrm{t}}\Re\left[(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\cdot\vec{E}_{-}\gamma_{\mathrm{t}}\right]\Re\left(a_{+}\left|\vec{E}_{+}\right|^{2}+a_{-}\vec{E}_{+}^{\star}\cdot\vec{E}_{-}\right)\\
- & =2\omega_{\mathrm{t}}^{2}\Re\int D_{\mathrm{t}}\gamma_{\mathrm{t}}\left[a_{+}(\vec{E}_{-}\cdot\vec{E}_{+})\left|\vec{E}_{+}\right|^{2}\Re(a_{+})+a_{-}(\vec{E}_{-}\cdot\vec{E}_{-})\Re\left(a_{-}\vec{E}_{+}^{\star}\cdot\vec{E}_{-}\right)\right]\\
- & =2\omega_{\mathrm{t}}^{2}\Re(a_{+})\Re(a_{+}\gamma_{\mathrm{t}}I_{+})+\omega_{\mathrm{t}}^{2}\Re\left(a_{-}^{2}J_{+}+\left|a_{-}\right|^{2}K_{+}\right).
-\end{align*}
-
-\end_inset
-
-The other two integrals can be obtained simply by switching plus and minus
- symbols:
-\begin_inset Formula 
-\begin{align*}
-\gamma_{\parallel}^{-1}\int h_{-}g_{-} & =2\omega_{\mathrm{t}}^{2}\Re(a_{-})\Re(a_{+}\gamma_{\mathrm{t}}I_{-})+\omega_{\mathrm{t}}^{2}\Re\left(a_{+}a_{-}J_{-}+a_{-}a_{+}^{\star}K_{-}\right)\\
-\gamma_{\parallel}^{-1}\int h_{+}g_{-} & =2\omega_{\mathrm{t}}^{2}\Re(a_{-})\Re(a_{-}\gamma_{\mathrm{t}}I_{-})+\omega_{\mathrm{t}}^{2}\Re\left(a_{+}^{2}J_{-}+\left|a_{+}\right|^{2}K_{-}\right).
-\end{align*}
-
-\end_inset
-
-Hence, we have
-\begin_inset Formula 
-\begin{align*}
- & w_{\pm}^{T}A_{1/2}v_{1/2}\\
- & =-\omega_{\mathrm{t}}^{2}b_{\pm}\left[2\Re(a_{\pm})\Re(a_{\mp}\gamma_{\mathrm{t}}I_{\pm})+\Re\left(a_{+}a_{-}J_{\pm}+a_{\pm}a_{\mp}^{\star}K_{\pm}\right)\right]\\
- & \ldots-\omega_{\mathrm{t}}^{2}b_{\mp}\left[2\Re(a_{\mp})\Re(a_{\mp}\gamma_{\mathrm{t}}I_{\mp})+\Re\left(a_{\pm}^{2}J_{\mp}+\left|a_{\pm}\right|^{2}K_{\mp}\right)\right].
-\end{align*}
+\[
+-\gamma_{\parallel}^{-1}\int h_{j}g_{k}=\omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}\left(\begin{array}{cc}
+Q+P & i(P-Q)\\
+i(P+Q) & Q-P
+\end{array}\right)\right].
+\]
 
 \end_inset
 
