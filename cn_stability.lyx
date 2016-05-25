@@ -788,7 +788,10 @@ X=\left(\begin{array}{cc}
 Next, we have
 \begin_inset Formula 
 \[
-\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left|\vec{f}\right|^{2}\vec{e}_{k}=\left(\begin{array}{cc}
+\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left|\vec{f}\right|^{2}\vec{e}_{k}=\left(\left|a_{+}\right|^{2}I_{+}+\left|a_{-}\right|^{2}I_{-}\right)\left(\begin{array}{cc}
+X & iX\\
+iX & -X
+\end{array}\right)+\left(\begin{array}{cc}
 M & iM\\
 iM & -M
 \end{array}\right),
@@ -800,8 +803,8 @@ where
 \begin_inset Formula 
 \[
 M=\left(\begin{array}{cc}
-a_{+}^{\star}a_{-}J_{+}+a_{+}a_{-}^{\star}K_{+} & \left|a_{+}\right|^{2}I_{+}+\left|a_{-}\right|^{2}I_{-}\\
-\left|a_{+}\right|^{2}I_{+}+\left|a_{-}\right|^{2}I_{-} & a_{+}^{\star}a_{-}K_{-}+a_{+}a_{-}^{\star}J_{-}
+a_{+}^{\star}a_{-}J_{+}+a_{+}a_{-}^{\star}K_{+} & 0\\
+0 & a_{+}^{\star}a_{-}K_{-}+a_{+}a_{-}^{\star}J_{-}
 \end{array}\right).
 \]
 
@@ -810,7 +813,7 @@ a_{+}^{\star}a_{-}J_{+}+a_{+}a_{-}^{\star}K_{+} & \left|a_{+}\right|^{2}I_{+}+\l
 Hence, we have
 \begin_inset Formula 
 \begin{align*}
-w_{j}^{T}A_{1}v_{k} & =\omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}\left(\omega_{\mathrm{1}}H+G_{D}\right)\left(\begin{array}{cc}
+w_{j}^{T}A_{1}v_{k} & =\omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}\left(\omega_{\mathrm{1}}H+G_{D}-\left|a_{+}\right|^{2}I_{+}-\left|a_{-}\right|^{2}I_{-}\right)\left(\begin{array}{cc}
 X & iX\\
 iX & -X
 \end{array}\right)-\gamma_{\mathrm{t}}\left(\begin{array}{cc}
@@ -825,10 +828,6 @@ iX & -X
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Now compute the 
 \begin_inset Formula $A_{1/2}$
 \end_inset
@@ -976,11 +975,7 @@ i(P+Q) & Q-P
 Putting all the matrix elements in the eigenproblem together, we have
 \begin_inset Formula 
 \begin{align*}
- & \sigma\Im\left[\gamma_{\mathrm{t}}H\left(\begin{array}{cc}
-X & iX\\
-iX & -X
-\end{array}\right)\right]\vec{b}\\
- & =\Re\left\{ \gamma_{\mathrm{t}}\left[\left(\omega_{\mathrm{1}}H+G_{D}\right)\left(\begin{array}{cc}
+ & \Re\left\{ \gamma_{\mathrm{t}}\left[\left(\omega_{\mathrm{1}}H+G_{D}-\left|a_{+}\right|^{2}I_{+}-\left|a_{-}\right|^{2}I_{-}\right)\left(\begin{array}{cc}
 X & iX\\
 iX & -X
 \end{array}\right)-\left(\begin{array}{cc}
@@ -989,7 +984,11 @@ iM & -M
 \end{array}\right)-\left(\begin{array}{cc}
 Q+P & i(P-Q)\\
 i(P+Q) & Q-P
-\end{array}\right)\right]\right\} \vec{b}.
+\end{array}\right)\right]\right\} \vec{b}\\
+ & =\sigma\Im\left[\gamma_{\mathrm{t}}H\left(\begin{array}{cc}
+X & iX\\
+iX & -X
+\end{array}\right)\right]\vec{b}.
 \end{align*}
 
 \end_inset
