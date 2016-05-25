@@ -534,8 +534,8 @@ Having considered the separate cases
 \begin_inset Formula $a_{\pm}=\left|a_{\pm}\right|e^{i\theta_{\pm}}$
 \end_inset
 
- and define the squared relative phase 
-\begin_inset Formula $z=e^{2i(\theta_{-}-\theta_{+})}$
+ and define the relative phase 
+\begin_inset Formula $z=e^{i(\theta_{-}-\theta_{+})}$
 \end_inset
 
 .
@@ -554,7 +554,7 @@ reference "eq:matrix_further"
 , and obtain
 \begin_inset Formula 
 \[
-\left|a_{\mp}\right|^{2}I_{\mp}+\left|a_{\pm}\right|^{2}\left(I_{\pm}+J_{\pm}+z^{\mp1}K_{\pm}\right)=\omega_{1}H+G_{D}.
+\left|a_{\mp}\right|^{2}I_{\mp}+\left|a_{\pm}\right|^{2}\left(I_{\pm}+J_{\pm}+z^{\mp2}K_{\pm}\right)=\omega_{1}H+G_{D}.
 \]
 
 \end_inset
@@ -563,8 +563,8 @@ Combining the two into a matrix equation, we have
 \begin_inset Formula 
 \[
 \left(\begin{array}{cc}
-I_{+}+J_{+}+z^{\star}K_{+} & I_{-}\\
-I_{+} & I_{-}+J_{-}+zK_{-}
+I_{+}+J_{+}+z^{-2}K_{+} & I_{-}\\
+I_{+} & I_{-}+J_{-}+z^{2}K_{-}
 \end{array}\right)\left(\begin{array}{c}
 \left|a_{+}\right|^{2}\\
 \left|a_{-}\right|^{2}
@@ -587,7 +587,7 @@ Inverting the matrix, we have
 where
 \begin_inset Formula 
 \begin{equation}
-T_{\pm}=\frac{J_{\mp}+z^{\pm1}K_{\mp}}{\left(I_{+}+J_{+}+z^{\star}K_{+}\right)\left(I_{-}+J_{-}+zK_{-}\right)-I_{+}I_{-}}.\label{eq:T}
+T_{\pm}=\frac{J_{\mp}+z^{\pm2}K_{\mp}}{\left(I_{+}+J_{+}+z^{-2}K_{+}\right)\left(I_{-}+J_{-}+z^{2}K_{-}\right)-I_{+}I_{-}}.\label{eq:T}
 \end{equation}
 
 \end_inset
@@ -652,81 +652,6 @@ reference "eq:omega1"
 
 \begin_layout Paragraph
 The 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- case for 
-\begin_inset Formula $n=4\ell$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In this case, we have 
-\begin_inset Formula $J_{-}=J_{+}=J$
-\end_inset
-
- and 
-\begin_inset Formula $K_{-}=K_{+}=K$
-\end_inset
-
-.
- Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:T"
-
-\end_inset
-
- then becomes
-\begin_inset Formula 
-\[
-T_{\pm}=\frac{J+z^{\pm}K}{\left(I+J+z^{\star}K\right)\left(I+J+zK\right)-I^{2}}.
-\]
-
-\end_inset
-
-Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:omega1"
-
-\end_inset
-
- then results in 
-\begin_inset Formula $z=\pm1$
-\end_inset
-
-, resulting in 
-\begin_inset Formula $T_{+}=T_{-}=T$
-\end_inset
-
-, and giving the standing lasing modes
-\begin_inset Formula 
-\begin{align*}
-\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J+K}}\left(\vec{E}_{+}\pm\vec{E}_{-}\right)\\
-\omega & =\omega_{\mathrm{t}}-\frac{\Im\left[G_{D}/(2I+J+K)\right]d}{\Im\left[H/(2I+J+K)\right]}
-\end{align*}
-
-\end_inset
-
-and
-\begin_inset Formula 
-\begin{align*}
-\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J-K}}\left(\vec{E}_{+}\pm i\vec{E}_{-}\right)\\
-\omega & =\omega_{\mathrm{t}}-\frac{\Im\left[G_{D}/(2I+J-K)\right]d}{\Im\left[H/(2I+J-K)\right]}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-The 
 \begin_inset Formula $C_{n}$
 \end_inset
 
@@ -768,6 +693,72 @@ The
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
+ case for 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case, we have 
+\begin_inset Formula $J_{-}=J_{+}=J$
+\end_inset
+
+ and 
+\begin_inset Formula $K_{-}=K_{+}=K$
+\end_inset
+
+.
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:T"
+
+\end_inset
+
+ then becomes
+\begin_inset Formula 
+\[
+T_{\pm}=\frac{J+z^{\pm2}K}{\left(I+J+z^{-2}K\right)\left(I+J+z^{2}K\right)-I^{2}}.
+\]
+
+\end_inset
+
+Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:omega1"
+
+\end_inset
+
+ then requires that 
+\begin_inset Formula $T_{+}=T_{-}=T$
+\end_inset
+
+, which results in 
+\begin_inset Formula $z^{2}=\pm1$
+\end_inset
+
+ and gives
+\begin_inset Formula 
+\begin{align}
+\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{J+2I+z^{2}K}}\left(\vec{E}_{+}+z\vec{E}_{-}\right)\nonumber \\
+\omega & =\omega_{\mathrm{t}}-\frac{\Im\left[G/(J+2I+z^{2}K)\right]d}{\Im\left[H/(J+2I+z^{2}K)\right]}.\label{eq:Cnv solution}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+The 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
  case for all 
 \begin_inset Formula $n\neq4\ell$
 \end_inset
@@ -784,8 +775,12 @@ In this case, we have
 \begin_inset Formula $K_{-}=K_{+}=0$
 \end_inset
 
-, which gives 
+, which automatically gives 
 \begin_inset Formula $T_{+}=T_{-}=T$
+\end_inset
+
+, without any constraints on 
+\begin_inset Formula $z^{2}$
 \end_inset
 
 .
@@ -801,28 +796,19 @@ reference "eq:omega1"
 \begin_inset Formula $z$
 \end_inset
 
-, and we have
-\begin_inset Formula 
-\[
-\left|a_{\pm}\right|^{2}=\frac{J\left(\omega_{1}H+G_{D}\right)}{\left(I+J\right)^{2}-I^{2}}=\frac{\omega_{1}H+G_{D}}{J+2I}.
-\]
+, so the result is again 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Cnv solution"
 
 \end_inset
 
-We then obtain the lasing solutions
-\begin_inset Formula 
-\begin{align*}
-\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{J+2I}}\left(\vec{E}_{+}+e^{i\theta}\vec{E}_{-}\right)\\
-\omega & =\omega_{\mathrm{t}}-\frac{\Im\left[G/(J+2I)\right]d}{\Im\left[H/(J+2I)\right]},
-\end{align*}
-
+, except this time 
+\begin_inset Formula $z$
 \end_inset
 
-where 
-\begin_inset Formula $\theta$
-\end_inset
-
- is an arbitrary angle.
+ can be any phase.
+ 
 \end_layout
 
 \end_body
