@@ -731,8 +731,8 @@ We now want to hit both sides with
 A_{1}v_{k}=\left(\begin{array}{c}
 2\omega_{\mathrm{t}}\omega_{1}\Re\left[(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]\\
 2\omega_{\mathrm{t}}\omega_{1}\Im\left[(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]\\
-D_{\mathrm{t}}\left(1-\left|\vec{f}\right|^{2}-\omega_{1}\right)\Re\left(\gamma_{\mathrm{t}}\vec{e}_{k}\right)\\
-D_{\mathrm{t}}\left(1-\left|\vec{f}\right|^{2}-\omega_{1}\right)\Im\left(\gamma_{\mathrm{t}}\vec{e}_{k}\right)\\
+D_{\mathrm{t}}\Re\left[\gamma_{\perp}(1-|\vec{f}|^{2})-\omega_{1}\gamma_{\mathrm{t}}\right]\\
+D_{\mathrm{t}}\Im\left[\gamma_{\perp}(1-|\vec{f}|^{2})-\omega_{1}\gamma_{\mathrm{t}}\right]\\
 0
 \end{array}\right),B_{0}v_{k}=\left(\begin{array}{c}
 2\omega_{\mathrm{t}}\Re\left[i(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]\\
@@ -748,23 +748,13 @@ D_{\mathrm{t}}\Im(-i\gamma_{\mathrm{t}}\vec{e}_{k})\\
 Hence, we have
 \begin_inset Formula 
 \begin{align*}
-w_{j}^{T}A_{1}v_{k} & =\Re\left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}+\frac{\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}^{2}}{\gamma_{\perp}}\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|\vec{f}\right|^{2}\right)\vec{e}_{k}\right]\\
+w_{j}^{T}A_{1}v_{k} & =\Re\left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}+\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|\vec{f}\right|^{2}\right)\vec{e}_{k}\right]\\
 w_{j}^{T}B_{0}v_{k} & =-\Im\left[\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right].
 \end{align*}
 
 \end_inset
 
-It is strange that the coefficient in front of the hole-burning term is
- 
-\begin_inset Formula $\gamma_{\mathrm{t}}^{2}D_{\mathrm{t}}/\gamma_{\perp}$
-\end_inset
-
- rather than 
-\begin_inset Formula $\gamma_{\mathrm{t}}D_{\mathrm{t}}$
-\end_inset
-
- as in the lasing part of the perturbation theory.
- Now evaluate the integrals.
+Now evaluate the integrals.
  We recall that
 \begin_inset Formula 
 \[
@@ -820,10 +810,10 @@ a_{+}^{\star}a_{-}J_{+}+a_{+}a_{-}^{\star}K_{+} & \left|a_{+}\right|^{2}I_{+}+\l
 Hence, we have
 \begin_inset Formula 
 \begin{align*}
-w_{j}^{T}A_{1}v_{k} & =\omega_{\mathrm{t}}^{2}\Re\left[\left(\omega_{\mathrm{1}}\gamma_{\mathrm{t}}H+\frac{\gamma_{\mathrm{t}}G_{D}}{\gamma_{\perp}}\right)\left(\begin{array}{cc}
+w_{j}^{T}A_{1}v_{k} & =\omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}\left(\omega_{\mathrm{1}}H+G_{D}\right)\left(\begin{array}{cc}
 X & iX\\
 iX & -X
-\end{array}\right)-\frac{\gamma_{\mathrm{t}}^{2}}{\gamma_{\perp}}\left(\begin{array}{cc}
+\end{array}\right)-\gamma_{\mathrm{t}}\left(\begin{array}{cc}
 M & iM\\
 iM & -M
 \end{array}\right)\right]\\
