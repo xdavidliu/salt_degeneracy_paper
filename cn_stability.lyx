@@ -1002,24 +1002,28 @@ Now evaluate the
 \begin_inset Formula $\Im$
 \end_inset
 
-, and we have
+.
+ Note that 
+\begin_inset Formula $Q$
+\end_inset
+
+ is the only matrix with a different block structure from the others, and
+ define 
+\begin_inset Formula $\tilde{P}=P+M-WX$
+\end_inset
+
+.
+ We then have
 \begin_inset Formula 
-\begin{align*}
- & \left[\left(\begin{array}{cc}
-\Re(\gamma_{\mathrm{t}}W)X & -\Im(\gamma_{\mathrm{t}}W)X\\
--\Im(\gamma_{\mathrm{t}}W)X & -\Re(\gamma_{\mathrm{t}}W)X
-\end{array}\right)+\left(\begin{array}{cc}
--\Re(\gamma_{\mathrm{t}}M) & \Im(\gamma_{\mathrm{t}}M)\\
-\Im(\gamma_{\mathrm{t}}M) & \Re(\gamma_{\mathrm{t}}M)
-\end{array}\right)\right]\vec{b}\\
- & =\left[\left(\begin{array}{cc}
-\Re\left[\gamma_{\mathrm{t}}(Q+P)\right] & \Im\left[\gamma_{\mathrm{t}}(Q-P)\right]\\
--\Im\left[\gamma_{\mathrm{t}}(Q+P)\right] & \Re\left[\gamma_{\mathrm{t}}(Q-P)\right]
-\end{array}\right)+\sigma_{1}\left(\begin{array}{cc}
+\begin{equation}
+0=\left(\begin{array}{cc}
+\Re\left[\gamma_{\mathrm{t}}(Q+\tilde{P})\right] & \Im\left[\gamma_{\mathrm{t}}(Q-\tilde{P})\right]\\
+-\Im\left[\gamma_{\mathrm{t}}(Q+\tilde{P})\right] & \Re\left[\gamma_{\mathrm{t}}(Q-\tilde{P})\right]
+\end{array}\right)\vec{b}+\sigma_{1}\left(\begin{array}{cc}
 \Im(\gamma_{\mathrm{t}}H)X & \Re(\gamma_{\mathrm{t}}H)X\\
 \Re(\gamma_{\mathrm{t}}H)X & -\Im(\gamma_{\mathrm{t}}H)X
-\end{array}\right)\right]\vec{b}.
-\end{align*}
+\end{array}\right)\vec{b}.\label{eq:4x4_eigenproblem}
+\end{equation}
 
 \end_inset
 
@@ -1044,7 +1048,11 @@ We now examine the case
 \begin_inset Formula $M$
 \end_inset
 
- is the zero matrix.
+ is the zero matrix, hence, 
+\begin_inset Formula $\tilde{P}=P$
+\end_inset
+
+.
  We also have the matrices
 \begin_inset Formula 
 \begin{align*}
@@ -1136,16 +1144,70 @@ The first eigenproblem has a zero eigenvalue which simply comes from the
  The second eigenvalue of the first eigenproblem can be easily obtained
  using the first column of the matrix as an ansatz, from which we obtain
 \begin_inset Formula 
-\[
+\begin{equation}
 \vec{p}=\left(\begin{array}{c}
 \Im(HI_{+}^{\star})\\
 \Re(HI_{+}^{\star})
-\end{array}\right),\sigma_{1}=-\frac{2a_{+}^{2}\Im(HI_{+}^{\star})}{\left|H\right|^{2}}.
-\]
+\end{array}\right),\sigma_{1}=-\frac{2a_{+}^{2}\Im(HI_{+}^{\star})}{\left|H\right|^{2}}.\label{eq:first_eigenvalue}
+\end{equation}
 
 \end_inset
 
-Now for the second eigenproblem, we first look for the eigenvalues of
+For high-
+\begin_inset Formula $Q$
+\end_inset
+
+ modes, we have 
+\begin_inset Formula $G_{\varepsilon}$
+\end_inset
+
+, 
+\begin_inset Formula $G_{D}$
+\end_inset
+
+, and 
+\begin_inset Formula $I_{+}$
+\end_inset
+
+ all have positive real parts of 
+\begin_inset Formula $\mathcal{O}(1)$
+\end_inset
+
+ and imaginary parts that are 
+\begin_inset Formula $\mathcal{O}(1/Q)$
+\end_inset
+
+.
+ We then have
+\begin_inset Formula 
+\begin{equation}
+\Im(HI_{+}^{\star})=\left|I_{+}\right|\Im H+\mathcal{O}\left(\frac{1}{Q}\right)=\left|I_{+}\right|\left(\frac{2\left|G_{\varepsilon}\right|}{\omega_{\mathrm{t}}}+\frac{\left|G_{D}\right|\left|\gamma_{\mathrm{t}}\right|^{2}}{\gamma_{\perp}}\right)+\mathcal{O}\left(\frac{1}{Q}\right),\label{eq:Im(HI)}
+\end{equation}
+
+\end_inset
+
+so 
+\begin_inset Formula $\Im(HI_{+}^{\star})$
+\end_inset
+
+ is positive to lowest order in 
+\begin_inset Formula $Q$
+\end_inset
+
+, making 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ negative in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:first_eigenvalue"
+
+\end_inset
+
+.
+ Now for the second eigenproblem, we first look for the eigenvalues of
 \begin_inset Formula 
 \[
 \mathbb{A}=\left(\begin{array}{cc}
@@ -1182,6 +1244,240 @@ Comparing
 \begin_inset Formula 
 \[
 \sigma_{1}=\frac{-a_{+}^{2}}{\left|H\right|^{2}}\left[\Im(HJ_{+}^{\star})\pm\sqrt{\Im(HJ_{+}^{\star})+\left|H\right|^{2}\left(\left|K_{+}\right|^{2}-\left|J_{+}\right|^{2}\right)}\right].
+\]
+
+\end_inset
+
+For high-
+\begin_inset Formula $Q$
+\end_inset
+
+ lasing modes, we have 
+\begin_inset Formula $\Im(HJ_{+}^{\star})$
+\end_inset
+
+ being positive, similar to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Im(HI)"
+
+\end_inset
+
+.
+ Hence, as long as 
+\begin_inset Formula $\left|K_{+}\right|<\left|J_{+}\right|$
+\end_inset
+
+, both 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ eigenvalues here are negative.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Standing lasing mode
+\end_layout
+
+\begin_layout Standard
+We now examine the case where both 
+\begin_inset Formula $a_{\pm}=0$
+\end_inset
+
+, which we found before can only occur in 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ geometries.
+ Here, we omit the 
+\begin_inset Formula $\pm$
+\end_inset
+
+ signs on 
+\begin_inset Formula $I$
+\end_inset
+
+, 
+\begin_inset Formula $J$
+\end_inset
+
+, and 
+\begin_inset Formula $K$
+\end_inset
+
+ because mirror symmetry forces + and - versions to be equal.
+ We only keep track of the relative phase 
+\begin_inset Formula $z$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $a_{+}=\left|a_{+}\right|$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{-}=za_{+}$
+\end_inset
+
+.
+ We then have 
+\begin_inset Formula $W=(J+z^{2}K)a_{+}^{2}$
+\end_inset
+
+, and
+\begin_inset Formula 
+\begin{align*}
+M & =a_{+}^{2}\left(\begin{array}{cc}
+zJ+z^{\star}K & 0\\
+0 & zK+z^{\star}J
+\end{array}\right)\\
+Q & =a_{+}^{2}\left(\begin{array}{cc}
+z(I+J) & z^{2}I+K\\
+I+z^{2}K & z(I+J)
+\end{array}\right)\\
+P & =a_{+}^{2}\left(\begin{array}{cc}
+zI+z^{\star}K & I+J\\
+I+J & zK+z^{\star}I
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+We then have
+\begin_inset Formula 
+\begin{align*}
+\tilde{P} & =a_{+}^{2}\left(\begin{array}{cc}
+z(I+J)+2z^{\star}K & I-z^{2}K\\
+I-z^{2}K & z^{\star}(I+J)+2zK
+\end{array}\right)\\
+Q-\tilde{P} & =a_{+}^{2}\left(\begin{array}{cc}
+-2z^{\star}K & (z^{2}-1)I+(z^{2}+1)K\\
+2z^{2}K & (z-z^{\star})(I+J)-2zK
+\end{array}\right)\\
+Q+\tilde{P} & =a_{+}^{2}\left(\begin{array}{cc}
+2z(I+J)+2z^{\star}K & (z^{2}+1)I+(z^{2}-1)K\\
+2I & (z+z^{\star})(I+J)+2zK
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+The case 
+\begin_inset Formula $n=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, 
+\begin_inset Formula $K\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $z^{2}=\pm1$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $z^{2}=1$
+\end_inset
+
+, we have 
+\begin_inset Formula $z=z^{\star}$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{align*}
+Q-\tilde{P} & =2Ka_{+}^{2}\left(\begin{array}{cc}
+-z & 1\\
+1 & -z
+\end{array}\right)\\
+Q+\tilde{P} & =2a_{+}^{2}\left(\begin{array}{cc}
+z(I+J+K) & I\\
+I & z(I+J+K)
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:4x4_eigenproblem"
+
+\end_inset
+
+ then becomes
+\begin_inset Formula 
+\[
+0=\left(\begin{array}{cccc}
+z\Re\left[\gamma_{\mathrm{t}}(I+J+K)\right] & \Re\left(\gamma_{\mathrm{t}}I\right) & -z\Im(\gamma_{\mathrm{t}}K) & \Im(\gamma_{\mathrm{t}}K)\\
+\Re\left(\gamma_{\mathrm{t}}I\right) & z\Re\left[\gamma_{\mathrm{t}}(I+J+K)\right] & \Im(\gamma_{\mathrm{t}}K) & -z\Im(\gamma_{\mathrm{t}}K)\\
+-z\Im\left[\gamma_{\mathrm{t}}(I+J+K)\right] & -\Im\left(\gamma_{\mathrm{t}}I\right) & -z\Re(\gamma_{\mathrm{t}}K) & \Re(\gamma_{\mathrm{t}}K)\\
+-\Im\left(\gamma_{\mathrm{t}}I\right) & -z\Im\left[\gamma_{\mathrm{t}}(I+J+K)\right] & \Re(\gamma_{\mathrm{t}}K) & -z\Re(\gamma_{\mathrm{t}}K)
+\end{array}\right)2a_{+}^{2}\vec{b}+\sigma_{1}\ldots\vec{b}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+The case 
+\begin_inset Formula $n\neq4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, 
+\begin_inset Formula $K=0$
+\end_inset
+
+.
+ We then have
+\begin_inset Formula 
+\begin{align*}
+Q-\tilde{P} & =a_{+}^{2}\left(\begin{array}{cc}
+0 & (z^{2}-1)I\\
+0 & (z-z^{\star})(I+J)
+\end{array}\right)\\
+Q+\tilde{P} & =a_{+}^{2}\left(\begin{array}{cc}
+2z(I+J) & (z^{2}+1)I\\
+2I & (z+z^{\star})(I+J)
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:4x4_eigenproblem"
+
+\end_inset
+
+ then becomes
+\begin_inset Formula 
+\[
+0=\left(\begin{array}{cccc}
+\Re\left[2\gamma_{\mathrm{t}}z(I+J)\right] & \Re\left[\gamma_{\mathrm{t}}(z^{2}+1)I\right] & 0 & \Im\left[\gamma_{\mathrm{t}}(z^{2}-1)I\right]\\
+\Re\left(2\gamma_{\mathrm{t}}I\right) & \Re\left[\gamma_{\mathrm{t}}(z+z^{\star})(I+J)\right] & 0 & \Im\left[\gamma_{\mathrm{t}}(z-z^{\star})(I+J)\right]\\
+-\Im\left[2\gamma_{\mathrm{t}}z(I+J)\right] & -\Im\left[\gamma_{\mathrm{t}}(z^{2}+1)I\right] & 0 & \Re\left[\gamma_{\mathrm{t}}(z^{2}-1)I\right]\\
+-\Im\left(2\gamma_{\mathrm{t}}I\right) & -\Im\left[\gamma_{\mathrm{t}}(z+z^{\star})(I+J)\right] & 0 & \Re\left[\gamma_{\mathrm{t}}(z-z^{\star})(I+J)\right]
+\end{array}\right)a_{+}^{2}\vec{b}+\sigma_{1}\ldots\vec{b}.
 \]
 
 \end_inset
