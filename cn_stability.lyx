@@ -904,8 +904,8 @@ reference "eq:hj"
 , the matrix element is
 \begin_inset Formula 
 \begin{align*}
--\gamma_{\parallel}^{-1}\int h_{j}g_{k} & =2\omega_{\mathrm{t}}^{2}\int D_{\mathrm{t}}\Re\left(\vec{f}\cdot\vec{e}_{j}\gamma_{\mathrm{t}}\right)\Re\left(\vec{f}\cdot\vec{e}_{k}^{\star}\right)\\
- & =\omega_{\mathrm{t}}^{2}\Re\int D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}+\vec{f}^{\star}\cdot\vec{e}_{k}\right).
+-\gamma_{\parallel}^{-1}\int h_{j}g_{k} & =-2\omega_{\mathrm{t}}^{2}\int D_{\mathrm{t}}\Re\left(\vec{f}\cdot\vec{e}_{j}\gamma_{\mathrm{t}}\right)\Re\left(\vec{f}\cdot\vec{e}_{k}^{\star}\right)\\
+ & =-\omega_{\mathrm{t}}^{2}\Re\int D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}+\vec{f}^{\star}\cdot\vec{e}_{k}\right).
 \end{align*}
 
 \end_inset
@@ -985,7 +985,7 @@ a_{-}a_{+}^{\star}I_{+}+a_{+}a_{-}^{\star}K_{+} & \left|a_{-}\right|^{2}I_{-}+\l
 Putting this all together, we have
 \begin_inset Formula 
 \[
--\gamma_{\parallel}^{-1}\int h_{j}g_{k}=\omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}\left(\begin{array}{cc}
+-\gamma_{\parallel}^{-1}\int h_{j}g_{k}=-\omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}\left(\begin{array}{cc}
 Q+P & i(P-Q)\\
 i(P+Q) & Q-P
 \end{array}\right)\right].
