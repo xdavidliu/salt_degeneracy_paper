@@ -747,9 +747,9 @@ D_{\mathrm{t}}\Im(-i\gamma_{\mathrm{t}}\vec{e}_{k})\\
 Hence, we have
 \begin_inset Formula 
 \begin{align*}
-w_{k}^{T}A_{1}v_{k} & =\omega_{1}\Re\left[\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]\\
+w_{j}^{T}A_{1}v_{k} & =\omega_{1}\Re\left[\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]\\
  & \ldots+\frac{\omega_{\mathrm{t}}^{2}}{\gamma_{\perp}}\Re\left[\gamma_{\mathrm{t}}^{2}\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|\right)\vec{e}_{k}\right]\\
-w_{k}^{T}B_{0}v_{k} & =\Re\left[i\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right].
+w_{j}^{T}B_{0}v_{k} & =-\Im\left[\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right].
 \end{align*}
 
 \end_inset
@@ -764,6 +764,68 @@ It is strange that the coefficient in front of the hole-burning term is
 \end_inset
 
  as in the lasing part of the perturbation theory.
+ Now evaluate the integrals.
+ We recall that
+\begin_inset Formula 
+\[
+\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}H=\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}(G_{\varepsilon}+\gamma_{\mathrm{t}}G_{D}).
+\]
+
+\end_inset
+
+Hence, we have
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}=\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}H\left(\begin{array}{cc}
+X & iX\\
+iX & -X
+\end{array}\right),
+\]
+
+\end_inset
+
+where we have defined the matrix
+\begin_inset Formula 
+\[
+X=\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right).
+\]
+
+\end_inset
+
+Next, we have
+\begin_inset Formula 
+\[
+\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left|a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\right|\vec{e}_{k}=\left(\begin{array}{cc}
+M & iM\\
+iM & -M
+\end{array}\right),
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+M=\left(\begin{array}{cc}
+a_{+}^{\star}a_{-}J_{+}+a_{+}a_{-}^{\star}K_{+} & \left|a_{+}\right|^{2}I_{+}+\left|a_{-}\right|^{2}I_{-}\\
+\left|a_{+}\right|^{2}I_{+}+\left|a_{-}\right|^{2}I_{-} & a_{+}^{\star}a_{-}K_{-}+a_{+}a_{-}^{\star}J_{-}
+\end{array}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now compute the 
+\begin_inset Formula $A_{1/2}$
+\end_inset
+
+ matrix element.
  We first note that
 \begin_inset Formula 
 \[
