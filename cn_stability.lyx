@@ -973,6 +973,27 @@ i(P+Q) & Q-P
 
 \end_inset
 
+Putting all the matrix elements in the eigenproblem together, we have
+\begin_inset Formula 
+\begin{align*}
+ & \sigma\Im\left[\gamma_{\mathrm{t}}H\left(\begin{array}{cc}
+X & iX\\
+iX & -X
+\end{array}\right)\right]\vec{b}\\
+ & =\Re\left\{ \gamma_{\mathrm{t}}\left[\left(\omega_{\mathrm{1}}H+G_{D}\right)\left(\begin{array}{cc}
+X & iX\\
+iX & -X
+\end{array}\right)-\left(\begin{array}{cc}
+M & iM\\
+iM & -M
+\end{array}\right)-\left(\begin{array}{cc}
+Q+P & i(P-Q)\\
+i(P+Q) & Q-P
+\end{array}\right)\right]\right\} \vec{b}.
+\end{align*}
+
+\end_inset
+
 
 \end_layout
 
