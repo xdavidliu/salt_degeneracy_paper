@@ -189,7 +189,7 @@ where
 \vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\gamma_{\parallel}d}\vec{f}\\
 \vec{f} & =a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-}\\
 \omega & =\omega_{\mathrm{t}}+\omega_{1}d\\
-\vec{P} & =D_{\mathrm{t}}\sqrt{\gamma_{\parallel}d}\vec{f}\\
+\vec{P} & =\left|\gamma_{\mathrm{t}}\right|^{-1}D_{\mathrm{t}}\gamma_{\mathrm{t}}\sqrt{\gamma_{\parallel}d}\vec{f}\\
 D & =D_{\mathrm{t}}\left(1+d-d\left|\vec{f}\right|^{2}\right),
 \end{align*}
 
@@ -1015,11 +1015,174 @@ Now evaluate the
  & =\left[\left(\begin{array}{cc}
 \Re\left[\gamma_{\mathrm{t}}(Q+P)\right] & \Im\left[\gamma_{\mathrm{t}}(Q-P)\right]\\
 -\Im\left[\gamma_{\mathrm{t}}(Q+P)\right] & \Re\left[\gamma_{\mathrm{t}}(Q-P)\right]
-\end{array}\right)+\sigma\left(\begin{array}{cc}
+\end{array}\right)+\sigma_{1}\left(\begin{array}{cc}
 \Im(\gamma_{\mathrm{t}}H)X & \Re(\gamma_{\mathrm{t}}H)X\\
 \Re(\gamma_{\mathrm{t}}H)X & -\Im(\gamma_{\mathrm{t}}H)X
-\end{array}\right)\right]\vec{b}
+\end{array}\right)\right]\vec{b}.
 \end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Circulating lasing mode
+\end_layout
+
+\begin_layout Standard
+We now examine the case 
+\begin_inset Formula $a_{-}=0$
+\end_inset
+
+.
+ We have 
+\begin_inset Formula $W=0$
+\end_inset
+
+ and 
+\begin_inset Formula $M$
+\end_inset
+
+ is the zero matrix.
+ We also have the matrices
+\begin_inset Formula 
+\begin{align*}
+Q+P & =a_{+}^{2}\left(\begin{array}{cc}
+0 & K_{+}+J_{+}\\
+2I_{+} & 0
+\end{array}\right)\\
+Q-P & =a_{+}^{2}\left(\begin{array}{cc}
+0 & K_{+}-J_{+}\\
+0 & 0
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+Hence, the eigenproblem becomes
+\begin_inset Formula 
+\begin{align*}
+ & \left(\begin{array}{cccc}
+0 & \Re\left[\gamma_{\mathrm{t}}(K_{+}+J_{+})\right] & 0 & \Im\left[\gamma_{\mathrm{t}}(K_{+}-J_{+})\right]\\
+2\Re(\gamma_{\mathrm{t}}I_{+}) & 0 & 0 & 0\\
+0 & -\Im\left[\gamma_{\mathrm{t}}(K_{+}+J_{+})\right] & 0 & \Re\left[\gamma_{\mathrm{t}}(K_{+}-J_{+})\right]\\
+-2\Im(\gamma_{\mathrm{t}}I_{+}) & 0 & 0 & 0
+\end{array}\right)a_{+}^{2}\vec{b}\\
+ & =-\sigma_{1}\left(\begin{array}{cccc}
+0 & \Im(\gamma_{\mathrm{t}}H) & 0 & \Re(\gamma_{\mathrm{t}}H)\\
+\Im(\gamma_{\mathrm{t}}H) & 0 & \Re(\gamma_{\mathrm{t}}H) & 0\\
+0 & \Re(\gamma_{\mathrm{t}}H) & 0 & -\Im(\gamma_{\mathrm{t}}H)\\
+\Re(\gamma_{\mathrm{t}}H) & 0 & -\Im(\gamma_{\mathrm{t}}H) & 0
+\end{array}\right)\vec{b}.
+\end{align*}
+
+\end_inset
+
+From the non-zero pattern, we see that this eigenproblem decouples into
+ two smaller eigenproblems:
+\begin_inset Formula 
+\begin{align*}
+0 & =\left(\begin{array}{cc}
+\Re(\gamma_{\mathrm{t}}I_{+}) & 0\\
+-\Im(\gamma_{\mathrm{t}}I_{+}) & 0
+\end{array}\right)2a_{+}^{2}\vec{p}+\sigma_{1}\mathbb{C}\vec{p}\\
+0 & =\left(\begin{array}{cc}
+\Re\left[\gamma_{\mathrm{t}}(K_{+}+J_{+})\right] & \Im\left[\gamma_{\mathrm{t}}(K_{+}-J_{+})\right]\\
+-\Im\left[\gamma_{\mathrm{t}}(K_{+}+J_{+})\right] & \Re\left[\gamma_{\mathrm{t}}(K_{+}-J_{+})\right]
+\end{array}\right)a_{+}^{2}\vec{q}+\sigma_{1}\mathbb{C}\vec{q}.
+\end{align*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\mathbb{C}=\left(\begin{array}{cc}
+\Im(\gamma_{\mathrm{t}}H) & \Re(\gamma_{\mathrm{t}}H)\\
+\Re(\gamma_{\mathrm{t}}H) & -\Im(\gamma_{\mathrm{t}}H)
+\end{array}\right).
+\]
+
+\end_inset
+
+It can be shown that 
+\begin_inset Formula $\mathbb{C}^{-1}=\mathbb{C}/\left|\gamma_{\mathrm{t}}H\right|^{2}$
+\end_inset
+
+.
+ Hence, the two smaller eigenproblems become
+\begin_inset Formula 
+\begin{align*}
+0 & =\left(\begin{array}{cc}
+\Im(HI_{+}^{\star}) & 0\\
+\Re(HI_{+}^{\star}) & 0
+\end{array}\right)\frac{2a_{+}^{2}}{\left|H\right|^{2}}\vec{p}+\sigma_{1}\vec{p}\\
+0 & =\left(\begin{array}{cc}
+\Im\left[H(K_{+}^{\star}+J_{+}^{\star})\right] & \Re\left[H(K_{+}^{\star}-J_{+}^{\star})\right]\\
+\Re\left[H(K_{+}^{\star}+J_{+}^{\star})\right] & -\Im\left[H(K_{+}^{\star}-J_{+}^{\star})\right]
+\end{array}\right)\frac{a_{+}^{2}}{\left|H\right|^{2}}\vec{q}+\sigma_{1}\vec{q}.
+\end{align*}
+
+\end_inset
+
+The first eigenproblem has a zero eigenvalue which simply comes from the
+ global phase degree of freedom, i.e.
+ 
+\begin_inset Formula $\vec{E}_{+}\rightarrow(1+i\delta)\vec{E}_{+}$
+\end_inset
+
+.
+ The second eigenvalue of the first eigenproblem can be easily obtained
+ using the first column of the matrix as an ansatz, from which we obtain
+\begin_inset Formula 
+\[
+\vec{p}=\left(\begin{array}{c}
+\Im(HI_{+}^{\star})\\
+\Re(HI_{+}^{\star})
+\end{array}\right),\sigma_{1}=-\frac{2a_{+}^{2}\Im(HI_{+}^{\star})}{\left|H\right|^{2}}.
+\]
+
+\end_inset
+
+Now for the second eigenproblem, we first look for the eigenvalues of
+\begin_inset Formula 
+\[
+\mathbb{A}=\left(\begin{array}{cc}
+\Im\left[H(K_{+}^{\star}+J_{+}^{\star})\right] & \Re\left[H(K_{+}^{\star}-J_{+}^{\star})\right]\\
+\Re\left[H(K_{+}^{\star}+J_{+}^{\star})\right] & -\Im\left[H(K_{+}^{\star}-J_{+}^{\star})\right]
+\end{array}\right),
+\]
+
+\end_inset
+
+which are 
+\begin_inset Formula $\frac{\mathrm{tr}\mathbb{A}}{2}\pm\sqrt{\frac{\mathrm{tr}\mathbb{A}}{2}-\det\mathbb{A}}$
+\end_inset
+
+.
+ We see that
+\begin_inset Formula 
+\begin{align*}
+\frac{\mathrm{tr}\mathbb{A}}{2} & =\Im(HJ_{+}^{\star})\\
+\det\mathbb{A} & =\left|H\right|^{2}\left(\left|J_{+}\right|^{2}-\left|K_{+}\right|^{2}\right).
+\end{align*}
+
+\end_inset
+
+Comparing 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ to the eigenvalues of 
+\begin_inset Formula $\mathbb{A}$
+\end_inset
+
+, we have for the second eigenproblem
+\begin_inset Formula 
+\[
+\sigma_{1}=\frac{-a_{+}^{2}}{\left|H\right|^{2}}\left[\Im(HJ_{+}^{\star})\pm\sqrt{\Im(HJ_{+}^{\star})+\left|H\right|^{2}\left(\left|K_{+}\right|^{2}-\left|J_{+}\right|^{2}\right)}\right].
+\]
 
 \end_inset
 
