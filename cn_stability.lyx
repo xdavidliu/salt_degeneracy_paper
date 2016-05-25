@@ -607,21 +607,10 @@ In general, the matrix is nonsingular, so we conclude that
 ), which is
 \begin_inset Formula 
 \begin{align*}
-g_{1\pm} & =\left(-\Im\vec{P}\cdot\Re\vec{E}_{\pm}+\Re\vec{P}\cdot\Im\vec{E}_{\pm}\right)/\sqrt{d}+D_{\mathrm{t}}\left[\Im\vec{E}\cdot\Re(\gamma_{\mathrm{t}}\vec{E}_{\pm})-\Re\vec{E}\cdot\Im(\gamma_{\mathrm{t}}\vec{E}_{\pm})\right]/\sqrt{d}\\
- & =-\Im\left(\vec{E}_{\pm}^{\star}\cdot\vec{P}\right)/\sqrt{d}-D_{\mathrm{t}}\Im\left[\vec{E}^{\star}\cdot\gamma_{\mathrm{t}}\vec{E}_{\pm}\right]/\sqrt{d}\\
- & =-2D_{\mathrm{t}}\Im\gamma_{\mathrm{t}}\Re(\vec{E}_{\pm}^{\star}\cdot\vec{E})/\sqrt{d}\\
- & =2D_{\mathrm{t}}\left|\gamma_{\mathrm{t}}\right|\sqrt{\gamma_{\parallel}}\Re\left[\vec{E}_{\pm}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].
-\end{align*}
-
-\end_inset
-
-For the other two vectors in the basis, we have
-\begin_inset Formula 
-\begin{align*}
-g_{i\pm} & =(\Im\vec{P}\cdot\Im\vec{E}_{\pm}+\Re\vec{P}\cdot\Re\vec{E}_{\pm})/\sqrt{d}-D\left[\Im\vec{E}\cdot\Im(\gamma_{\mathrm{t}}\vec{E}_{\pm})+\Re\vec{E}\cdot\Re(\gamma_{\mathrm{t}}\vec{E}_{\pm})\right]/\sqrt{d}\\
- & =\Re\left(\vec{E}_{\pm}^{\star}\cdot\vec{P}\right)/\sqrt{d}-D_{\mathrm{t}}\Re\left[\vec{E}^{\star}\cdot\gamma_{\mathrm{t}}\vec{E}_{\pm}\right]/\sqrt{d}\\
- & =2D_{\mathrm{t}}\Re(i\gamma_{\mathrm{t}})\Im(\vec{E}_{\pm}^{\star}\cdot\vec{E})/\sqrt{d}\\
- & =2D_{\mathrm{t}}\left|\gamma_{\mathrm{t}}\right|\sqrt{\gamma_{\parallel}}\Im\left[\vec{E}_{\pm}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].
+g_{1\pm}\sqrt{d} & =\left(-\Im\vec{P}\cdot\Re\vec{e}_{k}+\Re\vec{P}\cdot\Im\vec{e}_{k}\right)/+D_{\mathrm{t}}\left[\Im\vec{E}\cdot\Re(\gamma_{\mathrm{t}}\vec{e}_{k})-\Re\vec{E}\cdot\Im(\gamma_{\mathrm{t}}\vec{e}_{k})\right]\\
+ & =-\Im\left(\vec{e}_{k}^{\star}\cdot\vec{P}\right)-D_{\mathrm{t}}\Im\left[\vec{E}^{\star}\cdot\gamma_{\mathrm{t}}\vec{e}_{k}\right]\\
+ & =-2D_{\mathrm{t}}\Im\gamma_{\mathrm{t}}\Re(\vec{e}_{k}^{\star}\cdot\vec{E})\\
+ & =2D_{\mathrm{t}}\left|\gamma_{\mathrm{t}}\right|\sqrt{\gamma_{\parallel}d}\Re\left[\vec{e}_{k}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].
 \end{align*}
 
 \end_inset
@@ -689,7 +678,7 @@ The vector
 \end_inset
 
 , that 
-\begin_inset Formula $x_{1/2}=-\gamma_{\parallel}^{-1}A_{1/2}\sum b_{k}v_{k}$
+\begin_inset Formula $x_{1/2}=-\gamma_{\parallel}^{-1}A_{0}x_{1/2}$
 \end_inset
 
 .
@@ -765,7 +754,17 @@ w_{k}^{T}B_{0}v_{k} & =\Re\left[i\frac{\partial}{\partial\omega_{\mathrm{t}}}\om
 
 \end_inset
 
-We first note that
+It is strange that the coefficient in front of the hole-burning term is
+ 
+\begin_inset Formula $\gamma_{\mathrm{t}}^{2}D_{\mathrm{t}}/\gamma_{\perp}$
+\end_inset
+
+ rather than 
+\begin_inset Formula $\gamma_{\mathrm{t}}D_{\mathrm{t}}$
+\end_inset
+
+ as in the lasing part of the perturbation theory.
+ We first note that
 \begin_inset Formula 
 \[
 A_{1/2}^{T}w_{k}=\left(\begin{array}{c}
@@ -782,17 +781,8 @@ h_{k}
 where we have
 \begin_inset Formula 
 \begin{align*}
-h_{1\pm} & =\omega_{\mathrm{t}}^{2}\left[\Re\vec{E}\cdot\Re\left(\vec{E}_{\pm}\gamma_{\mathrm{t}}\right)-\Im\vec{E}\cdot\Im\left(\vec{E}_{\pm}\gamma_{\mathrm{t}}\right)\right]/\sqrt{d}\\
- & =\omega_{\mathrm{t}}^{2}\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\gamma_{\parallel}}\Re\left[(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\cdot\vec{E}_{\pm}\gamma_{\mathrm{t}}\right],
-\end{align*}
-
-\end_inset
-
-and for the other two basis vectors, we have
-\begin_inset Formula 
-\begin{align*}
-h_{i\pm} & =\omega_{\mathrm{t}}^{2}\left[\Re\vec{E}\cdot\Im(\vec{E}_{\pm}\gamma_{\mathrm{t}})+\Im\vec{E}\cdot\Re(\vec{E}_{\pm}\gamma_{\mathrm{t}})\right]/\sqrt{d}\\
- & =\omega_{\mathrm{t}}^{2}\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\gamma_{\parallel}}\Im\left[(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\cdot\vec{E}_{\pm}\gamma_{\mathrm{t}}\right].
+h_{k}\sqrt{d} & =\omega_{\mathrm{t}}^{2}\left[\Re\vec{E}\cdot\Re\left(\vec{e}_{k}\gamma_{\mathrm{t}}\right)-\Im\vec{E}\cdot\Im\left(\vec{e}_{k}\gamma_{\mathrm{t}}\right)\right]\\
+ & =\omega_{\mathrm{t}}^{2}\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\gamma_{\parallel}d}\Re\left[(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\cdot\vec{e}_{k}\gamma_{\mathrm{t}}\right].
 \end{align*}
 
 \end_inset
