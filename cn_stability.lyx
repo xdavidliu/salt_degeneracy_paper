@@ -1052,12 +1052,12 @@ reference "eq:4x4_eigenproblem"
 
  becomes
 \begin_inset Formula 
-\[
-0=\left(\begin{array}{cc}
--\Im\left[H^{\star}X(Q+\tilde{P})\right] & \Re\left[H^{\star}X(Q-\tilde{P})\right]\\
-\Re\left[H^{\star}X(Q+\tilde{P})\right] & \Im\left[H^{\star}X(Q-\tilde{P})\right]
-\end{array}\right)\vec{b}+\sigma_{1}\left|H\right|^{2}\vec{b}.
-\]
+\begin{equation}
+\left(\begin{array}{cc}
+\Im\left[X(Q+\tilde{P})/H\right] & -\Re\left[X(Q-\tilde{P})/H\right]\\
+-\Re\left[X(Q+\tilde{P})/H\right] & -\Im\left[X(Q-\tilde{P})/H\right]
+\end{array}\right)\vec{b}=\sigma_{1}\vec{b}.\label{eq:ordinary_eigenproblem}
+\end{equation}
 
 \end_inset
 
@@ -1102,92 +1102,61 @@ Q-P & =a_{+}^{2}\left(\begin{array}{cc}
 
 \end_inset
 
-Hence, the eigenproblem becomes
-\begin_inset Formula 
-\begin{align*}
- & \left(\begin{array}{cccc}
-0 & \Re\left[\gamma_{\mathrm{t}}(K_{+}+J_{+})\right] & 0 & \Im\left[\gamma_{\mathrm{t}}(K_{+}-J_{+})\right]\\
-2\Re(\gamma_{\mathrm{t}}I_{+}) & 0 & 0 & 0\\
-0 & -\Im\left[\gamma_{\mathrm{t}}(K_{+}+J_{+})\right] & 0 & \Re\left[\gamma_{\mathrm{t}}(K_{+}-J_{+})\right]\\
--2\Im(\gamma_{\mathrm{t}}I_{+}) & 0 & 0 & 0
-\end{array}\right)a_{+}^{2}\vec{b}\\
- & =-\sigma_{1}\left(\begin{array}{cccc}
-0 & \Im(\gamma_{\mathrm{t}}H) & 0 & \Re(\gamma_{\mathrm{t}}H)\\
-\Im(\gamma_{\mathrm{t}}H) & 0 & \Re(\gamma_{\mathrm{t}}H) & 0\\
-0 & \Re(\gamma_{\mathrm{t}}H) & 0 & -\Im(\gamma_{\mathrm{t}}H)\\
-\Re(\gamma_{\mathrm{t}}H) & 0 & -\Im(\gamma_{\mathrm{t}}H) & 0
-\end{array}\right)\vec{b}.
-\end{align*}
+Hence, noting that 
+\begin_inset Formula $XQ$
+\end_inset
+
+ exchanges the first and second rows of 
+\begin_inset Formula $Q$
+\end_inset
+
+, the matrix in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ordinary_eigenproblem"
 
 \end_inset
 
-From the non-zero pattern, we see that this eigenproblem decouples into
- two smaller eigenproblems:
-\begin_inset Formula 
-\begin{align*}
-0 & =\left(\begin{array}{cc}
-\Re(\gamma_{\mathrm{t}}I_{+}) & 0\\
--\Im(\gamma_{\mathrm{t}}I_{+}) & 0
-\end{array}\right)2a_{+}^{2}\vec{p}+\sigma_{1}\mathbb{C}\vec{p}\\
-0 & =\left(\begin{array}{cc}
-\Re\left[\gamma_{\mathrm{t}}(K_{+}+J_{+})\right] & \Im\left[\gamma_{\mathrm{t}}(K_{+}-J_{+})\right]\\
--\Im\left[\gamma_{\mathrm{t}}(K_{+}+J_{+})\right] & \Re\left[\gamma_{\mathrm{t}}(K_{+}-J_{+})\right]
-\end{array}\right)a_{+}^{2}\vec{q}+\sigma_{1}\mathbb{C}\vec{q}.
-\end{align*}
-
-\end_inset
-
-where
+ is
 \begin_inset Formula 
 \[
-\mathbb{C}=\left(\begin{array}{cc}
-\Im(\gamma_{\mathrm{t}}H) & \Re(\gamma_{\mathrm{t}}H)\\
-\Re(\gamma_{\mathrm{t}}H) & -\Im(\gamma_{\mathrm{t}}H)
-\end{array}\right).
+\left(\begin{array}{cccc}
+2\Im(I_{+}/H) & 0 & 0 & 0\\
+0 & \Im[(K_{+}+J_{+})/H] & 0 & -\Re[(K_{+}-J_{+})/H]\\
+-2\Re(I_{+}/H) & 0 & 0 & 0\\
+0 & -\Re[(K_{+}+J_{+})/H] & 0 & -\Im[(K_{+}-J_{+})/H]
+\end{array}\right)a_{+}^{2}
 \]
 
 \end_inset
 
-It can be shown that 
-\begin_inset Formula $\mathbb{C}^{-1}=\mathbb{C}/\left|\gamma_{\mathrm{t}}H\right|^{2}$
-\end_inset
-
-.
- Hence, the two smaller eigenproblems become
+By inspection, two of the solutions are
 \begin_inset Formula 
-\begin{align*}
-0 & =\left(\begin{array}{cc}
-\Im(HI_{+}^{\star}) & 0\\
-\Re(HI_{+}^{\star}) & 0
-\end{array}\right)\frac{2a_{+}^{2}}{\left|H\right|^{2}}\vec{p}+\sigma_{1}\vec{p}\\
-0 & =\left(\begin{array}{cc}
-\Im\left[H(K_{+}^{\star}+J_{+}^{\star})\right] & \Re\left[H(K_{+}^{\star}-J_{+}^{\star})\right]\\
-\Re\left[H(K_{+}^{\star}+J_{+}^{\star})\right] & -\Im\left[H(K_{+}^{\star}-J_{+}^{\star})\right]
-\end{array}\right)\frac{a_{+}^{2}}{\left|H\right|^{2}}\vec{q}+\sigma_{1}\vec{q}.
-\end{align*}
+\[
+\vec{b}=\left(\begin{array}{c}
+0\\
+0\\
+1\\
+0
+\end{array}\right),\sigma_{1}=0\,\mathrm{and}\,\vec{b}=\left(\begin{array}{c}
+\Im(I_{+}/H)\\
+0\\
+-\Re(I_{+}/H)\\
+0
+\end{array}\right),\sigma_{1}=2a_{+}^{2}\Im(I_{+}/H).
+\]
 
 \end_inset
 
-The first eigenproblem has a zero eigenvalue which simply comes from the
- global phase degree of freedom, i.e.
+The zero eigenvalue simply comes from the global phase degree of freedom,
+ i.e.
  
 \begin_inset Formula $\vec{E}_{+}\rightarrow(1+i\delta)\vec{E}_{+}$
 \end_inset
 
 .
- The second eigenvalue of the first eigenproblem can be easily obtained
- using the first column of the matrix as an ansatz, from which we obtain
-\begin_inset Formula 
-\begin{equation}
-\vec{p}=\left(\begin{array}{c}
-\Im(HI_{+}^{\star})\\
-\Re(HI_{+}^{\star})
-\end{array}\right),\sigma_{1}=-\frac{2a_{+}^{2}\Im(HI_{+}^{\star})}{\left|H\right|^{2}}.\label{eq:first_eigenvalue}
-\end{equation}
-
-\end_inset
-
-For high-
+ Now for the second eigenvalue, we see that for high-
 \begin_inset Formula $Q$
 \end_inset
 
@@ -1232,52 +1201,39 @@ so
 \begin_inset Formula $\sigma_{1}$
 \end_inset
 
- negative in Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:first_eigenvalue"
+ negative.
+\end_layout
 
-\end_inset
-
-.
- Now for the second eigenproblem, we first look for the eigenvalues of
+\begin_layout Standard
+The other two eigenvalues are the eigenvalues of the submatrix
 \begin_inset Formula 
 \[
 \mathbb{A}=\left(\begin{array}{cc}
-\Im\left[H(K_{+}^{\star}+J_{+}^{\star})\right] & \Re\left[H(K_{+}^{\star}-J_{+}^{\star})\right]\\
-\Re\left[H(K_{+}^{\star}+J_{+}^{\star})\right] & -\Im\left[H(K_{+}^{\star}-J_{+}^{\star})\right]
-\end{array}\right),
+\Im[(K_{+}+J_{+})/H] & -\Re[(K_{+}-J_{+})/H]\\
+-\Re[(K_{+}+J_{+})/H] & -\Im[(K_{+}-J_{+})/H]
+\end{array}\right)a_{+}^{2},
 \]
 
 \end_inset
 
-which are 
-\begin_inset Formula $\frac{\mathrm{tr}\mathbb{A}}{2}\pm\sqrt{\frac{\mathrm{tr}\mathbb{A}}{2}-\det\mathbb{A}}$
+which are simply 
+\begin_inset Formula $\sigma_{1}=\frac{\mathrm{tr}\mathbb{A}}{2}\pm\sqrt{\left(\frac{\mathrm{tr}\mathbb{A}}{2}\right)^{2}-\det\mathbb{A}}$
 \end_inset
 
 .
- We see that
+ We have
 \begin_inset Formula 
 \begin{align*}
-\frac{\mathrm{tr}\mathbb{A}}{2} & =\Im(HJ_{+}^{\star})\\
-\det\mathbb{A} & =\left|H\right|^{2}\left(\left|J_{+}\right|^{2}-\left|K_{+}\right|^{2}\right).
+\frac{\mathrm{tr}\mathbb{A}}{2} & =\Im(J_{+}/H)a_{+}^{2}\\
+\mathrm{\det}\mathbb{A} & =\frac{a_{+}^{4}}{\left|H\right|^{2}}\left(\left|J_{+}\right|^{2}-\left|K_{+}\right|^{2}\right).
 \end{align*}
 
 \end_inset
 
-Comparing 
-\begin_inset Formula $\sigma_{1}$
-\end_inset
-
- to the eigenvalues of 
-\begin_inset Formula $\mathbb{A}$
-\end_inset
-
-, we have for the second eigenproblem
+Hence, the other two eigenvalues are
 \begin_inset Formula 
 \[
-\sigma_{1}=\frac{-a_{+}^{2}}{\left|H\right|^{2}}\left[\Im(HJ_{+}^{\star})\pm\sqrt{\Im(HJ_{+}^{\star})+\left|H\right|^{2}\left(\left|K_{+}\right|^{2}-\left|J_{+}\right|^{2}\right)}\right].
+\sigma_{1}=a_{+}^{2}\Im(J_{+}/H)\pm a_{+}^{2}\sqrt{\Im(J_{+}/H)^{2}+\frac{\left|K_{+}\right|^{2}-\left|J_{+}\right|^{2}}{\left|H\right|^{2}}}.
 \]
 
 \end_inset
@@ -1287,10 +1243,10 @@ For high-
 \end_inset
 
  lasing modes, we have 
-\begin_inset Formula $\Im(HJ_{+}^{\star})$
+\begin_inset Formula $\Im(J_{+}/H)$
 \end_inset
 
- being positive, similar to Eq.
+ being negative, similar to Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1386,13 +1342,13 @@ We then have
 z(I+J)+2z^{\star}K & I-z^{2}K\\
 I-z^{2}K & z^{\star}(I+J)+2zK
 \end{array}\right)\\
-Q-\tilde{P} & =a_{+}^{2}\left(\begin{array}{cc}
--2z^{\star}K & (z^{2}-1)I+(z^{2}+1)K\\
-2z^{2}K & (z-z^{\star})(I+J)-2zK
+X(Q-\tilde{P}) & =a_{+}^{2}\left(\begin{array}{cc}
+2z^{2}K & (z-z^{\star})(I+J)-2zK\\
+-2z^{\star}K & (z^{2}-1)I+(z^{2}+1)K
 \end{array}\right)\\
-Q+\tilde{P} & =a_{+}^{2}\left(\begin{array}{cc}
-2z(I+J)+2z^{\star}K & (z^{2}+1)I+(z^{2}-1)K\\
-2I & (z+z^{\star})(I+J)+2zK
+X(Q+\tilde{P}) & =a_{+}^{2}\left(\begin{array}{cc}
+2I & (z+z^{\star})(I+J)+2zK\\
+2z(I+J)+2z^{\star}K & (z^{2}+1)I+(z^{2}-1)K
 \end{array}\right).
 \end{align*}
 
@@ -1430,35 +1386,35 @@ Here,
  and 
 \begin_inset Formula 
 \begin{align*}
-Q-\tilde{P} & =2Ka_{+}^{2}\left(\begin{array}{cc}
--z & 1\\
-1 & -z
+X(Q-\tilde{P}) & =2Ka_{+}^{2}\left(\begin{array}{cc}
+1 & -z\\
+-z & 1
 \end{array}\right)\\
-Q+\tilde{P} & =2a_{+}^{2}\left(\begin{array}{cc}
-z(I+J+K) & I\\
-I & z(I+J+K)
+X(Q+\tilde{P}) & =2a_{+}^{2}\left(\begin{array}{cc}
+I & z(I+J+K)\\
+z(I+J+K) & I
 \end{array}\right).
 \end{align*}
 
 \end_inset
 
-Eq.
+The matrix in Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:4x4_eigenproblem"
+reference "eq:ordinary_eigenproblem"
 
 \end_inset
 
  then becomes
 \begin_inset Formula 
 \[
-0=\left(\begin{array}{cccc}
-z\Re\left[\gamma_{\mathrm{t}}(I+J+K)\right] & \Re\left(\gamma_{\mathrm{t}}I\right) & -z\Im(\gamma_{\mathrm{t}}K) & \Im(\gamma_{\mathrm{t}}K)\\
-\Re\left(\gamma_{\mathrm{t}}I\right) & z\Re\left[\gamma_{\mathrm{t}}(I+J+K)\right] & \Im(\gamma_{\mathrm{t}}K) & -z\Im(\gamma_{\mathrm{t}}K)\\
--z\Im\left[\gamma_{\mathrm{t}}(I+J+K)\right] & -\Im\left(\gamma_{\mathrm{t}}I\right) & -z\Re(\gamma_{\mathrm{t}}K) & \Re(\gamma_{\mathrm{t}}K)\\
--\Im\left(\gamma_{\mathrm{t}}I\right) & -z\Im\left[\gamma_{\mathrm{t}}(I+J+K)\right] & \Re(\gamma_{\mathrm{t}}K) & -z\Re(\gamma_{\mathrm{t}}K)
-\end{array}\right)2a_{+}^{2}\vec{b}+\sigma_{1}\ldots\vec{b}.
+\left(\begin{array}{cccc}
+\Im(I/H) & \Im[z(I+J+K)/H] & -\Re(K/H) & \Re(zK/H)\\
+\Im[z(I+J+K)/H] & \Im(I/H) & \Re(zK/H) & -\Re(K/H)\\
+-\Re(I/H) & -\Re[z(I+J+K)/H] & -\Im(K/H) & \Im(zK/H)\\
+-\Re[z(I+J+K)/H] & -\Re(I/H) & \Im(zK/H) & -\Im(K/H)
+\end{array}\right)2a_{+}^{2}.
 \]
 
 \end_inset
@@ -1487,27 +1443,27 @@ Now for the case
  and
 \begin_inset Formula 
 \begin{align*}
-Q-\tilde{P} & =2a_{+}^{2}\left(\begin{array}{cc}
-zK & -I\\
--K & z(I+J-K)
+X(Q-\tilde{P}) & =2a_{+}^{2}\left(\begin{array}{cc}
+-K & z(I+J-K)\\
+zK & -I
 \end{array}\right)\\
-Q+\tilde{P} & =2a_{+}^{2}\left(\begin{array}{cc}
-z(I+J-K) & -K\\
-I & zK
+X(Q+\tilde{P}) & =2a_{+}^{2}\left(\begin{array}{cc}
+I & zK\\
+z(I+J-K) & -K
 \end{array}\right).
 \end{align*}
 
 \end_inset
 
-The eigenproblem then becomes
+The eigenproblem's matrix then becomes
 \begin_inset Formula 
 \[
-0=\left(\begin{array}{cccc}
-\Re\left[\gamma_{\mathrm{t}}z(I+J-K)\right] & -\Re\left(\gamma_{\mathrm{t}}K\right) & \Im\left(\gamma_{\mathrm{t}}zK\right) & -\Im\left(\gamma_{\mathrm{t}}I\right)\\
-\Re\left(\gamma_{\mathrm{t}}I\right) & \Re\left(\gamma_{\mathrm{t}}zK\right) & -\Im\left(\gamma_{\mathrm{t}}K\right) & \Im\left[\gamma_{\mathrm{t}}z(I+J-K)\right]\\
--\Im\left[\gamma_{\mathrm{t}}z(I+J-K)\right] & \Im\left(\gamma_{\mathrm{t}}K\right) & \Re\left(\gamma_{\mathrm{t}}zK\right) & -\Re\left(\gamma_{\mathrm{t}}I\right)\\
--\Im\left(\gamma_{\mathrm{t}}I\right) & -\Im\left(\gamma_{\mathrm{t}}zK\right) & -\Re\left(\gamma_{\mathrm{t}}K\right) & \Re\left[\gamma_{\mathrm{t}}z(I+J-K)\right]
-\end{array}\right)2a_{+}^{2}\vec{b}+\sigma_{1}\ldots\vec{b}.
+\left(\begin{array}{cccc}
+\Im(I/H) & \Im(zK/H) & \Re(K/H) & -\Re[z(I+J-K)/H]\\
+\Im[z(I+J-K)/H] & -\Im(K/H) & -\Re(zK/H) & \Re(I/H)\\
+-\Re(I/H) & -\Re(zK/H) & \Im(K/H) & -\Im[z(I+J-K)/H]\\
+-\Re[z(I+J-K)/H] & \Re(K/H) & -\Im(zK/H) & \Im(I/H)
+\end{array}\right)2a_{+}^{2}.
 \]
 
 \end_inset
@@ -1532,35 +1488,35 @@ Here,
  We then have
 \begin_inset Formula 
 \begin{align*}
-Q-\tilde{P} & =a_{+}^{2}\left(\begin{array}{cc}
-0 & (z^{2}-1)I\\
-0 & (z-z^{\star})(I+J)
+X(Q-\tilde{P}) & =a_{+}^{2}\left(\begin{array}{cc}
+0 & (z-z^{\star})(I+J)\\
+0 & (z^{2}-1)I
 \end{array}\right)\\
-Q+\tilde{P} & =a_{+}^{2}\left(\begin{array}{cc}
-2z(I+J) & (z^{2}+1)I\\
-2I & (z+z^{\star})(I+J)
+X(Q+\tilde{P}) & =a_{+}^{2}\left(\begin{array}{cc}
+2I & (z+z^{\star})(I+J)\\
+2z(I+J) & (z^{2}+1)I
 \end{array}\right).
 \end{align*}
 
 \end_inset
 
-Eq.
+The matrix in Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:4x4_eigenproblem"
+reference "eq:ordinary_eigenproblem"
 
 \end_inset
 
  then becomes
 \begin_inset Formula 
 \[
-0=\left(\begin{array}{cccc}
-\Re\left[2\gamma_{\mathrm{t}}z(I+J)\right] & \Re\left[\gamma_{\mathrm{t}}(z^{2}+1)I\right] & 0 & \Im\left[\gamma_{\mathrm{t}}(z^{2}-1)I\right]\\
-\Re\left(2\gamma_{\mathrm{t}}I\right) & \Re\left[\gamma_{\mathrm{t}}(z+z^{\star})(I+J)\right] & 0 & \Im\left[\gamma_{\mathrm{t}}(z-z^{\star})(I+J)\right]\\
--\Im\left[2\gamma_{\mathrm{t}}z(I+J)\right] & -\Im\left[\gamma_{\mathrm{t}}(z^{2}+1)I\right] & 0 & \Re\left[\gamma_{\mathrm{t}}(z^{2}-1)I\right]\\
--\Im\left(2\gamma_{\mathrm{t}}I\right) & -\Im\left[\gamma_{\mathrm{t}}(z+z^{\star})(I+J)\right] & 0 & \Re\left[\gamma_{\mathrm{t}}(z-z^{\star})(I+J)\right]
-\end{array}\right)a_{+}^{2}\vec{b}+\sigma_{1}\ldots\vec{b}.
+\left(\begin{array}{cccc}
+\Im(2I/H) & \Im[(z+z^{\star})(I+J)/H] & 0 & -\Re[(z-z^{\star})(I+J)/H]\\
+\Im[2z(I+J)/H] & \Im[(z^{2}+1)I/H] & 0 & -\Re[(z^{2}-1)I/H]\\
+-\Re(2I/H) & -\Re[(z+z^{\star})(I+J)/H] & 0 & -\Im[(z-z^{\star})(I+J)/H]\\
+-\Re[2z(I+J)/H] & -\Re[(z^{2}+1)I/H] & 0 & -\Im[(z^{2}-1)I/H]
+\end{array}\right)a_{+}^{2}.
 \]
 
 \end_inset
