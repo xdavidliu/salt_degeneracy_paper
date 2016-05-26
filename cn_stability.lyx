@@ -567,10 +567,6 @@ It can be shown that
 \begin_inset Formula $w_{j}^{T}A_{1/2}v_{k}$
 \end_inset
 
- and 
-\begin_inset Formula $w_{j}^{T}A_{1/2}v_{k}$
-\end_inset
-
  all vanish.
  Hence, multiplying Eq.
  
@@ -1635,6 +1631,31 @@ reference "eq:ordinary_eigenproblem"
 \Im[2z(I+J)/H] & \Im[(z^{2}+1)I/H] & 0 & -\Re[(z^{2}-1)I/H]\\
 -\Re(2I/H) & -\Re[(z+z^{\star})(I+J)/H] & 0 & -\Im[(z-z^{\star})(I+J)/H]\\
 -\Re[2z(I+J)/H] & -\Re[(z^{2}+1)I/H] & 0 & -\Im[(z^{2}-1)I/H]
+\end{array}\right)a^{2}.
+\]
+
+\end_inset
+
+Next, writing 
+\begin_inset Formula $z=z_{R}+iz_{I}$
+\end_inset
+
+, and noting that 
+\begin_inset Formula $z^{2}+1=2zz_{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $z^{2}-1=2izz_{I}$
+\end_inset
+
+, this becomes
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccc}
+\Im(2I/H) & 2z_{R}\Im[(I+J)/H] & 0 & 2z_{I}\Im[(I+J)/H]\\
+\Im[2z(I+J)/H] & 2z_{R}\Im[zI/H] & 0 & 2z_{I}\Im[zI/H]\\
+-2\Re(I/H) & -2z_{R}\Re[(I+J)/H] & 0 & -2z_{I}\Re[(I+J)/H]\\
+-2\Re[z(I+J)/H] & -2z_{R}\Re[zI/H] & 0 & -2z_{I}\Re[zI/H]
 \end{array}\right)a^{2}.
 \]
 
