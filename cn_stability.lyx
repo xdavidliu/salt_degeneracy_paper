@@ -1273,7 +1273,7 @@ Standing lasing mode
 
 \begin_layout Standard
 We now examine the case where both 
-\begin_inset Formula $a_{\pm}=0$
+\begin_inset Formula $a_{\pm}\neq0$
 \end_inset
 
 , which we found before can only occur in 
@@ -1304,30 +1304,34 @@ We now examine the case where both
 
 , i.e.
  
-\begin_inset Formula $a_{+}=\left|a_{+}\right|$
+\begin_inset Formula $a=\left|a_{+}\right|$
 \end_inset
 
  and 
-\begin_inset Formula $a_{-}=za_{+}$
+\begin_inset Formula $a_{-}=za$
 \end_inset
 
 .
  We then have 
-\begin_inset Formula $W=(J+z^{2}K)a_{+}^{2}$
+\begin_inset Formula $a^{2}=(\omega_{1}H+G_{D})/(J+2I+z^{2}K)$
+\end_inset
+
+, which gives 
+\begin_inset Formula $W=(J+z^{2}K)a^{2}$
 \end_inset
 
 , and
 \begin_inset Formula 
 \begin{align*}
-M & =a_{+}^{2}\left(\begin{array}{cc}
+M & =a^{2}\left(\begin{array}{cc}
 zJ+z^{\star}K & 0\\
 0 & zK+z^{\star}J
 \end{array}\right)\\
-Q & =a_{+}^{2}\left(\begin{array}{cc}
+Q & =a^{2}\left(\begin{array}{cc}
 z(I+J) & z^{2}I+K\\
 I+z^{2}K & z(I+J)
 \end{array}\right)\\
-P & =a_{+}^{2}\left(\begin{array}{cc}
+P & =a^{2}\left(\begin{array}{cc}
 zI+z^{\star}K & I+J\\
 I+J & zK+z^{\star}I
 \end{array}\right).
@@ -1338,15 +1342,15 @@ I+J & zK+z^{\star}I
 We then have
 \begin_inset Formula 
 \begin{align*}
-\tilde{P} & =a_{+}^{2}\left(\begin{array}{cc}
+\tilde{P} & =a^{2}\left(\begin{array}{cc}
 z(I+J)+2z^{\star}K & I-z^{2}K\\
 I-z^{2}K & z^{\star}(I+J)+2zK
 \end{array}\right)\\
-X(Q-\tilde{P}) & =a_{+}^{2}\left(\begin{array}{cc}
+X(Q-\tilde{P}) & =a^{2}\left(\begin{array}{cc}
 2z^{2}K & (z-z^{\star})(I+J)-2zK\\
 -2z^{\star}K & (z^{2}-1)I+(z^{2}+1)K
 \end{array}\right)\\
-X(Q+\tilde{P}) & =a_{+}^{2}\left(\begin{array}{cc}
+X(Q+\tilde{P}) & =a^{2}\left(\begin{array}{cc}
 2I & (z+z^{\star})(I+J)+2zK\\
 2z(I+J)+2z^{\star}K & (z^{2}+1)I+(z^{2}-1)K
 \end{array}\right).
@@ -1391,13 +1395,13 @@ Here,
 , and 
 \begin_inset Formula 
 \begin{align*}
-X(Q-\tilde{P}) & =2Ka_{+}^{2}\left(\begin{array}{cc}
-1 & -z\\
--z & 1
+X(Q-\tilde{P}) & =2a^{2}\left(\begin{array}{cc}
+K & \mp K\\
+\mp K & K
 \end{array}\right)\\
-X(Q+\tilde{P}) & =2a_{+}^{2}\left(\begin{array}{cc}
-I & z(I+J+K)\\
-z(I+J+K) & I
+X(Q+\tilde{P}) & =2a^{2}\left(\begin{array}{cc}
+I & \pm(I+J+K)\\
+\pm(I+J+K) & I
 \end{array}\right).
 \end{align*}
 
@@ -1413,14 +1417,14 @@ reference "eq:ordinary_eigenproblem"
 
  then becomes
 \begin_inset Formula 
-\[
+\begin{equation}
 \left(\begin{array}{cccc}
-\Im(I/H) & \Im[z(I+J+K)/H] & -\Re(K/H) & \Re(zK/H)\\
-\Im[z(I+J+K)/H] & \Im(I/H) & \Re(zK/H) & -\Re(K/H)\\
--\Re(I/H) & -\Re[z(I+J+K)/H] & -\Im(K/H) & \Im(zK/H)\\
--\Re[z(I+J+K)/H] & -\Re(I/H) & \Im(zK/H) & -\Im(K/H)
-\end{array}\right)2a_{+}^{2}.
-\]
+\Im(I/H) & \pm\Im[(I+J+K)/H] & -\Re(K/H) & \pm\Re(K/H)\\
+\pm\Im[(I+J+K)/H] & \Im(I/H) & \pm\Re(K/H) & -\Re(K/H)\\
+-\Re(I/H) & \mp\Re[(I+J+K)/H] & -\Im(K/H) & \pm\Im(K/H)\\
+\mp\Re[(I+J+K)/H] & -\Re(I/H) & \pm\Im(K/H) & -\Im(K/H)
+\end{array}\right)2a^{2}.\label{eq:blah}
+\end{equation}
 
 \end_inset
 
@@ -1432,10 +1436,10 @@ Noting that
 \begin_inset Formula 
 \[
 \left(\begin{array}{cccc}
-a & \pm b & f & \pm f\\
-\pm b & a & \pm f & f\\
-c & \pm d & g & \pm g\\
-\pm d & c & \pm g & g
+a & \pm b & -f & \pm f\\
+\pm b & a & \pm f & -f\\
+-c & \mp d & -g & \pm g\\
+\mp d & -c & \pm g & -g
 \end{array}\right),
 \]
 
@@ -1446,8 +1450,8 @@ c & \pm d & g & \pm g\\
 status open
 
 \begin_layout Plain Layout
-eigenvalues {{a,b,f,f},{b,a,f,f},{c,d,g,g},{d,c,g,g}} eigenvalues {{a,-b,f,-f},{
--b,a,-f,f},{c,-d,g,-g},{-d,c,-g,g}}
+eigenvalues {{a,b,-f,f},{b,a,f,-f},{-c,-d,-g,g},{-d,-c,g,-g}} eigenvalues
+ {{a,-b,-f,-f},{-b,a,-f,-f},{-c,d,-g,-g},{d,-c,-g,-g}}
 \end_layout
 
 \end_inset
@@ -1456,23 +1460,41 @@ the eigenvalues for both signs are
 \begin_inset Formula 
 \begin{align*}
 \lambda_{1} & =0\\
-\lambda_{2} & =a-b=-2a_{+}^{2}\Im\left[(J+K)/H\right]\\
-\lambda_{3,4} & =\frac{1}{2}\left(a+b+2g\pm\theta\right)=a_{+}^{2}\Im\left(\frac{2I+J-K}{H}\right)\pm\frac{\theta}{2}\\
-\theta & =\sqrt{(a+b-2g)^{2}+8f(c+d)}.
+\lambda_{2} & =a+b\\
+\lambda_{3,4} & =\frac{1}{2}\left(a-b-2g\pm\sqrt{h}\right)\\
+h & =a^{2}-2ab+4ag+b^{2}-4bg+8cf-8df+4g^{2}\\
+ & =(a-b+2g)^{2}+8f(c-d).
 \end{align*}
 
 \end_inset
 
-Here, 
-\begin_inset Formula $\lambda_{2}$
+Reading off the values of 
+\begin_inset Formula $a$
 \end_inset
 
- is clearly unstable for high 
-\begin_inset Formula $Q$
+ through 
+\begin_inset Formula $g$
 \end_inset
 
-.
- Now for the case 
+ from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:blah"
+
+\end_inset
+
+, we have the four eigenvalues
+\begin_inset Formula 
+\begin{align*}
+\sigma_{1} & =0\\
+\sigma_{1} & =2a^{2}\Im\left(\frac{2I+J+K}{H}\right)\\
+\sigma_{1} & =-a^{2}\left[\Im\left(\frac{J+3K}{H}\right)\mp\sqrt{\Im\left(\frac{K-J}{H}\right)^{2}-8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J+K}{H}\right)}\right].
+\end{align*}
+
+\end_inset
+
+Now for the case 
 \begin_inset Formula $z^{2}=-1$
 \end_inset
 
@@ -1480,16 +1502,20 @@ Here,
 \begin_inset Formula $z^{\star}=-z$
 \end_inset
 
- and
+ and 
+\begin_inset Formula $z=\pm i$
+\end_inset
+
+, so
 \begin_inset Formula 
 \begin{align*}
-X(Q-\tilde{P}) & =2a_{+}^{2}\left(\begin{array}{cc}
--K & z(I+J-K)\\
-zK & -I
+X(Q-\tilde{P}) & =2a^{2}\left(\begin{array}{cc}
+-K & \pm i(I+J-K)\\
+\pm iK & -I
 \end{array}\right)\\
-X(Q+\tilde{P}) & =2a_{+}^{2}\left(\begin{array}{cc}
-I & zK\\
-z(I+J-K) & -K
+X(Q+\tilde{P}) & =2a^{2}\left(\begin{array}{cc}
+I & \pm iK\\
+\pm i(I+J-K) & -K
 \end{array}\right).
 \end{align*}
 
@@ -1499,25 +1525,21 @@ The eigenproblem's matrix then becomes
 \begin_inset Formula 
 \[
 \left(\begin{array}{cccc}
-\Im(I/H) & \Im(zK/H) & \Re(K/H) & -\Re[z(I+J-K)/H]\\
-\Im[z(I+J-K)/H] & -\Im(K/H) & -\Re(zK/H) & \Re(I/H)\\
--\Re(I/H) & -\Re(zK/H) & \Im(K/H) & -\Im[z(I+J-K)/H]\\
--\Re[z(I+J-K)/H] & \Re(K/H) & -\Im(zK/H) & \Im(I/H)
-\end{array}\right)2a_{+}^{2}.
+\Im(I/H) & \pm\Im(iK/H) & \Re(K/H) & \mp\Re[i(I+J-K)/H]\\
+\pm\Im[i(I+J-K)/H] & -\Im(K/H) & \mp\Re(iK/H) & \Re(I/H)\\
+-\Re(I/H) & \mp\Re(iK/H) & \Im(K/H) & \mp\Im[i(I+J-K)/H]\\
+\mp\Re[i(I+J-K)/H] & \Re(K/H) & \mp\Im(iK/H) & \Im(I/H)
+\end{array}\right)2a^{2}.
 \]
 
 \end_inset
 
 Now note that 
-\begin_inset Formula $z=\pm i$
-\end_inset
-
-, and 
-\begin_inset Formula $\Im(\pm ig)=\pm\Re(g)$
+\begin_inset Formula $\Im(ig)=\Re(g)$
 \end_inset
 
  and 
-\begin_inset Formula $\Re(\pm ig)=\mp\Im(g)$
+\begin_inset Formula $\Re(ig)=\Im(g)$
 \end_inset
 
 .
@@ -1530,10 +1552,10 @@ Now note that
 \[
 \left(\begin{array}{cccc}
 \Im(I/H) & \pm\Re(K/H) & \Re(K/H) & \pm\Im[(I+J-K)/H]\\
-\pm\Re[(I+J-K)/H] & -\Im(K/H) & \pm\Im(K/H) & \Re(I/H)\\
+\pm\Re((I+J-K)/H] & -\Im(K/H) & \pm\Im(K/H) & \Re(I/H)\\
 -\Re(I/H) & \pm\Im(K/H) & \Im(K/H) & \mp\Re[(I+J-K)/H]\\
 \pm\Im[(I+J-K)/H] & \Re(K/H) & \mp\Re(K/H) & \Im(I/H)
-\end{array}\right)2a_{+}^{2}.
+\end{array}\right)2a^{2}.
 \]
 
 \end_inset
@@ -1585,11 +1607,11 @@ Here,
  We then have
 \begin_inset Formula 
 \begin{align*}
-X(Q-\tilde{P}) & =a_{+}^{2}\left(\begin{array}{cc}
+X(Q-\tilde{P}) & =a^{2}\left(\begin{array}{cc}
 0 & (z-z^{\star})(I+J)\\
 0 & (z^{2}-1)I
 \end{array}\right)\\
-X(Q+\tilde{P}) & =a_{+}^{2}\left(\begin{array}{cc}
+X(Q+\tilde{P}) & =a^{2}\left(\begin{array}{cc}
 2I & (z+z^{\star})(I+J)\\
 2z(I+J) & (z^{2}+1)I
 \end{array}\right).
@@ -1613,7 +1635,7 @@ reference "eq:ordinary_eigenproblem"
 \Im[2z(I+J)/H] & \Im[(z^{2}+1)I/H] & 0 & -\Re[(z^{2}-1)I/H]\\
 -\Re(2I/H) & -\Re[(z+z^{\star})(I+J)/H] & 0 & -\Im[(z-z^{\star})(I+J)/H]\\
 -\Re[2z(I+J)/H] & -\Re[(z^{2}+1)I/H] & 0 & -\Im[(z^{2}-1)I/H]
-\end{array}\right)a_{+}^{2}.
+\end{array}\right)a^{2}.
 \]
 
 \end_inset
