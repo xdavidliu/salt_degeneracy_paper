@@ -1429,7 +1429,56 @@ z\Re\left[\gamma_{\mathrm{t}}(I+J+K)\right] & \Re\left(\gamma_{\mathrm{t}}I\righ
 
 \end_inset
 
+Clearly, there is a null solution.
+\begin_inset Formula 
+\[
+b=\left(\begin{array}{c}
+0\\
+0\\
+1\\
+z
+\end{array}\right),\sigma_{1}=0.
+\]
 
+\end_inset
+
+Now for the case 
+\begin_inset Formula $z^{2}=-1$
+\end_inset
+
+, we have 
+\begin_inset Formula $z^{\star}=-z$
+\end_inset
+
+ and
+\begin_inset Formula 
+\begin{align*}
+Q-\tilde{P} & =2a_{+}^{2}\left(\begin{array}{cc}
+zK & -I\\
+-K & z(I+J-K)
+\end{array}\right)\\
+Q+\tilde{P} & =2a_{+}^{2}\left(\begin{array}{cc}
+z(I+J-K) & -K\\
+I & zK
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+The eigenproblem then becomes
+\begin_inset Formula 
+\[
+0=\left(\begin{array}{cccc}
+\Re\left[\gamma_{\mathrm{t}}z(I+J-K)\right] & -\Re\left(\gamma_{\mathrm{t}}K\right) & \Im\left(\gamma_{\mathrm{t}}zK\right) & -\Im\left(\gamma_{\mathrm{t}}I\right)\\
+\Re\left(\gamma_{\mathrm{t}}I\right) & \Re\left(\gamma_{\mathrm{t}}zK\right) & -\Im\left(\gamma_{\mathrm{t}}K\right) & \Im\left[\gamma_{\mathrm{t}}z(I+J-K)\right]\\
+-\Im\left[\gamma_{\mathrm{t}}z(I+J-K)\right] & \Im\left(\gamma_{\mathrm{t}}K\right) & \Re\left(\gamma_{\mathrm{t}}zK\right) & -\Re\left(\gamma_{\mathrm{t}}I\right)\\
+-\Im\left(\gamma_{\mathrm{t}}I\right) & -\Im\left(\gamma_{\mathrm{t}}zK\right) & -\Re\left(\gamma_{\mathrm{t}}K\right) & \Re\left[\gamma_{\mathrm{t}}z(I+J-K)\right]
+\end{array}\right)2a_{+}^{2}\vec{b}+\sigma_{1}\ldots\vec{b}.
+\]
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Paragraph*
@@ -1478,6 +1527,19 @@ reference "eq:4x4_eigenproblem"
 -\Im\left[2\gamma_{\mathrm{t}}z(I+J)\right] & -\Im\left[\gamma_{\mathrm{t}}(z^{2}+1)I\right] & 0 & \Re\left[\gamma_{\mathrm{t}}(z^{2}-1)I\right]\\
 -\Im\left(2\gamma_{\mathrm{t}}I\right) & -\Im\left[\gamma_{\mathrm{t}}(z+z^{\star})(I+J)\right] & 0 & \Re\left[\gamma_{\mathrm{t}}(z-z^{\star})(I+J)\right]
 \end{array}\right)a_{+}^{2}\vec{b}+\sigma_{1}\ldots\vec{b}.
+\]
+
+\end_inset
+
+Clearly, there is a null solution
+\begin_inset Formula 
+\[
+b=\left(\begin{array}{c}
+0\\
+0\\
+1\\
+0
+\end{array}\right),\sigma_{1}=0.
 \]
 
 \end_inset
