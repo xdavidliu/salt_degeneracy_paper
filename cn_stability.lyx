@@ -1027,6 +1027,40 @@ Now evaluate the
 
 \end_inset
 
+We note that the right matrix is easily inverted because 
+\begin_inset Formula $X^{2}=1$
+\end_inset
+
+, namely
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+\Im(\gamma_{\mathrm{t}}H)X & \Re(\gamma_{\mathrm{t}}H)X\\
+\Re(\gamma_{\mathrm{t}}H)X & -\Im(\gamma_{\mathrm{t}}H)X
+\end{array}\right)^{2}\vec{b}=\left|\gamma_{\mathrm{t}}H\right|^{2}\vec{b}.
+\]
+
+\end_inset
+
+Now multiplying the matrix on the left, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:4x4_eigenproblem"
+
+\end_inset
+
+ becomes
+\begin_inset Formula 
+\[
+0=\left(\begin{array}{cc}
+-\Im\left[H^{\star}X(Q+\tilde{P})\right] & \Re\left[H^{\star}X(Q-\tilde{P})\right]\\
+\Re\left[H^{\star}X(Q+\tilde{P})\right] & \Im\left[H^{\star}X(Q-\tilde{P})\right]
+\end{array}\right)\vec{b}+\sigma_{1}\left|H\right|^{2}\vec{b}.
+\]
+
+\end_inset
+
 
 \end_layout
 
