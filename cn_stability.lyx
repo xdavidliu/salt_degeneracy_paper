@@ -1383,7 +1383,12 @@ Here,
 \begin_inset Formula $z=z^{\star}$
 \end_inset
 
- and 
+, i.e.
+ 
+\begin_inset Formula $z=\pm1$
+\end_inset
+
+, and 
 \begin_inset Formula 
 \begin{align*}
 X(Q-\tilde{P}) & =2Ka_{+}^{2}\left(\begin{array}{cc}
@@ -1419,20 +1424,55 @@ reference "eq:ordinary_eigenproblem"
 
 \end_inset
 
-Clearly, there is a null solution.
+Noting that 
+\begin_inset Formula $z=\pm1$
+\end_inset
+
+ and using Mathematica on the matrix
 \begin_inset Formula 
 \[
-b=\left(\begin{array}{c}
-0\\
-0\\
-1\\
-z
-\end{array}\right),\sigma_{1}=0.
+\left(\begin{array}{cccc}
+a & \pm b & f & \pm f\\
+\pm b & a & \pm f & f\\
+c & \pm d & g & \pm g\\
+\pm d & c & \pm g & g
+\end{array}\right),
 \]
 
 \end_inset
 
-Now for the case 
+
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+eigenvalues {{a,b,f,f},{b,a,f,f},{c,d,g,g},{d,c,g,g}} eigenvalues {{a,-b,f,-f},{
+-b,a,-f,f},{c,-d,g,-g},{-d,c,-g,g}}
+\end_layout
+
+\end_inset
+
+the eigenvalues for both signs are 
+\begin_inset Formula 
+\begin{align*}
+\lambda_{1} & =0\\
+\lambda_{2} & =a-b=-2a_{+}^{2}\Im\left[(J+K)/H\right]\\
+\lambda_{3,4} & =\frac{1}{2}\left(a+b+2g\pm\theta\right)=a_{+}^{2}\Im\left(\frac{2I+J-K}{H}\right)\pm\frac{\theta}{2}\\
+\theta & =\sqrt{(a+b-2g)^{2}+8f(c+d)}.
+\end{align*}
+
+\end_inset
+
+Here, 
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+ is clearly unstable for high 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ Now for the case 
 \begin_inset Formula $z^{2}=-1$
 \end_inset
 
@@ -1468,7 +1508,64 @@ The eigenproblem's matrix then becomes
 
 \end_inset
 
- 
+Now note that 
+\begin_inset Formula $z=\pm i$
+\end_inset
+
+, and 
+\begin_inset Formula $\Im(\pm ig)=\pm\Re(g)$
+\end_inset
+
+ and 
+\begin_inset Formula $\Re(\pm ig)=\mp\Im(g)$
+\end_inset
+
+.
+ Hence, the matrix for 
+\begin_inset Formula $z=\pm i$
+\end_inset
+
+ becomes
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccc}
+\Im(I/H) & \pm\Re(K/H) & \Re(K/H) & \pm\Im[(I+J-K)/H]\\
+\pm\Re[(I+J-K)/H] & -\Im(K/H) & \pm\Im(K/H) & \Re(I/H)\\
+-\Re(I/H) & \pm\Im(K/H) & \Im(K/H) & \mp\Re[(I+J-K)/H]\\
+\pm\Im[(I+J-K)/H] & \Re(K/H) & \mp\Re(K/H) & \Im(I/H)
+\end{array}\right)2a_{+}^{2}.
+\]
+
+\end_inset
+
+
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+eigenvalues {{a,b,b,g},{c,-d,d,f},{-f,d,d,-c},{g,b,-b,a}} eigenvalues {{a,-b,b,-
+g},{-c,-d,-d,f},{-f,-d,d,c},{-g,b,b,a}}
+\end_layout
+
+\end_inset
+
+Now using Mathematica to find the eigenvalues of
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccc}
+a & \pm b & b & \pm g\\
+\pm c & -d & \pm d & f\\
+-f & \pm d & d & \mp c\\
+\pm g & b & \mp b & a
+\end{array}\right),
+\]
+
+\end_inset
+
+we obtain very long forms for the eigenvalues, indicating I made a mistake
+ somewhere above.
+ Also, there's no obvious way to annihilate the middle two columns in this
+ matrix, further indicating an error.
 \end_layout
 
 \begin_layout Paragraph*
