@@ -1548,7 +1548,7 @@ Now note that
 \[
 \left(\begin{array}{cccc}
 \Im(I/H) & \pm\Re(K/H) & \Re(K/H) & \pm\Im[(I+J-K)/H]\\
-\pm\Re((I+J-K)/H] & -\Im(K/H) & \pm\Im(K/H) & \Re(I/H)\\
+\pm\Re[(I+J-K)/H] & -\Im(K/H) & \pm\Im(K/H) & \Re(I/H)\\
 -\Re(I/H) & \pm\Im(K/H) & \Im(K/H) & \mp\Re[(I+J-K)/H]\\
 \pm\Im[(I+J-K)/H] & \Re(K/H) & \mp\Re(K/H) & \Im(I/H)
 \end{array}\right)2a^{2}.
