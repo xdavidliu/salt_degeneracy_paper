@@ -420,7 +420,7 @@ where
 \begin_inset Formula 
 \begin{align*}
 H & =\left(\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}\right)^{-1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\left(G_{\varepsilon}+G_{D}\gamma_{\mathrm{t}}\right)\\
- & =\frac{2G_{\varepsilon}}{\omega_{\mathrm{t}}\gamma_{\mathrm{t}}}-\frac{G_{D}\gamma_{\mathrm{t}}}{\gamma_{\perp}}.
+ & =\frac{2(G_{\varepsilon}+G_{D}\gamma_{\mathrm{t}})}{\omega_{\mathrm{t}}\gamma_{\mathrm{t}}}-\frac{G_{D}\gamma_{\mathrm{t}}}{\gamma_{\perp}}.
 \end{align*}
 
 \end_inset
