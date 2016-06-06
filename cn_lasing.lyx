@@ -411,7 +411,7 @@ reference "eq:matrix"
  becomes
 \begin_inset Formula 
 \begin{equation}
-0=a_{\mp}\left(\omega_{1}H+G_{D}\right)-a_{\mp}\left|a_{\pm}\right|^{2}\left(I_{\pm}+J_{\pm}\right)-a_{\mp}\left|a_{\mp}\right|^{2}I_{-}-a_{\pm}^{2}a_{\mp}^{\star}K_{\pm}\label{eq:matrix_further}
+0=a_{\mp}\left(\omega_{1}H+G_{D}\right)-a_{\mp}\left|a_{\pm}\right|^{2}\left(I_{\pm}+J_{\pm}\right)-a_{\mp}\left|a_{\mp}\right|^{2}I_{\mp}-a_{\pm}^{2}a_{\mp}^{\star}K_{\pm}\label{eq:matrix_further}
 \end{equation}
 
 \end_inset
@@ -460,8 +460,8 @@ Using the fact that
  are real, we obtain the circulating lasing solutions
 \begin_inset Formula 
 \begin{align*}
-\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\left(\omega_{1}H+G_{D}\right)\gamma_{\parallel}d/I_{\mp}}\vec{E}_{\pm}\\
-\omega & =\omega_{\mathrm{t}}-\frac{\Im\left(G_{D}/I_{\mp}\right)d}{\Im\left(H/I_{\mp}\right)}
+\vec{E} & =\left|\gamma_{\mathrm{t}}\right|^{-1}\sqrt{\left(\omega_{1}H+G_{D}\right)\gamma_{\parallel}d/I_{\pm}}\vec{E}_{\pm}\\
+\omega & =\omega_{\mathrm{t}}-\frac{\Im\left(G_{D}/I_{\pm}\right)d}{\Im\left(H/I_{\pm}\right)}
 \end{align*}
 
 \end_inset
@@ -473,7 +473,7 @@ The fact that
  must be positive also gives a cutoff condition for lasing
 \begin_inset Formula 
 \begin{equation}
-\Re(G_{D}/I_{\mp})>\frac{\Im\left(G_{D}/I_{\mp}\right)}{\Im\left(H/I_{\mp}\right)}\Re(H/I_{\mp}).\label{eq:cutoff}
+\Re(G_{D}/I_{\pm})>\frac{\Im\left(G_{D}/I_{\pm}\right)}{\Im\left(H/I_{\pm}\right)}\Re(H/I_{\pm}).\label{eq:cutoff}
 \end{equation}
 
 \end_inset
@@ -647,8 +647,12 @@ reference "eq:omega1"
 \end_inset
 
  must satisfy that equation as-is.
- It is unknown whether there is always a solution, or whether it ever has
- a solution at all.
+ Numerically, we have found solutions to this equation, indicating that
+ 
+\begin_inset Formula $C_{4}$
+\end_inset
+
+ standing modes do exist.
 \end_layout
 
 \begin_layout Paragraph
