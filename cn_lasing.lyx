@@ -653,6 +653,15 @@ reference "eq:omega1"
 \end_inset
 
  standing modes do exist.
+ The allowed angles are separated by 
+\begin_inset Formula $\pi/4$
+\end_inset
+
+, just like in the 
+\begin_inset Formula $C_{4\ell\mathrm{v}}$
+\end_inset
+
+ case, but are shifted overall because of the breaking of symmetry.
 \end_layout
 
 \begin_layout Paragraph
