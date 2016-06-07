@@ -1412,76 +1412,165 @@ X(Q+\tilde{P}) & =\left(\begin{array}{cc}
 
 \end_inset
 
+Taking real and imaginary parts, we have
+\begin_inset Formula 
+\begin{align*}
+\Re\left[\frac{X}{H}(Q-\tilde{P})\right] & =2\left(\begin{array}{cc}
+\left|a_{-}\right|^{2}\Re(k_{-}z^{2}) & -\left|a_{+}a_{-}\right|\left[\Im(z)\Im(i_{-}+j_{-})+\Re(zk_{-})\right]\\
+-\left|a_{+}a_{-}\right|\Re(z^{\star}k_{+}) & -\left|a_{-}\right|^{2}\Im(z)\Im(zi_{-})+\left|a_{+}\right|^{2}\Re(z^{\star}k_{+})\Re(z)
+\end{array}\right)\\
+\Im\left[\frac{X}{H}(Q-\tilde{P})\right] & =2\left(\begin{array}{cc}
+\left|a_{-}\right|^{2}\Im(k_{-}z^{2}) & \left|a_{+}a_{-}\right|\left[\Im(z)\Re(i_{-}+j_{-})-\Im(zk_{-})\right]\\
+-\left|a_{+}a_{-}\right|\Im(z^{\star}k_{+}) & \left|a_{-}\right|^{2}\Im(z)\Re(zi_{-})+\left|a_{+}\right|^{2}\Im(z^{\star}k_{+})\Re(z)
+\end{array}\right),
+\end{align*}
 
-\end_layout
+\end_inset
 
-\begin_layout Paragraph
-The case 
-\begin_inset Formula $C_{4\mathrm{v}}$
+where we have used 
+\begin_inset Formula $i_{\pm}=I_{\pm}/H$
+\end_inset
+
+, and same for 
+\begin_inset Formula $J_{\pm}$
+\end_inset
+
+ and 
+\begin_inset Formula $K_{\pm}$
+\end_inset
+
+.
+ For the other matrix we have
+\begin_inset Formula 
+\begin{align*}
+\Re\left[\frac{X}{H}(Q+\tilde{P})\right] & =2\left(\begin{array}{cc}
+\left|a_{+}\right|^{2}\Re(i_{+}) & \left|a_{+}a_{-}\right|\left[\Re(z)\Re(i_{-}+j_{-})+\Re(zk_{-})\right]\\
+\left|a_{+}a_{-}\right|\Re\left[z(i_{+}+j_{+})+z^{\star}k_{+}\right] & \left|a_{-}\right|^{2}\Re(z)\Re(zi_{-})-\left|a_{+}\right|^{2}\Im(z^{\star}k_{+})\Im(z)
+\end{array}\right)\\
+\Im\left[\frac{X}{H}(Q+\tilde{P})\right] & =2\left(\begin{array}{cc}
+\left|a_{+}\right|^{2}\Im(i_{+}) & \left|a_{+}a_{-}\right|\left[\Re(z)\Im(i_{-}+j_{-})+\Im(zk_{-})\right]\\
+\left|a_{+}a_{-}\right|\Im\left[z(i_{+}+j_{+})+z^{\star}k_{+}\right] & \left|a_{-}\right|^{2}\Re(z)\Im(zi_{-})+\left|a_{+}\right|^{2}\Re(z^{\star}k_{+})\Im(z)
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+Putting everything together, the first two columns of the matrix with eigenvalue
+s 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ are
+\begin_inset Formula 
+\[
+2\left(\begin{array}{cc}
+\left|a_{+}\right|^{2}\Im(i_{+}) & \left|a_{+}a_{-}\right|\left[\Re(z)\Im(i_{-}+j_{-})+\Im(zk_{-})\right]\\
+\left|a_{+}a_{-}\right|\Im\left[z(i_{+}+j_{+})+z^{\star}k_{+}\right] & \left|a_{-}\right|^{2}\Re(z)\Im(zi_{-})+\left|a_{+}\right|^{2}\Re(z^{\star}k_{+})\Im(z)\\
+-\left|a_{+}\right|^{2}\Re(i_{+}) & -\left|a_{+}a_{-}\right|\left[\Re(z)\Re(i_{-}+j_{-})+\Re(zk_{-})\right]\\
+-\left|a_{+}a_{-}\right|\Re\left[z(i_{+}+j_{+})+z^{\star}k_{+}\right] & -\left|a_{-}\right|^{2}\Re(z)\Re(zi_{-})+\left|a_{+}\right|^{2}\Im(z^{\star}k_{+})\Im(z)
+\end{array}\right),
+\]
+
+\end_inset
+
+and the next two columns are
+\begin_inset Formula 
+\[
+2\left(\begin{array}{cc}
+-\left|a_{-}\right|^{2}\Re(k_{-}z^{2}) & \left|a_{+}a_{-}\right|\left[\Im(z)\Im(i_{-}+j_{-})+\Re(zk_{-})\right]\\
+\left|a_{+}a_{-}\right|\Re(z^{\star}k_{+}) & \left|a_{-}\right|^{2}\Im(z)\Im(zi_{-})-\left|a_{+}\right|^{2}\Re(z^{\star}k_{+})\Re(z)\\
+-\left|a_{-}\right|^{2}\Im(k_{-}z^{2}) & -\left|a_{+}a_{-}\right|\left[\Im(z)\Re(i_{-}+j_{-})-\Im(zk_{-})\right]\\
+\left|a_{+}a_{-}\right|\Im(z^{\star}k_{+}) & -\left|a_{-}\right|^{2}\Im(z)\Re(zi_{-})-\left|a_{+}\right|^{2}\Im(z^{\star}k_{+})\Re(z)
+\end{array}\right).
+\]
+
+\end_inset
+
+We now look at several cases.
+ For 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ with 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+, there are no further simplifications, and this 
+\begin_inset Formula $4\times4$
+\end_inset
+
+ matrix most likely needs to be diagonalized numerically.
+ For 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ with 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+, things drastically simplify: all 
+\begin_inset Formula $\pm$
+\end_inset
+
+ symbols on 
+\begin_inset Formula $i,j,k$
+\end_inset
+
+ vanish, and 
+\begin_inset Formula $\left|a_{-}a_{+}\right|=\left|a_{\pm}\right|^{2}$
+\end_inset
+
+, and the matrix becomes
+\begin_inset Formula 
+\[
+2a^{2}\left(\begin{array}{cccc}
+\Im(i) & \Re(z)\Im(i+j)+\Im(zk) & -\Re(kz^{2}) & \Im(z)\Im(i+j)+\Re(zk)\\
+\Im\left[z(i+j)+z^{\star}k\right] & \Re(z)\Im(zi)+\Re(z^{\star}k)\Im(z) & \Re(z^{\star}k) & \Im(z)\Im(zi)-\Re(z^{\star}k)\Re(z)\\
+-\Re(i) & -\Re(z)\Re(i+j)-\Re(zk) & -\Im(kz^{2}) & -\Im(z)\Re(i+j)+\Im(zk)\\
+-\Re\left[z(i+j)+z^{\star}k\right] & -\Re(z)\Re(zi)+\Im(z^{\star}k)\Im(z) & \Im(z^{\star}k) & -\Im(z)\Re(zi)-\Im(z^{\star}k)\Re(z)
+\end{array}\right).
+\]
+
+\end_inset
+
+Recall that for 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ with 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+, we must have 
+\begin_inset Formula $z=\pm1$
+\end_inset
+
+ or 
+\begin_inset Formula $z=\pm i$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $z=\pm1$
+\end_inset
+
+, the matrix is 
+\begin_inset Formula 
+\[
+2a^{2}\left(\begin{array}{cccc}
+\Im(i) & \pm\Im(i+j+k) & -\Re(k) & \pm\Re(k)\\
+\pm\Im\left(i+j+k\right) & \Im(i) & \pm\Re(k) & -\Re(k)\\
+-\Re(i) & \mp\Re(i+j+k) & -\Im(k) & \pm\Im(k)\\
+\mp\Re\left(i+j+k\right) & -\Re(i) & \pm\Im(k) & -\Im(k)
+\end{array}\right).
+\]
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Here, 
-\begin_inset Formula $K\neq0$
-\end_inset
-
- and 
-\begin_inset Formula $z^{2}=\pm1$
-\end_inset
-
-.
- For 
-\begin_inset Formula $z^{2}=1$
-\end_inset
-
-, we have 
-\begin_inset Formula $z=z^{\star}$
-\end_inset
-
-, i.e.
- 
-\begin_inset Formula $z=\pm1$
-\end_inset
-
-, and 
-\begin_inset Formula 
-\begin{align*}
-X(Q-\tilde{P}) & =2a^{2}\left(\begin{array}{cc}
-K & \mp K\\
-\mp K & K
-\end{array}\right)\\
-X(Q+\tilde{P}) & =2a^{2}\left(\begin{array}{cc}
-I & \pm(I+J+K)\\
-\pm(I+J+K) & I
-\end{array}\right).
-\end{align*}
-
-\end_inset
-
-The matrix in Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ordinary_eigenproblem"
-
-\end_inset
-
- then becomes
-\begin_inset Formula 
-\begin{equation}
-\left(\begin{array}{cccc}
-\Im(I/H) & \pm\Im[(I+J+K)/H] & -\Re(K/H) & \pm\Re(K/H)\\
-\pm\Im[(I+J+K)/H] & \Im(I/H) & \pm\Re(K/H) & -\Re(K/H)\\
--\Re(I/H) & \mp\Re[(I+J+K)/H] & -\Im(K/H) & \pm\Im(K/H)\\
-\mp\Re[(I+J+K)/H] & -\Re(I/H) & \pm\Im(K/H) & -\Im(K/H)
-\end{array}\right)2a^{2}.\label{eq:blah}
-\end{equation}
-
-\end_inset
-
 Noting that 
 \begin_inset Formula $z=\pm1$
 \end_inset
@@ -1530,86 +1619,29 @@ Reading off the values of
 \begin_inset Formula $g$
 \end_inset
 
- from Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:blah"
-
-\end_inset
-
-, we have the four eigenvalues
+ from the matrix, we have the four eigenvalues
 \begin_inset Formula 
 \begin{align*}
 \sigma_{1} & =0\\
-\sigma_{1} & =2a^{2}\Im\left(\frac{2I+J+K}{H}\right)\\
-\sigma_{1} & =-a^{2}\left[\Im\left(\frac{J+3K}{H}\right)\mp\sqrt{\Im\left(\frac{K-J}{H}\right)^{2}-8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J+K}{H}\right)}\right].
+\sigma_{1} & =2a^{2}\Im\left(2i+j+k\right)\\
+\sigma_{1} & =-a^{2}\Im\left(j+3k\right)\pm a^{2}\sqrt{\Im\left(k-j\right)^{2}-8\Re\left(k\right)\Re\left(j+k\right)}.
 \end{align*}
 
 \end_inset
 
 Now for the case 
-\begin_inset Formula $z^{2}=-1$
-\end_inset
-
-, we have 
-\begin_inset Formula $z^{\star}=-z$
-\end_inset
-
- and 
 \begin_inset Formula $z=\pm i$
 \end_inset
 
-, so
+, the matrix becomes
 \begin_inset Formula 
-\begin{align*}
-X(Q-\tilde{P}) & =2a^{2}\left(\begin{array}{cc}
--K & \pm i(I+J-K)\\
-\pm iK & -I
-\end{array}\right)\\
-X(Q+\tilde{P}) & =2a^{2}\left(\begin{array}{cc}
-I & \pm iK\\
-\pm i(I+J-K) & -K
+\[
+2a^{2}\left(\begin{array}{cccc}
+\Im(i) & \pm\Re(k) & \Re(k) & \pm\Im(i+j-k)\\
+\pm\Re(i+j-k) & \Im(k) & \pm\Im(k) & \Re(i)\\
+-\Re(i) & \pm\Im(k) & \Im(k) & \mp\Re(i+j-k)\\
+\pm\Im(i+j-k) & -\Re(k) & \mp\Re(k) & \Im(i)
 \end{array}\right).
-\end{align*}
-
-\end_inset
-
-The eigenproblem's matrix then becomes
-\begin_inset Formula 
-\[
-\left(\begin{array}{cccc}
-\Im(I/H) & \pm\Im(iK/H) & \Re(K/H) & \mp\Re[i(I+J-K)/H]\\
-\pm\Im[i(I+J-K)/H] & -\Im(K/H) & \mp\Re(iK/H) & \Re(I/H)\\
--\Re(I/H) & \mp\Re(iK/H) & \Im(K/H) & \mp\Im[i(I+J-K)/H]\\
-\mp\Re[i(I+J-K)/H] & \Re(K/H) & \mp\Im(iK/H) & \Im(I/H)
-\end{array}\right)2a^{2}.
-\]
-
-\end_inset
-
-Now note that 
-\begin_inset Formula $\Im(ig)=\Re(g)$
-\end_inset
-
- and 
-\begin_inset Formula $\Re(ig)=\Im(g)$
-\end_inset
-
-.
- Hence, the matrix for 
-\begin_inset Formula $z=\pm i$
-\end_inset
-
- becomes
-\begin_inset Formula 
-\[
-\left(\begin{array}{cccc}
-\Im(I/H) & \pm\Re(K/H) & \Re(K/H) & \pm\Im[(I+J-K)/H]\\
-\pm\Re[(I+J-K)/H] & -\Im(K/H) & \pm\Im(K/H) & \Re(I/H)\\
--\Re(I/H) & \pm\Im(K/H) & \Im(K/H) & \mp\Re[(I+J-K)/H]\\
-\pm\Im[(I+J-K)/H] & \Re(K/H) & \mp\Re(K/H) & \Im(I/H)
-\end{array}\right)2a^{2}.
 \]
 
 \end_inset
@@ -1619,8 +1651,8 @@ Now note that
 status open
 
 \begin_layout Plain Layout
-eigenvalues {{a,b,b,g},{c,-d,d,f},{-f,d,d,-c},{g,b,-b,a}} eigenvalues {{a,-b,b,-
-g},{-c,-d,-d,f},{-f,-d,d,c},{-g,b,b,a}}
+eigenvalues {{a,b,b,g},{c,d,d,f},{-f,d,d,-c},{g,-b,-b,a}} eigenvalues {{a,-b,b,-
+g},{-c,d,-d,f},{-f,-d,d,c},{-g,-b,b,a}}
 \end_layout
 
 \end_inset
@@ -1630,18 +1662,38 @@ Now using Mathematica to find the eigenvalues of
 \[
 \left(\begin{array}{cccc}
 a & \pm b & b & \pm g\\
-\pm c & -d & \pm d & f\\
+\pm c & d & \pm d & f\\
 -f & \pm d & d & \mp c\\
-\pm g & b & \mp b & a
-\end{array}\right),
+\pm g & -b & \mp b & a
+\end{array}\right).
 \]
 
 \end_inset
 
-we obtain very long forms for the eigenvalues, indicating I made a mistake
- somewhere above.
- Also, there's no obvious way to annihilate the middle two columns in this
- matrix, further indicating an error.
+The eigenvalues for both signs are
+\begin_inset Formula 
+\begin{align*}
+\lambda_{1} & =0\\
+\lambda_{2} & =a+g\\
+\lambda_{3,4} & =\frac{1}{2}\left(a+2d-g\right)\pm\frac{1}{2}\sqrt{h}\\
+h & =a^{2}-4ad-2ag+8bc-8bf+4d^{2}+4dg+g^{2}\\
+ & =(a-2d)^{2}-2g(a-2d)+g^{2}+8bc-8bf\\
+ & =(a-2d-g)^{2}+8b(c-f).
+\end{align*}
+
+\end_inset
+
+Now reading off the values, we obtain the eigenvalues
+\begin_inset Formula 
+\begin{align*}
+\sigma_{1} & =0\\
+\sigma_{2} & =2a^{2}\Im(2i+j-k)\\
+\sigma_{3,4} & =a^{2}\Im(3k-j)\pm a^{2}\sqrt{\Im(j+k)^{2}+8\Re(k)\Re(j-k)}.
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph*
@@ -1657,81 +1709,37 @@ The case
 \end_layout
 
 \begin_layout Standard
-Here, 
-\begin_inset Formula $K=0$
+All 
+\begin_inset Formula $k_{\pm}=0$
 \end_inset
 
-.
- We then have
+, so the matrix becomes
 \begin_inset Formula 
-\begin{align*}
-X(Q-\tilde{P}) & =a^{2}\left(\begin{array}{cc}
-0 & (z-z^{\star})(I+J)\\
-0 & (z^{2}-1)I
-\end{array}\right)\\
-X(Q+\tilde{P}) & =a^{2}\left(\begin{array}{cc}
-2I & (z+z^{\star})(I+J)\\
-2z(I+J) & (z^{2}+1)I
+\[
+2\left(\begin{array}{cccc}
+\left|a_{+}\right|^{2}\Im(i_{+}) & \left|a_{+}a_{-}\right|\Re(z)\Im(i_{-}+j_{-}) & 0 & \left|a_{+}a_{-}\right|\Im(z)\Im(i_{-}+j_{-})\\
+\left|a_{+}a_{-}\right|\Im\left[z(i_{+}+j_{+})\right] & \left|a_{-}\right|^{2}\Re(z)\Im(zi_{-}) & 0 & \left|a_{-}\right|^{2}\Im(z)\Im(zi_{-})\\
+-\left|a_{+}\right|^{2}\Re(i_{+}) & -\left|a_{+}a_{-}\right|\Re(z)\Re(i_{-}+j_{-}) & 0 & -\left|a_{+}a_{-}\right|\Im(z)\Re(i_{-}+j_{-})\\
+-\left|a_{+}a_{-}\right|\Re\left[z(i_{+}+j_{+})\right] & -\left|a_{-}\right|^{2}\Re(z)\Re(zi_{-})+ & 0 & -\left|a_{-}\right|^{2}\Im(z)\Re(zi_{-})
 \end{array}\right).
-\end{align*}
-
-\end_inset
-
-The matrix in Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ordinary_eigenproblem"
-
-\end_inset
-
- then becomes
-\begin_inset Formula 
-\[
-\left(\begin{array}{cccc}
-\Im(2I/H) & \Im[(z+z^{\star})(I+J)/H] & 0 & -\Re[(z-z^{\star})(I+J)/H]\\
-\Im[2z(I+J)/H] & \Im[(z^{2}+1)I/H] & 0 & -\Re[(z^{2}-1)I/H]\\
--\Re(2I/H) & -\Re[(z+z^{\star})(I+J)/H] & 0 & -\Im[(z-z^{\star})(I+J)/H]\\
--\Re[2z(I+J)/H] & -\Re[(z^{2}+1)I/H] & 0 & -\Im[(z^{2}-1)I/H]
-\end{array}\right)a^{2}.
 \]
 
 \end_inset
 
-Next, writing 
-\begin_inset Formula $z=z_{R}+iz_{I}$
-\end_inset
-
-, and noting that 
-\begin_inset Formula $z^{2}+1=2zz_{R}$
-\end_inset
-
- and 
-\begin_inset Formula $z^{2}-1=2izz_{I}$
-\end_inset
-
-, this becomes
+By inspection, we have two null vectors
 \begin_inset Formula 
 \[
-\left(\begin{array}{cccc}
-\Im(2I/H) & 2z_{R}\Im[(I+J)/H] & 0 & 2z_{I}\Im[(I+J)/H]\\
-\Im[2z(I+J)/H] & 2z_{R}\Im[zI/H] & 0 & 2z_{I}\Im[zI/H]\\
--2\Re(I/H) & -2z_{R}\Re[(I+J)/H] & 0 & -2z_{I}\Re[(I+J)/H]\\
--2\Re[z(I+J)/H] & -2z_{R}\Re[zI/H] & 0 & -2z_{I}\Re[zI/H]
-\end{array}\right)a^{2}.
-\]
-
-\end_inset
-
-Clearly, there is a null solution
-\begin_inset Formula 
-\[
-b=\left(\begin{array}{c}
+\left(\begin{array}{c}
 0\\
 0\\
 1\\
 0
-\end{array}\right),\sigma_{1}=0.
+\end{array}\right),\left(\begin{array}{c}
+0\\
+\Im(z)\\
+-\Re(z)\\
+0
+\end{array}\right).
 \]
 
 \end_inset
