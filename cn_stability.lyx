@@ -1512,12 +1512,7 @@ We now look at several cases.
 \end_inset
 
  matrix most likely needs to be diagonalized numerically.
- 
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-Assuming that the roots are separated in increments of 
+ Assuming that the roots are separated in increments of 
 \begin_inset Formula $\pi/2$
 \end_inset
 
@@ -1662,12 +1657,7 @@ hence, the
 
 \end_inset
 
-
-\end_layout
-
-\end_inset
-
-
+This matrix seems to be non-trivial to diagonalize.
 \end_layout
 
 \begin_layout Standard
@@ -2122,6 +2112,102 @@ Note there is no dependence on
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsection*
+Overlap integrals for the high-
+\begin_inset Formula $Q$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+We first evaluate 
+\begin_inset Formula $G_{D}$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{\varepsilon}$
+\end_inset
+
+, for the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ case.
+ Define 
+\begin_inset Formula $\mathbf{E}_{\mathrm{even,odd}}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\mathbf{E}_{\pm}=\mathbf{E}_{\mathrm{even}}\pm i\mathbf{E}_{\mathrm{odd}}.
+\]
+
+\end_inset
+
+We have 
+\begin_inset Formula $\Im(\mathbf{E}_{\mathrm{even,odd}})=\mathcal{O}(1/Q)$
+\end_inset
+
+.
+ Then, we have 
+\begin_inset Formula $G_{D}=\int D_{\mathrm{t}}\left(\mathbf{E}_{\mathrm{even}}^{2}+\mathbf{E}_{\mathrm{odd}}^{2}\right)$
+\end_inset
+
+, from which we can see that 
+\begin_inset Formula $\Re(G_{D})>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\Im(G_{D})=\mathcal{O}(1/Q)$
+\end_inset
+
+.
+ We also have
+\begin_inset Formula 
+\[
+G_{\varepsilon}=\int(\varepsilon_{R}+i\varepsilon_{I})\left(\mathbf{E}_{\mathrm{even}}^{2}+\mathbf{E}_{\mathrm{odd}}^{2}\right)+\mathcal{O}(1/Q)
+\]
+
+\end_inset
+
+hence, assuming 
+\begin_inset Formula $\varepsilon_{I}>0$
+\end_inset
+
+ for dielectric loss, both real and imaginary parts of 
+\begin_inset Formula $G_{\varepsilon}$
+\end_inset
+
+ are positive.
+ Next, we have
+\begin_inset Formula 
+\begin{align*}
+H & =\frac{2G_{\varepsilon}}{\omega_{\mathrm{t}}\gamma_{\mathrm{t}}}+G_{D}\left(\frac{2}{\omega_{\mathrm{t}}}-\frac{\gamma_{\mathrm{t}}}{\gamma_{\perp}}\right)\\
+ & =2G_{\varepsilon}\left(\frac{\omega_{\mathrm{t}}-\omega_{a}}{\omega_{\mathrm{t}}\gamma_{\perp}}+\frac{i}{\omega_{\mathrm{t}}}\right)+G_{D}\left[\frac{2}{\omega_{\mathrm{t}}}-\left|\gamma_{\mathrm{t}}\right|^{2}\left(\frac{\omega-\omega_{\mathrm{a}}}{\gamma_{\perp}}-i\right)\right].
+\end{align*}
+
+\end_inset
+
+Hence, we have
+\begin_inset Formula 
+\begin{align*}
+\Re(H) & =2\Re(G_{\varepsilon})\frac{\omega_{\mathrm{t}}-\omega_{\mathrm{a}}}{\omega_{\mathrm{t}}\gamma_{\perp}}-\frac{2}{\omega_{\mathrm{t}}}\Im(G_{\varepsilon})+G_{D}\left(\frac{2}{\omega_{\mathrm{t}}}-\left|\gamma_{\mathrm{t}}\right|^{2}\frac{\omega-\omega_{\mathrm{a}}}{\gamma_{\perp}}\right)+\mathcal{O}(1/Q)\\
+\Im(H) & =\frac{2}{\omega_{\mathrm{t}}}\Re(G_{\varepsilon})+2\Im(G_{\varepsilon})\frac{\omega_{\mathrm{t}}-\omega_{\mathrm{a}}}{\omega_{\mathrm{t}}\gamma_{\perp}}+G_{D}\left|\gamma_{\mathrm{t}}\right|^{2}+\mathcal{O}(1/Q).
+\end{align*}
+
+\end_inset
+
+Here, all individual quantities are positive, although differences such
+ as 
+\begin_inset Formula $\omega_{\mathrm{t}}-\omega_{\mathrm{a}}$
+\end_inset
+
+ may be negative.
+ 
 \end_layout
 
 \end_body
