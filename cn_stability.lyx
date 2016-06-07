@@ -1228,9 +1228,10 @@ which are simply
 
 Hence, the other two eigenvalues are
 \begin_inset Formula 
-\[
-\sigma_{1}=a_{+}^{2}\Im(J_{+}/H)\pm a_{+}^{2}\sqrt{\Im(J_{+}/H)^{2}+\frac{\left|K_{+}\right|^{2}-\left|J_{+}\right|^{2}}{\left|H\right|^{2}}}.
-\]
+\begin{align*}
+\sigma_{1} & =a_{+}^{2}\Im(J_{+}/H)\pm a_{+}^{2}\sqrt{\Im(J_{+}/H)^{2}+\frac{\left|K_{+}\right|^{2}-\left|J_{+}\right|^{2}}{\left|H\right|^{2}}}\\
+ & =a_{+}^{2}\Im(J_{+}/H)\pm a_{+}^{2}\sqrt{\frac{\left|K_{+}\right|^{2}}{\left|H\right|^{2}}-\Re(J_{+}/H)^{2}}.
+\end{align*}
 
 \end_inset
 
