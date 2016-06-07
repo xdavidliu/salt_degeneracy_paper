@@ -1590,7 +1590,7 @@ Hence, the other three eigenvalues of the matrix are eigenvalues of the
 
 \end_inset
 
-Now sandwhich the 
+Now sandwich the 
 \begin_inset Formula $4\times4$
 \end_inset
 
@@ -1621,6 +1621,80 @@ Now sandwhich the
 \end_inset
 
 This matrix seems to be non-trivial to diagonalize.
+\end_layout
+
+\begin_layout Standard
+Now for the case 
+\begin_inset Formula $z=\pm i$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $4\times4$
+\end_inset
+
+ matrix becomes
+\begin_inset Formula 
+\[
+2a^{2}\left(\begin{array}{cccc}
+\Im(i_{+}) & \pm\Re(k_{-}) & \Re(k_{-}) & \pm\Im(i_{-}+j_{-}-k_{-})\\
+\pm\Re(i_{+}+j_{+}-k_{+}) & \Im(k_{+}) & \pm\Im(k_{+}) & \Re(i_{-})\\
+-\Re(i_{+}) & \pm\Im(k_{-}) & \Im(k_{-}) & \mp\Re(i_{-}+j_{-}-k_{-})\\
+\pm\Im(i_{+}+j_{+}-k_{+}) & -\Re(k_{+}) & \mp\Re(k_{+}) & \Im(i_{-})
+\end{array}\right).
+\]
+
+\end_inset
+
+Clearly, there is a null vector
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+0\\
+1\\
+\mp1\\
+0
+\end{array}\right).
+\]
+
+\end_inset
+
+The orthogonal basis is
+\begin_inset Formula 
+\[
+\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & \frac{1}{\sqrt{2}} & 0\\
+0 & \pm\frac{1}{\sqrt{2}} & 0\\
+0 & 0 & 1
+\end{array}\right).
+\]
+
+\end_inset
+
+Sandwiching the the original matrix, we obtain
+\begin_inset Formula 
+\begin{align*}
+ & 2a^{2}\left(\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & \frac{1}{\sqrt{2}} & \pm\frac{1}{\sqrt{2}} & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)\left(\begin{array}{ccc}
+\Im(i_{+}) & \pm\sqrt{2}\Re(k_{-}) & \pm\Im(i_{-}+j_{-}-k_{-})\\
+\pm\Re(i_{+}+j_{+}-k_{+}) & \sqrt{2}\Im(k_{+}) & \Re(i_{-})\\
+-\Re(i_{+}) & \pm\sqrt{2}\Im(k_{-}) & \mp\Re(i_{-}+j_{-}-k_{-})\\
+\pm\Im(i_{+}+j_{+}-k_{+}) & -\sqrt{2}\Re(k_{+}) & \Im(i_{-})
+\end{array}\right)\\
+ & =2a^{2}\left(\begin{array}{ccc}
+\Im(i_{+}) & \pm\sqrt{2}\Re(k_{-}) & \pm\Im(i_{-}+j_{-}-k_{-})\\
+\pm\frac{1}{\sqrt{2}}\Re(j_{+}-k_{+}) & \Im(k_{+}+k_{-}) & -\frac{1}{\sqrt{2}}\Re(j_{-}-k_{-})\\
+\pm\Im(i_{+}+j_{+}-k_{+}) & -\sqrt{2}\Re(k_{+}) & \Im(i_{-})
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+This matrix is also nontrivial to diagonalize.
 \end_layout
 
 \begin_layout Standard
