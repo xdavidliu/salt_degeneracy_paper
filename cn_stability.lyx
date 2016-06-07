@@ -1118,16 +1118,29 @@ reference "eq:ordinary_eigenproblem"
 \begin_inset Formula 
 \[
 \left(\begin{array}{cccc}
-2\Im(I_{+}/H) & 0 & 0 & 0\\
-0 & \Im[(K_{+}+J_{+})/H] & 0 & -\Re[(K_{+}-J_{+})/H]\\
--2\Re(I_{+}/H) & 0 & 0 & 0\\
-0 & -\Re[(K_{+}+J_{+})/H] & 0 & -\Im[(K_{+}-J_{+})/H]
+2\Im(i_{+}) & 0 & 0 & 0\\
+0 & \Im(k_{+}+j_{+}) & 0 & -\Re(k_{+}-j_{+})\\
+-2\Re(i_{+}) & 0 & 0 & 0\\
+0 & -\Re(k_{+}+j_{+}) & 0 & -\Im(k_{+}-j_{+})
 \end{array}\right)a_{+}^{2}
 \]
 
 \end_inset
 
-By inspection, two of the solutions are
+where 
+\begin_inset Formula $i_{+}=I_{+}/H$
+\end_inset
+
+, and same for 
+\begin_inset Formula $j_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{+}$
+\end_inset
+
+.
+ By inspection, two of the solutions are
 \begin_inset Formula 
 \[
 \vec{b}=\left(\begin{array}{c}
@@ -1136,11 +1149,11 @@ By inspection, two of the solutions are
 1\\
 0
 \end{array}\right),\sigma_{1}=0\,\mathrm{and}\,\vec{b}=\left(\begin{array}{c}
-\Im(I_{+}/H)\\
+\Im(i_{+})\\
 0\\
--\Re(I_{+}/H)\\
+-\Re(i_{+})\\
 0
-\end{array}\right),\sigma_{1}=2a_{+}^{2}\Im(I_{+}/H).
+\end{array}\right),\sigma_{1}=2a_{+}^{2}\Im(i_{+}).
 \]
 
 \end_inset
@@ -1205,8 +1218,8 @@ The other two eigenvalues are the eigenvalues of the submatrix
 \begin_inset Formula 
 \[
 \mathbb{A}=\left(\begin{array}{cc}
-\Im[(K_{+}+J_{+})/H] & -\Re[(K_{+}-J_{+})/H]\\
--\Re[(K_{+}+J_{+})/H] & -\Im[(K_{+}-J_{+})/H]
+\Im(k_{+}+j_{+}) & -\Re(k_{+}-j_{+})\\
+-\Re(k_{+}+j_{+}) & -\Im(k_{+}-j_{+})
 \end{array}\right)a_{+}^{2},
 \]
 
@@ -1220,18 +1233,17 @@ which are simply
  We have
 \begin_inset Formula 
 \begin{align*}
-\frac{\mathrm{tr}\mathbb{A}}{2} & =\Im(J_{+}/H)a_{+}^{2}\\
-\mathrm{\det}\mathbb{A} & =\frac{a_{+}^{4}}{\left|H\right|^{2}}\left(\left|J_{+}\right|^{2}-\left|K_{+}\right|^{2}\right).
+\frac{\mathrm{tr}\mathbb{A}}{2} & =\Im(j_{+})a_{+}^{2}\\
+\mathrm{\det}\mathbb{A} & =a_{+}^{4}\left(\left|j_{+}\right|^{2}-\left|k_{+}\right|^{2}\right).
 \end{align*}
 
 \end_inset
 
 Hence, the other two eigenvalues are
 \begin_inset Formula 
-\begin{align*}
-\sigma_{1} & =a_{+}^{2}\Im(J_{+}/H)\pm a_{+}^{2}\sqrt{\Im(J_{+}/H)^{2}+\frac{\left|K_{+}\right|^{2}-\left|J_{+}\right|^{2}}{\left|H\right|^{2}}}\\
- & =a_{+}^{2}\Im(J_{+}/H)\pm a_{+}^{2}\sqrt{\frac{\left|K_{+}\right|^{2}}{\left|H\right|^{2}}-\Re(J_{+}/H)^{2}}.
-\end{align*}
+\[
+\sigma_{1}=a_{+}^{2}\Im(j_{+})\pm a_{+}^{2}\sqrt{\left|k_{+}\right|^{2}-\Re(j_{+})^{2}}.
+\]
 
 \end_inset
 
@@ -1253,7 +1265,7 @@ reference "eq:Im(HI)"
 
 .
  Hence, as long as 
-\begin_inset Formula $\left|K_{+}\right|<\left|J_{+}\right|$
+\begin_inset Formula $\left|k_{+}\right|^{2}-\Re(j_{+})^{2}<\Im(j_{+})^{2}$
 \end_inset
 
 , both 
