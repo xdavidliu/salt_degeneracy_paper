@@ -1720,7 +1720,7 @@ All
 \left|a_{+}\right|^{2}\Im(i_{+}) & \left|a_{+}a_{-}\right|\Re(z)\Im(i_{-}+j_{-}) & 0 & \left|a_{+}a_{-}\right|\Im(z)\Im(i_{-}+j_{-})\\
 \left|a_{+}a_{-}\right|\Im\left[z(i_{+}+j_{+})\right] & \left|a_{-}\right|^{2}\Re(z)\Im(zi_{-}) & 0 & \left|a_{-}\right|^{2}\Im(z)\Im(zi_{-})\\
 -\left|a_{+}\right|^{2}\Re(i_{+}) & -\left|a_{+}a_{-}\right|\Re(z)\Re(i_{-}+j_{-}) & 0 & -\left|a_{+}a_{-}\right|\Im(z)\Re(i_{-}+j_{-})\\
--\left|a_{+}a_{-}\right|\Re\left[z(i_{+}+j_{+})\right] & -\left|a_{-}\right|^{2}\Re(z)\Re(zi_{-})+ & 0 & -\left|a_{-}\right|^{2}\Im(z)\Re(zi_{-})
+-\left|a_{+}a_{-}\right|\Re\left[z(i_{+}+j_{+})\right] & -\left|a_{-}\right|^{2}\Re(z)\Re(zi_{-}) & 0 & -\left|a_{-}\right|^{2}\Im(z)\Re(zi_{-})
 \end{array}\right).
 \]
 
@@ -1737,14 +1737,220 @@ By inspection, we have two null vectors
 \end{array}\right),\left(\begin{array}{c}
 0\\
 \Im(z)\\
--\Re(z)\\
-0
+0\\
+-\Re(z)
 \end{array}\right).
 \]
 
 \end_inset
 
+Let's call these vectors 
+\begin_inset Formula $x_{3}$
+\end_inset
 
+ and 
+\begin_inset Formula $x_{4}$
+\end_inset
+
+, and the matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $Ax_{3,4}=0x_{3,4}$
+\end_inset
+
+, or transposing, we have 
+\begin_inset Formula $x_{3,4}^{T}A_{3,4}^{T}=0x_{3,4}^{T}$
+\end_inset
+
+.
+ Now suppose the other two eigenvalues are nonzero, and we call the eigenvectors
+ of 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+ to be 
+\begin_inset Formula $y_{1,2}$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $A^{T}y_{1,2}=\sigma_{1,2}y_{1,2}$
+\end_inset
+
+, where 
+\begin_inset Formula $\sigma_{1,2}\neq0$
+\end_inset
+
+.
+ Now taking 
+\begin_inset Formula $x_{3,4}^{T}$
+\end_inset
+
+ of both sides, we see that 
+\begin_inset Formula $x_{3,4}^{T}A^{T}y_{1,2}=\sigma_{1,2}x_{3,4}^{T}y_{1,2}$
+\end_inset
+
+, or 
+\begin_inset Formula $\left(0-\sigma_{1,2}\right)x_{3,4}^{T}y_{1,2}=0$
+\end_inset
+
+.
+ This equation says that if 
+\begin_inset Formula $\sigma_{1,2}$
+\end_inset
+
+ and non-zero, then 
+\begin_inset Formula $y_{1,2}$
+\end_inset
+
+ are orthogonal to 
+\begin_inset Formula $x_{3,4}$
+\end_inset
+
+.
+ By inspection, we see that a basis for constructing 
+\begin_inset Formula $y_{1,2}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+1\\
+0\\
+0\\
+0
+\end{array}\right),\left(\begin{array}{c}
+0\\
+\Re(z)\\
+0\\
+\Im(z)
+\end{array}\right).
+\]
+
+\end_inset
+
+Call these 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+.
+ Now we want to obtain the eigenvectors 
+\begin_inset Formula $y_{1,2}$
+\end_inset
+
+ of 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $v_{1,2}$
+\end_inset
+
+.
+ To do so, we write 
+\begin_inset Formula 
+\[
+A^{T}(b_{1}v_{1}+b_{2}v_{2})=\sigma(b_{1}v_{1}+b_{2}v_{2}).
+\]
+
+\end_inset
+
+Now multiply both sides by 
+\begin_inset Formula $v_{1,2}^{T}$
+\end_inset
+
+, and we clearly see that
+\begin_inset Formula 
+\begin{align*}
+v_{1}^{T}A^{T} & =(Av_{1})^{T}=2\left(\begin{array}{c}
+\left|a_{+}\right|^{2}\Im(i_{+})\\
+\left|a_{+}a_{-}\right|\Im\left[z(i_{+}+j_{+})\right]\\
+-\left|a_{+}\right|^{2}\Re(i_{+})\\
+-\left|a_{+}a_{-}\right|\Re\left[z(i_{+}+j_{+})\right]
+\end{array}\right)^{T}\\
+v_{2}^{T}A^{T} & =(Av_{2})^{T}=2\left(\begin{array}{c}
+\left|a_{+}a_{-}\right|\Im(i_{-}+j_{-})\\
+\left|a_{-}\right|^{2}\Im(zi_{-})\\
+-\left|a_{+}a_{-}\right|\Re(i_{-}+j_{-})\\
+-\left|a_{-}\right|^{2}\Re(zi_{-})
+\end{array}\right)^{T},
+\end{align*}
+
+\end_inset
+
+where we have used the fact that 
+\begin_inset Formula $\Re(z)^{2}+\Im(z)^{2}=\left|z\right|^{2}=1$
+\end_inset
+
+.
+ We now have (after some very elegant cancellations and simplifications
+ in the algebra) the matrix elements:
+\begin_inset Formula 
+\begin{align*}
+v_{1}^{T}A^{T}v_{1} & =2\left|a_{+}\right|^{2}\Im(i_{+})\\
+v_{2}^{T}A^{T}v_{1} & =2\left|a_{+}a_{-}\right|\Im(i_{-}+j_{-})\\
+v_{1}^{T}A^{T}v_{2} & =2\left|a_{+}a_{-}\right|\Im(i_{+}+j_{+})\\
+v_{2}^{T}A^{T}v_{2} & =2\left|a_{-}\right|^{2}\Im(i_{-}).
+\end{align*}
+
+\end_inset
+
+Additionally, note that 
+\begin_inset Formula $v_{j}^{T}v_{k}=\delta_{jk}$
+\end_inset
+
+.
+ We then have the reduced 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ eigenvalue problem
+\begin_inset Formula 
+\[
+2\Im\left(\begin{array}{cc}
+\left|a_{+}\right|^{2}i_{+} & \left|a_{+}a_{-}\right|\left(i_{+}+j_{+}\right)\\
+\left|a_{+}a_{-}\right|\left(i_{-}+j_{-}\right) & \left|a_{-}\right|^{2}i_{-}
+\end{array}\right)\left(\begin{array}{c}
+b_{1}\\
+b_{2}
+\end{array}\right)=\sigma\left(\begin{array}{c}
+b_{1}\\
+b_{2}
+\end{array}\right).
+\]
+
+\end_inset
+
+For the matrix, we have
+\begin_inset Formula 
+\begin{align*}
+\mathrm{tr} & =2\Im\left(\left|a_{+}\right|^{2}i_{+}+\left|a_{-}\right|^{2}i_{-}\right)\\
+\det & =-4\left|a_{+}a_{-}\right|^{2}\left[\Im(i_{+})\Im(j_{-})+\Im(i_{-})\Im(j_{+})+\Im(j_{+})\Im(j_{-})\right].
+\end{align*}
+
+\end_inset
+
+The other two eigenvalues are then
+\begin_inset Formula 
+\[
+\sigma=\frac{\mathrm{tr}}{2}\pm\sqrt{\left(\frac{\mathrm{tr}}{2}\right)^{2}-\det}.
+\]
+
+\end_inset
+
+Note there is no dependence on 
+\begin_inset Formula $z$
+\end_inset
+
+.
 \end_layout
 
 \end_body
