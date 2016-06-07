@@ -1516,7 +1516,7 @@ We now look at several cases.
 \begin_inset Formula $\pi/2$
 \end_inset
 
-, it is easy to redefine 
+, it is easy to renormalize 
 \begin_inset Formula $\mathbf{E}_{-}$
 \end_inset
 
@@ -1536,7 +1536,11 @@ We now look at several cases.
 \begin_inset Formula $C_{4\mathrm{v}}$
 \end_inset
 
- case.
+ case, and also 
+\begin_inset Formula $\left|a_{+}\right|=\left|a_{-}\right|$
+\end_inset
+
+.
  After doing this, the matrix for 
 \begin_inset Formula $z=\pm1$
 \end_inset
@@ -1544,32 +1548,24 @@ We now look at several cases.
  becomes
 \begin_inset Formula 
 \[
-2\left(\begin{array}{cccc}
-\left|a_{+}\right|^{2}\Im(i_{+}) & \pm\left|a_{+}a_{-}\right|\Im(i_{-}+j_{-}+k_{-}) & -\left|a_{-}\right|^{2}\Re(k_{-}) & \pm\left|a_{+}a_{-}\right|\Re(k_{-})\\
-\pm\left|a_{+}a_{-}\right|\Im(i_{+}+j_{+}+k_{+}) & \left|a_{-}\right|^{2}\Im(i_{-}) & \pm\left|a_{+}a_{-}\right|\Re(k_{+}) & -\left|a_{+}\right|^{2}\Re(k_{+})\\
--\left|a_{+}\right|^{2}\Re(i_{+}) & \mp\left|a_{+}a_{-}\right|\Re(i_{-}+j_{-}+k_{-}) & -\left|a_{-}\right|^{2}\Im(k_{-}) & \pm\left|a_{+}a_{-}\right|\Im(k_{-})\\
-\mp\left|a_{+}a_{-}\right|\Re(i_{+}+j_{+}+k_{+}) & -\left|a_{-}\right|^{2}\Re(i_{-}) & \pm\left|a_{+}a_{-}\right|\Im(k_{+}) & -\left|a_{+}\right|^{2}\Im(k_{+})
+2a^{2}\left(\begin{array}{cccc}
+\Im(i_{+}) & \pm\Im(i_{-}+j_{-}+k_{-}) & -\Re(k_{-}) & \pm\Re(k_{-})\\
+\pm\Im(i_{+}+j_{+}+k_{+}) & \Im(i_{-}) & \pm\Re(k_{+}) & -\Re(k_{+})\\
+-\Re(i_{+}) & \mp\Re(i_{-}+j_{-}+k_{-}) & -\Im(k_{-}) & \pm\Im(k_{-})\\
+\mp\Re(i_{+}+j_{+}+k_{+}) & -\Re(i_{-}) & \pm\Im(k_{+}) & -\Im(k_{+})
 \end{array}\right).
 \]
 
 \end_inset
 
-
+By inspection, we see that a null vector is
 \begin_inset Formula 
 \[
-\left|a_{+}^{2}a_{-}\right|\Im\left(i_{+}+\right)
-\]
-
-\end_inset
-
-By inspection, we see that a (normalized) null vector is
-\begin_inset Formula 
-\[
-\frac{1}{\sqrt{\left|a_{+}\right|^{2}+\left|a_{-}\right|^{2}}}\left(\begin{array}{c}
+\left(\begin{array}{c}
 0\\
 0\\
-\left|a_{+}\right|\\
-\pm\left|a_{-}\right|
+1\\
+\pm1
 \end{array}\right).
 \]
 
@@ -1584,76 +1580,43 @@ Hence, the other three eigenvalues of the matrix are eigenvalues of the
  to the null-vector, which we can easily construct:
 \begin_inset Formula 
 \[
-\left(\begin{array}{c}
-1\\
-0\\
-0\\
-0
-\end{array}\right),\left(\begin{array}{c}
-0\\
-1\\
-0\\
-0
-\end{array}\right),\frac{1}{\sqrt{\left|a_{+}\right|^{2}+\left|a_{-}\right|^{2}}}\left(\begin{array}{c}
-0\\
-0\\
-\left|a_{-}\right|\\
-\mp\left|a_{+}\right|
+\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & \frac{1}{\sqrt{2}}\\
+0 & 0 & \mp\frac{1}{\sqrt{2}}
 \end{array}\right).
 \]
 
 \end_inset
 
-Now multiply the matrix by these three vectors, call them 
-\begin_inset Formula $v_{1,2,3}$
+Now sandwhich the 
+\begin_inset Formula $4\times4$
 \end_inset
 
-.
- The first two results are trivial; simply the first and second columns
- of the matrix.
- The third result is
+ matrix between this 
+\begin_inset Formula $4\times3$
+\end_inset
+
+ and its transpose, and we obtain
 \begin_inset Formula 
-\[
-2\alpha\left(\begin{array}{c}
--\left|a_{-}\right|\Re(k_{-})\\
-\pm\left|a_{+}\right|\Re(k_{+})\\
--\left|a_{-}\right|\Im(k_{-})\\
-\pm\left|a_{+}\right|\Im(k_{+})
-\end{array}\right),
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $\alpha=\sqrt{\left|a_{+}\right|^{2}+\left|a_{-}\right|^{2}}$
-\end_inset
-
-.
- Now take the matrix elements.
- The first two rows are trivial.
- The nontrival elements are
-\begin_inset Formula 
-\begin{align*}
-v_{3}^{T}Av_{1} & =\frac{2}{\alpha}\left|a_{+}^{2}a_{-}\right|\Re\left(j_{+}+k_{+}\right)\\
-v_{3}^{T}Av_{2} & =\mp\frac{2}{\alpha}\left|a_{+}a_{-}^{2}\right|\Re\left(j_{-}+k_{-}\right)\\
-v_{3}^{T}Av_{3} & =-2\left[\left|a_{-}\right|^{2}\Im(k_{-})+\left|a_{+}\right|^{2}\Im(k_{+})\right],
-\end{align*}
-
-\end_inset
-
-hence, the 
-\begin_inset Formula $3\times3$
-\end_inset
-
- matrix is
-\begin_inset Formula 
-\[
-2\left(\begin{array}{ccc}
-\left|a_{+}\right|^{2}\Im(i_{+}) & \pm\left|a_{+}a_{-}\right|\Im(i_{-}+j_{-}+k_{-}) & -\alpha\left|a_{-}\right|\Re(k_{-})\\
-\pm\left|a_{+}a_{-}\right|\Im(i_{+}+j_{+}+k_{+}) & \left|a_{-}\right|^{2}\Im(i_{-}) & \pm\alpha\left|a_{+}\right|\Re(k_{+})\\
-\frac{1}{\alpha}\left|a_{+}^{2}a_{-}\right|\Re\left(j_{+}+k_{+}\right) & \mp\frac{1}{\alpha}\left|a_{+}a_{-}^{2}\right|\Re\left(j_{-}+k_{-}\right) & -\left|a_{-}\right|^{2}\Im(k_{-})-\left|a_{+}\right|^{2}\Im(k_{+})
-\end{array}\right).
-\]
+\begin{align}
+ & 2a^{2}\left(\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & \frac{1}{\sqrt{2}} & \mp\frac{1}{\sqrt{2}}
+\end{array}\right)\left(\begin{array}{ccc}
+\Im(i_{+}) & \pm\Im(i_{-}+j_{-}+k_{-}) & -\sqrt{2}\Re(k_{-})\\
+\pm\Im(i_{+}+j_{+}+k_{+}) & \Im(i_{-}) & \pm\sqrt{2}\Re(k_{+})\\
+-\Re(i_{+}) & \mp\Re(i_{-}+j_{-}+k_{-}) & -\sqrt{2}\Im(k_{-})\\
+\mp\Re(i_{+}+j_{+}+k_{+}) & -\Re(i_{-}) & \pm\sqrt{2}\Im(k_{+})
+\end{array}\right)\nonumber \\
+ & =2a^{2}\left(\begin{array}{ccc}
+\Im(i_{+}) & \pm\Im(i_{-}+j_{-}+k_{-}) & -\sqrt{2}\Re(k_{-})\\
+\pm\Im(i_{+}+j_{+}+k_{+}) & \Im(i_{-}) & \pm\sqrt{2}\Re(k_{+})\\
+\frac{1}{\sqrt{2}}\Re(j_{+}+k_{+}) & \mp\frac{1}{\sqrt{2}}\Re(j_{-}+k_{-}) & -\Im(k_{-})-\Im(k_{+})
+\end{array}\right).\label{eq:3x3}
+\end{align}
 
 \end_inset
 
