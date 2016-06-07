@@ -1621,6 +1621,32 @@ Now sandwich the
 \end_inset
 
 This matrix seems to be non-trivial to diagonalize.
+ For the case of 
+\begin_inset Formula $C_{4\ell\mathrm{v}}$
+\end_inset
+
+, the subscript signs can be omitted, and the matrix is
+\begin_inset Formula 
+\[
+2a^{2}\left(\begin{array}{ccc}
+\Im(i) & \pm\Im(i+j+k) & -\sqrt{2}\Re(k)\\
+\pm\Im(i+j+k) & \Im(i) & \pm\sqrt{2}\Re(k)\\
+\frac{1}{\sqrt{2}}\Re(j+k) & \mp\frac{1}{\sqrt{2}}\Re(j+k) & -2\Im(k)
+\end{array}\right).
+\]
+
+\end_inset
+
+The eigenvalues are
+\begin_inset Formula 
+\begin{align*}
+\sigma_{1} & =2a^{2}\Im\left(2i+j+k\right)\\
+\sigma_{1} & =-a^{2}\Im(j+3k)\pm a^{2}\sqrt{\Im(j-k)^{2}-8\Re(k)\Re(j+k)}.
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1695,198 +1721,27 @@ Sandwiching the the original matrix, we obtain
 \end_inset
 
 This matrix is also nontrivial to diagonalize.
-\end_layout
-
-\begin_layout Standard
-For 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- with 
-\begin_inset Formula $n=4\ell$
-\end_inset
-
-, things drastically simplify: all 
-\begin_inset Formula $\pm$
-\end_inset
-
- symbols on 
-\begin_inset Formula $i,j,k$
-\end_inset
-
- vanish, and 
-\begin_inset Formula $\left|a_{-}a_{+}\right|=\left|a_{\pm}\right|^{2}$
-\end_inset
-
-, and the matrix becomes
-\begin_inset Formula 
-\[
-2a^{2}\left(\begin{array}{cccc}
-\Im(i) & \Re(z)\Im(i+j)+\Im(zk) & -\Re(kz^{2}) & \Im(z)\Im(i+j)+\Re(zk)\\
-\Im\left[z(i+j)+z^{\star}k\right] & \Re(z)\Im(zi)+\Re(z^{\star}k)\Im(z) & \Re(z^{\star}k) & \Im(z)\Im(zi)-\Re(z^{\star}k)\Re(z)\\
--\Re(i) & -\Re(z)\Re(i+j)-\Re(zk) & -\Im(kz^{2}) & -\Im(z)\Re(i+j)+\Im(zk)\\
--\Re\left[z(i+j)+z^{\star}k\right] & -\Re(z)\Re(zi)+\Im(z^{\star}k)\Im(z) & \Im(z^{\star}k) & -\Im(z)\Re(zi)-\Im(z^{\star}k)\Re(z)
-\end{array}\right).
-\]
-
-\end_inset
-
-Recall that for 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- with 
-\begin_inset Formula $n=4\ell$
-\end_inset
-
-, we must have 
-\begin_inset Formula $z=\pm1$
-\end_inset
-
- or 
-\begin_inset Formula $z=\pm i$
-\end_inset
-
-.
  For 
-\begin_inset Formula $z=\pm1$
+\begin_inset Formula $C_{4\ell\mathrm{v}}$
 \end_inset
 
-, the matrix is 
+, the subscripts are omitted, and the matrix becomes
 \begin_inset Formula 
 \[
-2a^{2}\left(\begin{array}{cccc}
-\Im(i) & \pm\Im(i+j+k) & -\Re(k) & \pm\Re(k)\\
-\pm\Im\left(i+j+k\right) & \Im(i) & \pm\Re(k) & -\Re(k)\\
--\Re(i) & \mp\Re(i+j+k) & -\Im(k) & \pm\Im(k)\\
-\mp\Re\left(i+j+k\right) & -\Re(i) & \pm\Im(k) & -\Im(k)
+2a^{2}\left(\begin{array}{ccc}
+\Im(i) & \pm\sqrt{2}\Re(k) & \pm\Im(i+j-k)\\
+\pm\frac{1}{\sqrt{2}}\Re(j-k) & 2\Im(k) & -\frac{1}{\sqrt{2}}\Re(j-k)\\
+\pm\Im(i+j-k) & -\sqrt{2}\Re(k) & \Im(i)
 \end{array}\right).
 \]
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Noting that 
-\begin_inset Formula $z=\pm1$
-\end_inset
-
- and using Mathematica on the matrix
-\begin_inset Formula 
-\[
-\left(\begin{array}{cccc}
-a & \pm b & -f & \pm f\\
-\pm b & a & \pm f & -f\\
--c & \mp d & -g & \pm g\\
-\mp d & -c & \pm g & -g
-\end{array}\right),
-\]
-
-\end_inset
-
-
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-eigenvalues {{a,b,-f,f},{b,a,f,-f},{-c,-d,-g,g},{-d,-c,g,-g}} eigenvalues
- {{a,-b,-f,-f},{-b,a,-f,-f},{-c,d,-g,-g},{d,-c,-g,-g}}
-\end_layout
-
-\end_inset
-
-the eigenvalues for both signs are 
+The eigenvalues are
 \begin_inset Formula 
 \begin{align*}
-\lambda_{1} & =0\\
-\lambda_{2} & =a+b\\
-\lambda_{3,4} & =\frac{1}{2}\left(a-b-2g\pm\sqrt{h}\right)\\
-h & =a^{2}-2ab+4ag+b^{2}-4bg+8cf-8df+4g^{2}\\
- & =(a-b+2g)^{2}+8f(c-d).
-\end{align*}
-
-\end_inset
-
-Reading off the values of 
-\begin_inset Formula $a$
-\end_inset
-
- through 
-\begin_inset Formula $g$
-\end_inset
-
- from the matrix, we have the four eigenvalues
-\begin_inset Formula 
-\begin{align*}
-\sigma_{1} & =0\\
-\sigma_{1} & =2a^{2}\Im\left(2i+j+k\right)\\
-\sigma_{1} & =-a^{2}\Im\left(j+3k\right)\pm a^{2}\sqrt{\Im\left(k-j\right)^{2}-8\Re\left(k\right)\Re\left(j+k\right)}.
-\end{align*}
-
-\end_inset
-
-Now for the case 
-\begin_inset Formula $z=\pm i$
-\end_inset
-
-, the matrix becomes
-\begin_inset Formula 
-\[
-2a^{2}\left(\begin{array}{cccc}
-\Im(i) & \pm\Re(k) & \Re(k) & \pm\Im(i+j-k)\\
-\pm\Re(i+j-k) & \Im(k) & \pm\Im(k) & \Re(i)\\
--\Re(i) & \pm\Im(k) & \Im(k) & \mp\Re(i+j-k)\\
-\pm\Im(i+j-k) & -\Re(k) & \mp\Re(k) & \Im(i)
-\end{array}\right).
-\]
-
-\end_inset
-
-
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-eigenvalues {{a,b,b,g},{c,d,d,f},{-f,d,d,-c},{g,-b,-b,a}} eigenvalues {{a,-b,b,-
-g},{-c,d,-d,f},{-f,-d,d,c},{-g,-b,b,a}}
-\end_layout
-
-\end_inset
-
-Now using Mathematica to find the eigenvalues of
-\begin_inset Formula 
-\[
-\left(\begin{array}{cccc}
-a & \pm b & b & \pm g\\
-\pm c & d & \pm d & f\\
--f & \pm d & d & \mp c\\
-\pm g & -b & \mp b & a
-\end{array}\right).
-\]
-
-\end_inset
-
-The eigenvalues for both signs are
-\begin_inset Formula 
-\begin{align*}
-\lambda_{1} & =0\\
-\lambda_{2} & =a+g\\
-\lambda_{3,4} & =\frac{1}{2}\left(a+2d-g\right)\pm\frac{1}{2}\sqrt{h}\\
-h & =a^{2}-4ad-2ag+8bc-8bf+4d^{2}+4dg+g^{2}\\
- & =(a-2d)^{2}-2g(a-2d)+g^{2}+8bc-8bf\\
- & =(a-2d-g)^{2}+8b(c-f).
-\end{align*}
-
-\end_inset
-
-Now reading off the values, we obtain the eigenvalues
-\begin_inset Formula 
-\begin{align*}
-\sigma_{1} & =0\\
-\sigma_{2} & =2a^{2}\Im(2i+j-k)\\
-\sigma_{3,4} & =a^{2}\Im(3k-j)\pm a^{2}\sqrt{\Im(j+k)^{2}+8\Re(k)\Re(j-k)}.
+\sigma_{1} & =2a^{2}\Im(2i+j-k)\\
+\sigma_{1} & =a^{2}\Im(3k-j)\pm a^{2}\sqrt{\Im(j+k)^{2}+8\Re(j-k)\Re(k)}.
 \end{align*}
 
 \end_inset
