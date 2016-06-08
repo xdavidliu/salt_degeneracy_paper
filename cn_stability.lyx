@@ -1946,7 +1946,7 @@ hence, assuming
 \begin_inset Formula 
 \begin{align*}
 H & =\frac{2G_{\varepsilon}}{\omega_{\mathrm{t}}\gamma_{\mathrm{t}}}+G_{D}\left(\frac{2}{\omega_{\mathrm{t}}}-\frac{\gamma_{\mathrm{t}}}{\gamma_{\perp}}\right)\\
- & =2G_{\varepsilon}\left(\frac{\omega_{\mathrm{t}}-\omega_{a}}{\omega_{\mathrm{t}}\gamma_{\perp}}+\frac{i}{\omega_{\mathrm{t}}}\right)+G_{D}\left[\frac{2}{\omega_{\mathrm{t}}}-\left|\gamma_{\mathrm{t}}\right|^{2}\left(\frac{\omega-\omega_{\mathrm{a}}}{\gamma_{\perp}}-i\right)\right].
+ & =\frac{2G_{\varepsilon}}{\omega_{\mathrm{t}}}\left(\frac{\omega_{\mathrm{t}}-\omega_{a}}{\gamma_{\perp}}+i\right)+G_{D}\left[\frac{2}{\omega_{\mathrm{t}}}-\frac{\left|\gamma_{\mathrm{t}}\right|^{2}}{\gamma_{\perp}}\left(\frac{\omega-\omega_{\mathrm{a}}}{\gamma_{\perp}}-i\right)\right].
 \end{align*}
 
 \end_inset
@@ -1954,8 +1954,8 @@ H & =\frac{2G_{\varepsilon}}{\omega_{\mathrm{t}}\gamma_{\mathrm{t}}}+G_{D}\left(
 Hence, we have
 \begin_inset Formula 
 \begin{align*}
-\Re(H) & =2\Re(G_{\varepsilon})\frac{\omega_{\mathrm{t}}-\omega_{\mathrm{a}}}{\omega_{\mathrm{t}}\gamma_{\perp}}-\frac{2}{\omega_{\mathrm{t}}}\Im(G_{\varepsilon})+G_{D}\left(\frac{2}{\omega_{\mathrm{t}}}-\left|\gamma_{\mathrm{t}}\right|^{2}\frac{\omega-\omega_{\mathrm{a}}}{\gamma_{\perp}}\right)+\mathcal{O}(1/Q)\\
-\Im(H) & =\frac{2}{\omega_{\mathrm{t}}}\Re(G_{\varepsilon})+2\Im(G_{\varepsilon})\frac{\omega_{\mathrm{t}}-\omega_{\mathrm{a}}}{\omega_{\mathrm{t}}\gamma_{\perp}}+G_{D}\left|\gamma_{\mathrm{t}}\right|^{2}+\mathcal{O}(1/Q).
+\Re(H) & =2\Re(G_{\varepsilon})\frac{\omega_{\mathrm{t}}-\omega_{\mathrm{a}}}{\omega_{\mathrm{t}}\gamma_{\perp}}-\frac{2}{\omega_{\mathrm{t}}}\Im(G_{\varepsilon})+G_{D}\left(\frac{2}{\omega_{\mathrm{t}}}-\left|\gamma_{\mathrm{t}}\right|^{2}\frac{\omega-\omega_{\mathrm{a}}}{\gamma_{\perp}^{2}}\right)+\mathcal{O}(1/Q)\\
+\Im(H) & =\frac{2}{\omega_{\mathrm{t}}}\Re(G_{\varepsilon})+2\Im(G_{\varepsilon})\frac{\omega_{\mathrm{t}}-\omega_{\mathrm{a}}}{\omega_{\mathrm{t}}\gamma_{\perp}}+G_{D}\frac{\left|\gamma_{\mathrm{t}}\right|^{2}}{\gamma_{\perp}}+\mathcal{O}(1/Q).
 \end{align*}
 
 \end_inset
