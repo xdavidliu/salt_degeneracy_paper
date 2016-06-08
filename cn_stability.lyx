@@ -1984,10 +1984,10 @@ b_{2}
 
 For the matrix, we have
 \begin_inset Formula 
-\begin{align*}
-\mathrm{tr} & =2\Im\left(\left|a_{+}\right|^{2}i_{+}+\left|a_{-}\right|^{2}i_{-}\right)\\
-\det & =-4\left|a_{+}a_{-}\right|^{2}\left[\Im(i_{+})\Im(j_{-})+\Im(i_{-})\Im(j_{+})+\Im(j_{+})\Im(j_{-})\right].
-\end{align*}
+\begin{align}
+\mathrm{tr} & =2\Im\left(\left|a_{+}\right|^{2}i_{+}+\left|a_{-}\right|^{2}i_{-}\right)\nonumber \\
+\det & =-4\left|a_{+}a_{-}\right|^{2}\left[\Im(i_{+})\Im(j_{-})+\Im(i_{-})\Im(j_{+})+\Im(j_{+})\Im(j_{-})\right].\label{eq:K=0 eigenvalues}
+\end{align}
 
 \end_inset
 
@@ -2004,6 +2004,29 @@ Note there is no dependence on
 \end_inset
 
 .
+ For the TM 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ case, we have 
+\begin_inset Formula $j=h$
+\end_inset
+
+, and 
+\begin_inset Formula $\frac{\mathrm{tr}}{2}=2a^{2}\Im(i)$
+\end_inset
+
+ and 
+\begin_inset Formula $-\det=12a^{4}\Im(i)^{2}$
+\end_inset
+
+.
+ The two non-zero eigenvalues are then 
+\begin_inset Formula $\sigma=2a^{2}\left[\Im(i)\pm2\left|\Im(i)\right|\right]$
+\end_inset
+
+.
+ which clearly must have both signs and is unstable.
 \end_layout
 
 \begin_layout Subsection*
@@ -2099,6 +2122,85 @@ Here, all individual quantities are positive, although differences such
 \end_inset
 
  may be negative.
+ 
+\end_layout
+
+\begin_layout Standard
+We now examine the quartic overlap integrals, for the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ case (in the 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ case, it is unknown whether there exist standing modes that have mirror
+ symmetry and are nearly real in the high-
+\begin_inset Formula $Q$
+\end_inset
+
+ case).
+ First, we have 
+\begin_inset Formula $\mathbf{E}_{\pm}=\mathbf{E}_{\mathrm{even}}\pm i\mathbf{E}_{\mathrm{odd}}$
+\end_inset
+
+, so we have
+\begin_inset Formula 
+\begin{align*}
+I & =\int D\left|\mathbf{E}_{\mathrm{even}}+i\mathbf{E}_{\mathrm{odd}}\right|^{2}\left(\mathbf{E}_{\mathrm{even}}^{2}+\mathbf{E}_{\mathrm{odd}}^{2}\right)\\
+ & =\int D\left(\left|\mathbf{E}_{\mathrm{even}}\right|^{2}+\left|\mathbf{E}_{\mathrm{odd}}\right|^{2}\right)^{2}+\mathcal{O}(1/Q)\\
+J & =\int D\left(\mathbf{E}_{\mathrm{even}}^{2}-\mathbf{E}_{\mathrm{odd}}^{2}+2i\mathbf{E}_{\mathrm{even}}\cdot\mathbf{E}_{\mathrm{odd}}\right)\left[\left|\mathbf{E}_{\mathrm{even}}\right|^{2}-\left|\mathbf{E}_{\mathrm{odd}}\right|^{2}-2i\Re\left(\mathbf{E}_{\mathrm{even}}^{\star}\cdot\mathbf{E}_{\mathrm{odd}}\right)\right]\\
+ & =\int D\left(\left|\mathbf{E}_{\mathrm{even}}\right|^{2}-\left|\mathbf{E}_{\mathrm{odd}}\right|^{2}\right)^{2}+4\int D\left|\mathbf{E}_{\mathrm{even}}\cdot\mathbf{E}_{\mathrm{odd}}\right|^{2}+\mathcal{O}(1/Q)\\
+K & =\int D\left(\left|\mathbf{E}_{\mathrm{even}}\right|^{2}-\left|\mathbf{E}_{\mathrm{odd}}\right|^{2}\right)^{2}-4\int D\left|\mathbf{E}_{\mathrm{even}}\cdot\mathbf{E}_{\mathrm{odd}}\right|^{2}+\mathcal{O}(1/Q).
+\end{align*}
+
+\end_inset
+
+Here, all three integrals have imaginary parts that are 
+\begin_inset Formula $\mathcal{O}(1/Q)$
+\end_inset
+
+, and 
+\begin_inset Formula $I$
+\end_inset
+
+ and 
+\begin_inset Formula $J$
+\end_inset
+
+ are both positive.
+ Note that for the TM case, 
+\begin_inset Formula $I=J$
+\end_inset
+
+.
+ Noteably, we have
+\begin_inset Formula 
+\begin{align*}
+J-K & =8\int D\left|\mathbf{E}_{\mathrm{even}}\cdot\mathbf{E}_{\mathrm{odd}}\right|^{2}+\mathcal{O}(1/Q)\\
+J+K & =2\int D\left(\left|\mathbf{E}_{\mathrm{even}}\right|^{2}-\left|\mathbf{E}_{\mathrm{odd}}\right|^{2}\right)^{2}+\mathcal{O}(1/Q)
+\end{align*}
+
+\end_inset
+
+both as positive real quantities to zeroth order in 
+\begin_inset Formula $1/Q$
+\end_inset
+
+.
+ We first examine the eigenvalues for 
+\begin_inset Formula $n\neq4\ell$
+\end_inset
+
+ in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:K=0 eigenvalues"
+
+\end_inset
+
+.
  
 \end_layout
 

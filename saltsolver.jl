@@ -288,7 +288,7 @@ function standing_roots_test(H, I, J, K, GD, iscnv, nsym, ℓ; isplot=true)
         if isplot
             plot(θs, ω1s1, θs, ω1s2)   
             xlabel("phase angle")
-            ylabel(L"\omega_1")
+            ylabel("omega_1")
             title("two expressions for omega1")
         end
         δωs = ω1s2 - ω1s1
