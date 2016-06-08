@@ -17,9 +17,9 @@ function normalize!(E::AbstractVector)
     imax
 end
 
-type Mode{T<:AbstractFloat, U<:Integer}
+type Mode{T<:AbstractFloat, V<:Number, U<:Integer}
     E::Vector{Complex{T}}
-    ω::T
+    ω::V
     c²::T
     imax::U
     
@@ -33,8 +33,8 @@ type Mode{T<:AbstractFloat, U<:Integer}
         new(E, ω, c², imax)
     end
 end
-Mode(E, ω, c²) = Mode{typeof(ω), Int}(E, ω, c²)
-Mode(E, ω, c², imax) = Mode{typeof(ω), typeof(imax)}(E, ω, c², imax)
+Mode(E, ω, c²) = Mode{typeof(c²), typeof(ω), Int}(E, ω, c²)
+Mode(E, ω, c², imax) = Mode{typeof(c²), typeof(ω), typeof(imax)}(E, ω, c², imax)
 
 function salt_operator!(md::Mode, las::Laser, D::Real, J::AbstractMatrix)
     γ = las.γ⟂ / (md.ω - las.ωa + im*las.γ⟂)
