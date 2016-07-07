@@ -1853,7 +1853,7 @@ Note there is no dependence on
 \end_inset
 
  case, we have 
-\begin_inset Formula $j=h$
+\begin_inset Formula $j=i$
 \end_inset
 
 , and 
@@ -1866,7 +1866,7 @@ Note there is no dependence on
 
 .
  The two non-zero eigenvalues are then 
-\begin_inset Formula $\sigma=2a^{2}\left[\Im(i)\pm2\left|\Im(i)\right|\right]$
+\begin_inset Formula $\sigma=(2\pm4)a^{2}\Im(i)$
 \end_inset
 
 .
