@@ -2054,14 +2054,14 @@ reference "eq:K=0 eigenvalues"
 
 \begin_layout Standard
 For the 1d periodic geometry, we originally have the equation 
-\begin_inset Formula $(\nabla^{2}+\omega_{r}^{2})E=0$
+\begin_inset Formula $(\nabla^{2}+\omega_{\ell}^{2})E^{\ell}=0$
 \end_inset
 
 .
  At threshold, this is identical to 
 \begin_inset Formula 
 \[
--\nabla^{2}E=\omega^{2}\left[1+i\sigma+D\left|\gamma\right|^{2}\left(\frac{\omega-\omega_{a}}{\gamma_{\perp}}-i\right)\right]E
+-\nabla^{2}E^{\ell}=\omega^{2}\left[1+i\sigma+D\left|\gamma\right|^{2}\left(\frac{\omega-\omega_{a}}{\gamma_{\perp}}-i\right)\right]E^{\ell}.
 \]
 
 \end_inset
@@ -2074,7 +2074,7 @@ Then at threshold, we can make the identification
  For the real part, we have
 \begin_inset Formula 
 \[
-\omega_{r}^{2}=\omega^{2}\left[1+\frac{\sigma}{\gamma_{\perp}}\left(\omega-\omega_{a}\right)\right].
+\omega_{\ell}^{2}=\omega^{2}\left[1+\frac{\sigma}{\gamma_{\perp}}\left(\omega-\omega_{a}\right)\right].
 \]
 
 \end_inset
@@ -2084,13 +2084,311 @@ The solution to this cubic equation is
 \begin{align*}
 \omega & =v+\frac{\alpha^{2}}{v}-\alpha\\
 \alpha & =\frac{1}{3}\left(\frac{\gamma_{\perp}}{\sigma}-\omega_{a}\right)\\
-\beta & =\alpha^{3}-\frac{\gamma_{\perp}\omega_{r}^{2}}{2\sigma}\\
+\beta & =\alpha^{3}-\frac{\gamma_{\perp}\omega_{\ell}^{2}}{2\sigma}\\
 v & =\left(-\beta+\sqrt{\beta^{2}-\alpha^{6}}\right)^{1/3}.
 \end{align*}
 
 \end_inset
 
+For a discretized ring, the eigenfunctions belonging to 2d irreps (note
+ there are always 
+\begin_inset Formula $N$
+\end_inset
 
+ total eigenfunctions, but some of them belong to 1d irreps so we ignore
+ them here) are 
+\begin_inset Formula $E^{\ell}[m]=\exp\left(\frac{2\pi im\ell}{N}\right)$
+\end_inset
+
+ for 
+\begin_inset Formula $|\ell|=1\ldots\mathrm{floor}(\frac{N-1}{2})$
+\end_inset
+
+ and gridpoints 
+\begin_inset Formula $m=1\ldots N$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $E^{\ell}[N+1]=E^{\ell}[1]$
+\end_inset
+
+, so the boundary condition is periodic.
+ From the laplacian, we have
+\begin_inset Formula 
+\begin{align*}
+-\omega_{\ell}^{2}h^{2}E^{\ell}[m] & =E^{\ell}[m+1]+E^{\ell}[m-1]-2E^{\ell}[m]\\
+ & =E^{\ell}[m]\left(\exp\left[\frac{2\pi i\ell}{N}\right]+\exp\left[-\frac{2\pi i\ell}{N}\right]-2\right)\\
+ & =2E^{\ell}[m]\left(\cos\frac{2\pi\ell}{N}-1\right),
+\end{align*}
+
+\end_inset
+
+from which we take the length of the cavity to be 
+\begin_inset Formula $1$
+\end_inset
+
+ and 
+\begin_inset Formula $1/h=N$
+\end_inset
+
+, and make the conclusion that 
+\begin_inset Formula $\omega_{\ell}=N\sqrt{2\left(1-\cos\frac{2\pi\ell}{N}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now we choose a particular 
+\begin_inset Formula $\ell$
+\end_inset
+
+ and make the identification 
+\begin_inset Formula $\mathbf{E}_{\pm}=E^{\pm|\ell|}$
+\end_inset
+
+.
+ We then automatically have the results 
+\begin_inset Formula $\mathbf{E}_{+}\cdot\mathbf{E}_{-}=|\mathbf{E}_{\pm}|^{2}=1$
+\end_inset
+
+ everywhere.
+ We also note that the discretized version of integrals is 
+\begin_inset Formula $\int dx\rightarrow h\sum=\frac{1}{N}\sum$
+\end_inset
+
+.
+ Hence, all the integrals become simply constant sums over 
+\begin_inset Formula $N$
+\end_inset
+
+ points, and the 
+\begin_inset Formula $N$
+\end_inset
+
+'s cancel out.
+ We then have 
+\begin_inset Formula $G_{\varepsilon}=1+i\sigma$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{D}=I=J=D=\sigma/|\gamma|^{2}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $4\ell\neq N$
+\end_inset
+
+, 
+\begin_inset Formula $K=0$
+\end_inset
+
+, but for 
+\begin_inset Formula $4\ell=K$
+\end_inset
+
+, we have 
+\begin_inset Formula $\exp\left(\frac{2\pi im\ell}{N}\right)^{4}=1$
+\end_inset
+
+, so 
+\begin_inset Formula $K=D$
+\end_inset
+
+.
+ Note that in the continuous system, 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+ so 
+\begin_inset Formula $K$
+\end_inset
+
+ is always zero.
+ Additionally, we have
+\begin_inset Formula 
+\begin{align*}
+H & =\frac{2\varepsilon}{\omega\gamma}+D\left(\frac{2}{\omega}-\frac{\gamma}{\gamma_{\perp}}\right)=\frac{2}{\omega\gamma}\left(\varepsilon+D\gamma\right)-\frac{D\gamma}{\gamma_{\perp}}=\frac{2\omega_{\ell}^{2}}{\omega^{3}\gamma}-\frac{\sigma}{\gamma_{\perp}\gamma^{\star}}\\
+ & =\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}-\frac{\sigma}{\gamma_{\perp}}\right)\frac{\omega-\omega_{a}}{\gamma_{\perp}}+\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}+\frac{\sigma}{\gamma_{\perp}}\right)i.
+\end{align*}
+
+\end_inset
+
+Recall that for the circulating lasing mode, the stability eigenvalues are
+ 
+\begin_inset Formula $0,2a^{2}\Im(I/H)$
+\end_inset
+
+, and 
+\begin_inset Formula $a^{2}\Im(J/H)\pm a^{2}\sqrt{|K/H|^{2}-\Re(J/H)^{2}}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $I=J=D$
+\end_inset
+
+, we have 
+\begin_inset Formula $\Im(I/H)=-D\Im(H)/|H|^{2}=-\frac{D}{|H|^{2}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}+\frac{\sigma}{\gamma_{\perp}}\right)<0$
+\end_inset
+
+, hence this eigenvalue is stable.
+ Next, we have 
+\begin_inset Formula $\Re(J/H)=D\Re(H)/|H|^{2}=\frac{D}{|H|^{2}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}-\frac{\sigma}{\gamma_{\perp}}\right)\frac{\omega-\omega_{a}}{\gamma_{\perp}}$
+\end_inset
+
+.
+ The sign of this is indeterminate, but the square of it is definitely positive.
+ For the case that 
+\begin_inset Formula $K=0$
+\end_inset
+
+, the radicand is negative, hence the square root is imaginary, and the
+ pair of eigenvalues is again stable because 
+\begin_inset Formula $I=J$
+\end_inset
+
+.
+ For the case 
+\begin_inset Formula $K=D$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{align*}
+\left|\frac{K}{H}\right|^{2}-\Re\left(\frac{J}{H}\right)^{2} & =\frac{D^{2}}{|H|^{2}}\left[1-\frac{\Re(H)^{2}}{|H|^{2}}\right]=\frac{D^{2}}{|H|^{4}}\Im(H)^{2}\\
+ & =\frac{D^{2}}{|H|^{4}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}+\frac{\sigma}{\gamma_{\perp}}\right)^{2}=\Im\left(\frac{J}{H}\right)^{2}
+\end{align*}
+
+\end_inset
+
+Because this is greater than zero, we have
+\begin_inset Formula 
+\[
+\Im\left(\frac{J}{H}\right)\pm\sqrt{\left|\frac{K}{H}\right|^{2}-\Re\left(\frac{J}{H}\right)^{2}}=-\left(1\pm1\right)\frac{D}{|H|^{2}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}+\frac{\sigma}{\gamma_{\perp}}\right).
+\]
+
+\end_inset
+
+The top sign gives a negative value so is stable, but the bottom sign gives
+ a zero value, so is structurally stable, and may require further analysis.
+  
+\end_layout
+
+\begin_layout Subsection*
+Numerical discretization of ring
+\end_layout
+
+\begin_layout Standard
+(taken from previous file mb_perturbation_result.lyx).
+ Here, we show that the results from the previous section hold exactly (i.e.
+ with 
+\emph on
+no
+\emph default
+ discretization error) even if we discretize the ring with a finite-difference
+ Laplacian.
+ We let the 
+\begin_inset Formula $N$
+\end_inset
+
+ gridpoints be at
+\begin_inset Formula 
+\[
+\phi[k]=\frac{2\pi k}{N},\,k=1,2,3\ldots N
+\]
+
+\end_inset
+
+With no loss or gain, it's easy to show that the 
+\begin_inset Formula $\ell$
+\end_inset
+
+th eigenfrequency is then
+\begin_inset Formula 
+\[
+\omega_{\ell}=\frac{N}{\pi}\sin\left(\frac{\ell\pi}{N}\right),\,\ell=1,2,3\ldots N
+\]
+
+\end_inset
+
+which reduces to 
+\begin_inset Formula $\ell$
+\end_inset
+
+ in the continuum limit.
+ The 
+\begin_inset Formula $k$
+\end_inset
+
+th element of the 
+\begin_inset Formula $\ell$
+\end_inset
+
+th eigenfunction is given by
+\begin_inset Formula 
+\[
+\psi_{\ell}[k]=\exp\left(\frac{2\pi i\ell k}{N}\right)
+\]
+
+\end_inset
+
+For the continuum limit, we have the integrals
+\begin_inset Formula 
+\begin{align*}
+\intop_{0}^{2\pi}d\phi\cos(\ell\phi) & =\pi\\
+\intop_{0}^{2\pi}d\phi\cos^{4}(\ell\phi) & =\frac{3\pi}{4}\\
+\intop_{0}^{2\pi}dx\cos^{2}(\ell\phi)\sin^{2}(\ell\phi) & =\frac{\pi}{4}
+\end{align*}
+
+\end_inset
+
+which lead to the final eigenproblem in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:4x4_standing"
+
+\end_inset
+
+.
+ For the discretized eigenfunctions, it can be shown that
+\begin_inset Formula 
+\begin{align*}
+\sum_{k=1}^{N}\cos^{2}\left(\frac{2\pi\ell k}{N}\right) & =\frac{N}{2}\\
+\sum_{k=1}^{N}\cos^{4}\left(\frac{2\pi\ell k}{N}\right) & =\frac{3N}{8}\\
+\sum_{k=1}^{N}\cos^{2}\left(\frac{2\pi\ell k}{N}\right)\sin^{2}\left(\frac{2\pi\ell k}{N}\right) & =\frac{N}{8}
+\end{align*}
+
+\end_inset
+
+if 
+\begin_inset Formula $N>2$
+\end_inset
+
+.
+ (These expressions break down for one notable exception: when 
+\begin_inset Formula $N=2\ell$
+\end_inset
+
+, which we can simply avoid).
+ Because the relative values of these sums are the same as in the continuum
+ limit, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:4x4_standing"
+
+\end_inset
+
+ should be exactly the same for the discretized case as well.
+ The same holds for integrals and sums of the 
+\begin_inset Formula $e^{i\ell\phi}$
+\end_inset
+
+ basis functions.
 \end_layout
 
 \end_body
