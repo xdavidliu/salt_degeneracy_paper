@@ -2280,6 +2280,24 @@ The first eigenvalue appears to be a structural stability.
 
  and again the elements are shifted down by 1.
  This is interesting, and I'm not sure how to explain it right now.
+ Note that the special case 
+\begin_inset Formula $|a_{+}|^{2}=|a_{-}|^{2}=1/2$
+\end_inset
+
+ can also be obtained from the 
+\begin_inset Formula $T_{\pm}$
+\end_inset
+
+ equation.
+ We have 
+\begin_inset Formula 
+\[
+T=\frac{I(1+z^{2})}{I^{2}\left[(2+z^{2})^{2}-1\right]}=\frac{1}{I(3+z^{2})}=\frac{1}{2D_{\mathrm{t}}},
+\]
+
+\end_inset
+
+which agrees.
 \end_layout
 
 \begin_layout Standard
