@@ -257,7 +257,7 @@ function overlap_integrals{U<:AbstractVector}(Es::Tuple{U, U}, ωt::Real, Dt::Re
     H, I, J, K, GD
 end
 
-function standing_roots_test(H, I, J, K, GD, iscnv, nsym, ℓ; isplot=true) 
+function standing_roots_test(H, I, J, K, GD, iscnv, nsym, ℓ; isplot=true, maxits=10) 
     other(i) = 3-i
     T(θ, i) = begin
         z = exp(im*θ)
@@ -296,7 +296,7 @@ function standing_roots_test(H, I, J, K, GD, iscnv, nsym, ℓ; isplot=true)
         for i=1:length(δωs)-1
             # if two points straddle, there's a root between
             if δωs[i]*δωs[i+1] < 0
-                θ = root(δω, (θs[i], θs[i+1]))
+                θ = root(δω, (θs[i], θs[i+1]), maxits=maxits)
                 push!(θroots, θ)
                 push!(ω1roots, ω1(θ,1))
             end

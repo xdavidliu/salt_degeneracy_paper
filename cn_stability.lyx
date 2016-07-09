@@ -1474,14 +1474,14 @@ s
 
  are
 \begin_inset Formula 
-\[
+\begin{equation}
 2\left(\begin{array}{cc}
 \left|a_{+}\right|^{2}\Im(i_{+}) & \left|a_{+}a_{-}\right|\left[\Re(z)\Im(i_{-}+j_{-})+\Im(zk_{-})\right]\\
 \left|a_{+}a_{-}\right|\Im\left[z(i_{+}+j_{+})+z^{\star}k_{+}\right] & \left|a_{-}\right|^{2}\Re(z)\Im(zi_{-})+\left|a_{+}\right|^{2}\Re(z^{\star}k_{+})\Im(z)\\
 -\left|a_{+}\right|^{2}\Re(i_{+}) & -\left|a_{+}a_{-}\right|\left[\Re(z)\Re(i_{-}+j_{-})+\Re(zk_{-})\right]\\
 -\left|a_{+}a_{-}\right|\Re\left[z(i_{+}+j_{+})+z^{\star}k_{+}\right] & -\left|a_{-}\right|^{2}\Re(z)\Re(zi_{-})+\left|a_{+}\right|^{2}\Im(z^{\star}k_{+})\Im(z)
-\end{array}\right),
-\]
+\end{array}\right),\label{eq:first_two_columns}
+\end{equation}
 
 \end_inset
 
@@ -2216,6 +2216,23 @@ H & =\frac{2\varepsilon}{\omega\gamma}+D\left(\frac{2}{\omega}-\frac{\gamma}{\ga
 
 \end_inset
 
+Also, we have 
+\begin_inset Formula $\omega_{1}\sim\Im(G_{D}/I)=0$
+\end_inset
+
+, and 
+\begin_inset Formula $a^{2}=(\omega_{1}H+G_{D})/I=D/D=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Circulating lasing mode stability
+\end_layout
+
+\begin_layout Standard
 Recall that for the circulating lasing mode, the stability eigenvalues are
  
 \begin_inset Formula $0,2a^{2}\Im(I/H)$
@@ -2274,7 +2291,179 @@ Because this is greater than zero, we have
 
 The top sign gives a negative value so is stable, but the bottom sign gives
  a zero value, so is structurally stable, and may require further analysis.
-  
+ Hence, to review, for 
+\begin_inset Formula $N\neq4\ell$
+\end_inset
+
+, the circulating mode eigenvalues are 
+\begin_inset Formula $0,-\frac{2D}{|H|^{2}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}+\frac{\sigma}{\gamma_{\perp}}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $-\frac{D}{|H|^{2}}\left[\frac{2\omega_{\ell}^{2}}{\omega^{3}}+\frac{\sigma}{\gamma_{\perp}}\pm\left|\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}-\frac{\sigma}{\gamma_{\perp}}\right)\frac{\omega-\omega_{a}}{\gamma_{\perp}}\right|i\right]$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $N=4\ell$
+\end_inset
+
+, the eigenvalues are 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $-\frac{2D}{|H|^{2}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}+\frac{\sigma}{\gamma_{\perp}}\right)$
+\end_inset
+
+, each with degeneracy 2.
+\end_layout
+
+\begin_layout Subsubsection*
+Standing lasing mode stability
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $N=4\ell$
+\end_inset
+
+ and 
+\begin_inset Formula $z^{2}=1$
+\end_inset
+
+, two of the eigenvalues are 
+\begin_inset Formula $\sigma_{1}=-a^{2}\Im(j+3k)\pm a^{2}\sqrt{\Im(j-k)^{2}-8\Re(k)\Re(j+k)}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $i=j=k$
+\end_inset
+
+ and 
+\begin_inset Formula $\Im(i)<0$
+\end_inset
+
+ for the uniform ring as shown in the previous section, at least one of
+ these two 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ are positive, regardless of the sign of the radicand.
+ Hence, the standing lasing mode for this case is unstable.
+ 
+\end_layout
+
+\begin_layout Standard
+Next, for 
+\begin_inset Formula $N=4\ell$
+\end_inset
+
+ and 
+\begin_inset Formula $z^{2}=-1$
+\end_inset
+
+, we must go back much further to the point where 
+\begin_inset Formula $a_{\pm}$
+\end_inset
+
+ is obtained.
+ We have 
+\begin_inset Formula $I=J=K$
+\end_inset
+
+, and for 
+\begin_inset Formula $z^{2}=-1$
+\end_inset
+
+, the 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix equation for 
+\begin_inset Formula $|a_{\pm}|^{2}$
+\end_inset
+
+ is actually 
+\begin_inset Formula $\left(\begin{array}{cc}
+1 & 1\\
+1 & 1
+\end{array}\right)\left(\begin{array}{c}
+|a_{+}|^{2}\\
+|a_{-}|^{2}
+\end{array}\right)=\left(\begin{array}{c}
+1\\
+1
+\end{array}\right)$
+\end_inset
+
+, i.e.
+ singular.
+ Hence, we obtain 
+\begin_inset Formula $|a_{+}|^{2}+|a_{-}|^{2}=1$
+\end_inset
+
+, which is a very rare occurrence, because usually we expect 
+\begin_inset Formula $|a_{+}|=|a_{-}|$
+\end_inset
+
+ for standing modes in 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+.
+ Note that this continuous degree of freedom is 
+\emph on
+different 
+\emph default
+from that of the angle degree of freedom 
+\begin_inset Formula $\cos(x+\delta)$
+\end_inset
+
+ in 
+\begin_inset Formula $C_{\infty\mathrm{v}}$
+\end_inset
+
+, for which 
+\begin_inset Formula $|a_{+}|=|a_{-}|$
+\end_inset
+
+ still holds, but 
+\begin_inset Formula $z$
+\end_inset
+
+ is free to continuously vary.
+ To analyze the stability of this very special case, we look at Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:first_two_columns"
+
+\end_inset
+
+ and the other two columns, which becomes for 
+\begin_inset Formula $z=\pm i$
+\end_inset
+
+ and 
+\begin_inset Formula $i=j=k$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+2\left(\begin{array}{cccc}
+\left|a_{+}\right|^{2}\Im(k) & \pm\left|a_{+}a_{-}\right|\Re(k) & \left|a_{-}\right|^{2}\Re(k) & \pm\left|a_{+}a_{-}\right|\Im(k)\\
+\pm\left|a_{+}a_{-}\right|\Re(k) & \left|a_{+}\right|^{2}\Im(k) & \pm\left|a_{+}a_{-}\right|\Im(k) & \left|a_{-}\right|^{2}\Re(k)\\
+-\left|a_{+}\right|^{2}\Re(k) & \pm\left|a_{+}a_{-}\right|\Im(k) & \left|a_{-}\right|^{2}\Im(k) & \mp\left|a_{+}a_{-}\right|\Re(k)\\
+\pm\left|a_{+}a_{-}\right|\Im(k) & -\left|a_{+}\right|^{2}\Re(k) & \mp\left|a_{+}a_{-}\right|\Re(k) & \left|a_{-}\right|^{2}\Im(k)
+\end{array}\right).
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
