@@ -1247,33 +1247,20 @@ Hence, the other two eigenvalues are
 
 \end_inset
 
-For high-
-\begin_inset Formula $Q$
-\end_inset
-
- lasing modes, we have 
-\begin_inset Formula $\Im(J_{+}/H)$
-\end_inset
-
- being negative, similar to Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Im(HI)"
+The corresponding eigenvectors are
+\begin_inset Formula 
+\begin{equation}
+\mathbf{b}=\left(\begin{array}{c}
+0\\
+\Re(k_{+}-j_{+})\\
+0\\
+\Im(k_{+})\mp\sqrt{\left|k_{+}\right|^{2}-\Re(j_{+})^{2}}
+\end{array}\right).\label{eq:circulating_stability_eigenvectors}
+\end{equation}
 
 \end_inset
 
-.
- Hence, as long as 
-\begin_inset Formula $\left|k_{+}\right|^{2}-\Re(j_{+})^{2}<\Im(j_{+})^{2}$
-\end_inset
 
-, both 
-\begin_inset Formula $\sigma_{1}$
-\end_inset
-
- eigenvalues here are negative.
- 
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1848,7 +1835,11 @@ Note there is no dependence on
 \end_inset
 
 .
- For the TM 
+ 
+\end_layout
+
+\begin_layout Standard
+For the TM 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
@@ -1866,11 +1857,52 @@ Note there is no dependence on
 
 .
  The two non-zero eigenvalues are then 
-\begin_inset Formula $\sigma=(2\pm4)a^{2}\Im(i)$
+\begin_inset Formula $\sigma=(1\pm2)2a^{2}\Im(i)$
 \end_inset
 
 .
  which clearly must have both signs and is unstable.
+ The 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix becomes 
+\begin_inset Formula $2a^{2}\Im(i)\left(\begin{array}{cc}
+1 & 2\\
+2 & 1
+\end{array}\right)$
+\end_inset
+
+, which has the corresponding eigenvectors 
+\begin_inset Formula $\left(\begin{array}{c}
+\pm1\\
+1
+\end{array}\right)$
+\end_inset
+
+.
+ Multiplying by the orthogonal space (see explanation below Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:uniform_2x2"
+
+\end_inset
+
+), we obtain the eigenvectors
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+\pm1\\
+\Re(z)\\
+0\\
+\Im(z)
+\end{array}\right).
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
@@ -2060,11 +2092,16 @@ Circulating lasing mode stability
 \begin_layout Standard
 Recall that for the circulating lasing mode, the stability eigenvalues are
  
-\begin_inset Formula $0,2a^{2}\Im(I/H)$
+\begin_inset Formula $0,2a^{2}\Im(i)$
 \end_inset
 
 , and 
-\begin_inset Formula $a^{2}\Im(J/H)\pm a^{2}\sqrt{|K/H|^{2}-\Re(J/H)^{2}}$
+\begin_inset Formula $a^{2}\Im(j)\pm a^{2}\sqrt{|k|^{2}-\Re(j)^{2}}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $a^{2}=1$
 \end_inset
 
 .
@@ -2073,12 +2110,46 @@ Recall that for the circulating lasing mode, the stability eigenvalues are
 \end_inset
 
 , we have 
-\begin_inset Formula $\Im(I/H)=-D\Im(H)/|H|^{2}=-\frac{D}{|H|^{2}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}+\frac{\sigma}{\gamma_{\perp}}\right)<0$
+\begin_inset Formula $\Im(i)=-D\Im(H)/|H|^{2}=-\frac{D}{|H|^{2}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}+\frac{\sigma}{\gamma_{\perp}}\right)<0$
 \end_inset
 
 , hence this eigenvalue is stable.
- Next, we have 
-\begin_inset Formula $\Re(J/H)=D\Re(H)/|H|^{2}=\frac{D}{|H|^{2}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}-\frac{\sigma}{\gamma_{\perp}}\right)\frac{\omega-\omega_{a}}{\gamma_{\perp}}$
+ The associated eigenvector is
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+\Im(i)\\
+0\\
+-\Re(i)\\
+0
+\end{array}\right)
+\]
+
+\end_inset
+
+which corresponds to a mode with 
+\begin_inset Formula $\Im(i)$
+\end_inset
+
+ times an 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ component, and 
+\begin_inset Formula $-\Re(i)$
+\end_inset
+
+ times an 
+\begin_inset Formula $i\mathbf{E}_{+}$
+\end_inset
+
+ component.
+ 
+\end_layout
+
+\begin_layout Standard
+Next, we have 
+\begin_inset Formula $\Re(i)=D\Re(H)/|H|^{2}=\frac{D}{|H|^{2}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}-\frac{\sigma}{\gamma_{\perp}}\right)\frac{\omega-\omega_{a}}{\gamma_{\perp}}$
 \end_inset
 
 .
@@ -2093,30 +2164,126 @@ Recall that for the circulating lasing mode, the stability eigenvalues are
 \end_inset
 
 .
- For the case 
-\begin_inset Formula $K=D$
-\end_inset
-
-, we have
-\begin_inset Formula 
-\begin{align*}
-\left|\frac{K}{H}\right|^{2}-\Re\left(\frac{J}{H}\right)^{2} & =\frac{D^{2}}{|H|^{2}}\left[1-\frac{\Re(H)^{2}}{|H|^{2}}\right]=\frac{D^{2}}{|H|^{4}}\Im(H)^{2}\\
- & =\frac{D^{2}}{|H|^{4}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}+\frac{\sigma}{\gamma_{\perp}}\right)^{2}=\Im\left(\frac{J}{H}\right)^{2}
-\end{align*}
+ The associated pair of eigenvectors is, from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circulating_stability_eigenvectors"
 
 \end_inset
 
-Because this is greater than zero, we have
+, 
 \begin_inset Formula 
 \[
-\Im\left(\frac{J}{H}\right)\pm\sqrt{\left|\frac{K}{H}\right|^{2}-\Re\left(\frac{J}{H}\right)^{2}}=-\left(1\pm1\right)\frac{D}{|H|^{2}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}+\frac{\sigma}{\gamma_{\perp}}\right).
+\left(\begin{array}{c}
+0\\
+-\Re(j)\\
+0\\
+\pm|\Re(j)|i
+\end{array}\right),
 \]
 
 \end_inset
 
-The top sign gives a negative value so is stable, but the bottom sign gives
- a zero value, so is structurally stable, and may require further analysis.
- Hence, to review, for 
+where the 
+\begin_inset Formula $i$
+\end_inset
+
+ is 
+\begin_inset Formula $i=\sqrt{-1}$
+\end_inset
+
+, not 
+\begin_inset Formula $I/H$
+\end_inset
+
+.
+ Interestingly, here we have complex eigenvector, which we do not see anywhere
+ else in this calculation.
+ For the case 
+\begin_inset Formula $K=D$
+\end_inset
+
+, the 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ submatrix above Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circulating_stability_eigenvectors"
+
+\end_inset
+
+ is singular because 
+\begin_inset Formula $k=j$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\mathbb{A}=\left(\begin{array}{cc}
+2\Im(k) & 0\\
+-2\Re(k) & 0
+\end{array}\right)
+\]
+
+\end_inset
+
+(we have used the fact that 
+\begin_inset Formula $a_{+}^{2}=1$
+\end_inset
+
+), so we cannot use Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circulating_stability_eigenvectors"
+
+\end_inset
+
+ to get the eigenvalues.
+ Clearly, the two eigenvalues here are (after projecting back to the 
+\begin_inset Formula $4\times4$
+\end_inset
+
+ space)
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+0\\
+0\\
+0\\
+1
+\end{array}\right),\sigma_{1}=0;\;\mathbf{b}=\left(\begin{array}{c}
+0\\
+\Im(k)\\
+0\\
+-\Re(k)
+\end{array}\right),\sigma_{1}=2\Im(k).
+\]
+
+\end_inset
+
+The first eigenvalue appears to be a structural stability.
+ Interestingly, it resembles the zero eigenvector from the global phase
+ degree of freedom, which is 
+\begin_inset Formula $\mathbf{b}=(0,0,1,0)$
+\end_inset
+
+, except the 1 is in the wrong place.
+ The second eigenvalue also resembles the second eigenvalue from the previous
+ case, 
+\begin_inset Formula $\mathbf{b}=(\Im(i),0,-\Re(i),0)$
+\end_inset
+
+ and again the elements are shifted down by 1.
+ This is interesting, and I'm not sure how to explain it right now.
+\end_layout
+
+\begin_layout Standard
+Hence, to review, for 
 \begin_inset Formula $N\neq4\ell$
 \end_inset
 
@@ -2144,8 +2311,36 @@ The top sign gives a negative value so is stable, but the bottom sign gives
 , each with degeneracy 2.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Paragraph*
 Standing lasing mode stability
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $N\neq4\ell$
+\end_inset
+
+, recall that for TM 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+, even with non-uniform profiles, the two non-zero stability eigenvalues
+ are 
+\begin_inset Formula $(2\pm4)a^{2}\Im(i)$
+\end_inset
+
+, as shown by Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:K=0 eigenvalues"
+
+\end_inset
+
+.
+ These clearly must have both signs, so we easily see that the modes are
+ unstable.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2305,7 +2500,7 @@ This nullspace also happens to be already normalized.
  The orthogonal space to this nullspace is
 \begin_inset Formula 
 \[
-\left(\begin{array}{cc}
+Q=\left(\begin{array}{cc}
 |a_{+}| & 0\\
 0 & |a_{+}|\\
 0 & \pm|a_{-}|\\
@@ -2321,7 +2516,7 @@ Sandwich the original
 
  matrix between this orthogonal nullspace, and we obtain
 \begin_inset Formula 
-\[
+\begin{equation}
 2\left(\begin{array}{cccc}
 |a_{+}| & 0 & 0 & \pm|a_{-}|\\
 0 & |a_{+}| & \pm|a_{-}| & 0
@@ -2333,8 +2528,8 @@ Sandwich the original
 \end{array}\right)=2\left(\begin{array}{cc}
 \Im(k) & 0\\
 0 & \Im(k)
-\end{array}\right),
-\]
+\end{array}\right),\label{eq:uniform_2x2}
+\end{equation}
 
 \end_inset
 
@@ -2343,6 +2538,103 @@ so the four eigenvalues are always
 \end_inset
 
 , and these are always negative!
+\end_layout
+
+\begin_layout Standard
+Now we show why this sandwiching works.
+ First, suppose we have 
+\begin_inset Formula $Ax=\lambda x$
+\end_inset
+
+, the original 
+\begin_inset Formula $4\times4$
+\end_inset
+
+ problem.
+ Then, we construct a new 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix by sandwiching 
+\begin_inset Formula $A$
+\end_inset
+
+ between 
+\begin_inset Formula $Q$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $Q^{T}AQu=\lambda^{\prime}u$
+\end_inset
+
+.
+ Now, note that 
+\begin_inset Formula $u$
+\end_inset
+
+ is a 2-vector.
+ Note that 
+\begin_inset Formula $Q^{T}Q=\mathbf{1}_{2\times2}$
+\end_inset
+
+, i.e.
+ the identity matrix, but 
+\begin_inset Formula $QQ^{T}\neq\mathbf{1}_{4\times4}!$
+\end_inset
+
+ However, we make the identification 
+\begin_inset Formula $Qu=x$
+\end_inset
+
+, which results in 
+\begin_inset Formula $u=Q^{T}x$
+\end_inset
+
+, and we then have 
+\begin_inset Formula $Q^{T}Ax=\lambda^{\prime}A^{T}x$
+\end_inset
+
+, which is the same as the original 
+\begin_inset Formula $4\times4$
+\end_inset
+
+ eigenvalue problem, hence 
+\begin_inset Formula $\lambda=\lambda^{\prime}$
+\end_inset
+
+.
+ The two eigenvectors above are 
+\begin_inset Formula $u=\left(_{0}^{1}\right),\left(_{1}^{0}\right)$
+\end_inset
+
+, so taking 
+\begin_inset Formula $x=Qu$
+\end_inset
+
+, we have the two eigenvectors being just the columns of 
+\begin_inset Formula $Q:$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+|a_{+}|\\
+0\\
+0\\
+\pm|a_{-}|
+\end{array}\right),\left(\begin{array}{c}
+0\\
+|a_{+}|\\
+\pm|a_{-}|\\
+0
+\end{array}\right).
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
