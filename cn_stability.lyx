@@ -1755,14 +1755,32 @@ The case
 \end_inset
 
  with 
-\begin_inset Formula $n\neq4$
+\begin_inset Formula $n\neq4\ell$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-All 
+Note 
+\begin_inset Formula $\pm$
+\end_inset
+
+ subscripts on 
+\begin_inset Formula $i,j,k$
+\end_inset
+
+ can be neglected due to the fact that 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ with 
+\begin_inset Formula $n\neq4\ell$
+\end_inset
+
+ has no standing modes, but we keep track of the subscripts just in case
+ new discoveries are made later.
+ All 
 \begin_inset Formula $k_{\pm}=0$
 \end_inset
 
@@ -1958,23 +1976,49 @@ Note there are cases where there is a single eigenvector with elements
 \end_inset
 
  is known.
- We recall that
+ We recall that 
+\begin_inset Formula $x_{1/2}=-\gamma_{\parallel}^{-1}A_{1/2}\sum b_{k}v_{k}$
+\end_inset
+
+, and the first-order equation can be solved for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ as 
+\begin_inset Formula $x_{1}=-A_{0}^{-1}\left(A_{1}x_{0}+A_{1/2}x_{1/2}\right)$
+\end_inset
+
+.
+ Taking 
+\begin_inset Formula $w_{j}^{T}$
+\end_inset
+
+ (the left eigenvector) of the 
+\begin_inset Formula $d^{3/2}$
+\end_inset
+
+ equation, 
+\begin_inset Formula $A_{0}$
+\end_inset
+
+ gets annihilated and we have
 \begin_inset Formula 
 \[
-x_{1/2}=
+w_{j}^{T}\left(A_{1/2}x_{1}+A_{1}x_{1/2}+A_{3/2}x_{0}\right)+\sigma_{3/2}(w_{j}^{T}B_{0}x_{0})=0.
 \]
 
 \end_inset
 
+This is simply 
+\begin_inset Formula $\rho_{j}+\sigma_{3/2}\kappa_{j}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $j=1,2,3,4$
+\end_inset
+
+, and may not have a solution.
  
-\begin_inset Formula 
-\[
-(B_{0}\sigma_{1}+A_{1})x_{0}+A_{1/2}x_{1/2}+A_{0}x_{1}=0.
-\]
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection*
