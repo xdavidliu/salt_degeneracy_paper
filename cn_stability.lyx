@@ -535,7 +535,7 @@ To order
  solution becomes
 \begin_inset Formula 
 \begin{equation}
-(B_{0}\sigma_{1/2}+A_{1/2})\sum b_{k}v_{k}+A_{0}v_{1/2}=0.\label{eq:half}
+(B_{0}\sigma_{1/2}+A_{1/2})\sum b_{k}v_{k}+A_{0}x_{1/2}=0.\label{eq:half}
 \end{equation}
 
 \end_inset
@@ -675,7 +675,7 @@ The vector
 \end_inset
 
 , that 
-\begin_inset Formula $x_{1/2}=-\gamma_{\parallel}^{-1}A_{0}x_{1/2}$
+\begin_inset Formula $x_{1/2}=\gamma_{\parallel}^{-1}A_{0}x_{1/2}=-\gamma_{\parallel}^{-1}A_{1/2}\sum b_{k}v_{k}$
 \end_inset
 
 .
@@ -1260,7 +1260,20 @@ The corresponding eigenvectors are
 
 \end_inset
 
+Note that for 
+\begin_inset Formula $N\neq4\ell$
+\end_inset
 
+, the very last element is 
+\begin_inset Formula $\mp i|\Re(j_{+})|$
+\end_inset
+
+, where 
+\begin_inset Formula $i=\sqrt{-1}$
+\end_inset
+
+, i.e.
+ the last eigenvector element is imaginary.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1906,6 +1919,65 @@ reference "eq:uniform_2x2"
 \end_layout
 
 \begin_layout Subsection*
+Higher order calculation
+\end_layout
+
+\begin_layout Standard
+For solutions with 
+\begin_inset Formula $\sigma_{1}=0$
+\end_inset
+
+, the next order is 
+\begin_inset Formula $d^{3/2}$
+\end_inset
+
+.
+ The equation is
+\begin_inset Formula 
+\[
+A_{0}x_{3/2}+A_{1/2}x_{1}+A_{1}x_{1/2}+A_{3/2}x_{0}+\sigma_{3/2}B_{0}x_{0}=0.
+\]
+
+\end_inset
+
+Note there are cases where there is a single eigenvector with elements 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ with 
+\begin_inset Formula $\sigma_{1}=0$
+\end_inset
+
+, and then cases where there are two.
+ We look at the first case, for which we have 
+\begin_inset Formula $x_{0}=\sum b_{k}v_{k}$
+\end_inset
+
+, and 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ is known.
+ We recall that
+\begin_inset Formula 
+\[
+x_{1/2}=
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+(B_{0}\sigma_{1}+A_{1})x_{0}+A_{1/2}x_{1/2}+A_{0}x_{1}=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
 1d periodic with uniform profiles
 \end_layout
 
@@ -2198,8 +2270,6 @@ where the
 \end_inset
 
 .
- Interestingly, here we have complex eigenvector, which we do not see anywhere
- else in this calculation.
  For the case 
 \begin_inset Formula $K=D$
 \end_inset
