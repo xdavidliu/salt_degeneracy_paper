@@ -523,5 +523,112 @@ Note that for TM modes,
  
 \end_layout
 
+\begin_layout Subsection*
+Case 3
+\end_layout
+
+\begin_layout Standard
+The next case is 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ for 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+.
+ The lasing modes are given by
+\begin_inset Formula 
+\[
+\mathbf{E}=|\gamma_{\mathrm{t}}|^{-1}\sqrt{\gamma_{\parallel}d}\left(|a_{+}|\mathbf{E}_{+}+z|a_{-}|\mathbf{E}_{-}\right).
+\]
+
+\end_inset
+
+Here not all 
+\begin_inset Formula $z$
+\end_inset
+
+ are allowed, only those satisfying the equality
+\begin_inset Formula 
+\begin{equation}
+\omega_{1}=-\frac{\Im(G_{D}T_{+})}{\Im(HT_{+})}=-\frac{\Im(G_{D}T_{-})}{\Im(HT_{-})}\label{eq:omega1_equality}
+\end{equation}
+
+\end_inset
+
+where we have defined
+\begin_inset Formula 
+\[
+T_{\pm}=\frac{J_{\mp}+z^{\pm2}K_{\mp}}{(I_{+}+J_{+}+z^{-2}K_{+})(I_{-}+J_{-}+z^{2}K_{-})-I_{+}I_{-}}.
+\]
+
+\end_inset
+
+Empirically, we have found that the solutions to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:omega1_equality"
+
+\end_inset
+
+ are 
+\begin_inset Formula $z=e^{i\theta}$
+\end_inset
+
+, with four solutions 
+\begin_inset Formula $\theta$
+\end_inset
+
+ spaced apart by exactly 
+\begin_inset Formula $\pi/2$
+\end_inset
+
+.
+ The amplitudes are given by
+\begin_inset Formula 
+\[
+|a_{\pm}|^{2}=(\omega_{1}H+G_{D})T_{\pm}.
+\]
+
+\end_inset
+
+Now for the stability eigenpairs: getting the eigenpairs requires diagonalizing
+ a 
+\begin_inset Formula $4\times4$
+\end_inset
+
+ matrix.
+ The eigenvalues and eigenvectors of this matrix can be written down in
+ closed form, but they will probably be pages and pages long.
+ In this case, there turns out to be a null vector
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+0\\
+0\\
+1\\
+\pm1
+\end{array}\right),\sigma_{1}=0.
+\]
+
+\end_inset
+
+TODO: does making the rescale automatically equate 
+\begin_inset Formula $J_{+}=J_{-}$
+\end_inset
+
+, and same for 
+\begin_inset Formula $K$
+\end_inset
+
+ and 
+\begin_inset Formula $I$
+\end_inset
+
+? 
+\end_layout
+
 \end_body
 \end_document

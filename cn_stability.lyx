@@ -1541,7 +1541,113 @@ We now look at several cases.
 \end_inset
 
 .
- After doing this, the matrix for 
+ In other words, it is possible to rescale 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ by the necessary complex factor.
+ Suppose we have 
+\begin_inset Formula $|a_{+}|\neq|a_{-}|$
+\end_inset
+
+ and the solutions are 
+\begin_inset Formula $z^{2}\neq\pm1$
+\end_inset
+
+, i.e.
+ the angles are at 
+\begin_inset Formula $0+\Delta,\frac{\pi}{2}+\Delta,\pi+\Delta,\frac{3\pi}{2}+\Delta$
+\end_inset
+
+.
+ Now write 
+\begin_inset Formula $a_{+}=a$
+\end_inset
+
+, and we have
+\begin_inset Formula 
+\begin{align*}
+\mathbf{E} & =|\gamma_{\mathrm{t}}|^{-1}\sqrt{\gamma_{\parallel}d}a\left(\mathbf{E}_{+}+\tilde{z}e^{i\Delta}\frac{|a_{-}|}{|a_{+}|}\mathbf{E}_{-}\right)\\
+\tilde{z}^{2} & =\pm1.
+\end{align*}
+
+\end_inset
+
+Note from the equations above that
+\begin_inset Formula 
+\begin{equation}
+\frac{|a_{-}|}{|a_{+}|}=\sqrt{\frac{T_{-}}{T_{+}}}=\sqrt{\frac{J_{+}+z^{-2}K_{+}}{J_{-}+z^{2}K_{-}}}=\sqrt{\frac{J_{+}+\tilde{z}^{2}e^{-2i\Delta}K_{+}}{J_{-}+\tilde{z}^{2}e^{2i\Delta}K_{-}}}.\label{eq:a_T_relation}
+\end{equation}
+
+\end_inset
+
+We then write
+\begin_inset Formula 
+\[
+\tilde{\mathbf{E}}_{-}=e^{i\Delta}\frac{|a_{-}|}{|a_{+}|}\mathbf{E}_{-}.
+\]
+
+\end_inset
+
+Note that this quantity is guaranteed to be real.
+ With this shifting of one of the basis functions, we then have
+\begin_inset Formula 
+\begin{align*}
+\tilde{J}_{+} & =e^{i\Delta}\frac{|a_{-}|}{|a_{+}|}J_{+}\\
+\tilde{J}_{-} & =e^{i\Delta}\frac{|a_{-}|^{3}}{|a_{+}|^{3}}J_{-}
+\end{align*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{align*}
+\tilde{K}_{+} & =e^{-i\Delta}\frac{|a_{-}|}{|a_{+}|}K_{+}\\
+\tilde{K}_{-} & =e^{3i\Delta}\frac{|a_{-}|^{3}}{|a_{+}|^{3}}K_{-}.
+\end{align*}
+
+\end_inset
+
+Note that the shifted ratio of 
+\begin_inset Formula $T$
+\end_inset
+
+s (which we expect to be 
+\begin_inset Formula $|\tilde{a}_{-}|^{2}/|\tilde{a}_{+}|^{2}=1$
+\end_inset
+
+) would then be given by
+\begin_inset Formula 
+\[
+\frac{\tilde{T}_{-}}{\tilde{T}_{+}}=\frac{\tilde{J}_{+}+\tilde{z}^{2}\tilde{K}_{+}}{\tilde{J}_{-}+\tilde{z}^{2}\tilde{K}_{-}}=\frac{|a_{+}|^{2}}{|a_{-}|^{2}}\left(\frac{e^{i\Delta}J_{+}+\tilde{z}^{2}e^{-i\Delta}K_{+}}{e^{i\Delta}J_{-}+\tilde{z}^{2}e^{3i\Delta}K_{-}}\right)=1
+\]
+
+\end_inset
+
+where in the last equality, we have used Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:a_T_relation"
+
+\end_inset
+
+.
+ Hence, this shifting works, without requiring that 
+\begin_inset Formula $\tilde{J}_{+}=\tilde{J}_{-}$
+\end_inset
+
+ or 
+\begin_inset Formula $\tilde{K}_{+}=\tilde{K}_{-}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+After doing this, and suppressing the tildes for simplicity, the matrix
+ for 
 \begin_inset Formula $z=\pm1$
 \end_inset
 
