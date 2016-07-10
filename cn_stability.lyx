@@ -1633,16 +1633,33 @@ reference "eq:a_T_relation"
 \end_inset
 
 .
- Hence, this shifting works, without requiring that 
+ Hence, using the fact that 
+\begin_inset Formula $\tilde{z}^{2}=\pm1$
+\end_inset
+
+, we have 
+\begin_inset Formula $\tilde{J}_{+}\pm\tilde{K}_{+}=\tilde{J}_{-}\pm\tilde{K}_{-}$
+\end_inset
+
+.
+ Adding the two signs together, we have 
 \begin_inset Formula $\tilde{J}_{+}=\tilde{J}_{-}$
 \end_inset
 
- or 
+ and 
 \begin_inset Formula $\tilde{K}_{+}=\tilde{K}_{-}$
 \end_inset
 
 .
- 
+ It is uncertain whether 
+\begin_inset Formula $\tilde{I}_{-}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{I}_{+}$
+\end_inset
+
+ are equal; it does not appear to be necessary.
 \end_layout
 
 \begin_layout Standard
@@ -2549,14 +2566,6 @@ For
 , even with non-uniform profiles, the two non-zero stability eigenvalues
  are 
 \begin_inset Formula $(2\pm4)a^{2}\Im(i)$
-\end_inset
-
-, as shown by Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:K=0 eigenvalues"
-
 \end_inset
 
 .

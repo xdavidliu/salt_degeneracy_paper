@@ -559,9 +559,9 @@ Here not all
 
 where we have defined
 \begin_inset Formula 
-\[
-T_{\pm}=\frac{J_{\mp}+z^{\pm2}K_{\mp}}{(I_{+}+J_{+}+z^{-2}K_{+})(I_{-}+J_{-}+z^{2}K_{-})-I_{+}I_{-}}.
-\]
+\begin{equation}
+T_{\pm}=\frac{J_{\mp}+z^{\pm2}K_{\mp}}{(I_{+}+J_{+}+z^{-2}K_{+})(I_{-}+J_{-}+z^{2}K_{-})-I_{+}I_{-}}.\label{eq:T_constraint}
+\end{equation}
 
 \end_inset
 
@@ -602,6 +602,32 @@ Now for the stability eigenpairs: getting the eigenpairs requires diagonalizing
  matrix.
  The eigenvalues and eigenvectors of this matrix can be written down in
  closed form, but they will probably be pages and pages long.
+ However, to greatly simplify things, it turns out to be very easy to rescale
+ 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ so that in the new basis, 
+\begin_inset Formula $|a_{+}|=|a_{-}|=a$
+\end_inset
+
+, and the solutions to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:T_constraint"
+
+\end_inset
+
+ are simply 
+\begin_inset Formula $z=\pm1$
+\end_inset
+
+ and 
+\begin_inset Formula $z=\pm i$
+\end_inset
+
+.
  In this case, there turns out to be a null vector
 \begin_inset Formula 
 \[
