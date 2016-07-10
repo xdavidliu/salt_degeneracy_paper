@@ -172,6 +172,20 @@ and the
 \end_inset
 
 .
+ Finally, note that for 
+\begin_inset Formula $TM$
+\end_inset
+
+ modes where 
+\begin_inset Formula $\mathbf{E}_{\pm}$
+\end_inset
+
+ are scalars, 
+\begin_inset Formula $J_{\pm}=I_{\pm}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Section*
@@ -453,7 +467,60 @@ phase
 \end_inset
 
 .
-  
+\end_layout
+
+\begin_layout Standard
+As for the stability eigenpairs, we first have two zero eigenvectors:
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+0\\
+0\\
+1\\
+0
+\end{array}\right),\left(\begin{array}{c}
+0\\
+\Im(z)\\
+0\\
+-\Re(z)
+\end{array}\right),\;\sigma_{1}=0.
+\]
+
+\end_inset
+
+Next, we have the other two eigenvectors
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+1\\
+\Re(z)\\
+0\\
+\Im(z)
+\end{array}\right),\sigma_{1}=2a^{2}\Im\left(\frac{2I+J}{H}\right)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+-1\\
+\Re(z)\\
+0\\
+\Im(z)
+\end{array}\right),\sigma_{1}=-2a^{2}\Im\left(\frac{J}{H}\right).
+\]
+
+\end_inset
+
+Note that for TM modes, 
+\begin_inset Formula $I=J$
+\end_inset
+
+, so one of these two eigenvalues are guaranteed to be positive, indicating
+ instability.
+ 
 \end_layout
 
 \end_body

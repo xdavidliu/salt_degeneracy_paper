@@ -374,7 +374,7 @@ We define the non-vanishing integrals as
 \begin{align*}
 G_{D} & =\int D_{\mathrm{t}}\vec{E}_{+}\cdot\vec{E}_{-}\\
 G_{\varepsilon} & =\int\varepsilon\vec{E}_{+}\cdot\vec{E}_{-}\\
-I_{\pm} & =\int D_{\mathrm{t}}\left|\vec{E}_{\pm}\right|^{2}\vec{E}_{+}\cdot\vec{E}_{-}.\\
+I_{\pm} & =\int D_{\mathrm{t}}\left|\vec{E}_{\pm}\right|^{2}\vec{E}_{+}\cdot\vec{E}_{-}\\
 J_{\pm} & =\int D_{\mathrm{t}}(\vec{E}_{\pm}^{\star}\cdot\vec{E}_{\mp})\vec{E}_{\pm}\cdot\vec{E}_{\pm}.
 \end{align*}
 

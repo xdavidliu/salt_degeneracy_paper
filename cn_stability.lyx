@@ -1767,7 +1767,7 @@ Note
 \end_inset
 
  subscripts on 
-\begin_inset Formula $i,j,k$
+\begin_inset Formula $a,i,j,k$
 \end_inset
 
  can be neglected due to the fact that 
@@ -1844,91 +1844,75 @@ b_{2}
 
 \end_inset
 
-For the matrix, we have
-\begin_inset Formula 
-\begin{align}
-\mathrm{tr} & =2\Im\left(\left|a_{+}\right|^{2}i_{+}+\left|a_{-}\right|^{2}i_{-}\right)\nonumber \\
-\det & =-4\left|a_{+}a_{-}\right|^{2}\left[\Im(i_{+})\Im(j_{-})+\Im(i_{-})\Im(j_{+})+\Im(j_{+})\Im(j_{-})\right].\label{eq:K=0 eigenvalues}
-\end{align}
-
+We note that this expression can be obtained without neglecting the 
+\begin_inset Formula $\pm$
 \end_inset
 
-The other two eigenvalues are then
+ subscripts on 
+\begin_inset Formula $a,i,j,k$
+\end_inset
+
+, which is a neat fact, but not too useful because 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ standing modes with 
+\begin_inset Formula $n\neq4\ell$
+\end_inset
+
+ do not exist.
+ After removing the subscripts, the matrix is
 \begin_inset Formula 
 \[
-\sigma=\frac{\mathrm{tr}}{2}\pm\sqrt{\left(\frac{\mathrm{tr}}{2}\right)^{2}-\det}.
+2a^{2}\Im\left(\begin{array}{cc}
+i & i+j\\
+i+j & i
+\end{array}\right).
 \]
 
 \end_inset
 
-Note there is no dependence on 
-\begin_inset Formula $z$
+The eigenpairs are clearly 
+\begin_inset Formula 
+\[
+\sigma=2a^{2}\Im\left(2i+j\right),\;\sigma=-2a^{2}\Im(j),
+\]
+
 \end_inset
 
-.
- 
-\end_layout
-
-\begin_layout Standard
-For the TM 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- case, we have 
-\begin_inset Formula $j=i$
-\end_inset
-
-, and 
-\begin_inset Formula $\frac{\mathrm{tr}}{2}=2a^{2}\Im(i)$
-\end_inset
-
- and 
-\begin_inset Formula $-\det=12a^{4}\Im(i)^{2}$
-\end_inset
-
-.
- The two non-zero eigenvalues are then 
-\begin_inset Formula $\sigma=(1\pm2)2a^{2}\Im(i)$
-\end_inset
-
-.
- which clearly must have both signs and is unstable.
- The 
-\begin_inset Formula $2\times2$
-\end_inset
-
- matrix becomes 
-\begin_inset Formula $2a^{2}\Im(i)\left(\begin{array}{cc}
-1 & 2\\
-2 & 1
-\end{array}\right)$
-\end_inset
-
-, which has the corresponding eigenvectors 
+with eigenvectors 
 \begin_inset Formula $\left(\begin{array}{c}
-\pm1\\
+1\\
+1
+\end{array}\right),\left(\begin{array}{c}
+-1\\
 1
 \end{array}\right)$
 \end_inset
 
-.
- Multiplying by the orthogonal space (see explanation below Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:uniform_2x2"
-
-\end_inset
-
-), we obtain the eigenvectors
+ respectively.
+ Multiplying by the orthogonal space from above, the eigenpairs are
 \begin_inset Formula 
 \[
 \mathbf{b}=\left(\begin{array}{c}
-\pm1\\
+1\\
 \Re(z)\\
 0\\
 \Im(z)
-\end{array}\right).
+\end{array}\right),\sigma_{1}=2a^{2}\Im\left(2i+j\right)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+-1\\
+\Re(z)\\
+0\\
+\Im(z)
+\end{array}\right),\sigma_{1}=-2a^{2}\Im(j).
 \]
 
 \end_inset
