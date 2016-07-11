@@ -559,13 +559,20 @@ and
 
 \end_inset
 
-Note that for TM modes, 
+Empirically, we find that 
+\begin_inset Formula $\Im(J/H)<0$
+\end_inset
+
+, so there is an instability.
+ Note that for TM modes, 
 \begin_inset Formula $I=J$
 \end_inset
 
-, so one of these two eigenvalues are guaranteed to be positive, indicating
- instability.
- 
+, so there would be instability even if 
+\begin_inset Formula $\Im(J/H)>0$
+\end_inset
+
+ (which we haven't found an example of).
 \end_layout
 
 \begin_layout Subsection*
@@ -675,14 +682,18 @@ reference "eq:T_constraint"
 .
  These two cases must be rescaled separately, and each case will lead to
  its own set of overlap integrals 
-\begin_inset Formula $I,J,K,$
+\begin_inset Formula $I_{\pm},J_{\pm},K_{\pm},$
 \end_inset
 
  and 
-\begin_inset Formula $G$
+\begin_inset Formula $G_{\varepsilon,D}$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsubsection*
+Case 3a
 \end_layout
 
 \begin_layout Standard
@@ -750,6 +761,10 @@ where
  Empirically, we have found that among these three eigenvalues, there is
  at least one that has a positive real part, indicating that these mode
  are unstable.
+\end_layout
+
+\begin_layout Subsubsection*
+Case 3b
 \end_layout
 
 \begin_layout Standard
@@ -869,6 +884,14 @@ T & =\frac{1}{2I+J+z^{2}K}\\
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Subsubsection*
+Case 4a
+\end_layout
+
+\begin_layout Standard
 For the case that 
 \begin_inset Formula $z^{2}=1$
 \end_inset
@@ -881,7 +904,16 @@ For the case that
 
 \end_inset
 
-and there is null vector 
+with 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ given by the expressions above.
+ For stability, there is null vector 
 \begin_inset Formula 
 \[
 \mathbf{b}=\left(\begin{array}{c}
@@ -896,7 +928,218 @@ and there is null vector
 
 which comes from the global phase degree of freedom, just like in the previous
  case.
- 
+ The other three eigenvalues are
+\begin_inset Formula 
+\begin{align*}
+\sigma_{1} & =2a^{2}\Im\left(2i+j+k\right)\\
+\sigma_{1} & =-a^{2}\Im(j+3k)+a^{2}\sqrt{\Im(j-k)^{2}-8\Re(k)\Re(j+k)}\\
+\sigma_{1} & =-a^{2}\Im(j+3k)-a^{2}\sqrt{\Im(j-k)^{2}-8\Re(k)\Re(j+k)}
+\end{align*}
+
+\end_inset
+
+Empirically, we find that 
+\begin_inset Formula $\Im(j+3k)<0$
+\end_inset
+
+ always, so at least one of the last two eigenvalues has a positive real
+ part, resulting in instability.
+ The first 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ has an associated eigenvector
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+1\\
+\pm1\\
+0\\
+0
+\end{array}\right).
+\]
+
+\end_inset
+
+The other two eigenvectors can be written down in closed form, but are more
+ complicated and less illuminating.
+\end_layout
+
+\begin_layout Subsubsection*
+Case 4b
+\end_layout
+
+\begin_layout Standard
+For the case that 
+\begin_inset Formula $z^{2}=-1$
+\end_inset
+
+, we have the lasing modes
+\begin_inset Formula 
+\[
+\mathbf{E}=|\gamma_{\mathrm{t}}|^{-1}\sqrt{\gamma_{\parallel}d}a\left(\mathbf{E}_{+}\pm i\mathbf{E}_{-}\right).
+\]
+
+\end_inset
+
+For stability, there is a null vector
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+0\\
+1\\
+\mp1\\
+0
+\end{array}\right)
+\]
+
+\end_inset
+
+which corresponds to the global phase degree of freedom.
+ The next eigenpair is
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+\pm1\\
+0\\
+0\\
+1
+\end{array}\right),\sigma_{1}=2a^{2}\Im(2i+j-k)
+\]
+
+\end_inset
+
+ and the remaining two eigenvalues are
+\begin_inset Formula 
+\begin{align*}
+\sigma_{1} & =a^{2}\Im(3k-j)+a^{2}\sqrt{\Im(j+k)^{2}+8\Re(j-k)\Re(k)}\\
+\sigma_{1} & =a^{2}\Im(3k-j)-a^{2}\sqrt{\Im(j+k)^{2}+8\Re(j-k)\Re(k)}.
+\end{align*}
+
+\end_inset
+
+The eigenvectors can be written down, but they are somewhat complicated
+ and are not very illuminating.
+ Empirically, we have found that 
+\begin_inset Formula $\Im(3k-j)>0$
+\end_inset
+
+, so at least one of these eigenvalues has a positive imaginary part, and
+ hence there is instability.
+ It seems plausible that there are cases where 
+\begin_inset Formula $\Im(3k-j)<0$
+\end_inset
+
+, when 
+\begin_inset Formula $k$
+\end_inset
+
+ is substantially large.
+ The next case deals with exactly such an example.
+\end_layout
+
+\begin_layout Subsection*
+Case 5
+\end_layout
+
+\begin_layout Standard
+In this case, we have 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+ and the functions 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ both being uniform, i.e.
+ constant.
+ In this case, we actually have 
+\begin_inset Formula $I=J=K=G_{D}=D_{\mathrm{t}}$
+\end_inset
+
+.
+ The results in case 4 still hold, with the notable exception of case 4b,
+ in which 
+\begin_inset Formula $z^{2}=-1$
+\end_inset
+
+.
+ When the phase 
+\begin_inset Formula $z^{2}=-1$
+\end_inset
+
+ and (if and only if) the profiles are uniform, a certain step in the calculatio
+n breaks down, and instead of lasing modes of the form 
+\begin_inset Formula $\mathbf{E}_{+}\pm i\mathbf{E}_{-}$
+\end_inset
+
+, we are allowed to have lasing modes of the form
+\begin_inset Formula 
+\[
+\mathbf{E}=|\gamma_{\mathrm{t}}|^{-1}\sqrt{\gamma_{\parallel}d}\left(|a_{+}|\mathbf{E}_{+}\pm i|a_{-}|\mathbf{E}_{-}\right)
+\]
+
+\end_inset
+
+where instead of 
+\begin_inset Formula $|a_{+}|=|a_{-}|$
+\end_inset
+
+ as usual for 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ standing modes, there is instead the remarkable constraint that
+\begin_inset Formula 
+\[
+|a_{+}|^{2}+|a_{-}|^{2}=1.
+\]
+
+\end_inset
+
+For stability, there are now two null eigenvectors
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+|a_{-}|\\
+0\\
+0\\
+\mp|a_{+}|
+\end{array}\right),\left(\begin{array}{c}
+0\\
+|a_{-}|\\
+\mp|a_{+}|\\
+0
+\end{array}\right),\;\sigma_{1}=0
+\]
+
+\end_inset
+
+and two other nonzero eigenpairs 
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+|a_{+}|\\
+0\\
+0\\
+\pm|a_{-}|
+\end{array}\right),\left(\begin{array}{c}
+0\\
+|a_{+}|\\
+\pm|a_{-}|\\
+0
+\end{array}\right),\;\sigma_{1}=2\Im\left(\frac{K}{H}\right)=-\frac{2D}{|H|^{2}}\left(\frac{2\omega_{\ell}^{2}}{\omega^{3}}+\frac{\sigma}{\gamma_{\perp}}\right)<0.
+\]
+
+\end_inset
+
+Hence, we have the remarkable result that these standing-wave lasing modes
+ are actually stable (unless one of the two null eigenvectors is unstable
+ at the next higher order).
 \end_layout
 
 \end_body

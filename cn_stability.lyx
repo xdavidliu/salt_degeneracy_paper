@@ -1865,7 +1865,7 @@ This matrix seems to be non-trivial to diagonalize.
 
 \end_inset
 
-The eigenvalues are
+The eigenvalues are (todo: write down the eigenvectors)
 \begin_inset Formula 
 \begin{align*}
 \sigma_{1} & =2a^{2}\Im\left(2i+j+k\right)\\
@@ -1874,7 +1874,37 @@ The eigenvalues are
 
 \end_inset
 
+The eigenvector associated with the first 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
 
+ is
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+1\\
+\pm1\\
+0
+\end{array}\right)
+\]
+
+\end_inset
+
+which we project using the orthogonal space into the 4-vector
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+1\\
+\pm1\\
+0\\
+0
+\end{array}\right).
+\]
+
+\end_inset
+
+The other two eigenvectors can be written down in closed form, but they
+ are much more complicated and much less illuminating.
 \end_layout
 
 \begin_layout Standard
