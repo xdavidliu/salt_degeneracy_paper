@@ -1590,6 +1590,32 @@ We then write
 \end_inset
 
 Note that this quantity is guaranteed to be real.
+ It is extremely important here to note that the quantities 
+\begin_inset Formula $a=|a_{+}|$
+\end_inset
+
+ and 
+\begin_inset Formula $\left|a_{-}\right|$
+\end_inset
+
+ depend on the sign of 
+\begin_inset Formula $\tilde{z}^{2}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $\tilde{z}^{2}=1$
+\end_inset
+
+, there will be one pair of 
+\begin_inset Formula $|a_{\pm}|$
+\end_inset
+
+, and for 
+\begin_inset Formula $\tilde{z}^{2}=-1$
+\end_inset
+
+, there will be another, slightly different pair.
  With this shifting of one of the basis functions, we then have
 \begin_inset Formula 
 \begin{align*}
@@ -1608,7 +1634,41 @@ and
 
 \end_inset
 
-Note that the shifted ratio of 
+Note also that these 
+\begin_inset Formula $\tilde{J}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{K}$
+\end_inset
+
+ quantities also depend implicitly on the sign of 
+\begin_inset Formula $\tilde{z}^{2}$
+\end_inset
+
+, due to dependence of 
+\begin_inset Formula $|a_{-}|/|a_{+}|$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $\tilde{z}^{2}=1$
+\end_inset
+
+, there will be a set 
+\begin_inset Formula $\tilde{J}_{\pm}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{K}_{\pm}$
+\end_inset
+
+, while for 
+\begin_inset Formula $\tilde{z}^{2}=-1$
+\end_inset
+
+, there will be another set.
+ Now, the shifted ratio of 
 \begin_inset Formula $T$
 \end_inset
 
@@ -1633,16 +1693,27 @@ reference "eq:a_T_relation"
 \end_inset
 
 .
- Hence, using the fact that 
-\begin_inset Formula $\tilde{z}^{2}=\pm1$
+ Note that even though 
+\begin_inset Formula $\tilde{z}^{2}=1$
 \end_inset
 
-, we have 
+ or 
+\begin_inset Formula $-1$
+\end_inset
+
+, we 
+\emph on
+cannot 
+\emph default
+say that 
 \begin_inset Formula $\tilde{J}_{+}\pm\tilde{K}_{+}=\tilde{J}_{-}\pm\tilde{K}_{-}$
 \end_inset
 
-.
- Adding the two signs together, we have 
+, and is 
+\emph on
+not 
+\emph default
+true that 
 \begin_inset Formula $\tilde{J}_{+}=\tilde{J}_{-}$
 \end_inset
 
@@ -1651,15 +1722,49 @@ reference "eq:a_T_relation"
 \end_inset
 
 .
- It is uncertain whether 
-\begin_inset Formula $\tilde{I}_{-}$
+ This is because all previous steps are done only for a single sign of 
+\begin_inset Formula $\tilde{z}^{2}=\pm1$
+\end_inset
+
+, as noted multiple times above.
+ For 
+\begin_inset Formula $\tilde{z}^{2}=1$
+\end_inset
+
+, we have 
+\begin_inset Formula $\tilde{J}_{+}+\tilde{K}_{+}=\tilde{J}_{-}+\tilde{K}_{-}$
+\end_inset
+
+, and for 
+\begin_inset Formula $\tilde{z}^{2}=-1$
+\end_inset
+
+, we have 
+\begin_inset Formula $\tilde{J}_{+}-\tilde{K}_{+}=\tilde{J}_{-}-\tilde{K}_{-}$
+\end_inset
+
+, but the 
+\begin_inset Formula $\tilde{J}$
 \end_inset
 
  and 
-\begin_inset Formula $\tilde{I}_{+}$
+\begin_inset Formula $\tilde{K}$
 \end_inset
 
- are equal; it does not appear to be necessary.
+ for both cases are slightly different, so in principle we should have another
+ 
+\begin_inset Formula $\pm$
+\end_inset
+
+ superscript on the 
+\begin_inset Formula $\tilde{J}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{K}$
+\end_inset
+
+, but we have omitted that here for clarity.
 \end_layout
 
 \begin_layout Standard
@@ -1737,7 +1842,7 @@ Now sandwich the
  & =2a^{2}\left(\begin{array}{ccc}
 \Im(i_{+}) & \pm\Im(i_{-}+j_{-}+k_{-}) & -\sqrt{2}\Re(k_{-})\\
 \pm\Im(i_{+}+j_{+}+k_{+}) & \Im(i_{-}) & \pm\sqrt{2}\Re(k_{+})\\
-\frac{1}{\sqrt{2}}\Re(j_{+}+k_{+}) & \mp\frac{1}{\sqrt{2}}\Re(j_{-}+k_{-}) & -\Im(k_{-})-\Im(k_{+})
+\frac{1}{\sqrt{2}}\Re(j_{+}+k_{+}) & \mp\frac{1}{\sqrt{2}}\Re(j_{-}+k_{-}) & -\Im(k_{-}+k_{+})
 \end{array}\right).\label{eq:3x3}
 \end{align}
 
@@ -1860,12 +1965,79 @@ This matrix is also nontrivial to diagonalize.
 
 \end_inset
 
-The eigenvalues are
+
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+wolfram alpha: eigenvalues {{a, +b, +c}, {+d, e, -d}, {+c, -b, a}}
+\end_layout
+
+\end_inset
+
+One eigenpair is
 \begin_inset Formula 
-\begin{align*}
-\sigma_{1} & =2a^{2}\Im(2i+j-k)\\
-\sigma_{1} & =a^{2}\Im(3k-j)\pm a^{2}\sqrt{\Im(j+k)^{2}+8\Re(j-k)\Re(k)}.
-\end{align*}
+\[
+\left(\begin{array}{c}
+\pm1\\
+0\\
+1
+\end{array}\right),\sigma_{1}=2a^{2}\Im(2i+j-k)
+\]
+
+\end_inset
+
+Multiplying by the orthogonal basis from above to obtain the 4-vector version:
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+\pm1\\
+0\\
+0\\
+1
+\end{array}\right),\sigma_{1}=2a^{2}\Im(2i+j-k)
+\]
+
+\end_inset
+
+and the other pair of eigenvalues is
+\begin_inset Formula 
+\[
+\sigma_{1}=\sigma_{\boxed{\mp}}=a^{2}\Im(3k-j)\boxed{\mp}a^{2}\sqrt{\Im(j+k)^{2}+8\Re(j-k)\Re(k)},
+\]
+
+\end_inset
+
+with eigenvectors 
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+\mp1\\
+\xi_{\boxed{\mp}}\\
+1
+\end{array}\right)
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\xi_{\boxed{\mp}}=\frac{\sqrt{2}\Re(j-k)\left[\Im(4i+3j-5k)\boxed{\pm}\sqrt{\Im(j+k)^{2}+8\Re(j-k)\Re(k)}\right]}{4\Re(j-k)\Re(k)+2\Im(i+j-k)\left[\Im(j+k)\boxed{\pm}\sqrt{\Im(j+k)^{2}+8\Re(j-k)\Re(k)}\right]}.
+\]
+
+\end_inset
+
+Again, multiply by the orthogonal basis above to obtain the 4-vector version:
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+\mp1\\
+\frac{1}{\sqrt{2}}\xi_{\boxed{\mp}}\\
+\pm\frac{1}{\sqrt{2}}\xi_{\boxed{\mp}}\\
+1
+\end{array}\right),\sigma=\sigma_{\boxed{\mp}}.
+\]
 
 \end_inset
 

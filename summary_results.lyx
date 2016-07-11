@@ -467,6 +467,46 @@ phase
 \end_inset
 
 .
+ Empirically, however, we have found that sometimes the allowed angles 
+\begin_inset Formula $\phi$
+\end_inset
+
+ are constrained to be multiples of 
+\begin_inset Formula $2\pi/n$
+\end_inset
+
+ or 
+\begin_inset Formula $\pi/n$
+\end_inset
+
+, which correspond to 
+\begin_inset Formula $n$
+\end_inset
+
+-fold rotations of standing-wave partner functions.
+ However, the presence of absence of a solution at some phase angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+ cannot be evaluated with absolute certainty, due to limitations on precision
+ when solving SALT using Newton's method.
+ Fortunately, for this case of 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ with 
+\begin_inset Formula $n\neq4\ell$
+\end_inset
+
+, the stability eigenvalues are 
+\emph on
+independent 
+\emph default
+of 
+\begin_inset Formula $z$
+\end_inset
+
+, as we will see below.
 \end_layout
 
 \begin_layout Standard
@@ -488,7 +528,12 @@ As for the stability eigenpairs, we first have two zero eigenvectors:
 
 \end_inset
 
-Next, we have the other two eigenvectors
+Next, we have the other two eigenpairs (with eigenvalues that are independent
+ of 
+\begin_inset Formula $z$
+\end_inset
+
+)
 \begin_inset Formula 
 \[
 \mathbf{b}=\left(\begin{array}{c}
@@ -628,7 +673,32 @@ reference "eq:T_constraint"
 \end_inset
 
 .
- In this case, there turns out to be a null vector
+ These two cases must be rescaled separately, and each case will lead to
+ its own set of overlap integrals 
+\begin_inset Formula $I,J,K,$
+\end_inset
+
+ and 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For the case 
+\begin_inset Formula $z^{2}=1$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+\mathbf{E}=|\gamma_{\mathrm{t}}|^{-1}\sqrt{\gamma_{\parallel}d}a\left(\mathbf{E}_{+}\pm\mathbf{E}_{-}\right)
+\]
+
+\end_inset
+
+and for stability, there is a null vector 
 \begin_inset Formula 
 \[
 \mathbf{b}=\left(\begin{array}{c}
@@ -636,24 +706,197 @@ reference "eq:T_constraint"
 0\\
 1\\
 \pm1
-\end{array}\right),\sigma_{1}=0.
+\end{array}\right),\sigma_{1}=0,
 \]
 
 \end_inset
 
-TODO: does making the rescale automatically equate 
-\begin_inset Formula $J_{+}=J_{-}$
+which is clearly the global phase rotation.
+ The other three 
+\begin_inset Formula $\sigma_{1}$
 \end_inset
 
-, and same for 
-\begin_inset Formula $K$
+ are given by the eigenvalues of the 
+\begin_inset Formula $3\times3$
 \end_inset
 
- and 
-\begin_inset Formula $I$
+ matrix
+\begin_inset Formula 
+\begin{equation}
+2a^{2}\left(\begin{array}{ccc}
+\Im(i_{+}) & \pm\Im(i_{-}+j_{-}+k_{-}) & -\sqrt{2}\Re(k_{-})\\
+\pm\Im(i_{+}+j_{+}+k_{+}) & \Im(i_{-}) & \pm\sqrt{2}\Re(k_{+})\\
+\frac{1}{\sqrt{2}}\Re(j_{+}+k_{+}) & \mp\frac{1}{\sqrt{2}}\Re(j_{-}+k_{-}) & -\Im(k_{-}+k_{+})
+\end{array}\right),\label{eq:+1_3x3_matrix}
+\end{equation}
+
 \end_inset
 
-? 
+where 
+\begin_inset Formula $i_{\pm}=I_{\pm}/H$
+\end_inset
+
+, 
+\begin_inset Formula $j_{\pm}=J_{\pm}/H$
+\end_inset
+
+, 
+\begin_inset Formula $k_{\pm}=K_{\pm}/H$
+\end_inset
+
+.
+ The eigenvalues can be written down in closed form, but will take up about
+ an entire page and are not illuminating.
+ Empirically, we have found that among these three eigenvalues, there is
+ at least one that has a positive real part, indicating that these mode
+ are unstable.
+\end_layout
+
+\begin_layout Standard
+For the case 
+\begin_inset Formula $z^{2}=-1$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+\mathbf{E}=|\gamma_{\mathrm{t}}|^{-1}\sqrt{\gamma_{\parallel}d}a\left(\mathbf{E}_{+}\pm i\mathbf{E}_{-}\right).
+\]
+
+\end_inset
+
+For stability, there is a null vector
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+0\\
+1\\
+\mp1\\
+0
+\end{array}\right),\sigma_{1}=0,
+\]
+
+\end_inset
+
+which is again clearly just a global phase rotation.
+ The other 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ are given by the eigenvalues of the matrix
+\begin_inset Formula 
+\begin{equation}
+2a^{2}\left(\begin{array}{ccc}
+\Im(i_{+}) & \pm\sqrt{2}\Re(k_{-}) & \pm\Im(i_{-}+j_{-}-k_{-})\\
+\pm\frac{1}{\sqrt{2}}\Re(j_{+}-k_{+}) & \Im(k_{+}+k_{-}) & -\frac{1}{\sqrt{2}}\Re(j_{-}-k_{-})\\
+\pm\Im(i_{+}+j_{+}-k_{+}) & -\sqrt{2}\Re(k_{+}) & \Im(i_{-})
+\end{array}\right),\label{eq:-1_3x3_matrix}
+\end{equation}
+
+\end_inset
+
+and again, it is possible to write them down in closed form, but the result
+ will take up an entire page.
+ Empirically, we have found in all cases that there is at least one eigenvalue
+ here with a positive real part, so the mode is unstable.
+\end_layout
+
+\begin_layout Subsection*
+Case 4
+\end_layout
+
+\begin_layout Standard
+The next case is 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ for 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+.
+ We first make the assumption that 
+\begin_inset Formula $J\neq K$
+\end_inset
+
+, which to our knowledge is satisfied for all cases except one, which we
+ will relegate to the last case below.
+ The results here are very similar to the case above with 
+\begin_inset Formula $C_{4\ell}$
+\end_inset
+
+, and are even simpler because due to mirror symmetry, the amplitudes 
+\begin_inset Formula $|a_{\pm}|$
+\end_inset
+
+ are automatically equal, and the allowed phases automatically satisfy 
+\begin_inset Formula $z^{2}=\pm1$
+\end_inset
+
+, without having to rescale anything.
+ From Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:T_constraint"
+
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+T=\frac{1}{2I+J+z^{2}K}
+\]
+
+\end_inset
+
+and the lasing modes are given by
+\begin_inset Formula 
+\[
+\mathbf{E}=|\gamma_{\mathrm{t}}|^{-1}\sqrt{\gamma_{\parallel}d}a\left(\mathbf{E}_{+}+z\mathbf{E}_{-}\right),
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{align*}
+z^{2} & =\pm1\\
+a & =\sqrt{\left(\omega_{1}H+G_{D}\right)T}\\
+T & =\frac{1}{2I+J+z^{2}K}\\
+\omega_{1} & =-\frac{\Im(G_{D}T)}{\Im(HT)}.
+\end{align*}
+
+\end_inset
+
+For the case that 
+\begin_inset Formula $z^{2}=1$
+\end_inset
+
+, we have the lasing modes
+\begin_inset Formula 
+\[
+\mathbf{E}=|\gamma_{\mathrm{t}}|^{-1}\sqrt{\gamma_{\parallel}d}a\left(\mathbf{E}_{+}\pm\mathbf{E}_{-}\right),
+\]
+
+\end_inset
+
+and there is null vector 
+\begin_inset Formula 
+\[
+\mathbf{b}=\left(\begin{array}{c}
+0\\
+0\\
+1\\
+\pm1
+\end{array}\right),\sigma_{1}=0,
+\]
+
+\end_inset
+
+which comes from the global phase degree of freedom, just like in the previous
+ case.
+ 
 \end_layout
 
 \end_body
