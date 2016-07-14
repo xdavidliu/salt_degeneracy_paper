@@ -1,4 +1,4 @@
-PassiveMode(E::AbstractVector, ω::Real) = Mode(E, ω+0.0im, 0.0)
+PassiveMode(E::AbstractVector, ω::Number) = Mode(E, ω+0.0im, 0.0)
 
 function passive_threshold!{T<:Real}(laplacian!::Function, md::Mode, las::Laser, Ds::Tuple{T, T};
                     init_incr=0.05, tol=1e-10, maxits=10, newtontol=1e-8, newton_maxits=9, isprint=false)
