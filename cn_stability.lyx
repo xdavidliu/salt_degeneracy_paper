@@ -3070,5 +3070,173 @@ Now we show why this sandwiching works.
 
 \end_layout
 
+\begin_layout Subsection*
+Stability of four-rod square geometry
+\end_layout
+
+\begin_layout Standard
+We examine the two factors 
+\begin_inset Formula $f_{J}=E_{+}^{\star}E_{-}$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{K}=E_{-}^{\star}E_{+}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $E_{-}$
+\end_inset
+
+ is the mirror flip of 
+\begin_inset Formula $E_{+}$
+\end_inset
+
+, we write
+\begin_inset Formula 
+\begin{equation}
+E_{\pm}=E_{x}\pm iE_{y}.\label{eq:Echiral}
+\end{equation}
+
+\end_inset
+
+We then have
+\begin_inset Formula 
+\begin{align*}
+f_{J} & =|E_{x}|^{2}-|E_{y}|^{2}-i(E_{x}^{\star}E_{y}+E_{x}E_{y}^{\star})\\
+f_{K} & =|E_{x}|^{2}-|E_{y}|^{2}+i(E_{x}^{\star}E_{y}+E_{x}E_{y}^{\star}).
+\end{align*}
+
+\end_inset
+
+At the faces of the square, 
+\begin_inset Formula $|E_{x}|^{2}=|E_{y}|^{2}$
+\end_inset
+
+, so 
+\begin_inset Formula $f_{J}=f_{K}$
+\end_inset
+
+.
+ At the corners of the square, 
+\begin_inset Formula $E_{x}^{\star}E_{y}=0$
+\end_inset
+
+, so 
+\begin_inset Formula $f_{J}=-f_{K}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now, we make the same calculation, but working in the basis
+\begin_inset Formula 
+\[
+E_{x\pm y}=\frac{E_{x}\pm E_{y}}{2}.
+\]
+
+\end_inset
+
+We first write
+\begin_inset Formula 
+\[
+E_{+}=E_{x+y}+iE_{x-y}.
+\]
+
+\end_inset
+
+Next, we write 
+\begin_inset Formula $E_{-}=\sigma E_{+}$
+\end_inset
+
+, where the mirror-flip operator satisfies 
+\begin_inset Formula $\sigma E_{x}=E_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma E_{y}=-E_{y}$
+\end_inset
+
+.
+ We then have 
+\begin_inset Formula $\sigma E_{x\pm y}=E_{x\mp y}$
+\end_inset
+
+, so
+\begin_inset Formula 
+\[
+E_{-}=\sigma E_{+}=E_{x-y}+iE_{x+y}.
+\]
+
+\end_inset
+
+We then obtain (okay, I think this calculation works.
+ However, what happens if we instead use the diagonal mirror flip, which
+ satisfies 
+\begin_inset Formula $\sigma E_{x\pm y}=\pm E_{x\pm y}$
+\end_inset
+
+, which would result in 
+\begin_inset Formula $E_{-}=E_{x+y}-iE_{x-y}$
+\end_inset
+
+, which seems to result in the opposite of the correct prediction? This
+ can be resolved by noting that using 
+\begin_inset Formula $E_{x\pm y}$
+\end_inset
+
+ as a standing basis, the 
+\begin_inset Formula $z^{2}=-1$
+\end_inset
+
+ standing-wave modes are no longer stable.
+ That is because
+\begin_inset Formula 
+\begin{align*}
+E_{+}\pm iE_{-} & =(E_{x+y}+iE_{x-y})\pm i(E_{x+y}-iE_{x-y})\\
+ & =(1\pm i)(E_{x+y}\pm E_{x-y})
+\end{align*}
+
+\end_inset
+
+and these are 
+\begin_inset Formula $E_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{y}$
+\end_inset
+
+! Instead, now the 
+\begin_inset Formula $z^{2}=1$
+\end_inset
+
+ standing-wave modes, which have the term 
+\begin_inset Formula $\Im(-3k-j)$
+\end_inset
+
+ in their eigenvalue instead of 
+\begin_inset Formula $\Im(3k-j)$
+\end_inset
+
+, are stable, and these are in fact the 
+\begin_inset Formula $E_{x\pm y}$
+\end_inset
+
+ modes that were unstable from before.
+ Hence, putting rods at the face of the square results in 
+\begin_inset Formula $E_{x\pm y}$
+\end_inset
+
+ being stable.
+ This also suggests that putting rods at the corner of the square results
+ in the 
+\begin_inset Formula $E_{x,y}$
+\end_inset
+
+ modes being stable!
+\end_layout
+
 \end_body
 \end_document

@@ -221,7 +221,7 @@ function root{T<:Number}(func::Function, xs::Tuple{T, T}; tol=1e-10, maxits=10, 
         xnext = xclose - (xclose-xfar)/(yclose-yfar)*yclose
         ynext = func(xnext)        
         if isprint
-            println("xnext = ", xnext, "ynext = ", ynext)
+            println("xnext = ", xnext, ", ynext = ", ynext)
         end
         abs(ynext) < tol && return xnext
         xfar, yfar = xclose, yclose
