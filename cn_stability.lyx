@@ -3238,5 +3238,71 @@ and these are
  modes being stable!
 \end_layout
 
+\begin_layout Subsection*
+Note on continuous degrees of freedom and zero eigenvalues
+\end_layout
+
+\begin_layout Standard
+The zero eigenvalues come up whenever there is a continuous degree of freedom
+ in the solution.
+ For the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ with 
+\begin_inset Formula $n\neq4\ell$
+\end_inset
+
+, there is the phase degree of freedom.
+ However, numerical solutions often found the phase to be constrained to
+ n-fold rotations of 
+\begin_inset Formula $2\pi$
+\end_inset
+
+ or 
+\begin_inset Formula $\pi$
+\end_inset
+
+ (it is not clear which).
+ The latter is probably the correct result, because there is no continuous
+ symmetry in the Cnv geometry to give rise to this continuous degree of
+ freedom.
+ Going to higher order probably would constrain the phase to be n-fold rotations.
+\end_layout
+
+\begin_layout Standard
+Similarly, for the case of the stable lasing modes in 
+\begin_inset Formula $C_{4\ell\mathrm{v}}$
+\end_inset
+
+, there is a continuous degree of freedom in the amplitudes which comes
+ from the singular 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix that occurs when 
+\begin_inset Formula $K=\pm J$
+\end_inset
+
+.
+ However, this part of the calculation is done only to lowest order in d.
+ Again, if we go to higher order, there probably is no longer any continuous
+ symmetry, so we will be constrained to discrete values of the coefficients
+ 
+\begin_inset Formula $a_{\pm}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Any continuous degree of freedom must come from a continous symmetry of
+ the exact system.
+ If a continuous degree of freedom happens at first order but does not appear
+ to have an associated continuous symmetry in the exact system, it will
+ probably be broken once you go to higher order.
+ 
+\end_layout
+
 \end_body
 \end_document

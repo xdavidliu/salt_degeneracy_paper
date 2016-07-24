@@ -507,6 +507,8 @@ of
 \end_inset
 
 , as we will see below.
+ For comment on whether this continuous degree of freedom is real, see the
+ note on continuous symmetries in the stability document.
 \end_layout
 
 \begin_layout Standard
@@ -1101,7 +1103,9 @@ where instead of
 
 \end_inset
 
-For stability, there are now two null eigenvectors
+For comment on whether this continuous degree of freedom is real, see the
+ note on continuous symmetries in the stability document.
+ For stability, there are now two null eigenvectors
 \begin_inset Formula 
 \[
 \mathbf{b}=\left(\begin{array}{c}
