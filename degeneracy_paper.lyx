@@ -344,7 +344,8 @@ reference "sec:Threshold-perturbation-theory"
 \end_inset
 
 ).
- We find that the only possible stable lasing modes near a symmetry-induced
+ We find that (with one isolated exception that is unattainable under ordinary
+ circumstances) the only possible stable lasing modes near a symmetry-induced
  (
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
@@ -927,7 +928,23 @@ reference "eq:1mode_salt"
 
 \end_inset
 
- is a less strict condition than Eq.
+ is necessary but not sufficient condition for Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2mode_salt"
+
+\end_inset
+
+: not all solutions that satisfy the Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1mode_salt"
+
+\end_inset
+
+ satisfy Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -936,12 +953,19 @@ reference "eq:2mode_salt"
 \end_inset
 
 .
- Not all solutions that satisfy the former satisfy the latter.
  If a lasing mode 
 \begin_inset Formula $\mathbf{E}$
 \end_inset
 
- satisfies the former there may be a second pole above the real-
+ satisfies Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1mode_salt"
+
+\end_inset
+
+ there may be a second pole above the real-
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -958,7 +982,10 @@ reference "eq:2mode_salt"
 \begin_inset Formula $\omega$
 \end_inset
 
- axis, and there is at least no instability due to the degeneracy.
+ axis, and there is at least no instability due to the degenerate modes
+ themselves.
+ To have a stable lasing solution, at the very least we need to have no
+ poles above the real axis.
  We now describe this idea in detail.
 \end_layout
 
@@ -1292,13 +1319,18 @@ circulating
 \begin_inset Quotes erd
 \end_inset
 
- solutions (defined below); (ii) the circulating modes are the only stable
- solutions in the usual case of low-loss resonators (
-\begin_inset Formula $\Vert\Im\mathbf{E}\Vert\ll\Vert\Re\mathbf{E}\Vert$
+ solutions (defined below); (ii) the standing modes are unstable for all
+ 
+\begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- for the standing-wave modes at threshold), and the stability can be determined
- by evaluating a simple integral of the threshold modes otherwise.
+ cases (except for a small group of isolated, realistically unattainable
+ examples when 
+\begin_inset Formula $n$
+\end_inset
+
+ is a multiple of four), and otherwise the stability can be determined by
+ evaluating a simple integral of the threshold modes otherwise.
 \end_layout
 
 \begin_layout Subsection
@@ -1342,7 +1374,14 @@ partners
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- symmetry group [ref Inui].
+ symmetry group 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "inui_group"
+
+\end_inset
+
+.
  Given any such solution 
 \begin_inset Formula $\mathbf{E}_{0}$
 \end_inset
