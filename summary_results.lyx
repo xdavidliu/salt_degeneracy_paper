@@ -86,7 +86,7 @@ figs-within-sections
 
 \begin_layout Standard
 We summarize the results of the linearized Maxwell--Bloch calculation.
- We first define some quantities that will be used later:
+ First define some quantities that will be used later:
 \begin_inset Formula 
 \begin{align*}
 G_{D} & =\int D_{\mathrm{t}}\vec{E}_{+}\cdot\vec{E}_{-}\\
