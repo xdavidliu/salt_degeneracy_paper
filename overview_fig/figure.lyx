@@ -74,20 +74,79 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
+
+\backslash
+newcommand{
+\backslash
+tbox}[4]{
+\backslash
+hspace*{#1in}
+\backslash
+llap{
+\backslash
+raisebox{#2in}{
+\backslash
+parbox{#3in}{#4}}}
+\backslash
+hspace*{-#1in}}
 \end_layout
 
+\end_inset
+
+
+\begin_inset ERT
+status open
+
 \begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+Standing-wave modes in 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename disk.pdf
 	lyxscale 80
-	scale 55
+	scale 27
 
 \end_inset
 
@@ -95,7 +154,7 @@ status open
 \begin_inset Graphics
 	filename ../even_cylinder/evencos.png
 	lyxscale 20
-	scale 40
+	scale 20
 
 \end_inset
 
@@ -103,18 +162,70 @@ status open
 \begin_inset Graphics
 	filename ../even_cylinder/evensin.png
 	lyxscale 20
-	scale 40
+	scale 20
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tbox{-2.45}{0.6}{0.3}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $C_{\infty\mathrm{v}}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
 \begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename square.pdf
 	lyxscale 77
-	scale 53
+	scale 26
 
 \end_inset
 
@@ -122,7 +233,7 @@ status open
 \begin_inset Graphics
 	filename ../lowQ_square/lowQsquare_psi0.png
 	lyxscale 20
-	scale 40
+	scale 20
 
 \end_inset
 
@@ -130,18 +241,70 @@ status open
 \begin_inset Graphics
 	filename ../lowQ_square/lowQsquare_psi1.png
 	lyxscale 20
-	scale 40
+	scale 20
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tbox{-2.5}{0.65}{0.3}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $C_{4\mathrm{v}}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
 \begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename ../phc/phc_geometry.png
 	lyxscale 20
-	scale 39
+	scale 19
 
 \end_inset
 
@@ -149,7 +312,7 @@ status open
 \begin_inset Graphics
 	filename ../phc/phc_modexR.png
 	lyxscale 20
-	scale 40
+	scale 20
 
 \end_inset
 
@@ -157,11 +320,45 @@ status open
 \begin_inset Graphics
 	filename ../phc/phc_modeyR.png
 	lyxscale 20
-	scale 40
+	scale 20
 
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tbox{-2.6}{0.8}{0.3}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $C_{6\mathrm{v}}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
