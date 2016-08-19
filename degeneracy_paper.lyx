@@ -4,8 +4,9 @@
 \begin_header
 \textclass revtex4-1
 \begin_preamble
-\renewcommand{\Re}{\operatorname{Re}}
-\renewcommand{\Im}{\operatorname{Im}}
+\renewcommand\vec{\mathbf}
+\renewcommand{\Im}{\mathrm{Im}}
+\renewcommand{\Re}{\mathrm{Re}}
 \newcommand{\Dt}{D_\mathrm{t}}
 \end_preamble
 \options aps,article,twocolumn,superscriptaddress
@@ -1515,7 +1516,7 @@ Now, we will consider the
 near-threshold 
 \emph default
 problem 
-\begin_inset Formula $D_{0}=\Dt(1+d)$
+\begin_inset Formula $D_{0}=D_{\mathrm{t}}(1+d)$
 \end_inset
 
  for 
@@ -1656,9 +1657,9 @@ reference "eq:single-mode-salt"
 
  is
 \begin_inset Formula 
-\[
-\nabla\times\nabla\times\mathbf{E}_{1,2}=\omega_{\mathrm{t}}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\mathbf{E}_{1,2},
-\]
+\begin{equation}
+\nabla\times\nabla\times\mathbf{E}_{1,2}=\omega_{\mathrm{t}}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\mathbf{E}_{1,2},\label{eq:threshold salt}
+\end{equation}
 
 \end_inset
 
@@ -1886,10 +1887,26 @@ in the plane of the
 \end_inset
 
 .
-\end_layout
+ One important property of the 
+\begin_inset Formula $\mathbf{E}_{\pm}$
+\end_inset
 
-\begin_layout Standard
-Choosing 
+ is that they transform according to the chiral 
+\begin_inset Formula $1d$
+\end_inset
+
+ irreps of the 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry group, i.e.
+ 
+\begin_inset Formula $R_{1/n}\mathbf{E}_{\pm}=\exp\left(\mp\frac{2\pi i\ell k}{n}\right)\mathbf{E}_{\pm}$
+\end_inset
+
+.
+ This fact will turn out to greatly simplify some upcoming calculations.
+ Choosing 
 \begin_inset Formula $\mathbf{E}_{1}=\mathbf{E}_{+}$
 \end_inset
 
@@ -1897,7 +1914,7 @@ Choosing
 \begin_inset Formula $\mathbf{E}_{2}=\mathbf{E}_{-}$
 \end_inset
 
- and exploiting various symmetry properties of this basis, we see (as shown
+ and exploiting the symmetry properties of this basis, we see (as shown
  in detail in Appendix ???) that Eq.
  
 \begin_inset CommandInset ref
@@ -1933,10 +1950,10 @@ reference "eq:reduced a plus minus"
  only a few solutions.
  First, there are the purely-circulating modes, given by
 \begin_inset Formula 
-\begin{align*}
-\mathbf{E} & =\sqrt{\frac{\left(\omega_{1}H+G_{D}\right)d}{I}}\mathbf{E}_{\pm}\\
-\omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/I\right)}{\mathrm{Im}\left(H/I\right)}.
-\end{align*}
+\begin{align}
+\mathbf{E} & =\sqrt{\frac{\left(\omega_{1}H+G_{D}\right)d}{I}}\mathbf{E}_{\pm}\nonumber \\
+\omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/I\right)}{\mathrm{Im}\left(H/I\right)}.\label{eq:circulating lasing}
+\end{align}
 
 \end_inset
 
@@ -1973,10 +1990,10 @@ modes, as to be expected, and it turns out their form depends (as explained
 
 , the other modes are
 \begin_inset Formula 
-\begin{align*}
-\mathbf{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J}}\left(\mathbf{E}_{+}+e^{i\theta}\mathbf{E}_{-}\right)\\
-\omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J]\right)}{\mathrm{Im}\left(H/[2I+J]\right)}
-\end{align*}
+\begin{align}
+\mathbf{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J}}\left(\mathbf{E}_{+}+e^{i\theta}\mathbf{E}_{-}\right)\nonumber \\
+\omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J]\right)}{\mathrm{Im}\left(H/[2I+J]\right)}\label{eq:n != 4 lasing}
+\end{align}
 
 \end_inset
 
@@ -2017,7 +2034,7 @@ reference "eq:single-mode-salt"
 \end_inset
 
 , as shown in Appendix ???).
- For the case of 
+ On the other hand, for the case of 
 \begin_inset Formula $n=4\ell$
 \end_inset
 
@@ -2028,19 +2045,19 @@ two
 sets of standing modes.
  The first is
 \begin_inset Formula 
-\begin{align*}
-\mathbf{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J+K}}\left(\mathbf{E}_{+}\pm\mathbf{E}_{-}\right)\\
-\omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J+K]\right)}{\mathrm{Im}\left(H/[2I+J+K]\right)}
-\end{align*}
+\begin{align}
+\mathbf{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J+K}}\left(\mathbf{E}_{+}\pm\mathbf{E}_{-}\right)\nonumber \\
+\omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J+K]\right)}{\mathrm{Im}\left(H/[2I+J+K]\right)}\label{eq:E+ + E- lasing}
+\end{align}
 
 \end_inset
 
 and the other is
 \begin_inset Formula 
-\begin{align*}
-\mathbf{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J-K}}\left(\mathbf{E}_{+}\pm i\mathbf{E}_{-}\right)\\
-\omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J-K]\right)}{\mathrm{Im}\left(H/[2I+J-K]\right)}.
-\end{align*}
+\begin{align}
+\mathbf{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J-K}}\left(\mathbf{E}_{+}\pm i\mathbf{E}_{-}\right)\nonumber \\
+\omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J-K]\right)}{\mathrm{Im}\left(H/[2I+J-K]\right)}.\label{eq:E+ + i E- lasing}
+\end{align}
 
 \end_inset
 
@@ -2194,7 +2211,19 @@ reference "eq:lasing_ansatz"
 
 .
  The zeroth-order equations are simply the SALT equations and are already
- satisfied by construction.
+ satisfied by construction by 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+, and 
+\begin_inset Formula $D(\mathbf{x})$
+\end_inset
+
+.
  The first-order equations are 
 \begin_inset Formula 
 \begin{align}
@@ -2205,37 +2234,445 @@ i\delta\dot{\mathbf{P}} & =(\omega_{a}-\omega-i\gamma_{\perp})\delta\mathbf{P}+\
 
 \end_inset
 
-We look for eigensolutions ......
- to get the quadratic eigenproblem 
+Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:delta"
+
+\end_inset
+
+ can be written as a matrix equation
 \begin_inset Formula 
 \[
-....
+\left(\mathsf{C}\frac{d^{2}}{dt^{2}}+\mathsf{B}\frac{d}{dt}+\mathsf{A}\right)\mathsf{u}(t)=0
 \]
 
 \end_inset
 
-Previous work simply discretized these PDE operators and solved the resulting
- matrix equation to find the eigenvalues 
+or alternatively a quadratic eigenvalue problem
+\begin_inset Formula 
+\begin{equation}
+\left(\mathsf{C}\sigma^{2}+\mathsf{B}\sigma+\mathsf{A}\right)\mathsf{x}=0\label{eq:quadratic eigenproblem}
+\end{equation}
+
+\end_inset
+
+where the unknown vector is
+\begin_inset Formula 
+\[
+\mathsf{u}(t)=\left(\begin{array}{c}
+\Re\delta\vec{E}\\
+\Im\delta\vec{E}\\
+\Re\delta\vec{P}\\
+\Im\delta\vec{P}\\
+\delta\vec{D}
+\end{array}\right)=\Re\left(\mathsf{x}e^{\sigma t}\right).
+\]
+
+\end_inset
+
+ The goal of the stability analysis is to find the eigenvalues 
 \begin_inset Formula $\sigma$
 \end_inset
 
- and hence evaluate the SALT stability.
- Here, we will solve these equations analytically by expanding in 
-\begin_inset Formula $d$
+ for a given lasing mode 
+\begin_inset Formula $\mathbf{E}$
 \end_inset
 
-:
+.
+ If the real part of any of the eigenvalues 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is positive, then the lasing mode is unstable, while if all the eigenvalues
+ have non-positive real parts, then the lasing mode is stable (up to some
+ technical aspects about zero eigenvalues and structural stability).
+ 
 \end_layout
 
 \begin_layout Standard
+Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+ discretized Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:delta"
+
+\end_inset
+
+ to obtain Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic eigenproblem"
+
+\end_inset
+
+ and then solved the resulting matrix equation numerically to find the eigenvalu
+es 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ and hence evaluate the SALT stability for any pump strength above threshold.
+ Here, focus on the regime slightly above threshold, and show that the equations
+ can be solved analytically to lowest order in 
+\begin_inset Formula $d$
+\end_inset
+
+, and this is enough to evaluate near-threshold stability.
+ We begin by noting that the matrices can be expanded as
+\begin_inset Formula 
+\begin{align}
+\mathsf{A} & =\mathsf{A}_{0}+\mathsf{A}_{1/2}\sqrt{d}+\mathsf{A}_{1}d+\mathcal{O}(d^{3/2})\nonumber \\
+\mathsf{B} & =\mathsf{B}_{0}+\mathsf{B}_{1}d+\mathcal{O}(d^{2})\label{eq:matrix expansion}\\
+\mathsf{C} & =\mathsf{C}_{0}\nonumber 
+\end{align}
+
+\end_inset
+
+(where 
+\begin_inset Formula $d$
+\end_inset
+
+ is the relative pump increment above threshold, as introduced in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+), since the matrices come from the coefficients of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:delta"
+
+\end_inset
+
+ and contain the lasing solutions 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ and other associated fields 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ As a result, the eigenvalues and eigenvectors can also be expanded this
+ way:
+\begin_inset Formula 
+\begin{align}
+\mathsf{x} & =\mathsf{x}_{0}+\mathsf{x}_{1/2}\sqrt{d}+\mathsf{x}_{1}d+\mathcal{O}(d^{3/2})\nonumber \\
+\sigma & =\sigma_{0}+\sigma_{1/2}\sqrt{d}+\sigma_{1}d+\mathcal{O}(d^{3/2}).\label{eq:eigenpair expansion}
+\end{align}
+
+\end_inset
+
+We inserting Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:matrix expansion"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eigenpair expansion"
+
+\end_inset
+
+ into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic eigenproblem"
+
+\end_inset
+
+ and solving order-by-order in 
+\begin_inset Formula $\sqrt{d}$
+\end_inset
+
+ until a non-zero 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is found, as explained in detail in Appendix ???.
+ At zeroth order, the solutions are
+\begin_inset Formula 
+\begin{align}
+\sigma_{0} & =0\nonumber \\
+\mathsf{x}_{0} & =\sum_{k=1}^{4}b_{k}\mathsf{v}_{k},\label{eq:zeroth order}
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ are arbitrary complex coefficients that will determined later at higher
+ order (similarly to linear degenerate perturbation theory in quantum mechanics
+ [ref Sakurai]), and the vectors 
+\begin_inset Formula $\mathsf{v}_{k}$
+\end_inset
+
+ are
 \begin_inset Formula 
 \[
-....
+\mathsf{v}_{k}=\left(\begin{array}{c}
+\Re\vec{e}_{k}\\
+\Im\vec{e}_{k}\\
+D_{\mathrm{t}}\Re(\gamma_{\mathrm{t}}\vec{e}_{k})\\
+D_{\mathrm{t}}\Im(\gamma_{\mathrm{t}}\vec{e}_{k})\\
+0
+\end{array}\right),
 \]
 
 \end_inset
 
- In Appendix
+where we have defined 
+\begin_inset Formula $\mathbf{e}_{1,2,3,4}=\mathbf{E}_{1},\mathbf{E}_{2},i\mathbf{E}_{1},i\mathbf{E}_{2}$
+\end_inset
+
+ (again, 
+\begin_inset Formula $\mathbf{E}_{1,2}$
+\end_inset
+
+ are any two threshold solutions to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:threshold salt"
+
+\end_inset
+
+).
+ It is shown in Appendix ??? that the eigenvalue at the next order, 
+\begin_inset Formula $\sigma_{1/2}$
+\end_inset
+
+ is also zero.
+ Hence, stability is determined by 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+.
+ At order 
+\begin_inset Formula $d$
+\end_inset
+
+, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic eigenproblem"
+
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{equation}
+(\mathsf{B}_{0}\sigma_{1}+\mathsf{A}_{1})\mathsf{x}_{0}+\mathsf{A}_{1/2}\mathsf{x}_{1/2}+\mathsf{A}_{0}\mathsf{x}_{1}=0.\label{eq:first order equation}
+\end{equation}
+
+\end_inset
+
+Here, all quantities except 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathsf{x}_{1}$
+\end_inset
+
+ are known.
+ By construction, it is easy to see that 
+\begin_inset Formula $\mathsf{A}_{0}\mathsf{v}_{k}=0$
+\end_inset
+
+.
+ There are also left eigenvectors 
+\begin_inset Formula $\mathsf{w}_{j}$
+\end_inset
+
+ that satisfy 
+\begin_inset Formula $\mathsf{A}_{0}^{T}\mathsf{w}_{j}=0$
+\end_inset
+
+.
+ By acting on Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:first order equation"
+
+\end_inset
+
+ with these left eigenvectors, we obtain a 
+\begin_inset Formula $4\times4$
+\end_inset
+
+ 
+\emph on
+linear 
+\emph default
+eigenvalue problem for the eigenvalue 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ and the eigenvectors (whose elements are the coefficients 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:zeroth order"
+
+\end_inset
+
+).
+ We can then, in a straightforward fashion, write down the eigenvalues and
+ eigenvectors in closed form.
+ While the procedure we have just described can be done with any basis 
+\begin_inset Formula $\mathbf{E}_{1,2}$
+\end_inset
+
+, again, it is most convenient to choose the basis 
+\begin_inset Formula $\mathbf{E}_{\pm}$
+\end_inset
+
+, due to the symmetry properties which greatly simplify the calculation.
+ Here, we present the results, leaving the detailed derivation to Appendix
+ ???.
+\end_layout
+
+\begin_layout Standard
+For the circulating lasing modes in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circulating lasing"
+
+\end_inset
+
+, the four eigenvalues are
+\begin_inset Formula 
+\begin{align*}
+\sigma_{1} & =0\\
+\sigma_{1} & =2\Im\left(\frac{I}{H}\right)\frac{\omega_{1}H+G_{D}}{I}\\
+\sigma_{1} & =\left(\Im\left(\frac{J}{H}\right)+\sqrt{\left|\frac{K}{H}\right|^{2}-\Re\left(\frac{J}{H}\right)^{2}}\right)\frac{\omega_{1}H+G_{D}}{I}\\
+\sigma_{1} & =\left(\Im\left(\frac{J}{H}\right)-\sqrt{\left|\frac{K}{H}\right|^{2}-\Re\left(\frac{J}{H}\right)^{2}}\right)\frac{\omega_{1}H+G_{D}}{I}.
+\end{align*}
+
+\end_inset
+
+The first eigenvalue comes from the global phase degree of freedom for lasing
+ solutions.
+ For the other three eigenvalues, we have found empirically that the real
+ part is always negative, indicating that the circulating modes are stable.
+ It is unknown, however, whether this is true in general for circulating
+ modes.
+ Additionally, we have only shown the eigenvalues for the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ case.
+ However, in the general 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ case, there are also circulating lasing modes and their eigenvalues will
+ be slightly different due to the fact that there will be 
+\begin_inset Formula $\pm$
+\end_inset
+
+ subscripts on the coefficients 
+\begin_inset Formula $I$
+\end_inset
+
+ and 
+\begin_inset Formula $J$
+\end_inset
+
+.
+ For simplicity, we have not included them here; a full derivation for general
+ 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ can be found in Appendix ???.
+\end_layout
+
+\begin_layout Standard
+For the 
+\begin_inset Formula $n\neq4\ell$
+\end_inset
+
+ standing lasing modes in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:n != 4 lasing"
+
+\end_inset
+
+, the eigenvalues are given by
+\begin_inset Formula 
+\begin{align*}
+\sigma_{1} & =0\\
+\sigma_{1} & =0\\
+\sigma_{1} & =2\Im\left(\frac{2I+J}{H}\right)\frac{(\omega_{1}H+G_{D})}{2I+J}\\
+\sigma_{1} & =-2\Im\left(\frac{J}{H}\right)\frac{(\omega_{1}H+G_{D})}{2I+J}.
+\end{align*}
+
+\end_inset
+
+Here, the factor 
+\begin_inset Formula $\frac{(\omega_{1}H+G_{D})}{2I+J}$
+\end_inset
+
+ is real and positive by construction, as seen in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:n != 4 lasing"
+
+\end_inset
+
+.
+ For TM modes where 
+\begin_inset Formula $\mathbf{E}=E\hat{\mathbf{z}}$
+\end_inset
+
+, it can be shown that 
+\begin_inset Formula $I=J$
+\end_inset
+
+, so at least one of the two non-zero eigenvalues here must have a positive
+ real part (in practice, it is always the last eigenvalue), indicating that
+ these standing lasing modes are always unstable.
+\end_layout
+
+\begin_layout Standard
+In Appendix
 \begin_inset space ~
 \end_inset
 
