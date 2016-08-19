@@ -2272,7 +2272,7 @@ where the unknown vector is
 
 \end_inset
 
- The goal of the stability analysis is to find the eigenvalues 
+The goal of the stability analysis is to find the eigenvalues 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -2288,11 +2288,7 @@ where the unknown vector is
  is positive, then the lasing mode is unstable, while if all the eigenvalues
  have non-positive real parts, then the lasing mode is stable (up to some
  technical aspects about zero eigenvalues and structural stability).
- 
-\end_layout
-
-\begin_layout Standard
-Ref.
+ Ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2658,6 +2654,42 @@ reference "eq:n != 4 lasing"
 \end_inset
 
 .
+ Both zero eigenvalues here come from continuous degrees of freedom: one
+ comes from the global phase degree of freedom, while the other comes from
+ the relative phase between 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:n != 4 lasing"
+
+\end_inset
+
+, which can take any value (as explained previously, this degree of freedom
+ is likely removed at higher orders in 
+\begin_inset Formula $d$
+\end_inset
+
+, so that only certain linear combinations, namely the 
+\begin_inset Formula $n$
+\end_inset
+
+-fold rotations of 
+\begin_inset Formula $\mathbf{E}_{\mathrm{e}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{\mathrm{o}}$
+\end_inset
+
+, are actually lasing solutions).
  For TM modes where 
 \begin_inset Formula $\mathbf{E}=E\hat{\mathbf{z}}$
 \end_inset
@@ -2672,98 +2704,106 @@ reference "eq:n != 4 lasing"
 \end_layout
 
 \begin_layout Standard
-In Appendix
-\begin_inset space ~
+For the 
+\begin_inset Formula $n=4\ell$
 \end_inset
 
-B, we carry out this process analytically, and we obtain the following results.
- The zero-th order 
-\begin_inset Formula $\sigma_{0}$
+ standing modes, we first have the 
+\begin_inset Formula $\mathbf{E}_{+}\pm\mathbf{E}_{-}$
 \end_inset
 
- is given by the threshold eigenvalues 
-\begin_inset Formula $\omega$
+ solutions in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:E+ + E- lasing"
+
 \end_inset
 
-, and in particular 
-\begin_inset Formula $\Re\sigma_{0}=\Im\omega$
+, which have the eigenvalues
+\begin_inset Formula 
+\begin{align*}
+\sigma_{1} & =0\\
+\sigma_{1} & =2\Im\left(\frac{2I+J+K}{H}\right)\frac{\omega_{1}H+G_{D}}{2I+J+K}\\
+\sigma_{1} & =\left[-\Im\left(\frac{J+3K}{H}\right)+\rho\right]\frac{\omega_{1}H+G_{D}}{2I+J+K}\\
+\sigma_{1} & =\left[-\Im\left(\frac{J+3K}{H}\right)-\rho\right]\frac{\omega_{1}H+G_{D}}{2I+J+K}\\
+\rho & \equiv\sqrt{\Im\left(\frac{J-K}{H}\right)^{2}-8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J+K}{H}\right)}.
+\end{align*}
+
 \end_inset
 
-, which is zero for the threshold lasing modes and negative (stable) for
- all of the passive (below-threshold) resonances.
- We only need to go to higher-order for the threshold solutions where 
-\begin_inset Formula $\sigma_{0}=0$
+Again, there is a zero eigenvalue coming from the global phase degree of
+ freedom.
+ For almost all cases, we have empirically observed that the second eigenvalue
+ has a negative real part, but also 
+\begin_inset Formula $-\Im\left(\frac{J+3K}{H}\right)>0$
 \end_inset
 
-, and in this case we find 
-\begin_inset Formula $\sigma_{1/2}=0$
+, and hence the third and fourth eigenvalues are unstable.
+ However, there is a pedogogical case where the external pump profile 
+\begin_inset Formula $D_{0}(\mathbf{x})$
 \end_inset
 
- and so the stability is determined by the first-order correction 
-\begin_inset Formula $\sigma_{1}$
+ can be chosen so that 
+\begin_inset Formula $J=-K$
 \end_inset
 
-, which is given by a 
-\begin_inset Formula $4\times4$
+, upon which the third eigenvalue is stable, and the last eigenvalue is
+ zero.
+ This zero eigenvalue turns out not to be robust to small perturbations
+ in the geometry, as discussed further in Sec.
+ ???.
+\end_layout
+
+\begin_layout Standard
+Finally, we have the 
+\begin_inset Formula $\mathbf{E}_{+}\pm i\mathbf{E}_{-}$
 \end_inset
 
- eigenproblem [equation
-\begin_inset space ~
+ solutions for the 
+\begin_inset Formula $n=4\ell$
 \end_inset
 
-(xxxx)].
- All of the entries of this matrix are analytically expressed as integrals
- of the threshold modes 
-\begin_inset Formula $\mathbf{E}_{\pm}$
+ case in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:E+ + i E- lasing"
+
 \end_inset
 
 .
- In fact, we show that their eigenvalues and eigenvectors can be analytically
- determined as well, and so in practice the stability can be trivially determine
-d numerically before launching into the full nonlinear above-threshold SALT
- solution in Sec.
-\begin_inset space ~
+ The eigenvalues are
+\begin_inset Formula 
+\begin{align*}
+\sigma_{1} & =0\\
+\sigma_{1} & =2\Im\left(\frac{2I+J-K}{H}\right)\frac{\omega_{1}H+G_{D}}{2I+J-K}\\
+\sigma_{1} & =\left[\Im\left(\frac{3K-J}{H}\right)+\eta\right]\frac{\omega_{1}H+G_{D}}{2I+J-K}\\
+\sigma_{1} & =\left[\Im\left(\frac{3K-J}{H}\right)-\eta\right]\frac{\omega_{1}H+G_{D}}{2I+J-K}\\
+\eta & \equiv\sqrt{\Im\left(\frac{J+K}{H}\right)^{2}+8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J-K}{H}\right)}.
+\end{align*}
+
 \end_inset
 
-III??
-\end_layout
-
-\begin_layout Standard
-The eigenvalues 
-\begin_inset Formula $\sigma_{1}$
-\end_inset
-
- are expressed in terms of integrals of the threshold (linear) degenerate
- modes, and in common case of a low-loss (high 
-\begin_inset Formula $Q$
-\end_inset
-
-) cavity, where 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e},\mathrm{o}}$
-\end_inset
-
- are approximately real, we can furthermore prove analytically that the
- standing-wave SALT solutions are always unstable and the circulating-mode
- SALT solutions are always stable (to lowest order in 
-\begin_inset Formula $d$
-\end_inset
-
-).
- This is done in Appendix
-\begin_inset space ~
-\end_inset
-
-B, section XXX, by ....
- (For a 1d ring, i.e.
- a 1d problem with periodic boundary conditions, we show that the circulating
- modes are the stable solutions regardless of the loss.)
-\end_layout
-
-\begin_layout Standard
-In Appendex ???, we obtain the stability eigenvalues of this set of linear
- equations, for all three types of lasing modes, and demonstrate that only
- the circulating mode can be stable.
+Again, in most cases we have empirically found that the second eigenvalue
+ is stable while the third and fourth are unstable.
+ However, there is again a pedogogical case where the external pump profile
  
+\begin_inset Formula $D_{0}(\mathbf{x})$
+\end_inset
+
+ can be chosen in a specific way (different from that for the 
+\begin_inset Formula $\mathbf{E}_{+}\pm\mathbf{E}_{-}$
+\end_inset
+
+ solutions) such that 
+\begin_inset Formula $J=K$
+\end_inset
+
+, and the third eigenvalue is stable while the fourth is zero.
+ Again, this zero eigenvalue is not robust to small perturbations in the
+ geometry, and so this stability is unlikely to be of practical importance
+ without some modification.
 \end_layout
 
 \begin_layout Subsection
