@@ -229,7 +229,7 @@ reference "fig:cylinder_modes"
 \end_inset
 
 ) in which the clockwise and counterclockwise circulating modes are degenerate
- (have the same complex resonant frequency) [refs].
+ (have the same complex resonant frequency).
  In a linear system, any superposition of these solutions also satisfies
  Maxwell's equations, but above-threshold lasers have nonlinear gain that
  allows only certain superpositions; it is well known that the only stable
@@ -320,8 +320,14 @@ key "ref-rotter_degeneracy"
 given
 \emph default
  steady-state degenerate solutions of the SALT (steady-state ab-initio lasing
- theory [refs]) equations, the stability of these solutions could be computed
- 
+ theory 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tureci_self-consistent_2006,tureci_strong_2008,tureci_ab_2009,ge_quantitative_2008,ge_steady-state_2010"
+
+\end_inset
+
+) equations, the stability of these solutions could be computed 
 \emph on
 numerically
 \emph default
@@ -489,7 +495,11 @@ key "dichroism"
 
 \end_inset
 
-, and Appendix A.) Second, we develop a numerical solution technique above
+, and Appendix A.) Second, we develop a numerical solution technique for
+ 
+\emph on
+far above
+\emph default
  threshold in Sec.
 \begin_inset space ~
 \end_inset
@@ -514,7 +524,7 @@ key "ref-rotter_degeneracy"
 
 \end_inset
 
- for checking its stability after a solution is found.
+ for checking its stability after a solution far above threshold is found.
 \end_layout
 
 \begin_layout Standard
@@ -586,12 +596,12 @@ ns.
 \end_inset
 
  mode in a ring, would lead SALT to converge to an unstable solutions, but
- our near-threshold perturbutation theory supplies with a correct guess
- (the circulating solution for 
+ our near-threshold perturbutation theory supplies us with a correct guess
+ (which turns out to be the 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- symmetry).
+ analog of the circulating solution in the ring).
  Second, there is a tricky complication that arises purely from 
 \emph on
 numerical
@@ -602,9 +612,7 @@ e the SALT equations.
  is a lasing mode (e.g.
  the clockwise circulating mode of a ring) with a passive pole (a pole of
  the Green's function linearized around the lasing solution) that coincides
- with the lasing frequency (e.g.
- the counterclockwise resonance).
- (There will be two possible lasing modes, e.g.
+ with the lasing frequency (there will be two possible lasing modes, e.g.
  clockwise and counterclockwise, but only one solution can exist at a time
  with nonzero amplitude due to the nonlinearity; which one is found will
  depend on the starting 
@@ -615,8 +623,9 @@ guess
 \begin_inset Quotes erd
 \end_inset
 
- of the SALT solver.) However, when one discretizes a microcavity geometry
- for a numerical solver, e.g.
+ of the SALT solver).
+ However, when one discretizes a microcavity geometry for a numerical solver,
+ e.g.
  in a finite-difference or finite-element method, often the discretization
  itself breaks the symmetry and hence breaks the degeneracy slightly, causing
  the passive pole to separate from the lasing frequency.
@@ -679,11 +688,85 @@ key "direct_salt"
 \end_inset
 
 , we presented a direct method to solve the equations of steady-state ab-initio
- lasing theory (SALT).
+ lasing theory (SALT) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ge_steady-state_2010,tureci_self-consistent_2006,tureci_ab_2009"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\nabla\times\nabla\times\mathbf{E}_{\mu}=\omega_{\mu}^{2}\left(\varepsilon+\gamma_{\mu}D\right)\mathbf{E}_{\mu},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{E}_{\mu}(\mathbf{x})$
+\end_inset
+
+ is the electric field of the lasing mode, 
+\begin_inset Formula $\omega_{\mu}$
+\end_inset
+
+ is the real lasing frequency, 
+\begin_inset Formula $\varepsilon(\mathbf{x})$
+\end_inset
+
+ is the passive cavity dielectric, 
+\begin_inset Formula $\gamma_{\mu}=\gamma_{\perp}/(\omega_{\mu}-\omega_{a}+i\gamma_{\perp})$
+\end_inset
+
+ is the Lorentzian gain factor, 
+\begin_inset Formula $\omega_{a}$
+\end_inset
+
+ is the gain center, 
+\begin_inset Formula $\gamma_{\perp}$
+\end_inset
+
+ is the relaxation rate for the polarization of the gain medium, and 
+\begin_inset Formula $D(\mathbf{x})$
+\end_inset
+
+ is the steady-state population inversion, which depends nonlinearly on
+ the electric fields and lasing frequencies of all currently lasing modes:
+ 
+\begin_inset Formula 
+\begin{equation}
+D(\mathbf{x})=\frac{D_{0}(\mathbf{x})}{1+\gamma_{\parallel}^{-1}\sum\left|\gamma_{\nu}\mathbf{E}_{\nu}\right|^{2}},\label{eq:Dwrong}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+ is the relaxation rate of the inversion, 
+\begin_inset Formula $D_{0}(\mathbf{x})$
+\end_inset
+
+ is the external pump strength, and the sum in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Dwrong"
+
+\end_inset
+
+ is performed over all lasing modes.
  So far, most cases in which SALT has been applied has dealt with either
  single lasing modes or multimode regimes in which frequencies are far apart.
- This is necessary for SALT because the stationary-inversion approximation
- requires that any beating-terms average out over time .
+ This is necessary for SALT because the the existance of a time-independent
+ inversion 
+\begin_inset Formula $D(\mathbf{x})$
+\end_inset
+
+ is only an approximation, known as the stationary-inversion approximation.
+ This approximation requires that any beating-terms average out over time.
  When frequencies are close but not exactly degenerate, there is non-negligible
  beating and SALT is invalid.
  However, when two lasing modes are 
@@ -737,8 +820,174 @@ key "ref-svetlana"
 
 .
  So far, the  problem of degenerate modes in lasers has not been studied
- systematically for the general case.
+ systematically for the general 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ case.
  
+\end_layout
+
+\begin_layout Standard
+The presence of degenerate eigenvalues in systems with 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ is a direct consequence of representation theory.
+ For all 
+\begin_inset Formula $n>2$
+\end_inset
+
+, there exists at least one pair of two-dimensional irreducible representations
+ (irreps) in each 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ [in fact, the number of two-dimensional irreps is 
+\begin_inset Formula $\mathrm{floor}(\frac{n-1}{2})$
+\end_inset
+
+].
+ For any linear operator (such as that of the SALT equation at threshold)
+ that obeys some symmetry, the eigenfunctions transform under symmetry operation
+s of that symmetry group 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "phc_book"
+
+\end_inset
+
+.
+ For each such 2d irrep, there exist pairs of partner functions that necessarily
+ have the same eigenvalue 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "inui_group,tinkham"
+
+\end_inset
+
+.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:overview"
+
+\end_inset
+
+ shows three examples of symmetric geometries, along with examples of degenerate
+ partner functions.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename overview_fig/overview.pdf
+	scale 110
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Degenerate pairs of standing modes in a laser.
+ For 
+\begin_inset Formula $C_{\infty\mathrm{v}}$
+\end_inset
+
+, the symmetry group of a circle, as in this uniform dielectric disk, the
+ two eigenfunctions are proportional to 
+\begin_inset Formula $\cos(\ell\phi)$
+\end_inset
+
+ and 
+\begin_inset Formula $\sin(\ell\phi)$
+\end_inset
+
+ for some angle 
+\begin_inset Formula $\phi$
+\end_inset
+
+ and integer 
+\begin_inset Formula $\ell$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $C_{4\mathrm{v}}$
+\end_inset
+
+, which is the symmetry group of the square, the eigenfunctions are 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ rotations of one another.
+ For 
+\begin_inset Formula $C_{6\mathrm{v}}$
+\end_inset
+
+, the symmetry group of the regular hexagon, the two eigenfunctions have
+ no immediately obvious symmetry operation that transforms between them,
+ but are in fact still degenerate.
+ In all three cases (and in fact for all 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+), the standing modes have mirror planes that are 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ rotations from one another, and the two partner standing modes have opposite
+ parities across these mirror planes.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:overview"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -752,15 +1001,15 @@ Ordinarily, SALT assumes that all distinct modes have distinct frequencies,
 \begin_inset Formula $\mu\neq\nu$
 \end_inset
 
-, which gives the stationary-inversion expression 
-\begin_inset Formula 
-\begin{equation}
-D=\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\sum\left|\gamma_{\mu}\mathbf{E}_{\mu}\right|^{2}}.\label{eq:Dwrong}
-\end{equation}
+, which gives the stationary-inversion expression Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Dwrong"
 
 \end_inset
 
-when higher-frequency 
+ when higher-frequency 
 \begin_inset Formula $\omega_{\mu}-\omega_{\nu}$
 \end_inset
 
@@ -839,7 +1088,7 @@ reference "eq:Dwrong"
 
 \end_inset
 
- in the denominator, while eq.
+in the denominator, while eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -863,8 +1112,8 @@ reference "eq:E123"
 
 \end_inset
 
- we see that the degenerate pair can be thought of as a single-mode that
- is a superposition of 
+ we see that the degenerate pair acts as a single-mode that is a superposition
+ of 
 \begin_inset Formula $\mathbf{E}_{1}$
 \end_inset
 
@@ -874,7 +1123,7 @@ reference "eq:E123"
 
 .
  This equivalence means that the solution to the lasing degenerate problem
- can be thought of in two equivalent pictures.
+ can be portrayed in two equivalent pictures.
  First, we can think of the linear combination 
 \begin_inset Formula $\mathbf{E}=\mathbf{E}_{1}+\mathbf{E}_{2}$
 \end_inset
@@ -882,40 +1131,21 @@ reference "eq:E123"
  as a single mode that satisfies the equation
 \begin_inset Formula 
 \begin{align}
--\nabla\times\nabla\times\mathbf{E} & =\omega^{2}\left(\varepsilon_{c}+DF\gamma(\omega)H\right)\mathbf{E}\label{eq:1mode_salt}\\
-H & \equiv\frac{1}{1+\gamma_{\parallel}^{-1}\left|\gamma\mathbf{E}\right|^{2}},\nonumber 
+-\nabla\times\nabla\times\mathbf{E} & =\omega_{1}^{2}\left(\varepsilon+D\gamma_{1}\right)\mathbf{E}\label{eq:1mode_salt}\\
+D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\gamma_{1}\mathbf{E}\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}\right)},\nonumber 
 \end{align}
 
 \end_inset
 
-where 
-\begin_inset Formula $\varepsilon_{c}$
-\end_inset
-
- is the 
-\begin_inset Quotes eld
-\end_inset
-
-cold cavity
-\begin_inset Quotes erd
-\end_inset
-
- permittivity.
- However, if there were originally a degenerate pair of modes at threshold
- and we only have one lasing on pole on the real-
-\begin_inset Formula $\omega$
-\end_inset
-
- axis, it may be unstable if the other pole is above the real axis.
- Second, we can think of the two modes as 
+Second, we can think of the two modes as 
 \emph on
 separately 
 \emph default
-satisfying the equations
+satisfying the two equations
 \begin_inset Formula 
 \begin{align}
--\nabla\times\nabla\times\mathbf{E}_{\mu} & =\omega^{2}\left(\varepsilon_{c}+DF\gamma(\omega)H\right)\mathbf{E}_{\mu}\label{eq:2mode_salt}\\
-H & \equiv\frac{1}{1+\gamma_{\parallel}^{-1}\left|\gamma(\mathbf{E}_{1}+\mathbf{E}_{2})\right|^{2}}.\nonumber 
+-\nabla\times\nabla\times\mathbf{E}_{1,2} & =\omega_{1}^{2}\left(\varepsilon+D\gamma_{1}\right)\mathbf{E}_{1,2}\label{eq:2mode_salt}\\
+D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\gamma_{1}\mathbf{E}_{1}\right|^{2}+\left|\gamma_{1}\mathbf{E}_{2}\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}\right)}.\nonumber 
 \end{align}
 
 \end_inset
@@ -1079,8 +1309,8 @@ key "direct_salt"
 
 \end_inset
 
-) become undetermined, so in this paper we will need to devise a modified
- approach to solve Eq.
+) become undetermined, so in this paper we devise a modified approach to
+ solve Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1124,11 +1354,14 @@ name "sec:Threshold-perturbation-theory"
 \begin_layout Standard
 In this section, we analyze the SALT and Maxwell--Bloch equations just above
  the lasing threshold.
- In particular, the nondimensionalized Maxwell-Bloch equations are
-\begin_inset space ~
+ In particular, the nondimensionalized Maxwell-Bloch equations are 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-haken_laser_theory,ref-sauermann,haken_light:_1985,ref-lamb"
+
 \end_inset
 
-[refs]:
+:
 \end_layout
 
 \begin_layout Standard
@@ -1142,11 +1375,27 @@ i\dot{\mathbf{P}}^{+} & =(\omega_{a}-i\gamma_{\perp})\mathbf{P}^{+}+\gamma_{\per
 \end_inset
 
 where 
-\begin_inset Formula $\mathbf{E}$
+\begin_inset Formula $\mathbf{E}^{+}(\mathbf{x},t)$
 \end_inset
 
- is the electric field, 
-\begin_inset Formula $\varepsilon$
+ is the 
+\begin_inset Quotes eld
+\end_inset
+
+positive-frequency
+\begin_inset Quotes erd
+\end_inset
+
+ component of the electric field [with 
+\begin_inset Formula $\mathbf{E}^{-}=\mathbf{E}^{+\star}$
+\end_inset
+
+ and the physical field given by 
+\begin_inset Formula $2\mathrm{Re}(\mathbf{E}^{+})$
+\end_inset
+
+], 
+\begin_inset Formula $\varepsilon(\mathbf{x})$
 \end_inset
 
  is the 
@@ -1158,7 +1407,7 @@ cold-cavity
 \end_inset
 
  permittivity (not including the gain transition), 
-\begin_inset Formula $\mathbf{P}$
+\begin_inset Formula $\mathbf{P}(\mathbf{x},t)$
 \end_inset
 
  is the polarization describing a transition (of frequency 
@@ -1170,7 +1419,7 @@ cold-cavity
 \end_inset
 
 ) between two atomic energy levels, 
-\begin_inset Formula $D$
+\begin_inset Formula $D(\mathbf{x},t)$
 \end_inset
 
  is the population inversion between those two levels (with relaxation rate
@@ -1179,23 +1428,34 @@ cold-cavity
 \end_inset
 
 ), and 
-\begin_inset Formula $D_{0}$
+\begin_inset Formula $D_{0}(\mathbf{x})$
 \end_inset
 
  is the strength of an pumping process driving the inversion.
- For a steady-state lasing mode with frequency 
+ For a regime with a single steady-state lasing mode 
+\begin_inset Formula $\mathbf{E}^{+}(\mathbf{x},t)=\mathbf{E}(\mathbf{x})e^{-i\omega t}$
+\end_inset
+
+ with frequency 
 \begin_inset Formula $\omega$
 \end_inset
 
 , one obtains a stationary inversion 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tureci_self-consistent_2006,tureci_ab_2009,ge_steady-state_2010"
+
+\end_inset
+
+ 
 \begin_inset Formula $\dot{D}=0$
 \end_inset
 
- and obtains the single-mode SALT nonlinear eigenproblem [ref]
+ and the single-mode SALT nonlinear eigenproblem
 \begin_inset Formula 
-\[
-\nabla\times\nabla\times\mathbf{E}=\omega^{2}\left[\varepsilon+\frac{D_{0}\gamma(\omega)}{1+\gamma_{\parallel}^{-1}\left|\gamma(\omega)\mathbf{E}\right|^{2}}\right]\mathbf{E}
-\]
+\begin{equation}
+\nabla\times\nabla\times\mathbf{E}=\omega^{2}\left[\varepsilon+\frac{D_{0}\gamma(\omega)}{1+\gamma_{\parallel}^{-1}\left|\gamma(\omega)\mathbf{E}\right|^{2}}\right]\mathbf{E}\label{eq:single-mode-salt}
+\end{equation}
 
 \end_inset
 
@@ -1203,12 +1463,19 @@ where
 \begin_inset Formula $\gamma(\omega)=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
 \end_inset
 
-.
- (We will comment further on the multi-mode case in Sec.
+ (we will comment further on the multi-mode case in Sec.
 \begin_inset space ~
 \end_inset
 
-[conclusions].) The (first) lasing threshold occurs when 
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Multi-mode-degenerate-lasing"
+
+\end_inset
+
+).
+ The first lasing threshold occurs when 
 \begin_inset Formula $D_{0}$
 \end_inset
 
@@ -1232,7 +1499,14 @@ where
 \begin_inset Formula $\Im\omega=0$
 \end_inset
 
-) [refs].
+) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tureci_self-consistent_2006,ge_steady-state_2010"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1334,7 +1608,7 @@ circulating
 \end_layout
 
 \begin_layout Subsection
-Perturbative SALT solutions
+Perturbative lasing solutions near threshold
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Perturbative-SALT-solutions"
@@ -1345,48 +1619,179 @@ name "sub:Perturbative-SALT-solutions"
 \end_layout
 
 \begin_layout Standard
-We start with the SALT equation at threshold:
+We begin with the situation of a degenerate threshold, where two modes 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+ (such as any of the pairs in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:overview"
+
+\end_inset
+
+) hit threshold at the same pump strength 
+\begin_inset Formula $D_{\mathrm{t}}$
+\end_inset
+
+ and same frequency 
+\begin_inset Formula $\omega_{\mathrm{t}}$
+\end_inset
+
+.
+ Since the frequencies are the same, we can consider any linear superposition
+ of the two modes as a single mode.
+ With infinitesimal amplitude, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:single-mode-salt"
+
+\end_inset
+
+ is
 \begin_inset Formula 
 \[
-\nabla\times\nabla\times\mathbf{E}=\omega_{0}^{2}(\varepsilon+\Dt\gamma_{0})\mathbf{E},
+\nabla\times\nabla\times\mathbf{E}_{1,2}=\omega_{\mathrm{t}}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\mathbf{E}_{1,2},
 \]
 
 \end_inset
 
-where we have a degenerate pair of zero-amplitude modes, both with frequency
- 
-\begin_inset Formula $\omega_{0}$
-\end_inset
-
-, where the arise from 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- symmetry: the modes are 
-\begin_inset Quotes eld
-\end_inset
-
-partners
-\begin_inset Quotes erd
-\end_inset
-
- of a two-dimensional irreducible representation (irreps) of the 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- symmetry group 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "inui_group"
-
+where 
+\begin_inset Formula $\gamma_{\mathrm{t}}=\gamma_{\perp}/(\omega_{\mathrm{t}}-\omega_{a}+\gamma_{\perp})$
 \end_inset
 
 .
- Given any such solution 
-\begin_inset Formula $\mathbf{E}_{0}$
+ Now perturb the pump strength slightly above threshold, with 
+\begin_inset Formula $D_{0}=D_{\mathrm{t}}(1+d)$
 \end_inset
 
-, we can construct a basis of 
+ and 
+\begin_inset Formula $0<d\ll1$
+\end_inset
+
+.
+ Assuming that the frequencies stay the same (which it turns is correct
+ in the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+, as discuss in Appendix A), we then expect the lasing mode slightly above
+ threshold to be of the form
+\begin_inset Formula 
+\begin{align}
+\mathbf{E} & =\sqrt{d}\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{1}\right)+d^{3/2}\delta\mathbf{E},\nonumber \\
+\omega & =\omega_{\mathrm{t}}+\omega_{1}d+\mathcal{O}(d^{2})\label{eq:lasing_ansatz}
+\end{align}
+
+\end_inset
+
+where the complex coefficients 
+\begin_inset Formula $a_{1,2}$
+\end_inset
+
+ and real eigenvalue shift 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ are to be determined.
+ Inserting Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lasing_ansatz"
+
+\end_inset
+
+ into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:single-mode-salt"
+
+\end_inset
+
+, expanding to lowest order in 
+\begin_inset Formula $d$
+\end_inset
+
+, and taking the inner product of both sides with 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+ (as performed in detail in Appendix ???), we obtain the pair of nonlinear
+ equations for 
+\begin_inset Formula $a_{1,2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align}
+0 & =\int d^{3}x\mathbf{E}_{1,2}\cdot\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right)\times\ldots\nonumber \\
+ & \left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}})+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(1-\left|a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right|^{2}\right)\right].\label{eq:a eigenproblem}
+\end{align}
+
+\end_inset
+
+To proceed, we must choose a basis 
+\begin_inset Formula $\mathbf{E}_{1,2}$
+\end_inset
+
+ to work with (the end result, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lasing_ansatz"
+
+\end_inset
+
+ turns out to be independent of the choice, as expected).
+ One possible choice is the even and odd (with respect to the mirror planes
+ of the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ geometry) standing modes, which we denote as 
+\begin_inset Formula $\mathbf{E}_{\mathrm{e}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{\mathrm{o}}$
+\end_inset
+
+ (as in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:overview"
+
+\end_inset
+
+).
+ However, it turns out that another particular makes the analytical solution
+ of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:a eigenproblem"
+
+\end_inset
+
+ significantly easier to obtain, due to various convenient symmetry properties.
+ In particular, we construct a basis of 
 \emph on
 clockwise 
 \emph default
@@ -1403,52 +1808,67 @@ circulating
 \end_inset
 
  modes (analogous to 
-\begin_inset Formula $e^{\pm im\phi}$
+\begin_inset Formula $e^{\pm i\ell\phi}$
 \end_inset
 
  modes in a ring)
 \begin_inset Formula 
-\begin{align*}
-\mathbf{E}_{+} & =\sum_{k=1}^{n}\exp\left(\frac{2\pi imk}{n}\right)R_{k/n}\mathbf{E}_{0}\\
-\mathbf{E}_{-}(x,y,z) & =\mathbf{E}_{+}(-x,y,z),
-\end{align*}
+\[
+\mathbf{E}_{\pm}=\sum_{k=1}^{n}\exp\left(\pm\frac{2\pi i\ell k}{n}\right)R_{k/n}\mathbf{E}_{\mathrm{e}},
+\]
 
 \end_inset
 
 where 
-\begin_inset Formula $m$
+\begin_inset Formula $\ell$
 \end_inset
 
- is an integer from 
-\begin_inset Formula $1$
+ is the order of the 2d irrep that 
+\begin_inset Formula $\mathbf{E}_{\mathrm{e}}$
 \end_inset
 
- to 
-\begin_inset Formula $n$
+ belongs to [which ranges from 1 to 
+\begin_inset Formula $\mathrm{floor}(\frac{n-1}{2})$
 \end_inset
 
- characterizing the irrep and 
+], and 
 \begin_inset Formula $R_{k/n}$
 \end_inset
 
- is the 
-\begin_inset Formula $3\times3$
+ is a rotation of the vector function 
+\begin_inset Formula $\mathbf{E}_{\mathrm{e}}(\mathbf{x})$
 \end_inset
 
- rotation matrix for an angle 
-\begin_inset Formula $2\pi k/n$
+ (alternatively, we could have defined 
+\begin_inset Formula $\mathbf{E}_{\pm}$
 \end_inset
 
-, where without loss of generality we have chosen one of the 
+ in terms of rotations of 
+\begin_inset Formula $\mathbf{E}_{\mathrm{o}}$
+\end_inset
+
+ as well)
+\series bold
+ 
+\series default
+in the plane of the 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- mirror planes be the 
-\begin_inset Formula $x=0$
+ symmetry by angle 
+\begin_inset Formula $2\pi k/n$
 \end_inset
 
- plane.
- (
+ (if 
+\begin_inset Formula $\ell$
+\end_inset
+
+ is chosen to be any another integer, then it can be shown that 
+\begin_inset Formula $\mathbf{E}_{\pm}$
+\end_inset
+
+ vanishes).
+ It can be shown that with this definition, 
 \begin_inset Formula $\mathbf{E}_{+}$
 \end_inset
 
@@ -1456,243 +1876,205 @@ where
 \begin_inset Formula $\mathbf{E}_{-}$
 \end_inset
 
- are 
-\begin_inset Quotes eld
-\end_inset
-
-chiral
-\begin_inset Quotes erd
-\end_inset
-
- partners of the irreps of the 
-\begin_inset Formula $C_{n}$
-\end_inset
-
- symmetry group, i.e.
- 
-\begin_inset Formula $n$
-\end_inset
-
--fold rotation without mirror planes.) Alternatively, it is also sometimes
- convenient to use the basis of the standing-wave modes 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e}}=\frac{\mathbf{E}_{+}+\mathbf{E}_{-}}{2}$
+ are mirror flips of one another, and that they span the same two-dimensional
+ manifold as 
+\begin_inset Formula $\mathbf{E}_{\mathrm{e}}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{E}_{\mathrm{o}}=\frac{\mathbf{E}_{+}-\mathbf{E}_{-}}{2i}$
-\end_inset
-
-, where 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e},\mathrm{o}}$
-\end_inset
-
- are 
-\begin_inset Quotes eld
-\end_inset
-
-standing-wave
-\begin_inset Quotes erd
-\end_inset
-
- solutions which are even and odd with respect to the 
-\begin_inset Formula $x=0$
-\end_inset
-
- mirror plane (analogous to 
-\begin_inset Formula $\cos$
-\end_inset
-
- and 
-\begin_inset Formula $\sin$
-\end_inset
-
- modes in a ring, shown in Fig.
-\begin_inset space ~
-\end_inset
-
-xxx).
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centerline{
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename cylinder/psicos.png
-	lyxscale 20
-	scale 31
-
-\end_inset
-
-
-\begin_inset Formula $\quad$
-\end_inset
-
-
-\begin_inset Graphics
-	filename cylinder/psisin.png
-	lyxscale 20
-	scale 31
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Odd-
-\begin_inset Formula $m$
-\end_inset
-
- threshold modes for dielectric cylinder; proportional to 
-\begin_inset Formula $\cos m\phi$
-\end_inset
-
- (left) and 
-\begin_inset Formula $\sin m\phi$
-\end_inset
-
- (right).
- The real part of 
-\begin_inset Formula $\mathbf{E}$
-\end_inset
-
- has been plotted.
- Like in the metallic square, the modes are 
-\begin_inset Formula $\frac{\pi}{2}$
-\end_inset
-
- rotations from each other so there is an exact degeneracy even for the
- numerical solution.
- This is true for all odd-
-\begin_inset Formula $m$
-\end_inset
-
- whispering gallery modes, but not for even-
-\begin_inset Formula $m$
-\end_inset
-
- modes.
- We treat the latter in Sec.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:discretization_breaking"
-
+\begin_inset Formula $\mathbf{E}_{\mathrm{o}}$
 \end_inset
 
 .
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:cylinder_modes"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-Above threshold, at a pump 
-\begin_inset Formula $\Dt(1+d)$
+Choosing 
+\begin_inset Formula $\mathbf{E}_{1}=\mathbf{E}_{+}$
 \end_inset
 
- as described above, the SALT equations are:
+ and 
+\begin_inset Formula $\mathbf{E}_{2}=\mathbf{E}_{-}$
+\end_inset
+
+ and exploiting various symmetry properties of this basis, we see (as shown
+ in detail in Appendix ???) that Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:a eigenproblem"
+
+\end_inset
+
+ reduces to 
 \begin_inset Formula 
-\begin{equation}
-\nabla\times\nabla\times\mathbf{E}=\omega^{2}\left[\varepsilon+\frac{\Dt(1+d)\gamma(\omega)}{1+\gamma_{\parallel}^{-1}\left|\gamma\mathbf{E}\right|^{2}}\right]\mathbf{E}.\label{eq:SALT above threshold}
-\end{equation}
+\begin{align}
+0 & =a_{\mp}\left(\omega_{1}H+G_{D}\right)-a_{\mp}\left|a_{\pm}\right|^{2}\left(I+J\right)\nonumber \\
+ & \ldots-a_{\mp}\left|a_{\mp}\right|^{2}I-a_{\pm}^{2}a_{\mp}^{\star}K,\label{eq:reduced a plus minus}
+\end{align}
 
 \end_inset
 
-For small 
-\begin_inset Formula $d$
+where the coefficients (listed in Appendix ???) are known complex quantities
+ obtained by solving the linear (in 
+\begin_inset Formula $\mathbf{E}$
 \end_inset
 
-, we write the SALT solutions as a perturbative expansion in 
-\begin_inset Formula $d$
+) threshold problem.
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reduced a plus minus"
+
 \end_inset
 
-, starting with the threshold solutions.
- The details are carried out in Appendix
-\begin_inset space ~
-\end_inset
-
-???, reducing to a 
-\begin_inset Formula $2\times2$
-\end_inset
-
- nonlinear system of equations, and we find that the lowest-order solutions
- are:
+ can be solved in closed form (as performed in Appendix ???), and yields
+ only a few solutions.
+ First, there are the purely-circulating modes, given by
 \begin_inset Formula 
 \begin{align*}
-\mathbf{E} & \propto\sqrt{d}\mathbf{E}_{\pm}\\
-\mathbf{E} & \propto\sqrt{d}\mathbf{E}_{\mathrm{e},\mathrm{o}}\\
-\mathbf{E} & \propto\sqrt{d}(\mathbf{E}_{\mathrm{e}}\pm\mathbf{E}_{\mathrm{o}}),
+\mathbf{E} & =\sqrt{\frac{\left(\omega_{1}H+G_{D}\right)d}{I}}\mathbf{E}_{\pm}\\
+\omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/I\right)}{\mathrm{Im}\left(H/I\right)}.
+\end{align*}
+
+\end_inset
+
+The other solutions to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reduced a plus minus"
+
+\end_inset
+
+ are 
+\emph on
+standing 
+\emph default
+modes, as to be expected, and it turns out their form depends (as explained
+ in Appendix ???) crucially on whether the irrep of the degenerate pair
+ satisfies 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+, where again 
+\begin_inset Formula $\ell$
+\end_inset
+
+ is the order of the 2d irrep.
+ For 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ with 
+\begin_inset Formula $n\neq4\ell$
+\end_inset
+
+, the other modes are
+\begin_inset Formula 
+\begin{align*}
+\mathbf{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J}}\left(\mathbf{E}_{+}+e^{i\theta}\mathbf{E}_{-}\right)\\
+\omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J]\right)}{\mathrm{Im}\left(H/[2I+J]\right)}
 \end{align*}
 
 \end_inset
 
 where 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e},\mathrm{o}}$
+\begin_inset Formula $\theta$
 \end_inset
 
- are defined such that 
-\begin_inset Formula $\mathbf{E}_{\pm}=\mathbf{E}_{\mathrm{e}}\pm i\mathbf{E}_{\mathrm{o}}$
+ is an arbitrary phase angle (during numeric solution of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:single-mode-salt"
+
+\end_inset
+
+, we have found that for some 
+\begin_inset Formula $n$
+\end_inset
+
+, there seem to be constraints on 
+\begin_inset Formula $\theta$
+\end_inset
+
+, namely having to be a multiple of 
+\begin_inset Formula $\frac{\pi}{n}$
 \end_inset
 
 .
- The modes here are the circulating modes and the two types of standing
- modes.
- (There are two kinds of standing waves for even 
-\begin_inset Formula $n$
+ These constraints probably come from equations that are higher-order in
+ 
+\begin_inset Formula $d$
 \end_inset
 
- because there are two kinds of mirror symmetries: symmetry planes through
- the faces or through the vertices of the regular 
-\begin_inset Formula $n$
+ than our perturbation theory.
+ However, they are inconsequential because it turns out that these standing
+ modes are always unstable, regardless of 
+\begin_inset Formula $\theta$
 \end_inset
 
--gon.) Also, of course, one can trivially have any 
+, as shown in Appendix ???).
+ For the case of 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+, there are 
+\emph on
+two 
+\emph default
+sets of standing modes.
+ The first is
+\begin_inset Formula 
+\begin{align*}
+\mathbf{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J+K}}\left(\mathbf{E}_{+}\pm\mathbf{E}_{-}\right)\\
+\omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J+K]\right)}{\mathrm{Im}\left(H/[2I+J+K]\right)}
+\end{align*}
+
+\end_inset
+
+and the other is
+\begin_inset Formula 
+\begin{align*}
+\mathbf{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J-K}}\left(\mathbf{E}_{+}\pm i\mathbf{E}_{-}\right)\\
+\omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J-K]\right)}{\mathrm{Im}\left(H/[2I+J-K]\right)}.
+\end{align*}
+
+\end_inset
+
+These four sets of solutions turn out to constitute all the solutions of
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reduced a plus minus"
+
+\end_inset
+
+ for the general 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- rotation or mirror flip of one of these solutions because of the symmetry
- of the problem.
+ case, and this completes the solution of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:single-mode-salt"
+
+\end_inset
+
+ slightly above threshold.
+ In order to find out which of these solutions is the one that actually
+ lases in a real 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ system, we must test stability of each of these solutions.
+ It turns out that this test can also be done analytically, using perturbation
+ theory on the linearized Maxwell--Bloch equations, as we will present in
+ the next section.
 \end_layout
 
 \begin_layout Subsection
@@ -1742,12 +2124,19 @@ fixed-point
 \end_inset
 
  modes are unstable in a ring [refs].
- To quantify this intuition, we perform linear-stability analysis [ref],
- along the same lines as the numerical procedure in Ref.
+ To quantify this intuition, we perform linear-stability analysis, along
+ the same lines as the numerical procedure in Ref.
 \begin_inset space ~
 \end_inset
 
-[ref].
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+.
  We linearize the Maxwell--Bloch equations for small perturbations around
  the SALT modes, by inserting
 \begin_inset Formula 
@@ -1763,26 +2152,50 @@ into the Maxwell--Bloch equations (where
 \begin_inset Formula $\mathbf{E}$
 \end_inset
 
-, 
-\begin_inset Formula $\mathbf{P}$
+ is any of the SALT solutions obtained in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Perturbative-SALT-solutions"
+
 \end_inset
 
 , 
-\begin_inset Formula $D$
+\begin_inset Formula $D(\mathbf{x})$
 \end_inset
 
-, and 
+ is the stationary inversion given in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:single-mode-salt"
+
+\end_inset
+
+, 
 \begin_inset Formula $\omega$
 \end_inset
 
- are the SALT solution), and collecting terms order-by-order in the perturbation
-s 
+ is the lasing frequency given in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lasing_ansatz"
+
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{P}(\mathbf{x})=\gamma(\omega)\mathbf{E}(x)D$
+\end_inset
+
+, is the polarization field.
+ We collect terms order-by-order in the perturbations 
 \begin_inset Formula $\delta$
 \end_inset
 
 .
- The zero-th order equations are simply SALT and are trivially satisfied,
- and the first-order equations are: 
+ The zeroth-order equations are simply the SALT equations and are already
+ satisfied by construction.
+ The first-order equations are 
 \begin_inset Formula 
 \begin{align}
 0 & =-\nabla\times\nabla\times\delta\mathbf{E}+\left(\frac{d}{dt}-i\omega\right)^{2}(\varepsilon\delta\mathbf{E}+\delta\mathbf{P})\nonumber \\
