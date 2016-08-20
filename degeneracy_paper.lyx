@@ -1686,7 +1686,7 @@ where
  threshold to be of the form
 \begin_inset Formula 
 \begin{align}
-\mathbf{E} & =\sqrt{d}\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{1}\right)+d^{3/2}\delta\mathbf{E},\nonumber \\
+\mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{1}\right)+d^{3/2}\delta\mathbf{E},\nonumber \\
 \omega & =\omega_{\mathrm{t}}+\omega_{1}d+\mathcal{O}(d^{2})\label{eq:lasing_ansatz}
 \end{align}
 
@@ -1814,9 +1814,9 @@ circulating
 
  modes in a ring)
 \begin_inset Formula 
-\[
-\mathbf{E}_{\pm}=\sum_{k=1}^{n}\exp\left(\pm\frac{2\pi i\ell k}{n}\right)R_{k/n}\mathbf{E}_{\mathrm{e}},
-\]
+\begin{equation}
+\mathbf{E}_{\pm}=\sum_{k=1}^{n}\exp\left(\pm\frac{2\pi i\ell k}{n}\right)R_{k/n}\mathbf{E}_{\mathrm{e}},\label{eq:chiral definition}
+\end{equation}
 
 \end_inset
 
@@ -1951,7 +1951,7 @@ reference "eq:reduced a plus minus"
  First, there are the purely-circulating modes, given by
 \begin_inset Formula 
 \begin{align}
-\mathbf{E} & =\sqrt{\frac{\left(\omega_{1}H+G_{D}\right)d}{I}}\mathbf{E}_{\pm}\nonumber \\
+\mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\frac{\left(\omega_{1}H+G_{D}\right)\gamma_{\parallel}d}{I}}\mathbf{E}_{\pm}\nonumber \\
 \omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/I\right)}{\mathrm{Im}\left(H/I\right)}.\label{eq:circulating lasing}
 \end{align}
 
@@ -1991,7 +1991,7 @@ modes, as to be expected, and it turns out their form depends (as explained
 , the other modes are
 \begin_inset Formula 
 \begin{align}
-\mathbf{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J}}\left(\mathbf{E}_{+}+e^{i\theta}\mathbf{E}_{-}\right)\nonumber \\
+\mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J}}\left(\mathbf{E}_{+}+e^{i\theta}\mathbf{E}_{-}\right)\nonumber \\
 \omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J]\right)}{\mathrm{Im}\left(H/[2I+J]\right)}\label{eq:n != 4 lasing}
 \end{align}
 
@@ -2046,7 +2046,7 @@ sets of standing modes.
  The first is
 \begin_inset Formula 
 \begin{align}
-\mathbf{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J+K}}\left(\mathbf{E}_{+}\pm\mathbf{E}_{-}\right)\nonumber \\
+\mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J+K}}\left(\mathbf{E}_{+}\pm\mathbf{E}_{-}\right)\nonumber \\
 \omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J+K]\right)}{\mathrm{Im}\left(H/[2I+J+K]\right)}\label{eq:E+ + E- lasing}
 \end{align}
 
@@ -2055,7 +2055,7 @@ sets of standing modes.
 and the other is
 \begin_inset Formula 
 \begin{align}
-\mathbf{E} & =\sqrt{\frac{(\omega_{1}H+G_{D})d}{2I+J-K}}\left(\mathbf{E}_{+}\pm i\mathbf{E}_{-}\right)\nonumber \\
+\mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J-K}}\left(\mathbf{E}_{+}\pm i\mathbf{E}_{-}\right)\nonumber \\
 \omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J-K]\right)}{\mathrm{Im}\left(H/[2I+J-K]\right)}.\label{eq:E+ + i E- lasing}
 \end{align}
 
@@ -5821,13 +5821,6 @@ If all
 
 \begin_layout Section*
 Appendix B
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Appendix_lasing 2x2"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5839,492 +5832,433 @@ In this appendix, we show that the only allowed lasing modes for
 \begin_inset Formula $\mathbf{E}_{\pm}$
 \end_inset
 
- and the two types of standing modes 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e},\mathrm{o}}$
+ and standing modes 
+\begin_inset Formula $\mathbf{E}_{+}+e^{i\theta}\mathbf{E}_{-}$
 \end_inset
 
- and 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e}}\pm\mathbf{E}_{\mathrm{o}}$
+, with 
+\begin_inset Formula $\theta$
+\end_inset
+
+ an arbitrary angle for 
+\begin_inset Formula $n\neq4\ell$
+\end_inset
+
+ (where 
+\begin_inset Formula $\ell$
+\end_inset
+
+ is the order of the 2d irrep that the degenerate modes transform as), and
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+ an integer multiple of 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ for 
+\begin_inset Formula $n=4\ell$
 \end_inset
 
 .
- We begin by expanding the SALT equation, Eq.
+ We begin by writing 
+\begin_inset Formula $D_{0}=D_{\mathrm{t}}(1+d)$
+\end_inset
+
+ and inserting into Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:2mode_salt"
+reference "eq:single-mode-salt"
 
 \end_inset
 
- to lowest order in 
+.
+ We expand to lowest order in 
 \begin_inset Formula $d$
 \end_inset
 
-, noting that 
-\begin_inset Formula $\mathbf{E}=\mathcal{O}(\sqrt{d})$
-\end_inset
-
-:
+ and the mode intensity, and we have
 \begin_inset Formula 
 \begin{equation}
-\nabla\times\nabla\times\mathbf{E}-\omega^{2}[\varepsilon+\Dt\gamma(\omega)]\mathbf{E}=\Dt\left(d-\gamma_{\parallel}\left|\gamma\mathbf{E}\right|^{2}\right)\mathbf{E}.\label{eq:SALT expanded in d}
+\nabla\times\nabla\times\mathbf{E}=\omega^{2}\left[\varepsilon+D_{\mathrm{t}}\gamma\left(1+d-\gamma_{\parallel}^{-1}\left|\gamma\mathbf{E}\right|^{2}\right)\right]\mathbf{E}.\label{eq:expanded salt}
 \end{equation}
 
 \end_inset
 
-Insert an ansatz of the form 
+Comparing with the Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:threshold salt"
+
+\end_inset
+
+ at threshold, we conclude that 
+\begin_inset Formula $\mathbf{E}=\mathcal{O}(\sqrt{d})$
+\end_inset
+
+, and that the profile should be some linear combination of the threshold
+ modes 
+\begin_inset Formula $\mathbf{E}_{1,2}$
+\end_inset
+
+, as in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lasing_ansatz"
+
+\end_inset
+
+.
+ Inserting Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lasing_ansatz"
+
+\end_inset
+
+ into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:expanded salt"
+
+\end_inset
+
+, noting that the zeroth order terms vanish due to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:threshold salt"
+
+\end_inset
+
+, we obtain 
 \begin_inset Formula 
 \begin{align*}
-\mathbf{E} & =\frac{\sqrt{\gamma_{\parallel}d}}{\gamma_{0}}\sum a_{k}\mathbf{E}_{k}+d^{3/2}\mathbf{E}_{3/2},\\
-\omega & =\omega_{0}+\omega_{1}d
+ & \left[\nabla\times\nabla\times-\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}\\
+ & =\left\{ \omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left[\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{0}\gamma_{\mathrm{t}}\right)\right]+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(1-\left|\mathbf{f}\right|^{2}\right)\right\} \mathbf{f}
 \end{align*}
 
 \end_inset
 
 where 
-\begin_inset Formula $a_{k}$
-\end_inset
-
- are unknown coefficients of the two-component basis 
-\begin_inset Formula $\mathbf{E}_{k}$
+\begin_inset Formula $\mathbf{f}\equiv a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}$
 \end_inset
 
 .
- The lowest-order (
-\begin_inset Formula $\sqrt{d}$
+ Now multiply by 
+\begin_inset Formula $\mathbf{E}_{1,2}$
 \end_inset
 
-) terms in Eq.
+ and integrate over all space, and we obtain Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:SALT expanded in d"
+reference "eq:a eigenproblem"
 
 \end_inset
 
- vanish because 
-\begin_inset Formula $\mathbf{E}_{k}$
-\end_inset
-
- satisfy the SALT equation at threshold.
- To the next order, 
-\begin_inset Formula $d^{3/2}$
-\end_inset
-
-, Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:SALT expanded in d"
-
-\end_inset
-
- then becomes
-\begin_inset Formula 
-\begin{align*}
- & \nabla\times\nabla\times\mathbf{E}_{3/2}-\left[\mathbf{E}_{3/2}+\frac{\sqrt{\gamma_{\parallel}}}{\gamma_{0}}\sum a_{k}\mathbf{E}_{k}\omega_{1}\frac{\partial}{\partial\omega_{0}}\right]\omega_{0}^{2}(\varepsilon+\Dt\gamma_{0})\\
- & =\Dt\left(1-\left|\sum a_{\ell}\mathbf{E}_{\ell}\right|^{2}\right)\frac{\sqrt{\gamma_{\parallel}}}{\gamma_{0}}\sum a_{k}\mathbf{E}_{k}.
-\end{align*}
-
-\end_inset
-
-Now multiply both sides by 
-\begin_inset Formula $\mathbf{E}_{j}$
-\end_inset
-
- and integrate over all space.
- We note that
+, where we have used the fact that 
 \begin_inset Formula 
 \[
-\int d^{3}x\mathbf{E}_{j}\cdot\left(\nabla\times\nabla\times\mathbf{E}_{3/2}-\omega_{0}^{2}[\varepsilon+\Dt\gamma_{0}]\mathbf{E}_{3/2}\right)=0
+\int d^{3}x\mathbf{E}_{1,2}\cdot\left[\nabla\times\nabla\times-\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}=0
 \]
 
 \end_inset
 
-because the curl-curl operator is complex-symmetric.
- After integration, we obtain
-\begin_inset Formula 
-\begin{align}
- & \int d^{3}x\left[\omega_{0}^{2}\gamma_{0}\Dt+\omega_{1}\frac{\partial}{\partial\omega_{0}}\omega_{0}^{2}\left(\varepsilon+\gamma_{0}\Dt\right)\right]\left(\mathbf{E}_{j}\cdot\mathbf{E}_{k}\right)a_{k}\nonumber \\
- & =\int d^{3}x\omega_{0}^{2}\gamma_{0}\Dt\left|\sum a_{\ell}\mathbf{E}_{\ell}\right|^{2}\left(\mathbf{E}_{j}\cdot\mathbf{E}_{k}\right)a_{k}.\label{eq:coefficients}
-\end{align}
-
+because the threshold Maxwell operator is complex-symmetric.
+ Now, choose 
+\begin_inset Formula $\mathbf{E}_{1}=\mathbf{E}_{+}$
 \end_inset
 
+ and 
+\begin_inset Formula $\mathbf{E}_{2}=\mathbf{E}_{-}$
+\end_inset
 
-\end_layout
+, where 
+\begin_inset Formula $\mathbf{E}_{\pm}$
+\end_inset
 
-\begin_layout Standard
-Eq.
+ is defined in Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:coefficients"
+reference "eq:chiral definition"
 
-\end_inset
-
- is an eigenvalue problem that is linear in the eigenvalue 
-\begin_inset Formula $\omega_{1}$
-\end_inset
-
- (which by definition is constrained to be real since the mode is lasing)
- and 
-\emph on
-cubic 
-\emph default
-in the components of the eigenvector 
-\begin_inset Formula $a_{k}$
 \end_inset
 
 .
- In general, Eq.
+ For generality, we assume that the geometry [i.e.
+ the functions 
+\begin_inset Formula $\varepsilon(\mathbf{x})$
+\end_inset
+
+ and 
+\begin_inset Formula $D_{\mathrm{t}}(\mathbf{x})$
+\end_inset
+
+] has at least 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry.
+ In Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:coefficients"
+reference "eq:a eigenproblem"
 
 \end_inset
 
- could be solved numerically by a low-dimensional root-finding algorithm.
- In fact, it has the same structure (number of unknowns) as the SALT equation
- (with two 
-\begin_inset Quotes eld
+, we see that 
+\begin_inset Formula $\int d^{3}x\varepsilon(\mathbf{x})\mathbf{E}_{+}\cdot\mathbf{E}_{+}$
 \end_inset
 
-spatial
-\begin_inset Quotes erd
+ vanishes, because it is the conjugated inner product of 
+\begin_inset Formula $\mathbf{E}_{+}$
 \end_inset
 
- degrees of freedom) and can therefore be solved with the same techniques
- as in Ref.
+ and 
+\begin_inset Formula $\mathbf{E}_{+}^{\star}$
+\end_inset
+
+, which transform as the clockwise and counterclockwise 1d irreps in the
  
-\begin_inset CommandInset citation
-LatexCommand cite
-key "direct_salt"
-
+\begin_inset Formula $C_{n}$
 \end_inset
 
- (but much more quickly).
- In practice, however, realistic degeneracies will almost always arise from
- symmetry, and in this case we can solve Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:coefficients"
-
-\end_inset
-
- analytically.
- (Degeneracies that do 
-\emph on
-not
-\emph default
- arise from symmetry are known as 
-\begin_inset Quotes eld
-\end_inset
-
-accidental
-\begin_inset Quotes erd
-\end_inset
-
- 
+ group, and from the great orthogonality theorem 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "inui_group,tinkham"
 
 \end_inset
 
-, and because accidental degeneracies are broken by generic perturbations
- they will generally not survive above threshold unless there is some other
- constraint that enforces the degeneracy).
-\end_layout
-
-\begin_layout Standard
-We now solve Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:coefficients"
-
+, conjugated inner products between functions belonging to different irreps
+ always vanish.
+ Also, the integral over 
+\begin_inset Formula $D_{\mathrm{t}}(\mathbf{x})$
 \end_inset
 
- for the case of a 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- geometry.
- For convenience, we choose as a basis the 
-\begin_inset Quotes eld
-\end_inset
-
-circulating
-\begin_inset Quotes erd
-\end_inset
-
- modes 
-\begin_inset Formula $\mathbf{E}_{\pm}$
-\end_inset
-
-.
- We first note that integrals of the form 
-\begin_inset Formula $\int d^{3}x(\mathbf{E}_{\pm}\cdot\mathbf{E}_{\pm})F$
-\end_inset
-
-, where 
-\begin_inset Formula $F$
-\end_inset
-
- is some kernel that has 
+ is the same, because it also has at least 
 \begin_inset Formula $C_{n}$
 \end_inset
 
- symmetry, must vanish.
- This is because this integral can be written as a conjugated inner product
- of 
-\begin_inset Formula $\mathbf{E}_{\pm}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{E}_{\pm}^{\star}$
-\end_inset
-
-, and the latter transforms as 
-\begin_inset Formula $\mathbf{E}_{\mp}$
-\end_inset
-
-, or the irrep with opposite chirality in the 
-\begin_inset Formula $C_{n}$
-\end_inset
-
- symmetry group.
- From the Great Orthogonality Theorem 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "inui_group"
-
-\end_inset
-
-, we know that such inner products must vanish.
- Hence, the left-hand side of Eq.
+ symmetry.
+ Excluding the intensity term in Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:coefficients"
+reference "eq:chiral definition"
 
 \end_inset
 
- is given by
+, the rest of the terms become
 \begin_inset Formula 
 \[
-\omega_{0}^{2}\gamma_{0}G_{\Dt}+\omega_{1}\frac{\partial}{\partial\omega_{0}}\omega_{0}^{2}\left(G_{\varepsilon}+\gamma_{0}G_{\Dt}\right)\left(\begin{array}{cc}
-0 & 1\\
-1 & 0
-\end{array}\right)\left(\begin{array}{c}
-a_{+}\\
-a_{-}
-\end{array}\right).
+a_{\mp}\left(\omega_{1}H+G_{D}\right),
 \]
 
 \end_inset
 
-where 
-\begin_inset Formula $G_{F}=\int d^{3}x(\mathbf{E}_{+}\cdot\mathbf{E}_{-})F$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Next, we perform the integrals on the right-hand side of Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:coefficients"
-
-\end_inset
-
-.
- We first note that integrals of the form 
-\begin_inset Formula $\int d^{3}x\left|\mathbf{E}_{\pm}\right|^{2}\left(\mathbf{E}_{+}\cdot\mathbf{E}_{+}\right)$
-\end_inset
-
- and 
-\begin_inset Formula $\int d^{3}x\left|\mathbf{E}_{\pm}\right|^{2}\left(\mathbf{E}_{-}\cdot\mathbf{E}_{-}\right)$
-\end_inset
-
- both must vanish.
- This can be seen by noting that 
-\begin_inset Formula $\left|\mathbf{E}_{\pm}\right|^{2}$
-\end_inset
-
- has 
-\begin_inset Formula $C_{n}$
-\end_inset
-
- symmetry (because 
-\begin_inset Formula $\mathbf{E}_{\pm}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{E}_{\pm}^{\star}$
-\end_inset
-
- transform like irreps that are conjugates of one another under rotations,
- so the net effect of a rotation is the indentity), from which the same
- arguments before can be applied to show that the integrals vanish.
- The non-vanishing quartic integrals are then
+where we have defined
 \begin_inset Formula 
 \begin{align*}
-I & =\int d^{3}x\Dt\left|\mathbf{E}_{\pm}\right|^{2}(\mathbf{E}_{+}\cdot\mathbf{E}_{-})\\
-J & =\int d^{3}x\Dt(\mathbf{E}_{+}^{\star}\cdot\mathbf{E}_{-})(\mathbf{E}_{+}\cdot\mathbf{E}_{+})\\
-K & =\int d^{3}x\Dt(\mathbf{E}_{+}\cdot\mathbf{E}_{-}^{\star})(\mathbf{E}_{+}\cdot\mathbf{E}_{+}),
+G_{\varepsilon} & \equiv\int d^{3}x\varepsilon(\mathbf{x})\mathbf{E}_{+}\cdot\mathbf{E}_{-}\\
+G_{D} & \equiv\int d^{3}xD_{\mathrm{t}}(\mathbf{x})\mathbf{E}_{+}\cdot\mathbf{E}_{-}.\\
+H & \equiv(\omega_{\mathrm{t}}\gamma_{\mathrm{t}})^{-1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left\{ \omega_{\mathrm{t}}^{2}\left(G_{\varepsilon}+G_{D}\gamma_{\mathrm{t}}\right)\right\} .
 \end{align*}
 
 \end_inset
 
-along with the same integrals with 
-\begin_inset Formula $+$
-\end_inset
-
- and 
-\begin_inset Formula $-$
-\end_inset
-
- interchanged (due to the fact that 
-\begin_inset Formula $\mathbf{E}_{\pm}$
-\end_inset
-
- are mirror flips of each other, as well as the fact that the pump profile
- 
-\begin_inset Formula $\Dt$
-\end_inset
-
- has 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- symmetry).
- In most cases, 
-\begin_inset Formula $K=0$
-\end_inset
-
-, but a notable exception to this rule occurs for 
-\begin_inset Formula $C_{4\mathrm{v}}$
+For the intensity term, we have 
+\begin_inset Formula $\int d^{3}x\mathbf{E}_{\pm}\cdot\mathbf{f}\left|\mathbf{f}\right|$
 \end_inset
 
 .
+ We note that the quantities 
+\begin_inset Formula $\left|\mathbf{E}_{\pm}\right|^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{+}\cdot\mathbf{E}_{-}$
+\end_inset
+
+ have 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry, so by symmetry arguments, the only surviving integrals are
+\begin_inset Formula 
+\begin{align*}
+I_{\pm} & =\int D_{\mathrm{t}}\left|\vec{E}_{\pm}\right|^{2}\vec{E}_{+}\cdot\vec{E}_{-}\\
+J_{\pm} & =\int D_{\mathrm{t}}(\vec{E}_{\pm}^{\star}\cdot\vec{E}_{\mp})\vec{E}_{\pm}\cdot\vec{E}_{\pm}\\
+K_{\pm} & =\int D_{\mathrm{t}}(\vec{E}_{\mp}^{\star}\cdot\vec{E}_{\pm})\vec{E}_{\pm}\cdot\vec{E}_{\pm}.
+\end{align*}
+
+\end_inset
+
+Additionally, note that for 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+, we have 
+\begin_inset Formula $I_{+}=I_{-}$
+\end_inset
+
+, and the same for 
+\begin_inset Formula $J$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ Further, for TM modes (
+\begin_inset Formula $\mathbf{E}_{\pm}=E_{\pm}\hat{\mathbf{z}}$
+\end_inset
+
+), we have 
+\begin_inset Formula $I_{\pm}=J_{\pm}$
+\end_inset
+
+.
+ Finally, 
+\begin_inset Formula $K_{\pm}$
+\end_inset
+
+ is only non-vanishing for 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+, since in that special case, 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ picks up a factor of 
+\begin_inset Formula $i$
+\end_inset
+
+ under four-fold rotation, as seen in Eq.
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:chiral definition"
+
+\end_inset
+
+.
+ With these definitions, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:a eigenproblem"
+
+\end_inset
+
+ straightforwardly reduces to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reduced a plus minus"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-The right-hand side of Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:coefficients"
-
+To solve for the coefficients 
+\begin_inset Formula $a_{\pm}$
 \end_inset
 
- is then given by
-\begin_inset Formula 
-\[
-\omega_{0}^{2}\gamma_{0}\left(\begin{array}{cc}
-a_{+}^{\star}a_{-}J+a_{-}^{\star}a_{+}K & \left(|a_{+}|^{2}+|a_{-}|^{2}\right)I\\
-\left(|a_{+}|^{2}+|a_{-}|^{2}\right)I & a_{+}^{\star}a_{-}K+a_{-}^{\star}a_{+}J
-\end{array}\right)\left(\begin{array}{c}
-a_{+}\\
-a_{-}
-\end{array}\right).
-\]
-
+ and the frequency shift 
+\begin_inset Formula $\omega_{1}$
 \end_inset
 
-Defining 
-\begin_inset Formula $R=(\omega_{0}^{2}\gamma_{0})^{-1}\frac{\partial}{\partial\omega_{0}}\omega_{0}^{2}\left(G_{\varepsilon}+\gamma_{0}G_{\Dt}\right)$
-\end_inset
-
-, Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:coefficients"
-
-\end_inset
-
- is then given by
-\begin_inset Formula 
-\begin{align}
- & \left(\omega_{1}R+G_{\Dt}\right)\left(\begin{array}{cc}
-0 & 1\\
-1 & 0
-\end{array}\right)\left(\begin{array}{c}
-a_{+}\\
-a_{-}
-\end{array}\right)\nonumber \\
- & =\left(\begin{array}{cc}
-a_{+}^{\star}a_{-}J+a_{-}^{\star}a_{+}K & \left(|a_{+}|^{2}+|a_{-}|^{2}\right)I\\
-\left(|a_{+}|^{2}+|a_{-}|^{2}\right)I & a_{+}^{\star}a_{-}K+a_{-}^{\star}a_{+}J
-\end{array}\right)\left(\begin{array}{c}
-a_{+}\\
-a_{-}
-\end{array}\right).\label{eq:2x2 eigenproblem}
-\end{align}
-
-\end_inset
-
-First, consider the case that 
+, first consider the case 
 \begin_inset Formula $a_{-}=0$
 \end_inset
 
 .
- Eq.
+ Dividing Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:2x2 eigenproblem"
+reference "eq:reduced a plus minus"
 
 \end_inset
 
- then reduces to 
-\begin_inset Formula $\omega_{1}R+G_{\Dt}=|a_{+}|^{2}I$
+ (with the bottom sign) by 
+\begin_inset Formula $a_{+}$
 \end_inset
 
-, from which we obtain the circulating mode
+ then yields
 \begin_inset Formula 
 \[
-a_{+}=\sqrt{\frac{\omega_{1}R+G_{\Dt}}{I}},\;a_{-}=0\;\mathrm{``circulating\,mode"}.
+\left|a_{+}\right|^{2}=\frac{\omega_{1}H+G_{D}}{I_{+}}.
 \]
 
 \end_inset
 
-where the frequency eigenvalue 
+The fact that both 
 \begin_inset Formula $\omega_{1}$
 \end_inset
 
- is the unique real number such that 
-\begin_inset Formula $a_{+}$
+ and 
+\begin_inset Formula $\left|a_{+}\right|^{2}$
 \end_inset
 
- is real.
- Because Eq.
+ must be real leads to the circulating solution (Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:2x2 eigenproblem"
+reference "eq:circulating lasing"
 
 \end_inset
 
- is symmetric under interchange of + and -, a lasing mode with 
-\begin_inset Formula $a_{+}=0$
+ holds for 
+\begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- also exists, with the same amplitude as above for 
-\begin_inset Formula $a_{-}$
+; the same expression with 
+\begin_inset Formula $I$
+\end_inset
+
+ replaced by 
+\begin_inset Formula $I_{\pm}$
+\end_inset
+
+ also holds for 
+\begin_inset Formula $C_{n}$
 \end_inset
 
 .
- 
+ In this case 
+\begin_inset Formula $I_{+}\neq I_{-}$
+\end_inset
+
+, so the two circulating lasing modes will actually have slightly different
+ amplitudes and frequencies).
+ Note that the fact that 
+\begin_inset Formula $\left|a_{+}\right|^{2}$
+\end_inset
+
+ must be a positive number also gives a cutoff condition
+\begin_inset Formula 
+\[
+\Re(G_{D}/I_{\pm})>\frac{\Im\left(G_{D}/I_{\pm}\right)}{\Im\left(H/I_{\pm}\right)}\Re(H/I_{\pm}).
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6332,103 +6266,229 @@ Next, we consider the case that both
 \begin_inset Formula $a_{\pm}$
 \end_inset
 
- are non-zero.
+ are nonzero.
  Write 
-\begin_inset Formula $a_{\pm}=|a_{\pm}|e^{i\theta_{\pm}}$
+\begin_inset Formula $a_{\pm}=\left|a_{\pm}\right|e^{i\theta_{\pm}}$
 \end_inset
 
-, and Eq.
+ and define the relative phase 
+\begin_inset Formula $z=e^{i(\theta_{-}-\theta_{+})}$
+\end_inset
+
+.
+ Divide Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:2x2 eigenproblem"
+reference "eq:reduced a plus minus"
 
 \end_inset
 
- can be rearranged as
+ by 
+\begin_inset Formula $a_{\mp}$
+\end_inset
+
+, and we obtain
 \begin_inset Formula 
-\begin{align*}
- & \left(\omega_{1}R+G_{\Dt}\right)\left(\begin{array}{c}
-1\\
-1
-\end{array}\right)\\
- & =\left(\begin{array}{cc}
-I+J+Ke^{2i(\theta_{+}-\theta_{-})} & I\\
-I & I+J+Ke^{-2i(\theta_{+}-\theta_{-})}
-\end{array}\right)\left(\begin{array}{c}
-\left|a_{+}\right|^{2}\\
-\left|a_{-}\right|^{2}
-\end{array}\right).
-\end{align*}
+\[
+\left|a_{\mp}\right|^{2}I_{\mp}+\left|a_{\pm}\right|^{2}\left(I_{\pm}+J_{\pm}+z^{\mp2}K_{\pm}\right)=\omega_{1}H+G_{D}.
+\]
 
 \end_inset
 
-For this equation to have a solution where both 
+Solving this linear equation for the unknowns 
 \begin_inset Formula $\left|a_{\pm}\right|^{2}$
 \end_inset
 
- are real, we must have 
-\begin_inset Formula $e^{2i(\theta_{+}-\theta_{-})}=\pm1$
-\end_inset
-
-, which results in 
-\begin_inset Formula $\theta_{-}=\theta_{+}+\frac{\pi m}{2}$
-\end_inset
-
-, where even 
-\begin_inset Formula $m$
-\end_inset
-
- gives 
-\begin_inset Formula $+1$
-\end_inset
-
- and odd 
-\begin_inset Formula $m$
-\end_inset
-
- gives 
-\begin_inset Formula $-1$
-\end_inset
-
-.
- These two cases straightforwardly result in the two types of standing modes:
+, we obtain
 \begin_inset Formula 
-\begin{align}
-a_{+} & =\sqrt{\frac{\omega_{1}R+G_{\Dt}}{2I+J+K}},\;a_{-}=a_{+}\;``x,y\,\mathrm{standing\,mode"}\label{eq:lasing_modes}\\
-a_{+} & =\sqrt{\frac{\omega_{1}R+G_{\Dt}}{2I+J-K}},\,a_{-}=ia_{+}\,``x+y\,\mathrm{standing\,mode}",\nonumber 
-\end{align}
+\[
+\left|a_{\pm}\right|^{2}=(\omega_{1}H+G_{D})T_{\pm},
+\]
 
 \end_inset
 
-where again, in each case 
-\begin_inset Formula $\omega_{1}$
+where
+\begin_inset Formula 
+\[
+T_{\pm}=\frac{J_{\mp}+z^{\pm2}K_{\mp}}{\left(I_{+}+J_{+}+z^{-2}K_{+}\right)\left(I_{-}+J_{-}+z^{2}K_{-}\right)-I_{+}I_{-}}.
+\]
+
 \end_inset
 
- is the unique real number such that 
-\begin_inset Formula $a_{+}$
-\end_inset
-
- is real.
- Hence, we have shown that the only allowed linear combinations for lasing
- solutions of SALT in a 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- geometry are the circulating modes 
-\begin_inset Formula $\mathbf{E}_{+}$
-\end_inset
-
- and the two standing modes 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e},\mathrm{o}}$
+Again, since 
+\begin_inset Formula $\left|a_{\pm}\right|^{2}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e}}\pm\mathbf{E}_{\mathrm{o}}$
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ are real, we have
+\begin_inset Formula 
+\begin{equation}
+\omega_{1}=-\frac{\Im\left(G_{D}T_{+}\right)}{\Im\left(HT_{+}\right)}=-\frac{\Im\left(G_{D}T_{-}\right)}{\Im\left(HT_{-}\right)}.\label{eq:omega1 constraint}
+\end{equation}
+
+\end_inset
+
+The second equality here is a constraint that must be satisfied.
+ For 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ with 
+\begin_inset Formula $n\neq4\ell$
+\end_inset
+
+, we have 
+\begin_inset Formula $I_{+},J_{+}=I_{-},J_{-}$
+\end_inset
+
+ and 
+\begin_inset Formula $K_{\pm}=0$
+\end_inset
+
+ (as explained previously), so 
+\begin_inset Formula $T_{+}=T_{-}$
+\end_inset
+
+ and the constraint is automatically satisfied, indicating that 
+\begin_inset Formula $z$
+\end_inset
+
+ is free to have any phase, and yielding the solution in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:n != 4 lasing"
+
 \end_inset
 
 .
+ For 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ with 
+\begin_inset Formula $n\neq4\ell$
+\end_inset
+
+, we again have 
+\begin_inset Formula $K_{\pm}=0$
+\end_inset
+
+, but there is no mirror symmetry so 
+\begin_inset Formula $I_{+},J_{+}\neq I_{-},J_{-}$
+\end_inset
+
+, and no choice of 
+\begin_inset Formula $z$
+\end_inset
+
+ will allow Eq.
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:omega1 constraint"
+
+\end_inset
+
+ to be satisfied.
+ Hence, there are no standing lasing modes for this case.
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ with 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+, we again have 
+\begin_inset Formula $I_{+},J_{+}=I_{-},J_{-}$
+\end_inset
+
+, but we also have 
+\begin_inset Formula $K_{+}=K_{-}\neq0$
+\end_inset
+
+.
+ Hence, for 
+\begin_inset Formula $T_{+}=T_{-}$
+\end_inset
+
+ to be true, we must have 
+\begin_inset Formula $z^{2}=z^{-2}=\pm1$
+\end_inset
+
+.
+ Hence, there are two cases, 
+\begin_inset Formula $z=\pm1$
+\end_inset
+
+, for which the solution is given in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:E+ + E- lasing"
+
+\end_inset
+
+, and 
+\begin_inset Formula $z=\pm i$
+\end_inset
+
+, for which the solution is given in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:E+ + i E- lasing"
+
+\end_inset
+
+.
+ For 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ with 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+, we now have 
+\begin_inset Formula $I_{+},J_{+}\neq I_{-},J_{-}$
+\end_inset
+
+, and 
+\begin_inset Formula $K_{+}\neq K_{-}$
+\end_inset
+
+, with both 
+\begin_inset Formula $K_{\pm}$
+\end_inset
+
+ nonzero.
+ Interestingly, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:omega1 constraint"
+
+\end_inset
+
+ can still be solved.
+ Empirically, we find that there are again four allowed phases 
+\begin_inset Formula $z$
+\end_inset
+
+, with angles separated by 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section*
