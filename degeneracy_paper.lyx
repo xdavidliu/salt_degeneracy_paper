@@ -2430,15 +2430,15 @@ where
 
  are
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathsf{v}_{k}=\left(\begin{array}{c}
 \Re\vec{e}_{k}\\
 \Im\vec{e}_{k}\\
 D_{\mathrm{t}}\Re(\gamma_{\mathrm{t}}\vec{e}_{k})\\
 D_{\mathrm{t}}\Im(\gamma_{\mathrm{t}}\vec{e}_{k})\\
 0
-\end{array}\right),
-\]
+\end{array}\right),\label{eq:vk definition}
+\end{equation}
 
 \end_inset
 
@@ -6496,18 +6496,17 @@ Appendix C
 \end_layout
 
 \begin_layout Standard
-In this appendix, we test the stability of the three types of lasing modes
- found in Appendix 
+In this appendix, we provide details for the derivation of the stability
+ eigenvalues given in Sec.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Appendix_lasing 2x2"
+reference "sub:Stability-of-circulating"
 
 \end_inset
 
 .
- We do so by linearizing the Maxwell--Bloch equations about these steady-state
- solutions, and examining the sign of the resulting stability eigenvalues.
- We begin by writing Eq.
+ Comparing Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -6515,69 +6514,49 @@ reference "eq:delta"
 
 \end_inset
 
- as a linear matrix equation, with real and imaginary components separated:
+ and Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic eigenproblem"
+
+\end_inset
+
+, we see that the matrices are
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\left(C\frac{d^{2}}{dt^{2}}+B\frac{d}{dt}+A\right)\left|u(t)\right\rangle =0,\label{eq:ABC}
-\end{equation}
-
-\end_inset
-
-with
-\begin_inset Formula 
 \[
-\left|u(t)\right\rangle =\left(\begin{array}{c}
-\mathrm{Re}\delta\mathbf{E}(\mathbf{x},t)\\
-\mathrm{Im}\delta\mathbf{E}(\mathbf{x},t)\\
-\mathrm{Re}\delta\mathbf{P}(\mathbf{x},t)\\
-\mathrm{Im}\delta\mathbf{P}(\mathbf{x},t)\\
-\delta D(\mathbf{x},t)
+\mathsf{A}=\left(\begin{array}{ccccc}
+\Delta & -\varepsilon_{\mathrm{I}}\omega^{2} & \omega^{2} & 0 & 0\\
+\varepsilon_{\mathrm{I}}\omega^{2} & \Delta & 0 & \omega^{2} & 0\\
+\gamma_{\perp}D & 0 & \omega_{a}-\omega & \gamma_{\perp} & \gamma_{\perp}\mathbf{E}_{\mathrm{R}}\\
+0 & \gamma_{\perp}D & -\gamma_{\perp} & \omega_{a}-\omega & \gamma_{\perp}\mathbf{E}_{\mathrm{I}}\\
+-\mathbf{P}_{\mathrm{I}} & \mathbf{P}_{\mathrm{R}} & \mathbf{E}_{\mathrm{I}} & -\mathbf{E}_{\mathrm{R}} & \gamma_{\parallel}
 \end{array}\right),
 \]
 
 \end_inset
 
-
-\begin_inset Formula 
-\[
-A=\left(\begin{array}{ccccc}
-\Delta & -\varepsilon_{I}\omega^{2} & \omega^{2} & 0 & 0\\
-\varepsilon_{I}\omega^{2} & \Delta & 0 & \omega^{2} & 0\\
-\gamma_{\perp}D & 0 & \omega_{a}-\omega & \gamma_{\perp} & \gamma_{\perp}\mathbf{E}_{R}\\
-0 & \gamma_{\perp}D & -\gamma_{\perp} & \omega_{a}-\omega & \gamma_{\perp}\mathbf{E}_{I}\\
--\mathbf{P}_{I} & \mathbf{P}_{R} & \mathbf{E}_{I} & -\mathbf{E}_{R} & \gamma_{\parallel}
-\end{array}\right),
-\]
-
+where 
+\begin_inset Formula $\Delta=-\nabla\times\nabla\times$
 \end_inset
 
-(where 
-\begin_inset Formula $\Delta=-\nabla\times\nabla\times+\varepsilon_{R}\omega^{2}$
+, 
+\begin_inset Formula $\mathbf{E}_{\mathrm{R}}\equiv\Re(\mathbf{E})$
 \end_inset
 
-), and
-\begin_inset Formula 
-\[
-C=\left(\begin{array}{ccccc}
--\varepsilon_{R} & \varepsilon_{I} & -1 & 0 & 0\\
--\varepsilon_{I} & -\varepsilon_{R} & 0 & -1 & 0\\
-0 & 0 & 0 & 0 & 0\\
-0 & 0 & 0 & 0 & 0\\
-0 & 0 & 0 & 0 & 0
-\end{array}\right),
-\]
-
+, and 
+\begin_inset Formula $\mathbf{E}_{\mathrm{I}}\equiv\Im(\mathbf{E})$
 \end_inset
 
-
+, 
 \begin_inset Formula 
 \[
-B=\left(\begin{array}{ccccc}
--2\varepsilon_{I}\omega & -2\varepsilon_{R}\omega & 0 & -2\omega & 0\\
-2\varepsilon_{R}\omega & -2\varepsilon_{I}\omega & 2\omega & 0 & 0\\
+\mathsf{B}=\left(\begin{array}{ccccc}
+-2\varepsilon_{\mathrm{I}}\omega & -2\varepsilon_{\mathrm{R}}\omega & 0 & -2\omega & 0\\
+2\varepsilon_{\mathrm{R}}\omega & -2\varepsilon_{\mathrm{I}}\omega & 2\omega & 0 & 0\\
 0 & 0 & 0 & 1 & 0\\
 0 & 0 & -1 & 0 & 0\\
 0 & 0 & 0 & 0 & 1
@@ -6586,6 +6565,334 @@ B=\left(\begin{array}{ccccc}
 
 \end_inset
 
+and
+\begin_inset Formula 
+\[
+\mathsf{C}=\left(\begin{array}{ccccc}
+-\varepsilon_{\mathrm{R}} & \varepsilon_{\mathrm{I}} & -1 & 0 & 0\\
+-\varepsilon_{\mathrm{I}} & -\varepsilon_{\mathrm{R}} & 0 & -1 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right).
+\]
+
+\end_inset
+
+We expand the matrices in powers of 
+\begin_inset Formula $\sqrt{d}$
+\end_inset
+
+, as in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:matrix expansion"
+
+\end_inset
+
+, by noting that 
+\begin_inset Formula $\omega=\omega_{\mathrm{t}}+\omega_{1}d$
+\end_inset
+
+, 
+\begin_inset Formula $D_{0}=D_{\mathrm{t}}(1+d)$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{E},\mathbf{P}=\mathcal{O}(\sqrt{d})$
+\end_inset
+
+, according to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lasing_ansatz"
+
+\end_inset
+
+.
+ Eq.
+ Now expand Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic eigenproblem"
+
+\end_inset
+
+ and keep track of terms order-by-order using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eigenpair expansion"
+
+\end_inset
+
+.
+ At zeroth order, we have
+\begin_inset Formula 
+\begin{equation}
+\left(\mathsf{C}\sigma_{0}^{2}+\mathsf{B}_{0}\sigma_{0}+\mathsf{A}_{0}\right)\mathsf{x}_{0}=0,\label{eq:zeroth order quadratic}
+\end{equation}
+
+\end_inset
+
+which turns out to be equivalent to the SALT equation at threshold, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:threshold salt"
+
+\end_inset
+
+.
+ The solution is easily seen to be any linear combination of the threshold
+ modes (with the associated polarization), given in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vk definition"
+
+\end_inset
+
+.
+ Because these modes already solve the SALT equation, they necessarily have
+ 
+\begin_inset Formula $\sigma_{0}=0$
+\end_inset
+
+ (there are other solutions to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:zeroth order quadratic"
+
+\end_inset
+
+, corresponding to the below-threshold modes.
+ However, by definition, they are stable, so we are not concerned with them).
+ Note that there are now four linearly-independent eigenvectors, even though
+ we only have a double degeneracy in the threshold modes.
+ This is because we have separated the problem into real and imginary parts,
+ and this separation will become signifcant at higher orders in 
+\begin_inset Formula $\sqrt{d}$
+\end_inset
+
+, when the non-analyticity appears in the equations.
+\end_layout
+
+\begin_layout Standard
+Inserting these results into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic eigenproblem"
+
+\end_inset
+
+ at order 
+\begin_inset Formula $\sqrt{d}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+(\mathsf{B}_{0}\sigma_{1/2}+\mathsf{A}_{1/2})\sum b_{k}\mathsf{v}_{k}+\mathsf{A}_{0}\mathsf{x}_{1/2}=0.\label{eq:half order quadratic}
+\end{equation}
+
+\end_inset
+
+We now define the vectors
+\begin_inset Formula 
+\[
+\mathsf{w}_{j}=\left(\begin{array}{c}
+\Re\vec{e}_{j}\\
+-\Im\vec{e}_{j}\\
+\omega_{\mathrm{t}}^{2}\Re\left(\vec{e}_{j}\gamma_{\mathrm{t}}\right)/\gamma_{\perp}\\
+-\omega_{\mathrm{t}}^{2}\Im\left(\vec{e}_{j}\gamma_{\mathrm{t}}\right)/\gamma_{\perp}\\
+0
+\end{array}\right).
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{e}_{k}$
+\end_inset
+
+ forms the four-component complex basis defined in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vk definition"
+
+\end_inset
+
+.
+ It is straightforward to show that 
+\begin_inset Formula $\mathsf{A}_{0}^{T}\mathsf{w}_{j}=0$
+\end_inset
+
+.
+ Additionally, due to nonzero pattern of 
+\begin_inset Formula $\mathsf{A}_{1/2}$
+\end_inset
+
+, it is easy to see that 
+\begin_inset Formula $\mathsf{A}_{1/2}\mathsf{v}_{k}$
+\end_inset
+
+ has all zero elements except the last, and hence 
+\begin_inset Formula $\mathsf{w}_{j}^{T}\mathsf{A}_{1/2}\mathsf{v}_{k}=0$
+\end_inset
+
+.
+ Acting on Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:half order quadratic"
+
+\end_inset
+
+ with 
+\begin_inset Formula $\mathsf{w}_{j}^{T}$
+\end_inset
+
+, we then obtain 
+\begin_inset Formula $\sigma_{1/2}\sum\left(\mathsf{w}_{j}^{T}\mathsf{B}_{0}\mathsf{v}_{k}\right)b_{k}=0$
+\end_inset
+
+.
+ From the definition of 
+\begin_inset Formula $\mathsf{B}_{0}$
+\end_inset
+
+, there is no reason why the matrix with elements 
+\begin_inset Formula $\mathsf{w}_{j}^{T}\mathsf{B}_{0}\mathsf{v}_{k}$
+\end_inset
+
+ would be singular.
+ Hence, we conclude that 
+\begin_inset Formula $\sigma_{1/2}=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Next, we compute 
+\begin_inset Formula $\mathsf{A}_{1/2}\mathsf{v}_{k}$
+\end_inset
+
+ by direct evaluation.
+ Due to the nonzero structures, we see that the only nonzero element of
+ 
+\begin_inset Formula $\mathsf{A}_{1/2}\mathsf{v}_{k}$
+\end_inset
+
+ is the last, and we define this last element as 
+\begin_inset Formula $g_{k}$
+\end_inset
+
+, where
+\begin_inset Formula 
+\begin{align}
+g_{k}\sqrt{d} & =-\Im(\vec{P})\cdot\Re(\vec{e}_{k})+\Re(\vec{P})\cdot\Im(\vec{e}_{k})+D_{\mathrm{t}}\left[\Im(\vec{E})\cdot\Re(\gamma_{\mathrm{t}}\vec{e}_{k})-\Re(\vec{E})\cdot\Im(\gamma_{\mathrm{t}}\vec{e}_{k})\right]\nonumber \\
+ & =-\Im\left(\vec{e}_{k}^{\star}\cdot\vec{P}\right)-D_{\mathrm{t}}\Im\left[\vec{E}^{\star}\cdot\gamma_{\mathrm{t}}\vec{e}_{k}\right]\nonumber \\
+ & =-2D_{\mathrm{t}}\Im\gamma_{\mathrm{t}}\Re(\vec{e}_{k}^{\star}\cdot\vec{E})\label{eq:gk}\\
+ & =2D_{\mathrm{t}}\left|\gamma_{\mathrm{t}}\right|\sqrt{\gamma_{\parallel}d}\Re\left[\vec{e}_{k}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].\nonumber 
+\end{align}
+
+\end_inset
+
+Inserting the result 
+\begin_inset Formula $\sigma_{1/2}=0$
+\end_inset
+
+ into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:half order quadratic"
+
+\end_inset
+
+, we obtain
+\begin_inset Formula 
+\[
+\mathsf{A}_{0}\mathsf{x}_{1/2}=-\mathsf{A}_{1/2}\sum b_{k}\mathsf{v}_{k}=\left(\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+-\sum b_{k}g_{k}
+\end{array}\right).
+\]
+
+\end_inset
+
+The vector 
+\begin_inset Formula $\mathsf{x}_{1/2}$
+\end_inset
+
+ must also have this same nonzero pattern, because if it had any nonzero
+ elements in the first four, they must be annihilated by 
+\begin_inset Formula $\mathsf{A}_{0}$
+\end_inset
+
+ and hence must be some linear combination of 
+\begin_inset Formula $\mathsf{v}_{k}$
+\end_inset
+
+ (which is already accounted for in 
+\begin_inset Formula $\mathsf{x}_{0}$
+\end_inset
+
+ and would be redundant).
+ Hence, we immediately conclude by inspection of 
+\begin_inset Formula $\mathsf{A}_{0}$
+\end_inset
+
+ that
+\begin_inset Formula 
+\[
+\mathsf{x}_{1/2}=\left(\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+-\gamma_{\parallel}^{-1}\sum b_{k}g_{k}
+\end{array}\right).
+\]
+
+\end_inset
+
+At the next order, 
+\begin_inset Formula $\mathcal{O}(d)$
+\end_inset
+
+, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic eigenproblem"
+
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+(\mathsf{B}_{0}\sigma_{1}+\mathsf{A}_{1})\sum b_{k}\mathsf{v}_{k}+\mathsf{A}_{1/2}\mathsf{x}_{1/2}+\mathsf{A}_{0}\mathsf{x}_{1}=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Using the form 
 \begin_inset Formula $\left|u(t)\right\rangle =\left|v\right\rangle e^{\sigma t}+cc$
 \end_inset
@@ -6694,8 +7001,8 @@ where
 \begin_inset Formula 
 \[
 A_{0}=\left(\begin{array}{ccccc}
-\nabla^{2}+\varepsilon_{R}\omega_{0}^{2} & -\varepsilon_{I}\omega^{2} & \omega_{0}^{2} & 0 & 0\\
-\varepsilon_{I}\omega^{2} & \nabla^{2}+\varepsilon_{R}\omega_{0}^{2} & 0 & \omega_{0}^{2} & 0\\
+\nabla^{2}+\varepsilon_{\mathrm{R}}\omega_{0}^{2} & -\varepsilon_{\mathrm{I}}\omega^{2} & \omega_{0}^{2} & 0 & 0\\
+\varepsilon_{\mathrm{I}}\omega^{2} & \nabla^{2}+\varepsilon_{\mathrm{R}}\omega_{0}^{2} & 0 & \omega_{0}^{2} & 0\\
 \gamma_{\perp}D & 0 & \omega_{a}-\omega_{0} & \gamma_{\perp} & 0\\
 0 & \gamma_{\perp}D & -\gamma_{\perp} & \omega_{a}-\omega_{0} & 0\\
 0 & 0 & 0 & 0 & \gamma_{\parallel}
@@ -6769,9 +7076,9 @@ where
 A_{1/2}\sqrt{d}=\left(\begin{array}{ccccc}
 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0\\
-0 & 0 & 0 & 0 & \gamma_{\perp}\mathbf{e}_{R}\\
-0 & 0 & 0 & 0 & \gamma_{\perp}\mathbf{e}_{I}\\
--\mathbf{p}_{I} & \mathbf{p}_{R} & \mathbf{e}_{I} & -\mathbf{e}_{R} & 0
+0 & 0 & 0 & 0 & \gamma_{\perp}\mathbf{e}_{\mathrm{R}}\\
+0 & 0 & 0 & 0 & \gamma_{\perp}\mathbf{e}_{\mathrm{I}}\\
+-\mathbf{p}_{\mathrm{I}} & \mathbf{p}_{\mathrm{R}} & \mathbf{e}_{\mathrm{I}} & -\mathbf{e}_{\mathrm{R}} & 0
 \end{array}\right),
 \]
 

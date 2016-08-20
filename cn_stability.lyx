@@ -604,7 +604,7 @@ In general, the matrix is nonsingular, so we conclude that
 ), which is
 \begin_inset Formula 
 \begin{align}
-g_{1\pm}\sqrt{d} & =\left(-\Im\vec{P}\cdot\Re\vec{e}_{k}+\Re\vec{P}\cdot\Im\vec{e}_{k}\right)/+D_{\mathrm{t}}\left[\Im\vec{E}\cdot\Re(\gamma_{\mathrm{t}}\vec{e}_{k})-\Re\vec{E}\cdot\Im(\gamma_{\mathrm{t}}\vec{e}_{k})\right]\nonumber \\
+g_{1\pm}\sqrt{d} & =\left(-\Im\vec{P}\cdot\Re\vec{e}_{k}+\Re\vec{P}\cdot\Im\vec{e}_{k}\right)+D_{\mathrm{t}}\left[\Im\vec{E}\cdot\Re(\gamma_{\mathrm{t}}\vec{e}_{k})-\Re\vec{E}\cdot\Im(\gamma_{\mathrm{t}}\vec{e}_{k})\right]\nonumber \\
  & =-\Im\left(\vec{e}_{k}^{\star}\cdot\vec{P}\right)-D_{\mathrm{t}}\Im\left[\vec{E}^{\star}\cdot\gamma_{\mathrm{t}}\vec{e}_{k}\right]\nonumber \\
  & =-2D_{\mathrm{t}}\Im\gamma_{\mathrm{t}}\Re(\vec{e}_{k}^{\star}\cdot\vec{E})\label{eq:gk}\\
  & =2D_{\mathrm{t}}\left|\gamma_{\mathrm{t}}\right|\sqrt{\gamma_{\parallel}d}\Re\left[\vec{e}_{k}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].\nonumber 
