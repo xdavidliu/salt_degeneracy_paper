@@ -1729,8 +1729,14 @@ reference "eq:single-mode-salt"
 \begin_inset Formula $\mathbf{E}_{2}$
 \end_inset
 
- (as performed in detail in Appendix ???), we obtain the pair of nonlinear
- equations for 
+ (as performed in detail in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix allowed lasing modes"
+
+\end_inset
+
+), we obtain the pair of nonlinear equations for 
 \begin_inset Formula $a_{1,2}$
 \end_inset
 
@@ -1915,7 +1921,14 @@ in the plane of the
 \end_inset
 
  and exploiting the symmetry properties of this basis, we see (as shown
- in detail in Appendix ???) that Eq.
+ in detail in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix allowed lasing modes"
+
+\end_inset
+
+) that Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1932,8 +1945,14 @@ reference "eq:a eigenproblem"
 
 \end_inset
 
-where the coefficients (listed in Appendix ???) are known complex quantities
- obtained by solving the linear (in 
+where the coefficients (listed in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix allowed lasing modes"
+
+\end_inset
+
+) are known complex quantities obtained by solving the linear (in 
 \begin_inset Formula $\mathbf{E}$
 \end_inset
 
@@ -1946,8 +1965,14 @@ reference "eq:reduced a plus minus"
 
 \end_inset
 
- can be solved in closed form (as performed in Appendix ???), and yields
- only a few solutions.
+ can be solved in closed form (as performed in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix allowed lasing modes"
+
+\end_inset
+
+), and yields only a few solutions.
  First, there are the purely-circulating modes, given by
 \begin_inset Formula 
 \begin{align}
@@ -1970,8 +1995,14 @@ reference "eq:reduced a plus minus"
 standing 
 \emph default
 modes, as to be expected, and it turns out their form depends (as explained
- in Appendix ???) crucially on whether the irrep of the degenerate pair
- satisfies 
+ in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix allowed lasing modes"
+
+\end_inset
+
+) crucially on whether the irrep of the degenerate pair satisfies 
 \begin_inset Formula $n=4\ell$
 \end_inset
 
@@ -2033,7 +2064,14 @@ reference "eq:single-mode-salt"
 \begin_inset Formula $\theta$
 \end_inset
 
-, as shown in Appendix ???).
+, as shown in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix allowed lasing modes"
+
+\end_inset
+
+).
  On the other hand, for the case of 
 \begin_inset Formula $n=4\ell$
 \end_inset
@@ -2408,7 +2446,14 @@ reference "eq:quadratic eigenproblem"
 \begin_inset Formula $\sigma$
 \end_inset
 
- is found, as explained in detail in Appendix ???.
+ is found, as explained in detail in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix stability calculations"
+
+\end_inset
+
+.
  At zeroth order, the solutions are
 \begin_inset Formula 
 \begin{align}
@@ -2459,7 +2504,14 @@ reference "eq:threshold salt"
 \end_inset
 
 ).
- It is shown in Appendix ??? that the eigenvalue at the next order, 
+ It is shown in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix stability calculations"
+
+\end_inset
+
+ that the eigenvalue at the next order, 
 \begin_inset Formula $\sigma_{1/2}$
 \end_inset
 
@@ -2557,7 +2609,14 @@ reference "eq:zeroth order"
 
 , due to the symmetry properties which greatly simplify the calculation.
  Here, we present the results, leaving the detailed derivation to Appendix
- ???.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix stability calculations"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2619,7 +2678,14 @@ where
 \begin_inset Formula $C_{n}$
 \end_inset
 
- can be found in Appendix ???.
+ can be found in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix stability calculations"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2767,7 +2833,14 @@ where
  zero.
  This zero eigenvalue turns out not to be robust to small perturbations
  in the geometry, as discussed further in Sec.
- ???.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix stability calculations"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5506,10 +5579,31 @@ Concluding Remarks
 
 \begin_layout Standard
 To do...
+ in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: degeneracy in Cn"
+
+\end_inset
+
+.
+ 
 \end_layout
 
-\begin_layout Section*
-Appendix A
+\begin_layout Section
+\start_of_appendix
+Degeneracy in 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: degeneracy in Cn"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5839,8 +5933,15 @@ If all
  
 \end_layout
 
-\begin_layout Section*
-Appendix B
+\begin_layout Section
+Allowed lasing modes
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: appendix allowed lasing modes"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6511,8 +6612,15 @@ reference "eq:omega1 constraint"
 .
 \end_layout
 
-\begin_layout Section*
-Appendix C
+\begin_layout Section
+Stability calculations
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: appendix stability calculations"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6925,7 +7033,14 @@ and
 \end_inset
 
  By the same symmetry arguments used to evaluate the integrals in Appendix
- ???B, it is straightforward to show that 
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix allowed lasing modes"
+
+\end_inset
+
+, it is straightforward to show that 
 \begin_inset Formula 
 \[
 \frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}=\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}H\left(\begin{array}{cc}
@@ -7294,7 +7409,14 @@ reference "eq:final linear eigenvalue problem"
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
-, as discussed in Appendix ???B.
+, as discussed in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix allowed lasing modes"
+
+\end_inset
+
+.
  In this case, all 
 \begin_inset Formula $K_{\pm}=0$
 \end_inset
@@ -7507,6 +7629,92 @@ The final two eigenvalues are
 \sigma_{1} & =-|a|^{2}\Im\left(\frac{J+3K}{H}\right)\\
  & \ldots\pm|a|^{2}\sqrt{\Im\left(\frac{J-K}{H}\right)^{2}-8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J+K}{H}\right)}.
 \end{align*}
+
+\end_inset
+
+The eigenvectors can be written down in closed form, but are tedious and
+ not illuminating.
+ For the case of a 
+\begin_inset Formula $\mathbf{E}_{+}\pm i\mathbf{E}_{-}$
+\end_inset
+
+ lasing mode (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:E+ + i E- lasing"
+
+\end_inset
+
+, the matrix in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:final linear eigenvalue problem"
+
+\end_inset
+
+ is 
+\begin_inset Formula $2|a|^{2}\times$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccc}
+\Im\left(\frac{I}{H}\right) & \pm\Re\left(\frac{K}{H}\right) & \Re\left(\frac{K}{H}\right) & \pm\Im\left(\frac{I+J-K}{H}\right)\\
+\pm\Re\left(\frac{I+J-K}{H}\right) & \Im\left(\frac{K}{H}\right) & \pm\Im\left(\frac{K}{H}\right) & \Re\left(\frac{I}{H}\right)\\
+-\Re\left(\frac{I}{H}\right) & \pm\Im\left(\frac{K}{H}\right) & \Im\left(\frac{K}{H}\right) & \mp\Re\left(\frac{I+J-K}{H}\right)\\
+\pm\Im\left(\frac{I+J-K}{H}\right) & -\Re\left(\frac{K}{H}\right) & \mp\Re\left(\frac{K}{H}\right) & \Im\left(\frac{I}{H}\right)
+\end{array}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $|a|^{2}=\frac{\omega_{1}H+G_{D}}{2I+J-K}$
+\end_inset
+
+, and the 
+\begin_inset Formula $\pm$
+\end_inset
+
+ signs correspond to 
+\begin_inset Formula $z=\pm i$
+\end_inset
+
+.
+ There is an eigenpair with zero eigenvalue:
+\begin_inset Formula 
+\[
+\sigma_{1}=0,\;\mathsf{b}=\left(\begin{array}{c}
+0\\
+1\\
+\mp1\\
+0
+\end{array}\right)
+\]
+
+\end_inset
+
+and another eigenpair
+\begin_inset Formula 
+\[
+\sigma_{1}=2|a|^{2}\Im\left(\frac{2I+J-K}{H}\right),\;\mathsf{b}=\left(\begin{array}{c}
+\pm1\\
+0\\
+0\\
+1
+\end{array}\right).
+\]
+
+\end_inset
+
+Finally, the remaining two eigenvalues are
+\begin_inset Formula 
+\[
+\sigma_{1}=|a|^{2}\left[\Im\left(\frac{3K-J}{H}\right)\pm\sqrt{\Im\left(\frac{J+K}{H}\right)^{2}+8\Re\left(\frac{J-K}{H}\right)\Re\left(\frac{K}{H}\right)}\right].
+\]
 
 \end_inset
 
