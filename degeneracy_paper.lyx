@@ -6216,11 +6216,11 @@ For the intensity term, we have
 
  symmetry, so by symmetry arguments, the only surviving integrals are
 \begin_inset Formula 
-\begin{align*}
-I_{\pm} & =\int D_{\mathrm{t}}\left|\vec{E}_{\pm}\right|^{2}\vec{E}_{+}\cdot\vec{E}_{-}\\
-J_{\pm} & =\int D_{\mathrm{t}}(\vec{E}_{\pm}^{\star}\cdot\vec{E}_{\mp})\vec{E}_{\pm}\cdot\vec{E}_{\pm}\\
-K_{\pm} & =\int D_{\mathrm{t}}(\vec{E}_{\mp}^{\star}\cdot\vec{E}_{\pm})\vec{E}_{\pm}\cdot\vec{E}_{\pm}.
-\end{align*}
+\begin{align}
+I_{\pm} & =\int D_{\mathrm{t}}\left|\vec{E}_{\pm}\right|^{2}\vec{E}_{+}\cdot\vec{E}_{-}\nonumber \\
+J_{\pm} & =\int D_{\mathrm{t}}(\vec{E}_{\pm}^{\star}\cdot\vec{E}_{\mp})\vec{E}_{\pm}\cdot\vec{E}_{\pm}\label{eq:I J K definitions}\\
+K_{\pm} & =\int D_{\mathrm{t}}(\vec{E}_{\mp}^{\star}\cdot\vec{E}_{\pm})\vec{E}_{\pm}\cdot\vec{E}_{\pm}.\nonumber 
+\end{align}
 
 \end_inset
 
@@ -7623,18 +7623,21 @@ A second eigenpair is
 
 \end_inset
 
-The final two eigenvalues are
+Empirically, we have found that this eigenvalue is always stable.
+ The final two eigenvalues are
 \begin_inset Formula 
-\begin{align*}
-\sigma_{1} & =-|a|^{2}\Im\left(\frac{J+3K}{H}\right)\\
- & \ldots\pm|a|^{2}\sqrt{\Im\left(\frac{J-K}{H}\right)^{2}-8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J+K}{H}\right)}.
-\end{align*}
+\begin{align}
+\sigma_{1} & =-|a|^{2}\Im\left(\frac{J+3K}{H}\right)\nonumber \\
+ & \ldots\pm|a|^{2}\sqrt{\Im\left(\frac{J-K}{H}\right)^{2}-8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J+K}{H}\right)}\label{eq:z = 1 double eigenvalues}
+\end{align}
 
 \end_inset
 
-The eigenvectors can be written down in closed form, but are tedious and
- not illuminating.
- For the case of a 
+(the eigenvectors can be written down in closed form, but are tedious and
+ not illuminating).
+ Empirically, we have found that at least one of these two eigenvalues are
+ unstable (except for an isolated case, that we explain below).
+ Next, for the case of a 
 \begin_inset Formula $\mathbf{E}_{+}\pm i\mathbf{E}_{-}$
 \end_inset
 
@@ -7710,16 +7713,169 @@ and another eigenpair
 
 \end_inset
 
-Finally, the remaining two eigenvalues are
+Empirically, we have found that this eigenvalue is always stable.
+ Finally, the remaining two eigenvalues are
+\begin_inset Formula 
+\begin{align}
+\sigma_{1} & =|a|^{2}\Im\left(\frac{3K-J}{H}\right)\nonumber \\
+ & \ldots\pm|a|^{2}\sqrt{\Im\left(\frac{J+K}{H}\right)^{2}+8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J-K}{H}\right)}\label{eq:z = i double eigenvalues}
+\end{align}
+
+\end_inset
+
+(the eigenvectors can be written down in closed form, but are tedious and
+ not illuminating).
+ Empirically, we have found that at least one of these two eigenvalues are
+ unstable, except for an isolated case that we will now explain.
+\end_layout
+
+\begin_layout Standard
+We note that for the previous two cases, where 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+, it is possible to choose the shape of the gain profile 
+\begin_inset Formula $D_{\mathrm{t}}(\mathbf{x})$
+\end_inset
+
+ such that 
+\begin_inset Formula $J=\pm K$
+\end_inset
+
+, in which case the 
+\emph on
+one 
+\emph default
+of the two pairs 
+\begin_inset Formula $\mathbf{E}_{+}\pm\mathbf{E}_{-}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{+}\pm i\mathbf{E}_{-}$
+\end_inset
+
+ actually becomes 
+\emph on
+stable
+\emph default
+.
+ To see this, we consider a 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ geometry with 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+.
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:chiral definition"
+
+\end_inset
+
+ then becomes
 \begin_inset Formula 
 \[
-\sigma_{1}=|a|^{2}\left[\Im\left(\frac{3K-J}{H}\right)\pm\sqrt{\Im\left(\frac{J+K}{H}\right)^{2}+8\Re\left(\frac{J-K}{H}\right)\Re\left(\frac{K}{H}\right)}\right].
+\mathbf{E}_{\pm}=\sum_{b=1}^{n}(\pm i)^{b}R_{b/n}\mathbf{E}_{\mathrm{e}}.
 \]
 
 \end_inset
 
-The eigenvectors can be written down in closed form, but are tedious and
- not illuminating.
+The specific choice of geometry requires that we place radially-symmetric
+ lines of gain on the faces or diagonals of the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ geometry, which preserves the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry.
+ We can write this as
+\begin_inset Formula 
+\[
+D_{\mathrm{t}}(\mathbf{x})=\sum_{a=1}^{n}G(r)\delta\left(\theta-\theta_{a}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta_{a}=\frac{2\pi a}{n}$
+\end_inset
+
+ for the faces, and 
+\begin_inset Formula $\theta_{a}=(2a+1)\frac{\pi}{n}$
+\end_inset
+
+ for the diagonals.
+ For a TM geometry, we then have the overlap integrals (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:I J K definitions"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{align*}
+J & =\sum_{a=1}^{n}\int rdrG(r)\left|E_{+}\left(r,\theta_{a}\right)\right|^{2}E_{-}(r,\theta_{a})E_{+}(r,\theta_{a})\\
+K & =\sum_{a=1}^{n}\int rdrG(r)E_{+}(r,\theta_{a})^{\star}E_{-}(r,\theta_{a})^{3}.
+\end{align*}
+
+\end_inset
+
+It can be shown that depending on the choice of 
+\begin_inset Formula $\theta_{a}$
+\end_inset
+
+ being the faces or diagonals, we will have either 
+\begin_inset Formula $K=J$
+\end_inset
+
+ or 
+\begin_inset Formula $K=-J$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $K=J$
+\end_inset
+
+, the eigenvalues in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:z = i double eigenvalues"
+
+\end_inset
+
+; of the 
+\begin_inset Formula $\mathbf{E}_{+}\pm i\mathbf{E}_{-}$
+\end_inset
+
+ standing modes, become 0 and a stable eigenvalue.
+ For 
+\begin_inset Formula $K=-J$
+\end_inset
+
+, the same happens for those in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:z = 1 double eigenvalues"
+
+\end_inset
+
+; of the 
+\begin_inset Formula $\mathbf{E}_{+}\pm\mathbf{E}_{-}$
+\end_inset
+
+ standing modes.
+ 
 \end_layout
 
 \begin_layout Standard
