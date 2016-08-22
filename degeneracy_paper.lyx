@@ -221,16 +221,9 @@ Introduction
 
 \begin_layout Standard
 Many lasers are formed from high-symmetry microcavity geometries that have
- degenerate resonant modes, most famously ring and disc resonators (Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:cylinder_modes"
-
-\end_inset
-
-) in which the clockwise and counterclockwise circulating modes are degenerate
- (have the same complex resonant frequency).
+ degenerate resonant modes, most famously ring and disc resonators in which
+ the clockwise and counterclockwise circulating modes are degenerate (have
+ the same complex resonant frequency).
  In a linear system, any superposition of these solutions also satisfies
  Maxwell's equations, but above-threshold lasers have nonlinear gain that
  allows only certain superpositions; it is well known that the only stable
@@ -413,9 +406,16 @@ key "ref-rotter_degeneracy"
 \begin_inset space ~
 \end_inset
 
-XXX) was applied numerically to the Maxwell--Bloch equations of lasing in
- order to check whether the steady state was stable, and stability of the
- solution was also analyzed when the degeneracy was broken by a perturbation.
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-of-circulating"
+
+\end_inset
+
+) was applied numerically to the Maxwell--Bloch equations of lasing in order
+ to check whether the steady state was stable, and stability of the solution
+ was also analyzed when the degeneracy was broken by a perturbation.
  This generalized many earlier works on ring-laser solutions and perturbations
  thereof
 \begin_inset space ~
@@ -496,8 +496,14 @@ key "dichroism"
 
 \end_inset
 
-, and Appendix A.) Second, we develop a numerical solution technique for
- 
+, and Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix allowed lasing modes"
+
+\end_inset
+
+) Second, we develop a numerical solution technique for 
 \emph on
 far above
 \emph default
@@ -698,9 +704,9 @@ key "ge_steady-state_2010,tureci_self-consistent_2006,tureci_ab_2009"
 
 :
 \begin_inset Formula 
-\[
-\nabla\times\nabla\times\mathbf{E}_{\mu}=\omega_{\mu}^{2}\left(\varepsilon+\gamma_{\mu}D\right)\mathbf{E}_{\mu},
-\]
+\begin{equation}
+\nabla\times\nabla\times\mathbf{E}_{\mu}=\omega_{\mu}^{2}\left(\varepsilon+\gamma_{\mu}D\right)\mathbf{E}_{\mu},\label{eq:salt general}
+\end{equation}
 
 \end_inset
 
@@ -1682,8 +1688,15 @@ where
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
-, as discuss in Appendix A), we then expect the lasing mode slightly above
- threshold to be of the form
+, as discussed in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix allowed lasing modes"
+
+\end_inset
+
+), we then expect the lasing mode slightly above threshold to be of the
+ form
 \begin_inset Formula 
 \begin{align}
 \mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{1}\right)+d^{3/2}\delta\mathbf{E},\nonumber \\
@@ -2913,51 +2926,8 @@ name "sec:threshold_perturbation_Examples"
 \begin_layout Standard
 Now, we illustrate the ideas of threshold perturbation theory with an example
  of a symmetric geometry with degeneracies: a dielectric square.
- We first present the threshold modes (solutions of a linear problem at
- threshold) which are exactly degenerate.
- Then, we compute the matrix elements 
-\begin_inset Formula $A_{\mu\nu}$
-\end_inset
-
-, 
-\begin_inset Formula $B_{\mu\nu}$
-\end_inset
-
-, and 
-\begin_inset Formula $C_{\rho\eta\mu\nu}$
-\end_inset
-
- in the perturbation theory.
- Next, we directly construct the circulating modes predicted in Sec.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Stability-of-circulating"
-
-\end_inset
-
-.
- We compare the results obtained by perturbation theory to numerical solution
- of the SALT equation.
-\end_layout
-
-\begin_layout Standard
-To see an example in which the interference term of the two-mode SALT equation
- has a very noticeable effect, we look at a pair of low-
-\begin_inset Formula $Q$
-\end_inset
-
- modes of a homogeneous dielectric square (
-\begin_inset Formula $Q$
-\end_inset
-
- is defined as the ratio 
-\begin_inset Formula $\mathrm{Re}\omega^{\prime}/\mathrm{Im}\omega^{\prime}$
-\end_inset
-
- of the cold cavity at zero pump strength).
- Unlike the metal square, the equation for the electric field is not separable
- in the 
+ Unlike in a metal square (with Dirichlet boundary conditions), the equation
+ for the electric field is not separable in the 
 \begin_inset Formula $x$
 \end_inset
 
@@ -3086,15 +3056,7 @@ name "fig:lowQ_modes"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-The stable linear combination of 
-\begin_inset Formula $\mathbf{E}\propto\mathbf{E}_{1}+i\mathbf{E}_{2}$
-\end_inset
-
- is the circulating mode predicted by Sec.
+The stable linear combination is the circulating mode predicted by Sec.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3103,29 +3065,7 @@ reference "sub:Stability-of-circulating"
 \end_inset
 
 .
- Although the field is neither real nor separable, the relative phase is
- still 
-\begin_inset Formula $i$
-\end_inset
-
- because of the four-fold rotation symmetry.
- From the fact that 
-\begin_inset Formula $\mathbf{E}_{2}=R_{4}\mathbf{E}_{1}$
-\end_inset
-
- (where 
-\begin_inset Formula $R_{4}$
-\end_inset
-
- is a four-fold rotation), we see that
-\begin_inset Formula 
-\[
-\mathbf{E}_{1}+i\mathbf{E}_{2}\propto\left(1+iR_{4}-R_{4}^{2}-iR_{4}^{3}\right)\mathbf{E}_{1},
-\]
-
-\end_inset
-
-and this intensity pattern is chiral (with 
+ This intensity pattern is chiral (with 
 \begin_inset Formula $C_{4}$
 \end_inset
 
@@ -3145,18 +3085,9 @@ reference "fig:lowQ_chirality"
 \end_inset
 
  shows the intensity pattern for the result without interference compared
- to the correct solution.
- Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:counterclockwise"
-
-\end_inset
-
- shows the intensity pattern of the degenerate partner.
+ to the correct solution and the intensity pattern of the degenerate partner.
  Since this degeneracy does not come from geometric symmetry along, there
- is no clear symmetry operation that takes the lasing mode (right panel
+ is no clear symmetry operation that takes the lasing mode (center panel
  of Fig.
  
 \begin_inset CommandInset ref
@@ -3165,15 +3096,15 @@ reference "fig:lowQ_chirality"
 
 \end_inset
 
-) to its degenerate partner (Fig.
- 
+) to its degenerate partner (right panel), but there is still an exact degenerac
+y as explained in Appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:counterclockwise"
+reference "sec: appendix allowed lasing modes"
 
 \end_inset
 
-), but there is still an exact degeneracy as explained in appendix A.
+.
 \begin_inset Float figure
 wide false
 sideways false
@@ -3196,19 +3127,31 @@ centerline{
 \begin_inset Graphics
 	filename lowQ_square/lowQsquare_wrong.png
 	lyxscale 20
-	scale 31
+	scale 22
 
 \end_inset
 
 
-\begin_inset Formula $\quad$
+\begin_inset Formula $\,$
 \end_inset
 
 
 \begin_inset Graphics
 	filename lowQ_square/lowQsquare_intensity.png
 	lyxscale 20
-	scale 31
+	scale 22
+
+\end_inset
+
+
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset Graphics
+	filename lowQ_square/counter.png
+	lyxscale 20
+	scale 22
 
 \end_inset
 
@@ -3227,18 +3170,30 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The incorrect (left) intensity pattern and correct (right) intensity pattern
+The incorrect (left) intensity pattern, correct (center) intensity pattern
  for the pair of low-
 \begin_inset Formula $Q$
 \end_inset
 
- dielectric square modes, slightly above threshold.
+ dielectric square modes, slightly above threshold, and degenerate passive
+ mode of opposite chirality (right) of low-
+\begin_inset Formula $Q$
+\end_inset
+
+ dielectric square for lasing very high above threshold (
+\begin_inset Formula $D_{0}=100\Dt)$
+\end_inset
+
+.
  The left intensity pattern was obtained by solving two-mode SALT without
- any interference effects, while the right pattern was obtained by constructing
+ any interference effects, while the center pattern was obtained by constructing
  the stable linear combination predicted by symmetry and perturbation theory
  and then solving single-mode SALT.
  The correct pattern clearly has a chirality, which the incorrect pattern
  lacks.
+ The profile on the right is not simply a mirror flip of the lasing intensity
+ pattern in the center, since there is no symmetry that connects the two
+ modes.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -3257,83 +3212,9 @@ name "fig:lowQ_chirality"
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centerline{
 \end_layout
 
-\end_inset
-
-
-\begin_inset Graphics
-	filename lowQ_square/counter.png
-	lyxscale 20
-	scale 31
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Degenerate passive mode of opposite chirality of low-
-\begin_inset Formula $Q$
-\end_inset
-
- dielectric square for lasing very high above threshold (
-\begin_inset Formula $D_{0}=100\Dt)$
-\end_inset
-
-.
- The profile is not simply a mirror flip of the lasing intensity pattern
- in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:lowQ_chirality"
-
-\end_inset
-
-, since there is no symmetry that connects the two modes.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:counterclockwise"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
+\begin_layout Section
 Symmetries broken by discretization
 \begin_inset CommandInset label
 LatexCommand label
@@ -3395,8 +3276,16 @@ ncies.
 \end_layout
 
 \begin_layout Standard
-A good example is the uniform cylinder projected onto a square grid, which
- has 
+Examples of the different cases can be seen in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:overview"
+
+\end_inset
+
+.
+ The uniform cylinder projected onto a square grid has 
 \begin_inset Formula $C_{4\mathrm{v}}$
 \end_inset
 
@@ -3404,7 +3293,8 @@ A good example is the uniform cylinder projected onto a square grid, which
 \begin_inset Formula $C_{\infty\mathrm{v}}$
 \end_inset
 
- symmetry of the cylinder (another example, as we will see later in Sec.
+ symmetry of the original cylinder (another example, as we will see later
+ in Sec.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3430,7 +3320,7 @@ reference "fig:phc_geometry"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:cylinder_modes"
+reference "fig:overview"
 
 \end_inset
 
@@ -3527,24 +3417,11 @@ Even-
 \end_inset
 
  has been plotted.
- The geometry and parameters are the same as in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:cylinder_modes"
-
-\end_inset
-
-, except with the gain shifted to 
-\begin_inset Formula $\omega_{a}=3.8$
-\end_inset
-
-, which is near the threshold frequency for the even-
+ Unlike in the odd-
 \begin_inset Formula $m$
 \end_inset
 
- modes.
- Unlike in the previous case, however, the discretized modes are 
+ case, however, the discretized modes are 
 \emph on
 not
 \emph default
@@ -3553,7 +3430,8 @@ not
 \end_inset
 
  rotations from each other.
- Consequently, there is an unphysical splitting of 
+ Consequently, there is an unphysical splitting, due to discretizoaion,
+ f 
 \begin_inset Formula $0.11\%$
 \end_inset
 
@@ -3741,10 +3619,7 @@ The basic idea is that we construct an artificial perturbation
 quadratic program
 \emph default
  with linear constraints which we obtain using perturbation theory.
-\end_layout
-
-\begin_layout Standard
-Not only does this uniquely (and cheaply) determine 
+ Not only does this uniquely (and cheaply) determine 
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
 
@@ -5337,24 +5212,22 @@ reference "sub:Forcing-the-degeneracy"
 
 \begin_layout Standard
 A general situation in which multimode-lasing is occuring can be described
- by the equations 
+ by Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:salt general"
+
+\end_inset
+
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ge_steady-state_2010,tureci_self-consistent_2006"
 
 \end_inset
 
-
-\begin_inset Formula 
-\begin{align}
-0 & =\left(\nabla\times\nabla\times-\omega_{\mu}^{2}\varepsilon_{\mu}\right)\mathbf{E}\label{eq:multimode_SALT}\\
-\varepsilon_{\mu} & \equiv\varepsilon_{c}+\Dt F\gamma(\omega_{\mu})H\nonumber \\
-H & \equiv\frac{1}{1+\sum\left|\mathbf{E}_{\nu}\right|^{2}},\nonumber 
-\end{align}
-
-\end_inset
-
-where there are 
+, where there are 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5376,19 +5249,12 @@ reference "sub:Stability-of-circulating"
 
 \end_inset
 
-) or non-degenerate modes [partners of 
+) or non-degenerate modes (partners of 
 \emph on
 real
 \emph default
- 1d irreps 
-\begin_inset Formula $D(k)$
-\end_inset
-
- without a corresponding complex-conjugate irrep 
-\begin_inset Formula $\bar{D}(k)$
-\end_inset
-
- of the opposite chirality], then each of the 
+ 1d irreps without a corresponding complex-conjugate irrep of the opposite
+ chirality), then each of the 
 \begin_inset Formula $\left|\mathbf{E}_{\nu}\right|^{2}$
 \end_inset
 
@@ -5451,8 +5317,14 @@ reference "sec:Threshold-perturbation-theory"
 \begin_inset Formula $C_{n}$
 \end_inset
 
- symmetry and Lorentz reciprocity, as explained in appendix A) still remains,
- as explained in Sec.
+ symmetry and Lorentz reciprocity, as explained in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix allowed lasing modes"
+
+\end_inset
+
+) still remains, as explained in Sec.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5521,14 +5393,14 @@ independently
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:multimode_SALT"
+reference "eq:salt general"
 
 \end_inset
 
- will become
+ will become todo
 \begin_inset Formula 
 \[
-\varepsilon_{\mu}=\varepsilon_{c}+\delta\varepsilon_{\mu}+\Dt F\gamma(\omega_{\mu})H.
+\varepsilon_{\mu}(\mathbf{x})=\varepsilon(\mathbf{x})+\delta\varepsilon_{\mu}(\mathbf{x})+\frac{D_{0}(\mathbf{x})\gamma(\omega_{\mu})}{1+\gamma_{\parallel}^{-1}\sum\left|\gamma_{\nu}\mathbf{E}_{\nu}\right|^{2}}.
 \]
 
 \end_inset
@@ -5579,15 +5451,6 @@ Concluding Remarks
 
 \begin_layout Standard
 To do...
- in Appendix 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec: degeneracy in Cn"
-
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Section
