@@ -152,7 +152,7 @@ centerline{
 
 
 \begin_inset Graphics
-	filename ../even_cylinder/evencos.png
+	filename /Users/davidliu/Desktop/salt_degeneracy_paper/cylinder/psicos.png
 	lyxscale 20
 	scale 20
 
@@ -160,7 +160,7 @@ centerline{
 
 
 \begin_inset Graphics
-	filename ../even_cylinder/evensin.png
+	filename /Users/davidliu/Desktop/salt_degeneracy_paper/cylinder/psisin.png
 	lyxscale 20
 	scale 20
 
@@ -224,7 +224,7 @@ centerline{
 
 \begin_inset Graphics
 	filename square.pdf
-	lyxscale 77
+	lyxscale 65
 	scale 26
 
 \end_inset
@@ -233,15 +233,19 @@ centerline{
 \begin_inset Graphics
 	filename ../lowQ_square/lowQsquare_psi0.png
 	lyxscale 20
-	scale 20
+	scale 23
 
+\end_inset
+
+
+\begin_inset Formula $\,$
 \end_inset
 
 
 \begin_inset Graphics
 	filename ../lowQ_square/lowQsquare_psi1.png
 	lyxscale 20
-	scale 20
+	scale 23
 
 \end_inset
 
@@ -253,7 +257,7 @@ status open
 
 
 \backslash
-tbox{-2.5}{0.65}{0.3}{
+tbox{-2.45}{0.65}{0.3}{
 \end_layout
 
 \end_inset
