@@ -2031,11 +2031,15 @@ where
 \begin_inset Formula $\ell$
 \end_inset
 
- is the order of the 2d irrep that 
+ is given by the 2d irrep that 
 \begin_inset Formula $\mathbf{E}_{\mathrm{e}}$
 \end_inset
 
- belongs to [which ranges from 1 to 
+ belongs to [
+\begin_inset Formula $\ell$
+\end_inset
+
+ ranges from 1 to 
 \begin_inset Formula $\mathrm{floor}(\frac{n-1}{2})$
 \end_inset
 
@@ -2043,27 +2047,15 @@ where
 \begin_inset Formula $R_{k/n}$
 \end_inset
 
- is a rotation of the vector function 
+ is a counterclockwise rotation of the vector field 
 \begin_inset Formula $\mathbf{E}_{\mathrm{e}}(\mathbf{x})$
 \end_inset
 
- (alternatively, we could have defined 
-\begin_inset Formula $\mathbf{E}_{\pm}$
-\end_inset
-
- in terms of rotations of 
-\begin_inset Formula $\mathbf{E}_{\mathrm{o}}$
-\end_inset
-
- as well)
-\series bold
- 
-\series default
-in the plane of the 
+ in the plane of the 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- symmetry by angle 
+ symmetry by 
 \begin_inset Formula $2\pi k/n$
 \end_inset
 
@@ -2071,12 +2063,30 @@ in the plane of the
 \begin_inset Formula $\ell$
 \end_inset
 
- is chosen to be any another integer, then it can be shown that 
+ is chosen to be the wrong integer, then 
 \begin_inset Formula $\mathbf{E}_{\pm}$
 \end_inset
 
- vanishes).
- It can be shown that with this definition, 
+ vanishes because Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:chiral definition"
+
+\end_inset
+
+ is a projection operator 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "inui_group,tinkham"
+
+\end_inset
+
+).
+ With this definition, 
 \begin_inset Formula $\mathbf{E}_{+}$
 \end_inset
 
@@ -2084,8 +2094,7 @@ in the plane of the
 \begin_inset Formula $\mathbf{E}_{-}$
 \end_inset
 
- are mirror flips of one another, and that they span the same two-dimensional
- manifold as 
+ are mirror flips of one another, and they span the same space as 
 \begin_inset Formula $\mathbf{E}_{\mathrm{e}}$
 \end_inset
 
@@ -2144,16 +2153,36 @@ reference "eq:a eigenproblem"
 
 \end_inset
 
- reduces to 
+ reduces to
 \begin_inset Formula 
-\begin{align}
-0 & =a_{\mp}\left(\omega_{1}H+G_{D}\right)-a_{\mp}\left|a_{\pm}\right|^{2}\left(I+J\right)\nonumber \\
- & \ldots-a_{\mp}\left|a_{\mp}\right|^{2}I-a_{\pm}^{2}a_{\mp}^{\star}K,\label{eq:reduced a plus minus}
-\end{align}
+\begin{multline}
+0=a_{\mp}\left(\omega_{1}H+G_{D}\right)-\\
+a_{\mp}\left|a_{\pm}\right|^{2}\left(I+J\right)-a_{\mp}\left|a_{\mp}\right|^{2}I-a_{\pm}^{2}a_{\mp}^{\star}K,\label{eq:reduced a plus minus}
+\end{multline}
 
 \end_inset
 
-where the coefficients (listed in Appendix
+where the coefficients 
+\begin_inset Formula $G_{D}$
+\end_inset
+
+, 
+\begin_inset Formula $H$
+\end_inset
+
+, 
+\begin_inset Formula $I$
+\end_inset
+
+, 
+\begin_inset Formula $J$
+\end_inset
+
+, and 
+\begin_inset Formula $K$
+\end_inset
+
+ are simple integrals of the threshold modes, given in closed form in Appendix
 \begin_inset space ~
 \end_inset
 
@@ -2164,11 +2193,7 @@ reference "sec: appendix allowed lasing modes"
 
 \end_inset
 
-) are known complex quantities obtained by solving the linear (in 
-\begin_inset Formula $\mathbf{E}$
-\end_inset
-
-) threshold problem.
+.
  Eq.
 \begin_inset space ~
 \end_inset
@@ -2192,7 +2217,7 @@ reference "sec: appendix allowed lasing modes"
 \end_inset
 
 ), and yields only a few solutions.
- First, there are the purely-circulating modes, given by
+ First, there are the purely circulating modes, given by
 \begin_inset Formula 
 \begin{align}
 \mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\frac{\left(\omega_{1}H+G_{D}\right)\gamma_{\parallel}d}{I}}\mathbf{E}_{\pm}\nonumber \\
@@ -2258,7 +2283,8 @@ where
 \begin_inset Formula $\theta$
 \end_inset
 
- is an arbitrary phase angle (during numeric solution of Eq.
+ is an arbitrary phase angle.
+ (During numeric solution of Eq.
 \begin_inset space ~
 \end_inset
 
@@ -2304,8 +2330,7 @@ reference "sec: appendix allowed lasing modes"
 
 \end_inset
 
-).
- On the other hand, for the case of 
+.) On the other hand, for the case of 
 \begin_inset Formula $n=4\ell$
 \end_inset
 
@@ -2366,9 +2391,9 @@ reference "eq:single-mode-salt"
 \end_inset
 
  system, we must test stability of each of these solutions.
- It turns out that this test can also be done analytically, using perturbation
- theory on the linearized Maxwell--Bloch equations, as we will present in
- the next section.
+ It turns out that this test can also be done mostly analytically, using
+ perturbation theory on the linearized Maxwell--Bloch equations, as we will
+ present in the next section.
 \end_layout
 
 \begin_layout Subsection
@@ -2398,8 +2423,7 @@ fixed-point
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- group have zero amplitude along certain planes or manifolds, most obviously
- along 
+ group have zero amplitude along certain lines, most obviously along 
 \begin_inset Formula $x=0$
 \end_inset
 
@@ -2572,8 +2596,20 @@ The goal of the stability analysis is to find the eigenvalues
 \end_inset
 
  is positive, then the lasing mode is unstable, while if all the eigenvalues
- have non-positive real parts, then the lasing mode is stable (up to some
- technical aspects about zero eigenvalues and structural stability).
+ have non-positive real parts, then the lasing mode is stable (with some
+ technical care for zero eigenvalues and structural stability, described
+ in Appendix
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix stability calculations"
+
+\end_inset
+
+).
  Ref.
  
 \begin_inset CommandInset citation
@@ -2675,7 +2711,7 @@ reference "eq:delta"
 
 \end_inset
 
-We inserting Eqs.
+We insert Eqs.
 \begin_inset space ~
 \end_inset
 
@@ -2704,7 +2740,7 @@ reference "eq:quadratic eigenproblem"
 
 \end_inset
 
- and solving order-by-order in 
+ and solve order-by-order in 
 \begin_inset Formula $\sqrt{d}$
 \end_inset
 
@@ -2724,7 +2760,39 @@ reference "sec: appendix stability calculations"
 \end_inset
 
 .
- At zeroth order, the solutions are
+ At zeroth order, Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic eigenproblem"
+
+\end_inset
+
+ is equivalent to the SALT equation at threshold (Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:threshold salt"
+
+\end_inset
+
+), and has two kinds of solutions.
+ First, there are the below threshold modes, which have 
+\begin_inset Formula $\Re(\sigma_{0})<0$
+\end_inset
+
+ and hence are stable.
+ Second, from the degenerate 
+\emph on
+threshold
+\emph default
+ modes, we obtain
 \begin_inset Formula 
 \begin{align}
 \sigma_{0} & =0\nonumber \\
@@ -2739,7 +2807,14 @@ where
 
  are arbitrary complex coefficients that will determined later at higher
  order (similarly to linear degenerate perturbation theory in quantum mechanics
- [ref Sakurai]), and the vectors 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sakurai"
+
+\end_inset
+
+), and the vectors 
 \begin_inset Formula $\mathsf{v}_{k}$
 \end_inset
 
@@ -2830,12 +2905,23 @@ Here, all quantities except
 \end_inset
 
  are known.
- By construction, it is easy to see that 
+ Because 
+\begin_inset Formula $\sigma_{0}=0$
+\end_inset
+
+, we have 
 \begin_inset Formula $\mathsf{A}_{0}\mathsf{v}_{k}=0$
 \end_inset
 
 .
  There are also left eigenvectors 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "strang_linear_algebra"
+
+\end_inset
+
+ 
 \begin_inset Formula $\mathsf{w}_{j}$
 \end_inset
 
@@ -2922,12 +3008,12 @@ reference "eq:circulating lasing"
 
 , the four eigenvalues are
 \begin_inset Formula 
-\begin{align*}
-\sigma_{1} & =0\\
-\sigma_{1} & =2\Im\left(\frac{I}{H}\right)\left|a\right|^{2}\\
-\sigma_{1} & =\left(\Im\left(\frac{J}{H}\right)+\sqrt{\left|\frac{K}{H}\right|^{2}-\Re\left(\frac{J}{H}\right)^{2}}\right)\left|a\right|^{2}\\
-\sigma_{1} & =\left(\Im\left(\frac{J}{H}\right)-\sqrt{\left|\frac{K}{H}\right|^{2}-\Re\left(\frac{J}{H}\right)^{2}}\right)\left|a\right|^{2},
-\end{align*}
+\begin{align}
+\sigma_{1} & =0\nonumber \\
+\sigma_{1} & =2\Im\left(\frac{I}{H}\right)\left|a\right|^{2}\nonumber \\
+\sigma_{1} & =\left(\Im\left(\frac{J}{H}\right)+\sqrt{\left|\frac{K}{H}\right|^{2}-\Re\left(\frac{J}{H}\right)^{2}}\right)\left|a\right|^{2}\label{eq:circulating eigenvalues}\\
+\sigma_{1} & =\left(\Im\left(\frac{J}{H}\right)-\sqrt{\left|\frac{K}{H}\right|^{2}-\Re\left(\frac{J}{H}\right)^{2}}\right)\left|a\right|^{2},\nonumber 
+\end{align}
 
 \end_inset
 
@@ -2937,48 +3023,46 @@ where
 
 .
  The first eigenvalue comes from the global phase degree of freedom for
- lasing solutions.
- For the other three eigenvalues, we have found empirically that the real
- part is always negative, indicating that the circulating modes are stable.
- It is unknown, however, whether this is true in general for circulating
- modes.
- Additionally, we have only shown the eigenvalues for the 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
+ lasing solutions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
 
- case.
- However, in the general 
-\begin_inset Formula $C_{n}$
-\end_inset
-
- case, there are also circulating lasing modes and their eigenvalues will
- be slightly different due to the fact that there will be 
-\begin_inset Formula $\pm$
-\end_inset
-
- subscripts on the coefficients 
-\begin_inset Formula $I$
-\end_inset
-
- and 
-\begin_inset Formula $J$
 \end_inset
 
 .
- For simplicity, we have not included them here; a full derivation for general
- 
-\begin_inset Formula $C_{n}$
+ For the other three eigenvalues, we have found empirically that the real
+ part is always negative, indicating that the circulating modes are stable.
+ Although we have been unable to show that 
+\begin_inset Formula $\Re(\sigma_{1})<0$
 \end_inset
 
- can be found in Appendix
+ in general for the last three values in Eq.
 \begin_inset space ~
 \end_inset
 
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec: appendix stability calculations"
+reference "eq:circulating eigenvalues"
 
+\end_inset
+
+, we have empirically observed that to always be true, and it is easily
+ checked in any case by integrating the threshold modes and computing 
+\begin_inset Formula $H$
+\end_inset
+
+, 
+\begin_inset Formula $I$
+\end_inset
+
+, 
+\begin_inset Formula $J$
+\end_inset
+
+, and 
+\begin_inset Formula $K$
 \end_inset
 
 .
@@ -3020,14 +3104,11 @@ where
 \begin_inset Formula $\frac{(\omega_{1}H+G_{D})}{2I+J}$
 \end_inset
 
- is real and positive by construction, as seen in Eq.
-\begin_inset space ~
-\end_inset
-
-
+ is real and positive by construction, as shown in Eq.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:n != 4 lasing"
+reference "eq:imaginary part of |a|^2"
 
 \end_inset
 
@@ -3071,8 +3152,15 @@ reference "eq:n != 4 lasing"
 \end_inset
 
 , are actually lasing solutions).
- For TM modes where 
+ For TM modes in 2d, which have 
 \begin_inset Formula $\mathbf{E}=E\hat{\mathbf{z}}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "phc_book"
+
 \end_inset
 
 , it can be shown that 
@@ -3129,18 +3217,23 @@ where
 \end_inset
 
 , and hence the third and fourth eigenvalues are unstable.
- However, there is a pedogogical case where the external pump profile 
+ However, there are pathological cases where the external pump profile 
 \begin_inset Formula $D_{0}(\mathbf{x})$
 \end_inset
 
- can be chosen so that 
+ can be chosen (e.g.
+ in terms of 
+\begin_inset Formula $4\ell$
+\end_inset
+
+ delta functions) so that 
 \begin_inset Formula $J=-K$
 \end_inset
 
 , upon which the third eigenvalue is stable, and the last eigenvalue is
  zero.
- This zero eigenvalue turns out not to be robust to small perturbations
- in the geometry, as discussed further in Sec.
+ This zero eigenvalue turns out to become positive (unstable) for physical,
+ finite-sized gain regions, as discussed further in Sec.
 \begin_inset space ~
 \end_inset
 
@@ -3194,8 +3287,8 @@ where
 .
  Again, in most cases we have empirically found that the second eigenvalue
  is stable while the third and fourth are unstable.
- However, there is again a pedogogical case where the external pump profile
- 
+ However, there are pathological delta-function cases where the external
+ pump profile 
 \begin_inset Formula $D_{0}(\mathbf{x})$
 \end_inset
 
@@ -6656,15 +6749,20 @@ reference "eq:reduced a plus minus"
 
 \end_inset
 
-The fact that both 
+Taking imaginary part of both sides, and noting that 
 \begin_inset Formula $\omega_{1}$
 \end_inset
 
- and 
-\begin_inset Formula $\left|a_{+}\right|^{2}$
+ is real, we obtain
+\begin_inset Formula 
+\begin{equation}
+0=\omega_{1}\Im\left(\frac{H}{I_{+}}\right)+\Im\left(\frac{G_{D}}{I_{+}}\right),\label{eq:imaginary part of |a|^2}
+\end{equation}
+
 \end_inset
 
- must be real leads to the circulating solution (Eq.
+which leads to the circulating solution.
+ (Eq.
 \begin_inset space ~
 \end_inset
 
@@ -6697,8 +6795,7 @@ reference "eq:circulating lasing"
 \end_inset
 
 , so the two circulating lasing modes will actually have slightly different
- amplitudes and frequencies).
- Note that the fact that 
+ amplitudes and frequencies.) Note that the fact that 
 \begin_inset Formula $\left|a_{+}\right|^{2}$
 \end_inset
 
