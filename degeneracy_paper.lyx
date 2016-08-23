@@ -757,7 +757,10 @@ where
 \end_inset
 
  is the external pump strength, and the sum in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Dwrong"
@@ -1009,7 +1012,10 @@ Ordinarily, SALT assumes that all distinct modes have distinct frequencies,
 \end_inset
 
 , which gives the stationary-inversion expression Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Dwrong"
@@ -1080,7 +1086,10 @@ where
 
 ).
  Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Dwrong"
@@ -1095,8 +1104,11 @@ reference "eq:Dwrong"
 
 \end_inset
 
-in the denominator, while eq.
- 
+in the denominator, while Eq.
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Dcorrect"
@@ -1112,7 +1124,10 @@ reference "eq:Dcorrect"
 \end_inset
 
 From Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:E123"
@@ -1158,7 +1173,10 @@ D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\gamma_{1}\mathbf{E}
 \end_inset
 
 Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:1mode_salt"
@@ -1166,7 +1184,10 @@ reference "eq:1mode_salt"
 \end_inset
 
  is necessary but not sufficient condition for Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:2mode_salt"
@@ -1174,7 +1195,10 @@ reference "eq:2mode_salt"
 \end_inset
 
 : not all solutions that satisfy the Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:1mode_salt"
@@ -1182,7 +1206,10 @@ reference "eq:1mode_salt"
 \end_inset
 
  satisfy Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:2mode_salt"
@@ -1195,7 +1222,10 @@ reference "eq:2mode_salt"
 \end_inset
 
  satisfies Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:1mode_salt"
@@ -1208,7 +1238,10 @@ reference "eq:1mode_salt"
 
  axis, rendering the lasing mode unstable to the second pole coming in.
  However, if a pair of solutions satisfy Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:2mode_salt"
@@ -1235,7 +1268,10 @@ g to a double pole in the Green function.
  be two poles (in the linearized Green's function around the SALT solution)
  arising from the original degenerate pair.
  Given this fact, if we solve the single-mode SALT equations as in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:1mode_salt"
@@ -1266,7 +1302,10 @@ reference "sec:threshold_perturbation_Examples"
 .
  On the other hand, if we find a solution of the two-mode SALT equations
  as in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:2mode_salt"
@@ -1288,7 +1327,10 @@ key "ref-rotter_degeneracy"
 
 ).
  However, Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:2mode_salt"
@@ -1318,7 +1360,10 @@ key "direct_salt"
 
 ) become undetermined, so in this paper we devise a modified approach to
  solve Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:2mode_salt"
@@ -1327,7 +1372,10 @@ reference "eq:2mode_salt"
 
 .
  Equivalently, if we solve the single-mode equation (Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:1mode_salt"
@@ -1337,7 +1385,10 @@ reference "eq:1mode_salt"
 ) but simultaneously constrain the other pole (the linearly independent
  degenerate partner) to be degenerate with the lasing pole, then we will
  effectively have solved Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:2mode_salt"
@@ -1654,7 +1705,10 @@ reference "fig:overview"
  Since the frequencies are the same, we can consider any linear superposition
  of the two modes as a single mode.
  With infinitesimal amplitude, Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:single-mode-salt"
@@ -1715,7 +1769,10 @@ where the complex coefficients
 
  are to be determined.
  Inserting Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:lasing_ansatz"
@@ -1723,7 +1780,10 @@ reference "eq:lasing_ansatz"
 \end_inset
 
  into Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:single-mode-salt"
@@ -1771,7 +1831,10 @@ To proceed, we must choose a basis
 \end_inset
 
  to work with (the end result, Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:lasing_ansatz"
@@ -1803,7 +1866,10 @@ reference "fig:overview"
 ).
  However, it turns out that another particular makes the analytical solution
  of Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:a eigenproblem"
@@ -1942,7 +2008,10 @@ reference "sec: appendix allowed lasing modes"
 \end_inset
 
 ) that Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:a eigenproblem"
@@ -1971,7 +2040,10 @@ reference "sec: appendix allowed lasing modes"
 
 ) threshold problem.
  Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:reduced a plus minus"
@@ -1996,7 +2068,10 @@ reference "sec: appendix allowed lasing modes"
 \end_inset
 
 The other solutions to Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:reduced a plus minus"
@@ -2046,7 +2121,10 @@ where
 \end_inset
 
  is an arbitrary phase angle (during numeric solution of Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:single-mode-salt"
@@ -2114,7 +2192,10 @@ and the other is
 
 These four sets of solutions turn out to constitute all the solutions of
  Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:reduced a plus minus"
@@ -2126,7 +2207,10 @@ reference "eq:reduced a plus minus"
 \end_inset
 
  case, and this completes the solution of Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:single-mode-salt"
@@ -2244,7 +2328,10 @@ reference "eq:single-mode-salt"
 \end_inset
 
  is the lasing frequency given in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:lasing_ansatz"
@@ -2286,7 +2373,10 @@ i\delta\dot{\mathbf{P}} & =(\omega_{a}-\omega-i\gamma_{\perp})\delta\mathbf{P}+\
 \end_inset
 
 Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:delta"
@@ -2348,7 +2438,10 @@ key "ref-rotter_degeneracy"
 \end_inset
 
  discretized Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:delta"
@@ -2356,7 +2449,10 @@ reference "eq:delta"
 \end_inset
 
  to obtain Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:quadratic eigenproblem"
@@ -2398,7 +2494,10 @@ reference "sec:Threshold-perturbation-theory"
 \end_inset
 
 ), since the matrices come from the coefficients of Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:delta"
@@ -2444,7 +2543,10 @@ reference "eq:eigenpair expansion"
 \end_inset
 
  into Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:quadratic eigenproblem"
@@ -2509,7 +2611,10 @@ where we have defined
 \end_inset
 
  are any two threshold solutions to Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:threshold salt"
@@ -2539,7 +2644,10 @@ reference "sec: appendix stability calculations"
 \end_inset
 
 , Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:quadratic eigenproblem"
@@ -2578,7 +2686,10 @@ Here, all quantities except
 
 .
  By acting on Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:first order equation"
@@ -2602,7 +2713,10 @@ eigenvalue problem for the eigenvalue
 \end_inset
 
  in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:zeroth order"
@@ -2634,7 +2748,10 @@ reference "sec: appendix stability calculations"
 
 \begin_layout Standard
 For the circulating lasing modes in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:circulating lasing"
@@ -2707,7 +2824,10 @@ For the
 \end_inset
 
  standing lasing modes in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:n != 4 lasing"
@@ -2735,7 +2855,10 @@ where
 \end_inset
 
  is real and positive by construction, as seen in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:n != 4 lasing"
@@ -2754,7 +2877,10 @@ reference "eq:n != 4 lasing"
 \end_inset
 
  in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:n != 4 lasing"
@@ -2802,7 +2928,10 @@ For the
 \end_inset
 
  solutions in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:E+ + E- lasing"
@@ -2866,7 +2995,10 @@ Finally, we have the
 \end_inset
 
  case in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:E+ + i E- lasing"
@@ -3821,7 +3953,10 @@ The column-vector form of
 \end_inset
 
  in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:delta_omega_mu"
@@ -4384,7 +4519,10 @@ reference "fig:QP_stability"
 
  is still a passive pole, so the previous perturbation theory still applies),
  and instead of Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:delta_omega_QP"
@@ -4916,7 +5054,10 @@ components of the electric field, and consequently we may treat
 \end_inset
 
  as a tensor, as in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:tensor_delta_epsilon"
@@ -4936,7 +5077,10 @@ reference "eq:tensor_delta_epsilon"
  Again, only two iterations of QP are necessary to force the degeneracy
  down to machine precision.
  We use Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:chiral_projection"
@@ -5015,7 +5159,10 @@ Dielectric perturbation obtained from QP procedure for hexagonal cavity.
 
 ), we have allowed the perturbation to be a diagonally-anisotropic tenosr,
  as in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:tensor_delta_epsilon"
@@ -5213,7 +5360,10 @@ reference "sub:Forcing-the-degeneracy"
 \begin_layout Standard
 A general situation in which multimode-lasing is occuring can be described
  by Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:salt general"
@@ -5390,7 +5540,10 @@ independently
 \emph default
 .
  As a result, the dielectric for each pair in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:salt general"
@@ -5851,7 +6004,10 @@ In this appendix, we show that the only allowed lasing modes for
 \end_inset
 
  and inserting into Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:single-mode-salt"
@@ -5872,7 +6028,10 @@ reference "eq:single-mode-salt"
 \end_inset
 
 Comparing with the Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:threshold salt"
@@ -5889,7 +6048,10 @@ reference "eq:threshold salt"
 \end_inset
 
 , as in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:lasing_ansatz"
@@ -5898,7 +6060,10 @@ reference "eq:lasing_ansatz"
 
 .
  Inserting Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:lasing_ansatz"
@@ -5906,7 +6071,10 @@ reference "eq:lasing_ansatz"
 \end_inset
 
  into Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:expanded salt"
@@ -5914,7 +6082,10 @@ reference "eq:expanded salt"
 \end_inset
 
 , noting that the zeroth order terms vanish due to Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:threshold salt"
@@ -5940,7 +6111,10 @@ where
 \end_inset
 
  and integrate over all space, and we obtain Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:a eigenproblem"
@@ -5969,7 +6143,10 @@ because the threshold Maxwell operator is complex-symmetric.
 \end_inset
 
  is defined in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:chiral definition"
@@ -5992,7 +6169,10 @@ reference "eq:chiral definition"
 
  symmetry.
  In Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:a eigenproblem"
@@ -6035,7 +6215,10 @@ key "inui_group,tinkham"
 
  symmetry.
  Excluding the intensity term in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:chiral definition"
@@ -6130,7 +6313,10 @@ Additionally, note that for
 \end_inset
 
  under four-fold rotation, as seen in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:chiral definition"
@@ -6139,7 +6325,10 @@ reference "eq:chiral definition"
 
 .
  With these definitions, Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:a eigenproblem"
@@ -6147,7 +6336,10 @@ reference "eq:a eigenproblem"
 \end_inset
 
  straightforwardly reduces to Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:reduced a plus minus"
@@ -6172,7 +6364,10 @@ To solve for the coefficients
 
 .
  Dividing Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:reduced a plus minus"
@@ -6200,7 +6395,10 @@ The fact that both
 \end_inset
 
  must be real leads to the circulating solution (Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:circulating lasing"
@@ -6261,7 +6459,10 @@ Next, we consider the case that both
 
 .
  Divide Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:reduced a plus minus"
@@ -6342,7 +6543,10 @@ The second equality here is a constraint that must be satisfied.
 \end_inset
 
  is free to have any phase, and yielding the solution in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:n != 4 lasing"
@@ -6371,7 +6575,10 @@ reference "eq:n != 4 lasing"
 \end_inset
 
  will allow Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:omega1 constraint"
@@ -6414,7 +6621,10 @@ For
 \end_inset
 
 , for which the solution is given in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:E+ + E- lasing"
@@ -6426,7 +6636,10 @@ reference "eq:E+ + E- lasing"
 \end_inset
 
 , for which the solution is given in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:E+ + i E- lasing"
@@ -6456,7 +6669,10 @@ reference "eq:E+ + i E- lasing"
 
  nonzero.
  Interestingly, Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:omega1 constraint"
@@ -6498,7 +6714,10 @@ reference "sub:Stability-of-circulating"
 
 .
  Comparing Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:delta"
@@ -6506,7 +6725,10 @@ reference "eq:delta"
 \end_inset
 
  and Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:quadratic eigenproblem"
@@ -6594,7 +6816,10 @@ reference "eq:matrix expansion"
 \end_inset
 
 , according to Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:lasing_ansatz"
@@ -6604,7 +6829,10 @@ reference "eq:lasing_ansatz"
 .
  Eq.
  Now expand Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:quadratic eigenproblem"
@@ -6612,7 +6840,10 @@ reference "eq:quadratic eigenproblem"
 \end_inset
 
  and keep track of terms order-by-order using Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:eigenpair expansion"
@@ -6629,7 +6860,10 @@ reference "eq:eigenpair expansion"
 \end_inset
 
 which turns out to be equivalent to the SALT equation at threshold, Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:threshold salt"
@@ -6639,7 +6873,10 @@ reference "eq:threshold salt"
 .
  The solution is easily seen to be any linear combination of the threshold
  modes (with the associated polarization), given in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:vk definition"
@@ -6653,7 +6890,10 @@ reference "eq:vk definition"
 \end_inset
 
  (there are other solutions to Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:zeroth order quadratic"
@@ -6674,7 +6914,10 @@ reference "eq:zeroth order quadratic"
 
 \begin_layout Standard
 Inserting these results into Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:quadratic eigenproblem"
@@ -6712,7 +6955,10 @@ where
 \end_inset
 
  forms the four-component complex basis defined in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:vk definition"
@@ -6739,7 +6985,10 @@ reference "eq:vk definition"
 
 .
  Acting on Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:half order quadratic"
@@ -6796,7 +7045,10 @@ Inserting the result
 \end_inset
 
  into Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:half order quadratic"
@@ -6858,7 +7110,10 @@ At the next order,
 \end_inset
 
 , Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:quadratic eigenproblem"
@@ -6919,7 +7174,10 @@ where
 \end_inset
 
  is given in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:G and H definitions"
@@ -7041,7 +7299,10 @@ a_{-}a_{+}^{\star}I_{+}+a_{+}a_{-}^{\star}K_{+} & \left|a_{-}\right|^{2}I_{-}+\l
 \end_inset
 
 Putting this together, Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:A1/2 matrix element"
@@ -7061,7 +7322,10 @@ i(\mathsf{P}+\mathsf{Q}) & \mathsf{Q}-\mathsf{P}
 \end_inset
 
 Combining this with Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:A1 element final"
@@ -7069,7 +7333,10 @@ reference "eq:A1 element final"
 \end_inset
 
  and Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:B0 element final"
@@ -7081,7 +7348,10 @@ reference "eq:B0 element final"
 \end_inset
 
 , and evaluating the real and imaginary components, Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:first order quadratic"
@@ -7132,7 +7402,10 @@ which is a
 
 \begin_layout Standard
 We now diagonalize Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:final linear eigenvalue problem"
@@ -7149,7 +7422,10 @@ reference "sec:Threshold-perturbation-theory"
 
 .
  For the circulating solution in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:circulating lasing"
@@ -7170,7 +7446,10 @@ reference "eq:circulating lasing"
 
 .
  The matrix in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:final linear eigenvalue problem"
@@ -7256,7 +7535,10 @@ with
 
 \begin_layout Standard
 We now diagonalize Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:final linear eigenvalue problem"
@@ -7290,7 +7572,10 @@ reference "sec: appendix allowed lasing modes"
 
 .
  The matrix in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:final linear eigenvalue problem"
@@ -7351,7 +7636,10 @@ which comes from the two continuous degrees of freedom in the solution:
 \end_inset
 
  in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:n != 4 lasing"
@@ -7402,7 +7690,10 @@ Next, we examine the case
 \end_inset
 
  case, but Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:final linear eigenvalue problem"
@@ -7415,7 +7706,10 @@ reference "eq:final linear eigenvalue problem"
 \end_inset
 
  lasing mode (Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:E+ + E- lasing"
@@ -7423,7 +7717,10 @@ reference "eq:E+ + E- lasing"
 \end_inset
 
 ), the matrix in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:final linear eigenvalue problem"
@@ -7505,7 +7802,10 @@ Empirically, we have found that this eigenvalue is always stable.
 \end_inset
 
  lasing mode (Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:E+ + i E- lasing"
@@ -7513,7 +7813,10 @@ reference "eq:E+ + i E- lasing"
 \end_inset
 
 , the matrix in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:final linear eigenvalue problem"
@@ -7632,7 +7935,10 @@ stable
 
 .
  Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:chiral definition"
@@ -7675,7 +7981,10 @@ where
 
  for the diagonals.
  For a TM geometry, we then have the overlap integrals (Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:I J K definitions"
@@ -7709,7 +8018,10 @@ It can be shown that depending on the choice of
 \end_inset
 
 , the eigenvalues in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:z = i double eigenvalues"
@@ -7726,7 +8038,10 @@ reference "eq:z = i double eigenvalues"
 \end_inset
 
 , the same happens for those in Eq.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:z = 1 double eigenvalues"
