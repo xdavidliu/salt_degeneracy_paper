@@ -247,8 +247,8 @@ key "ref-cao_review,modeswitching2014,ref-matsko,ref-pnas_whispering"
 \end_inset
 
 .
- However, more recent microcavities often have other symmetry groups supporting
- degeneracies 
+ However, more recent microcavities often have other 2d symmetry groups
+ supporting degeneracies 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "inui_group"
@@ -263,7 +263,7 @@ key "englund"
 
 \end_inset
 
- (as seen in Fig.
+, an example of a 3d structure with a 2d symmetry (as seen in Fig.
 \begin_inset space ~
 \end_inset
 
@@ -344,14 +344,12 @@ reference "sec:Threshold-perturbation-theory"
 \end_inset
 
 ).
- We find that (with one isolated exception that is unattainable under ordinary
- circumstances) the only possible stable lasing modes near a symmetry-induced
- (
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
-) degenerate threshold are an analogue of the circulating solutions of a
- ring.
+ We find that the only lasing solutions are analogues of the standing (sine
+ and cosine) and circulating (exponential) solutions of the ring laser.
+ Additionally, we obtained closed-form expressions for the stability eigenvalues
+ for all of these solutions, and empirically find that the only stable solutions
+ (with one isolated exception that is unattainable under normal circumstances)
+ are the circulating ones.
  These analytical solutions then give us a starting point for a 
 \emph on
 numerical
@@ -409,7 +407,7 @@ key "ref-rotter_degeneracy"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Stability-of-circulating"
+reference "sub:Stability-analysis summary"
 
 \end_inset
 
@@ -481,7 +479,7 @@ chiral
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Stability-of-circulating"
+reference "sub:Stability-analysis summary"
 
 \end_inset
 
@@ -695,7 +693,228 @@ reference "sec:Multi-mode-degenerate-lasing"
 Background
 \end_layout
 
+\begin_layout Subsection
+Review of SALT
+\end_layout
+
 \begin_layout Standard
+The equations of SALT are derived from the Maxwell--Bloch equations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-haken_laser_theory,ref-sauermann,haken_light:_1985,ref-lamb"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+-\varepsilon\ddot{\mathbf{E}}^{+} & =\nabla\times\nabla\times\mathbf{E}^{+}+\ddot{\mathbf{P}}^{+}\nonumber \\
+i\dot{\mathbf{P}}^{+} & =(\omega_{a}-i\gamma_{\perp})\mathbf{P}^{+}+\gamma_{\perp}\mathbf{E}^{+}D\label{eq:maxwell--bloch}\\
+\dot{D} & =\gamma_{\parallel}(D_{0}-D)+\mathrm{Im}(\mathbf{E}^{-}\cdot\mathbf{P}^{+}),\nonumber 
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{E}^{+}(\mathbf{x},t)$
+\end_inset
+
+ is the 
+\begin_inset Quotes eld
+\end_inset
+
+positive-frequency
+\begin_inset Quotes erd
+\end_inset
+
+ component of the electric field [with 
+\begin_inset Formula $\mathbf{E}^{-}=\mathbf{E}^{+\star}$
+\end_inset
+
+ and the physical field given by 
+\begin_inset Formula $2\mathrm{Re}(\mathbf{E}^{+})$
+\end_inset
+
+], 
+\begin_inset Formula $\varepsilon(\mathbf{x})$
+\end_inset
+
+ is the 
+\begin_inset Quotes eld
+\end_inset
+
+cold-cavity
+\begin_inset Quotes erd
+\end_inset
+
+ permittivity (not including the gain transition), 
+\begin_inset Formula $\mathbf{P}(\mathbf{x},t)$
+\end_inset
+
+ is the polarization describing a transition (of frequency 
+\begin_inset Formula $\omega_{a}$
+\end_inset
+
+ and linewidth 
+\begin_inset Formula $\gamma_{\perp}$
+\end_inset
+
+) between two atomic energy levels, 
+\begin_inset Formula $D(\mathbf{x},t)$
+\end_inset
+
+ is the population inversion between those two levels (with relaxation rate
+ 
+\begin_inset Formula $\gamma_{\Vert}$
+\end_inset
+
+), and 
+\begin_inset Formula $D_{0}(\mathbf{x})$
+\end_inset
+
+ is the strength of an pumping process driving the inversion.
+ Additionally, we have omitted, for convenience, factors of the quantum
+ transition matrix element 
+\begin_inset Formula $\rho_{12}$
+\end_inset
+
+ of the two level system, Planck's constant 
+\begin_inset Formula $\hbar$
+\end_inset
+
+, and the speed of light 
+\begin_inset Formula $c$
+\end_inset
+
+, which set the units of the fields.
+ Using the stationary inversion approximation 
+\begin_inset Formula $D(\mathbf{x},t)\approx D(\mathbf{x})$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fu_multifrequency_1991,tureci_self-consistent_2006"
+
+\end_inset
+
+ along with an ansatz of a finite number of lasing modes
+\begin_inset Formula 
+\[
+\mathbf{E}^{+}(\mathbf{x},t)=\sum_{\nu}\mathbf{E}_{\nu}(\mathbf{x})e^{-i\omega_{\nu}t},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\omega_{\nu}$
+\end_inset
+
+ are the real mode frequencies, the second equation in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:maxwell--bloch"
+
+\end_inset
+
+ is solved to eliminate 
+\begin_inset Formula $\mathbf{P}^{+}$
+\end_inset
+
+ as an unknown, and the third equation becomes
+\begin_inset Formula 
+\begin{equation}
+\dot{D}=\gamma_{\parallel}(D_{0}-D)+D\Im\left[\sum_{\mu\nu}\gamma(\omega_{\nu})\mathbf{E}_{\mu}^{\star}\cdot\mathbf{E}_{\nu}e^{i(\omega_{\mu}-\omega_{\nu})t}\right],\label{eq:Ddot MB equation}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\gamma(\omega_{\mu})\equiv\gamma_{\perp}/(\omega_{\mu}-\omega_{a}+i\gamma_{\perp})$
+\end_inset
+
+In order for the stationary inversion approximation 
+\begin_inset Formula $\dot{D}=0$
+\end_inset
+
+ to be valid, the oscillating terms on the right-hand side of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Ddot MB equation"
+
+\end_inset
+
+ must time-average to zero; and in order to do so, the beating frequencies
+ 
+\begin_inset Formula $\omega_{\mu}-\omega_{\nu}$
+\end_inset
+
+ must be either exactly zero, or much faster than the relaxation rate 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fu_multifrequency_1991,tureci_self-consistent_2006,ge_steady-state_2010"
+
+\end_inset
+
+.
+ This condition is evidently true when any pair of modes is either exactly
+ degenerate, or situated very far apart from each other in frequency space.
+ When these conditions are met, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:maxwell--bloch"
+
+\end_inset
+
+ reduces to the SALT equation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ge_steady-state_2010,tureci_self-consistent_2006,tureci_ab_2009"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla\times\nabla\times\mathbf{E}_{\mu}=\omega_{\mu}^{2}\left[\varepsilon+\gamma(\omega_{\mu})D\right]\mathbf{E}_{\mu},\label{eq:salt general}
+\end{equation}
+
+\end_inset
+
+for the unknowns 
+\begin_inset Formula $\mathbf{E}_{\mu}$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega_{\nu}$
+\end_inset
+
+, where 
+\begin_inset Formula $D(\mathbf{x})$
+\end_inset
+
+ is the steady-state population inversion, which depends nonlinearly on
+ the electric fields and lasing frequencies of all lasing modes: 
+\begin_inset Formula 
+\begin{equation}
+D(\mathbf{x})=\frac{D_{0}(\mathbf{x})}{1+\gamma_{\parallel}^{-1}\sum\left|\gamma(\omega_{\mu})\mathbf{E}_{\nu}\right|^{2}}.\label{eq:Dwrong}
+\end{equation}
+
+\end_inset
+
 In Ref.
  
 \begin_inset CommandInset citation
@@ -704,103 +923,42 @@ key "direct_salt"
 
 \end_inset
 
-, we presented a direct method to solve the equations of steady-state ab-initio
- lasing theory (SALT) 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ge_steady-state_2010,tureci_self-consistent_2006,tureci_ab_2009"
-
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{equation}
-\nabla\times\nabla\times\mathbf{E}_{\mu}=\omega_{\mu}^{2}\left(\varepsilon+\gamma_{\mu}D\right)\mathbf{E}_{\mu},\label{eq:salt general}
-\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $\mathbf{E}_{\mu}(\mathbf{x})$
-\end_inset
-
- is the electric field of the lasing mode, 
-\begin_inset Formula $\omega_{\mu}$
-\end_inset
-
- is the real lasing frequency, 
-\begin_inset Formula $\varepsilon(\mathbf{x})$
-\end_inset
-
- is the passive cavity dielectric, 
-\begin_inset Formula $\gamma_{\mu}=\gamma_{\perp}/(\omega_{\mu}-\omega_{a}+i\gamma_{\perp})$
-\end_inset
-
- is the Lorentzian gain factor, 
-\begin_inset Formula $\omega_{a}$
-\end_inset
-
- is the gain center, 
-\begin_inset Formula $\gamma_{\perp}$
-\end_inset
-
- is the relaxation rate for the polarization of the gain medium, and 
-\begin_inset Formula $D(\mathbf{x})$
-\end_inset
-
- is the steady-state population inversion, which depends nonlinearly on
- the electric fields and lasing frequencies of all currently lasing modes:
+, we presented a direct numerical method to solve Eq.
  
-\begin_inset Formula 
-\begin{equation}
-D(\mathbf{x})=\frac{D_{0}(\mathbf{x})}{1+\gamma_{\parallel}^{-1}\sum\left|\gamma_{\nu}\mathbf{E}_{\nu}\right|^{2}},\label{eq:Dwrong}
-\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $\gamma_{\parallel}$
-\end_inset
-
- is the relaxation rate of the inversion, 
-\begin_inset Formula $D_{0}(\mathbf{x})$
-\end_inset
-
- is the external pump strength, and the sum in Eq.
-\begin_inset space ~
-\end_inset
-
-
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:Dwrong"
+reference "eq:salt general"
 
 \end_inset
 
- is performed over all lasing modes.
- So far, most cases in which SALT has been applied has dealt with either
+.
+\end_layout
+
+\begin_layout Subsection
+Effects of exact degeneracies
+\end_layout
+
+\begin_layout Standard
+So far, most cases in which SALT has been applied has dealt with either
  single lasing modes or multimode regimes in which frequencies are far apart.
- This is necessary for SALT because the the existance of a time-independent
- inversion 
-\begin_inset Formula $D(\mathbf{x})$
-\end_inset
-
- is only an approximation, known as the stationary-inversion approximation.
- This approximation requires that any beating-terms average out over time.
  When frequencies are close but not exactly degenerate, there is non-negligible
  beating and SALT is invalid.
  However, when two lasing modes are 
 \emph on
 exactly
 \emph default
- degenerate, it turns out that SALT is still perfectly valid, because there
- is an exact steady-state solution of the MB equations (for a single-mode
- pair), provided that interference between the two degenerate modes is taken
- into account.
+ degenerate, we find that SALT is still perfectly valid, because there is
+ an exact steady-state solution of the MB equations (for a single-mode pair),
+ provided that interference between the two degenerate modes is taken into
+ account.
  Of course, it is possible that a degeneracy in the linear regime may split
  in the presence of the laser nonlinearity above threshold.
- However, if a degeneracy persists (and we have consistently observed this
- for symmetry-induced degeneracies), our method will find it.
+ However, if a degeneracy persists (and we have observed that it is guaranteed
+ to do so for 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry-induced degeneracies), our method will find it.
  The literature on degenerate lasing modes has almost invariably dealt with
  whispering-gallery modes in microdisks and ring resonators 
 \begin_inset CommandInset citation
@@ -810,8 +968,8 @@ key "ref-cao_review,modeswitching2014,ref-matsko,ref-pnas_whispering"
 \end_inset
 
 .
- Many of these earlier works discussed the stability of travelling-wave
- modes in ring resonators under perturbations that break the symmetry 
+ Many of these earlier works discussed the stability of traveling-wave modes
+ in ring resonators under perturbations that break the symmetry 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ref-risken_instability,ref-bidirectional,ref-MBring,ref-breaking_cylindrical_symmetry,ref-tamm"
@@ -820,15 +978,15 @@ key "ref-risken_instability,ref-bidirectional,ref-MBring,ref-breaking_cylindrica
 
 .
  A very limited number of other works on degenerate lasing modes in other
- geometries exist, such as Ref.
- 
+ geometries exist 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ref-braun"
 
 \end_inset
 
-.
+, which were mostly experimental and focused on the linear cavity rather
+ than the nonlinear lasing regime.
  However, the microdisk is only a single example of a setting where one
  can find degenerate resonant modes that can lase: there is a great variety
  of other symmetric geometries where degeneracies can occur 
@@ -853,7 +1011,7 @@ The presence of degenerate eigenvalues in systems with
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- is a direct consequence of representation theory.
+ symmetry is a direct consequence of representation theory.
  For all 
 \begin_inset Formula $n>2$
 \end_inset
@@ -878,7 +1036,7 @@ key "phc_book"
 \end_inset
 
 .
- For each such 2d irrep, there exist pairs of partner functions that necessarily
+ For each such 2d irrep, there exist pairs of eigenfunctions that necessarily
  have the same eigenvalue 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -899,7 +1057,7 @@ reference "fig:overview"
 \end_inset
 
  shows three examples of symmetric geometries, along with examples of degenerate
- partner functions.
+ eigenfunctions.
  
 \begin_inset Float figure
 wide false
@@ -945,12 +1103,11 @@ status open
 
 \begin_layout Plain Layout
 Degenerate pairs of standing modes in a laser.
- For 
+ For this uniform dielectric disk, which has 
 \begin_inset Formula $C_{\infty\mathrm{v}}$
 \end_inset
 
-, the symmetry group of a circle, as in this uniform dielectric disk, the
- two eigenfunctions are proportional to 
+ symmetry, the two eigenfunctions are proportional to 
 \begin_inset Formula $\cos(\ell\phi)$
 \end_inset
 
@@ -958,15 +1115,11 @@ Degenerate pairs of standing modes in a laser.
 \begin_inset Formula $\sin(\ell\phi)$
 \end_inset
 
- for some angle 
-\begin_inset Formula $\phi$
+ (here, 
+\begin_inset Formula $\ell=8$
 \end_inset
 
- and integer 
-\begin_inset Formula $\ell$
-\end_inset
-
-.
+).
  For 
 \begin_inset Formula $C_{4\mathrm{v}}$
 \end_inset
@@ -975,14 +1128,30 @@ Degenerate pairs of standing modes in a laser.
 \begin_inset Formula $\frac{\pi}{2}$
 \end_inset
 
- rotations of one another.
+ rotations of one another (here, the order of the irrep is 
+\begin_inset Formula $\ell=1$
+\end_inset
+
+, which is the only possibility for 
+\begin_inset Formula $C_{4\mathrm{v}}$
+\end_inset
+
+).
  For 
 \begin_inset Formula $C_{6\mathrm{v}}$
 \end_inset
 
 , the symmetry group of the regular hexagon, the two eigenfunctions have
  no immediately obvious symmetry operation that transforms between them,
- but are in fact still degenerate.
+ but are in fact still degenerate (here 
+\begin_inset Formula $\ell=1$
+\end_inset
+
+, and there also exists an 
+\begin_inset Formula $\ell=2$
+\end_inset
+
+ irrep with its own degenerate pair).
  In all three cases (and in fact for all 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
@@ -991,8 +1160,8 @@ Degenerate pairs of standing modes in a laser.
 \begin_inset Formula $\frac{\pi}{2}$
 \end_inset
 
- rotations from one another, and the two partner standing modes have opposite
- parities across these mirror planes.
+ rotations from one another, and the two standing modes have opposite parities
+ across these mirror planes.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -1249,7 +1418,8 @@ reference "eq:1mode_salt"
 \begin_inset Formula $\omega$
 \end_inset
 
- axis, rendering the lasing mode unstable to the second pole coming in.
+ axis, rendering the lasing mode unstable to exponential growth in this
+ mode.
  However, if a pair of solutions satisfy Eq.
 \begin_inset space ~
 \end_inset
@@ -1268,7 +1438,18 @@ reference "eq:2mode_salt"
  axis, and there is at least no instability due to the degenerate modes
  themselves.
  To have a stable lasing solution, at the very least we need to have no
- poles above the real axis.
+ poles above the real axis, although there are additional conditions for
+ stability, described in Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-analysis summary"
+
+\end_inset
+
  We now describe this idea in detail.
 \end_layout
 
@@ -1332,8 +1513,8 @@ reference "eq:2mode_salt"
 \begin_inset Formula $\omega$
 \end_inset
 
- axis and the degeneracy is not a source of instability (and the overall
- stability of the Maxwell–Bloch equations can be checked as in Ref.
+ axis and the degeneracy itself is not a source of instability (and the
+ overall stability of the Maxwell–Bloch equations can be checked as in Ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1374,20 +1555,8 @@ key "direct_salt"
 
 \end_inset
 
-) become undetermined, so in this paper we devise a modified approach to
- solve Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:2mode_salt"
-
-\end_inset
-
-.
- Equivalently, if we solve the single-mode equation (Eq.
+) become underdetermined.
+ However, if we solve the single-mode equation (Eq.
 \begin_inset space ~
 \end_inset
 
@@ -1426,86 +1595,26 @@ name "sec:Threshold-perturbation-theory"
 \end_layout
 
 \begin_layout Standard
-In this section, we analyze the SALT and Maxwell--Bloch equations just above
- the lasing threshold.
- In particular, the nondimensionalized Maxwell-Bloch equations are 
+In this section, we analyze the SALT and Maxwell--Bloch equations (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:maxwell--bloch"
+
+\end_inset
+
+) just above the lasing threshold in order to obtain insight about the nature
+ of the degenerate solutions, as well as to determine the correct initial
+ guess for the above-threshold regime (e.g.
+ when solving for lasing modes using the method of Ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "ref-haken_laser_theory,ref-sauermann,haken_light:_1985,ref-lamb"
+key "direct_salt"
 
 \end_inset
 
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
--\varepsilon\ddot{\mathbf{E}}^{+} & =\nabla\times\nabla\times\mathbf{E}^{+}+\ddot{\mathbf{P}}^{+}\\
-i\dot{\mathbf{P}}^{+} & =(\omega_{a}-i\gamma_{\perp})\mathbf{P}^{+}+\gamma_{\perp}\mathbf{E}^{+}D\\
-\dot{D} & =\gamma_{\parallel}(D_{0}-D)+\mathrm{Im}(\mathbf{E}^{-}\cdot\mathbf{P}^{+}),
-\end{align*}
-
-\end_inset
-
-where 
-\begin_inset Formula $\mathbf{E}^{+}(\mathbf{x},t)$
-\end_inset
-
- is the 
-\begin_inset Quotes eld
-\end_inset
-
-positive-frequency
-\begin_inset Quotes erd
-\end_inset
-
- component of the electric field [with 
-\begin_inset Formula $\mathbf{E}^{-}=\mathbf{E}^{+\star}$
-\end_inset
-
- and the physical field given by 
-\begin_inset Formula $2\mathrm{Re}(\mathbf{E}^{+})$
-\end_inset
-
-], 
-\begin_inset Formula $\varepsilon(\mathbf{x})$
-\end_inset
-
- is the 
-\begin_inset Quotes eld
-\end_inset
-
-cold-cavity
-\begin_inset Quotes erd
-\end_inset
-
- permittivity (not including the gain transition), 
-\begin_inset Formula $\mathbf{P}(\mathbf{x},t)$
-\end_inset
-
- is the polarization describing a transition (of frequency 
-\begin_inset Formula $\omega_{a}$
-\end_inset
-
- and linewidth 
-\begin_inset Formula $\gamma_{\perp}$
-\end_inset
-
-) between two atomic energy levels, 
-\begin_inset Formula $D(\mathbf{x},t)$
-\end_inset
-
- is the population inversion between those two levels (with relaxation rate
- 
-\begin_inset Formula $\gamma_{\Vert}$
-\end_inset
-
-), and 
-\begin_inset Formula $D_{0}(\mathbf{x})$
-\end_inset
-
- is the strength of an pumping process driving the inversion.
+).
  For a regime with a single steady-state lasing mode 
 \begin_inset Formula $\mathbf{E}^{+}(\mathbf{x},t)=\mathbf{E}(\mathbf{x})e^{-i\omega t}$
 \end_inset
@@ -1629,7 +1738,7 @@ reference "sub:Perturbative-SALT-solutions"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Stability-of-circulating"
+reference "sub:Stability-analysis summary"
 
 \end_inset
 
@@ -1678,7 +1787,7 @@ circulating
 \end_inset
 
  is a multiple of four), and otherwise the stability can be determined by
- evaluating a simple integral of the threshold modes otherwise.
+ evaluating a simple integral of the threshold modes.
 \end_layout
 
 \begin_layout Subsection
@@ -1756,24 +1865,7 @@ where
 \end_inset
 
 .
- Assuming that the frequencies stay the same (which it turns is correct
- in the 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
-, as discussed in Appendix
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec: appendix allowed lasing modes"
-
-\end_inset
-
-), we then expect the lasing mode slightly above threshold to be of the
- form
+ We then expect the lasing mode slightly above threshold to be of the form
 \begin_inset Formula 
 \begin{align}
 \mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{1}\right)+d^{3/2}\delta\mathbf{E},\nonumber \\
@@ -1786,7 +1878,7 @@ where the complex coefficients
 \begin_inset Formula $a_{1,2}$
 \end_inset
 
- and real eigenvalue shift 
+ and the real eigenvalue shift 
 \begin_inset Formula $\omega_{1}$
 \end_inset
 
@@ -1846,10 +1938,10 @@ reference "sec: appendix allowed lasing modes"
 
 :
 \begin_inset Formula 
-\begin{align}
-0 & =\int d^{3}x\mathbf{E}_{1,2}\cdot\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right)\times\ldots\nonumber \\
- & \left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}})+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(1-\left|a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right|^{2}\right)\right].\label{eq:a eigenproblem}
-\end{align}
+\begin{multline}
+0=\int d^{3}x\mathbf{E}_{1,2}\cdot\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right)\times\\
+\left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}})+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(1-\left|a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right|^{2}\right)\right]\label{eq:a eigenproblem}
+\end{multline}
 
 \end_inset
 
@@ -1894,7 +1986,7 @@ reference "fig:overview"
 \end_inset
 
 ).
- However, it turns out that another particular makes the analytical solution
+ However, it turns out that another choice makes the analytical solution
  of Eq.
 \begin_inset space ~
 \end_inset
@@ -2283,7 +2375,7 @@ reference "eq:single-mode-salt"
 Perturbative stability analysis
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Stability-of-circulating"
+name "sub:Stability-analysis summary"
 
 \end_inset
 
@@ -3275,7 +3367,7 @@ The stable linear combination is the circulating mode predicted by Sec.
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Stability-of-circulating"
+reference "sub:Stability-analysis summary"
 
 \end_inset
 
@@ -3476,7 +3568,7 @@ solving for both of the modes.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Stability-of-circulating"
+reference "sub:Stability-analysis summary"
 
 \end_inset
 
@@ -5551,7 +5643,7 @@ key "ge_steady-state_2010,tureci_self-consistent_2006"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Stability-of-circulating"
+reference "sub:Stability-analysis summary"
 
 \end_inset
 
@@ -5644,7 +5736,7 @@ reference "sec: appendix allowed lasing modes"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Stability-of-circulating"
+reference "sub:Stability-analysis summary"
 
 \end_inset
 
@@ -6889,7 +6981,7 @@ In this appendix, we provide details for the derivation of the stability
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Stability-of-circulating"
+reference "sub:Stability-analysis summary"
 
 \end_inset
 
@@ -7773,7 +7865,7 @@ reference "eq:final linear eigenvalue problem"
 
 \end_inset
 
- the becomes 
+ then becomes 
 \begin_inset Formula $2|a|^{2}\times$
 \end_inset
 
