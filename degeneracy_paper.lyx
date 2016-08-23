@@ -658,7 +658,10 @@ key "inui_group,tinkham"
  the circulating mode) from even existing in the SALT equations, because
  the solver can no longer pick arbitrary superpositions of the formerly
  degenerate modes, as described in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Forcing-the-degeneracy"
@@ -670,7 +673,10 @@ reference "sub:Forcing-the-degeneracy"
  broken by the discretization in a way that both guarantees convergence
  to the correct solution as the discretization is refined and which generalizes
  to an arbitrary number of lasing modes (in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Multi-mode-degenerate-lasing"
@@ -878,7 +884,10 @@ key "inui_group,tinkham"
 
 .
  Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:overview"
@@ -1292,7 +1301,10 @@ standing-wave
 \end_inset
 
  SALT solution) in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:threshold_perturbation_Examples"
@@ -1686,7 +1698,10 @@ We begin with the situation of a degenerate threshold, where two modes
 \end_inset
 
  (such as any of the pairs in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:overview"
@@ -1856,7 +1871,10 @@ reference "eq:lasing_ansatz"
 \end_inset
 
  (as in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:overview"
@@ -2305,7 +2323,10 @@ into the Maxwell--Bloch equations (where
 \end_inset
 
  is any of the SALT solutions obtained in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Perturbative-SALT-solutions"
@@ -2486,7 +2507,10 @@ es
 \end_inset
 
  is the relative pump increment above threshold, as introduced in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Threshold-perturbation-theory"
@@ -2975,7 +2999,10 @@ where
  zero.
  This zero eigenvalue turns out not to be robust to small perturbations
  in the geometry, as discussed further in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec: appendix stability calculations"
@@ -3077,7 +3104,10 @@ Now, we illustrate the ideas of threshold perturbation theory with an example
 \end_inset
 
  are shown in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:lowQ_modes"
@@ -3189,7 +3219,10 @@ name "fig:lowQ_modes"
 \end_inset
 
 The stable linear combination is the circulating mode predicted by Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Stability-of-circulating"
@@ -3209,7 +3242,10 @@ reference "sub:Stability-of-circulating"
  This chirality is an important consequence of including the interference
  terms in the degenerate formulation of SALT.
  Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:lowQ_chirality"
@@ -3221,7 +3257,10 @@ reference "fig:lowQ_chirality"
  Since this degeneracy does not come from geometric symmetry along, there
  is no clear symmetry operation that takes the lasing mode (center panel
  of Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:lowQ_chirality"
@@ -3409,7 +3448,10 @@ ncies.
 
 \begin_layout Standard
 Examples of the different cases can be seen in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:overview"
@@ -3427,7 +3469,10 @@ reference "fig:overview"
 
  symmetry of the original cylinder (another example, as we will see later
  in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Forcing-the-degeneracy"
@@ -3435,7 +3480,10 @@ reference "sub:Forcing-the-degeneracy"
 \end_inset
 
  and in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:phc_geometry"
@@ -3449,7 +3497,10 @@ reference "fig:phc_geometry"
  symmetry).
  For odd angular momentum whispering-gallery modes, the sine mode is simply
  a 90-degree rotation of the cosine mode, as seen in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:overview"
@@ -3468,7 +3519,10 @@ reference "fig:overview"
  Hence, there is a small splitting in both the real and imaginary parts
  of the frequencies.
  Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:even_cylinder_modes"
@@ -4129,7 +4183,10 @@ by the same factor.
 \end_inset
 
  threshold modes in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:even_cylinder_modes"
@@ -4137,7 +4194,10 @@ reference "fig:even_cylinder_modes"
 \end_inset
 
  are shown in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:even_cylinder_deps"
@@ -4145,7 +4205,10 @@ reference "fig:even_cylinder_deps"
 \end_inset
 
 , and the convergence of the splitting to zero is shown in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:even_cylinder_QP"
@@ -4154,7 +4217,10 @@ reference "fig:even_cylinder_QP"
 
 .
  As verified in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:deps_scale"
@@ -4420,7 +4486,10 @@ status open
 
  is the spacing between adjacent gridpoints.
  The same resolutions as in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:cylinder_resolution"
@@ -4476,7 +4545,10 @@ Note that even after the thresholds and threshold frequencies have been
 approximate 
 \emph default
 degeneracy that is maintained very far above threshold, as shown in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:QP_stability"
@@ -4565,7 +4637,10 @@ Here,
  above, which makes this procedure no longer a true first-order perturbation
  theory.
  However, since the splitting is already so small as shown in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:QP_stability"
@@ -4677,7 +4752,10 @@ Above-threshold splitting in real and imaginary parts of
  modes.
  The magnitude is very small because the intensity profile, as shown in
  Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:even_cylinder_intensity"
@@ -4795,7 +4873,10 @@ name "fig:even_cylinder_intensity"
 
 \begin_layout Standard
 We show another example, of a hexagonal cavity as shown in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:phc_geometry"
@@ -4829,7 +4910,10 @@ reference "fig:phc_geometry"
 \end_inset
 
  symmetry, as shown in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:phc_modes"
@@ -5090,7 +5174,10 @@ reference "eq:chiral_projection"
  to predict the stable linear combination above threshold to use as an initial
  guess.
  The intensity pattern obtained in simulation is shown in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:phc_stable"
@@ -5242,7 +5329,10 @@ status open
 Intensity pattern for stable lasing mode for hexagonal cavity.
  The pattern appears to be six-fold symmetric, which is expected.
  Unlike in the right panel of Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:lowQ_chirality"
@@ -5315,7 +5405,10 @@ So far, the discussion and examples in this paper have dealt with the case
  is straightforward.
  Since our method combines degenerate pairs into a single mode that is the
  stable linear combination (as given by the perturbation theory in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Threshold-perturbation-theory"
@@ -5337,7 +5430,10 @@ key "ge_steady-state_2010,tureci_self-consistent_2006,direct_salt"
  the list of lasing modes.
  The only aspects of our method requiring generalization are the threshold
  perturbation theory of Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Threshold-perturbation-theory"
@@ -5345,7 +5441,10 @@ reference "sec:Threshold-perturbation-theory"
 \end_inset
 
  and the QP method of Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Forcing-the-degeneracy"
@@ -5392,7 +5491,10 @@ key "ge_steady-state_2010,tureci_self-consistent_2006"
 
  symmetry and have lasing modes that are either circulating modes (as in
  Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Stability-of-circulating"
@@ -5439,7 +5541,10 @@ real
 
 .
  Then all results in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Threshold-perturbation-theory"
@@ -5475,7 +5580,10 @@ reference "sec: appendix allowed lasing modes"
 \end_inset
 
 ) still remains, as explained in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Stability-of-circulating"
@@ -5500,7 +5608,10 @@ reference "sub:Stability-of-circulating"
 \begin_layout Standard
 Now we consider how to treat the problem of discretization-broken symmetry
  (Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:discretization_breaking"
@@ -5509,7 +5620,10 @@ reference "sec:discretization_breaking"
 
 ) in the case of multimode lasing.
  The method of Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Forcing-the-degeneracy"
@@ -5567,7 +5681,10 @@ Since our QP method finds the
 \end_inset
 
  norm (as described in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Forcing-the-degeneracy"
@@ -5575,7 +5692,10 @@ reference "sub:Forcing-the-degeneracy"
 \end_inset
 
 ) and the splitting decreases with resolution as seen in Fig.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:cylinder_resolution"
@@ -6705,7 +6825,10 @@ name "sec: appendix stability calculations"
 \begin_layout Standard
 In this appendix, we provide details for the derivation of the stability
  eigenvalues given in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Stability-of-circulating"
@@ -7413,7 +7536,10 @@ reference "eq:final linear eigenvalue problem"
 \end_inset
 
  for each of the lasing mode solutions in Sec.
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Threshold-perturbation-theory"
