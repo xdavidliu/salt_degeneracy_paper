@@ -1355,7 +1355,7 @@ satisfying the two equations
 \begin_inset Formula 
 \begin{align}
 -\nabla\times\nabla\times\mathbf{E}_{1,2} & =\omega_{1}^{2}\left(\varepsilon+D\gamma_{1}\right)\mathbf{E}_{1,2}\label{eq:2mode_salt}\\
-D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\gamma_{1}\mathbf{E}_{1}\right|^{2}+\left|\gamma_{1}\mathbf{E}_{2}\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}\right)}.\nonumber 
+D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\gamma_{1}(\mathbf{E}_{1}+\mathbf{E}_{2})\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}\right)}.\nonumber 
 \end{align}
 
 \end_inset
@@ -6448,12 +6448,12 @@ reference "eq:threshold salt"
 
 \end_inset
 
-, we obtain 
+, we obtain
 \begin_inset Formula 
-\begin{align*}
- & \left[\nabla\times\nabla\times-\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}\\
- & =\left\{ \omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left[\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{0}\gamma_{\mathrm{t}}\right)\right]+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(1-\left|\mathbf{f}\right|^{2}\right)\right\} \mathbf{f}
-\end{align*}
+\begin{multline*}
+\left[\nabla\times\nabla\times-\:\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}\\
+=\left\{ \omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left[\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{0}\gamma_{\mathrm{t}}\right)\right]+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(1-\left|\mathbf{f}\right|^{2}\right)\right\} \mathbf{f}
+\end{multline*}
 
 \end_inset
 
@@ -6480,7 +6480,7 @@ reference "eq:a eigenproblem"
 , where we have used the fact that 
 \begin_inset Formula 
 \[
-\int d^{3}x\mathbf{E}_{1,2}\cdot\left[\nabla\times\nabla\times-\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}=0
+\int d^{3}x\mathbf{E}_{1,2}\cdot\left[\nabla\times\nabla\times-\:\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}=0
 \]
 
 \end_inset
@@ -7116,7 +7116,7 @@ reference "eq:quadratic eigenproblem"
 \end_inset
 
 where 
-\begin_inset Formula $\Delta=-\nabla\times\nabla\times$
+\begin_inset Formula $\Delta=\varepsilon_{\mathrm{R}}\omega^{2}-\nabla\times\nabla\times$
 \end_inset
 
 , 
@@ -7498,10 +7498,10 @@ Again, act on this equation with
 .
  By direct evaluation, we have
 \begin_inset Formula 
-\begin{align*}
-\mathsf{w}_{j}^{T}\mathsf{A}_{1}\mathsf{v}_{k} & =\Re\left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]\\
- & \ldots+\Re\left[\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}\int d^{3}xD_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|\vec{f}\right|^{2}\right)\vec{e}_{k}\right]
-\end{align*}
+\begin{multline*}
+\mathsf{w}_{j}^{T}\mathsf{A}_{1}\mathsf{v}_{k}=\Re\left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]+\\
+\Re\left[\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}\int d^{3}xD_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|\vec{f}\right|^{2}\right)\vec{e}_{k}\right]
+\end{multline*}
 
 \end_inset
 
@@ -7563,16 +7563,16 @@ reference "eq:G and H definitions"
 
 Next, we have
 \begin_inset Formula 
-\begin{align*}
-\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left|\vec{f}\right|^{2}\vec{e}_{k} & =\left(\begin{array}{cc}
+\begin{multline*}
+\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left|\vec{f}\right|^{2}\vec{e}_{k}=\left(\begin{array}{cc}
 \mathsf{M} & i\mathsf{M}\\
 i\mathsf{M} & -\mathsf{M}
-\end{array}\right)_{jk}\\
- & +\left(\left|a_{+}\right|^{2}I_{+}+\left|a_{-}\right|^{2}I_{-}\right)\left(\begin{array}{cc}
+\end{array}\right)_{jk}+\\
+\left(\left|a_{+}\right|^{2}I_{+}+\left|a_{-}\right|^{2}I_{-}\right)\left(\begin{array}{cc}
 \mathsf{X} & i\mathsf{X}\\
 i\mathsf{X} & -\mathsf{X}
 \end{array}\right)_{jk}
-\end{align*}
+\end{multline*}
 
 \end_inset
 
@@ -7589,16 +7589,16 @@ a_{+}^{\star}a_{-}J_{+}+a_{+}a_{-}^{\star}K_{+} & 0\\
 
 Putting these results together, we have
 \begin_inset Formula 
-\begin{align}
- & \mathsf{w}_{j}^{T}\mathsf{A}_{1}\mathsf{v}_{k}=\nonumber \\
- & \omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}W\left(\begin{array}{cc}
+\begin{multline}
+\mathsf{w}_{j}^{T}\mathsf{A}_{1}\mathsf{v}_{k}=\\
+\omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}W\left(\begin{array}{cc}
 \mathsf{X} & i\mathsf{X}\\
 i\mathsf{X} & -\mathsf{X}
 \end{array}\right)_{jk}-\gamma_{\mathrm{t}}\left(\begin{array}{cc}
 \mathsf{M} & i\mathsf{M}\\
 i\mathsf{M} & -\mathsf{M}
 \end{array}\right)_{jk}\right]\label{eq:A1 element final}
-\end{align}
+\end{multline}
 
 \end_inset
 
@@ -7627,10 +7627,10 @@ i\mathsf{X} & -\mathsf{X}
 \begin_layout Standard
 Next, by straightforward computation, we obtain
 \begin_inset Formula 
-\begin{align}
- & \mathsf{w}_{j}^{T}\mathsf{A}_{1/2}\mathsf{x}_{1/2}=\nonumber \\
- & -\sum_{k}b_{k}\int d^{3}x\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\Re\left[\gamma_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}+\vec{f}^{\star}\cdot\vec{e}_{k}\right)\right].\label{eq:A1/2 matrix element}
-\end{align}
+\begin{multline}
+\mathsf{w}_{j}^{T}\mathsf{A}_{1/2}\mathsf{x}_{1/2}=\\
+-\sum_{k}b_{k}\int d^{3}x\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\Re\left[\gamma_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}+\vec{f}^{\star}\cdot\vec{e}_{k}\right)\right].\label{eq:A1/2 matrix element}
+\end{multline}
 
 \end_inset
 
@@ -7677,13 +7677,13 @@ reference "eq:A1/2 matrix element"
 
  then becomes
 \begin_inset Formula 
-\begin{align*}
- & \mathsf{w}_{j}^{T}\mathsf{A}_{1/2}\mathsf{x}_{1/2}=\\
- & -\sum_{k}b_{k}\omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}\left(\begin{array}{cc}
+\begin{multline*}
+\mathsf{w}_{j}^{T}\mathsf{A}_{1/2}\mathsf{x}_{1/2}=\\
+-\sum_{k}b_{k}\omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}\left(\begin{array}{cc}
 \mathsf{Q}+\mathsf{P} & i(\mathsf{P}-\mathsf{Q})\\
 i(\mathsf{P}+\mathsf{Q}) & \mathsf{Q}-\mathsf{P}
 \end{array}\right)_{jk}\right].
-\end{align*}
+\end{multline*}
 
 \end_inset
 
@@ -7726,16 +7726,16 @@ reference "eq:first order quadratic"
 
  becomes
 \begin_inset Formula 
-\begin{align*}
- & \left(\begin{array}{cc}
+\begin{multline*}
+\left(\begin{array}{cc}
 \Re\left[\gamma_{\mathrm{t}}(\mathsf{Q}+\tilde{\mathsf{P}})\right] & \Im\left[\gamma_{\mathrm{t}}(\mathsf{Q}-\tilde{\mathsf{P}})\right]\\
 -\Im\left[\gamma_{\mathrm{t}}(\mathsf{Q}+\tilde{\mathsf{P}})\right] & \Re\left[\gamma_{\mathrm{t}}(\mathsf{Q}-\tilde{\mathsf{P}})\right]
 \end{array}\right)\mathsf{b}\\
- & =-\sigma_{1}\left(\begin{array}{cc}
+=-\sigma_{1}\left(\begin{array}{cc}
 \Im(\gamma_{\mathrm{t}}H)\mathsf{X} & \Re(\gamma_{\mathrm{t}}H)\mathsf{X}\\
 \Re(\gamma_{\mathrm{t}}H)\mathsf{X} & -\Im(\gamma_{\mathrm{t}}H)\mathsf{X}
 \end{array}\right)\mathsf{b}.
-\end{align*}
+\end{multline*}
 
 \end_inset
 
@@ -8159,10 +8159,10 @@ A second eigenpair is
 Empirically, we have found that this eigenvalue is always stable.
  The final two eigenvalues are
 \begin_inset Formula 
-\begin{align}
-\sigma_{1} & =-|a|^{2}\Im\left(\frac{J+3K}{H}\right)\nonumber \\
- & \ldots\pm|a|^{2}\sqrt{\Im\left(\frac{J-K}{H}\right)^{2}-8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J+K}{H}\right)}\label{eq:z = 1 double eigenvalues}
-\end{align}
+\begin{multline}
+\sigma_{1}=-|a|^{2}\Im\left(\frac{J+3K}{H}\right)\pm\\
+|a|^{2}\sqrt{\Im\left(\frac{J-K}{H}\right)^{2}-8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J+K}{H}\right)}\label{eq:z = 1 double eigenvalues}
+\end{multline}
 
 \end_inset
 
@@ -8255,10 +8255,10 @@ and another eigenpair
 Empirically, we have found that this eigenvalue is always stable.
  Finally, the remaining two eigenvalues are
 \begin_inset Formula 
-\begin{align}
-\sigma_{1} & =|a|^{2}\Im\left(\frac{3K-J}{H}\right)\nonumber \\
- & \ldots\pm|a|^{2}\sqrt{\Im\left(\frac{J+K}{H}\right)^{2}+8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J-K}{H}\right)}\label{eq:z = i double eigenvalues}
-\end{align}
+\begin{multline}
+\sigma_{1}=|a|^{2}\Im\left(\frac{3K-J}{H}\right)\pm\\
+|a|^{2}\sqrt{\Im\left(\frac{J+K}{H}\right)^{2}+8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J-K}{H}\right)}\label{eq:z = i double eigenvalues}
+\end{multline}
 
 \end_inset
 
