@@ -4002,13 +4002,6 @@ name "fig:cylinder_resolution"
 Numerical Degenerate SALT
 \end_layout
 
-\begin_layout Standard
-Above threshold .....
- summarize procedure, explain why perturbative solutions give good starting
- guess due to discontinuity between the stable and unstable manifolds.
- Review problem with splitting and Figure 6.
-\end_layout
-
 \begin_layout Subsection
 Restoring the degeneracy using a dielectric perturbation
 \begin_inset CommandInset label
