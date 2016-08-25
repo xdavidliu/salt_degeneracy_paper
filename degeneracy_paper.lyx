@@ -302,6 +302,22 @@ key "inui_group"
 \end_inset
 
 , and much less is known about the lasing solutions in such cases.
+ Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:overview"
+
+\end_inset
+
+ gives examples of degenerate lasing modes in 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ geometries.
  Previous work 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -505,7 +521,7 @@ reference "sec: appendix allowed lasing modes"
 
 \end_inset
 
-) Second, we develop a numerical solution technique for 
+.) Second, we develop a numerical solution technique for 
 \emph on
 far above
 \emph default
@@ -534,6 +550,133 @@ key "ref-rotter_degeneracy"
 \end_inset
 
  for checking its stability after a solution far above threshold is found.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename overview_fig/overview.pdf
+	scale 110
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Degenerate pairs of standing modes in a laser.
+ For this uniform dielectric disk (top), which has 
+\begin_inset Formula $C_{\infty\mathrm{v}}$
+\end_inset
+
+ symmetry, the two eigenfunctions are proportional to 
+\begin_inset Formula $\cos(\ell\phi)$
+\end_inset
+
+ and 
+\begin_inset Formula $\sin(\ell\phi)$
+\end_inset
+
+ (here, 
+\begin_inset Formula $\ell=9$
+\end_inset
+
+).
+ For a homogeneous dielectric square (
+\begin_inset Formula $\varepsilon=5$
+\end_inset
+
+ inside a square of length 1), the eigenfunctions are 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ rotations of one another (here, the order of the irrep is 
+\begin_inset Formula $\ell=1$
+\end_inset
+
+, which is the only possibility for 
+\begin_inset Formula $C_{4\mathrm{v}}$
+\end_inset
+
+).
+ The 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ rotation is an exact symmetry of the geometry, so there is an exact degeneracy
+ even for the numerical grid.
+ For 
+\begin_inset Formula $C_{6\mathrm{v}}$
+\end_inset
+
+, the symmetry group of the regular hexagon, the two eigenfunctions have
+ no immediately obvious symmetry operation that transforms between them,
+ but are in fact still degenerate (here 
+\begin_inset Formula $\ell=1$
+\end_inset
+
+, and there also exists an 
+\begin_inset Formula $\ell=2$
+\end_inset
+
+ irrep with its own degenerate pair).
+ In all three cases (and in fact for all 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+), the standing modes have mirror planes that are 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ rotations from one another, and the two standing modes have opposite parities
+ across these mirror planes.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:overview"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -672,7 +815,7 @@ reference "sub:Forcing-the-degeneracy"
 
 .
  To fix this problem, we found a simple way to uniquely restore any degeneracy
- broken by the discretization in a way that both guarantees convergence
+ broken by the disdfgfdgfdgcretization in a way that both guarantees convergence
  to the correct solution as the discretization is refined and which generalizes
  to an arbitrary number of lasing modes (in Sec.
 \begin_inset space ~
@@ -837,7 +980,8 @@ where
 \begin_inset Formula $\gamma(\omega_{\mu})\equiv\gamma_{\perp}/(\omega_{\mu}-\omega_{a}+i\gamma_{\perp})$
 \end_inset
 
-In order for the stationary inversion approximation 
+.
+ In order for the stationary inversion approximation 
 \begin_inset Formula $\dot{D}=0$
 \end_inset
 
@@ -849,12 +993,16 @@ reference "eq:Ddot MB equation"
 
 \end_inset
 
- must time-average to zero; and in order to do so, the beating frequencies
+ must average to zero on a timescale much faster than the relaxation timescale
  
+\begin_inset Formula $1/\gamma_{\parallel}$
+\end_inset
+
+; and in order to do so, the beating frequencies 
 \begin_inset Formula $\omega_{\mu}-\omega_{\nu}$
 \end_inset
 
- must be either exactly zero, or much faster than the relaxation rate 
+ must be either exactly zero or much faster than the relaxation rate 
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
@@ -934,6 +1082,11 @@ reference "eq:salt general"
 .
 \end_layout
 
+\begin_layout Standard
+TODO: need a paragraph defining: hole-burning term, passive modes of linearized
+ SALT equations (for fixed D), and poles of Green's function.
+\end_layout
+
 \begin_layout Subsection
 Effects of exact degeneracies
 \end_layout
@@ -948,9 +1101,9 @@ So far, most cases in which SALT has been applied has dealt with either
 exactly
 \emph default
  degenerate, we find that SALT is still perfectly valid, because there is
- an exact steady-state solution of the MB equations (for a single-mode pair),
- provided that interference between the two degenerate modes is taken into
- account.
+ an exact steady-state solution of the MB equations (for a single lasing
+ mode), provided that interference between the two degenerate modes is taken
+ into account.
  Of course, it is possible that a degeneracy in the linear regime may split
  in the presence of the laser nonlinearity above threshold.
  However, if a degeneracy persists (and we have observed that it is guaranteed
@@ -958,7 +1111,19 @@ exactly
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- symmetry-induced degeneracies), our method will find it.
+ symmetry-induced degeneracies, because of the 
+\begin_inset Quotes eld
+\end_inset
+
+chiral
+\begin_inset Quotes erd
+\end_inset
+
+ symmetry of the lasing mode as discussed in Sec.
+\begin_inset space ~
+\end_inset
+
+[TODO: ref top-level section on Cn and chiral]), our method will find it.
  The literature on degenerate lasing modes has almost invariably dealt with
  whispering-gallery modes in microdisks and ring resonators 
 \begin_inset CommandInset citation
@@ -992,13 +1157,13 @@ key "ref-braun"
  of other symmetric geometries where degeneracies can occur 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "ref-svetlana"
+key "inui_group,tinkham,sakoda"
 
 \end_inset
 
 .
- So far, the  problem of degenerate modes in lasers has not been studied
- systematically for the general 
+ So far, the  problem of above-threshold degenerate modes in lasers has
+ not been studied systematically for the general 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
@@ -1059,133 +1224,6 @@ reference "fig:overview"
  shows three examples of symmetric geometries, along with examples of degenerate
  eigenfunctions.
  
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centerline{
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename overview_fig/overview.pdf
-	scale 110
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Degenerate pairs of standing modes in a laser.
- For this uniform dielectric disk (top), which has 
-\begin_inset Formula $C_{\infty\mathrm{v}}$
-\end_inset
-
- symmetry, the two eigenfunctions are proportional to 
-\begin_inset Formula $\cos(\ell\phi)$
-\end_inset
-
- and 
-\begin_inset Formula $\sin(\ell\phi)$
-\end_inset
-
- (here, 
-\begin_inset Formula $\ell=9$
-\end_inset
-
-).
- For a homogeneous dielectric square (
-\begin_inset Formula $\varepsilon=5$
-\end_inset
-
- inside a square of length 1), the eigenfunctions are 
-\begin_inset Formula $\frac{\pi}{2}$
-\end_inset
-
- rotations of one another (here, the order of the irrep is 
-\begin_inset Formula $\ell=1$
-\end_inset
-
-, which is the only possibility for 
-\begin_inset Formula $C_{4\mathrm{v}}$
-\end_inset
-
-).
- The 
-\begin_inset Formula $\frac{\pi}{2}$
-\end_inset
-
- rotation is an exact symmetry of the geometry, so there is an exact degeneracy
- even for the numerical grid.
- For 
-\begin_inset Formula $C_{6\mathrm{v}}$
-\end_inset
-
-, the symmetry group of the regular hexagon, the two eigenfunctions have
- no immediately obvious symmetry operation that transforms between them,
- but are in fact still degenerate (here 
-\begin_inset Formula $\ell=1$
-\end_inset
-
-, and there also exists an 
-\begin_inset Formula $\ell=2$
-\end_inset
-
- irrep with its own degenerate pair).
- In all three cases (and in fact for all 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
-), the standing modes have mirror planes that are 
-\begin_inset Formula $\frac{\pi}{2}$
-\end_inset
-
- rotations from one another, and the two standing modes have opposite parities
- across these mirror planes.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:overview"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1322,7 +1360,7 @@ reference "eq:E123"
 
 \end_inset
 
- we see that the degenerate pair acts as a single-mode that is a superposition
+ we see that the degenerate pair acts as a single mode that is a superposition
  of 
 \begin_inset Formula $\mathbf{E}_{1}$
 \end_inset
@@ -1332,8 +1370,8 @@ reference "eq:E123"
 \end_inset
 
 .
- This equivalence means that the solution to the lasing degenerate problem
- can be portrayed in two equivalent pictures.
+ This means that the solution to the lasing degenerate problem can be portrayed
+ in two equivalent pictures.
  First, we can think of the linear combination 
 \begin_inset Formula $\mathbf{E}=\mathbf{E}_{1}+\mathbf{E}_{2}$
 \end_inset
@@ -1360,7 +1398,7 @@ D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\gamma_{1}(\mathbf{E
 
 \end_inset
 
-Eq.
+The existence of a solution to Eq.
 \begin_inset space ~
 \end_inset
 
@@ -1371,29 +1409,8 @@ reference "eq:1mode_salt"
 
 \end_inset
 
- is necessary but not sufficient condition for Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:2mode_salt"
-
-\end_inset
-
-: not all solutions that satisfy the Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:1mode_salt"
-
-\end_inset
-
- satisfy Eq.
+ is a necessary but not sufficient condition for the existence of a solution
+ to Eq.
 \begin_inset space ~
 \end_inset
 
@@ -1405,28 +1422,7 @@ reference "eq:2mode_salt"
 \end_inset
 
 .
- If a lasing mode 
-\begin_inset Formula $\mathbf{E}$
-\end_inset
-
- satisfies Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:1mode_salt"
-
-\end_inset
-
- there may be a second pole above the real-
-\begin_inset Formula $\omega$
-\end_inset
-
- axis, rendering the lasing mode unstable to exponential growth in this
- mode.
- However, if a pair of solutions satisfy Eq.
+ The reason is that Eq.
 \begin_inset space ~
 \end_inset
 
@@ -1437,26 +1433,23 @@ reference "eq:2mode_salt"
 
 \end_inset
 
-, then both degenerate modes are accounted for and lie on the real-
+ enforces a double eigenvalue of the linearized eigenproblem (i.e.
+ a double pole of the Green's function) on the real-
 \begin_inset Formula $\omega$
 \end_inset
 
- axis, and there is at least no instability due to the degenerate modes
- themselves.
- To have a stable lasing solution, at the very least we need to have no
- poles above the real axis, although there are additional conditions for
- stability, described in Sec.
+ axis, whereas Eq.
 \begin_inset space ~
 \end_inset
 
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Stability-analysis summary"
+reference "eq:1mode_salt"
 
 \end_inset
 
- We now describe this idea in detail.
+ only enforces a single eigenvalue.
 \end_layout
 
 \begin_layout Standard
@@ -1478,27 +1471,17 @@ reference "eq:1mode_salt"
 
 \end_inset
 
-, there is the danger that the other pole is pushed above the real-
-\begin_inset Formula $\omega$
-\end_inset
-
- axis, in which case the lasing solution is unstable.
- We give an example of this (an unstable 
-\begin_inset Quotes eld
-\end_inset
-
-standing-wave
-\begin_inset Quotes erd
-\end_inset
-
- SALT solution) in Sec.
+, there is the danger that the other pole is unstable.
+ (To have a stable lasing solution, at the very least we need to have no
+ poles above the real axis, although there are additional conditions for
+ stability, described in Sec.
 \begin_inset space ~
 \end_inset
 
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:threshold_perturbation_Examples"
+reference "sub:Stability-analysis summary"
 
 \end_inset
 
@@ -1519,8 +1502,9 @@ reference "eq:2mode_salt"
 \begin_inset Formula $\omega$
 \end_inset
 
- axis and the degeneracy itself is not a source of instability (and the
- overall stability of the Maxwell–Bloch equations can be checked as in Ref.
+ axis and the other passive pole by itself is not a source of instability
+ (and the overall stability of the Maxwell–Bloch equations can be checked
+ as in Ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1862,7 +1846,8 @@ where
 \end_inset
 
 .
- Now perturb the pump strength slightly above threshold, with 
+ Now we perturb the pump strength to bring the mode slightly above threshold,
+ with 
 \begin_inset Formula $D_{0}=D_{\mathrm{t}}(1+d)$
 \end_inset
 
@@ -1889,6 +1874,7 @@ where the complex coefficients
 \end_inset
 
  are to be determined.
+ TODO: cite and compare to SPA-SALT.
  Inserting Eq.
 \begin_inset space ~
 \end_inset
@@ -2290,7 +2276,7 @@ where
 \end_inset
 
  is an arbitrary phase angle.
- (During numeric solution of Eq.
+ (During numerical solution of Eq.
 \begin_inset space ~
 \end_inset
 
@@ -2323,17 +2309,6 @@ reference "eq:single-mode-salt"
  However, they are inconsequential because it turns out that these standing
  modes are always unstable, regardless of 
 \begin_inset Formula $\theta$
-\end_inset
-
-, as shown in Appendix
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec: appendix allowed lasing modes"
-
 \end_inset
 
 .) On the other hand, for the case of 
@@ -2566,7 +2541,8 @@ reference "eq:delta"
 
 \end_inset
 
-or alternatively a quadratic eigenvalue problem
+or alternatively a quadratic eigenvalue problem [TODO: ref for quadratic
+ eigenvalue problem]
 \begin_inset Formula 
 \begin{equation}
 \left(\mathsf{C}\sigma^{2}+\mathsf{B}\sigma+\mathsf{A}\right)\mathsf{x}=0\label{eq:quadratic eigenproblem}
@@ -2789,11 +2765,42 @@ reference "eq:threshold salt"
 \end_inset
 
 ), and has two kinds of solutions.
- First, there are the below threshold modes, which have 
+ First, there are the below threshold 
+\begin_inset Quotes eld
+\end_inset
+
+passive
+\begin_inset Quotes erd
+\end_inset
+
+ modes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tureci_self-consistent_2006,ge_steady-state_2010"
+
+\end_inset
+
+, which have 
 \begin_inset Formula $\Re(\sigma_{0})<0$
 \end_inset
 
- and hence are stable.
+ (because for these modes, 
+\begin_inset Formula $\sigma_{0}$
+\end_inset
+
+ is simply the difference 
+\begin_inset Formula $\omega^{\prime}-\omega_{\mathrm{t}}$
+\end_inset
+
+ between the complex pole 
+\begin_inset Formula $\omega^{\prime}$
+\end_inset
+
+ of the passive mode and the real threshold frequency 
+\begin_inset Formula $\omega_{\mathrm{t}}$
+\end_inset
+
+) and hence are stable.
  Second, from the degenerate 
 \emph on
 threshold
@@ -3039,7 +3046,7 @@ key "ref-rotter_degeneracy"
 .
  For the other three eigenvalues, we have found empirically that the real
  part is always negative, indicating that the circulating modes are stable.
- Although we have been unable to show that 
+ Although we have been unable to prove that 
 \begin_inset Formula $\Re(\sigma_{1})<0$
 \end_inset
 
@@ -3226,7 +3233,7 @@ where
 , upon which the third eigenvalue is stable, and the last eigenvalue is
  zero.
  This zero eigenvalue turns out to become positive (unstable) for physical,
- finite-sized gain regions, as discussed further in Sec.
+ finite-sized gain regions, as discussed further in Appendix.
 \begin_inset space ~
 \end_inset
 
@@ -3294,9 +3301,9 @@ where
 \end_inset
 
 , and the third eigenvalue is stable while the fourth is zero.
- Again, this zero eigenvalue is not robust to small perturbations in the
- geometry, and so this stability is unlikely to be of practical importance
- without some modification.
+ Again, this zero eigenvalue becomes positive (unstable) for finite-size
+ gain regions, and so this marginal case is unlikely to be of practical
+ importance.
 \end_layout
 
 \begin_layout Subsection
