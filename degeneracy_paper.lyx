@@ -1118,9 +1118,9 @@ passive
 
  of the linearized SALT equation
 \begin_inset Formula 
-\[
-\nabla\times\nabla\times\tilde{\mathbf{E}}_{\mu}=\tilde{\omega}_{\mu}\left[\varepsilon+\gamma(\omega_{\mu})D\right]\tilde{\mathbf{E}}_{\mu},
-\]
+\begin{equation}
+\nabla\times\nabla\times\tilde{\mathbf{E}}_{\mu}=\tilde{\omega}_{\mu}\left[\varepsilon+\gamma(\omega_{\mu})D\right]\tilde{\mathbf{E}}_{\mu},\label{eq:passive pole salt}
+\end{equation}
 
 \end_inset
 
@@ -3271,13 +3271,13 @@ reference "eq:E+ + E- lasing"
 
 , which have the eigenvalues
 \begin_inset Formula 
-\begin{align*}
-\sigma_{1} & =0\\
-\sigma_{1} & =2\Im\left(\frac{2I+J+K}{H}\right)|a|^{2}\\
-\sigma_{1} & =\left[-\Im\left(\frac{J+3K}{H}\right)+\rho\right]|a|^{2}\\
-\sigma_{1} & =\left[-\Im\left(\frac{J+3K}{H}\right)-\rho\right]|a|^{2}\\
-\rho & \equiv\sqrt{\Im\left(\frac{J-K}{H}\right)^{2}-8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J+K}{H}\right)},
-\end{align*}
+\begin{align}
+\sigma_{1} & =0\nonumber \\
+\sigma_{1} & =2\Im\left(\frac{2I+J+K}{H}\right)|a|^{2}\nonumber \\
+\sigma_{1} & =\left[-\Im\left(\frac{J+3K}{H}\right)+\rho\right]|a|^{2}\label{eq:stability eigenvalues for E+ + E-}\\
+\sigma_{1} & =\left[-\Im\left(\frac{J+3K}{H}\right)-\rho\right]|a|^{2}\nonumber \\
+\rho & \equiv\sqrt{\Im\left(\frac{J-K}{H}\right)^{2}-8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J+K}{H}\right)},\nonumber 
+\end{align}
 
 \end_inset
 
@@ -3347,13 +3347,13 @@ reference "eq:E+ + i E- lasing"
 .
  The eigenvalues are
 \begin_inset Formula 
-\begin{align*}
-\sigma_{1} & =0\\
-\sigma_{1} & =2\Im\left(\frac{2I+J-K}{H}\right)|a|^{2}\\
-\sigma_{1} & =\left[\Im\left(\frac{3K-J}{H}\right)+\eta\right]|a|^{2}\\
-\sigma_{1} & =\left[\Im\left(\frac{3K-J}{H}\right)-\eta\right]|a|^{2}\\
-\eta & \equiv\sqrt{\Im\left(\frac{J+K}{H}\right)^{2}+8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J-K}{H}\right)},
-\end{align*}
+\begin{align}
+\sigma_{1} & =0\nonumber \\
+\sigma_{1} & =2\Im\left(\frac{2I+J-K}{H}\right)|a|^{2}\nonumber \\
+\sigma_{1} & =\left[\Im\left(\frac{3K-J}{H}\right)+\eta\right]|a|^{2}\label{eq:stability eigenvalues for E+ + iE-}\\
+\sigma_{1} & =\left[\Im\left(\frac{3K-J}{H}\right)-\eta\right]|a|^{2}\nonumber \\
+\eta & \equiv\sqrt{\Im\left(\frac{J+K}{H}\right)^{2}+8\Re\left(\frac{K}{H}\right)\Re\left(\frac{J-K}{H}\right)},\nonumber 
+\end{align}
 
 \end_inset
 
@@ -3644,6 +3644,438 @@ name "fig:lowQ_chirality"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Effects of chirality
+\end_layout
+
+\begin_layout Standard
+In this section, we discuss the effects of chirality, e.g.
+ broken mirror symmetry which causes 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ to become 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+.
+ There are two ways this can happen: first, for a 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+-symmetric geometry [dielectric function 
+\begin_inset Formula $\varepsilon(\mathbf{x})$
+\end_inset
+
+ and gain profile 
+\begin_inset Formula $D_{0}(\mathbf{x})$
+\end_inset
+
+], the intensity patterns of the circulating modes (given in Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:chiral definition"
+
+\end_inset
+
+, and which we have empirically observed are always the only stable modes)
+ turn out to have 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry as opposed to 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry (the only exception to this rule is for a 
+\begin_inset Formula $C_{\infty\mathrm{v}}$
+\end_inset
+
+ system, in which the circulating lasing modes have an intensity pattern
+ 
+\begin_inset Formula $|\mathbf{E}|^{2}\propto|e^{i\ell\phi}|^{2}=1$
+\end_inset
+
+, and hence still have mirror symmetry).
+ As a result, mirror symmetry is instantly broken when the first mode starts
+ lasing, and we have a 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+-symmetric system.
+ Second, the geometry itself can already have 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry, e.g.
+ the dielectric and gain functions themselves have chirality.
+ Whether the chirality is due to the intensity pattern of a lasing mode
+ or due to the geometry itself, the effects are the same.
+\end_layout
+
+\begin_layout Standard
+First, the presence of chirality affects the nature of the degeneracy between
+ the lasing mode and its passive pole, e.g.
+ the solution to Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:passive pole salt"
+
+\end_inset
+
+.
+ For a laser with 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry at threshold, the two chiral circulating modes, Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:chiral definition"
+
+\end_inset
+
+ are exactly related to each other by a mirror-flip operation.
+ As soon as 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ starts lasing, the mirror symmetry is broken (for 
+\begin_inset Formula $n\neq\infty$
+\end_inset
+
+) and the passive pole, which we denote as 
+\begin_inset Formula $\tilde{\mathbf{E}}_{-}$
+\end_inset
+
+, will move further and further away from being hte mirror flip of 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ (as seen in the right panel of Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:lowQ_chirality"
+
+\end_inset
+
+).
+ It is important to note that if 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ were to lase instead of 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+, then the 
+\emph on
+lasing 
+\emph default
+mode 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ will be an exact mirror flip of 
+\begin_inset Formula $\mathbf{E_{+}}$
+\end_inset
+
+, while the eigenfunction of its passive pole 
+\begin_inset Formula $\tilde{\mathbf{E}}_{+}$
+\end_inset
+
+ will be an exact mirror flip of 
+\begin_inset Formula $\tilde{\mathbf{E}}_{-}$
+\end_inset
+
+, due to the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry at threshold.
+ The lasing frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+ will also be independent of whether 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ lases, as confirmed by Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circulating lasing"
+
+\end_inset
+
+.
+ On the other hand, if the laser already had 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry at threshold (either due to chirality in a previously lasing mode
+ or in the dielectric or gain functions), then the threshold eigenfunctions
+ 
+\begin_inset Formula $\mathbf{E}_{\pm}$
+\end_inset
+
+ are no longer mirror flips of each other, even though their threshold frequenci
+es are both the same 
+\begin_inset Formula $\omega_{\mathrm{t}}$
+\end_inset
+
+ (as an interesting consequence of Lorentz reciprocity of Maxwell's equations,
+ as reviewed in Appendix.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: degeneracy in Cn"
+
+\end_inset
+
+).
+ The fact that 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ are not mirror flips of each other causes a splitting between the overlap
+ integrals 
+\begin_inset Formula $I_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $I_{-}$
+\end_inset
+
+, as well as in 
+\begin_inset Formula $J_{\pm}$
+\end_inset
+
+ and 
+\begin_inset Formula $H_{\pm}$
+\end_inset
+
+.
+ As a consequence, the expressions for the amplitude 
+\begin_inset Formula $|a|$
+\end_inset
+
+ and the frequency shift 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ in Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circulating lasing"
+
+\end_inset
+
+ will have 
+\begin_inset Formula $I_{+}$
+\end_inset
+
+ if 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ lases, and 
+\begin_inset Formula $I_{-}$
+\end_inset
+
+ if 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ lases.
+ Hence, if the symmetry is only 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ at threshold, the clockwise and counterclockwise lasing modes would also
+ have different amplitudes and frequencies, in addition to not being related
+ to each other by a mirror flip operation.
+ These facts allow us to imagine a situation in which there is a 
+\begin_inset Quotes eld
+\end_inset
+
+binary tree
+\begin_inset Quotes erd
+\end_inset
+
+ of allowed possibilities, e.g.
+ the first degenerate pair lases in clockwise mode, the second in counterclockwi
+se, and so on.
+\end_layout
+
+\begin_layout Standard
+Second, the presence of chirality affects the perturbation theory results
+ for standing-mode lasing solutions in Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+.
+ When the threshold symmetry is 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+, there exist standing-mode solutions of the form 
+\begin_inset Formula $\mathbf{E}\propto\mathbf{E}_{+}+e^{i\theta}\mathbf{E}_{-}$
+\end_inset
+
+ (Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:n != 4 lasing"
+
+\end_inset
+
+) when 
+\begin_inset Formula $n\neq4\ell$
+\end_inset
+
+, and standing modes of the form 
+\begin_inset Formula $\mathbf{E}\propto\mathbf{E}_{+}\pm\mathbf{E}_{-}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{+}\pm i\mathbf{E}_{-}$
+\end_inset
+
+ when 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+.
+ However, when the threshold symmetry is 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+, there are no longer any standing-mode lasing solutions for the 
+\begin_inset Formula $n\neq4\ell$
+\end_inset
+
+ case.
+ In the 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+ case, however, we have empirically found that the standing-mode solutions
+ 
+\begin_inset Formula $\mathbf{E}_{+}\pm\mathbf{E}_{-}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{+}\pm i\mathbf{E}_{-}$
+\end_inset
+
+ still exist (provided that the correct normalization and overall phase
+ of 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ is chosen appropriately).
+ However, because of the splitting in the values of the overlap integrals
+ 
+\begin_inset Formula $I_{\pm}$
+\end_inset
+
+, 
+\begin_inset Formula $J_{\pm}$
+\end_inset
+
+, and 
+\begin_inset Formula $K_{\pm}$
+\end_inset
+
+ for the 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ case, the stability eigenvalues (Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-analysis summary"
+
+\end_inset
+
+) for these standing-mode solutions will no longer be given by the simple
+ expressions in Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:stability eigenvalues for E+ + E-"
+
+\end_inset
+
+ and Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:stability eigenvalues for E+ + iE-"
+
+\end_inset
+
+, and will have to be numerically computed (nevertheless, we have empirically
+ found that these standing-mode solutions are still unstable).
 \end_layout
 
 \begin_layout Section
