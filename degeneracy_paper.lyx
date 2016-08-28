@@ -815,7 +815,7 @@ reference "sub:Forcing-the-degeneracy"
 
 .
  To fix this problem, we found a simple way to uniquely restore any degeneracy
- broken by the disdfgfdgfdgcretization in a way that both guarantees convergence
+ broken by the discretization in a way that both guarantees convergence
  to the correct solution as the discretization is refined and which generalizes
  to an arbitrary number of lasing modes (in Sec.
 \begin_inset space ~
@@ -824,7 +824,7 @@ reference "sub:Forcing-the-degeneracy"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Multi-mode-degenerate-lasing"
+reference "sub:multimode discretization method"
 
 \end_inset
 
@@ -2426,8 +2426,28 @@ reference "eq:single-mode-salt"
 \end_inset
 
  slightly above threshold.
- In order to find out which of these solutions is the one that actually
- lases in a real 
+ Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:n=5 numerical results"
+
+\end_inset
+
+ shows a comparison of numerical results for a 1d 
+\begin_inset Formula $C_{5\mathrm{v}}$
+\end_inset
+
+ laser with the predictions of perturbation theory.
+ 
+\end_layout
+
+\begin_layout Standard
+In order to find out which of these solutions is the one that actually lases
+ in a real 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
@@ -2452,7 +2472,6 @@ centerline{
 \end_layout
 
 \end_inset
-
 
 
 \begin_inset Graphics
@@ -2490,7 +2509,6 @@ centerline{
 \end_inset
 
 
-
 \begin_inset Formula $\hspace{1.24em}$
 \end_inset
 
@@ -2502,8 +2520,6 @@ centerline{
 
 \end_inset
 
-
-\lang english
 
 \begin_inset ERT
 status open
@@ -3386,7 +3402,7 @@ reference "eq:n != 4 lasing"
 \begin{align}
 \sigma_{1} & =0\nonumber \\
 \sigma_{1} & =0\nonumber \\
-\sigma_{1} & =2\Im\left(\frac{2I+J}{H}\right)\left|a\right|^{2}\\
+\sigma_{1} & =2\Im\left(\frac{2I+J}{H}\right)\left|a\right|^{2}\label{eq:n != 4 stability eigenvalues}\\
 \sigma_{1} & =-2\Im\left(\frac{J}{H}\right)\left|a\right|^{2},\nonumber 
 \end{align}
 
@@ -3588,6 +3604,161 @@ where
  Again, this zero eigenvalue becomes positive (unstable) for finite-size
  gain regions, and so this marginal case is unlikely to be of practical
  importance.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename n5fig/n5circ_stability.pdf
+	lyxscale 30
+	scale 40
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Graphics
+	filename n5fig/n5stand_stability.pdf
+	lyxscale 30
+	scale 42
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Stability eigenvalues for the circulating (top) and standing (bottom) lasing
+ modes from Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:n=5 numerical results"
+
+\end_inset
+
+.
+ For each lasing mode, the four lowest eigenvalues obtained using the numerical
+ procedure of Ref.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+ are matched against the four eigenvalues found in perturbation theory.
+ In the top panel, a zero eigenvalue is clearly seen, coming from the global
+ phase freedom.
+ The real parts of the third and fourth values of Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circulating eigenvalues"
+
+\end_inset
+
+ are equal, so two of the curves coincide.
+ None of the other eigenvalues go above the real axis, indicating that the
+ circulating mode is stable.
+ For the bottom panel, there are two zero eigenvalues, in agreement with
+ Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:n != 4 stability eigenvalues"
+
+\end_inset
+
+.
+ One of the other two eigenvalues becomes positive, indicating that the
+ standing lasing mode is not stable.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:n=5 stability results"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -6616,7 +6787,14 @@ name "fig:phc_stable"
 \end_layout
 
 \begin_layout Subsection
-Multimode case
+Multimode case 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:multimode discretization method"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
