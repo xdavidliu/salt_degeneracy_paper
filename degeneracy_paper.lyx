@@ -3647,7 +3647,14 @@ name "fig:lowQ_chirality"
 \end_layout
 
 \begin_layout Section
-Effects of chirality
+Effects of chirality 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Effects-of-chirality"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4078,8 +4085,227 @@ reference "eq:stability eigenvalues for E+ + iE-"
  found that these standing-mode solutions are still unstable).
 \end_layout
 
+\begin_layout Subsection
+Multimode lasing
+\end_layout
+
+\begin_layout Standard
+So far, the discussion and examples in this paper have dealt with the case
+ in which only one pair of degenerate modes are lasing.
+ The generalization to the case of multimode lasing (i.e.
+ multiple nondegenerate and degenerate lasing modes all lasing simultaneously)
+ is straightforward.
+ Since our method combines degenerate pairs into a single mode that is the
+ stable linear combination (as given by the perturbation theory in Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+, the multimode treatment is exactly the same as for SALT without degeneracies:
+ the degenerate pairs are always treated as a single mode.
+ As in previous work on SALT 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ge_steady-state_2010,tureci_self-consistent_2006,direct_salt"
+
+\end_inset
+
+, all lasing modes are solved simultaneously at first, and there the collective
+ effect of their spatial hole-burning is used to track the passive modes
+ and add any mode (degenerate or nondegenerate) that crosses threshold to
+ the list of lasing modes.
+ The only aspects of our method requiring generalization are the threshold
+ perturbation theory of Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+ and the QP method of Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Forcing-the-degeneracy"
+
+\end_inset
+
+.
+ For both aspects, we describe small tweaks to the methods presented in
+ those sections that make them valid for the case of multimode lasing.
+\end_layout
+
+\begin_layout Standard
+A general situation in which multimode-lasing is occuring can be described
+ by Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:salt general"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ge_steady-state_2010,tureci_self-consistent_2006"
+
+\end_inset
+
+, where there are 
+\begin_inset Formula $M$
+\end_inset
+
+ lasing modes (
+\begin_inset Formula $\mu=1,2,\ldots,M$
+\end_inset
+
+).
+ If we start with 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry and have lasing modes that are either circulating modes (as in
+ Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-analysis summary"
+
+\end_inset
+
+) or non-degenerate modes (partners of 
+\emph on
+real
+\emph default
+ 1d irreps without a corresponding complex-conjugate irrep of the opposite
+ chirality), then each of the 
+\begin_inset Formula $\left|\mathbf{E}_{\nu}\right|^{2}$
+\end_inset
+
+ terms has at least 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry, so 
+\begin_inset Formula $H$
+\end_inset
+
+ has 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry.
+ Suppose that the pump strength is at the threshold of mode 
+\begin_inset Formula $M$
+\end_inset
+
+ so that this mode has just started lasing, and the sum in 
+\begin_inset Formula $H$
+\end_inset
+
+ ranges from 
+\begin_inset Formula $\nu=1$
+\end_inset
+
+ to 
+\begin_inset Formula $\nu=M-1$
+\end_inset
+
+.
+ Then all results in Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Threshold-perturbation-theory"
+
+\end_inset
+
+ still hold, except with gain profile 
+\begin_inset Formula $F(\mathbf{x})$
+\end_inset
+
+ replaced by 
+\begin_inset Formula $FH$
+\end_inset
+
+.
+ While the gain profile is now 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetric rather than 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+, the presence of chiral degenerate pairs (which requires only 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry and Lorentz reciprocity, as explained in Appendix
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix allowed lasing modes"
+
+\end_inset
+
+) still remains, as explained in Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-analysis summary"
+
+\end_inset
+
+ (the arguments in that section do not assume 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry, so they still hold even if 
+\begin_inset Formula $F(\mathbf{x})$
+\end_inset
+
+ is replaced by a function with only 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry.
+\end_layout
+
 \begin_layout Section
-Symmetries broken by discretization
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ Symmetry broken by discretization
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:discretization_breaking"
@@ -4090,9 +4316,12 @@ name "sec:discretization_breaking"
 \end_layout
 
 \begin_layout Standard
-In many cases the geometry we are trying to solve has some symmetry, which
- results in a pair of degenerate modes, but the degeneracy is broken when
- the geometry is approximated by a discretized grid for numerical solution
+In many cases the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+-symmetric geometry we are trying to solve has a degeneracy that is broken
+ when the geometry is approximated by a discretized grid for numerical solution
  on a computer 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4514,12 +4743,8 @@ name "fig:cylinder_resolution"
 
 \end_layout
 
-\begin_layout Section
-Numerical Degenerate SALT
-\end_layout
-
 \begin_layout Subsection
-Restoring the degeneracy using a dielectric perturbation
+Restoring the degeneracy using a perturbation to the dielectric 
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Forcing-the-degeneracy"
@@ -5619,8 +5844,12 @@ name "fig:even_cylinder_intensity"
 
 \end_layout
 
+\begin_layout Subsection
+Examples
+\end_layout
+
 \begin_layout Standard
-We show another example, of a hexagonal cavity as shown in Fig.
+An example of a hexagonal cavity is shown in Fig.
 \begin_inset space ~
 \end_inset
 
@@ -5915,7 +6144,7 @@ reference "eq:tensor_delta_epsilon"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:chiral_projection"
+reference "eq:chiral definition"
 
 \end_inset
 
@@ -6134,227 +6363,8 @@ name "fig:phc_stable"
 
 \end_layout
 
-\begin_layout Section
-Multi-mode degenerate lasing
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Multi-mode-degenerate-lasing"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-So far, the discussion and examples in this paper have dealt with the case
- in which only one pair of degenerate modes are lasing.
- The generalization to the case of multimode lasing (i.e.
- multiple nondegenerate and degenerate lasing modes all lasing simultaneously)
- is straightforward.
- Since our method combines degenerate pairs into a single mode that is the
- stable linear combination (as given by the perturbation theory in Sec.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Threshold-perturbation-theory"
-
-\end_inset
-
-, the multimode treatment is exactly the same as for SALT without degeneracies:
- the degenerate pairs are always treated as a single mode.
- As in previous work on SALT 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ge_steady-state_2010,tureci_self-consistent_2006,direct_salt"
-
-\end_inset
-
-, all lasing modes are solved simultaneously at first, and there the collective
- effect of their spatial hole-burning is used to track the passive modes
- and add any mode (degenerate or nondegenerate) that crosses threshold to
- the list of lasing modes.
- The only aspects of our method requiring generalization are the threshold
- perturbation theory of Sec.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Threshold-perturbation-theory"
-
-\end_inset
-
- and the QP method of Sec.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Forcing-the-degeneracy"
-
-\end_inset
-
-.
- For both aspects, we describe small tweaks to the methods presented in
- those sections that make them valid for the case of multimode lasing.
-\end_layout
-
-\begin_layout Standard
-A general situation in which multimode-lasing is occuring can be described
- by Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:salt general"
-
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ge_steady-state_2010,tureci_self-consistent_2006"
-
-\end_inset
-
-, where there are 
-\begin_inset Formula $M$
-\end_inset
-
- lasing modes (
-\begin_inset Formula $\mu=1,2,\ldots,M$
-\end_inset
-
-).
- If we start with 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- symmetry and have lasing modes that are either circulating modes (as in
- Sec.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Stability-analysis summary"
-
-\end_inset
-
-) or non-degenerate modes (partners of 
-\emph on
-real
-\emph default
- 1d irreps without a corresponding complex-conjugate irrep of the opposite
- chirality), then each of the 
-\begin_inset Formula $\left|\mathbf{E}_{\nu}\right|^{2}$
-\end_inset
-
- terms has at least 
-\begin_inset Formula $C_{n}$
-\end_inset
-
- symmetry, so 
-\begin_inset Formula $H$
-\end_inset
-
- has 
-\begin_inset Formula $C_{n}$
-\end_inset
-
- symmetry.
- Suppose that the pump strength is at the threshold of mode 
-\begin_inset Formula $M$
-\end_inset
-
- so that this mode has just started lasing, and the sum in 
-\begin_inset Formula $H$
-\end_inset
-
- ranges from 
-\begin_inset Formula $\nu=1$
-\end_inset
-
- to 
-\begin_inset Formula $\nu=M-1$
-\end_inset
-
-.
- Then all results in Sec.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Threshold-perturbation-theory"
-
-\end_inset
-
- still hold, except with gain profile 
-\begin_inset Formula $F(\mathbf{x})$
-\end_inset
-
- replaced by 
-\begin_inset Formula $FH$
-\end_inset
-
-.
- While the gain profile is now 
-\begin_inset Formula $C_{n}$
-\end_inset
-
- symmetric rather than 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
-, the presence of chiral degenerate pairs (which requires only 
-\begin_inset Formula $C_{n}$
-\end_inset
-
- symmetry and Lorentz reciprocity, as explained in Appendix
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec: appendix allowed lasing modes"
-
-\end_inset
-
-) still remains, as explained in Sec.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Stability-analysis summary"
-
-\end_inset
-
- (the arguments in that section do not assume 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- symmetry, so they still hold even if 
-\begin_inset Formula $F(\mathbf{x})$
-\end_inset
-
- is replaced by a function with only 
-\begin_inset Formula $C_{n}$
-\end_inset
-
- symmetry.
+\begin_layout Subsection
+Multimode case
 \end_layout
 
 \begin_layout Standard
@@ -6476,6 +6486,130 @@ Concluding Remarks
 
 \begin_layout Standard
 To do...
+ In a 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ geometry, there are 1d irreps and 2d irreps.
+ So far, we have considered the case where the first mode to lase belongs
+ to a 2d irrep, and hence will lase in a chiral linear combination (Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:chiral definition"
+
+\end_inset
+
+), and will break the mirror symmetry (as explained in Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Effects-of-chirality"
+
+\end_inset
+
+).
+ However, if the first mode to lase, which we denote 
+\begin_inset Formula $\mathbf{E}_{0}$
+\end_inset
+
+, belongs instead to a 1d irrep, then the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry is still maintained.
+ This is eigenfunctions belonging to 1d irreps of a 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry group are also eigenfunctions of every element of the group, with
+ eigenvalue 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "inui_group,tinkham"
+
+\end_inset
+
+.
+ This means that the intensity pattern 
+\begin_inset Formula $|\mathbf{E}_{0}|^{2}$
+\end_inset
+
+ will transform with eigenvalue 1, and hence will have 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry.
+ 
+\end_layout
+
+\begin_layout Standard
+Previously, circulating lasing modes in the ring laser have been found to
+ be unstable far above threshold for certain parameter regimes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+.
+ If such unstable circulating modes far above threshold are also found for
+ 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ geometries with finite 
+\begin_inset Formula $n$
+\end_inset
+
+, then this implies that we can construct situations where the circulating
+ mode is unstable even 
+\emph on
+slightly 
+\emph default
+above threshold, since we can just use an external gain profile 
+\begin_inset Formula $D_{\mathrm{t}}(\mathbf{x})$
+\end_inset
+
+ that is equal to the 
+\emph on
+total 
+\emph default
+inversion 
+\begin_inset Formula $D(\mathbf{x})$
+\end_inset
+
+, including spatial hole-burning, in the case with the unstable circulating
+ mode far above threshold.
+ However, in this case 
+\begin_inset Formula $D_{\mathrm{t}}(\mathbf{x})$
+\end_inset
+
+ would have 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry, so it is still unclear whether it is possible for a pair of circulati
+ng modes 
+\begin_inset Formula $\mathbf{E}_{\pm}$
+\end_inset
+
+ that are mirror flips of each other [or alternatively are solutions to
+ the threshold SALT equation with a mirror-symmetric gain profile 
+\begin_inset Formula $D_{\mathrm{t}}(\mathbf{x})$
+\end_inset
+
+], to be unstable slightly above threshold.
 \end_layout
 
 \begin_layout Section
@@ -7730,7 +7864,19 @@ reference "eq:eigenpair expansion"
 \end_inset
 
 .
- At zeroth order, we have
+ 
+\end_layout
+
+\begin_layout Subsection*
+Zeroth and lowest (
+\begin_inset Formula $d^{1/2}$
+\end_inset
+
+) orders
+\end_layout
+
+\begin_layout Standard
+At zeroth order, we have
 \begin_inset Formula 
 \begin{equation}
 \left(\mathsf{C}\sigma_{0}^{2}+\mathsf{B}_{0}\sigma_{0}+\mathsf{A}_{0}\right)\mathsf{x}_{0}=0,\label{eq:zeroth order quadratic}
@@ -7984,6 +8130,14 @@ The vector
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Subsection*
+First order
+\end_layout
+
+\begin_layout Standard
 At the next order, 
 \begin_inset Formula $\mathcal{O}(d)$
 \end_inset
@@ -8282,6 +8436,10 @@ which is a
 .
 \end_layout
 
+\begin_layout Subsection*
+Closed-form stability eigenvalues
+\end_layout
+
 \begin_layout Standard
 We now diagonalize Eq.
 \begin_inset space ~
@@ -8306,7 +8464,15 @@ reference "sec:Threshold-perturbation-theory"
 \end_inset
 
 .
- For the circulating solution in Eq.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Circulating lasing mode
+\end_layout
+
+\begin_layout Standard
+For the circulating solution in Eq.
 \begin_inset space ~
 \end_inset
 
@@ -8413,6 +8579,14 @@ with
 \end{array}\right).
 \end{equation}
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Standing modes, 
+\begin_inset Formula $n\neq4\ell$
 \end_inset
 
 
@@ -8563,6 +8737,14 @@ and
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection*
+Standing modes, 
+\begin_inset Formula $n=4\ell$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
