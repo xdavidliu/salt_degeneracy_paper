@@ -1691,18 +1691,7 @@ where
 \begin_inset Formula $\gamma(\omega)=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
 \end_inset
 
- (we will comment further on the multi-mode case in Sec.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Multi-mode-degenerate-lasing"
-
-\end_inset
-
-).
+.
  The first lasing threshold occurs when 
 \begin_inset Formula $D_{0}$
 \end_inset
@@ -2446,6 +2435,224 @@ reference "eq:single-mode-salt"
  It turns out that this test can also be done mostly analytically, using
  perturbation theory on the linearized Maxwell--Bloch equations, as we will
  present in the next section.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+
+\begin_inset Graphics
+	filename n5fig/n5amp.pdf
+	lyxscale 30
+	scale 40
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+
+\begin_inset Formula $\hspace{1.24em}$
+\end_inset
+
+
+\begin_inset Graphics
+	filename n5fig/n5omega.pdf
+	lyxscale 30
+	scale 41
+
+\end_inset
+
+
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Lasing amplitudes (top) and frequency shifts (bottom) for 1d laser (periodic
+ geometry with 
+\begin_inset Formula $0<x<1$
+\end_inset
+
+) with uniform dielectric 
+\begin_inset Formula $\varepsilon(x)=1+0.3i$
+\end_inset
+
+ and gain profile 
+\begin_inset Formula $D_{0}(x)=D_{\mathrm{t}}(1+d)[1+0.2\cos(2\pi nx)]$
+\end_inset
+
+.
+ Here, we have chosen 
+\begin_inset Formula $n=5$
+\end_inset
+
+, so the gain has 
+\begin_inset Formula $C_{5\mathrm{v}}$
+\end_inset
+
+ symmetry.
+ Data points were obtained by solving Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:single-mode-salt"
+
+\end_inset
+
+ numerically using Newton's method 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "direct_salt"
+
+\end_inset
+
+, while theoretical lines were provided by Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circulating lasing"
+
+\end_inset
+
+ and Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:n != 4 lasing"
+
+\end_inset
+
+.
+ For the standing mode, numerical results are independent of relative phase
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+, as predicted by Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:n != 4 lasing"
+
+\end_inset
+
+.
+ Agreement between numerics and theory is excellent for mode amplitudes
+ (up to at least 
+\begin_inset Formula $d\approx100$
+\end_inset
+
+, and possibly much higher) but only good at 
+\begin_inset Formula $d<0.01$
+\end_inset
+
+ for frequency shifts.
+ For the numerical data in the amplitude plot, only the magnitude of the
+ 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ component (obtained by taking the normalized inner product of the lasing
+ mode 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ with 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+) of both the circulating and standing modes are shown.
+ For the 
+\begin_inset Formula $\mathbf{E}_{-}$
+\end_inset
+
+ component, the circulating mode had magnitude zero and the standing mode
+ had the same magnitude as the 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ component.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:n=5 numerical results"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
