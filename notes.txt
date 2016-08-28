@@ -1,8 +1,1 @@
-Cnv is group of n-fold rotations and mirror planes. You break the handedness and and you get Cn group, i.e. figure 2 right panel.
-
-(first paragraph less technical, fewer equations; introduction)
-
-main points want to make in this section:
-if circulating mode lases, passive pole stays degenerate
-
 put numerical julia confirmation, plot omega1 and a's, in main paper.
