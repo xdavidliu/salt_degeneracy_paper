@@ -946,9 +946,9 @@ key "fu_multifrequency_1991,tureci_self-consistent_2006"
 
  along with an ansatz of a finite number of lasing modes
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathbf{E}^{+}(\mathbf{x},t)=\sum_{\nu}\mathbf{E}_{\nu}(\mathbf{x})e^{-i\omega_{\nu}t},
-\]
+\end{equation}
 
 \end_inset
 
@@ -1379,9 +1379,9 @@ reference "eq:D(x) inversion"
 
  will have
 \begin_inset Formula 
-\[
+\begin{equation}
 \left|\gamma_{1}\mathbf{E}_{1}\right|^{2}+\left|\gamma_{2}\mathbf{E}_{2}\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}
-\]
+\end{equation}
 
 \end_inset
 
@@ -1434,8 +1434,8 @@ reference "eq:E123"
  as a single mode that satisfies the equation
 \begin_inset Formula 
 \begin{align}
--\nabla\times\nabla\times\mathbf{E} & =\omega_{1}^{2}\left(\varepsilon+D\gamma_{1}\right)\mathbf{E}\label{eq:1mode_salt}\\
-D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\gamma_{1}\mathbf{E}\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}\right)},\nonumber 
+-\nabla\times\nabla\times\mathbf{E} & =\omega_{1}^{2}\left(\varepsilon+D\gamma_{1}\right)\mathbf{E}\nonumber \\
+D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\gamma_{1}\mathbf{E}\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}\right)},\label{eq:1mode_salt}
 \end{align}
 
 \end_inset
@@ -1447,8 +1447,8 @@ separately
 satisfying the two equations
 \begin_inset Formula 
 \begin{align}
--\nabla\times\nabla\times\mathbf{E}_{1,2} & =\omega_{1}^{2}\left(\varepsilon+D\gamma_{1}\right)\mathbf{E}_{1,2}\label{eq:2mode_salt}\\
-D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\gamma_{1}(\mathbf{E}_{1}+\mathbf{E}_{2})\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}\right)}.\nonumber 
+-\nabla\times\nabla\times\mathbf{E}_{1,2} & =\omega_{1}^{2}\left(\varepsilon+D\gamma_{1}\right)\mathbf{E}_{1,2}\nonumber \\
+D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\gamma_{1}(\mathbf{E}_{1}+\mathbf{E}_{2})\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}\right)}.\label{eq:2mode_salt}
 \end{align}
 
 \end_inset
@@ -2002,7 +2002,7 @@ reference "sec: appendix allowed lasing modes"
 :
 \begin_inset Formula 
 \begin{multline}
-0=\int d^{3}x\mathbf{E}_{1,2}\cdot\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right)\times\\
+0=\int d^{3}x\,\mathbf{E}_{1,2}\cdot\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right)\times\\
 \left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}})+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(1-\left|a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right|^{2}\right)\right]\label{eq:a eigenproblem}
 \end{multline}
 
@@ -2606,9 +2606,9 @@ reference "eq:delta"
 
  can be written as a matrix equation
 \begin_inset Formula 
-\[
+\begin{equation}
 \left(\mathsf{C}\frac{d^{2}}{dt^{2}}+\mathsf{B}\frac{d}{dt}+\mathsf{A}\right)\mathsf{u}(t)=0
-\]
+\end{equation}
 
 \end_inset
 
@@ -2629,7 +2629,7 @@ key "ref-tisseur_quadratic_review"
 
 where the unknown vector is
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathsf{u}(t)=\left(\begin{array}{c}
 \Re\delta\vec{E}\\
 \Im\delta\vec{E}\\
@@ -2637,7 +2637,7 @@ where the unknown vector is
 \Im\delta\vec{P}\\
 \delta\vec{D}
 \end{array}\right)=\Re\left(\mathsf{x}e^{\sigma t}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -3176,12 +3176,12 @@ reference "eq:n != 4 lasing"
 
 , the eigenvalues are given by
 \begin_inset Formula 
-\begin{align*}
-\sigma_{1} & =0\\
-\sigma_{1} & =0\\
+\begin{align}
+\sigma_{1} & =0\nonumber \\
+\sigma_{1} & =0\nonumber \\
 \sigma_{1} & =2\Im\left(\frac{2I+J}{H}\right)\left|a\right|^{2}\\
-\sigma_{1} & =-2\Im\left(\frac{J}{H}\right)\left|a\right|^{2},
-\end{align*}
+\sigma_{1} & =-2\Im\left(\frac{J}{H}\right)\left|a\right|^{2},\nonumber 
+\end{align}
 
 \end_inset
 
@@ -4008,8 +4008,8 @@ reference "eq:n != 4 lasing"
 \begin_inset Formula $n=4\ell$
 \end_inset
 
- case, however, we have empirically found that the standing-mode solutions
- 
+ case, however, we have found using semi-analytically that the standing-mode
+ solutions 
 \begin_inset Formula $\mathbf{E}_{+}\pm\mathbf{E}_{-}$
 \end_inset
 
@@ -4672,10 +4672,10 @@ straddle
 \begin_layout Standard
 Consider two nonlasing modes that satisfy
 \begin_inset Formula 
-\begin{align*}
-0 & =-\nabla\times\nabla\times\mathbf{E}_{\mu}+\omega_{\mu}^{2}\varepsilon_{\mu}\mathbf{E}_{\mu}\\
+\begin{align}
+0 & =-\nabla\times\nabla\times\mathbf{E}_{\mu}+\omega_{\mu}^{2}\varepsilon_{\mu}\mathbf{E}_{\mu}\nonumber \\
 \varepsilon_{\mu} & \equiv\varepsilon_{c}+\Dt\gamma(\omega_{\mu})F
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -4712,7 +4712,7 @@ key "ref-raman,ref-microcavity,ref-adi"
 
 \begin_inset Formula 
 \begin{equation}
-\delta\omega_{\mu}=-\frac{\int\mathbf{E}_{\mu}\cdot\delta\varepsilon\mathbf{E}_{\mu}}{\int\mathbf{E}_{\mu}\cdot\left(\frac{2\varepsilon_{\mu}}{\omega_{\mu}}+\frac{\partial\varepsilon_{\mu}}{\partial\omega_{\mu}}\right)\mathbf{E}_{\mu}}.\label{eq:delta_omega_QP}
+\delta\omega_{\mu}=-\frac{\int d^{3}x\,\mathbf{E}_{\mu}\cdot\delta\varepsilon\mathbf{E}_{\mu}}{\int d^{3}x\,\mathbf{E}_{\mu}\cdot\left(\frac{2\varepsilon_{\mu}}{\omega_{\mu}}+\frac{\partial\varepsilon_{\mu}}{\partial\omega_{\mu}}\right)\mathbf{E}_{\mu}}.\label{eq:delta_omega_QP}
 \end{equation}
 
 \end_inset
@@ -4812,9 +4812,9 @@ key "taflove"
  at all the grid points.
  If we take this option, then the norm we minimize would be
 \begin_inset Formula 
-\[
-\left\Vert \delta\varepsilon\right\Vert _{2}^{2}=\int d^{3}\mathbf{x}\left\Vert \overleftrightarrow{\delta\varepsilon}(\mathbf{x})\right\Vert _{F}^{2},
-\]
+\begin{equation}
+\left\Vert \delta\varepsilon\right\Vert _{2}^{2}=\int d^{3}x\,\left\Vert \overleftrightarrow{\delta\varepsilon}(\mathbf{x})\right\Vert _{F}^{2},
+\end{equation}
 
 \end_inset
 
@@ -4831,9 +4831,9 @@ key "trefethen"
 
  is defined as
 \begin_inset Formula 
-\[
+\begin{equation}
 \left\Vert \overleftrightarrow{\delta\varepsilon}(\mathbf{x})\right\Vert _{F}^{2}\equiv\left|\delta\varepsilon_{xx}(\mathbf{x})\right|^{2}+\left|\delta\varepsilon_{yy}(\mathbf{x})\right|^{2}+\left|\delta\varepsilon_{zz}(\mathbf{x})\right|^{2}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -4847,9 +4847,9 @@ Whether we take
 
  then becomes
 \begin_inset Formula 
-\[
+\begin{equation}
 (p_{2}-p_{1})^{T}\delta\varepsilon=\omega_{2}-\omega_{1}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -4867,7 +4867,7 @@ key "boyd"
 
 , which in this case is
 \begin_inset Formula 
-\[
+\begin{equation}
 \left(\begin{array}{cccc}
 1 & 0 & q^{R} & q^{I}\\
 0 & 1 & -q^{I} & q^{R}\\
@@ -4884,7 +4884,7 @@ key "boyd"
 \omega_{2}^{R}-\omega_{1}^{R}\\
 \omega_{2}^{I}-\omega_{1}^{I}
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -5351,11 +5351,11 @@ reference "eq:delta_omega_QP"
 
  we now have
 \begin_inset Formula 
-\begin{align*}
-\delta\omega & =-\frac{\int\mathbf{E}\cdot\left(\delta\varepsilon+\Dt\gamma(\omega_{\mu})F\delta H\right)\mathbf{E}}{\int\mathbf{E}\cdot\left(\frac{2\varepsilon}{\omega}+\frac{\partial\varepsilon}{\partial\omega}\right)\mathbf{E}}\\
+\begin{align}
+\delta\omega & =-\frac{\int d^{3}x\,\mathbf{E}\cdot\left(\delta\varepsilon+\Dt\gamma(\omega_{\mu})F\delta H\right)\mathbf{E}}{\int d^{3}x\,\mathbf{E}\cdot\left(\frac{2\varepsilon}{\omega}+\frac{\partial\varepsilon}{\partial\omega}\right)\mathbf{E}}\nonumber \\
 \varepsilon & \equiv\varepsilon_{c}+\Dt\gamma(\omega)FH\\
-\delta H & \equiv\frac{1}{1+\left|\mathbf{E}+\delta\mathbf{E}\right|^{2}}-\frac{1}{1+\left|\mathbf{E}\right|^{2}}.
-\end{align*}
+\delta H & \equiv\frac{1}{1+\left|\mathbf{E}+\delta\mathbf{E}\right|^{2}}-\frac{1}{1+\left|\mathbf{E}\right|^{2}}.\nonumber 
+\end{align}
 
 \end_inset
 
@@ -6418,9 +6418,9 @@ reference "eq:salt general"
 
  will become
 \begin_inset Formula 
-\[
+\begin{equation}
 \varepsilon_{\mu}(\mathbf{x})=\varepsilon(\mathbf{x})+\delta\varepsilon_{\mu}(\mathbf{x})+\frac{D_{0}(\mathbf{x})\gamma(\omega_{\mu})}{1+\gamma_{\parallel}^{-1}\sum\left|\gamma_{\nu}\mathbf{E}_{\nu}(\mathbf{x})\right|^{2}}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -6545,9 +6545,9 @@ key "ref-adi"
 
 )
 \begin_inset Formula 
-\[
+\begin{equation}
 \hat{L}(\omega)\equiv-\nabla\times\frac{1}{\mu(\mathbf{x},\omega)}\nabla\times+\omega^{2}\varepsilon(\mathbf{x},\omega)
-\]
+\end{equation}
 
 \end_inset
 
@@ -6698,9 +6698,9 @@ Maxwell solutions, except for
 
  is real) can be expanded in this basis:
 \begin_inset Formula 
-\[
+\begin{equation}
 \left(\mathbf{E}^{+}\right)^{\star}=\sum b_{j}\mathbf{E}_{j}^{-},
-\]
+\end{equation}
 
 \end_inset
 
@@ -6780,9 +6780,9 @@ key "phc_book"
 .
  Now write
 \begin_inset Formula 
-\begin{align*}
-\int\left|\mathbf{E}^{+}\right|^{2} & =\sum b_{j}\left(\mathbf{E}^{+},\mathbf{E}_{j}^{-}\right).
-\end{align*}
+\begin{align}
+\int d^{3}x\,\left|\mathbf{E}^{+}\right|^{2} & =\sum b_{j}\left(\mathbf{E}^{+},\mathbf{E}_{j}^{-}\right).
+\end{align}
 
 \end_inset
 
@@ -6966,10 +6966,10 @@ reference "eq:threshold salt"
 
 , we obtain
 \begin_inset Formula 
-\begin{multline*}
+\begin{multline}
 \left[\nabla\times\nabla\times-\:\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}\\
 =\left\{ \omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left[\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{0}\gamma_{\mathrm{t}}\right)\right]+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(1-\left|\mathbf{f}\right|^{2}\right)\right\} \mathbf{f}
-\end{multline*}
+\end{multline}
 
 \end_inset
 
@@ -6995,9 +6995,9 @@ reference "eq:a eigenproblem"
 
 , where we have used the fact that 
 \begin_inset Formula 
-\[
-\int d^{3}x\mathbf{E}_{1,2}\cdot\left[\nabla\times\nabla\times-\:\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}=0
-\]
+\begin{equation}
+\int d^{3}x\,\mathbf{E}_{1,2}\cdot\left[\nabla\times\nabla\times-\:\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}=0
+\end{equation}
 
 \end_inset
 
@@ -7099,17 +7099,17 @@ reference "eq:chiral definition"
 
 , the rest of the terms become
 \begin_inset Formula 
-\[
+\begin{equation}
 a_{\mp}\left(\omega_{1}H+G_{D}\right),
-\]
+\end{equation}
 
 \end_inset
 
 where we have defined
 \begin_inset Formula 
 \begin{align}
-G_{\varepsilon} & \equiv\int d^{3}x\varepsilon(\mathbf{x})\mathbf{E}_{+}\cdot\mathbf{E}_{-}\nonumber \\
-G_{D} & \equiv\int d^{3}xD_{\mathrm{t}}(\mathbf{x})\mathbf{E}_{+}\cdot\mathbf{E}_{-}.\label{eq:G and H definitions}\\
+G_{\varepsilon} & \equiv\int d^{3}x\,\varepsilon(\mathbf{x})\mathbf{E}_{+}\cdot\mathbf{E}_{-}\nonumber \\
+G_{D} & \equiv\int d^{3}x\,D_{\mathrm{t}}(\mathbf{x})\mathbf{E}_{+}\cdot\mathbf{E}_{-}.\label{eq:G and H definitions}\\
 H & \equiv(\omega_{\mathrm{t}}\gamma_{\mathrm{t}})^{-1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left\{ \omega_{\mathrm{t}}^{2}\left(G_{\varepsilon}+G_{D}\gamma_{\mathrm{t}}\right)\right\} .\nonumber 
 \end{align}
 
@@ -7135,9 +7135,9 @@ For the intensity term, we have
  symmetry, so by symmetry arguments, the only surviving integrals are
 \begin_inset Formula 
 \begin{align}
-I_{\pm} & =\int D_{\mathrm{t}}\left|\vec{E}_{\pm}\right|^{2}\vec{E}_{+}\cdot\vec{E}_{-}\nonumber \\
-J_{\pm} & =\int D_{\mathrm{t}}(\vec{E}_{\pm}^{\star}\cdot\vec{E}_{\mp})\vec{E}_{\pm}\cdot\vec{E}_{\pm}\label{eq:I J K definitions}\\
-K_{\pm} & =\int D_{\mathrm{t}}(\vec{E}_{\mp}^{\star}\cdot\vec{E}_{\pm})\vec{E}_{\pm}\cdot\vec{E}_{\pm}.\nonumber 
+I_{\pm} & =\int d^{3}x\,D_{\mathrm{t}}\left|\vec{E}_{\pm}\right|^{2}\vec{E}_{+}\cdot\vec{E}_{-}\nonumber \\
+J_{\pm} & =\int d^{3}x\,D_{\mathrm{t}}(\vec{E}_{\pm}^{\star}\cdot\vec{E}_{\mp})\vec{E}_{\pm}\cdot\vec{E}_{\pm}\label{eq:I J K definitions}\\
+K_{\pm} & =\int d^{3}x\,D_{\mathrm{t}}(\vec{E}_{\mp}^{\star}\cdot\vec{E}_{\pm})\vec{E}_{\pm}\cdot\vec{E}_{\pm}.\nonumber 
 \end{align}
 
 \end_inset
@@ -7252,9 +7252,9 @@ reference "eq:reduced a plus minus"
 
  then yields
 \begin_inset Formula 
-\[
+\begin{equation}
 \left|a_{+}\right|^{2}=\frac{\omega_{1}H+G_{D}}{I_{+}}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -7310,9 +7310,9 @@ reference "eq:circulating lasing"
 
  must be a positive number also gives a cutoff condition
 \begin_inset Formula 
-\[
+\begin{equation}
 \Re(G_{D}/I_{\pm})>\frac{\Im\left(G_{D}/I_{\pm}\right)}{\Im\left(H/I_{\pm}\right)}\Re(H/I_{\pm}).
-\]
+\end{equation}
 
 \end_inset
 
@@ -7351,9 +7351,9 @@ reference "eq:reduced a plus minus"
 
 , and we obtain
 \begin_inset Formula 
-\[
+\begin{equation}
 \left|a_{\mp}\right|^{2}I_{\mp}+\left|a_{\pm}\right|^{2}\left(I_{\pm}+J_{\pm}+z^{\mp2}K_{\pm}\right)=\omega_{1}H+G_{D}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -7363,17 +7363,17 @@ Solving this linear equation for the unknowns
 
 , we obtain
 \begin_inset Formula 
-\[
+\begin{equation}
 \left|a_{\pm}\right|^{2}=(\omega_{1}H+G_{D})T_{\pm},
-\]
+\end{equation}
 
 \end_inset
 
 where
 \begin_inset Formula 
-\[
+\begin{equation}
 T_{\pm}=\frac{J_{\mp}+z^{\pm2}K_{\mp}}{\left(I_{+}+J_{+}+z^{-2}K_{+}\right)\left(I_{-}+J_{-}+z^{2}K_{-}\right)-I_{+}I_{-}}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -7619,7 +7619,7 @@ reference "eq:quadratic eigenproblem"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathsf{A}=\left(\begin{array}{ccccc}
 \Delta & -\varepsilon_{\mathrm{I}}\omega^{2} & \omega^{2} & 0 & 0\\
 \varepsilon_{\mathrm{I}}\omega^{2} & \Delta & 0 & \omega^{2} & 0\\
@@ -7627,7 +7627,7 @@ reference "eq:quadratic eigenproblem"
 0 & \gamma_{\perp}D & -\gamma_{\perp} & \omega_{a}-\omega & \gamma_{\perp}\mathbf{E}_{\mathrm{I}}\\
 -\mathbf{P}_{\mathrm{I}} & \mathbf{P}_{\mathrm{R}} & \mathbf{E}_{\mathrm{I}} & -\mathbf{E}_{\mathrm{R}} & \gamma_{\parallel}
 \end{array}\right),
-\]
+\end{equation}
 
 \end_inset
 
@@ -7645,7 +7645,7 @@ where
 
 , 
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathsf{B}=\left(\begin{array}{ccccc}
 -2\varepsilon_{\mathrm{I}}\omega & -2\varepsilon_{\mathrm{R}}\omega & 0 & -2\omega & 0\\
 2\varepsilon_{\mathrm{R}}\omega & -2\varepsilon_{\mathrm{I}}\omega & 2\omega & 0 & 0\\
@@ -7653,13 +7653,13 @@ where
 0 & 0 & -1 & 0 & 0\\
 0 & 0 & 0 & 0 & 1
 \end{array}\right),
-\]
+\end{equation}
 
 \end_inset
 
 and
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathsf{C}=\left(\begin{array}{ccccc}
 -\varepsilon_{\mathrm{R}} & \varepsilon_{\mathrm{I}} & -1 & 0 & 0\\
 -\varepsilon_{\mathrm{I}} & -\varepsilon_{\mathrm{R}} & 0 & -1 & 0\\
@@ -7667,7 +7667,7 @@ and
 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -7817,7 +7817,7 @@ reference "eq:quadratic eigenproblem"
 
 We now define the vectors
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathsf{w}_{j}=\left(\begin{array}{c}
 \Re\vec{e}_{j}\\
 -\Im\vec{e}_{j}\\
@@ -7825,7 +7825,7 @@ We now define the vectors
 -\omega_{\mathrm{t}}^{2}\Im\left(\vec{e}_{j}\gamma_{\mathrm{t}}\right)/\gamma_{\perp}\\
 0
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -7913,9 +7913,9 @@ Next, we compute
 
  is the last, and by straightforward evaluation, we define this as
 \begin_inset Formula 
-\[
+\begin{equation}
 g_{k}\equiv2D_{\mathrm{t}}\left|\gamma_{\mathrm{t}}\right|\sqrt{\gamma_{\parallel}}\Re\left[\vec{e}_{k}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].
-\]
+\end{equation}
 
 \end_inset
 
@@ -7936,7 +7936,7 @@ reference "eq:half order quadratic"
 
 , we obtain
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathsf{A}_{0}\mathsf{x}_{1/2}=-\mathsf{A}_{1/2}\sum b_{k}\mathsf{v}_{k}=\left(\begin{array}{c}
 0\\
 0\\
@@ -7944,7 +7944,7 @@ reference "eq:half order quadratic"
 0\\
 -\sum b_{k}g_{k}
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -7972,7 +7972,7 @@ The vector
 
  that
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathsf{x}_{1/2}=\left(\begin{array}{c}
 0\\
 0\\
@@ -7980,7 +7980,7 @@ The vector
 0\\
 -\gamma_{\parallel}^{-1}\sum b_{k}g_{k}
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -8014,18 +8014,18 @@ Again, act on this equation with
 .
  By direct evaluation, we have
 \begin_inset Formula 
-\begin{multline*}
-\mathsf{w}_{j}^{T}\mathsf{A}_{1}\mathsf{v}_{k}=\Re\left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]+\\
-\Re\left[\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}\int d^{3}xD_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|\vec{f}\right|^{2}\right)\vec{e}_{k}\right]
-\end{multline*}
+\begin{multline}
+\mathsf{w}_{j}^{T}\mathsf{A}_{1}\mathsf{v}_{k}=\Re\left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\,\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]+\\
+\Re\left[\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}\int d^{3}x\,D_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|\vec{f}\right|^{2}\right)\vec{e}_{k}\right]
+\end{multline}
 
 \end_inset
 
 and
 \begin_inset Formula 
-\[
-\mathsf{w}_{j}^{T}\mathsf{B}_{0}\mathsf{v}_{k}=-\Im\left[\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right].
-\]
+\begin{equation}
+\mathsf{w}_{j}^{T}\mathsf{B}_{0}\mathsf{v}_{k}=-\Im\left[\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\,\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right].
+\end{equation}
 
 \end_inset
 
@@ -8042,12 +8042,12 @@ reference "sec: appendix allowed lasing modes"
 
 , it is straightforward to show that 
 \begin_inset Formula 
-\[
-\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}=\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}H\left(\begin{array}{cc}
+\begin{equation}
+\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\,\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}=\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}H\left(\begin{array}{cc}
 \mathsf{X} & i\mathsf{X}\\
 i\mathsf{X} & -\mathsf{X}
 \end{array}\right)_{jk},
-\]
+\end{equation}
 
 \end_inset
 
@@ -8068,19 +8068,19 @@ reference "eq:G and H definitions"
 
  and
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathsf{X}\equiv\left(\begin{array}{cc}
 0 & 1\\
 1 & 0
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
 Next, we have
 \begin_inset Formula 
-\begin{multline*}
-\int D_{\mathrm{t}}\vec{e}_{j}\cdot\left|\vec{f}\right|^{2}\vec{e}_{k}=\left(\begin{array}{cc}
+\begin{multline}
+\int d^{3}x\,D_{\mathrm{t}}\vec{e}_{j}\cdot\left|\vec{f}\right|^{2}\vec{e}_{k}=\left(\begin{array}{cc}
 \mathsf{M} & i\mathsf{M}\\
 i\mathsf{M} & -\mathsf{M}
 \end{array}\right)_{jk}+\\
@@ -8088,18 +8088,18 @@ i\mathsf{M} & -\mathsf{M}
 \mathsf{X} & i\mathsf{X}\\
 i\mathsf{X} & -\mathsf{X}
 \end{array}\right)_{jk}
-\end{multline*}
+\end{multline}
 
 \end_inset
 
 where
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathsf{M}\equiv\left(\begin{array}{cc}
 a_{+}^{\star}a_{-}J_{+}+a_{+}a_{-}^{\star}K_{+} & 0\\
 0 & a_{+}^{\star}a_{-}K_{-}+a_{+}a_{-}^{\star}J_{-}
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -8120,9 +8120,9 @@ i\mathsf{M} & -\mathsf{M}
 
 where 
 \begin_inset Formula 
-\[
+\begin{equation}
 W\equiv\omega_{\mathrm{1}}H+G_{D}-\left|a_{+}\right|^{2}I_{+}-\left|a_{-}\right|^{2}I_{-},
-\]
+\end{equation}
 
 \end_inset
 
@@ -8145,38 +8145,38 @@ Next, by straightforward computation, we obtain
 \begin_inset Formula 
 \begin{multline}
 \mathsf{w}_{j}^{T}\mathsf{A}_{1/2}\mathsf{x}_{1/2}=\\
--\sum_{k}b_{k}\int d^{3}x\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\Re\left[\gamma_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}+\vec{f}^{\star}\cdot\vec{e}_{k}\right)\right].\label{eq:A1/2 matrix element}
+-\sum_{k}b_{k}\int d^{3}x\,\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\Re\left[\gamma_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}+\vec{f}^{\star}\cdot\vec{e}_{k}\right)\right].\label{eq:A1/2 matrix element}
 \end{multline}
 
 \end_inset
 
 Again, by straightforward computation, we see that
 \begin_inset Formula 
-\begin{align*}
-\int d^{3}xD_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}\right) & =\left(\begin{array}{cc}
+\begin{align}
+\int d^{3}x\,D_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}\right) & =\left(\begin{array}{cc}
 \mathsf{Q} & -i\mathsf{Q}\\
 i\mathsf{Q} & \mathsf{Q}
-\end{array}\right)_{jk}\\
-\int d^{3}xD_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}^{\star}\cdot\vec{e}_{k}\right) & =\left(\begin{array}{cc}
+\end{array}\right)_{jk}\nonumber \\
+\int d^{3}x\,D_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}^{\star}\cdot\vec{e}_{k}\right) & =\left(\begin{array}{cc}
 \mathsf{P} & i\mathsf{P}\\
 i\mathsf{P} & -\mathsf{P}
 \end{array}\right)_{jk}
-\end{align*}
+\end{align}
 
 \end_inset
 
 where
 \begin_inset Formula 
-\begin{align*}
+\begin{align}
 \mathsf{Q} & \equiv\left(\begin{array}{cc}
 a_{+}a_{-}(I_{+}+J_{+}) & a_{-}^{2}I_{-}+a_{+}^{2}K_{+}\\
 a_{+}^{2}I_{+}+a_{-}^{2}K_{-} & a_{+}a_{-}(I_{-}+J_{-})
-\end{array}\right)\\
+\end{array}\right)\nonumber \\
 \mathsf{P} & \equiv\left(\begin{array}{cc}
 a_{-}a_{+}^{\star}I_{+}+a_{+}a_{-}^{\star}K_{+} & \left|a_{-}\right|^{2}I_{-}+\left|a_{+}\right|^{2}J_{+}\\
 \left|a_{+}\right|^{2}I_{+}+\left|a_{-}\right|^{2}J_{-} & a_{+}a_{-}^{\star}I_{-}+a_{-}a_{+}^{\star}K_{-}
 \end{array}\right).
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -8193,13 +8193,13 @@ reference "eq:A1/2 matrix element"
 
  then becomes
 \begin_inset Formula 
-\begin{multline*}
+\begin{multline}
 \mathsf{w}_{j}^{T}\mathsf{A}_{1/2}\mathsf{x}_{1/2}=\\
 -\sum_{k}b_{k}\omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}\left(\begin{array}{cc}
 \mathsf{Q}+\mathsf{P} & i(\mathsf{P}-\mathsf{Q})\\
 i(\mathsf{P}+\mathsf{Q}) & \mathsf{Q}-\mathsf{P}
 \end{array}\right)_{jk}\right].
-\end{multline*}
+\end{multline}
 
 \end_inset
 
@@ -8242,7 +8242,7 @@ reference "eq:first order quadratic"
 
  becomes
 \begin_inset Formula 
-\begin{multline*}
+\begin{multline}
 \left(\begin{array}{cc}
 \Re\left[\gamma_{\mathrm{t}}(\mathsf{Q}+\tilde{\mathsf{P}})\right] & \Im\left[\gamma_{\mathrm{t}}(\mathsf{Q}-\tilde{\mathsf{P}})\right]\\
 -\Im\left[\gamma_{\mathrm{t}}(\mathsf{Q}+\tilde{\mathsf{P}})\right] & \Re\left[\gamma_{\mathrm{t}}(\mathsf{Q}-\tilde{\mathsf{P}})\right]
@@ -8251,7 +8251,7 @@ reference "eq:first order quadratic"
 \Im(\gamma_{\mathrm{t}}H)\mathsf{X} & \Re(\gamma_{\mathrm{t}}H)\mathsf{X}\\
 \Re(\gamma_{\mathrm{t}}H)\mathsf{X} & -\Im(\gamma_{\mathrm{t}}H)\mathsf{X}
 \end{array}\right)\mathsf{b}.
-\end{multline*}
+\end{multline}
 
 \end_inset
 
@@ -8343,14 +8343,14 @@ reference "eq:final linear eigenvalue problem"
 
  then becomes
 \begin_inset Formula 
-\[
+\begin{equation}
 \left(\begin{array}{cccc}
 2\Im\left(\frac{I_{+}}{H}\right) & 0 & 0 & 0\\
 0 & \Im\left(\frac{K_{+}+J_{+}}{H}\right) & 0 & -\Re\left(\frac{K_{+}-J_{+}}{H}\right)\\
 -2\Re\left(\frac{I_{+}}{H}\right) & 0 & 0 & 0\\
 0 & -\Re\left(\frac{K_{+}+J_{+}}{H}\right) & 0 & -\Im\left(\frac{K_{+}-J_{+}}{H}\right)
 \end{array}\right)|a_{+}|^{2},
-\]
+\end{equation}
 
 \end_inset
 
@@ -8361,14 +8361,14 @@ where
 .
  By inspection, there is an eigenpair with
 \begin_inset Formula 
-\[
+\begin{equation}
 \sigma_{1}=0,\;\mathsf{b}=\left(\begin{array}{c}
 0\\
 0\\
 1\\
 0
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -8383,35 +8383,35 @@ Since the third component of the basis is
 , which is a continuous symmetry of the original Maxwell--Bloch equations.
  A second eigenpair is
 \begin_inset Formula 
-\[
+\begin{equation}
 \sigma_{1}=2\left|a_{+}\right|^{2}\Im\left(\frac{I_{+}}{H}\right),\;\mathsf{b}=\left(\begin{array}{c}
 \Im\left(\frac{I_{+}}{H}\right)\\
 0\\
 -\Re\left(\frac{I_{+}}{H}\right)\\
 0
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
 The remaining two eigenvalues are
 \begin_inset Formula 
-\[
+\begin{equation}
 \sigma_{1}=\left[\Im\left(\frac{J_{+}}{H}\right)\pm\sqrt{\left|\frac{K_{+}}{H}\right|^{2}-\Re\left(\frac{J_{+}}{H}\right)^{2}}\right]\left|a_{+}\right|^{2},
-\]
+\end{equation}
 
 \end_inset
 
 with
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathbf{b}=\left(\begin{array}{c}
 0\\
 \Re\left(\frac{K_{+}-J_{+}}{H}\right)\\
 0\\
 \Im\left(\frac{K_{+}}{H}\right)\mp\sqrt{\left|\frac{K_{+}}{H}\right|^{2}-\Re\left(\frac{J_{+}}{H}\right)^{2}}
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -8477,14 +8477,14 @@ reference "eq:final linear eigenvalue problem"
 
 
 \begin_inset Formula 
-\[
+\begin{equation}
 \left(\begin{array}{cccc}
 \Im\left(\frac{I}{H}\right) & \Re(z)\Im\left(\frac{I+J}{H}\right) & 0 & \Im(z)\Im\left(\frac{I+J}{H}\right)\\
 \Im\left[z\left(\frac{I+J}{H}\right)\right] & \Re(z)\Im\left(\frac{Iz}{H}\right) & 0 & \Im(z)\Im\left(\frac{Iz}{H}\right)\\
 -\Re\left(\frac{I}{H}\right) & -\Re(z)\Re\left(\frac{I+J}{H}\right) & 0 & -\Im(z)\Re\left(\frac{I+J}{H}\right)\\
 -\Re\left[z\left(\frac{I+J}{H}\right)\right] & -\Re(z)\Re\left(\frac{Iz}{H}\right) & 0 & -\Im(z)\Re\left(\frac{Iz}{H}\right)
 \end{array}\right),
-\]
+\end{equation}
 
 \end_inset
 
@@ -8503,7 +8503,7 @@ two
 
 :
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathsf{b}=\left(\begin{array}{c}
 0\\
 0\\
@@ -8515,7 +8515,7 @@ two
 0\\
 \Re(z)
 \end{array}\right),
-\]
+\end{equation}
 
 \end_inset
 
@@ -8538,27 +8538,27 @@ reference "eq:n != 4 lasing"
 .
  It is straightforward to find the other two eigenpairs, which are
 \begin_inset Formula 
-\[
+\begin{equation}
 \sigma_{1}=2\Im\left(\frac{2I+J}{H}\right)|a|^{2},\;\mathsf{b}=\left(\begin{array}{c}
 1\\
 \Re(z)\\
 0\\
 \Im(z)
 \end{array}\right),
-\]
+\end{equation}
 
 \end_inset
 
 and
 \begin_inset Formula 
-\[
+\begin{equation}
 \sigma_{1}=-2\Im\left(\frac{J}{H}\right)|a|^{2},\;\mathsf{b}=\left(\begin{array}{c}
 -1\\
 \Re(z)\\
 0\\
 \Im(z)
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -8622,14 +8622,14 @@ reference "eq:final linear eigenvalue problem"
 
  
 \begin_inset Formula 
-\[
+\begin{equation}
 \left(\begin{array}{cccc}
 \Im\left(\frac{I}{H}\right) & \pm\Im\left(\frac{I+J+K}{H}\right) & -\Re\left(\frac{K}{H}\right) & \pm\Re\left(\frac{K}{H}\right)\\
 \pm\Im\left(\frac{I+J+K}{H}\right) & \Im\left(\frac{I}{H}\right) & \pm\Re\left(\frac{K}{H}\right) & -\Re\left(\frac{K}{H}\right)\\
 -\Re\left(\frac{I}{H}\right) & \mp\Re\left(\frac{I+J+K}{H}\right) & -\Im\left(\frac{K}{H}\right) & \pm\Im\left(\frac{K}{H}\right)\\
 \mp\Re\left(\frac{I+J+K}{H}\right) & -\Re\left(\frac{I}{H}\right) & \pm\Im\left(\frac{K}{H}\right) & -\Im\left(\frac{K}{H}\right)
 \end{array}\right),
-\]
+\end{equation}
 
 \end_inset
 
@@ -8648,27 +8648,27 @@ where
 .
  There is a single zero eigenvalue:
 \begin_inset Formula 
-\[
+\begin{equation}
 \sigma_{1}=0,\;\mathsf{b}=\left(\begin{array}{c}
 0\\
 0\\
 1\\
 \pm1
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
 A second eigenpair is
 \begin_inset Formula 
-\[
+\begin{equation}
 \sigma_{1}=2|a|^{2}\Im\left(\frac{2I+J+K}{H}\right),\;\mathsf{b}=\left(\begin{array}{c}
 1\\
 \pm1\\
 0\\
 0
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -8718,14 +8718,14 @@ reference "eq:final linear eigenvalue problem"
 
 
 \begin_inset Formula 
-\[
+\begin{equation}
 \left(\begin{array}{cccc}
 \Im\left(\frac{I}{H}\right) & \pm\Re\left(\frac{K}{H}\right) & \Re\left(\frac{K}{H}\right) & \pm\Im\left(\frac{I+J-K}{H}\right)\\
 \pm\Re\left(\frac{I+J-K}{H}\right) & \Im\left(\frac{K}{H}\right) & \pm\Im\left(\frac{K}{H}\right) & \Re\left(\frac{I}{H}\right)\\
 -\Re\left(\frac{I}{H}\right) & \pm\Im\left(\frac{K}{H}\right) & \Im\left(\frac{K}{H}\right) & \mp\Re\left(\frac{I+J-K}{H}\right)\\
 \pm\Im\left(\frac{I+J-K}{H}\right) & -\Re\left(\frac{K}{H}\right) & \mp\Re\left(\frac{K}{H}\right) & \Im\left(\frac{I}{H}\right)
 \end{array}\right),
-\]
+\end{equation}
 
 \end_inset
 
@@ -8744,27 +8744,27 @@ where
 .
  There is an eigenpair with zero eigenvalue:
 \begin_inset Formula 
-\[
+\begin{equation}
 \sigma_{1}=0,\;\mathsf{b}=\left(\begin{array}{c}
 0\\
 1\\
 \mp1\\
 0
 \end{array}\right)
-\]
+\end{equation}
 
 \end_inset
 
 and another eigenpair
 \begin_inset Formula 
-\[
+\begin{equation}
 \sigma_{1}=2|a|^{2}\Im\left(\frac{2I+J-K}{H}\right),\;\mathsf{b}=\left(\begin{array}{c}
 \pm1\\
 0\\
 0\\
 1
 \end{array}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -8836,9 +8836,9 @@ reference "eq:chiral definition"
 
  then becomes
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathbf{E}_{\pm}=\sum_{b=1}^{n}(\pm i)^{b}R_{b/n}\mathbf{E}_{\mathrm{e}}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -8854,9 +8854,9 @@ The specific choice of geometry requires that we place radially-symmetric
  symmetry.
  We can write this as
 \begin_inset Formula 
-\[
+\begin{equation}
 D_{\mathrm{t}}(\mathbf{x})=\sum_{a=1}^{n}G(r)\delta\left(\theta-\theta_{a}\right),
-\]
+\end{equation}
 
 \end_inset
 
@@ -8882,10 +8882,10 @@ reference "eq:I J K definitions"
 
 )
 \begin_inset Formula 
-\begin{align*}
-J & =\sum_{a=1}^{n}\int rdrG(r)\left|E_{+}\left(r,\theta_{a}\right)\right|^{2}E_{-}(r,\theta_{a})E_{+}(r,\theta_{a})\\
-K & =\sum_{a=1}^{n}\int rdrG(r)E_{+}(r,\theta_{a})^{\star}E_{-}(r,\theta_{a})^{3}.
-\end{align*}
+\begin{align}
+J & =\sum_{a=1}^{n}\int rdr\,G(r)\left|E_{+}\left(r,\theta_{a}\right)\right|^{2}E_{-}(r,\theta_{a})E_{+}(r,\theta_{a})\nonumber \\
+K & =\sum_{a=1}^{n}\int rdr\,G(r)E_{+}(r,\theta_{a})^{\star}E_{-}(r,\theta_{a})^{3}.
+\end{align}
 
 \end_inset
 

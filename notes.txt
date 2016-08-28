@@ -6,7 +6,6 @@ Cnv is group of n-fold rotations and mirror planes. You break the handedness and
 main points want to make in this section:
 if circulating mode lases, passive pole stays degenerate
 
-semi-analytically that standing mode solutions exist in Cn with n = 4l
 
 section VI should be subsection of section V or two subsections of one section
 (comine and write summary paragraph at the top)
@@ -17,10 +16,6 @@ if non-degenerate mode lases first, then |E|^2 is trivial representations becaus
 (mention in concluding remarks)
 
 split Appendix C into several subsections
-
-\, leave some space after d^3x in integral
-
-check if style requires numbering all equations
 
 introduction or conclusion
 mention the moving of threshold to show counterexample of unstable circulating mode, but this is just an example of Cn
