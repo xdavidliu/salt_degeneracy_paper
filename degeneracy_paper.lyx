@@ -7075,14 +7075,14 @@ key "phc_book"
  Alternatively, in a surface-emitting distributed feedback 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "ref-surface_emitting,ref-surface_emitting2"
+key "ref-surface_emitting,ref-surface_emitting2,ref-turnbull,ref-distributed_feedback"
 
 \end_inset
 
  or photonic-crystal laser 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "chua_low-threshold_2011,englund,ref-bermel"
+key "ref-imada_phc_distributed,ref-continuous_phc_bandedge,ref-ryu_bandedge,ref-coherent_surface_emitting_phc"
 
 \end_inset
 
@@ -7092,6 +7092,13 @@ key "chua_low-threshold_2011,englund,ref-bermel"
 
 band edge
 \begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yariv"
+
 \end_inset
 
  in the dispersion relation.
