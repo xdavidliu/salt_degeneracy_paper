@@ -81,7 +81,7 @@ Symmetry, stability, and computation of degenerate lasing modes
 \end_layout
 
 \begin_layout Author
-David.
+David
 \begin_inset space ~
 \end_inset
 
@@ -99,7 +99,7 @@ Department of Physics, Massachusetts Institute of Technology, Cambridge,
 \end_layout
 
 \begin_layout Author
-Bo.
+Bo
 \begin_inset space ~
 \end_inset
 
@@ -112,7 +112,7 @@ Department of Physics, Massachusetts Institute of Technology, Cambridge,
 \end_layout
 
 \begin_layout Author
-Li.
+Li
 \begin_inset space ~
 \end_inset
 
@@ -125,7 +125,7 @@ Department of Engineering Science and Physics, College of Staten Island,
 \end_layout
 
 \begin_layout Author
-Felipe.
+Felipe
 \begin_inset space ~
 \end_inset
 
@@ -138,7 +138,7 @@ Department of Mathematics, Massachusetts Institute of Technology, Cambridge,
 \end_layout
 
 \begin_layout Author
-Adi.
+Adi
 \begin_inset space ~
 \end_inset
 
@@ -6933,7 +6933,11 @@ key "direct_salt"
 \begin_inset Formula $C_{n}$
 \end_inset
 
- group 
+ group Sec.
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Effects-of-chirality"
@@ -7001,7 +7005,8 @@ key "ref-lige_condensation_arxiv"
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
-.) Note also that in Ref.
+, so the stability eigenvalues are not preserved in general.) Note also that
+ in Ref.
 \begin_inset space ~
 \end_inset
 
@@ -7070,7 +7075,7 @@ key "phc_book"
  Alternatively, in a surface-emitting distributed feedback 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "ref-surface_emitting"
+key "ref-surface_emitting,ref-surface_emitting2"
 
 \end_inset
 
@@ -7081,7 +7086,7 @@ key "chua_low-threshold_2011,englund,ref-bermel"
 
 \end_inset
 
- one might have lasing occur at a 
+, one might have lasing occur at a 
 \begin_inset Quotes eld
 \end_inset
 
@@ -7106,7 +7111,7 @@ key "ashcroft-mermin"
  its stability.
  Finally, it would be interesting to apply semi-analytical perturbative
  stability analysis to cases where a small imperfection slightly splits
- the degeneracy, which was studied analytically in Ref.
+ the degeneracy, which was studied numerically in Ref.
 \begin_inset space ~
 \end_inset
 
@@ -8441,8 +8446,8 @@ reference "eq:zeroth order quadratic"
  However, by definition, they are stable, so we are not concerned with them).
  Note that there are now four linearly-independent eigenvectors, even though
  we only have a double degeneracy in the threshold modes.
- This is because we have separated the problem into real and imginary parts,
- and this separation will become signifcant at higher orders in 
+ This is because we have separated the problem into real and imaginary parts,
+ and this separation will become significant at higher orders in 
 \begin_inset Formula $\sqrt{d}$
 \end_inset
 
@@ -8508,7 +8513,7 @@ reference "eq:vk definition"
 \end_inset
 
 .
- Additionally, due to nonzero pattern of 
+ Additionally, due to the nonzero pattern of 
 \begin_inset Formula $\mathsf{A}_{1/2}$
 \end_inset
 
