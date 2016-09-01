@@ -2554,7 +2554,11 @@ Lasing amplitudes (top) and frequency shifts (bottom) for 1d laser (periodic
 \begin_inset Formula $C_{5\mathrm{v}}$
 \end_inset
 
- symmetry.
+ symmetry, and the discretization had 
+\begin_inset Formula $N=150$
+\end_inset
+
+ grid points.
  Data points were obtained by solving Eq.
 \begin_inset space ~
 \end_inset
@@ -3402,7 +3406,26 @@ reference "eq:eigenpair expansion"
 \begin_inset Formula $\sigma_{2}d^{2}$
 \end_inset
 
-, has a coefficient 
+ (the term at order 
+\begin_inset Formula $d^{3/2}$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{3/2}$
+\end_inset
+
+, turns out to be zero, as proven in Appendix
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix stability calculations"
+
+\end_inset
+
+), has a coefficient 
 \begin_inset Formula $\sigma_{2}$
 \end_inset
 
@@ -3411,7 +3434,7 @@ reference "eq:eigenpair expansion"
 \end_inset
 
 .
- This means that very low values of 
+ This means that for very low values of 
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
@@ -3888,6 +3911,11 @@ reference "eq:eigenpair expansion"
 LatexCommand ref
 reference "fig:n=5 stability results"
 
+\end_inset
+
+.
+ All points are evaluated at 
+\begin_inset Formula $d=2\times10^{-4}$
 \end_inset
 
 .
@@ -8887,7 +8915,39 @@ The vector
 
 \end_inset
 
+As a side note, it turns out that the eigenvalue at order 
+\begin_inset Formula $d^{3/2}$
+\end_inset
 
+ is zero as well.
+ To see this, write the eigenvalue equation to this order:
+\begin_inset Formula 
+\begin{multline}
+\mathsf{A}{}_{3/2}\mathsf{x}{}_{0}+\mathsf{A}{}_{1}\mathsf{x}{}_{1/2}+\mathsf{A}{}_{1/2}\mathsf{x}{}_{1}+\mathsf{A}{}_{0}\mathsf{x}{}_{3/2}\\
+=-\mathsf{B}_{0}\sigma_{3/2}\mathsf{x}{}_{0}-\mathsf{B}_{0}\sigma_{1}\mathsf{x}{}_{1/2}.
+\end{multline}
+
+\end_inset
+
+The first three terms on the left-hand side as well as the very last term
+ on the right all have the same nonzero pattern as 
+\begin_inset Formula $\mathsf{x}_{1/2}$
+\end_inset
+
+ for certain.
+ Hence, multiplying both sides by 
+\begin_inset Formula $\mathsf{w}_{j}^{T}$
+\end_inset
+
+, we obtain 
+\begin_inset Formula $0=\sigma_{3/2}\mathsf{w}_{j}^{T}\mathsf{B}_{0}\mathsf{x}{}_{0}$
+\end_inset
+
+, which leads to 
+\begin_inset Formula $\sigma_{3/2}=0$
+\end_inset
+
+ because the matrix is nonsingular.
 \end_layout
 
 \begin_layout Subsection*
