@@ -226,9 +226,10 @@ circulating
 modes, generalizing previously known results of ring lasers to all 2d rotational
  symmetry groups.
  Our method uses analytical perturbation theory to give closed-form expressions
- for the lasing solutions right above threshold, as well as for their linearized
- Maxwell--Bloch eigenvalues, providing a simple way to check their stability
- right above threshold without having to do a full numerical calculation.
+ for both circulating and other types of lasing solutions as well as for
+ their linearized Maxwell--Bloch eigenvalues, providing a simple way to
+ check their stability right above threshold without having to do a full
+ numerical calculation.
  A key point enabling this stability is the persistence of degeneracy even
  when mirror symmetry is broken by the chiral intensity pattern of the circulati
 ng mode.
