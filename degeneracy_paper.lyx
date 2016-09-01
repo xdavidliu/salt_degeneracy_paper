@@ -212,7 +212,29 @@ Department of Physics, Massachusetts Institute of Technology, Cambridge,
 \end_layout
 
 \begin_layout Abstract
-To be written.
+We present a fully general method to obtain the stable lasing solutions
+ for the steady-state 
+\emph on
+ab-initio
+\emph default
+ lasing theory (SALT) for the case of a degenerate symmetric laser.
+ We find that under most regimes (with one pathological exception), the
+ stable solutions are clockwise and counterclockwise 
+\emph on
+circulating 
+\emph default
+modes, generalizing previously known results of ring lasers to all 2d rotational
+ symmetry groups.
+ Our method uses analytical perturbation theory to give closed-form expressions
+ for the lasing solutions right above threshold, as well as for their linearized
+ Maxwell--Bloch eigenvalues, providing a simple way to check their stability
+ right above threshold without having to do a full numerical calculation.
+ A key point enabling this stability is the persistence of degeneracy even
+ when mirror symmetry is broken by the chiral intensity pattern of the circulati
+ng mode.
+ We compliment our analysis by introducing a numerical method that finds
+ the correct superposition of degenerate modes even when discretization
+ error breaks the degeneracy.
 \end_layout
 
 \begin_layout Section
@@ -8934,7 +8956,7 @@ The first three terms on the left-hand side as well as the very last term
 \begin_inset Formula $\mathsf{x}_{1/2}$
 \end_inset
 
- for certain.
+.
  Hence, multiplying both sides by 
 \begin_inset Formula $\mathsf{w}_{j}^{T}$
 \end_inset
