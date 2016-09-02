@@ -1,1 +1,1 @@
-put numerical julia confirmation, plot omega1 and a's, in main paper.
+two TODOS: 1) check that sigma2 really *is* positive for ring laser from Rotter (TODOs in text and also caption of gampar stability plot figure) and 2) ask Stefan Rotter's group that the boundary of stability scales linearly with gampar^{+1} (+1, not -1) in their paper
