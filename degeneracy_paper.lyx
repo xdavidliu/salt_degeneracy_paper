@@ -7254,7 +7254,12 @@ First, although we have reduced the question of stability of circulating
 
 -symmetric problem with a degenerate lasing threshold in which the circulating
  mode is unstable.
- (Since Ref.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(Since Ref.
 \begin_inset space ~
 \end_inset
 
@@ -7346,7 +7351,8 @@ second
 .
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
 Second, it would be interesting to extend this sort of perturbative SALT/stabili
 ty analysis to other lasing systems besides 
 \begin_inset Formula $C_{n}$
