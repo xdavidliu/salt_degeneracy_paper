@@ -3149,6 +3149,37 @@ key "tureci_self-consistent_2006,ge_steady-state_2010"
 \end_inset
 
 ) and hence are stable.
+ However, when 
+\begin_inset Formula $d$
+\end_inset
+
+ is significantly large and 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+ is significantly small, the exact eigenvalue 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ associated with these below-threshold poles can become positive (even when
+ SALT predicts that the pole remains below threshold), as seen in the example
+ of the ring laser in Ref.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+.
+ We assume henceforth that 
+\begin_inset Formula $d$
+\end_inset
+
+ is small enough that this effect does not happen.
  Second, from the degenerate 
 \emph on
 threshold
@@ -3427,198 +3458,6 @@ reference "eq:circulating eigenvalues"
 \end_inset
 
 .
- Although the circulating mode is stable close to threshold, as was shown
- numerically in previous work 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ref-rotter_degeneracy"
-
-\end_inset
-
- it can become unstable for larger pump values.
- Moreover, it was found numerically 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ref-rotter_degeneracy"
-
-\end_inset
-
- that the maximum stable pump value 
-\begin_inset Formula $d$
-\end_inset
-
- can shrink as the relaxation rate 
-\begin_inset Formula $\gamma_{\parallel}$
-\end_inset
-
- goes to zero.
- Our first-order eigenvalue 
-\begin_inset Formula $\sigma_{1}$
-\end_inset
-
- is independent of 
-\begin_inset Formula $\gamma_{\parallel}$
-\end_inset
-
-, but in fact we find that the 
-\emph on
-second-order
-\emph default
- term 
-\begin_inset Formula $\sigma_{2}d^{2}$
-\end_inset
-
- scales as 
-\begin_inset Formula $\gamma_{\parallel}^{-1}$
-\end_inset
-
-, as shown in Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:n=5 gam_parallel dependence"
-
-\end_inset
-
-, so it will eventually become comparable to the first-order term if we
- fix 
-\begin_inset Formula $d$
-\end_inset
-
- and decrease 
-\begin_inset Formula $\gamma_{\parallel}$
-\end_inset
-
-.
- If 
-\begin_inset Formula $\sigma_{2}$
-\end_inset
-
- is positive (which is not the case here, but we found that it 
-\emph on
-is
-\emph default
- true [TODO; CHECK] for the ring structure in Ref.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ref-rotter_degeneracy"
-
-\end_inset
-
-), this means that the maximum 
-\begin_inset Formula $d$
-\end_inset
-
- for which the circulating mode is stable will scale proportional to 
-\begin_inset Formula $\gamma_{\parallel}$
-\end_inset
-
- [TODO, ASK ROTTER GROUP], consistent with the result found numerically
- in Ref.
-\begin_inset space \thinspace{}
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ref-rotter_degeneracy"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-One caveat here is that we have empirically found (Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:n=5 gam_parallel dependence"
-
-\end_inset
-
-) that the next higher-order term in the expansion of Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:eigenpair expansion"
-
-\end_inset
-
-, 
-\begin_inset Formula $\sigma_{2}d^{2}$
-\end_inset
-
- (the term at order 
-\begin_inset Formula $d^{3/2}$
-\end_inset
-
-, 
-\begin_inset Formula $\sigma_{3/2}$
-\end_inset
-
-, turns out to be zero, as proven in Appendix
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec: appendix stability calculations"
-
-\end_inset
-
-), has a coefficient 
-\begin_inset Formula $\sigma_{2}$
-\end_inset
-
- that is proportional to 
-\begin_inset Formula $\gamma_{\parallel}^{-1}$
-\end_inset
-
-.
- This means that for very low values of 
-\begin_inset Formula $\gamma_{\parallel}$
-\end_inset
-
- (relative to 
-\begin_inset Formula $d$
-\end_inset
-
-), the second-order term 
-\begin_inset Formula $\sigma_{2}d^{2}$
-\end_inset
-
- can actually be comparable in size to the first-order term 
-\begin_inset Formula $\sigma_{1}d$
-\end_inset
-
-, and can potentially lead to a circulating mode that is unstable 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ref-rotter_degeneracy"
-
-\end_inset
-
- if 
-\begin_inset Formula $\sigma_{2}$
-\end_inset
-
- is positive.
- 
 \end_layout
 
 \begin_layout Standard
@@ -3981,177 +3820,6 @@ reference "eq:n != 4 stability eigenvalues"
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:n=5 stability results"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centerline{
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename n5fig/gampar.pdf
-	lyxscale 30
-	scale 42
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Second-order coefficient in eigenvalue shift 
-\begin_inset Formula $\sigma_{2}$
-\end_inset
-
- (Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:eigenpair expansion"
-
-\end_inset
-
-) as a function of 
-\begin_inset Formula $\gamma_{\parallel}^{-1}$
-\end_inset
-
- for stability eigenvalues of circulating mode in top panel of Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:n=5 stability results"
-
-\end_inset
-
-.
- All points are evaluated at 
-\begin_inset Formula $d=2\times10^{-4}$
-\end_inset
-
-.
- Using the expression 
-\begin_inset Formula $\sigma\approx\sigma_{1}d+\sigma_{2}d^{2}$
-\end_inset
-
-, we subtract the first-order perturbation theory prediction 
-\begin_inset Formula $\sigma_{\mathrm{theory}}=\sigma_{1}d$
-\end_inset
-
- (Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:circulating eigenvalues"
-
-\end_inset
-
-) from the numerical value 
-\begin_inset Formula $\sigma_{\mathrm{numerical}}$
-\end_inset
-
-, and after dividing by 
-\begin_inset Formula $d^{2}$
-\end_inset
-
-, we obtain 
-\begin_inset Formula $\sigma_{2}$
-\end_inset
-
-.
- There is evidently an inverse relation between the size of the coefficient
- 
-\begin_inset Formula $\sigma_{2}$
-\end_inset
-
- and the inversion relaxation rate 
-\begin_inset Formula $\gamma_{\parallel}$
-\end_inset
-
-, indicating that for very low 
-\begin_inset Formula $\gamma_{\parallel}$
-\end_inset
-
-, second-order effects may be important.
- Here, the second-order correction is negative, so stability is maintained,
- at least to this order.
- However, Ref.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ref-rotter_degeneracy"
-
-\end_inset
-
- gives an example of a circulating mode in a ring laser where a stability
- eigenvalue becomes positive when 
-\begin_inset Formula $\gamma_{\parallel}$
-\end_inset
-
- becomes low enough, and we have confirmed (TODO) that this due to a 
-\emph on
-positive 
-\emph default
-
-\begin_inset Formula $\sigma_{2}$
-\end_inset
-
-.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:n=5 gam_parallel dependence"
 
 \end_inset
 
