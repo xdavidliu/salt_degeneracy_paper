@@ -7203,6 +7203,17 @@ semi-analytical
 linear
 \emph default
  Maxwell PDE).
+ Our perturbative solution near threshold confirms an ansatz in the earlier
+ degenerate SALT work 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+, in which the circulating and standing wave solutions were guessed as starting
+ points for a SALT solver and it was conjectured that the resulting four
+ solutions were the only possibilities.
  Furthermore, we have presented an efficient numerical scheme to track these
  solutions far above threshold via numerical SALT solvers 
 \begin_inset CommandInset citation
