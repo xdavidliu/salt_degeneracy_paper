@@ -3,7 +3,7 @@ type Laser{T<:AbstractFloat}
     F::Vector{T}
     ωa::T
     γ⟂::T
-    
+
     Laser(ɛ, F, ωa, γ⟂) = begin
         length(ɛ) == length(F) || error("incorrect length(F)")
         new(ɛ, F, ωa, γ⟂)
@@ -22,7 +22,7 @@ type Mode{T<:AbstractFloat, V<:Number, U<:Integer}
     ω::V
     c²::T
     imax::U
-    
+
     Mode(E, ω, c²) = begin
         imax = normalize!(E)
         new(E, ω, c², imax)
@@ -38,7 +38,7 @@ Mode(E, ω, c², imax) = Mode{typeof(c²), typeof(ω), typeof(imax)}(E, ω, c²,
 
 function salt_operator!(md::Mode, las::Laser, D::Real, J::AbstractMatrix)
     γ = las.γ⟂ / (md.ω - las.ωa + im*las.γ⟂)
-    N = length(md.E)    
+    N = length(md.E)
     for i=1:N
         H = 1/(1 + md.c²*abs(md.E[i])^2)
         z = md.ω^2 * (las.ɛ[i] + D*γ*H*las.F[i])
@@ -46,7 +46,7 @@ function salt_operator!(md::Mode, las::Laser, D::Real, J::AbstractMatrix)
         J[i+N,i+N] +=  real(z)
         J[i,i+N]   += -imag(z)
         J[i+N,i]   +=  imag(z)
-    end    
+    end
 end
 
 function copy_component!(v::AbstractVector, E::AbstractVector)
@@ -60,12 +60,12 @@ end
 
 function residual!(laplacian!::Function, md::Mode, las::Laser, D::Real, J::AbstractMatrix, f::AbstractVector)
     fill!(J, 0.0)
-    fill!(f, 0.0)    
+    fill!(f, 0.0)
     N = length(md.E)
     laplacian!(sub(J, 1:N, 1:N))
     laplacian!(sub(J, N+1:2N, N+1:2N))
     salt_operator!(md, las, D, J)
-    
+
     # use last column of J as scratch space
     v = sub(J, 1:2N, 2N+2)
     copy_component!(v, md.E)
@@ -79,7 +79,7 @@ function derivative!(md::Mode, las::Laser, D::Real, J::AbstractMatrix)
     N = length(md.E)
     J[end-1, md.imax] = 1
     J[end, md.imax+N] = 1
-    
+
     ∂f∂ω  = sub(J, 1:2N, 2N+1)
     ∂f∂c² = sub(J, 1:2N, 2N+2)
     γ = las.γ⟂ / (md.ω - las.ωa + im*las.γ⟂)
@@ -90,12 +90,12 @@ function derivative!(md::Mode, las::Laser, D::Real, J::AbstractMatrix)
         ∂M∂ω = 2md.ω*(las.ɛ[i]+D*γ*las.F[i]*H) + ω²D∂γ∂ω*las.F[i]*H
         ∂f∂ω[i]   = real(∂M∂ω * md.E[i])
         ∂f∂ω[i+N] = imag(∂M∂ω * md.E[i])
-        
+
         ω²γDFH²E = md.ω^2*γ*D*las.F[i]*H^2*md.E[i]
         ∂M∂c²E = -abs(md.E[i])^2*ω²γDFH²E
         ∂f∂c²[i]   = real(∂M∂c²E)
         ∂f∂c²[i+N] = imag(∂M∂c²E)
-        
+
         # blocks must be incremented using +=
         ∂M∂E = -2md.c²*ω²γDFH²E
         J[i,i]     += real(∂M∂E) * real(md.E[i])
@@ -123,7 +123,7 @@ function solve!(laplacian!::Function, md::Mode, las::Laser, D::Real;
     length(las.ɛ) == N || error("incorrect length(ɛ)")
     J = zeros(2N+2, 2N+2)
     f = zeros(2N+2)
-    
+
     for its=0:maxits
         res = residual!(laplacian!, md, las, D, J, f)
         isprint && println("|f| = ", res)
@@ -215,11 +215,11 @@ function root{T<:Number}(func::Function, xs::Tuple{T, T}; tol=1e-10, maxits=10, 
     iclose = 3-ifar
     xclose, xfar = xs[[iclose, ifar]]
     yclose, yfar = ys[[iclose, ifar]]
-    
+
     for its=1:maxits
         abs(yclose-yfar) < 1e-9 && error("small denominator in root function")
         xnext = xclose - (xclose-xfar)/(yclose-yfar)*yclose
-        ynext = func(xnext)        
+        ynext = func(xnext)
         if isprint
             println("xnext = ", xnext, ", ynext = ", ynext)
         end
@@ -237,9 +237,9 @@ function threshold!{T<:Real}(laplacian!::Function, md::Mode, las::Laser, Ds::Tup
         md.c²
     end
     root(func, Ds, tol=tol, maxits=maxits, isprint=isprint)
-end    
+end
 
-function overlap_integrals{U<:AbstractVector}(Es::Tuple{U, U}, ωt::Real, Dt::Real, las::Laser, nsym::Integer, ℓ::Integer, Lcav::Real)       
+function overlap_integrals{U<:AbstractVector}(Es::Tuple{U, U}, ωt::Real, Dt::Real, las::Laser, nsym::Integer, ℓ::Integer, Lcav::Real)
     h = Lcav / length(Es[1])
     Gɛ = h*sum(las.ɛ .* Es[1] .* Es[2])
     GD = h*Dt*sum(las.F .* Es[1] .* Es[2])
@@ -257,11 +257,11 @@ function overlap_integrals{U<:AbstractVector}(Es::Tuple{U, U}, ωt::Real, Dt::Re
     H, I, J, K, GD
 end
 
-function standing_roots_test(H, I, J, K, GD, iscnv, nsym, ℓ; isplot=true, maxits=10) 
+function standing_roots_test(H, I, J, K, GD, iscnv, nsym, ℓ; isplot=true, maxits=10)
     other(i) = 3-i
     T(θ, i) = begin
         z = exp(im*θ)
-        z2 = [z^2, z^(-2)] 
+        z2 = [z^2, z^(-2)]
         den = (I[1]+J[1]+z^(-2)*K[1])*(I[2]+J[2]+z^2*K[2])-I[2]*I[1]
         num = J[other(i)] + z2[i]*K[other(i)]
         num / den
@@ -271,22 +271,22 @@ function standing_roots_test(H, I, J, K, GD, iscnv, nsym, ℓ; isplot=true, maxi
         Ti = T(θ, i)
         -imag(GD*Ti) / imag(H*Ti)
     end
-    
+
     # imag part is machine epsilon by construction
     a²(θ, i) = real((ω1(θ, i)*H + GD) * T(θ, i))
     a²pair(θ) = (a²(θ, 1), a²(θ, 2))
 
     θroots = Float64[]
-    ω1roots = Float64[]    
+    ω1roots = Float64[]
     a²standing = nothing
     if nsym==4abs(ℓ)
         print("n = 4|ℓ|; expecting zeros at mπ/2 ")
-        println(iscnv ? "exactly because Cnv" : "shifted because Cn only") 
+        println(iscnv ? "exactly because Cnv" : "shifted because Cn only")
         θs = linspace(-π, π, 100)
         ω1s1 = map(θ->ω1(θ, 1), θs)
         ω1s2 = map(θ->ω1(θ, 2), θs)
         if isplot
-            plot(θs, ω1s1, θs, ω1s2)   
+            plot(θs, ω1s1, θs, ω1s2)
             xlabel("phase angle")
             ylabel("omega_1")
             title("two expressions for omega1")
@@ -301,25 +301,25 @@ function standing_roots_test(H, I, J, K, GD, iscnv, nsym, ℓ; isplot=true, maxi
                 push!(ω1roots, ω1(θ,1))
             end
         end
-        println("a² differs across roots because ±i and ±1 solutions")        
+        println("a² differs across roots because ±i and ±1 solutions")
     elseif iscnv
         println("Cnv but not n=4|ℓ|; zeros everywhere")
         println("|K₊|+|K₋| = ", sum(abs(K)))
         println("if K=0, then T independent of z")
         println("and ω1₊ = ω1₋ satisfied for all z because")
         println("Cnv -> I₊ = I₋)")
-        println("outputting random phase angle")        
+        println("outputting random phase angle")
         push!(θroots, rand())
-        push!(ω1roots, ω1(θroots[1], 1)) 
+        push!(ω1roots, ω1(θroots[1], 1))
         # stands for all θ allowed
     else
         println("not Cnv and not n=4|ℓ|; zeros nowhere")
-        println("|K₊|+|K₋| = ", sum(abs(K)))        
+        println("|K₊|+|K₋| = ", sum(abs(K)))
         println("ω1₊ = ", ω1(0.0, 1))
         println("ω1₋ = ", ω1(0.0, 2))
         println("^^ if these two not equal at one θ,")
-        println("then also non-zero for all θ")        
-    end 
+        println("then also non-zero for all θ")
+    end
     a²standing = map(a²pair, θroots)
     println("standing lasing mode E = |a₊|E₊ exp(iθ)|a₋|E₋")
     for i=1:length(θroots)
@@ -350,33 +350,33 @@ function B_matrix(ɛ::AbstractVector, ωsalt)
     complex_block_add!(B, 1, 1, ɛ, scal=2ωsalt*im)
     complex_block_add!(B, 1, 2, ones(N), scal=2ωsalt*im)
     complex_block_add!(B, 2, 2, ones(N), scal=-im)
-    
+
     for i=1:N
         B[4N+i, 4N+i] = 1.0
     end
     B
 end
 
-function A_matrix(laplacian!::Function, Esalt::AbstractVector, ωsalt::Real, las::Laser, Dlasing::Real, γpar::Real)   
+function A_matrix(laplacian!::Function, Esalt::AbstractVector, ωsalt::Real, las::Laser, Dlasing::Real, γpar::Real)
     N = length(Esalt)
     A = zeros(5N, 5N)
     laplacian!(sub(A, 1:N, 1:N))
     laplacian!(sub(A, N+1:2N, N+1:2N))
-    
+
     complex_block_add!(A, 1, 1, las.ɛ, scal = ωsalt^2)
     complex_block_add!(A, 1, 2, ones(N), scal = ωsalt^2)
     complex_block_add!(A, 2, 2, ones(N), scal = las.ωa-ωsalt-im*las.γ⟂)
     for i=1:N
         A[i+4N, i+4N] = γpar
     end
-    
+
     let x = zeros(N)
         for i=1:N
             x[i] = las.γ⟂*Dlasing*las.F[i] / (1+abs(Esalt[i])^2)
         end
-        complex_block_add!(A, 2, 1, x)    
+        complex_block_add!(A, 2, 1, x)
     end
-    
+
     # Esalt satisfies H = 1 / (1 + |Esalt|^2)
     γ = las.γ⟂ / (ωsalt - las.ωa + im*las.γ⟂)
     for i=1:N
@@ -389,7 +389,7 @@ function A_matrix(laplacian!::Function, Esalt::AbstractVector, ωsalt::Real, las
         A[4N+i, i]    = -imag(P)
         A[4N+i, N+i]  = real(P)
     end
-    Emb = Esalt * √γpar / abs(γ) 
+    Emb = Esalt * √γpar / abs(γ)
     A
 end
 
@@ -417,12 +417,17 @@ function quadeig(A::AbstractMatrix, B::AbstractMatrix, C::AbstractMatrix)
     Λ[notnan], X[1:size(A,1), notnan]
 end
 
-function smallest_stability_eigs(laplacian!, Esalt, ωsalt, Dlasing, γpar, ɛ)
+function smallest_stability_pairs(laplacian!, Esalt, ωsalt, Dlasing, γpar, ɛ)
     A = A_matrix(laplacian!, Esalt, ωsalt, las, Dlasing, γpar)
     B = B_matrix(las.ɛ, ωsalt)
     C = C_matrix(las.ɛ);
 
     Λ, X = quadeig(A, B, C)
     smallest_ind = sortperm(abs(Λ))[1:4]
-    Λ[smallest_ind]
+    Λ[smallest_ind], X[:, smallest_ind]
+end
+
+function smallest_stability_eigs(laplacian!, Esalt, ωsalt, Dlasing, γpar, ɛ)
+    Λ, X = smallest_stability_pairs(laplacian!, Esalt, ωsalt, Dlasing, γpar, ɛ)
+    Λ
 end
