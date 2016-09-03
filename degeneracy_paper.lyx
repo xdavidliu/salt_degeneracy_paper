@@ -5074,8 +5074,26 @@ any
 \emph default
 linear combination, that solves the SALT equation, simply because there
  is no degeneracy, so the solution does not exist.
- The only solution to SALT that we would be able to obtain would be a two-mode
- solution, corresponding to the Maxwell--Bloch steady-state solution 
+ Using 
+\begin_inset Formula $\mathbf{E}_{+}$
+\end_inset
+
+ as an initial guess would result in the solver converging to a purely 
+\begin_inset Formula $\mathbf{E}_{\mathrm{even}}$
+\end_inset
+
+ or purely 
+\begin_inset Formula $\mathbf{E}_{\mathrm{odd}}$
+\end_inset
+
+ lasing mode, because those are the only single-mode solutions to SALT in
+ this case.
+ Alternatively, there also may exist a 
+\emph on
+two
+\emph default
+-mode solution, corresponding to the Maxwell--Bloch steady-state solution
+ 
 \begin_inset Formula 
 \begin{equation}
 \mathbf{E}^{+}(\mathbf{x},t)=a_{\mathrm{even}}\mathbf{E}_{\mathrm{even}}(\mathbf{x})e^{-i\omega_{\mathrm{even}}t}+a_{\mathrm{odd}}\mathbf{E}_{\mathrm{odd}}(\mathbf{x})e^{-i\omega_{\mathrm{odd}}t}\label{eq:incorrect solution split discretization}
