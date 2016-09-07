@@ -869,7 +869,7 @@ reference "sub:Forcing-the-degeneracy"
 \end_inset
 
 .
- (Ref.
+ Ref.
 \begin_inset space ~
 \end_inset
 
@@ -887,8 +887,9 @@ key "ref-rotter_degeneracy"
 \emph on
 into
 \emph default
- existance, once the pump strength is high enough above threshold, as a
- modified version that is not perfectly 
+ existance (once the pump strength is high enough above threshold and the
+ nonlinearity is strong enough) as a modified version that is not perfectly
+ 
 \begin_inset Quotes eld
 \end_inset
 
@@ -902,12 +903,26 @@ circulating
 \end_inset
 
  geometries, whose degeneracies have been broken by discretization, may
- also have such single-mode solutions, it is not guaranteed to happen, and
- near threshold the circulating linear combination will almost certainly
- not exist.) To fix this problem, we found a simple way to uniquely restore
- any degeneracy broken by the discretization in a way that both guarantees
- convergence to the correct solution as the discretization is refined and
- which generalizes to an arbitrary number of lasing modes (in Sec.
+ also have such single-mode solutions, the solutions are not guaranteed
+ to closely resemble the true circulating modes we are looking for, and
+ they are not guaranteed to exist at all.
+ Near threshold, they are almost certain to not exist, because the splitting
+ in frequencies and thresholds is large compared to the nonlinearity.
+ Most importantly, however, an artificially introduced defect and a discretizati
+on error are two fundamentally different concepts (even if they 
+\emph on
+do 
+\emph default
+superficially result in the same broken degeneracy), and we wish to emphasize
+ the importance of separating and distinguishing the two.
+ 
+\end_layout
+
+\begin_layout Standard
+To fix this problem, we found a simple way to uniquely restore any degeneracy
+ broken by the discretization in a way that both guarantees convergence
+ to the correct solution as the discretization is refined and which generalizes
+ to an arbitrary number of lasing modes (in Sec.
 \begin_inset space ~
 \end_inset
 
