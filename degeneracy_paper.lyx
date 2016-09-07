@@ -905,9 +905,14 @@ circulating
  geometries, whose degeneracies have been broken by discretization, may
  also have such single-mode solutions, the solutions are not guaranteed
  to closely resemble the true circulating modes we are looking for, and
- they are not guaranteed to exist at all.
- Near threshold, they are almost certain to not exist, because the splitting
- in frequencies and thresholds is large compared to the nonlinearity.
+ they are not guaranteed to exist at all (near threshold, they are almost
+ 
+\emph on
+certain
+\emph default
+ to not exist, because the splitting in frequencies and thresholds is large
+ compared to the nonlinearity), so our solution method cannot rely on this
+ effect happening.
  Most importantly, however, an artificially introduced defect and a discretizati
 on error are two fundamentally different concepts (even if they 
 \emph on
