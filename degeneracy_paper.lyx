@@ -246,6 +246,13 @@ chiral
 
 \begin_layout Section
 Introduction
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Introduction"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -462,7 +469,8 @@ key "ref-rotter_degeneracy"
  numerically analyzed the stability of a degenerate SALT solution, but it
  assumed that the degenerate solution was already known and did not address
  the problem of finding it; as a result, it explicitly considered only the
- ring-resonator case in which the circulating solution was known.
+ ring-resonator case in which the circulating solution was known (along
+ with several variations where the symmetry is artificially broken).
  In that work, given a SALT solution, a full linear-stability analysis (Sec.
 \begin_inset space ~
 \end_inset
@@ -861,10 +869,45 @@ reference "sub:Forcing-the-degeneracy"
 \end_inset
 
 .
- To fix this problem, we found a simple way to uniquely restore any degeneracy
- broken by the discretization in a way that both guarantees convergence
- to the correct solution as the discretization is refined and which generalizes
- to an arbitrary number of lasing modes (in Sec.
+ (Ref.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+ found instances where artificially breaking a degeneracy on purpose, such
+ as by introducing a wedge to a single location on the rim of a ring laser,
+ can result in the circulating mode not existing near threshold as expected,
+ but coming back 
+\emph on
+into
+\emph default
+ existance, once the pump strength is high enough above threshold, as a
+ modified version that is not perfectly 
+\begin_inset Quotes eld
+\end_inset
+
+circulating
+\begin_inset Quotes erd
+\end_inset
+
+.
+ While this fact implies that our 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ geometries, whose degeneracies have been broken by discretization, may
+ also have such single-mode solutions, it is not guaranteed to happen, and
+ near threshold the circulating linear combination will almost certainly
+ not exist.) To fix this problem, we found a simple way to uniquely restore
+ any degeneracy broken by the discretization in a way that both guarantees
+ convergence to the correct solution as the discretization is refined and
+ which generalizes to an arbitrary number of lasing modes (in Sec.
 \begin_inset space ~
 \end_inset
 
@@ -1574,9 +1617,9 @@ reference "eq:1mode_salt"
 \end_inset
 
 , there is the danger that the other pole is unstable.
- (To have a stable lasing solution, at the very least we need to have no
- poles above the real axis, although there are additional conditions for
- stability, described in Sec.
+ To have a stable lasing solution near threshold, at the very least we need
+ to have no poles above the real axis, although there are additional conditions
+ for stability, described in Sec.
 \begin_inset space ~
 \end_inset
 
@@ -1588,7 +1631,33 @@ reference "sub:Stability-analysis summary"
 \end_inset
 
 .
- On the other hand, if we find a solution of the two-mode SALT equations
+ (It is important to note that this is only certain for the near threshold
+ regime, as explained after the zeroth order calculation in Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-analysis summary"
+
+\end_inset
+
+.
+ Far above threshold, there can be instances where a lasing mode is stable
+ even if a passive pole of the SALT equation is above the real axis, as
+ found in Ref.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+.) On the other hand, if we find a solution of the two-mode SALT equations
  as in Eq.
 \begin_inset space ~
 \end_inset
@@ -3149,7 +3218,36 @@ key "tureci_self-consistent_2006,ge_steady-state_2010"
 \end_inset
 
 ) and hence are stable.
- However, when 
+ When 
+\begin_inset Formula $d$
+\end_inset
+
+ is small enough, we can say for certain that having one of these 
+\begin_inset Formula $\sigma_{0}$
+\end_inset
+
+ above the real axis would make the system unstable, so having all passive
+ poles of the SALT equation be below the real axis is a 
+\emph on
+necessary 
+\emph default
+condition for lasing near threshold, for small 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ (Far above threshold, however, this is no longer true, as shown in Ref.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+.) However, when 
 \begin_inset Formula $d$
 \end_inset
 
