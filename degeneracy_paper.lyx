@@ -8348,7 +8348,7 @@ reference "eq:reduced a plus minus"
 
 \end_inset
 
-Taking imaginary part of both sides, and noting that 
+Taking the imaginary part of both sides, and noting that 
 \begin_inset Formula $\omega_{1}$
 \end_inset
 
@@ -9010,13 +9010,13 @@ Next, we compute
 \begin_inset Formula $\mathsf{A}_{1/2}\mathsf{v}_{k}$
 \end_inset
 
- by direct evaluation.
- Due to the nonzero structures, we see that the only nonzero element of
- 
+.
+ Since the only nonzero element of 
 \begin_inset Formula $\mathsf{A}_{1/2}\mathsf{v}_{k}$
 \end_inset
 
- is the last, and by straightforward evaluation, we define this as
+ is the last, we define this element, after straightforward evaluation,
+ as 
 \begin_inset Formula 
 \begin{equation}
 g_{k}\equiv2D_{\mathrm{t}}\left|\gamma_{\mathrm{t}}\right|\sqrt{\gamma_{\parallel}}\Re\left[\vec{e}_{k}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].
