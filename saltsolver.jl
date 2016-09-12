@@ -417,12 +417,15 @@ function quadeig(A::AbstractMatrix, B::AbstractMatrix, C::AbstractMatrix)
     Λ[notnan], X[1:size(A,1), notnan]
 end
 
-function smallest_stability_pairs(laplacian!, Esalt, ωsalt, Dlasing, γpar, ɛ)
+function all_stability_pairs(laplacian!, Esalt, ωsalt, Dlasing, γpar, ɛ)
     A = A_matrix(laplacian!, Esalt, ωsalt, las, Dlasing, γpar)
     B = B_matrix(las.ɛ, ωsalt)
-    C = C_matrix(las.ɛ);
+    C = C_matrix(las.ɛ)
+    quadeig(A, B, C)
+end
 
-    Λ, X = quadeig(A, B, C)
+function smallest_stability_pairs(laplacian!, Esalt, ωsalt, Dlasing, γpar, ɛ)
+    Λ, X = all_stability_pairs(laplacian!, Esalt, ωsalt, Dlasing, γpar, ɛ)
     smallest_ind = sortperm(abs(Λ))[1:4]
     Λ[smallest_ind], X[:, smallest_ind]
 end

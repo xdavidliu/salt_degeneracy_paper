@@ -913,14 +913,15 @@ certain
  to not exist, because the splitting in frequencies and thresholds is large
  compared to the nonlinearity), so our solution method cannot rely on this
  effect happening.
- Most importantly, however, an artificially introduced defect and a discretizati
-on error are two fundamentally different concepts (even if they 
-\emph on
-do 
-\emph default
-superficially result in the same broken degeneracy), and we wish to emphasize
- the importance of separating and distinguishing the two.
- 
+ More importantly, a discretization-induced error and a physical perturbation
+ breaking the degeneracy are two distinct effects (even if their consequences
+ are mathematically similar), and it is important to be able to study them
+ independently.
+ When one is studying a physical symmetry-breaking defect, one doesn't want
+ to accidentally observe an artificial effect of discretization instead.
+ Furthermore, it is useful to be able to calculate the exact degenerate
+ solution of a perfectly symmetrical structure as a starting point for semi-anal
+ytical perturbation-theory analyses [refs] of small physical defects.
 \end_layout
 
 \begin_layout Standard
@@ -1637,9 +1638,31 @@ reference "eq:1mode_salt"
 \end_inset
 
 , there is the danger that the other pole is unstable.
- To have a stable lasing solution near threshold, at the very least we need
- to have no poles above the real axis, although there are additional conditions
- for stability, described in Sec.
+ As we show in Appendix.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: appendix stability calculations"
+
+\end_inset
+
+, close to lasing threshold the zeroth order stability analysis (in the
+ pump strength increment) simply depends on the SALT eigenproblem: if a
+ SALT pole lies above the real-
+\begin_inset Formula $\omega$
+\end_inset
+
+ axis, then lasing solution is necessarily unstable, whereas SALT poles
+ below the real axis cannot induce instability.
+ If a pole lies 
+\emph on
+on
+\emph default
+ the real axis, higher-order calculations are required to check stability
+ as described in Sec.
 \begin_inset space ~
 \end_inset
 
@@ -1651,33 +1674,24 @@ reference "sub:Stability-analysis summary"
 \end_inset
 
 .
- (It is important to note that this is only certain for the near threshold
- regime, as explained after the zeroth order calculation in Sec.
-\begin_inset space ~
+ (Far above threshold, the strong nonlinearities require numerical solution
+ of a full Maxwell--Bloch eigenproblem, and SALT poles above the real-
+\begin_inset Formula $\omega$
 \end_inset
 
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Stability-analysis summary"
-
-\end_inset
-
-.
- Far above threshold, there can be instances where a lasing mode is stable
- even if a passive pole of the SALT equation is above the real axis, as
- found in Ref.
-\begin_inset space ~
-\end_inset
-
-
+ axis may nevertheless be stable while poles below the real axis may be
+ unstable 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ref-rotter_degeneracy"
 
 \end_inset
 
-.) On the other hand, if we find a solution of the two-mode SALT equations
+.)
+\end_layout
+
+\begin_layout Standard
+On the other hand, if we find a solution of the two-mode SALT equations
  as in Eq.
 \begin_inset space ~
 \end_inset
@@ -3238,7 +3252,7 @@ key "tureci_self-consistent_2006,ge_steady-state_2010"
 \end_inset
 
 ) and hence are stable.
- When 
+ Therefore, when 
 \begin_inset Formula $d$
 \end_inset
 
@@ -3267,38 +3281,7 @@ key "ref-rotter_degeneracy"
 
 \end_inset
 
-.) However, when 
-\begin_inset Formula $d$
-\end_inset
-
- is significantly large and 
-\begin_inset Formula $\gamma_{\parallel}$
-\end_inset
-
- is significantly small, the exact eigenvalue 
-\begin_inset Formula $\sigma$
-\end_inset
-
- associated with these below-threshold poles can become positive (even when
- SALT predicts that the pole remains below threshold), as seen in the example
- of the ring laser in Ref.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ref-rotter_degeneracy"
-
-\end_inset
-
-.
- We assume henceforth that 
-\begin_inset Formula $d$
-\end_inset
-
- is small enough that this effect does not happen.
- Second, from the degenerate 
+.) Second, from the degenerate 
 \emph on
 threshold
 \emph default
