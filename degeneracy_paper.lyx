@@ -921,7 +921,14 @@ certain
  to accidentally observe an artificial effect of discretization instead.
  Furthermore, it is useful to be able to calculate the exact degenerate
  solution of a perfectly symmetrical structure as a starting point for semi-anal
-ytical perturbation-theory analyses [refs] of small physical defects.
+ytical perturbation-theory analyses 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "phc_book,ref-johnson_pert_theory,ref-sgj_roughness"
+
+\end_inset
+
+ of small physical defects.
 \end_layout
 
 \begin_layout Standard

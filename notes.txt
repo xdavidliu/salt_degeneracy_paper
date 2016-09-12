@@ -2,4 +2,9 @@ include Stephan's results in paper
 
 re-insert deleted sentence on d and gamma_parallel dependence somewhere close to Stephan's results
 
-perturbation theory references from photonic crystals book
+
+However, when d
+  is significantly large and \gamma_{\parallel}
+  is significantly small, the exact eigenvalue \sigma
+  associated with these below-threshold poles can become positive (even when SALT predicts that the pole remains below threshold), as seen in the example of the ring laser in Ref. [ref-rotter_degeneracy]. We assume henceforth that d
+  is small enough that this effect does not happen.
