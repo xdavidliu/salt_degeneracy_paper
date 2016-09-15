@@ -10185,7 +10185,7 @@ reference "eq:first order quadratic"
 \end_inset
 
 : 
-\begin_inset Formula $\mathsf{x}_{1}=A_{0}^{-1}\left[\left(\mathsf{B}_{0}\sigma_{1}+\mathsf{A}_{1}\right)\mathsf{x}_{0}+\mathsf{A}_{1/2}\mathsf{x}_{1/2}\right]$
+\begin_inset Formula $\mathsf{x}_{1}=\mathsf{A}_{0}^{-1}\left[\left(\mathsf{B}_{0}\sigma_{1}+\mathsf{A}_{1}\right)\mathsf{x}_{0}+\mathsf{A}_{1/2}\mathsf{x}_{1/2}\right]$
 \end_inset
 
 .
