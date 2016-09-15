@@ -8706,7 +8706,7 @@ reference "eq:quadratic eigenproblem"
 \gamma_{\perp}D & 0 & \omega_{a}-\omega & \gamma_{\perp} & \gamma_{\perp}\mathbf{E}_{\mathrm{R}}\\
 0 & \gamma_{\perp}D & -\gamma_{\perp} & \omega_{a}-\omega & \gamma_{\perp}\mathbf{E}_{\mathrm{I}}\\
 -\mathbf{P}_{\mathrm{I}} & \mathbf{P}_{\mathrm{R}} & \mathbf{E}_{\mathrm{I}} & -\mathbf{E}_{\mathrm{R}} & \gamma_{\parallel}
-\end{array}\right),
+\end{array}\right),\label{eq:A matrix}
 \end{equation}
 
 \end_inset
@@ -9082,44 +9082,12 @@ The vector
 0\\
 0\\
 -\gamma_{\parallel}^{-1}\sum b_{k}g_{k}
-\end{array}\right).
+\end{array}\right).\label{eq:x1/2 exact}
 \end{equation}
 
 \end_inset
 
-As a side note, it turns out that the eigenvalue at order 
-\begin_inset Formula $d^{3/2}$
-\end_inset
 
- is zero as well.
- To see this, write the eigenvalue equation to this order:
-\begin_inset Formula 
-\begin{multline}
-\mathsf{A}{}_{3/2}\mathsf{x}{}_{0}+\mathsf{A}{}_{1}\mathsf{x}{}_{1/2}+\mathsf{A}{}_{1/2}\mathsf{x}{}_{1}+\mathsf{A}{}_{0}\mathsf{x}{}_{3/2}\\
-=-\mathsf{B}_{0}\sigma_{3/2}\mathsf{x}{}_{0}-\mathsf{B}_{0}\sigma_{1}\mathsf{x}{}_{1/2}.
-\end{multline}
-
-\end_inset
-
-The first three terms on the left-hand side as well as the very last term
- on the right all have the same nonzero pattern as 
-\begin_inset Formula $\mathsf{x}_{1/2}$
-\end_inset
-
-.
- Hence, multiplying both sides by 
-\begin_inset Formula $\mathsf{w}_{j}^{T}$
-\end_inset
-
-, we obtain 
-\begin_inset Formula $0=\sigma_{3/2}\mathsf{w}_{j}^{T}\mathsf{B}_{0}\mathsf{x}{}_{0}$
-\end_inset
-
-, which leads to 
-\begin_inset Formula $\sigma_{3/2}=0$
-\end_inset
-
- because the matrix is nonsingular.
 \end_layout
 
 \begin_layout Subsection*
@@ -10131,6 +10099,347 @@ reference "eq:z = 1 double eigenvalues"
 
  standing modes.
  
+\end_layout
+
+\begin_layout Subsection*
+Higher-order
+\end_layout
+
+\begin_layout Standard
+In this section, we heuristically carry the perturbation theory to higher
+ order, and demonstrate that the regime of validity of the perturbation
+ theory depends on 
+\begin_inset Formula $d$
+\end_inset
+
+ being small compared to a constant multiple of 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+.
+ This is made possible by the fact that the only place 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+ occurs in the entire problem is the very last matrix element of 
+\begin_inset Formula $\mathsf{A}_{0}$
+\end_inset
+
+ in Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:A matrix"
+
+\end_inset
+
+, as well as the fact that the 
+\begin_inset Formula $\mathsf{x}_{m+\frac{1}{2}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathsf{x}_{m}$
+\end_inset
+
+ have predictable nonzero patterns, due to the nonzero patterns of 
+\begin_inset Formula $\mathsf{A}_{m+\frac{1}{2}}$
+\end_inset
+
+ being different from those of all the other matrices.
+ 
+\end_layout
+
+\begin_layout Standard
+First, since we have already obtained closed-form expressions for 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ and the coefficients 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathsf{x}_{0}$
+\end_inset
+
+, Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:first order quadratic"
+
+\end_inset
+
+ can be solved for 
+\begin_inset Formula $\mathsf{x}_{1}$
+\end_inset
+
+: 
+\begin_inset Formula $\mathsf{x}_{1}=A_{0}^{-1}\left[\left(\mathsf{B}_{0}\sigma_{1}+\mathsf{A}_{1}\right)\mathsf{x}_{0}+\mathsf{A}_{1/2}\mathsf{x}_{1/2}\right]$
+\end_inset
+
+.
+ Next, at order 
+\begin_inset Formula $d^{3/2}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{multline}
+\mathsf{A}{}_{3/2}\mathsf{x}{}_{0}+\mathsf{A}{}_{1}\mathsf{x}{}_{1/2}+\mathsf{A}{}_{1/2}\mathsf{x}{}_{1}+\mathsf{A}{}_{0}\mathsf{x}{}_{3/2}\\
+=-\mathsf{B}_{0}\sigma_{3/2}\mathsf{x}{}_{0}-\mathsf{B}_{0}\sigma_{1}\mathsf{x}{}_{1/2}.
+\end{multline}
+
+\end_inset
+
+The first three terms on the left-hand side as well as the very last term
+ on the right all have the same nonzero pattern as 
+\begin_inset Formula $\mathsf{x}_{1/2}$
+\end_inset
+
+.
+ Hence, multiplying both sides by 
+\begin_inset Formula $\mathsf{w}_{j}^{T}$
+\end_inset
+
+, we obtain 
+\begin_inset Formula $0=\sigma_{3/2}\mathsf{w}_{j}^{T}\mathsf{B}_{0}\mathsf{x}{}_{0}$
+\end_inset
+
+, which leads to 
+\begin_inset Formula $\sigma_{3/2}=0$
+\end_inset
+
+ because the matrix is nonsingular.
+ The only remaining unknown is then 
+\begin_inset Formula $\mathsf{x}_{3/2}$
+\end_inset
+
+.
+ By the same arguments leading to Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:x1/2 exact"
+
+\end_inset
+
+, we have 
+\begin_inset Formula $\mathsf{A}{}_{0}\mathsf{x}{}_{3/2}=\gamma_{\parallel}\mathsf{x}{}_{3/2}$
+\end_inset
+
+, which yields 
+\begin_inset Formula $\mathsf{x}_{3/2}=-\gamma_{\parallel}^{-1}\mathsf{f}_{3/2}$
+\end_inset
+
+, where
+\begin_inset Formula 
+\begin{equation}
+\mathsf{f}_{3/2}\equiv\mathsf{A}{}_{3/2}\mathsf{x}{}_{0}+\mathsf{A}{}_{1}\mathsf{x}{}_{1/2}+\mathsf{A}{}_{1/2}\mathsf{x}{}_{1}+\mathsf{B}_{0}\sigma_{1}\mathsf{x}{}_{1/2},
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula $\mathsf{f}_{3/2}$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathcal{O}(1)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+.
+ Moving onto order 
+\begin_inset Formula $d^{2}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{multline}
+\mathsf{C}\sigma_{1}^{2}\mathsf{x}_{0}+\mathsf{B}_{0}\left(\sigma_{2}\mathsf{x}{}_{0}+\sigma_{1}\mathsf{x}{}_{1}\right)+\mathsf{B}_{1}\sigma_{1}\mathsf{x}_{0}\\
+=-\sum_{k=0}^{4}\mathsf{A}_{k/2}\mathsf{x}_{2-\frac{k}{2}}.
+\end{multline}
+
+\end_inset
+
+Taking 
+\begin_inset Formula $\mathsf{x}_{0}$
+\end_inset
+
+ of both sides annihilates the 
+\begin_inset Formula $k=0$
+\end_inset
+
+ term, leaving only a single unknown 
+\begin_inset Formula $\sigma_{2}$
+\end_inset
+
+ and a single term of 
+\begin_inset Formula $\mathcal{O}(\gamma_{\parallel}^{-1})$
+\end_inset
+
+: 
+\begin_inset Formula $-\mathsf{A}_{1/2}\mathsf{x}_{3/2}=\gamma_{\parallel}^{-1}\mathsf{A}_{1/2}\mathsf{f}_{3/2}$
+\end_inset
+
+.
+ We then have
+\begin_inset Formula 
+\begin{equation}
+\sigma_{2}=\gamma_{\parallel}^{-1}\frac{\mathsf{x}_{0}^{T}\mathsf{A}_{1/2}\mathsf{f}_{3/2}}{\mathsf{x}_{0}^{T}\mathsf{B}_{0}\mathsf{x}_{0}}+\mathcal{O}(1).
+\end{equation}
+
+\end_inset
+
+Carrying on to the next order results in 
+\begin_inset Formula $\sigma_{5/2}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathsf{x}_{5/2}=-\gamma_{\parallel}^{-1}\mathsf{f}_{5/2}$
+\end_inset
+
+, where now 
+\begin_inset Formula $\mathsf{f}_{5/2}=\mathcal{O}(\gamma_{\parallel}^{-1})$
+\end_inset
+
+ due to it including terms with 
+\begin_inset Formula $\sigma_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathsf{x}_{2}$
+\end_inset
+
+.
+ By continuing this process, we find that 
+\begin_inset Formula $\sigma_{m+\frac{1}{2}}=0$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathsf{x}_{m+\frac{1}{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{m+1}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathsf{x}_{m+1}$
+\end_inset
+
+ are all 
+\begin_inset Formula $\mathcal{O}(\gamma_{\parallel}^{-m})$
+\end_inset
+
+.
+ Defining 
+\begin_inset Formula $s_{m+1}\equiv\gamma_{\parallel}^{m}\sigma_{m+1}=\mathcal{O}(1)$
+\end_inset
+
+, we obtain a full expansion for the exact Maxwell--Bloch eigenvalue (Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eigenpair expansion"
+
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{equation}
+\sigma\approx d\sum_{k=1}^{\infty}\left(\frac{d}{\gamma_{\parallel}}\right)^{k-1}s_{k},\label{eq:s expansion}
+\end{equation}
+
+\end_inset
+
+where the 
+\begin_inset Formula $\approx$
+\end_inset
+
+ comes from the fact that we have thrown away terms of the form 
+\begin_inset Formula $d^{\ell}/\gamma_{\parallel}^{j}$
+\end_inset
+
+ with 
+\begin_inset Formula $\ell>j$
+\end_inset
+
+, which are negligible compared to 
+\begin_inset Formula $(d/\gamma_{\parallel})^{k}$
+\end_inset
+
+ and vanish in the limit 
+\begin_inset Formula $d,\gamma_{\parallel}\rightarrow0$
+\end_inset
+
+.
+ In this limit, we can then infer a generic functional form of 
+\begin_inset Formula $\sigma$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\lim_{\gamma_{\parallel},d\rightarrow0}\frac{\sigma}{d}=f\left(\frac{d}{\gamma_{\parallel}}\right),
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $f$
+\end_inset
+
+ is a function whose Taylor expansion is Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:s expansion"
+
+\end_inset
+
+.
+ For an eigenvalue 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ of the Maxwell--Bloch equation linearized about a circulating mode, we
+ have 
+\begin_inset Formula $f(0)=\sigma_{1}$
+\end_inset
+
+ having a negative real part, and the first positive zero 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ of the function 
+\begin_inset Formula $f$
+\end_inset
+
+, giving the equation for a boundary of stability 
+\begin_inset Formula $d=\gamma_{\parallel}z_{0}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
