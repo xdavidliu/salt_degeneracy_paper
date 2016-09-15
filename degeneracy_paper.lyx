@@ -10102,7 +10102,11 @@ reference "eq:z = 1 double eigenvalues"
 \end_layout
 
 \begin_layout Subsection*
-Higher-order
+Region of validity in small-
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+ limit
 \end_layout
 
 \begin_layout Standard
