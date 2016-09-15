@@ -10205,18 +10205,23 @@ The first three terms on the left-hand side as well as the very last term
 
 .
  Hence, multiplying both sides by 
-\begin_inset Formula $\mathsf{w}_{j}^{T}$
+\begin_inset Formula $\mathsf{x}_{0}^{T}$
 \end_inset
 
-, we obtain 
-\begin_inset Formula $0=\sigma_{3/2}\mathsf{w}_{j}^{T}\mathsf{B}_{0}\mathsf{x}{}_{0}$
+ (which is now known after having solved the degenerate problem at order
+ 
+\begin_inset Formula $d$
+\end_inset
+
+), we obtain 
+\begin_inset Formula $0=\sigma_{3/2}\mathsf{x}_{0}^{T}\mathsf{B}_{0}\mathsf{x}{}_{0}$
 \end_inset
 
 , which leads to 
 \begin_inset Formula $\sigma_{3/2}=0$
 \end_inset
 
- because the matrix is nonsingular.
+.
  The only remaining unknown is then 
 \begin_inset Formula $\mathsf{x}_{3/2}$
 \end_inset
@@ -10427,7 +10432,7 @@ reference "eq:s expansion"
 \begin_inset Formula $f(0)=\sigma_{1}$
 \end_inset
 
- having a negative real part, and the first positive zero 
+ having a negative real part, and the smallest positive zero 
 \begin_inset Formula $z_{0}$
 \end_inset
 
@@ -10440,6 +10445,33 @@ reference "eq:s expansion"
 \end_inset
 
 .
+ Hence, in the limit that both 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+ and 
+\begin_inset Formula $d$
+\end_inset
+
+ going to zero, the region of stability for a circulating mode is given
+ by 
+\begin_inset Formula $d<\gamma_{\parallel}z_{0}$
+\end_inset
+
+, where 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ is a constant independent of 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+ and 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
