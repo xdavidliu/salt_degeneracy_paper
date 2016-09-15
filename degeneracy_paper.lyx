@@ -10308,7 +10308,7 @@ Taking
  We then have
 \begin_inset Formula 
 \begin{equation}
-\sigma_{2}=\gamma_{\parallel}^{-1}\frac{\mathsf{x}_{0}^{T}\mathsf{A}_{1/2}\mathsf{f}_{3/2}}{\mathsf{x}_{0}^{T}\mathsf{B}_{0}\mathsf{x}_{0}}+\mathcal{O}(1).
+\gamma_{\parallel}\sigma_{2}=\frac{\mathsf{x}_{0}^{T}\mathsf{A}_{1/2}\mathsf{f}_{3/2}}{\mathsf{x}_{0}^{T}\mathsf{B}_{0}\mathsf{x}_{0}}+\mathcal{O}(\gamma_{\parallel}).
 \end{equation}
 
 \end_inset
@@ -10415,7 +10415,7 @@ where
 \begin_inset Formula $f$
 \end_inset
 
- is a function whose Taylor expansion is Eq.
+ is a function whose Taylor expansion is the sum in Eq.
 \begin_inset space ~
 \end_inset
 
@@ -10457,8 +10457,8 @@ reference "eq:s expansion"
 \begin_inset Formula $d$
 \end_inset
 
- going to zero, the region of stability for a circulating mode is given
- by 
+ go to zero, the region of stability for a circulating mode is given by
+ 
 \begin_inset Formula $d<\gamma_{\parallel}z_{0}$
 \end_inset
 
