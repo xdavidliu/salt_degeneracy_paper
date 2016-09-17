@@ -1029,7 +1029,7 @@ cold-cavity
 
  is the population inversion between those two levels (with relaxation rate
  
-\begin_inset Formula $\gamma_{\Vert}$
+\begin_inset Formula $\Gamma_{\Vert}$
 \end_inset
 
 ), and 
@@ -1089,13 +1089,13 @@ reference "eq:maxwell--bloch"
  as an unknown, and the third equation becomes
 \begin_inset Formula 
 \begin{equation}
-\dot{D}=\gamma_{\parallel}(D_{0}-D)+D\Im\left[\sum_{\mu\nu}\gamma(\omega_{\nu})\mathbf{E}_{\mu}^{\star}\cdot\mathbf{E}_{\nu}e^{i(\omega_{\mu}-\omega_{\nu})t}\right],\label{eq:Ddot MB equation}
+\dot{D}=\gamma_{\parallel}(D_{0}-D)+D\Im\left[\sum_{\mu\nu}\Gamma(\omega_{\nu})\mathbf{E}_{\mu}^{\star}\cdot\mathbf{E}_{\nu}e^{i(\omega_{\mu}-\omega_{\nu})t}\right],\label{eq:Ddot MB equation}
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $\gamma(\omega_{\mu})\equiv\gamma_{\perp}/(\omega_{\mu}-\omega_{a}+i\gamma_{\perp})$
+\begin_inset Formula $\Gamma(\omega_{\mu})\equiv\gamma_{\perp}/(\omega_{\mu}-\omega_{a}+i\gamma_{\perp})$
 \end_inset
 
 .
@@ -1155,7 +1155,7 @@ key "ge_steady-state_2010,tureci_self-consistent_2006,tureci_ab_2009"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\nabla\times\nabla\times\mathbf{E}_{\mu}=\omega_{\mu}^{2}\left[\varepsilon+\gamma(\omega_{\mu})D\right]\mathbf{E}_{\mu},\label{eq:salt general}
+\nabla\times\nabla\times\mathbf{E}_{\mu}=\omega_{\mu}^{2}\left[\varepsilon+\Gamma(\omega_{\mu})D\right]\mathbf{E}_{\mu},\label{eq:salt general}
 \end{equation}
 
 \end_inset
@@ -1176,7 +1176,7 @@ for the unknowns
  the electric fields and lasing frequencies of all lasing modes: 
 \begin_inset Formula 
 \begin{equation}
-D(\mathbf{x})=\frac{D_{0}(\mathbf{x})}{1+\gamma_{\parallel}^{-1}\sum\left|\gamma(\omega_{\mu})\mathbf{E}_{\nu}\right|^{2}}.\label{eq:D(x) inversion}
+D(\mathbf{x})=\frac{D_{0}(\mathbf{x})}{1+\gamma_{\parallel}^{-1}\sum\left|\Gamma(\omega_{\mu})\mathbf{E}_{\nu}\right|^{2}}.\label{eq:D(x) inversion}
 \end{equation}
 
 \end_inset
@@ -1237,7 +1237,7 @@ passive
  of the linearized SALT equation
 \begin_inset Formula 
 \begin{equation}
-\nabla\times\nabla\times\tilde{\mathbf{E}}_{\mu}=\tilde{\omega}_{\mu}\left[\varepsilon+\gamma(\omega_{\mu})D\right]\tilde{\mathbf{E}}_{\mu},\label{eq:passive pole salt}
+\nabla\times\nabla\times\tilde{\mathbf{E}}_{\mu}=\tilde{\omega}_{\mu}\left[\varepsilon+\Gamma(\omega_{\mu})D\right]\tilde{\mathbf{E}}_{\mu},\label{eq:passive pole salt}
 \end{equation}
 
 \end_inset
@@ -1451,7 +1451,7 @@ reference "eq:D(x) inversion"
  The correct expression for the stationary inversion will then be
 \begin_inset Formula 
 \begin{equation}
-D=\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\sum^{\prime}\gamma_{\mu}\mathbf{E}_{\mu}\cdot\gamma_{\nu}^{\star}\mathbf{E}_{\nu}^{\star}},\label{eq:Dcorrect}
+D=\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\sum^{\prime}\Gamma_{\mu}\mathbf{E}_{\mu}\cdot\Gamma_{\nu}^{\star}\mathbf{E}_{\nu}^{\star}},\label{eq:Dcorrect}
 \end{equation}
 
 \end_inset
@@ -1498,7 +1498,7 @@ reference "eq:D(x) inversion"
  will have
 \begin_inset Formula 
 \begin{equation}
-\left|\gamma_{1}\mathbf{E}_{1}\right|^{2}+\left|\gamma_{2}\mathbf{E}_{2}\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}
+\left|\Gamma_{1}\mathbf{E}_{1}\right|^{2}+\left|\Gamma_{2}\mathbf{E}_{2}\right|^{2}+\left|\Gamma_{3}\mathbf{E}_{3}\right|^{2}
 \end{equation}
 
 \end_inset
@@ -1517,7 +1517,7 @@ reference "eq:Dcorrect"
  will have
 \begin_inset Formula 
 \begin{equation}
-\left|\gamma_{1}(\mathbf{E}_{1}+\mathbf{E}_{2})\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}.\label{eq:E123}
+\left|\Gamma_{1}(\mathbf{E}_{1}+\mathbf{E}_{2})\right|^{2}+\left|\Gamma_{3}\mathbf{E}_{3}\right|^{2}.\label{eq:E123}
 \end{equation}
 
 \end_inset
@@ -1552,8 +1552,8 @@ reference "eq:E123"
  as a single mode that satisfies the equation
 \begin_inset Formula 
 \begin{align}
--\nabla\times\nabla\times\mathbf{E} & =\omega_{1}^{2}\left(\varepsilon+D\gamma_{1}\right)\mathbf{E}\nonumber \\
-D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\gamma_{1}\mathbf{E}\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}\right)},\label{eq:1mode_salt}
+-\nabla\times\nabla\times\mathbf{E} & =\omega_{1}^{2}\left(\varepsilon+D\Gamma_{1}\right)\mathbf{E}\nonumber \\
+D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\Gamma_{1}\mathbf{E}\right|^{2}+\left|\Gamma_{3}\mathbf{E}_{3}\right|^{2}\right)},\label{eq:1mode_salt}
 \end{align}
 
 \end_inset
@@ -1565,8 +1565,8 @@ separately
 satisfying the two equations
 \begin_inset Formula 
 \begin{align}
--\nabla\times\nabla\times\mathbf{E}_{1,2} & =\omega_{1}^{2}\left(\varepsilon+D\gamma_{1}\right)\mathbf{E}_{1,2}\nonumber \\
-D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\gamma_{1}(\mathbf{E}_{1}+\mathbf{E}_{2})\right|^{2}+\left|\gamma_{3}\mathbf{E}_{3}\right|^{2}\right)}.\label{eq:2mode_salt}
+-\nabla\times\nabla\times\mathbf{E}_{1,2} & =\omega_{1}^{2}\left(\varepsilon+D\Gamma_{1}\right)\mathbf{E}_{1,2}\nonumber \\
+D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\Gamma_{1}(\mathbf{E}_{1}+\mathbf{E}_{2})\right|^{2}+\left|\Gamma_{3}\mathbf{E}_{3}\right|^{2}\right)}.\label{eq:2mode_salt}
 \end{align}
 
 \end_inset
@@ -1839,13 +1839,13 @@ key "tureci_self-consistent_2006,tureci_ab_2009,ge_steady-state_2010"
  and the single-mode SALT nonlinear eigenproblem
 \begin_inset Formula 
 \begin{equation}
-\nabla\times\nabla\times\mathbf{E}=\omega^{2}\left[\varepsilon+\frac{D_{0}\gamma(\omega)}{1+\gamma_{\parallel}^{-1}\left|\gamma(\omega)\mathbf{E}\right|^{2}}\right]\mathbf{E}\label{eq:single-mode-salt}
+\nabla\times\nabla\times\mathbf{E}=\omega^{2}\left[\varepsilon+\frac{D_{0}\Gamma(\omega)}{1+\gamma_{\parallel}^{-1}\left|\Gamma(\omega)\mathbf{E}\right|^{2}}\right]\mathbf{E}\label{eq:single-mode-salt}
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $\gamma(\omega)=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
+\begin_inset Formula $\Gamma(\omega)=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
 \end_inset
 
 .
@@ -2037,13 +2037,13 @@ reference "eq:single-mode-salt"
  is
 \begin_inset Formula 
 \begin{equation}
-\nabla\times\nabla\times\mathbf{E}_{1,2}=\omega_{\mathrm{t}}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\mathbf{E}_{1,2},\label{eq:threshold salt}
+\nabla\times\nabla\times\mathbf{E}_{1,2}=\omega_{\mathrm{t}}\left(\varepsilon+D_{\mathrm{t}}\Gamma_{\mathrm{t}}\right)\mathbf{E}_{1,2},\label{eq:threshold salt}
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $\gamma_{\mathrm{t}}=\gamma_{\perp}/(\omega_{\mathrm{t}}-\omega_{a}+\gamma_{\perp})$
+\begin_inset Formula $\Gamma_{\mathrm{t}}=\gamma_{\perp}/(\omega_{\mathrm{t}}-\omega_{a}+\gamma_{\perp})$
 \end_inset
 
 .
@@ -2060,7 +2060,7 @@ where
  We then expect the lasing mode slightly above threshold to be of the form
 \begin_inset Formula 
 \begin{align}
-\mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{1}\right)+d^{3/2}\delta\mathbf{E},\nonumber \\
+\mathbf{E} & =\Gamma_{\mathrm{t}}^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{1}\right)+d^{3/2}\delta\mathbf{E},\nonumber \\
 \omega & =\omega_{\mathrm{t}}+\omega_{1}d+\mathcal{O}(d^{2})\label{eq:lasing_ansatz}
 \end{align}
 
@@ -2149,7 +2149,7 @@ reference "sec: appendix allowed lasing modes"
 \begin_inset Formula 
 \begin{multline}
 0=\int d^{3}x\,\mathbf{E}_{1,2}\cdot\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right)\times\\
-\left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}})+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(1-\left|a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right|^{2}\right)\right]\label{eq:a eigenproblem}
+\left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}(\varepsilon+D_{\mathrm{t}}\Gamma_{\mathrm{t}})+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\Gamma_{\mathrm{t}}\left(1-\left|a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right|^{2}\right)\right]\label{eq:a eigenproblem}
 \end{multline}
 
 \end_inset
@@ -2429,7 +2429,7 @@ reference "sec: appendix allowed lasing modes"
  First, there are the purely circulating modes, given by
 \begin_inset Formula 
 \begin{align}
-\mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\frac{\left(\omega_{1}H+G_{D}\right)\gamma_{\parallel}d}{I}}\mathbf{E}_{\pm}\nonumber \\
+\mathbf{E} & =\Gamma_{\mathrm{t}}^{-1}\sqrt{\frac{\left(\omega_{1}H+G_{D}\right)\gamma_{\parallel}d}{I}}\mathbf{E}_{\pm}\nonumber \\
 \omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/I\right)}{\mathrm{Im}\left(H/I\right)}.\label{eq:circulating lasing}
 \end{align}
 
@@ -2482,7 +2482,7 @@ reference "sec: appendix allowed lasing modes"
 , the other modes are
 \begin_inset Formula 
 \begin{align}
-\mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J}}\left(\mathbf{E}_{+}+e^{i\theta}\mathbf{E}_{-}\right)\nonumber \\
+\mathbf{E} & =\Gamma_{\mathrm{t}}^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J}}\left(\mathbf{E}_{+}+e^{i\theta}\mathbf{E}_{-}\right)\nonumber \\
 \omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J]\right)}{\mathrm{Im}\left(H/[2I+J]\right)}\label{eq:n != 4 lasing}
 \end{align}
 
@@ -2540,7 +2540,7 @@ sets of standing modes.
  The first is
 \begin_inset Formula 
 \begin{align}
-\mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J+K}}\left(\mathbf{E}_{+}\pm\mathbf{E}_{-}\right)\nonumber \\
+\mathbf{E} & =\Gamma_{\mathrm{t}}^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J+K}}\left(\mathbf{E}_{+}\pm\mathbf{E}_{-}\right)\nonumber \\
 \omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J+K]\right)}{\mathrm{Im}\left(H/[2I+J+K]\right)}\label{eq:E+ + E- lasing}
 \end{align}
 
@@ -2549,7 +2549,7 @@ sets of standing modes.
 and the other is
 \begin_inset Formula 
 \begin{align}
-\mathbf{E} & =\gamma_{\mathrm{t}}^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J-K}}\left(\mathbf{E}_{+}\pm i\mathbf{E}_{-}\right)\nonumber \\
+\mathbf{E} & =\Gamma_{\mathrm{t}}^{-1}\sqrt{\frac{(\omega_{1}H+G_{D})\gamma_{\parallel}d}{2I+J-K}}\left(\mathbf{E}_{+}\pm i\mathbf{E}_{-}\right)\nonumber \\
 \omega_{1} & =-\frac{\mathrm{Im}\left(G_{D}/[2I+J-K]\right)}{\mathrm{Im}\left(H/[2I+J-K]\right)}.\label{eq:E+ + i E- lasing}
 \end{align}
 
@@ -2941,7 +2941,7 @@ reference "eq:lasing_ansatz"
 \end_inset
 
 , and 
-\begin_inset Formula $\mathbf{P}(\mathbf{x})=\gamma(\omega)\mathbf{E}(x)D$
+\begin_inset Formula $\mathbf{P}(\mathbf{x})=\Gamma(\omega)\mathbf{E}(x)D$
 \end_inset
 
 , is the polarization field.
@@ -3324,8 +3324,8 @@ key "sakurai"
 \mathsf{v}_{k}=\left(\begin{array}{c}
 \Re\vec{e}_{k}\\
 \Im\vec{e}_{k}\\
-D_{\mathrm{t}}\Re(\gamma_{\mathrm{t}}\vec{e}_{k})\\
-D_{\mathrm{t}}\Im(\gamma_{\mathrm{t}}\vec{e}_{k})\\
+D_{\mathrm{t}}\Re(\Gamma_{\mathrm{t}}\vec{e}_{k})\\
+D_{\mathrm{t}}\Im(\Gamma_{\mathrm{t}}\vec{e}_{k})\\
 0
 \end{array}\right),\label{eq:vk definition}
 \end{equation}
@@ -4158,8 +4158,9 @@ The incorrect (left) intensity pattern, correct (center) intensity pattern
 \begin_inset Formula $Q$
 \end_inset
 
- dielectric square modes, slightly above threshold, and degenerate passive
- mode of opposite chirality (right) of low-
+ dielectric square modes, slightly above threshold (the pattern remains
+ essentially the same even for much higher pump strengths), and degenerate
+ passive mode of opposite chirality (right) of low-
 \begin_inset Formula $Q$
 \end_inset
 
@@ -5724,7 +5725,7 @@ Consider two nonlasing modes that satisfy
 \begin_inset Formula 
 \begin{align}
 0 & =-\nabla\times\nabla\times\mathbf{E}_{\mu}+\omega_{\mu}^{2}\varepsilon_{\mu}\mathbf{E}_{\mu}\nonumber \\
-\varepsilon_{\mu} & \equiv\varepsilon_{c}+\Dt\gamma(\omega_{\mu})F
+\varepsilon_{\mu} & \equiv\varepsilon_{c}+\Dt\Gamma(\omega_{\mu})F
 \end{align}
 
 \end_inset
@@ -6402,8 +6403,8 @@ reference "eq:delta_omega_QP"
  we now have
 \begin_inset Formula 
 \begin{align}
-\delta\omega & =-\frac{\int d^{3}x\,\mathbf{E}\cdot\left(\delta\varepsilon+\Dt\gamma(\omega_{\mu})F\delta H\right)\mathbf{E}}{\int d^{3}x\,\mathbf{E}\cdot\left(\frac{2\varepsilon}{\omega}+\frac{\partial\varepsilon}{\partial\omega}\right)\mathbf{E}}\nonumber \\
-\varepsilon & \equiv\varepsilon_{c}+\Dt\gamma(\omega)FH\\
+\delta\omega & =-\frac{\int d^{3}x\,\mathbf{E}\cdot\left(\delta\varepsilon+\Dt\Gamma(\omega_{\mu})F\delta H\right)\mathbf{E}}{\int d^{3}x\,\mathbf{E}\cdot\left(\frac{2\varepsilon}{\omega}+\frac{\partial\varepsilon}{\partial\omega}\right)\mathbf{E}}\nonumber \\
+\varepsilon & \equiv\varepsilon_{c}+\Dt\Gamma(\omega)FH\\
 \delta H & \equiv\frac{1}{1+\left|\mathbf{E}+\delta\mathbf{E}\right|^{2}}-\frac{1}{1+\left|\mathbf{E}\right|^{2}}.\nonumber 
 \end{align}
 
@@ -7261,7 +7262,7 @@ reference "eq:salt general"
  will become
 \begin_inset Formula 
 \begin{equation}
-\varepsilon_{\mu}(\mathbf{x})=\varepsilon(\mathbf{x})+\delta\varepsilon_{\mu}(\mathbf{x})+\frac{D_{0}(\mathbf{x})\gamma(\omega_{\mu})}{1+\gamma_{\parallel}^{-1}\sum\left|\gamma_{\nu}\mathbf{E}_{\nu}(\mathbf{x})\right|^{2}}.
+\varepsilon_{\mu}(\mathbf{x})=\varepsilon(\mathbf{x})+\delta\varepsilon_{\mu}(\mathbf{x})+\frac{D_{0}(\mathbf{x})\Gamma(\omega_{\mu})}{1+\gamma_{\parallel}^{-1}\sum\left|\Gamma_{\nu}\mathbf{E}_{\nu}(\mathbf{x})\right|^{2}}.
 \end{equation}
 
 \end_inset
@@ -7974,7 +7975,7 @@ reference "eq:single-mode-salt"
  and the mode intensity, and we have
 \begin_inset Formula 
 \begin{equation}
-\nabla\times\nabla\times\mathbf{E}=\omega^{2}\left[\varepsilon+D_{\mathrm{t}}\gamma\left(1+d-\gamma_{\parallel}^{-1}\left|\gamma\mathbf{E}\right|^{2}\right)\right]\mathbf{E}.\label{eq:expanded salt}
+\nabla\times\nabla\times\mathbf{E}=\omega^{2}\left[\varepsilon+D_{\mathrm{t}}\Gamma\left(1+d-\gamma_{\parallel}^{-1}\left|\Gamma\mathbf{E}\right|^{2}\right)\right]\mathbf{E}.\label{eq:expanded salt}
 \end{equation}
 
 \end_inset
@@ -8047,8 +8048,8 @@ reference "eq:threshold salt"
 , we obtain
 \begin_inset Formula 
 \begin{multline}
-\left[\nabla\times\nabla\times-\:\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}\\
-=\left\{ \omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left[\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{0}\gamma_{\mathrm{t}}\right)\right]+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\gamma_{\mathrm{t}}\left(1-\left|\mathbf{f}\right|^{2}\right)\right\} \mathbf{f}
+\left[\nabla\times\nabla\times-\:\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\Gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}\\
+=\left\{ \omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left[\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{0}\Gamma_{\mathrm{t}}\right)\right]+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\Gamma_{\mathrm{t}}\left(1-\left|\mathbf{f}\right|^{2}\right)\right\} \mathbf{f}
 \end{multline}
 
 \end_inset
@@ -8076,7 +8077,7 @@ reference "eq:a eigenproblem"
 , where we have used the fact that 
 \begin_inset Formula 
 \begin{equation}
-\int d^{3}x\,\mathbf{E}_{1,2}\cdot\left[\nabla\times\nabla\times-\:\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}=0
+\int d^{3}x\,\mathbf{E}_{1,2}\cdot\left[\nabla\times\nabla\times-\:\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\Gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}=0
 \end{equation}
 
 \end_inset
@@ -8190,7 +8191,7 @@ where we have defined
 \begin{align}
 G_{\varepsilon} & \equiv\int d^{3}x\,\varepsilon(\mathbf{x})\mathbf{E}_{+}\cdot\mathbf{E}_{-}\nonumber \\
 G_{D} & \equiv\int d^{3}x\,D_{\mathrm{t}}(\mathbf{x})\mathbf{E}_{+}\cdot\mathbf{E}_{-}.\label{eq:G and H definitions}\\
-H & \equiv(\omega_{\mathrm{t}}\gamma_{\mathrm{t}})^{-1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left\{ \omega_{\mathrm{t}}^{2}\left(G_{\varepsilon}+G_{D}\gamma_{\mathrm{t}}\right)\right\} .\nonumber 
+H & \equiv(\omega_{\mathrm{t}}\Gamma_{\mathrm{t}})^{-1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left\{ \omega_{\mathrm{t}}^{2}\left(G_{\varepsilon}+G_{D}\Gamma_{\mathrm{t}}\right)\right\} .\nonumber 
 \end{align}
 
 \end_inset
@@ -8916,8 +8917,8 @@ We now define the vectors
 \mathsf{w}_{j}=\left(\begin{array}{c}
 \Re\vec{e}_{j}\\
 -\Im\vec{e}_{j}\\
-\omega_{\mathrm{t}}^{2}\Re\left(\vec{e}_{j}\gamma_{\mathrm{t}}\right)/\gamma_{\perp}\\
--\omega_{\mathrm{t}}^{2}\Im\left(\vec{e}_{j}\gamma_{\mathrm{t}}\right)/\gamma_{\perp}\\
+\omega_{\mathrm{t}}^{2}\Re\left(\vec{e}_{j}\Gamma_{\mathrm{t}}\right)/\gamma_{\perp}\\
+-\omega_{\mathrm{t}}^{2}\Im\left(\vec{e}_{j}\Gamma_{\mathrm{t}}\right)/\gamma_{\perp}\\
 0
 \end{array}\right).
 \end{equation}
@@ -9017,7 +9018,7 @@ Next, we compute
  as 
 \begin_inset Formula 
 \begin{equation}
-g_{k}\equiv2D_{\mathrm{t}}\left|\gamma_{\mathrm{t}}\right|\sqrt{\gamma_{\parallel}}\Re\left[\vec{e}_{k}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].
+g_{k}\equiv2D_{\mathrm{t}}\left|\Gamma_{\mathrm{t}}\right|\sqrt{\gamma_{\parallel}}\Re\left[\vec{e}_{k}^{\star}\cdot(a_{+}\vec{E}_{+}+a_{-}\vec{E}_{-})\right].
 \end{equation}
 
 \end_inset
@@ -9143,8 +9144,8 @@ reference "eq:first order quadratic"
  By direct evaluation, we have
 \begin_inset Formula 
 \begin{multline}
-\mathsf{w}_{j}^{T}\mathsf{A}_{1}\mathsf{v}_{k}=\Re\left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\,\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]+\\
-\Re\left[\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}\int d^{3}x\,D_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|\vec{f}\right|^{2}\right)\vec{e}_{k}\right]
+\mathsf{w}_{j}^{T}\mathsf{A}_{1}\mathsf{v}_{k}=\Re\left[\omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\,\vec{e}_{j}\cdot(\varepsilon+\Gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right]+\\
+\Re\left[\omega_{\mathrm{t}}^{2}\Gamma_{\mathrm{t}}\int d^{3}x\,D_{\mathrm{t}}\vec{e}_{j}\cdot\left(1-\left|\vec{f}\right|^{2}\right)\vec{e}_{k}\right]
 \end{multline}
 
 \end_inset
@@ -9152,7 +9153,7 @@ reference "eq:first order quadratic"
 and
 \begin_inset Formula 
 \begin{equation}
-\mathsf{w}_{j}^{T}\mathsf{B}_{0}\mathsf{v}_{k}=-\Im\left[\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\,\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right].
+\mathsf{w}_{j}^{T}\mathsf{B}_{0}\mathsf{v}_{k}=-\Im\left[\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\,\vec{e}_{j}\cdot(\varepsilon+\Gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}\right].
 \end{equation}
 
 \end_inset
@@ -9171,7 +9172,7 @@ reference "sec: appendix allowed lasing modes"
 , it is straightforward to show that 
 \begin_inset Formula 
 \begin{equation}
-\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\,\vec{e}_{j}\cdot(\varepsilon+\gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}=\omega_{\mathrm{t}}^{2}\gamma_{\mathrm{t}}H\left(\begin{array}{cc}
+\frac{\partial}{\partial\omega_{\mathrm{t}}}\omega_{\mathrm{t}}^{2}\int d^{3}x\,\vec{e}_{j}\cdot(\varepsilon+\Gamma_{\mathrm{t}}D_{\mathrm{t}})\vec{e}_{k}=\omega_{\mathrm{t}}^{2}\Gamma_{\mathrm{t}}H\left(\begin{array}{cc}
 \mathsf{X} & i\mathsf{X}\\
 i\mathsf{X} & -\mathsf{X}
 \end{array}\right)_{jk},
@@ -9235,10 +9236,10 @@ Putting these results together, we have
 \begin_inset Formula 
 \begin{multline}
 \mathsf{w}_{j}^{T}\mathsf{A}_{1}\mathsf{v}_{k}=\\
-\omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}W\left(\begin{array}{cc}
+\omega_{\mathrm{t}}^{2}\Re\left[\Gamma_{\mathrm{t}}W\left(\begin{array}{cc}
 \mathsf{X} & i\mathsf{X}\\
 i\mathsf{X} & -\mathsf{X}
-\end{array}\right)_{jk}-\gamma_{\mathrm{t}}\left(\begin{array}{cc}
+\end{array}\right)_{jk}-\Gamma_{\mathrm{t}}\left(\begin{array}{cc}
 \mathsf{M} & i\mathsf{M}\\
 i\mathsf{M} & -\mathsf{M}
 \end{array}\right)_{jk}\right]\label{eq:A1 element final}
@@ -9257,7 +9258,7 @@ W\equiv\omega_{\mathrm{1}}H+G_{D}-\left|a_{+}\right|^{2}I_{+}-\left|a_{-}\right|
 and
 \begin_inset Formula 
 \begin{equation}
-\mathsf{w}_{j}^{T}\mathsf{B}_{0}\mathsf{v}_{k}=-\omega_{\mathrm{t}}^{2}\Im\left[\gamma_{\mathrm{t}}H\left(\begin{array}{cc}
+\mathsf{w}_{j}^{T}\mathsf{B}_{0}\mathsf{v}_{k}=-\omega_{\mathrm{t}}^{2}\Im\left[\Gamma_{\mathrm{t}}H\left(\begin{array}{cc}
 \mathsf{X} & i\mathsf{X}\\
 i\mathsf{X} & -\mathsf{X}
 \end{array}\right)_{jk}\right].\label{eq:B0 element final}
@@ -9273,7 +9274,7 @@ Next, by straightforward computation, we obtain
 \begin_inset Formula 
 \begin{multline}
 \mathsf{w}_{j}^{T}\mathsf{A}_{1/2}\mathsf{x}_{1/2}=\\
--\sum_{k}b_{k}\int d^{3}x\,\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\Re\left[\gamma_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}+\vec{f}^{\star}\cdot\vec{e}_{k}\right)\right].\label{eq:A1/2 matrix element}
+-\sum_{k}b_{k}\int d^{3}x\,\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\Re\left[\Gamma_{\mathrm{t}}\left(\vec{f}\cdot\vec{e}_{j}\right)\left(\vec{f}\cdot\vec{e}_{k}^{\star}+\vec{f}^{\star}\cdot\vec{e}_{k}\right)\right].\label{eq:A1/2 matrix element}
 \end{multline}
 
 \end_inset
@@ -9323,7 +9324,7 @@ reference "eq:A1/2 matrix element"
 \begin_inset Formula 
 \begin{multline}
 \mathsf{w}_{j}^{T}\mathsf{A}_{1/2}\mathsf{x}_{1/2}=\\
--\sum_{k}b_{k}\omega_{\mathrm{t}}^{2}\Re\left[\gamma_{\mathrm{t}}\left(\begin{array}{cc}
+-\sum_{k}b_{k}\omega_{\mathrm{t}}^{2}\Re\left[\Gamma_{\mathrm{t}}\left(\begin{array}{cc}
 \mathsf{Q}+\mathsf{P} & i(\mathsf{P}-\mathsf{Q})\\
 i(\mathsf{P}+\mathsf{Q}) & \mathsf{Q}-\mathsf{P}
 \end{array}\right)_{jk}\right].
@@ -9372,12 +9373,12 @@ reference "eq:first order quadratic"
 \begin_inset Formula 
 \begin{multline}
 \left(\begin{array}{cc}
-\Re\left[\gamma_{\mathrm{t}}(\mathsf{Q}+\tilde{\mathsf{P}})\right] & \Im\left[\gamma_{\mathrm{t}}(\mathsf{Q}-\tilde{\mathsf{P}})\right]\\
--\Im\left[\gamma_{\mathrm{t}}(\mathsf{Q}+\tilde{\mathsf{P}})\right] & \Re\left[\gamma_{\mathrm{t}}(\mathsf{Q}-\tilde{\mathsf{P}})\right]
+\Re\left[\Gamma_{\mathrm{t}}(\mathsf{Q}+\tilde{\mathsf{P}})\right] & \Im\left[\Gamma_{\mathrm{t}}(\mathsf{Q}-\tilde{\mathsf{P}})\right]\\
+-\Im\left[\Gamma_{\mathrm{t}}(\mathsf{Q}+\tilde{\mathsf{P}})\right] & \Re\left[\Gamma_{\mathrm{t}}(\mathsf{Q}-\tilde{\mathsf{P}})\right]
 \end{array}\right)\mathsf{b}\\
 =-\sigma_{1}\left(\begin{array}{cc}
-\Im(\gamma_{\mathrm{t}}H)\mathsf{X} & \Re(\gamma_{\mathrm{t}}H)\mathsf{X}\\
-\Re(\gamma_{\mathrm{t}}H)\mathsf{X} & -\Im(\gamma_{\mathrm{t}}H)\mathsf{X}
+\Im(\Gamma_{\mathrm{t}}H)\mathsf{X} & \Re(\Gamma_{\mathrm{t}}H)\mathsf{X}\\
+\Re(\Gamma_{\mathrm{t}}H)\mathsf{X} & -\Im(\Gamma_{\mathrm{t}}H)\mathsf{X}
 \end{array}\right)\mathsf{b}.
 \end{multline}
 
