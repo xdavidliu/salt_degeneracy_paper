@@ -10111,9 +10111,12 @@ Region of validity in small-
 \end_layout
 
 \begin_layout Standard
-In this section, we heuristically carry the perturbation theory to higher
- order, and demonstrate that the regime of validity of the perturbation
- theory depends on 
+In this section, we work out the 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+ dependence of higher-order terms in the perturbation theory, and demonstrate
+ that the regime of validity of the perturbation theory depends on 
 \begin_inset Formula $d$
 \end_inset
 
@@ -10122,39 +10125,82 @@ In this section, we heuristically carry the perturbation theory to higher
 \end_inset
 
 .
- This is made possible by the fact that the only place 
+ We show that the exact expansion to all orders of the quantity 
+\begin_inset Formula $\sigma/d$
+\end_inset
+
+ only contains terms of the form 
+\begin_inset Formula $d^{\ell}/\gamma_{\parallel}^{j}$
+\end_inset
+
+ with 
+\begin_inset Formula $\ell\geq j$
+\end_inset
+
+, and that in the limit where 
+\begin_inset Formula $\gamma_{\parallel},d\to0$
+\end_inset
+
+, with 
+\begin_inset Formula $d$
+\end_inset
+
+ vanishing at least as rapidly as 
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
- occurs in the entire problem is the very last matrix element of 
-\begin_inset Formula $\mathsf{A}_{0}$
+, the terms with 
+\begin_inset Formula $\ell>j$
 \end_inset
 
- in Eq.
+ vanish and the stability eigenvalue takes the asymptotic functional form
+ 
+\begin_inset Formula $\sigma/d=f(d/\gamma_{\parallel})$
+\end_inset
+
+.
+ Here, 
+\begin_inset Formula $f(0)$
+\end_inset
+
+ is exactly the first-order stability eigenvalue 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+.
+ For circulating modes that have 
+\begin_inset Formula $\mathrm{Re}(\sigma_{1})<0$
+\end_inset
+
+, the the smallest positive root 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ of the function 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ gives a boundary of stability, for which a circulating lasing mode becomes
+ 
+\emph on
+unstable 
+\emph default
+for 
+\begin_inset Formula $d>\gamma_{\parallel}z_{0}$
+\end_inset
+
+, as seen in the ring-laser example in Ref.
 \begin_inset space ~
 \end_inset
 
 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:A matrix"
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
 
 \end_inset
 
-, as well as the fact that the 
-\begin_inset Formula $\mathsf{x}_{m+\frac{1}{2}}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathsf{x}_{m}$
-\end_inset
-
- have predictable nonzero patterns, due to the nonzero patterns of 
-\begin_inset Formula $\mathsf{A}_{m+\frac{1}{2}}$
-\end_inset
-
- being different from those of all the other matrices.
- 
+.
 \end_layout
 
 \begin_layout Standard
@@ -10271,6 +10317,11 @@ and
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
+, i.e.
+ it goes to a constant as 
+\begin_inset Formula $\gamma_{\parallel}\rightarrow0$
+\end_inset
+
 .
  Moving onto order 
 \begin_inset Formula $d^{2}$
@@ -10285,11 +10336,11 @@ and
 
 \end_inset
 
-Taking 
-\begin_inset Formula $\mathsf{x}_{0}$
+Multiplying both sides by 
+\begin_inset Formula $\mathsf{x}_{0}^{T}$
 \end_inset
 
- of both sides annihilates the 
+ annihilates the 
 \begin_inset Formula $k=0$
 \end_inset
 
@@ -10356,6 +10407,38 @@ Carrying on to the next order results in
 \end_inset
 
 .
+ This is made possible by the fact that the only place 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+ occurs in the entire problem is the very last matrix element of 
+\begin_inset Formula $\mathsf{A}_{0}$
+\end_inset
+
+ in Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:A matrix"
+
+\end_inset
+
+, as well as the fact that the 
+\begin_inset Formula $\mathsf{x}_{m+\frac{1}{2}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathsf{x}_{m}$
+\end_inset
+
+ have predictable nonzero patterns, due to the nonzero patterns of 
+\begin_inset Formula $\mathsf{A}_{m+\frac{1}{2}}$
+\end_inset
+
+ being different from those of all the other matrices.
  Defining 
 \begin_inset Formula $s_{m+1}\equiv\gamma_{\parallel}^{m}\sigma_{m+1}=\mathcal{O}(1)$
 \end_inset
@@ -10399,7 +10482,15 @@ where the
 \begin_inset Formula $d,\gamma_{\parallel}\rightarrow0$
 \end_inset
 
-.
+ (provided that 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+ does not go zero more rapidly than 
+\begin_inset Formula $d$
+\end_inset
+
+).
  In this limit, we can then infer a generic functional form of 
 \begin_inset Formula $\sigma$
 \end_inset
