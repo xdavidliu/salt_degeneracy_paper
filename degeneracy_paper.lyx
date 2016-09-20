@@ -876,7 +876,7 @@ reference "sub:Forcing-the-degeneracy"
  (If the discretization breaks the degeneracy, but the pump strength is
  high enough, a single-mode circulating solution 
 \emph on
-can
+may
 \emph default
  still come back into existance, due to strong nonlinear self-interaction
  effects 
