@@ -879,7 +879,14 @@ reference "sub:Forcing-the-degeneracy"
 can
 \emph default
  still come back into existance, due to strong nonlinear self-interaction
- effects.
+ effects 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+.
  This effect can provide a fast and easy way to initially evaluate the field
  profile of a discretized geometry that is not exactly symmetric, and hence
  does not have an exact degeneracy.
