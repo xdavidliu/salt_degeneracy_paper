@@ -809,7 +809,11 @@ ns.
 \end_inset
 
  analog of the circulating solution in the ring).
- Second, there is a tricky complication that arises purely from 
+ 
+\end_layout
+
+\begin_layout Standard
+Second, there is a tricky complication that arises purely from 
 \emph on
 numerical
 \emph default
@@ -853,11 +857,11 @@ key "inui_group,tinkham"
 \end_inset
 
 .
- In the nonlinear problem, however, the splitting prevents the desired solution
- (e.g.
- the circulating mode) from even existing in the SALT equations, because
- the solver can no longer pick arbitrary superpositions of the formerly
- degenerate modes, as described in Sec.
+ In the nonlinear problem, however, the splitting can prevent the desired
+ solution (e.g.
+ the circulating mode) from existing in the SALT equations, because the
+ solver can no longer pick arbitrary superpositions of the formerly degenerate
+ modes, as described in Sec.
 \begin_inset space ~
 \end_inset
 
@@ -869,73 +873,34 @@ reference "sub:Forcing-the-degeneracy"
 \end_inset
 
 .
- Ref.
+ (If the discretization breaks the degeneracy, but the pump strength is
+ high enough, a single-mode circulating solution 
+\emph on
+can
+\emph default
+ still come back into existance, due to strong nonlinear self-interaction
+ effects.
+ This effect can provide a fast and easy way to initially evaluate the field
+ profile of a discretized geometry that is not exactly symmetric, and hence
+ does not have an exact degeneracy.
+ However, the conditions under which this effect can happen are not completely
+ understood, as we explain in Sec.
 \begin_inset space ~
 \end_inset
 
 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ref-rotter_degeneracy"
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:discretization_breaking"
 
 \end_inset
 
- found instances where artificially breaking a degeneracy on purpose, such
- as by introducing a wedge to a single location on the rim of a ring laser,
- can result in the circulating mode not existing near threshold as expected,
- but coming back 
-\emph on
-into
-\emph default
- existence (once the pump strength is high enough above threshold and the
- nonlinearity is strong enough) as a modified version that is not perfectly
- 
-\begin_inset Quotes eld
-\end_inset
-
-circulating
-\begin_inset Quotes erd
-\end_inset
-
-.
- While this fact implies that our 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- geometries, whose degeneracies have been broken by discretization, may
- also have such single-mode solutions, the solutions are not guaranteed
- to closely resemble the true circulating modes we are looking for, and
- they are not guaranteed to exist at all (near threshold, they are almost
- 
-\emph on
-certain
-\emph default
- to not exist, because the splitting in frequencies and thresholds is large
- compared to the nonlinearity), so our solution method cannot rely on this
- effect happening.
- More importantly, a discretization-induced error and a physical perturbation
- breaking the degeneracy are two distinct effects (even if their consequences
- are mathematically similar), and it is important to be able to study them
- independently.
- When one is studying a physical symmetry-breaking defect, one doesn't want
- to accidentally observe an artificial effect of discretization instead.
- Furthermore, it is useful to be able to calculate the exact degenerate
- solution of a perfectly symmetrical structure as a starting point for semi-anal
-ytical perturbation-theory analyses 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "phc_book,ref-johnson_pert_theory,ref-sgj_roughness"
-
-\end_inset
-
- of small physical defects.
-\end_layout
-
-\begin_layout Standard
-To fix this problem, we found a simple way to uniquely restore any degeneracy
- broken by the discretization in a way that both guarantees convergence
- to the correct solution as the discretization is refined and which generalizes
- to an arbitrary number of lasing modes (in Sec.
+, and we wish to deal with the discretization symmetry breaking in a more
+ systematic and provably reliable manner.) To fix the problem of broken degenerac
+y from discretization, we found a simple way to uniquely restore the degeneracy
+ in a way that both guarantees convergence to the correct solution (as the
+ discretization is refined), that generalizes to an arbitrary number of
+ lasing modes (in Sec.
 \begin_inset space ~
 \end_inset
 
@@ -946,7 +911,7 @@ reference "sub:multimode discretization method"
 
 \end_inset
 
-), and which is at worst a few times more computationally expensive than
+), and that is, at worst, a few times more computationally expensive than
  our non-degenerate solver.
 \end_layout
 
@@ -2874,7 +2839,7 @@ fixed-point
 \begin_inset Formula $\cos$
 \end_inset
 
- modes are unstable in a ring [refs].
+ modes are unstable in a ring.
  To quantify this intuition, we perform linear-stability analysis, along
  the same lines as the numerical procedure in Ref.
 \begin_inset space ~
@@ -3992,20 +3957,65 @@ key "ref-rotter_degeneracy"
 \end_inset
 
 .
- Closer inspection of the data in that case shows that for very small 
+ The instability comes from one of the four Maxwell--Bloch stability eigenvalues
+ associated with the degenerate threshold pair (whose first-order coefficients
+ are given in Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circulating eigenvalues"
+
+\end_inset
+
+) going above the real axis.
+ However, the onset of the instability depends on the value of 
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
-, this cutoff pump strength is linear with 
+, the relaxation rate of the inversion, and the eigenvalues in Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circulating eigenvalues"
+
+\end_inset
+
+ are independent of that parameter, so the effect must come from higher
+ orders.
+ Closer inspection of the data in the ring laser of Ref.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+ shows that for very small 
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
-, i.e.
- the circulating mode is stable for 
+, the cutoff pump strength 
+\begin_inset Formula $d_{\mathrm{cutoff}}$
+\end_inset
+
+ is linear with 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+; that is, the circulating mode is stable for 
 \begin_inset Formula $d<z_{0}\gamma_{\parallel}$
 \end_inset
 
-, where 
+,where 
 \begin_inset Formula $z_{0}$
 \end_inset
 
@@ -5103,6 +5113,85 @@ key "direct_salt"
  and even after both modes lase we cannot construct a linear combination
  of them because the two modes satisfy equations with different real eigenfreque
 ncies.
+ 
+\end_layout
+
+\begin_layout Standard
+When the pump strength is sufficiently high above threshold, however, a
+ circulating linear combination 
+\emph on
+can 
+\emph default
+exist, even when the degeneracy is broken.
+ For example, Ref.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+ found instances where artificially breaking a degeneracy on purpose, such
+ as by introducing a wedge to a single location on the rim of a ring laser,
+ can result in the circulating mode not existing near threshold as expected,
+ but coming back 
+\emph on
+into
+\emph default
+ existence (once the pump strength is high enough above threshold and the
+ nonlinearity is strong enough) as a modified version that is not perfectly
+ 
+\begin_inset Quotes eld
+\end_inset
+
+circulating
+\begin_inset Quotes erd
+\end_inset
+
+, but nearly so.
+ We have found similar results in hexagonal (
+\begin_inset Formula $C_{6\mathrm{v}})$
+\end_inset
+
+ structures 
+\emph on
+without 
+\emph default
+artifically-introduced defects, in which the degeneracy is broken by discretizat
+ion alone.
+ There, a circulating single-mode lasing solution starts existing above
+ a certain pump strength (somewhat higher than threshold), even though there
+ is no degeneracy at threshold.
+ In many cases such as these, numerically solving the single mode problem,
+ using an artificially-constructed circulating solution as an initial guess,
+ results in the solver correctly converging to a circulating lasing mode.
+ However, this effect is not completely understood, and it is not entirely
+ predicable under what circumstances such a circulating mode exists.
+ Further, this approach requires the nonlinear self interaction to be strong
+ enough to counteract the broken degeneracy due to discretization, which
+ in turn requires a minimum pump strength that may be arbitrary and difficult
+ to determine.
+ Hence, near threshold this approach can be unreliable (we give an illustrative
+ example below).
+ Moreover, a discretization-induced error and a physical perturbation breaking
+ the degeneracy are two distinct effects (even if their consequences are
+ mathematically similar), and it is important to be able to study them independe
+ntly.
+ When one is studying a physical symmetry-breaking defect, one does not
+ want to accidentally observe an artificial effect of discretization instead.
+ Furthermore, it is useful to be able to calculate the exact degenerate
+ solution of a perfectly symmetrical structure as a starting point for semi-anal
+ytical perturbation-theory analyses 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "phc_book,ref-johnson_pert_theory,ref-sgj_roughness"
+
+\end_inset
+
+ of small physical defects.
  Consequently, degeneracy-splitting caused by discretization is a major
  practical problem for our SALT solver and requires a nontrivial solution.
 \end_layout
@@ -5394,7 +5483,7 @@ reference "eq:incorrect solution split discretization"
 not 
 \emph default
 be equal as they should, especially right above the second (unphysical)
- threshold.
+ threshold, where we will see one mode greatly dominating the other.
  Second, the total intensity pattern for the two-mode regime 
 \begin_inset Formula $\left|a_{\mathrm{even}}\mathbf{E}_{\mathrm{even}}\right|^{2}+\left|a_{\mathrm{odd}}\mathbf{E}_{\mathrm{odd}}\right|^{2}$
 \end_inset
@@ -5412,7 +5501,7 @@ be equal as they should, especially right above the second (unphysical)
 \begin_inset Formula $\mathbf{E}_{\mathrm{odd}}$
 \end_inset
 
-, and it would not have rotationally symmetry at all.
+, and it would not have rotational symmetry at all.
  Hence, any affect of the chirality on the self-consistent solution would
  be lost.
  Finally, the presence of a small nonzero splitting 
@@ -5631,7 +5720,7 @@ status open
 
 \begin_layout Plain Layout
 Splitting in degeneracy due to discretization error for even-
-\begin_inset Formula $m$
+\begin_inset Formula $\ell$
 \end_inset
 
  modes of dielectric cylinder versus the resolution 
@@ -6090,7 +6179,7 @@ by the same factor.
 \end_inset
 
  of this procedure applied to the odd-
-\begin_inset Formula $m$
+\begin_inset Formula $\ell$
 \end_inset
 
  threshold modes in Fig.
@@ -6203,12 +6292,12 @@ Dielectric perturbation
 \end_inset
 
  obtained by solving QP for even-
-\begin_inset Formula $m$
+\begin_inset Formula $\ell$
 \end_inset
 
  threshold modes.
  The real part (left) has a dependence 
-\begin_inset Formula $\cos(2m\phi)$
+\begin_inset Formula $\cos(2\ell\phi)$
 \end_inset
 
 , while the imaginary part (right) is a more complicated function.
@@ -6298,7 +6387,7 @@ Relative splitting in threshold pump strength
 \end_inset
 
  for even-
-\begin_inset Formula $m$
+\begin_inset Formula $\ell$
 \end_inset
 
  cylinder modes after QP iterations.
@@ -6388,7 +6477,7 @@ status open
 \end_inset
 
  for nearly degenerate even-
-\begin_inset Formula $m$
+\begin_inset Formula $\ell$
 \end_inset
 
  modes of cylinder, where 
@@ -6475,7 +6564,7 @@ reference "fig:QP_stability"
  desired physical information about the degenerate pair.
  If we wanted to be absolutely correct and force the degeneracy to machine
  precision (as it was in the exactly symmetric case for odd-
-\begin_inset Formula $m$
+\begin_inset Formula $\ell$
 \end_inset
 
  modes), we could simply perform QP again at some given 
@@ -6657,7 +6746,7 @@ Above-threshold splitting in real and imaginary parts of
 \end_inset
 
  after performing QP procedure for even-
-\begin_inset Formula $m$
+\begin_inset Formula $\ell$
 \end_inset
 
  modes.
@@ -6750,7 +6839,7 @@ status open
 
 \begin_layout Plain Layout
 Intensity profiles for even-
-\begin_inset Formula $m$
+\begin_inset Formula $\ell$
 \end_inset
 
  lasing mode and its second passive pole at 
@@ -7275,7 +7364,7 @@ reference "fig:lowQ_chirality"
 \end_inset
 
  symmetry, so there is a small splitting similar to that of the even-
-\begin_inset Formula $m$
+\begin_inset Formula $\ell$
 \end_inset
 
  cylinder modes.
@@ -7493,12 +7582,7 @@ First, although we have reduced the question of stability of circulating
 
 -symmetric problem with a degenerate lasing threshold in which the circulating
  mode is unstable.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(Since Ref.
+ (Since Ref.
 \begin_inset space ~
 \end_inset
 
@@ -7543,55 +7627,41 @@ key "ref-lige_condensation_arxiv"
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
-, so the stability eigenvalues are not preserved in general.) Note also that
- in Ref.
-\begin_inset space ~
+.
+ Because the exact Maxwell--Bloch stability eigenvalue 
+\begin_inset Formula $\sigma$
 \end_inset
 
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ref-rotter_degeneracy"
-
-\end_inset
-
- (their figure 1), it was found that the circulating mode can become unstable
- very soon above threshold for small 
+ is depends on 
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
-; this is consistent with our results because we find in Appendix.
+, as explained in Appendix
 \begin_inset space ~
 \end_inset
 
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec: appendix stability calculations"
+reference "sub:Region-of-validity"
 
 \end_inset
 
- that the 
-\emph on
-second
-\emph default
--order perturbation analysis of the stability eigenvalue diverges as 
-\begin_inset Formula $\gamma_{\parallel}^{-1}$
+ (only the first-order term 
+\begin_inset Formula $\sigma_{1}$
 \end_inset
 
-, which means that the range of stable pump values 
-\begin_inset Formula $d$
-\end_inset
-
- goes to zero as 
-\begin_inset Formula $\gamma_{\parallel}\to0$
+ is independent) and SALT solutions do not, this method of translating a
+ hole-burning term to an artificially-designed pump profile at a higher
+ threshold does not preserve the physics of 
+\begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
 .
+ 
 \end_layout
 
-\end_inset
-
+\begin_layout Standard
 Second, it would be interesting to extend this sort of perturbative SALT/stabili
 ty analysis to other lasing systems besides 
 \begin_inset Formula $C_{n}$
@@ -8929,7 +8999,7 @@ reference "eq:eigenpair expansion"
  
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Zeroth and lowest (
 \begin_inset Formula $d^{1/2}$
 \end_inset
@@ -9203,7 +9273,7 @@ The vector
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 First order
 \end_layout
 
@@ -9523,7 +9593,7 @@ which is a
 .
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Closed-form stability eigenvalues
 \end_layout
 
@@ -10214,12 +10284,19 @@ reference "eq:z = 1 double eigenvalues"
  
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Region of validity in small-
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
  limit
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Region-of-validity"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10623,7 +10700,8 @@ where
 \begin_inset Formula $f$
 \end_inset
 
- is a function whose Taylor expansion is the sum in Eq.
+ is a complex-valued function (with a real argument) whose Taylor expansion
+ is the sum in Eq.
 \begin_inset space ~
 \end_inset
 
@@ -10644,7 +10722,8 @@ reference "eq:s expansion"
 \begin_inset Formula $f(0)=\sigma_{1}$
 \end_inset
 
- having a negative real part, and the smallest positive zero 
+ having a negative real part.
+ The smallest positive zero 
 \begin_inset Formula $z_{0}$
 \end_inset
 
@@ -10652,7 +10731,7 @@ reference "eq:s expansion"
 \begin_inset Formula $f$
 \end_inset
 
-, giving the equation for a boundary of stability 
+ then gives the equation for a boundary of stability 
 \begin_inset Formula $d=\gamma_{\parallel}z_{0}$
 \end_inset
 
