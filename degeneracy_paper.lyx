@@ -10237,8 +10237,12 @@ In this section, we work out the
 \end_inset
 
 .
- We show that the exact expansion to all orders of the quantity 
+ We show that the exact expansion of 
 \begin_inset Formula $\sigma/d$
+\end_inset
+
+ to all orders in 
+\begin_inset Formula $d$
 \end_inset
 
  only contains terms of the form 
