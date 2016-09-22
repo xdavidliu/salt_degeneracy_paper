@@ -5172,33 +5172,24 @@ ion alone.
  There, a circulating single-mode lasing solution starts existing above
  a certain pump strength (somewhat higher than threshold), even though there
  is no degeneracy at threshold.
- In many cases such as these, numerically solving the single mode problem,
- using an artificially-constructed circulating solution as an initial guess,
- results in the solver correctly converging to a circulating lasing mode.
+ (The reason the circulating lasing mode requires a minimum pump strength
+ is that the nonlinearity must be strong enough to counteract the broken
+ degeneracy.
+ This minimum pump strength is not straightforward to determine, and may
+ require trial-and-error to obtain.) In many cases such as these, numerically
+ solving the single mode problem, using an artificially-constructed circulating
+ solution as an initial guess, results in the solver correctly converging
+ to a circulating lasing mode.
  However, this effect is not completely understood, and it is not entirely
- predicable under what circumstances such a circulating mode exists.
- Further, this approach requires the nonlinear self interaction to be strong
- enough to counteract the broken degeneracy due to discretization, which
- in turn requires a minimum pump strength that may be arbitrary and difficult
- to determine.
- Hence, near threshold this approach can be unreliable (we give an illustrative
- example below).
+ predicable under what circumstances such a circulating mode exists (near
+ threshold, the effect is almost guaranteed to give incorrect results, as
+ we illustrate in an example below).
  Moreover, a discretization-induced error and a physical perturbation breaking
  the degeneracy are two distinct effects (even if their consequences are
  mathematically similar), and it is important to be able to study them independe
 ntly.
  When one is studying a physical symmetry-breaking defect, one does not
  want to accidentally observe an artificial effect of discretization instead.
- Furthermore, it is useful to be able to calculate the exact degenerate
- solution of a perfectly symmetrical structure as a starting point for semi-anal
-ytical perturbation-theory analyses 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "phc_book,ref-johnson_pert_theory,ref-sgj_roughness"
-
-\end_inset
-
- of small physical defects.
  Consequently, degeneracy-splitting caused by discretization is a major
  practical problem for our SALT solver and requires a nontrivial solution.
 \end_layout
