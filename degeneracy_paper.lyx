@@ -10725,8 +10725,8 @@ reference "eq:s expansion"
 \begin_inset Formula $z_{0}$
 \end_inset
 
- of the function 
-\begin_inset Formula $f$
+ of 
+\begin_inset Formula $\Re f$
 \end_inset
 
  then gives the equation for a boundary of stability 
