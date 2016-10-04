@@ -2150,11 +2150,11 @@ reference "eq:lasing_ansatz"
 \end_inset
 
  geometry) standing-wave modes, which we denote as 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e}}$
+\begin_inset Formula $\mathbf{E}_{\mathrm{even}}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{E}_{\mathrm{o}}$
+\begin_inset Formula $\mathbf{E}_{\mathrm{odd}}$
 \end_inset
 
  (as in Fig.
@@ -2205,7 +2205,7 @@ circulating
  modes in a ring)
 \begin_inset Formula 
 \begin{equation}
-\mathbf{E}_{\pm}=\sum_{k=1}^{n}\exp\left(\pm\frac{2\pi i\ell k}{n}\right)R_{k/n}\mathbf{E}_{\mathrm{e}},\label{eq:chiral definition}
+\mathbf{E}_{\pm}=\sum_{k=1}^{n}\exp\left(\pm\frac{2\pi i\ell k}{n}\right)R_{k/n}\mathbf{E}_{\mathrm{even}},\label{eq:chiral definition}
 \end{equation}
 
 \end_inset
@@ -2215,7 +2215,7 @@ where
 \end_inset
 
  is given by the 2d irrep that 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e}}$
+\begin_inset Formula $\mathbf{E}_{\mathrm{even}}$
 \end_inset
 
  belongs to [
@@ -2231,7 +2231,7 @@ where
 \end_inset
 
  is a counterclockwise rotation of the vector field 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e}}(\mathbf{x})$
+\begin_inset Formula $\mathbf{E}_{\mathrm{even}}(\mathbf{x})$
 \end_inset
 
  in the plane of the 
@@ -2278,11 +2278,11 @@ key "inui_group,tinkham"
 \end_inset
 
  are mirror flips of one another, and they span the same space as 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e}}$
+\begin_inset Formula $\mathbf{E}_{\mathrm{even}}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{E}_{\mathrm{o}}$
+\begin_inset Formula $\mathbf{E}_{\mathrm{odd}}$
 \end_inset
 
 .
@@ -2835,7 +2835,7 @@ fixed-point
 \end_inset
 
  for the 
-\begin_inset Formula $\mathbf{E}_{\mathrm{o}}$
+\begin_inset Formula $\mathbf{E}_{\mathrm{odd}}$
 \end_inset
 
  mode, and those zero-amplitude regions are making no use of the gain.
@@ -3618,11 +3618,11 @@ reference "eq:n != 4 lasing"
 \end_inset
 
 -fold rotations of 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e}}$
+\begin_inset Formula $\mathbf{E}_{\mathrm{even}}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{E}_{\mathrm{o}}$
+\begin_inset Formula $\mathbf{E}_{\mathrm{odd}}$
 \end_inset
 
 , are actually lasing solutions).
@@ -4168,15 +4168,15 @@ reference "sub:Stability-analysis summary"
 .
  As a consequence of including interference between the two standing-wave
  modes 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e}}$
+\begin_inset Formula $\mathbf{E}_{\mathrm{even}}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{E}_{\mathrm{o}}$
+\begin_inset Formula $\mathbf{E}_{\mathrm{odd}}$
 \end_inset
 
 , this intensity pattern 
-\begin_inset Formula $\left|\mathbf{E}_{\mathrm{e}}\pm i\mathbf{E}_{\mathrm{o}}\right|$
+\begin_inset Formula $\left|\mathbf{E}_{\mathrm{even}}\pm i\mathbf{E}_{\mathrm{odd}}\right|$
 \end_inset
 
  is chiral (with 
@@ -4184,7 +4184,7 @@ reference "sub:Stability-analysis summary"
 \end_inset
 
  symmetry) while a naive summation of the individual intensities 
-\begin_inset Formula $|\mathbf{E}_{\mathrm{e}}|^{2}+|\mathbf{E}_{\mathrm{o}}|^{2}$
+\begin_inset Formula $|\mathbf{E}_{\mathrm{even}}|^{2}+|\mathbf{E}_{\mathrm{odd}}|^{2}$
 \end_inset
 
  would still yield a 
@@ -5285,11 +5285,11 @@ reference "fig:phc_geometry"
 \end_inset
 
  whispering-gallery modes, the sine mode 
-\begin_inset Formula $\mathbf{E}_{\mathrm{o}}\propto\sin(\ell\phi)$
+\begin_inset Formula $\mathbf{E}_{\mathrm{odd}}\propto\sin(\ell\phi)$
 \end_inset
 
  is simply a 90-degree rotation of the cosine mode 
-\begin_inset Formula $\mathbf{E}_{\mathrm{e}}\propto\cos(\ell\phi)$
+\begin_inset Formula $\mathbf{E}_{\mathrm{even}}\propto\cos(\ell\phi)$
 \end_inset
 
 , as seen in Fig.
@@ -5610,7 +5610,7 @@ Dielectric function for hexagonal cavity.
 \end_inset
 
  symmetry and supports a pair of degenerate TE (
-\begin_inset Formula $\mathbf{E}=E_{\mathrm{e}}\hat{\mathbf{x}}+E_{\mathrm{o}}\hat{\mathbf{y}})$
+\begin_inset Formula $\mathbf{E}=E_{\mathrm{even}}\hat{\mathbf{x}}+E_{\mathrm{odd}}\hat{\mathbf{y}})$
 \end_inset
 
  modes that transform as 
@@ -7300,7 +7300,7 @@ status open
 \begin_layout Plain Layout
 Dielectric perturbation obtained from QP procedure for hexagonal cavity.
  Since the mode is TE (
-\begin_inset Formula $\mathbf{E}=E_{\mathrm{e}}\hat{\mathbf{x}}+E_{\mathrm{o}}\hat{\mathbf{y}}$
+\begin_inset Formula $\mathbf{E}=E_{\mathrm{even}}\hat{\mathbf{x}}+E_{\mathrm{odd}}\hat{\mathbf{y}}$
 \end_inset
 
 ), we have allowed the perturbation to be a diagonally-anisotropic tensor,
@@ -10254,7 +10254,7 @@ reference "eq:chiral definition"
  then becomes
 \begin_inset Formula 
 \begin{equation}
-\mathbf{E}_{\pm}=\sum_{b=1}^{n}(\pm i)^{b}R_{b/n}\mathbf{E}_{\mathrm{e}}.
+\mathbf{E}_{\pm}=\sum_{b=1}^{n}(\pm i)^{b}R_{b/n}\mathbf{E}_{\mathrm{even}}.
 \end{equation}
 
 \end_inset
