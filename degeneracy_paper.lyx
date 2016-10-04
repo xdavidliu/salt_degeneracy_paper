@@ -217,7 +217,8 @@ We present a general method to obtain the stable lasing solutions for the
 \emph on
 ab-initio
 \emph default
- lasing theory (SALT) for the case of a degenerate symmetric laser.
+ lasing theory (SALT) for the case of a degenerate symmetric laser in two
+ dimensions (2d).
  We find that under most regimes (with one pathological exception), the
  stable solutions are clockwise and counterclockwise circulating modes,
  generalizing previously known results of ring lasers to all 2d rotational
@@ -258,7 +259,7 @@ name "sec:Introduction"
 \begin_layout Standard
 Many lasers are formed from high-symmetry microcavity geometries that have
  degenerate resonant modes, most famously ring and disc resonators in which
- the clockwise and counterclockwise circulating modes are degenerate (have
+ the clockwise and counterclockwise circulating modes are degenerate (having
  the same complex resonant frequency).
  In a linear system, any superposition of these solutions also satisfies
  Maxwell's equations, but above-threshold lasers have nonlinear gain that
@@ -373,13 +374,14 @@ key "tureci_self-consistent_2006,tureci_strong_2008,tureci_ab_2009,ge_quantitati
 
 \end_inset
 
-) equations, the stability of these solutions could be computed 
+) equations in the single-mode regime, the stability of these solutions
+ could be computed 
 \emph on
 numerically
 \emph default
 .
  In this work, we show rigorously using degenerate perturbation theory on
- the SALT equation that the circulating modes used in Ref.
+ the SALT equations that the circulating modes used in Ref.
 \begin_inset space ~
 \end_inset
 
@@ -390,7 +392,7 @@ key "ref-rotter_degeneracy"
 
 \end_inset
 
-, along with standing modes that are linear combinations of the clockwise
+, along with standing-wave modes that are linear combinations of the clockwise
  and counterclockwise circulating modes, are the 
 \emph on
 only 
@@ -500,8 +502,8 @@ key "ref-risken_instability,ref-bidirectional,ref-MBring,ref-breaking_cylindrica
 .
  It reproduced the stability of the circulating solution near threshold,
  and found that far above the lasing threshold (where nonlinearities are
- strong) the circulating solution may become unstable (replaced by a oscillating
- limit-cycle solution).
+ strong) the circulating solution may become unstable (replaced by an oscillatin
+g limit-cycle solution).
  Conversely, they found that breaking the degeneracy typically caused the
  solution to become unstable (e.g.
  oscillating between clockwise and counterclockwise modes), but that in
@@ -648,7 +650,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Degenerate pairs of standing modes in a laser.
+Degenerate pairs of standing-wave modes in a laser.
  For this uniform dielectric disk (top), which has 
 \begin_inset Formula $C_{\infty\mathrm{v}}$
 \end_inset
@@ -708,12 +710,12 @@ Degenerate pairs of standing modes in a laser.
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
-), the standing modes have mirror planes that are 
+), the standing-wave modes have mirror planes that are 
 \begin_inset Formula $\frac{\pi}{2}$
 \end_inset
 
- rotations from one another, and the two standing modes have opposite parities
- across these mirror planes.
+ rotations from one another, and the two standing-wave modes have opposite
+ parities across these mirror planes.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -760,9 +762,14 @@ key "tureci_self-consistent_2006,ge_steady-state_2010,tureci_ab_2009"
 \begin_inset Formula $\varepsilon_{\mathrm{SALT}}$
 \end_inset
 
- depends nonlinearly on both the field and frequency, and this equation
- can be efficiently solved numerically by adapting standard techniques from
- computational electromagnetism 
+ depends nonlinearly on both the field and frequency (here, the speed of
+ light 
+\begin_inset Formula $c$
+\end_inset
+
+ has been set to unity).
+ This equation can be efficiently solved numerically by adapting standard
+ techniques from computational electromagnetism 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "direct_salt"
@@ -938,7 +945,7 @@ key "ref-haken_laser_theory,ref-sauermann,haken_light:_1985,ref-lamb"
 
 \end_inset
 
-:
+ (with the rotating-wave approximation):
 \end_layout
 
 \begin_layout Standard
@@ -1185,7 +1192,14 @@ key "tureci_self-consistent_2006,fu_multifrequency_1991,haken_light:_1985"
 \begin_inset space ~
 \end_inset
 
-is solved for all the lasing modes 
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:salt general"
+
+\end_inset
+
+ is solved for all the lasing modes 
 \begin_inset Formula $\mathbf{E}_{\nu}$
 \end_inset
 
@@ -1232,8 +1246,8 @@ Effects of exact degeneracies
 \begin_layout Standard
 So far, most cases in which SALT has been applied has dealt with either
  single lasing modes or multimode regimes in which frequencies are far apart.
- When frequencies are close but not exactly degenerate, there is non-negligible
- beating and SALT is invalid.
+ When two lasing frequencies are close but not exactly degenerate, there
+ is non-negligible beating and SALT is invalid.
  However, when two lasing modes are 
 \emph on
 exactly
@@ -1429,6 +1443,10 @@ D=\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\sum^{\prime}\Gamma_{\mu}\mathbf{E}_{\mu
 \end_inset
 
 where 
+\begin_inset Formula $\Gamma_{\mu}\equiv\Gamma(\omega_{\mu})$
+\end_inset
+
+ and 
 \begin_inset Formula $\sum^{\prime}$
 \end_inset
 
@@ -1525,12 +1543,17 @@ reference "eq:E123"
 \begin_inset Formula 
 \begin{align}
 -\nabla\times\nabla\times\mathbf{E} & =\omega_{1}^{2}\left(\varepsilon+D\Gamma_{1}\right)\mathbf{E}\nonumber \\
-D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\Gamma_{1}\mathbf{E}\right|^{2}+\left|\Gamma_{3}\mathbf{E}_{3}\right|^{2}\right)},\label{eq:1mode_salt}
+D & \equiv\frac{D_{0}}{1+\gamma_{\parallel}^{-1}\left(\left|\Gamma_{1}\mathbf{E}\right|^{2}+\left|\Gamma_{3}\mathbf{E}_{3}\right|^{2}\right)}\label{eq:1mode_salt}
 \end{align}
 
 \end_inset
 
-Second, we can think of the two modes as 
+[where the external pump 
+\begin_inset Formula $D_{0}(\mathbf{x})$
+\end_inset
+
+ may be spatially dependent, as noted before].
+ Second, we can think of the two modes as 
 \emph on
 separately 
 \emph default
@@ -1811,22 +1834,17 @@ key "tureci_self-consistent_2006,tureci_ab_2009,ge_steady-state_2010"
  and the single-mode SALT nonlinear eigenproblem
 \begin_inset Formula 
 \begin{equation}
-\nabla\times\nabla\times\mathbf{E}=\omega^{2}\left[\varepsilon+\frac{D_{0}\Gamma(\omega)}{1+\gamma_{\parallel}^{-1}\left|\Gamma(\omega)\mathbf{E}\right|^{2}}\right]\mathbf{E}\label{eq:single-mode-salt}
+\nabla\times\nabla\times\mathbf{E}=\omega^{2}\left[\varepsilon+\frac{D_{0}\Gamma(\omega)}{1+\gamma_{\parallel}^{-1}\left|\Gamma(\omega)\mathbf{E}\right|^{2}}\right]\mathbf{E}.\label{eq:single-mode-salt}
 \end{equation}
 
 \end_inset
 
-where 
-\begin_inset Formula $\Gamma(\omega)=\gamma_{\perp}/(\omega-\omega_{a}+i\gamma_{\perp})$
-\end_inset
-
-.
- The first lasing threshold occurs when 
+The first lasing threshold occurs when 
 \begin_inset Formula $D_{0}$
 \end_inset
 
  in increased to a value 
-\begin_inset Formula $D_{t}$
+\begin_inset Formula $D_{\mathrm{t}}$
 \end_inset
 
  where a complex eigenvalue 
@@ -1923,24 +1941,8 @@ reference "sub:Stability-analysis summary"
 
  symmetry, we know enough about the modes in order to simplify many of these
  calculations analytically, to conclude: (i) the only SALT solutions are
- either 
-\begin_inset Quotes eld
-\end_inset
-
-standing
-\begin_inset Quotes erd
-\end_inset
-
- or 
-\begin_inset Quotes eld
-\end_inset
-
-circulating
-\begin_inset Quotes erd
-\end_inset
-
- solutions (defined below); (ii) the standing modes are unstable for all
- 
+ either standing-wave or circulating solutions (defined below); (ii) the
+ standing-wave modes are unstable for all 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
@@ -2009,13 +2011,13 @@ reference "eq:single-mode-salt"
  is
 \begin_inset Formula 
 \begin{equation}
-\nabla\times\nabla\times\mathbf{E}_{1,2}=\omega_{\mathrm{t}}\left(\varepsilon+D_{\mathrm{t}}\Gamma_{\mathrm{t}}\right)\mathbf{E}_{1,2},\label{eq:threshold salt}
+\nabla\times\nabla\times\mathbf{E}_{1,2}=\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\Gamma_{\mathrm{t}}\right)\mathbf{E}_{1,2},\label{eq:threshold salt}
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $\Gamma_{\mathrm{t}}=\gamma_{\perp}/(\omega_{\mathrm{t}}-\omega_{a}+\gamma_{\perp})$
+\begin_inset Formula $\Gamma_{\mathrm{t}}=\Gamma(\omega_{\mathrm{t}})$
 \end_inset
 
 .
@@ -2147,7 +2149,7 @@ reference "eq:lasing_ansatz"
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- geometry) standing modes, which we denote as 
+ geometry) standing-wave modes, which we denote as 
 \begin_inset Formula $\mathbf{E}_{\mathrm{e}}$
 \end_inset
 
@@ -2420,7 +2422,7 @@ reference "eq:reduced a plus minus"
 
  are 
 \emph on
-standing 
+standing-wave 
 \emph default
 modes, as to be expected, and it turns out their form depends (as explained
  in Appendix
@@ -2495,7 +2497,7 @@ reference "eq:single-mode-salt"
 \end_inset
 
  than our perturbation theory.
- However, they are inconsequential because it turns out that these standing
+ However, they are inconsequential because it turns out that these standing-wave
  modes are always unstable, regardless of 
 \begin_inset Formula $\theta$
 \end_inset
@@ -2508,7 +2510,7 @@ reference "eq:single-mode-salt"
 \emph on
 two 
 \emph default
-sets of standing modes.
+sets of standing-wave modes.
  The first is
 \begin_inset Formula 
 \begin{align}
@@ -2770,7 +2772,7 @@ reference "eq:n != 4 lasing"
 \begin_inset Formula $\mathbf{E}_{+}$
 \end_inset
 
-) of both the circulating and standing modes are shown.
+) of both the circulating and standing-wave modes are shown.
  For the 
 \begin_inset Formula $\mathbf{E}_{-}$
 \end_inset
@@ -2847,7 +2849,20 @@ fixed-point
 \end_inset
 
  modes are unstable in a ring.
- To quantify this intuition, we perform linear-stability analysis, along
+ (This fact is only true for 
+\emph on
+exact 
+\emph default
+degeneracies; for real systems, which almost always break the degeneracy,
+ there may be small regions near threshold where the standing-wave mode
+ is stable 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-sorel"
+
+\end_inset
+
+.) To quantify this intuition, we perform linear-stability analysis, along
  the same lines as the numerical procedure in Ref.
 \begin_inset space ~
 \end_inset
@@ -3629,6 +3644,28 @@ key "phc_book"
 , so at least one of the two non-zero eigenvalues here must have a positive
  real part (in practice, it is always the last eigenvalue), indicating that
  these standing lasing modes are always unstable.
+ Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:n=5 stability results"
+
+\end_inset
+
+ shows a comparison between the theoretical first-order approximation and
+ the exact numerical values of the circulating and standing-wave stability
+ eigenvalues for a 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ case with 
+\begin_inset Formula $n=5$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3636,7 +3673,7 @@ For the
 \begin_inset Formula $n=4\ell$
 \end_inset
 
- standing modes, we first have the 
+ standing-wave modes, we first have the 
 \begin_inset Formula $\mathbf{E}_{+}\pm\mathbf{E}_{-}$
 \end_inset
 
@@ -4725,7 +4762,7 @@ reference "eq:n != 4 lasing"
 \begin_inset Formula $n\neq4\ell$
 \end_inset
 
-, and standing modes of the form 
+, and standing-wave modes of the form 
 \begin_inset Formula $\mathbf{E}\propto\mathbf{E}_{+}\pm\mathbf{E}_{-}$
 \end_inset
 
@@ -5297,8 +5334,19 @@ reference "fig:even_cylinder_modes"
 
 .
  Hence, there is a small splitting in both the real and imaginary parts
- of the frequencies.
- 
+ of the frequencies, with a magnitude that decreases with higher resolution,
+ as seen in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cylinder_resolution"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5515,6 +5563,196 @@ key "fu_multifrequency_1991,tureci_self-consistent_2006"
 \end_inset
 
  used to make SALT valid in the first place.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename phc/phc_geometry.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dielectric function for hexagonal cavity.
+ This cavity has 
+\begin_inset Formula $C_{6\mathrm{v}}$
+\end_inset
+
+ symmetry and supports a pair of degenerate TE (
+\begin_inset Formula $\mathbf{E}=E_{\mathrm{e}}\hat{\mathbf{x}}+E_{\mathrm{o}}\hat{\mathbf{y}})$
+\end_inset
+
+ modes that transform as 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ under symmetry operations.
+ All but two rows of holes have been removed to create a lower-
+\begin_inset Formula $Q$
+\end_inset
+
+ structure.
+ A PML is added to the boundaries to capture the radiation loss.
+ The axes of the hexagon have been aligned with the diagonals rather than
+ the 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ axes, because the finite-difference discretization happens to only have
+ mirror symmetry along the diagonals.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:phc_geometry"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename phc/phc_modexR.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Graphics
+	filename phc/phc_modeyR.png
+	lyxscale 20
+	scale 31
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Magnetic fields 
+\begin_inset Formula $H_{z}$
+\end_inset
+
+ for pair of degenerate TE threshold modes for hexagonal cavity.
+ The modes are not simple 90-degree rotations of one another, because that
+ rotation is not a member of the 
+\begin_inset Formula $C_{6\mathrm{v}}$
+\end_inset
+
+ symmetry group.
+ However, these modes 
+\emph on
+can
+\emph default
+ be constructed by taking linear combinations of threefold and sixfold rotations
+ of each other.
+ Not shown are the imaginary parts of 
+\begin_inset Formula $H_{z}$
+\end_inset
+
+ which are non-negligible because this is not a high-
+\begin_inset Formula $Q$
+\end_inset
+
+ cavity.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:phc_modes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5786,8 +6024,8 @@ The basic idea is that we construct an artificial perturbation
 
  to the dielectric that forces the degeneracy in both the frequency and
  threshold, and then we solve the perturbed single-mode SALT equation.
- There are infinitely many possible functions that do this, so we look for
- the one with the smallest 
+ There are infinitely many possible functions that can achieve this goal,
+ so we look for the one with the smallest 
 \begin_inset Formula $L_{2}$
 \end_inset
 
@@ -5879,7 +6117,7 @@ key "boyd"
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
 
- that we find by solving the QP only approximately eliminate the degeneracy,
+ that we find by solving the QP only approximately eliminates the degeneracy,
  but we can simply re-solve SALT and solve a new QP, iterating the process
  a few times (twice is typically enough) to force a degeneracy to machine
  precision.
@@ -6048,11 +6286,11 @@ key "taflove"
 \end_inset
 
  would have as its elements the real and imaginary parts of 
-\begin_inset Formula $E_{\mathrm{e}}(\mathbf{x})^{2}$
+\begin_inset Formula $E_{x}(\mathbf{x})^{2}$
 \end_inset
 
 , 
-\begin_inset Formula $E_{\mathrm{o}}(\mathbf{x})^{2}$
+\begin_inset Formula $E_{y}(\mathbf{x})^{2}$
 \end_inset
 
 , and 
@@ -6289,29 +6527,30 @@ Dielectric perturbation
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
 
- obtained by solving QP for even-
-\begin_inset Formula $\ell$
+ obtained by solving QP for threshold modes with 
+\begin_inset Formula $\ell=8$
 \end_inset
 
- threshold modes.
+.
  The real part (left) has a dependence 
 \begin_inset Formula $\cos(2\ell\phi)$
 \end_inset
 
 , while the imaginary part (right) is a more complicated function.
- Only two iterations of QP were required to obtain a 
-\begin_inset Formula $10^{-15}$
-\end_inset
-
- degeneracy in both the threshold frequency 
+ Only two iterations of QP were required reduce the splitting in both the
+ threshold frequency 
 \begin_inset Formula $\omega_{t}$
 \end_inset
 
  and the threshold pump strength 
-\begin_inset Formula $D_{t}$
+\begin_inset Formula $D_{\mathrm{t}}$
 \end_inset
 
-.
+ to 
+\begin_inset Formula $10^{-10}$
+\end_inset
+
+ or smaller.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -6923,200 +7162,7 @@ reference "fig:phc_modes"
 \end_inset
 
 .
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centerline{
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename phc/phc_geometry.png
-	lyxscale 20
-	scale 31
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Dielectric function for hexagonal cavity.
- This cavity has 
-\begin_inset Formula $C_{6\mathrm{v}}$
-\end_inset
-
- symmetry and supports a pair of degenerate TE (
-\begin_inset Formula $\mathbf{E}=E_{\mathrm{e}}\hat{\mathbf{x}}+E_{\mathrm{o}}\hat{\mathbf{y}})$
-\end_inset
-
- modes that transform as 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
- under symmetry operations.
- All but two rows of holes have been removed to create a lower-
-\begin_inset Formula $Q$
-\end_inset
-
- structure.
- A PML is added to the boundaries to capture the radiation loss.
- The axes of the hexagon have been aligned with the diagonals rather than
- the 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
- axes, because the finite-difference discretization happens to only have
- mirror symmetry along the diagonals.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:phc_geometry"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centerline{
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename phc/phc_modexR.png
-	lyxscale 20
-	scale 31
-
-\end_inset
-
-
-\begin_inset Formula $\quad$
-\end_inset
-
-
-\begin_inset Graphics
-	filename phc/phc_modeyR.png
-	lyxscale 20
-	scale 31
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Magnetic fields 
-\begin_inset Formula $H_{z}$
-\end_inset
-
- for pair of degenerate TE threshold modes for hexagonal cavity.
- The modes are not simple 90-degree rotations of one another, because that
- rotation is not a member of the 
-\begin_inset Formula $C_{6\mathrm{v}}$
-\end_inset
-
- symmetry group.
- However, these modes 
-\emph on
-can
-\emph default
- be constructed by taking linear combinations of threefold and sixfold rotations
- of each other.
- Not shown are the imaginary parts of 
-\begin_inset Formula $H_{z}$
-\end_inset
-
- which are non-negligible because this is not a high-
-\begin_inset Formula $Q$
-\end_inset
-
- cavity.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:phc_modes"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The two are related to each other by linear combinations of sixfold and
+ The two are related to each other by linear combinations of sixfold and
  threefold rotations.
  However, these operations do not belong in the 
 \begin_inset Formula $C_{4\mathrm{v}}$
@@ -7156,13 +7202,25 @@ reference "eq:tensor_delta_epsilon"
 \end_inset
 
  and 
-\begin_inset Formula $\delta\varepsilon_{xy}$
+\begin_inset Formula $\delta\varepsilon_{yy}$
 \end_inset
 
  here for simplicity.
  Again, only two iterations of QP are necessary to force the degeneracy
- down to machine precision.
- We use Eq.
+ down to machine precision, and the perturbation used to force the degeneracy
+ is shown in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:phc_deps"
+
+\end_inset
+
+.
+ We then use Eq.
 \begin_inset space ~
 \end_inset
 
@@ -7173,9 +7231,8 @@ reference "eq:chiral definition"
 
 \end_inset
 
- to predict the stable linear combination above threshold to use as an initial
- guess.
- The intensity pattern obtained in simulation is shown in Fig.
+ as an initial guess for our numerical solver, and the intensity pattern
+ of the resulting solution is shown in Fig.
 \begin_inset space ~
 \end_inset
 
@@ -7518,7 +7575,7 @@ Concluding Remarks
 
 \begin_layout Standard
 In this paper, we have reduced the problem of identifying the stable lasing
- modes of a degenerate laser from the full nonlinear Maxwell--Bloch PDE
+ modes of a degenerate laser from the full nonlinear Maxwell--Bloch equations
  to a small 
 \emph on
 semi-analytical
@@ -7923,7 +7980,25 @@ operators
 \end_inset
 
  irrep.
- Note that 
+ A similar strategy was employed in Ref.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ge_steady-state_2010"
+
+\end_inset
+
+ to introduce the threshold constant-flux (TCF) states basis.
+ (The TCF approach is slightly different, for it assumes that the eigenvalues
+ 
+\begin_inset Formula $\lambda_{j}$
+\end_inset
+
+ are followed by a spatial function that specifies the pump profile.) Note
+ that 
 \begin_inset Formula $\lambda_{j}$
 \end_inset
 
@@ -7997,7 +8072,7 @@ First, we define the
 unconjugated 
 \emph default
 inner product 
-\begin_inset Formula $\left(\mathbf{f},\mathbf{g}\right)\equiv\int d^{3}x\mathbf{f}\cdot\mathbf{g}$
+\begin_inset Formula $\left(\mathbf{f},\mathbf{g}\right)\equiv\int d^{3}x\,\mathbf{f}\cdot\mathbf{g}$
 \end_inset
 
 .
@@ -8102,7 +8177,7 @@ In this appendix, we show that the only allowed lasing modes for
 \begin_inset Formula $\mathbf{E}_{\pm}$
 \end_inset
 
- and standing modes 
+ and standing-wave modes 
 \begin_inset Formula $\mathbf{E}_{+}+e^{i\theta}\mathbf{E}_{-}$
 \end_inset
 
@@ -8214,7 +8289,7 @@ reference "eq:expanded salt"
 
 \end_inset
 
-, noting that the zeroth order terms vanish due to Eq.
+, noting that the zeroth-order terms vanish due to Eq.
 \begin_inset space ~
 \end_inset
 
@@ -8229,7 +8304,7 @@ reference "eq:threshold salt"
 \begin_inset Formula 
 \begin{multline}
 \left[\nabla\times\nabla\times-\:\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\Gamma_{\mathrm{t}}\right)\right]\delta\mathbf{E}\\
-=\left\{ \omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left[\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{0}\Gamma_{\mathrm{t}}\right)\right]+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\Gamma_{\mathrm{t}}\left(1-\left|\mathbf{f}\right|^{2}\right)\right\} \mathbf{f}
+=\left\{ \omega_{1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left[\omega_{\mathrm{t}}^{2}\left(\varepsilon+D_{\mathrm{t}}\Gamma_{\mathrm{t}}\right)\right]+\omega_{\mathrm{t}}^{2}D_{\mathrm{t}}\Gamma_{\mathrm{t}}\left(1-\left|\mathbf{f}\right|^{2}\right)\right\} \mathbf{f}
 \end{multline}
 
 \end_inset
@@ -8337,7 +8412,12 @@ key "inui_group,tinkham"
 \end_inset
 
 , conjugated inner products between functions belonging to different irreps
- always vanish.
+ always vanish [e.g.
+ for circulating modes on a uniform ring, the integral 
+\begin_inset Formula $\int d\phi\,e^{i\ell\phi}(e^{-i\ell\phi})^{\star}$
+\end_inset
+
+ vanishes].
  Also, the integral over 
 \begin_inset Formula $D_{\mathrm{t}}(\mathbf{x})$
 \end_inset
@@ -8354,7 +8434,7 @@ key "inui_group,tinkham"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:chiral definition"
+reference "eq:a eigenproblem"
 
 \end_inset
 
@@ -8377,7 +8457,7 @@ H & \equiv(\omega_{\mathrm{t}}\Gamma_{\mathrm{t}})^{-1}\frac{\partial}{\partial\
 \end_inset
 
 For the intensity term, we have 
-\begin_inset Formula $\int d^{3}x\mathbf{E}_{\pm}\cdot\mathbf{f}\left|\mathbf{f}\right|$
+\begin_inset Formula $\int d^{3}x\,D_{\mathrm{t}}\mathbf{E}_{\pm}\cdot\mathbf{f}\left|\mathbf{f}\right|^{2}$
 \end_inset
 
 .
@@ -9740,7 +9820,7 @@ with
 \end_layout
 
 \begin_layout Subsubsection*
-Standing modes, 
+Standing-wave modes, 
 \begin_inset Formula $n\neq4\ell$
 \end_inset
 
@@ -9759,12 +9839,12 @@ reference "eq:final linear eigenvalue problem"
 
 \end_inset
 
- for the standing modes.
+ for the standing-wave modes.
  First, for 
 \begin_inset Formula $n\neq4\ell$
 \end_inset
 
-, standing modes only occur in 
+, standing-wave modes only occur in 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
@@ -9895,7 +9975,7 @@ and
 \end_layout
 
 \begin_layout Subsubsection*
-Standing modes, 
+standing-wave modes, 
 \begin_inset Formula $n=4\ell$
 \end_inset
 
@@ -9911,7 +9991,7 @@ Next, we examine the case
 \begin_inset Formula $n=4\ell$
 \end_inset
 
- (standing modes also exist here in the 
+ (standing-wave modes also exist here in the 
 \begin_inset Formula $C_{n}$
 \end_inset
 
@@ -10258,7 +10338,7 @@ reference "eq:z = i double eigenvalues"
 \begin_inset Formula $\mathbf{E}_{+}\pm i\mathbf{E}_{-}$
 \end_inset
 
- standing modes, become 0 and a stable eigenvalue.
+ standing-wave modes, become 0 and a stable eigenvalue.
  For 
 \begin_inset Formula $K=-J$
 \end_inset
@@ -10278,7 +10358,7 @@ reference "eq:z = 1 double eigenvalues"
 \begin_inset Formula $\mathbf{E}_{+}\pm\mathbf{E}_{-}$
 \end_inset
 
- standing modes.
+ standing-wave modes.
  
 \end_layout
 
