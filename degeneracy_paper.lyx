@@ -8451,7 +8451,7 @@ where we have defined
 \begin{align}
 G_{\varepsilon} & \equiv\int d^{3}x\,\varepsilon(\mathbf{x})\mathbf{E}_{+}\cdot\mathbf{E}_{-}\nonumber \\
 G_{D} & \equiv\int d^{3}x\,D_{\mathrm{t}}(\mathbf{x})\mathbf{E}_{+}\cdot\mathbf{E}_{-}.\label{eq:G and H definitions}\\
-H & \equiv(\omega_{\mathrm{t}}\Gamma_{\mathrm{t}})^{-1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left\{ \omega_{\mathrm{t}}^{2}\left(G_{\varepsilon}+G_{D}\Gamma_{\mathrm{t}}\right)\right\} .\nonumber 
+H & \equiv(\omega_{\mathrm{t}}^{2}\Gamma_{\mathrm{t}})^{-1}\frac{\partial}{\partial\omega_{\mathrm{t}}}\left\{ \omega_{\mathrm{t}}^{2}\left(G_{\varepsilon}+G_{D}\Gamma_{\mathrm{t}}\right)\right\} .\nonumber 
 \end{align}
 
 \end_inset
