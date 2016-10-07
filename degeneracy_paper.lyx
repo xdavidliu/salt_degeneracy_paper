@@ -238,8 +238,9 @@ chiral
 \begin_inset Quotes erd
 \end_inset
 
- intensity pattern, whose symmetry group requires that the degeneracy persist
- even when nonlinear effects become important.
+ intensity pattern, which arises from spontaneous symmetric-breaking of
+ mirror symmetry, and whose symmetry group requires that the degeneracy
+ persist even when nonlinear effects become important.
  Finally, we introduce a numerical technique to solve the degenerate SALT
  equations far above threshold even when spatial discretization artificially
  breaks the degeneracy.
@@ -536,8 +537,16 @@ analytically
  at lasing threshold, and we generalize the notion of a circulating laser
  mode to other symmetry groups and establish its stability near threshold.
  (Even the degeneracy itself is somewhat unusual above threshold, because
- the nonlinear gain breaks some of the symmetry in noncircular geometries,
- leaving one with a 
+ the nonlinear gain spontaneously breaks some of the symmetry in noncircular
+ (
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ with 
+\begin_inset Formula $n\neq\infty$
+\end_inset
+
+) geometries, leaving one with a 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4489,7 +4498,8 @@ reference "eq:chiral definition"
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- symmetry (the only exception to this rule is for a 
+ symmetry due to spontaneous breaking of mirror symmetry as soon as the
+ mode starts lasing (the only exception to this rule is for a 
 \begin_inset Formula $C_{\infty\mathrm{v}}$
 \end_inset
 
@@ -4499,12 +4509,6 @@ reference "eq:chiral definition"
 \end_inset
 
 , and hence still have mirror symmetry).
- As a result, mirror symmetry is instantly broken when the first mode starts
- lasing, and we have a 
-\begin_inset Formula $C_{n}$
-\end_inset
-
--symmetric system.
  Second, the geometry itself can already have 
 \begin_inset Formula $C_{n}$
 \end_inset
@@ -4804,8 +4808,8 @@ reference "eq:n != 4 lasing"
 \begin_inset Formula $n=4\ell$
 \end_inset
 
- case, however, we have found using semi-analytically that the standing-mode
- solutions 
+ case, however, we have found semi-analytically that the standing-mode solutions
+ 
 \begin_inset Formula $\mathbf{E}_{+}\pm\mathbf{E}_{-}$
 \end_inset
 
@@ -5859,7 +5863,14 @@ The basic idea is that we construct an artificial perturbation
 \emph on
 quadratic program
 \emph default
- with linear constraints which we obtain using perturbation theory.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "boyd"
+
+\end_inset
+
+ (QP) with linear constraints which we obtain using perturbation theory.
  Not only does this uniquely (and cheaply) determine 
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
@@ -5881,22 +5892,8 @@ It turns out that determining the minimum-norm
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
 
- requires only that we solve a sequence of 
-\begin_inset Quotes eld
-\end_inset
-
-quadratic programming
-\begin_inset Quotes erd
-\end_inset
-
- (QP) 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "boyd"
-
-\end_inset
-
- problems: minimizing a convex quadratic function (
+ requires only that we solve a sequence of QP problems: minimizing a convex
+ quadratic function (
 \begin_inset Formula $\left\Vert \delta\varepsilon\right\Vert _{2}^{2}$
 \end_inset
 
@@ -5931,7 +5928,18 @@ key "boyd"
 \end_inset
 
  that makes it coalesce the eigenvalues) can be derived from perturbation
- theory as explained below.
+ theory as explained in Appendix
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Determining-the-dielectric-perturbation"
+
+\end_inset
+
+.
  Because the perturbation theory is only first-order, however, the 
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
@@ -5943,293 +5951,7 @@ key "boyd"
 \end_layout
 
 \begin_layout Standard
-We analyze the effect of a small 
-\begin_inset Formula $\delta\varepsilon$
-\end_inset
-
- on the eigenfrequencies (of the lasing mode and the passive pole) by well-known
- first-order perturbation theory for Maxwell's equations 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "phc_book"
-
-\end_inset
-
-, but some modification is required to handle the nonlinearity of the hole-burni
-ng term above threshold.
- However, we begin by forcing the degeneracy below threshold (repeating
- as needed as the pump strength is increased), so that both passive poles
- reach threshold simultaneously.
- (In practice, we achieved the fastest convergence by allowing passive poles
- to have positive imaginary parts, and then setting the pump strength so
- that the two poles 
-\begin_inset Quotes eld
-\end_inset
-
-straddle
-\begin_inset Quotes erd
-\end_inset
-
- the real axis; this way, when they meet in the middle they are both exactly
- at threshold.) Below threshold, the eigenproblem is linear, and we can apply
- standard perturbation theory (albeit for a complex-symmetric operator,
- not a Hermitian operator) as follows:
-\end_layout
-
-\begin_layout Standard
-Consider two nonlasing modes that satisfy
-\begin_inset Formula 
-\begin{align}
-0 & =-\nabla\times\nabla\times\mathbf{E}_{\mu}+\omega_{\mu}^{2}\varepsilon_{\mu}\mathbf{E}_{\mu}\nonumber \\
-\varepsilon_{\mu} & \equiv\varepsilon_{c}+\Dt\Gamma(\omega_{\mu})
-\end{align}
-
-\end_inset
-
-Adding a perturbation to the dielectric 
-\begin_inset Formula $\delta\varepsilon$
-\end_inset
-
- will result in corresponding responses 
-\begin_inset Formula $\delta\mathbf{E}_{\mu}$
-\end_inset
-
- and 
-\begin_inset Formula $\delta\omega_{\mu}$
-\end_inset
-
-.
- As in the threshold perturbation theory, we multiply both sides by 
-\begin_inset Formula $\mathbf{E}_{\mu}$
-\end_inset
-
- and keep only first-order terms.
- Terms involving 
-\begin_inset Formula $\delta\mathbf{E}_{\mu}$
-\end_inset
-
- again vanish because the operators act to the left, and we are left with
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ref-raman,ref-microcavity,ref-adi"
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\delta\omega_{\mu}=-\frac{\int d^{3}x\,\mathbf{E}_{\mu}\cdot\delta\varepsilon\mathbf{E}_{\mu}}{\int d^{3}x\,\mathbf{E}_{\mu}\cdot\left(\frac{2\varepsilon_{\mu}}{\omega_{\mu}}+\frac{\partial\varepsilon_{\mu}}{\partial\omega_{\mu}}\right)\mathbf{E}_{\mu}}.\label{eq:delta_omega_QP}
-\end{equation}
-
-\end_inset
-
-We write this frequency shift as an inner product 
-\begin_inset Formula 
-\begin{equation}
-\delta\omega_{\mu}=-p_{\mu}^{T}\delta\varepsilon.\label{eq:delta_omega_mu}
-\end{equation}
-
-\end_inset
-
-As an aside, while it is fine to use a scalar 
-\begin_inset Formula $\delta\varepsilon$
-\end_inset
-
- function for this procedure, in the case when the 
-\begin_inset Formula $\mathbf{E}_{\mu}$
-\end_inset
-
- are TE modes or fully-vectorial fields, then it is also possible to allow
- 
-\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
-\end_inset
-
- to be a diagonally anisotropic tensor
-\begin_inset Formula 
-\begin{equation}
-\overleftrightarrow{\delta\varepsilon}(\mathbf{x})=\left(\begin{array}{ccc}
-\delta\varepsilon_{xx}(\mathbf{x}) & 0 & 0\\
-0 & \delta\varepsilon_{yy}(\mathbf{x}) & 0\\
-0 & 0 & \delta\varepsilon_{zz}(\mathbf{x})
-\end{array}\right).\label{eq:tensor_delta_epsilon}
-\end{equation}
-
-\end_inset
-
-The column-vector form of 
-\begin_inset Formula $\delta\varepsilon$
-\end_inset
-
- in Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:delta_omega_mu"
-
-\end_inset
-
- would then have as its elements all the real and imaginary components of
- 
-\begin_inset Formula $\overleftrightarrow{\delta\varepsilon}(\mathbf{x})$
-\end_inset
-
- at each Yee point 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "taflove"
-
-\end_inset
-
- [
-\begin_inset Formula $\delta\varepsilon_{xx}(\mathbf{x})$
-\end_inset
-
-, 
-\begin_inset Formula $\delta\varepsilon_{yy}(\mathbf{x})$
-\end_inset
-
-, and 
-\begin_inset Formula $\delta\varepsilon_{zz}(\mathbf{x})$
-\end_inset
-
- for all the grid points 
-\begin_inset Formula $\mathbf{x}$
-\end_inset
-
-], while the row-vector 
-\begin_inset Formula $p_{\mu}^{T}$
-\end_inset
-
- would have as its elements the real and imaginary parts of 
-\begin_inset Formula $E_{x}(\mathbf{x})^{2}$
-\end_inset
-
-, 
-\begin_inset Formula $E_{y}(\mathbf{x})^{2}$
-\end_inset
-
-, and 
-\begin_inset Formula $E_{z}(\mathbf{x})^{2}$
-\end_inset
-
- at all the grid points.
- If we take this option, then the norm we minimize would be
-\begin_inset Formula 
-\begin{equation}
-\left\Vert \delta\varepsilon\right\Vert _{2}^{2}=\int d^{3}x\,\left\Vert \overleftrightarrow{\delta\varepsilon}(\mathbf{x})\right\Vert _{F}^{2},
-\end{equation}
-
-\end_inset
-
-where the Frobenius norm 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "trefethen"
-
-\end_inset
-
- at each point 
-\begin_inset Formula $\mathbf{x}$
-\end_inset
-
- is defined as
-\begin_inset Formula 
-\begin{equation}
-\left\Vert \overleftrightarrow{\delta\varepsilon}(\mathbf{x})\right\Vert _{F}^{2}\equiv\left|\delta\varepsilon_{xx}(\mathbf{x})\right|^{2}+\left|\delta\varepsilon_{yy}(\mathbf{x})\right|^{2}+\left|\delta\varepsilon_{zz}(\mathbf{x})\right|^{2}.
-\end{equation}
-
-\end_inset
-
-Whether we take 
-\begin_inset Formula $\delta\varepsilon$
-\end_inset
-
- to be scalar or tensor, the degeneracy-forcing condition 
-\begin_inset Formula $\omega_{1}+\delta\omega_{1}=\omega_{2}+\delta\omega_{2}$
-\end_inset
-
- then becomes
-\begin_inset Formula 
-\begin{equation}
-(p_{2}-p_{1})^{T}\delta\varepsilon=\omega_{2}-\omega_{1}.
-\end{equation}
-
-\end_inset
-
-It turns out that the solution of a quadratic program with equality constraints
- can be obtained directly by solving a linear 
-\emph on
-dual
-\emph default
- problem 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "boyd"
-
-\end_inset
-
-, which in this case is
-\begin_inset Formula 
-\begin{equation}
-\left(\begin{array}{cccc}
-1 & 0 & q^{R} & q^{I}\\
-0 & 1 & -q^{I} & q^{R}\\
-\left(q^{R}\right)^{T} & -\left(q^{I}\right)^{T} & 0 & 0\\
-\left(q^{I}\right)^{T} & \left(q^{R}\right)^{T} & 0 & 0
-\end{array}\right)\left(\begin{array}{c}
-\delta\varepsilon^{R}\\
-\delta\varepsilon^{I}\\
-\lambda_{1}\\
-\lambda_{2}
-\end{array}\right)=\left(\begin{array}{c}
-0\\
-0\\
-\omega_{2}^{R}-\omega_{1}^{R}\\
-\omega_{2}^{I}-\omega_{1}^{I}
-\end{array}\right).
-\end{equation}
-
-\end_inset
-
-Here, the superscripts 
-\begin_inset Formula $^{R}$
-\end_inset
-
- and 
-\begin_inset Formula $^{I}$
-\end_inset
-
- denote real and imaginary parts, and we have defined 
-\begin_inset Formula $q\equiv p_{2}-p_{1}$
-\end_inset
-
-, and the 
-\begin_inset Formula $\lambda_{1,2}$
-\end_inset
-
- are Lagrange multipliers that are not needed.
- When 
-\begin_inset Formula $\omega_{2}$
-\end_inset
-
- is very close to 
-\begin_inset Formula $\omega_{1}$
-\end_inset
-
-, we can improve the condition number of the matrix by freely multiplying
- the second-to-last row and column of the matrix by a constant factor, provided
- that the second-to-last element of the right-hand side is 
-\emph on
-divided 
-\emph default
-by the same factor.
- The same can be done for the last row and column, with the last element
- of the right-hand side.
- The resulting 
+The resulting 
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
 
@@ -6288,7 +6010,9 @@ reference "fig:deps_scale"
 
  norm decreases with higher resolution, satisfying our requirement that
  the dielectric perturbation should go to zero in the continuum limit.
- 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -6588,169 +6312,6 @@ name "fig:deps_scale"
 \end_layout
 
 \begin_layout Standard
-Note that even after the thresholds and threshold frequencies have been
- made exactly degenerate using the QP procedure illustrated above, we are
- still in principle forcing the degeneracy.
- Above threshold, the delicate balance created by 
-\begin_inset Formula $\delta\varepsilon$
-\end_inset
-
- to force the frequencies together is slightly broken.
- This results in an 
-\emph on
-approximate 
-\emph default
-degeneracy that is maintained very far above threshold, as shown in Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:QP_stability"
-
-\end_inset
-
-, with only a 
-\begin_inset Formula $10^{-8}$
-\end_inset
-
- splitting for pump strengths up to 100 times threshold.
- In practice, these results are already accurate enough to give all the
- desired physical information about the degenerate pair.
- If we wanted to be absolutely correct and force the degeneracy to machine
- precision (as it was in the exactly symmetric case for odd-
-\begin_inset Formula $\ell$
-\end_inset
-
- modes), we could simply perform QP again at some given 
-\begin_inset Formula $d>0$
-\end_inset
-
- to force 
-\begin_inset Formula $\delta\omega$
-\end_inset
-
- and 
-\begin_inset Formula $\delta\omega^{\prime}$
-\end_inset
-
- back together.
- One extra caveat in this case is that 
-\begin_inset Formula $\delta\omega$
-\end_inset
-
- is now a lasing pole, so the spatial hole-burning term need to be taken
- account for the perturbation theory (
-\begin_inset Formula $\delta\omega^{\prime}$
-\end_inset
-
- is still a passive pole, so the previous perturbation theory still applies),
- and instead of Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:delta_omega_QP"
-
-\end_inset
-
- we now have
-\begin_inset Formula 
-\begin{align}
-\delta\omega & =-\frac{\int d^{3}x\,\mathbf{E}\cdot\left(\delta\varepsilon+\Dt\Gamma(\omega_{\mu})\delta H\right)\mathbf{E}}{\int d^{3}x\,\mathbf{E}\cdot\left(\frac{2\varepsilon}{\omega}+\frac{\partial\varepsilon}{\partial\omega}\right)\mathbf{E}}\nonumber \\
-\varepsilon & \equiv\varepsilon_{c}+\Dt\Gamma(\omega)H\\
-\delta H & \equiv\frac{1}{1+\left|\mathbf{E}+\delta\mathbf{E}\right|^{2}}-\frac{1}{1+\left|\mathbf{E}\right|^{2}}.\nonumber 
-\end{align}
-
-\end_inset
-
-Here, 
-\begin_inset Formula $\delta H$
-\end_inset
-
- is the change in the spatial-hole burning term arising from the dielectric
- perturbation 
-\begin_inset Formula $\delta\varepsilon$
-\end_inset
-
-.
- However, since there is no easy way to determine 
-\begin_inset Formula $\delta\mathbf{E}$
-\end_inset
-
- without numerically solving the full problem, 
-\begin_inset Formula $\delta H$
-\end_inset
-
- is hard to determine semi-analytically.
- A simple work-around is to set 
-\begin_inset Formula $\delta H=0$
-\end_inset
-
- above, which makes this procedure no longer a true first-order perturbation
- theory.
- However, since the splitting is already so small as shown in Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:QP_stability"
-
-\end_inset
-
-, the 
-\begin_inset Formula $\delta\varepsilon$
-\end_inset
-
- needed is also extremely small, so 
-\begin_inset Formula $\delta H$
-\end_inset
-
- is also negligible.
- Although 
-\begin_inset Formula $\delta\omega$
-\end_inset
-
- is not zero to first order, the 
-\begin_inset Formula $\delta H=0$
-\end_inset
-
- approximation is enough to find a 
-\begin_inset Formula $\delta\varepsilon$
-\end_inset
-
- that greatly decreases 
-\begin_inset Formula $\delta\omega$
-\end_inset
-
-.
- We find empirically that it usually takes one iteration of this above-threshold
- QP procedure to restore the degeneracy of the lasing pole 
-\begin_inset Formula $\omega$
-\end_inset
-
- and its passive mode 
-\begin_inset Formula $\omega^{\prime}$
-\end_inset
-
- to machine precision, since 
-\begin_inset Formula $\delta\omega$
-\end_inset
-
- is already very small.
- Practically speaking, this entire extra step is rarely needed since the
- solutions obtained from 
-\begin_inset Formula $\delta\varepsilon$
-\end_inset
-
- for the linear problem below threshold are already close enough for most
- pump strengths of physical interest.
- 
 \begin_inset Float figure
 wide false
 sideways false
@@ -7001,7 +6562,7 @@ key "taflove"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:phc_modes"
+reference "fig:overview"
 
 \end_inset
 
@@ -8181,7 +7742,18 @@ reference "eq:a eigenproblem"
 
 \end_inset
 
-because the threshold Maxwell operator is complex-symmetric.
+because the threshold Maxwell operator is complex-symmetric 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "moiseyev,siegman,phc_book"
+
+\end_inset
+
+ so that it acts to the left and annihilates 
+\begin_inset Formula $\mathbf{E}_{1,2}$
+\end_inset
+
+.
  Now, choose 
 \begin_inset Formula $\mathbf{E}_{1}=\mathbf{E}_{+}$
 \end_inset
@@ -8747,6 +8319,24 @@ reference "eq:omega1 constraint"
 
 , with angles separated by 
 \begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+, just as in the 
+\begin_inset Formula $C_{4\ell\mathrm{v}}$
+\end_inset
+
+ case.
+ Of course, it is straightforward to choose the overall normalization and
+ phase of the threshold basis 
+\begin_inset Formula $\mathbf{E}_{\pm}$
+\end_inset
+
+ such that the standing modes are still 
+\begin_inset Formula $\mathbf{E}_{+}\pm\mathbf{E}_{-}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{E}_{+}\pm i\mathbf{E}_{-}$
 \end_inset
 
 , just as in the 
@@ -10301,12 +9891,12 @@ In this section, we work out the
 \begin_inset Formula $\mathrm{Re}(\sigma_{1})<0$
 \end_inset
 
-, the the smallest positive root 
+, the the smallest positive solution 
 \begin_inset Formula $z_{0}$
 \end_inset
 
- of the function 
-\begin_inset Formula $f(z)$
+ of the equation 
+\begin_inset Formula $\Re[f(z)]=0$
 \end_inset
 
  gives a boundary of stability, for which a circulating lasing mode becomes
@@ -10699,6 +10289,484 @@ reference "eq:s expansion"
 
 .
  
+\end_layout
+
+\begin_layout Section
+Determining the dielectric perturbation 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Determining-the-dielectric-perturbation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this Appendix, we describe the processed used to force a degeneracy in
+ a geometry whose symmetry has been broken by the discretization scheme
+ (e.g.
+ a 
+\begin_inset Formula $C_{6\mathrm{v}}$
+\end_inset
+
+ geometry discretized into a rectangular grid).
+ We first analyze the effect of a small 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ on the eigenfrequencies (of the lasing mode and the passive pole) by well-known
+ first-order perturbation theory for Maxwell's equations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "phc_book"
+
+\end_inset
+
+ (some modification is required to handle the nonlinearity of the hole-burning
+ term above threshold).
+ However, we first force the degeneracy below threshold (repeating as needed
+ as the pump strength is increased), so that both passive poles reach threshold
+ simultaneously.
+ (In practice, we achieved the fastest convergence by allowing passive poles
+ to have positive imaginary parts, and then setting the pump strength so
+ that the two poles 
+\begin_inset Quotes eld
+\end_inset
+
+straddle
+\begin_inset Quotes erd
+\end_inset
+
+ the real axis; this way, when they meet in the middle they are both exactly
+ at threshold.) Below threshold, the eigenproblem is linear, and we can apply
+ standard perturbation theory (albeit for a complex-symmetric operator,
+ not a Hermitian operator) as follows:
+\end_layout
+
+\begin_layout Standard
+Consider two nonlasing modes that satisfy
+\begin_inset Formula 
+\begin{align}
+0 & =-\nabla\times\nabla\times\mathbf{E}_{\mu}+\omega_{\mu}^{2}\varepsilon_{\mu}\mathbf{E}_{\mu}\nonumber \\
+\varepsilon_{\mu} & \equiv\varepsilon_{c}+\Dt\Gamma(\omega_{\mu})
+\end{align}
+
+\end_inset
+
+Adding a perturbation to the dielectric 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ will result in corresponding responses 
+\begin_inset Formula $\delta\mathbf{E}_{\mu}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta\omega_{\mu}$
+\end_inset
+
+.
+ As in the threshold perturbation theory, we multiply both sides by 
+\begin_inset Formula $\mathbf{E}_{\mu}$
+\end_inset
+
+ and keep only first-order terms.
+ Terms involving 
+\begin_inset Formula $\delta\mathbf{E}_{\mu}$
+\end_inset
+
+ again vanish because the operators act to the left, and we are left with
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-raman,ref-microcavity,ref-adi"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\delta\omega_{\mu}=-\frac{\int d^{3}x\,\mathbf{E}_{\mu}\cdot\delta\varepsilon\mathbf{E}_{\mu}}{\int d^{3}x\,\mathbf{E}_{\mu}\cdot\left(\frac{2\varepsilon_{\mu}}{\omega_{\mu}}+\frac{\partial\varepsilon_{\mu}}{\partial\omega_{\mu}}\right)\mathbf{E}_{\mu}}.\label{eq:delta_omega_QP}
+\end{equation}
+
+\end_inset
+
+We write this frequency shift as an inner product 
+\begin_inset Formula 
+\begin{equation}
+\delta\omega_{\mu}=-p_{\mu}^{T}\delta\varepsilon.\label{eq:delta_omega_mu}
+\end{equation}
+
+\end_inset
+
+As an aside, while it is fine to use a scalar 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ function for this procedure, in the case when the 
+\begin_inset Formula $\mathbf{E}_{\mu}$
+\end_inset
+
+ are TE modes or fully-vectorial fields, then it is also possible to allow
+ 
+\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
+\end_inset
+
+ to be a diagonally anisotropic tensor
+\begin_inset Formula 
+\begin{equation}
+\overleftrightarrow{\delta\varepsilon}(\mathbf{x})=\left(\begin{array}{ccc}
+\delta\varepsilon_{xx}(\mathbf{x}) & 0 & 0\\
+0 & \delta\varepsilon_{yy}(\mathbf{x}) & 0\\
+0 & 0 & \delta\varepsilon_{zz}(\mathbf{x})
+\end{array}\right).\label{eq:tensor_delta_epsilon}
+\end{equation}
+
+\end_inset
+
+The column-vector form of 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ in Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:delta_omega_mu"
+
+\end_inset
+
+ would then have as its elements all the real and imaginary components of
+ 
+\begin_inset Formula $\overleftrightarrow{\delta\varepsilon}(\mathbf{x})$
+\end_inset
+
+ at each Yee point 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "taflove"
+
+\end_inset
+
+ [
+\begin_inset Formula $\delta\varepsilon_{xx}(\mathbf{x})$
+\end_inset
+
+, 
+\begin_inset Formula $\delta\varepsilon_{yy}(\mathbf{x})$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta\varepsilon_{zz}(\mathbf{x})$
+\end_inset
+
+ for all the grid points 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+], while the row-vector 
+\begin_inset Formula $p_{\mu}^{T}$
+\end_inset
+
+ would have as its elements the real and imaginary parts of 
+\begin_inset Formula $E_{x}(\mathbf{x})^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{y}(\mathbf{x})^{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $E_{z}(\mathbf{x})^{2}$
+\end_inset
+
+ at all the grid points.
+ If we take this option, then the norm we minimize would be
+\begin_inset Formula 
+\begin{equation}
+\left\Vert \delta\varepsilon\right\Vert _{2}^{2}=\int d^{3}x\,\left\Vert \overleftrightarrow{\delta\varepsilon}(\mathbf{x})\right\Vert _{F}^{2},
+\end{equation}
+
+\end_inset
+
+where the Frobenius norm 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "trefethen"
+
+\end_inset
+
+ at each point 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ is defined as
+\begin_inset Formula 
+\begin{equation}
+\left\Vert \overleftrightarrow{\delta\varepsilon}(\mathbf{x})\right\Vert _{F}^{2}\equiv\left|\delta\varepsilon_{xx}(\mathbf{x})\right|^{2}+\left|\delta\varepsilon_{yy}(\mathbf{x})\right|^{2}+\left|\delta\varepsilon_{zz}(\mathbf{x})\right|^{2}.
+\end{equation}
+
+\end_inset
+
+Whether we take 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ to be scalar or tensor, the degeneracy-forcing condition 
+\begin_inset Formula $\omega_{1}+\delta\omega_{1}=\omega_{2}+\delta\omega_{2}$
+\end_inset
+
+ then becomes
+\begin_inset Formula 
+\begin{equation}
+(p_{2}-p_{1})^{T}\delta\varepsilon=\omega_{2}-\omega_{1}.
+\end{equation}
+
+\end_inset
+
+It turns out that the solution of a quadratic program with equality constraints
+ can be obtained directly by solving a linear 
+\emph on
+dual
+\emph default
+ problem 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "boyd"
+
+\end_inset
+
+, which in this case is
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{cccc}
+1 & 0 & q^{R} & q^{I}\\
+0 & 1 & -q^{I} & q^{R}\\
+\left(q^{R}\right)^{T} & -\left(q^{I}\right)^{T} & 0 & 0\\
+\left(q^{I}\right)^{T} & \left(q^{R}\right)^{T} & 0 & 0
+\end{array}\right)\left(\begin{array}{c}
+\delta\varepsilon^{R}\\
+\delta\varepsilon^{I}\\
+\lambda_{1}\\
+\lambda_{2}
+\end{array}\right)=\left(\begin{array}{c}
+0\\
+0\\
+\omega_{2}^{R}-\omega_{1}^{R}\\
+\omega_{2}^{I}-\omega_{1}^{I}
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+Here, the superscripts 
+\begin_inset Formula $^{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $^{I}$
+\end_inset
+
+ denote real and imaginary parts, and we have defined 
+\begin_inset Formula $q\equiv p_{2}-p_{1}$
+\end_inset
+
+, and the 
+\begin_inset Formula $\lambda_{1,2}$
+\end_inset
+
+ are Lagrange multipliers that are not needed.
+ When 
+\begin_inset Formula $\omega_{2}$
+\end_inset
+
+ is very close to 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+, we can improve the condition number of the matrix by freely multiplying
+ the second-to-last row and column of the matrix by a constant factor, provided
+ that the second-to-last element of the right-hand side is 
+\emph on
+divided 
+\emph default
+by the same factor.
+ The same can be done for the last row and column, with the last element
+ of the right-hand side.
+ 
+\end_layout
+
+\begin_layout Standard
+Note that even after the thresholds and threshold frequencies have been
+ made exactly degenerate using the QP procedure illustrated above, we are
+ still in principle forcing the degeneracy.
+ Above threshold, the delicate balance created by 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ to force the frequencies together is slightly broken.
+ This results in an 
+\emph on
+approximate 
+\emph default
+degeneracy that is maintained very far above threshold, as shown in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:QP_stability"
+
+\end_inset
+
+, with only a 
+\begin_inset Formula $10^{-8}$
+\end_inset
+
+ splitting for pump strengths up to 100 times threshold.
+ In practice, these results are already accurate enough to give all the
+ desired physical information about the degenerate pair.
+ If we wanted to be absolutely correct and force the degeneracy to machine
+ precision (as it was in the exactly symmetric case for odd-
+\begin_inset Formula $\ell$
+\end_inset
+
+ modes), we could simply perform QP again at some given 
+\begin_inset Formula $d>0$
+\end_inset
+
+ to force 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta\omega^{\prime}$
+\end_inset
+
+ back together.
+ One extra caveat in this case is that 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+ is now a lasing pole, so the spatial hole-burning term need to be taken
+ account for the perturbation theory (
+\begin_inset Formula $\delta\omega^{\prime}$
+\end_inset
+
+ is still a passive pole, so the previous perturbation theory still applies),
+ and instead of Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:delta_omega_QP"
+
+\end_inset
+
+ we now have
+\begin_inset Formula 
+\begin{align}
+\delta\omega & =-\frac{\int d^{3}x\,\mathbf{E}\cdot\left(\delta\varepsilon+\Dt\Gamma(\omega_{\mu})\delta H\right)\mathbf{E}}{\int d^{3}x\,\mathbf{E}\cdot\left(\frac{2\varepsilon}{\omega}+\frac{\partial\varepsilon}{\partial\omega}\right)\mathbf{E}}\nonumber \\
+\varepsilon & \equiv\varepsilon_{c}+\Dt\Gamma(\omega)H\\
+\delta H & \equiv\frac{1}{1+\left|\mathbf{E}+\delta\mathbf{E}\right|^{2}}-\frac{1}{1+\left|\mathbf{E}\right|^{2}}.\nonumber 
+\end{align}
+
+\end_inset
+
+Here, 
+\begin_inset Formula $\delta H$
+\end_inset
+
+ is the change in the spatial-hole burning term arising from the dielectric
+ perturbation 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+.
+ However, since there is no easy way to determine 
+\begin_inset Formula $\delta\mathbf{E}$
+\end_inset
+
+ without numerically solving the full problem, 
+\begin_inset Formula $\delta H$
+\end_inset
+
+ is hard to determine semi-analytically.
+ A simple work-around is to set 
+\begin_inset Formula $\delta H=0$
+\end_inset
+
+ above, which makes this procedure no longer a true first-order perturbation
+ theory.
+ However, since the splitting is already so small as shown in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:QP_stability"
+
+\end_inset
+
+, the 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ needed is also extremely small, so 
+\begin_inset Formula $\delta H$
+\end_inset
+
+ is also negligible.
+ Although 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+ is not zero to first order, the 
+\begin_inset Formula $\delta H=0$
+\end_inset
+
+ approximation is enough to find a 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ that greatly decreases 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+.
+ We find empirically that it usually takes one iteration of this above-threshold
+ QP procedure to restore the degeneracy of the lasing pole 
+\begin_inset Formula $\omega$
+\end_inset
+
+ and its passive mode 
+\begin_inset Formula $\omega^{\prime}$
+\end_inset
+
+ to machine precision, since 
+\begin_inset Formula $\delta\omega$
+\end_inset
+
+ is already very small.
+ Practically speaking, this entire extra step is rarely needed since the
+ solutions obtained from 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ for the linear problem below threshold are already close enough for most
+ pump strengths of physical interest.
 \end_layout
 
 \begin_layout Standard
