@@ -363,20 +363,16 @@ key "ref-rotter_degeneracy"
 
 \end_inset
 
- showed how, 
-\emph on
-given
-\emph default
- steady-state degenerate solutions of the SALT (steady-state ab-initio lasing
- theory 
+ showed how the steady-state degenerate solutions of SALT (steady-state
+ ab-initio lasing theory 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "tureci_self-consistent_2006,tureci_strong_2008,tureci_ab_2009,ge_quantitative_2008,ge_steady-state_2010"
 
 \end_inset
 
-) equations in the single-mode regime, the stability of these solutions
- could be computed 
+) could be found from an educated guess of a superposition of the threshold
+ degenerate modes, and how their stability could be computed 
 \emph on
 numerically
 \emph default
@@ -458,7 +454,7 @@ reference "sub:Forcing-the-degeneracy"
 \end_layout
 
 \begin_layout Standard
-Ref.
+In Ref.
 \begin_inset space ~
 \end_inset
 
@@ -469,12 +465,7 @@ key "ref-rotter_degeneracy"
 
 \end_inset
 
- numerically analyzed the stability of a degenerate SALT solution, but it
- assumed that the degenerate solution was already known and did not address
- the problem of finding it; as a result, it explicitly considered only the
- ring-resonator case in which the circulating solution was known (along
- with several variations where the symmetry is artificially broken).
- In that work, given a SALT solution, a full linear-stability analysis (Sec.
+, a full linear-stability analysis (Sec.
 \begin_inset space ~
 \end_inset
 
@@ -505,10 +496,18 @@ key "ref-risken_instability,ref-bidirectional,ref-MBring,ref-breaking_cylindrica
  and found that far above the lasing threshold (where nonlinearities are
  strong) the circulating solution may become unstable (replaced by an oscillatin
 g limit-cycle solution).
- Conversely, they found that breaking the degeneracy typically caused the
- solution to become unstable (e.g.
- oscillating between clockwise and counterclockwise modes), but that in
- certain regimes (well above threshold) a stable solution re-appears.
+ Conversely, they found that slightly breaking the symmetry caused the (now
+ nearly degenerate) solution to become unstable (e.g.
+ oscillating between clockwise and counterclockwise modes) in the vicinity
+ of the threshold, but that a stable solution re-appears further above threshold
+ by means of cooperative frequency locking
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-lugiato-josa,ref-tamm"
+
+\end_inset
+
+.
  The present paper complements those results in two ways.
  First, near threshold, we are able to both 
 \emph on
@@ -814,7 +813,7 @@ key "ref-rotter_degeneracy,modeswitching2014"
 \end_inset
 
 , the SALT framework applies very naturally to lasing of degenerate microcavitie
-s, assuming a stable degenerate steady state exists, but it turn out that
+s, assuming a stable degenerate steady state exists, but it turns out that
  there are two complications.
  First, in order to apply a numerical nonlinear solver to a large system
  of nonlinear equations like SALT, one needs to have a good 
@@ -1093,7 +1092,7 @@ reference "eq:maxwell--bloch"
  as an unknown, and the third equation becomes
 \begin_inset Formula 
 \begin{equation}
-\dot{D}=\gamma_{\parallel}(D_{0}-D)+D\Im\left[\sum_{\mu\nu}\Gamma(\omega_{\nu})\mathbf{E}_{\mu}^{\star}\cdot\mathbf{E}_{\nu}e^{i(\omega_{\mu}-\omega_{\nu})t}\right],\label{eq:Ddot MB equation}
+\dot{D}=\gamma_{\parallel}(D_{0}-D)+D\,\Im\left[\sum_{\mu\nu}\Gamma(\omega_{\nu})\mathbf{E}_{\mu}^{\star}\cdot\mathbf{E}_{\nu}e^{i(\omega_{\mu}-\omega_{\nu})t}\right],\label{eq:Ddot MB equation}
 \end{equation}
 
 \end_inset
@@ -1180,7 +1179,7 @@ for the unknowns
  the electric fields and lasing frequencies of all lasing modes: 
 \begin_inset Formula 
 \begin{equation}
-D(\mathbf{x})=\frac{D_{0}(\mathbf{x})}{1+\gamma_{\parallel}^{-1}\sum\left|\Gamma(\omega_{\mu})\mathbf{E}_{\nu}\right|^{2}}.\label{eq:D(x) inversion}
+D(\mathbf{x})=\frac{D_{0}(\mathbf{x})}{1+\gamma_{\parallel}^{-1}{\displaystyle \sum_{\nu}}\left|\Gamma(\omega_{\nu})\mathbf{E}_{\nu}\right|^{2}}.\label{eq:D(x) inversion}
 \end{equation}
 
 \end_inset
@@ -1225,14 +1224,14 @@ reference "eq:salt general"
 \end_inset
 
  is solved for all the lasing modes 
-\begin_inset Formula $\mathbf{E}_{\nu}$
+\begin_inset Formula $\mathbf{E}_{\mu}$
 \end_inset
 
  and frequencies 
-\begin_inset Formula $\omega_{\nu}$
+\begin_inset Formula $\omega_{\mu}$
 \end_inset
 
-, one needs to check that the 
+, one typically checks that the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1248,20 +1247,44 @@ passive
  of the linearized SALT equation
 \begin_inset Formula 
 \begin{equation}
-\nabla\times\nabla\times\tilde{\mathbf{E}}_{\mu}=\tilde{\omega}_{\mu}\left[\varepsilon+\Gamma(\omega_{\mu})D\right]\tilde{\mathbf{E}}_{\mu},\label{eq:passive pole salt}
+\nabla\times\nabla\times\tilde{\mathbf{E}}_{\mu}=\tilde{\omega}_{\mu}\left[\varepsilon+\Gamma(\tilde{\omega}_{\mu})D\right]\tilde{\mathbf{E}}_{\mu},\label{eq:passive pole salt}
 \end{equation}
 
 \end_inset
 
-are not above the real axis [or else they would would have a positive real
- part 
-\begin_inset Formula $\Re(\tilde{\omega}_{\mu})>0$
+are not above the real axis.
+ As long as 
+\begin_inset Formula $\ensuremath{|\omega_{\nu}-\tilde{\omega}_{\mu}|\gg\gamma_{\parallel}}$
 \end_inset
 
- and would be unstable].
- These passive poles can equivalently be described as poles of the Green's
- function.
- 
+ (where 
+\begin_inset Formula $\omega_{\nu}$
+\end_inset
+
+ are the lasing frequencies), this is a good indicator that the SALT solution
+ is stable.
+ However, a rigorous evaluation of the stability of the SALT solution requires
+ a linear stability analysis based on the MB equations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-rotter_degeneracy"
+
+\end_inset
+
+.
+ (In Sec.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Stability-analysis summary"
+
+\end_inset
+
+, we give analytical results for this stability analysis for the near-threshold
+ degenerate case.) 
 \end_layout
 
 \begin_layout Subsection
@@ -1701,20 +1724,6 @@ reference "sub:Stability-analysis summary"
 \end_inset
 
 .
- (Far above threshold, the strong nonlinearities require numerical solution
- of a full Maxwell--Bloch eigenproblem, and SALT poles above the real-
-\begin_inset Formula $\omega$
-\end_inset
-
- axis may nevertheless be stable while poles below the real axis may be
- unstable 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ref-rotter_degeneracy"
-
-\end_inset
-
-.)
 \end_layout
 
 \begin_layout Standard
@@ -1817,7 +1826,18 @@ name "sec:Threshold-perturbation-theory"
 \end_layout
 
 \begin_layout Standard
-In this section, we analyze the SALT and Maxwell--Bloch equations (Eq.
+In this section, we analyze the SALT (Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:salt general"
+
+\end_inset
+
+) and Maxwell--Bloch equations (Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1837,7 +1857,7 @@ key "direct_salt"
 \end_inset
 
 ).
- For a regime with a single steady-state lasing mode 
+ For a regime kjkwith a single steady-state lasing mode 
 \begin_inset Formula $\mathbf{E}^{+}(\mathbf{x},t)=\mathbf{E}(\mathbf{x})e^{-i\omega t}$
 \end_inset
 
@@ -1880,12 +1900,12 @@ The first lasing threshold occurs when
 \begin_inset Formula $\mathbf{E}$
 \end_inset
 
- (the linear below-threshold eigenproblem) hits the real-
+ hits the real-
 \begin_inset Formula $\omega$
 \end_inset
 
  axis (
-\begin_inset Formula $\Im\omega=0$
+\begin_inset Formula $\Im\,\omega=0$
 \end_inset
 
 ) 
@@ -4808,7 +4828,7 @@ reference "eq:n != 4 lasing"
 \begin_inset Formula $n=4\ell$
 \end_inset
 
- case, however, we have found semi-analytically that the standing-mode solutions
+ case, however, we have found empirically that the standing-mode solutions
  
 \begin_inset Formula $\mathbf{E}_{+}\pm\mathbf{E}_{-}$
 \end_inset
@@ -5181,12 +5201,17 @@ ncies.
 \end_layout
 
 \begin_layout Standard
-When the pump strength is sufficiently high above threshold, however, a
- circulating linear combination 
-\emph on
-may 
-\emph default
-exist, even when the degeneracy is broken.
+When the pump strength is sufficiently high above threshold, however, the
+ two near-degenerate modes can interact with each other via the nonlinear
+ spatial hole burning interaction to form a single stable laser mode.
+ This effect is commonly known as cooperative frequency locking 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-lugiato-josa,ref-tamm"
+
+\end_inset
+
+.
  For example, Ref.
 \begin_inset space ~
 \end_inset
@@ -5229,18 +5254,25 @@ ion alone.
  There, a circulating single-mode lasing solution starts existing above
  a certain pump strength (somewhat higher than threshold), even though there
  is no degeneracy at threshold.
- (The reason the circulating lasing mode requires a minimum pump strength
+ The reason the circulating lasing mode requires a minimum pump strength
  is that the nonlinearity must be strong enough to counteract the broken
- degeneracy.
- This minimum pump strength is not straightforward to determine, and may
- require trial-and-error to obtain.) In many cases such as these, numerically
- solving the single mode problem, using an artificially-constructed circulating
- solution as an initial guess, results in the solver correctly converging
- to a circulating lasing mode.
- However, this effect is not completely understood, and it is not entirely
- predicable under what circumstances such a circulating mode exists (near
- threshold, the effect is almost guaranteed to give incorrect results, as
- we illustrate in an example below).
+ degeneracy and to lock the two modes to a single frequency.
+ In many cases such as these, numerically solving the single mode problem,
+ using an artificially-constructed circulating solution as an initial guess,
+ results in the solver correctly converging to a circulating lasing mode.
+ However, this effect is not yet completely understood, and it is not entirely
+ predictable under what circumstances such a circulating mode exists.
+ Furthermore, the pump window between the original lasing threshold and
+ the threshold at which the stable circular mode emerges can not be described
+ with SALT as the electric field no longer shows a multi-periodic time dependenc
+y 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-lugiato-josa,ref-tamm"
+
+\end_inset
+
+.
  Moreover, a discretization-induced error and a physical perturbation breaking
  the degeneracy are two distinct effects (even if their consequences are
  mathematically similar), and it is important to be able to study them independe
@@ -5249,345 +5281,10 @@ ntly.
  want to accidentally observe an artificial effect of discretization instead.
  Consequently, degeneracy-splitting caused by discretization is a major
  practical problem for our SALT solver and requires a nontrivial solution.
-\end_layout
-
-\begin_layout Standard
-Examples of the different cases can be seen in Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:overview"
-
-\end_inset
-
-.
- The uniform cylinder projected onto a square grid has 
-\begin_inset Formula $C_{4\mathrm{v}}$
-\end_inset
-
- symmetry but not the 
-\begin_inset Formula $C_{\infty\mathrm{v}}$
-\end_inset
-
- symmetry of the original cylinder (another example, as we will see later
- in Sec.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Forcing-the-degeneracy"
-
-\end_inset
-
- and in Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:overview"
-
-\end_inset
-
-, is a hexagonal photonic crystal defect cavity that has 
-\begin_inset Formula $C_{6\mathrm{v}}$
-\end_inset
-
- symmetry).
- For odd-
-\begin_inset Formula $\ell$
-\end_inset
-
- whispering-gallery modes, the sine mode 
-\begin_inset Formula $\mathbf{E}_{\mathrm{odd}}\propto\sin(\ell\phi)$
-\end_inset
-
- is simply a 90-degree rotation of the cosine mode 
-\begin_inset Formula $\mathbf{E}_{\mathrm{even}}\propto\cos(\ell\phi)$
-\end_inset
-
-, as seen in Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:overview"
-
-\end_inset
-
-.
- This symmetry is still exact for the grid, so odd-
-\begin_inset Formula $\ell$
-\end_inset
-
- circulating modes 
-\begin_inset Formula $\mathbf{E}_{\pm}e^{\pm i\ell\phi}$
-\end_inset
-
- are exactly degenerate even when discretized.
- However, for even-
-\begin_inset Formula $\ell$
-\end_inset
-
- modes, the operation that takes sine to cosine is not a member of 
-\begin_inset Formula $C_{4\mathrm{v}}$
-\end_inset
-
-, as seen in Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:even_cylinder_modes"
-
-\end_inset
-
-.
- Hence, there is a small splitting in both the real and imaginary parts
- of the frequencies, with a magnitude that decreases with higher resolution,
- as seen in Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:cylinder_resolution"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-We will now give an example illustrating why this splitting prevents us
- from obtaining the stable circulating mode.
- The structure in the bottom panel of Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:overview"
-
-\end_inset
-
- has 
-\begin_inset Formula $C_{6\mathrm{v}}$
-\end_inset
-
- symmetry, but the finite-difference discretization has 
-\begin_inset Formula $C_{4\mathrm{v}}$
-\end_inset
-
- symmetry.
- As a result, at zero pump strength the two modes in the bottom panel of
- Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:overview"
-
-\end_inset
-
- differ in both the real and imaginary parts of their frequencies.
- Because of the difference in imaginary parts, there will be a small range
- of pump strengths where only a 
-\emph on
-single 
-\emph default
-one of these modes is lasing and the other has not hit threshold yet, which
- is clearly unphysical, because we know from our analysis in Sec.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Threshold-perturbation-theory"
-
-\end_inset
-
- that the true stable lasing solution is a superposition 
-\begin_inset Formula $\mathbf{E}_{+}=\mathbf{E}_{\mathrm{even}}+i\mathbf{E}_{\mathrm{odd}}$
-\end_inset
-
-.
- Further, when we 
-\emph on
-do 
-\emph default
-finally raise the pump strength enough such that both modes are above threshold,
- the difference in real parts of the frequency will prevent us from forming
- the linear combination 
-\begin_inset Formula $\mathbf{E}_{+}$
-\end_inset
-
-, or 
-\emph on
-any 
-\emph default
-linear combination, that solves the SALT equation, simply because there
- is no degeneracy, so the solution does not exist.
- Using 
-\begin_inset Formula $\mathbf{E}_{+}$
-\end_inset
-
- as an initial guess would result in the solver converging to a purely 
-\begin_inset Formula $\mathbf{E}_{\mathrm{even}}$
-\end_inset
-
- or purely 
-\begin_inset Formula $\mathbf{E}_{\mathrm{odd}}$
-\end_inset
-
- lasing mode, because those are the only single-mode solutions to SALT in
- this case.
- Alternatively, there also may exist a 
-\emph on
-two
-\emph default
--mode solution, corresponding to the Maxwell--Bloch steady-state solution
- 
-\begin_inset Formula 
-\begin{equation}
-\mathbf{E}^{+}(\mathbf{x},t)=a_{\mathrm{even}}\mathbf{E}_{\mathrm{even}}(\mathbf{x})e^{-i\omega_{\mathrm{even}}t}+a_{\mathrm{odd}}\mathbf{E}_{\mathrm{odd}}(\mathbf{x})e^{-i\omega_{\mathrm{odd}}t}\label{eq:incorrect solution split discretization}
-\end{equation}
-
-\end_inset
-
-[here 
-\begin_inset Formula $\mathbf{E}^{+}$
-\end_inset
-
- is the Maxwell--Bloch electric field (Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:positive frequency component"
-
-\end_inset
-
-), not to be confused with 
-\begin_inset Formula $\mathbf{E}_{+}(\mathbf{x})$
-\end_inset
-
-, the circulating chiral mode defined in Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:chiral definition"
-
-\end_inset
-
-], where 
-\begin_inset Formula $\left|\omega_{\mathrm{even}}-\omega_{\mathrm{odd}}\right|$
-\end_inset
-
- decreases with increasing resolution, but is in general nonzero.
- However, Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:incorrect solution split discretization"
-
-\end_inset
-
- would be incorrect [not equivalent to the correct solution 
-\begin_inset Formula $\mathbf{E}^{+}(\mathbf{x},t)=\mathbf{E}_{+}(\mathbf{x})e^{-i\omega t}$
-\end_inset
-
-] for multiple reasons.
- First, because our discretization splits the thresholds of 
-\begin_inset Formula $\mathbf{E}_{\mathrm{even}}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{E}_{\mathrm{odd}}$
-\end_inset
-
-, the amplitudes 
-\begin_inset Formula $\left|a_{\mathrm{even}}\right|$
-\end_inset
-
- and 
-\begin_inset Formula $\left|a_{\mathrm{odd}}\right|$
-\end_inset
-
- would 
-\emph on
-not 
-\emph default
-be equal as they should, especially right above the second (unphysical)
- threshold, where we will see one mode greatly dominating the other.
- Second, the total intensity pattern for the two-mode regime 
-\begin_inset Formula $\left|a_{\mathrm{even}}\mathbf{E}_{\mathrm{even}}\right|^{2}+\left|a_{\mathrm{odd}}\mathbf{E}_{\mathrm{odd}}\right|^{2}$
-\end_inset
-
- would not have the chiral 
-\begin_inset Formula $C_{n}$
-\end_inset
-
- intensity pattern that we expect; rather it would only be even across the
- two mirror planes, horizontal and vertical, that characterize 
-\begin_inset Formula $\mathbf{E}_{\mathrm{even}}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{E}_{\mathrm{odd}}$
-\end_inset
-
-, and it would not have rotational symmetry at all.
- Hence, any affect of the chirality on the self-consistent solution would
- be lost.
- Finally, the presence of a small nonzero splitting 
-\begin_inset Formula $\omega_{\mathrm{even}}-\omega_{\mathrm{odd}}$
-\end_inset
-
- due to the discretization would be completely incompatible with the stationary-
-inversion approximation 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "fu_multifrequency_1991,tureci_self-consistent_2006"
-
-\end_inset
-
- used to make SALT valid in the first place.
-\end_layout
-
-\begin_layout Standard
-There are two potential methods to solve this problem: one is to solve a
- two-mode equation with an interference term in the spatial hole-burning
- denominator, while allowing the frequencies to split.
- This method is conceptually simpler, but is hard to use in practice because
- it is difficult to choose the correct relative phase.
- The second method is to construct a small perturbation to the dielectric
- function to force a degeneracy in both the pump strength and the frequencies
- at threshold.
- We discuss the second method below.
+ For a rigorous study of the circulating solution we therefore construct
+ a small perturbation to the dielectric function to force a degeneracy in
+ both the pump strength and the frequencies at threshold.
+ We discuss this method below.
  
 \begin_inset Float figure
 wide false
@@ -10376,9 +10073,18 @@ straddle
 \end_inset
 
  the real axis; this way, when they meet in the middle they are both exactly
- at threshold.) Below threshold, the eigenproblem is linear, and we can apply
- standard perturbation theory (albeit for a complex-symmetric operator,
- not a Hermitian operator) as follows:
+ at threshold.) Below threshold, the eigenproblem is linear in the eigenvector
+ 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ (the nonlinearity in 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is still present but easy to deal with using standard methods), and we
+ can apply standard perturbation theory (albeit for a complex-symmetric
+ operator, not a Hermitian operator) as follows:
 \end_layout
 
 \begin_layout Standard
