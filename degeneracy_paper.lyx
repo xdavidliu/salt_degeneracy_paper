@@ -238,9 +238,9 @@ chiral
 \begin_inset Quotes erd
 \end_inset
 
- intensity pattern, which arises from spontaneous symmetric-breaking of
- mirror symmetry, and whose symmetry group requires that the degeneracy
- persist even when nonlinear effects become important.
+ intensity pattern, which arises from spontaneous symmetry-breaking of mirror
+ symmetry, and whose symmetry group requires that the degeneracy persist
+ even when nonlinear effects become important.
  Finally, we introduce a numerical technique to solve the degenerate SALT
  equations far above threshold even when spatial discretization artificially
  breaks the degeneracy.
