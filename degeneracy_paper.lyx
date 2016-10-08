@@ -7483,8 +7483,15 @@ key "moiseyev,siegman,phc_book"
 \end_inset
 
  operator acts to the left can be understood using integration by parts,
- with the boundary terms vanishing due to the limiting-absorption principle.)
- Now, choose 
+ with the boundary terms vanishing due to the limiting-absorption principle.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ref-limiting-absorption"
+
+\end_inset
+
+) Now, choose 
 \begin_inset Formula $\mathbf{E}_{1}=\mathbf{E}_{+}$
 \end_inset
 
