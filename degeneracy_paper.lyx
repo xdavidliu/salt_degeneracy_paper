@@ -340,7 +340,7 @@ key "inui_group"
 \end_inset
 
 , and much less is known about the lasing solutions in such cases.
- Fig.
+ Figure
 \begin_inset space ~
 \end_inset
 
@@ -1417,7 +1417,7 @@ key "inui_group,tinkham"
 \end_inset
 
 .
- Fig.
+ Figure
 \begin_inset space ~
 \end_inset
 
@@ -1522,7 +1522,7 @@ where
 \end_inset
 
 ).
- Eq.
+ Equation
 \begin_inset space ~
 \end_inset
 
@@ -2422,7 +2422,7 @@ reference "sec: appendix allowed lasing modes"
 \end_inset
 
 .
- Eq.
+ Equation.
 \begin_inset space ~
 \end_inset
 
@@ -2602,7 +2602,7 @@ reference "eq:single-mode-salt"
 \end_inset
 
  slightly above threshold.
- Fig.
+ Figure.
 \begin_inset space ~
 \end_inset
 
@@ -3689,7 +3689,7 @@ key "phc_book"
 , so at least one of the two non-zero eigenvalues here must have a positive
  real part (in practice, it is always the last eigenvalue), indicating that
  these standing lasing modes are always unstable.
- Fig.
+ Figure.
 \begin_inset space ~
 \end_inset
 
@@ -9425,7 +9425,7 @@ stable
 \end_inset
 
 .
- Eq.
+ Equation.
 \begin_inset space ~
 \end_inset
 
