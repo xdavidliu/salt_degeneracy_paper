@@ -1857,7 +1857,7 @@ key "direct_salt"
 \end_inset
 
 ).
- For a regime kjkwith a single steady-state lasing mode 
+ For a regime with a single steady-state lasing mode 
 \begin_inset Formula $\mathbf{E}^{+}(\mathbf{x},t)=\mathbf{E}(\mathbf{x})e^{-i\omega t}$
 \end_inset
 
