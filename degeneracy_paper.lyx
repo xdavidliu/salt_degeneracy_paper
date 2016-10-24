@@ -4574,6 +4574,61 @@ reference "eq:chiral definition"
 \end_inset
 
 , and hence still have mirror symmetry).
+ We have also empirically observed that circulating lasing modes in 
+\emph on
+lossy
+\emph default
+ 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+-symmetric cavities (such as that in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:lowQ_chirality"
+
+\end_inset
+
+), those with low quality factor 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "phc_book"
+
+\end_inset
+
+ 
+\begin_inset Formula $Q\equiv-\Re\,\omega^{\prime}/\Im\,\omega^{\prime}$
+\end_inset
+
+, where 
+\begin_inset Formula $\omega^{\prime}$
+\end_inset
+
+ is the passive [zero pump] pole in the Green's function, tend to have greater
+ chirality than circulating modes in cavities with 
+\emph on
+high 
+\emph default
+
+\begin_inset Formula $Q$
+\end_inset
+
+ (such as that in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:phc_stable"
+
+\end_inset
+
+).
  Second, the geometry itself can already have 
 \begin_inset Formula $C_{n}$
 \end_inset
@@ -5793,6 +5848,19 @@ reference "fig:QP_stability"
 \end_inset
 
 , and that the correct circulating solution is still obtained.
+ In general, the splitting is small when the intensity profiles of the lasing
+ mode and its passive pole are similar, as in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:even_cylinder_intensity"
+
+\end_inset
+
+.
  In Appendix
 \begin_inset space ~
 \end_inset
@@ -5876,20 +5944,6 @@ Dielectric perturbation
 \end_inset
 
 , while the imaginary part (right) is a more complicated function.
- Only two iterations of QP were required reduce the splitting in both the
- threshold frequency 
-\begin_inset Formula $\omega_{t}$
-\end_inset
-
- and the threshold pump strength 
-\begin_inset Formula $D_{\mathrm{t}}$
-\end_inset
-
- to 
-\begin_inset Formula $10^{-10}$
-\end_inset
-
- or smaller.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -5972,11 +6026,20 @@ Relative splitting in threshold pump strength
 \end_inset
 
 , and similarly for the pump strength.
- Two solves for 
-\begin_inset Formula $\delta\varepsilon$
+ Only two iterations of QP were required reduce the splitting in both the
+ threshold frequency 
+\begin_inset Formula $\omega_{t}$
 \end_inset
 
- is all that is needed to force the degeneracy to nearly machine precision.
+ and the threshold pump strength 
+\begin_inset Formula $D_{\mathrm{t}}$
+\end_inset
+
+ to 
+\begin_inset Formula $10^{-10}$
+\end_inset
+
+ or smaller.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -6603,12 +6666,19 @@ reference "fig:lowQ_chirality"
 
 \end_inset
 
- however, the chirality is not significant enough to be visible because
- the 
-\begin_inset Formula $Q\approx100$
+ however, the chirality is not significant enough to be visible, since the
+ hexagonal cavity is not as lossy as the square cavity in Fig.
+\begin_inset space ~
 \end_inset
 
- is much higher.
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:lowQ_chirality"
+
+\end_inset
+
+.
  In the ideal system, the second pole 
 \begin_inset Formula $\delta\omega^{\prime}$
 \end_inset
@@ -6790,7 +6860,7 @@ semi-analytical
 \emph on
 linear
 \emph default
- Maxwell PDE).
+ Maxwell partial-differential equation).
  Our perturbative solution near threshold confirms an ansatz in the earlier
  degenerate SALT work 
 \begin_inset CommandInset citation
