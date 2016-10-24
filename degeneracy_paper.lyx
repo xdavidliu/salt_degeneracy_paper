@@ -685,7 +685,8 @@ Degenerate pairs of standing-wave modes in a laser.
 \begin_inset Formula $\frac{\pi}{2}$
 \end_inset
 
- rotations of one another (here, the order of the irrep is 
+ rotations of one another (here, the order of the irreducible representation
+ is 
 \begin_inset Formula $\ell=1$
 \end_inset
 
@@ -1039,13 +1040,10 @@ cold-cavity
 \begin_inset Formula $D_{0}(\mathbf{x})$
 \end_inset
 
- is the strength of an pumping process driving the inversion.
- Additionally, we have omitted, for convenience, factors of the quantum
- transition matrix element 
-\begin_inset Formula $\rho_{12}$
-\end_inset
-
- of the two level system, Planck's constant 
+ is the strength of a pumping process driving the inversion.
+ Additionally, for convenience, one chooses units such that the following
+ factors are set to unity: the dipole moment matrix element of the two level
+ system, Planck's constant 
 \begin_inset Formula $\hbar$
 \end_inset
 
@@ -1053,7 +1051,7 @@ cold-cavity
 \begin_inset Formula $c$
 \end_inset
 
-, which set the units of the fields.
+.
  Using the stationary inversion approximation 
 \begin_inset Formula $D(\mathbf{x},t)\approx D(\mathbf{x})$
 \end_inset
@@ -1292,7 +1290,7 @@ Effects of exact degeneracies
 \end_layout
 
 \begin_layout Standard
-So far, most cases in which SALT has been applied has dealt with either
+So far, most cases in which SALT has been applied have dealt with either
  single lasing modes or multimode regimes in which frequencies are far apart.
  When two lasing frequencies are close but not exactly degenerate, there
  is non-negligible beating and SALT is invalid.
@@ -1388,8 +1386,8 @@ The presence of degenerate eigenvalues in systems with
 \begin_inset Formula $n>2$
 \end_inset
 
-, there exists at least one pair of two-dimensional irreducible representations
- (irreps) in each 
+, there exists at least one two-dimensional irreducible representation (irrep)
+ in each 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
@@ -1398,9 +1396,45 @@ The presence of degenerate eigenvalues in systems with
 \end_inset
 
 ].
- For any linear operator (such as that of the SALT equation at threshold)
- that obeys some symmetry, the eigenfunctions transform under symmetry operation
-s of that symmetry group 
+ For any linear operator that obeys 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry for some 
+\begin_inset Formula $n$
+\end_inset
+
+ [such as the SALT operator (Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:salt general"
+
+\end_inset
+
+) with a 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+-symmetric dielectric function 
+\begin_inset Formula $\varepsilon(\mathbf{x})$
+\end_inset
+
+ and gain profile 
+\begin_inset Formula $D_{0}(\mathbf{x})$
+\end_inset
+
+], any eigenfunction of the operator will in general belong to one of the
+ irreps of the 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetry group, and that eigenfunction will transform under symmetry operations
+ of that group into linear combinations of eigenfunctions of the same irrep
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "phc_book"
