@@ -2444,14 +2444,25 @@ where the coefficients
 \begin_inset Formula $K$
 \end_inset
 
- are simple integrals of the threshold modes, given in closed form in Appendix
+ are simple integrals of the threshold modes, given in closed form in Eq.
 \begin_inset space ~
 \end_inset
 
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec: appendix allowed lasing modes"
+reference "eq:G and H definitions"
+
+\end_inset
+
+ and Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:I J K definitions"
 
 \end_inset
 
@@ -2832,8 +2843,8 @@ reference "eq:n != 4 lasing"
 \begin_inset Formula $d\approx100$
 \end_inset
 
-, and possibly much higher) but only good at 
-\begin_inset Formula $d<0.01$
+ [not shown in the figure], and possibly much higher) but only good at 
+\begin_inset Formula $d<0.005$
 \end_inset
 
  for frequency shifts.
@@ -2919,15 +2930,8 @@ fixed-point
 
  mode, and those zero-amplitude regions are making no use of the gain.
  This allows the opposite-symmetry standing-wave mode to grow exponentially
- into these nulls, and this is the reason why the 
-\begin_inset Formula $\sin$
-\end_inset
-
- and 
-\begin_inset Formula $\cos$
-\end_inset
-
- modes are unstable in a ring.
+ into these nulls, and this is the reason why the sine and cosine modes
+ are unstable in a ring.
  (This fact is only true for 
 \emph on
 exact 
@@ -3078,10 +3082,10 @@ where the unknown vector is
 \begin_inset Formula 
 \begin{equation}
 \mathsf{u}(t)=\left(\begin{array}{c}
-\Re\delta\vec{E}\\
-\Im\delta\vec{E}\\
-\Re\delta\vec{P}\\
-\Im\delta\vec{P}\\
+\Re\,\delta\vec{E}\\
+\Im\,\delta\vec{E}\\
+\Re\,\delta\vec{P}\\
+\Im\,\delta\vec{P}\\
 \delta\vec{D}
 \end{array}\right)=\Re\left(\mathsf{x}e^{\sigma t}\right).
 \end{equation}
@@ -3152,8 +3156,8 @@ es
 \end_inset
 
  and hence evaluate the SALT stability for any pump strength above threshold.
- Here, focus on the regime slightly above threshold, and show that the equations
- can be solved analytically to lowest order in 
+ Here, we focus on the regime slightly above threshold, and show that the
+ equations can be solved analytically to lowest order in 
 \begin_inset Formula $d$
 \end_inset
 
@@ -3388,10 +3392,10 @@ key "sakurai"
 \begin_inset Formula 
 \begin{equation}
 \mathsf{v}_{k}=\left(\begin{array}{c}
-\Re\vec{e}_{k}\\
-\Im\vec{e}_{k}\\
-D_{\mathrm{t}}\Re(\Gamma_{\mathrm{t}}\vec{e}_{k})\\
-D_{\mathrm{t}}\Im(\Gamma_{\mathrm{t}}\vec{e}_{k})\\
+\Re\,\vec{e}_{k}\\
+\Im\,\vec{e}_{k}\\
+D_{\mathrm{t}}\Re\,(\Gamma_{\mathrm{t}}\vec{e}_{k})\\
+D_{\mathrm{t}}\Im\,(\Gamma_{\mathrm{t}}\vec{e}_{k})\\
 0
 \end{array}\right),\label{eq:vk definition}
 \end{equation}
@@ -3666,9 +3670,9 @@ where
 \end_inset
 
 .
- Here, both zero eigenvalues here come from continuous degrees of freedom:
- one comes from the global phase degree of freedom, while the other comes
- from the relative phase between 
+ Here, both zero eigenvalues come from continuous degrees of freedom: one
+ comes from the global phase degree of freedom, while the other comes from
+ the relative phase between 
 \begin_inset Formula $\mathbf{E}_{+}$
 \end_inset
 
@@ -4321,7 +4325,14 @@ reference "fig:lowQ_chirality"
 \end_inset
 
 ) to its degenerate partner (right panel), but there is still an exact degenerac
-y as explained in Appendix
+y due to Lorentz reciprocity 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dichroism"
+
+\end_inset
+
+, as explained in Appendix
 \begin_inset space ~
 \end_inset
 
@@ -4979,7 +4990,18 @@ reference "sec:Threshold-perturbation-theory"
 
 \end_inset
 
- and the QP method of Sec.
+ and the 
+\emph on
+quadratic program
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "boyd"
+
+\end_inset
+
+ (QP) method of Sec.
 \begin_inset space ~
 \end_inset
 
@@ -5053,11 +5075,11 @@ real
 \begin_inset Formula $C_{n}$
 \end_inset
 
- symmetry, so 
-\begin_inset Formula $H$
+ symmetry, so the full stationary inversion 
+\begin_inset Formula $D(\mathbf{x})$
 \end_inset
 
- has 
+, which includes the effects of spatial hole-burning, has 
 \begin_inset Formula $C_{n}$
 \end_inset
 
@@ -5066,19 +5088,15 @@ real
 \begin_inset Formula $M$
 \end_inset
 
- so that this mode has just started lasing, and the sum in 
-\begin_inset Formula $H$
+ so that this mode has just started lasing, and that only modes 
+\begin_inset Formula $1$
 \end_inset
 
- ranges from 
-\begin_inset Formula $\nu=1$
+ through 
+\begin_inset Formula $M-1$
 \end_inset
 
- to 
-\begin_inset Formula $\nu=M-1$
-\end_inset
-
-.
+ contribute to the spatial hole-burning.
  Then all results in Sec.
 \begin_inset space ~
 \end_inset
@@ -5091,11 +5109,11 @@ reference "sec:Threshold-perturbation-theory"
 \end_inset
 
  still hold, except with gain profile 
-\begin_inset Formula $F(\mathbf{x})$
+\begin_inset Formula $D_{0}(\mathbf{x})$
 \end_inset
 
  replaced by 
-\begin_inset Formula $FH$
+\begin_inset Formula $D(\mathbf{x})$
 \end_inset
 
 .
@@ -5138,7 +5156,7 @@ reference "sub:Stability-analysis summary"
 \end_inset
 
  symmetry, so they still hold even if 
-\begin_inset Formula $F(\mathbf{x})$
+\begin_inset Formula $D_{0}(\mathbf{x})$
 \end_inset
 
  is replaced by a function with only 
@@ -5207,8 +5225,11 @@ after
 solving for both of the modes.
  However, for SALT (which is nonlinear), the coefficients of the superposition
  is a physical quantity that must be found by our solution method, as explained
- in Secs.
- 
+ in Sec.
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Stability-analysis summary"
@@ -5224,7 +5245,7 @@ key "direct_salt"
 
 \end_inset
 
-, the process for solving for lasing modes begin with the linear problem
+, the process for solving for lasing modes begins with the linear problem
  for the passive poles.
  Because both the real and imaginary parts of the passive poles are split
  by the discretization error, the modes will lase at different pump strengths,
@@ -5463,6 +5484,75 @@ name "fig:even_cylinder_modes"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Restoring the degeneracy using a perturbation to the dielectric 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Forcing-the-degeneracy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The basic idea is that we construct an artificial perturbation 
+\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
+\end_inset
+
+ to the dielectric permittivity that forces the degeneracy in both the frequency
+ and threshold, and then we solve the perturbed single-mode SALT equation.
+ There are infinitely many possible functions that can achieve this goal,
+ so we look for the one with the smallest 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ norm 
+\begin_inset Formula $\left\Vert \delta\varepsilon(\mathbf{x})\right\Vert _{2}^{2}=\int\left|\delta\varepsilon(\mathbf{x})\right|^{2}$
+\end_inset
+
+.
+ This is also reasonable because in the limit of infinite resolution, the
+ perturbation required to force the degeneracy must approach zero.
+ We construct the perturbation by solving a 
+\emph on
+quadratic program
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "boyd"
+
+\end_inset
+
+ (QP) with linear constraints which we obtain using perturbation theory.
+ Not only does this uniquely (and cheaply) determine 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+, as described below, but it also guarantees convergence to the solution
+ of the unperturbed (physical) single-mode SALT equation in the limit of
+ infinite resolution.
+ The reason it guarantees convergence is that the frequency splitting vanishes
+ in the limit of infinite resolution, as shown in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cylinder_resolution"
+
+\end_inset
+
+ and so the minimum-norm 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ to force a degeneracy also vanishes in the limit of infinite resolution,
+ recovering the unperturbed SALT.
 \begin_inset Float figure
 wide false
 sideways false
@@ -5560,64 +5650,6 @@ name "fig:cylinder_resolution"
 
 \end_layout
 
-\begin_layout Subsection
-Restoring the degeneracy using a perturbation to the dielectric 
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:Forcing-the-degeneracy"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The basic idea is that we construct an artificial perturbation 
-\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
-\end_inset
-
- to the dielectric that forces the degeneracy in both the frequency and
- threshold, and then we solve the perturbed single-mode SALT equation.
- There are infinitely many possible functions that can achieve this goal,
- so we look for the one with the smallest 
-\begin_inset Formula $L_{2}$
-\end_inset
-
- norm 
-\begin_inset Formula $\left\Vert \delta\varepsilon(\mathbf{x})\right\Vert _{2}^{2}=\int\left|\delta\varepsilon(\mathbf{x})\right|^{2}$
-\end_inset
-
-.
- This is also reasonable because in the limit of infinite resolution, the
- perturbation required to force the degeneracy must approach zero.
- We construct the perturbation by solving a 
-\emph on
-quadratic program
-\emph default
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "boyd"
-
-\end_inset
-
- (QP) with linear constraints which we obtain using perturbation theory.
- Not only does this uniquely (and cheaply) determine 
-\begin_inset Formula $\delta\varepsilon$
-\end_inset
-
-, as described below, but it also guarantees convergence to the solution
- of the unperturbed (physical) single-mode SALT equation in the limit of
- infinite resolution.
- The reason it guarantees convergence is that the frequency splitting vanishes
- in the limit of infinite resolution, and so the minimum-norm 
-\begin_inset Formula $\delta\varepsilon$
-\end_inset
-
- to force a degeneracy also vanishes in the limit of infinite resolution,
- recovering the unperturbed SALT.
-\end_layout
-
 \begin_layout Standard
 It turns out that determining the minimum-norm 
 \begin_inset Formula $\delta\varepsilon$
@@ -5647,17 +5679,23 @@ key "boyd"
 \end_inset
 
 .
- In particular, the linear constraint (the equation on 
-\begin_inset Formula $\delta\varepsilon$
+ In particular, the linear constraint (Eq.
+\begin_inset space ~
 \end_inset
 
- that makes it coalesce the eigenvalues) can be derived from perturbation
- theory.
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:degeneracy_forcing"
+
+\end_inset
+
+), which coalesces the eigenvalues, can be derived from perturbation theory.
  Because the perturbation theory is only first-order, however, the 
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
 
- that we find by solving the QP only approximately eliminates the degeneracy,
+ that we find by solving the QP only approximately eliminates the splitting,
  but we can simply re-solve SALT and solve a new QP, iterating the process
  a few times (twice is typically enough) to force a degeneracy to machine
  precision.
@@ -5680,7 +5718,7 @@ The resulting
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
 
- of this procedure applied to the odd-
+ of this procedure applied to the even-
 \begin_inset Formula $\ell$
 \end_inset
 
@@ -6247,7 +6285,11 @@ name "fig:even_cylinder_intensity"
 \end_layout
 
 \begin_layout Subsection
-Examples
+Example with 
+\begin_inset Formula $C_{6\mathrm{v}}$
+\end_inset
+
+ symmetry
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Examples"
@@ -6289,9 +6331,9 @@ reference "fig:overview"
 \end_inset
 
  everywhere except in the holes, where there is air.
- A PM is added to the boundaries to simulate the radiation loss, and the
- axes of the hexagon have been aligned with the diagonals rather than the
- 
+ A perfectly matched layer (PML) is added to the boundaries to simulate
+ the radiation loss, and the axes of the hexagon have been aligned with
+ the diagonals rather than the 
 \begin_inset Formula $x$
 \end_inset
 
@@ -6743,7 +6785,7 @@ In this paper, we have reduced the problem of identifying the stable lasing
 \emph on
 semi-analytical
 \emph default
- solution evaluated in terms of integrals the threshold modes (solutions
+ solution evaluated in terms of integrals of  the threshold modes (solutions
  to the 
 \emph on
 linear
@@ -6850,7 +6892,7 @@ key "ref-lige_condensation_arxiv"
 \begin_inset Formula $\sigma$
 \end_inset
 
- is depends on 
+ depends on 
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
@@ -6869,9 +6911,9 @@ reference "sub:Region-of-validity"
 \begin_inset Formula $\sigma_{1}$
 \end_inset
 
- is independent) and SALT solutions do not, this method of translating a
- hole-burning term to an artificially-designed pump profile at a higher
- threshold does not preserve the physics of 
+ is independent), and SALT solutions do not, this method of translating
+ a hole-burning term to an artificially-designed pump profile at a higher
+ threshold does not account for the effects of 
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
@@ -10300,14 +10342,14 @@ Whether we take
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
 
- to be scalar or tensor, the degeneracy-forcing condition 
+ to be a scalar or a tensor, the degeneracy-forcing condition 
 \begin_inset Formula $\omega_{1}+\delta\omega_{1}=\omega_{2}+\delta\omega_{2}$
 \end_inset
 
  then becomes
 \begin_inset Formula 
 \begin{equation}
-(p_{2}-p_{1})^{T}\delta\varepsilon=\omega_{2}-\omega_{1}.
+(p_{2}-p_{1})^{T}\delta\varepsilon=\omega_{2}-\omega_{1}.\label{eq:degeneracy_forcing}
 \end{equation}
 
 \end_inset
