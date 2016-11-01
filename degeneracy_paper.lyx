@@ -6261,19 +6261,8 @@ Above-threshold splitting in real and imaginary parts of
 \end_inset
 
  modes.
- The magnitude is very small because the intensity profile, as shown in
- Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:even_cylinder_intensity"
-
-\end_inset
-
-, is very close to
+ The magnitude is very small because the intensity profile is very close
+ to
 \emph on
  
 \emph default
@@ -7110,12 +7099,14 @@ key "ref-rotter_degeneracy"
 \begin_layout Acknowledgments
 This work was supported in part by the Army Research Office through the
  Institute for Soldier Nanotechnologies (ISN), Grant No.
- W911NF-07-D-0004, by XXXXXXXXX (AIM grant TBD), by the Vienna Science and
- Technology Fund (WWTF) through Project No.
+ W911NF-07-D-0004, by a grant from AIM Photonics through the MIT Microsystems
+ Technology Laboratories, by the Vienna Science and Technology Fund (WWTF)
+ through Project No.
  MA09-030 (LICOTOLI), and by the Austrian Science Fund (FWF) through Project
  No.
  SFB NextLite F49-P10.
- We are also grateful to D.
+ We are also grateful to A.
+ D.
  Stone for helpful discussions
 \end_layout
 
