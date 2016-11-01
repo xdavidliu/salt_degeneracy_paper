@@ -7107,6 +7107,18 @@ key "ref-rotter_degeneracy"
 .
 \end_layout
 
+\begin_layout Acknowledgments
+This work was supported in part by the Army Research Office through the
+ Institute for Soldier Nanotechnologies (ISN), Grant No.
+ W911NF-07-D-0004, by XXXXXXXXX (AIM grant TBD), by the Vienna Science and
+ Technology Fund (WWTF) through Project No.
+ MA09-030 (LICOTOLI), and by the Austrian Science Fund (FWF) through Project
+ No.
+ SFB NextLite F49-P10.
+ We are also grateful to D.
+ Stone for helpful discussions
+\end_layout
+
 \begin_layout Section
 \start_of_appendix
 Degeneracy in 
