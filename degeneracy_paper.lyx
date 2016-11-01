@@ -228,7 +228,7 @@ ab-initio
  Near threshold, we find closed-form expressions for both circulating modes
  and other types of lasing solutions as well as for their linearized Maxwell–Blo
 ch eigenvalues, providing a simple way to determine their stability without
- having to do a full numerical calculation.
+ having to do a full nonlinear numerical calculation.
  Above threshold, we show that a key feature of the circulating mode is
  its 
 \begin_inset Quotes eld
@@ -285,8 +285,8 @@ key "ref-cao_review,modeswitching2014,ref-matsko,ref-pnas_whispering"
 \end_inset
 
 .
- However, more recent microcavities often have other 2d symmetry groups
- supporting degeneracies 
+ However, more recent microcavities often have other symmetry groups supporting
+ degeneracies 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "inui_group"
@@ -301,7 +301,7 @@ key "englund"
 
 \end_inset
 
-, an example of a 3d structure with a 2d symmetry (as seen in Fig.
+, as seen in Fig.
 \begin_inset space ~
 \end_inset
 
@@ -312,7 +312,7 @@ reference "fig:overview"
 
 \end_inset
 
-), or more generally the 
+, or more generally the 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
@@ -416,9 +416,34 @@ reference "sec:Threshold-perturbation-theory"
 \end_inset
 
 ).
- We empirically find that the only stable solutions right above threshold
- (with one isolated exception that is unattainable under normal circumstances)
- are the circulating ones.
+ We find that the only stable solutions right above threshold (with one
+ isolated exception that is unattainable under normal circumstances) are
+ typically the circulating ones.
+ An important observation of our paper is that 
+\begin_inset Formula $C_{n\mathrm{v}}$
+\end_inset
+
+ symmetries experience a spontaneous symmetry breaking due to nonlinearity
+ above threshold, and analysis of the resulting 
+\begin_inset Quotes eld
+\end_inset
+
+chiral
+\begin_inset Quotes erd
+\end_inset
+
+ symmetry
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dichroism"
+
+\end_inset
+
+ is key to stability of the lasing mode.
  These analytical solutions then give us a starting point for a 
 \emph on
 numerical
@@ -501,6 +526,10 @@ g limit-cycle solution).
  oscillating between clockwise and counterclockwise modes) in the vicinity
  of the threshold, but that a stable solution re-appears further above threshold
  by means of cooperative frequency locking
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ref-lugiato-josa,ref-tamm"
@@ -535,7 +564,7 @@ analytically
 , by perturbation theory in the basis of the degenerate linear solutions
  at lasing threshold, and we generalize the notion of a circulating laser
  mode to other symmetry groups and establish its stability near threshold.
- (Even the degeneracy itself is somewhat unusual above threshold, because
+ Even the degeneracy itself is somewhat unusual above threshold, because
  the nonlinear gain spontaneously breaks some of the symmetry in noncircular
  (
 \begin_inset Formula $C_{n\mathrm{v}}$
@@ -586,7 +615,8 @@ reference "sec: appendix allowed lasing modes"
 
 \end_inset
 
-.) Second, we develop a numerical solution technique for 
+.
+ Second, we develop a numerical solution technique for 
 \emph on
 far above
 \emph default
@@ -1357,9 +1387,9 @@ key "ref-braun"
 
 , which were mostly experimental and focused on the linear cavity rather
  than the nonlinear lasing regime.
- However, the microdisk is only a single example of a setting where one
- can find degenerate resonant modes that can lase: there is a great variety
- of other symmetric geometries where degeneracies can occur 
+ However, the microdisk is just one of many examples of a setting where
+ one can find degenerate resonant modes that can lase: there are a great
+ variety of other symmetric geometries where degeneracies can occur 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "inui_group,tinkham,sakoda"
@@ -1377,80 +1407,93 @@ key "inui_group,tinkham,sakoda"
 \end_layout
 
 \begin_layout Standard
-The presence of degenerate eigenvalues in systems with 
+The presence of degenerate eigenvalues is typically a direct consequence
+ of symmetry.
+ For systems with 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- symmetry is a direct consequence of representation theory.
- For all 
+ symmetry for 
 \begin_inset Formula $n>2$
 \end_inset
 
-, there exists at least one two-dimensional irreducible representation (irrep)
- in each 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- [in fact, the number of two-dimensional irreps is 
-\begin_inset Formula $\mathrm{floor}(\frac{n-1}{2})$
-\end_inset
-
-].
- For any linear operator that obeys 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- symmetry for some 
+ (
 \begin_inset Formula $n$
 \end_inset
 
- [such as the SALT operator (Eq.
+-fold rotational symmetry with 
+\begin_inset Formula $n$
+\end_inset
+
+ mirror planes, the symmetry of the regular 
+\begin_inset Formula $n$
+\end_inset
+
+-gon), the existence of 2d irreducible representations (irreps) of the symmetry
+ group corresponds to 2-fold degeneracies.
+ Below, we therefore refer to 2-fold degenerate modes (at lasing threshold)
+ as corresponding to a 2d irrep, and we exploit some known properties of
+ these irreps in deriving selection rules 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "inui_group"
+
+\end_inset
+
+ for overlap integrals.
+ For systems with 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ symmetry (
+\begin_inset Formula $n$
+\end_inset
+
+-fold rotational symmetry without mirror symmetry, e.g.
+ a 
+\begin_inset Quotes eld
+\end_inset
+
+chiral
+\begin_inset Quotes erd
+\end_inset
+
+ spiral structure with 
+\begin_inset Formula $n$
+\end_inset
+
+ arms), the combination of group theory and electromagnetic reciprocity
+ again supports 2-fold degenerate solutions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dichroism"
+
+\end_inset
+
+ (see also Appendix
 \begin_inset space ~
 \end_inset
 
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:salt general"
+reference "sec: degeneracy in Cn"
 
 \end_inset
 
-) with a 
+ for a review).
+ Even with 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
--symmetric dielectric function 
-\begin_inset Formula $\varepsilon(\mathbf{x})$
+ symmetry, we explain below that the nonlinear hole-burning term for lasers
+ above threshold typically breaks the mirror symmetry, so the reciprocity
+ argument for 
+\begin_inset Formula $C_{n}$
 \end_inset
 
- and gain profile 
-\begin_inset Formula $D_{0}(\mathbf{x})$
-\end_inset
-
-], any eigenfunction of the operator will in general belong to one of the
- irreps of the 
-\begin_inset Formula $C_{n\mathrm{v}}$
-\end_inset
-
- symmetry group, and that eigenfunction will transform under symmetry operations
- of that group into linear combinations of eigenfunctions of the same irrep
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "phc_book"
-
-\end_inset
-
-.
- For each such 2d irrep, there exist pairs of eigenfunctions that necessarily
- have the same eigenvalue 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "inui_group,tinkham"
-
-\end_inset
-
-.
+ symmetry is crucial to maintaining the degeneracy of the lasing mode and
+ a passive pole.
  Figure
 \begin_inset space ~
 \end_inset
@@ -1464,7 +1507,6 @@ reference "fig:overview"
 
  shows three examples of symmetric geometries, along with examples of degenerate
  eigenfunctions.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1907,7 +1949,7 @@ key "tureci_self-consistent_2006,tureci_ab_2009,ge_steady-state_2010"
 \end_inset
 
  
-\begin_inset Formula $\dot{D}=0$
+\begin_inset Formula $D(\mathbf{x},t)=D(\mathbf{x})$
 \end_inset
 
  and the single-mode SALT nonlinear eigenproblem
@@ -2444,7 +2486,8 @@ where the coefficients
 \begin_inset Formula $K$
 \end_inset
 
- are simple integrals of the threshold modes, given in closed form in Eq.
+ are simple overlap integrals of the threshold modes, given in closed form
+ in Eq.
 \begin_inset space ~
 \end_inset
 
@@ -3619,7 +3662,7 @@ reference "eq:circulating eigenvalues"
 \end_inset
 
 , we have empirically observed this to be true, and it is easily checked
- in any case by integrating the threshold modes and computing 
+ in any specific case by integrating the threshold modes to compute 
 \begin_inset Formula $H$
 \end_inset
 
@@ -4290,7 +4333,8 @@ reference "fig:lowQ_chirality"
 \begin_inset Formula $C_{n}$
 \end_inset
 
- symmetry groups have no 2d irreps, we would expect the degeneracy to split.
+ symmetry groups have no 2d irreps, one would normally not expect there
+ to be a degeneracy.
  However, a key point is that the degeneracy indeed persists even when 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
@@ -4299,33 +4343,11 @@ reference "fig:lowQ_chirality"
 \begin_inset Formula $C_{n}$
 \end_inset
 
-, as explained in Appendix
+, as a consequence of electromagnetic reciprocity
 \begin_inset space ~
 \end_inset
 
 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec: appendix allowed lasing modes"
-
-\end_inset
-
-.
- Since this degeneracy does not come from geometric symmetry alone, there
- is no clear symmetry operation that takes the lasing mode (center panel
- of Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:lowQ_chirality"
-
-\end_inset
-
-) to its degenerate partner (right panel), but there is still an exact degenerac
-y due to Lorentz reciprocity 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "dichroism"
@@ -4344,6 +4366,22 @@ reference "sec: appendix allowed lasing modes"
 \end_inset
 
 .
+ Since this degeneracy does not come from geometric symmetry alone, there
+ is no simple symmetry operation that takes the lasing mode (center panel
+ of Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:lowQ_chirality"
+
+\end_inset
+
+) to its degenerate partner (right panel), e.g.
+ they are not mirror flips.
+ However, there is still an exact degeneracy.
 \begin_inset Float figure
 wide false
 sideways false
@@ -4554,8 +4592,8 @@ reference "eq:chiral definition"
 
 \end_inset
 
-, and which we have empirically observed are always the only stable modes)
- turn out to have 
+, and which we have observed are always the only stable modes) turn out
+ to have 
 \begin_inset Formula $C_{n}$
 \end_inset
 
@@ -4563,8 +4601,8 @@ reference "eq:chiral definition"
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
- symmetry due to spontaneous breaking of mirror symmetry as soon as the
- mode starts lasing (the only exception to this rule is for a 
+ symmetry, leading to spontaneous breaking of mirror symmetry as soon as
+ the mode starts lasing (the only exception to this rule is for a 
 \begin_inset Formula $C_{\infty\mathrm{v}}$
 \end_inset
 
@@ -4574,7 +4612,7 @@ reference "eq:chiral definition"
 \end_inset
 
 , and hence still have mirror symmetry).
- We have also empirically observed that circulating lasing modes in 
+ We have also observed that circulating lasing modes in 
 \emph on
 lossy
 \emph default
@@ -4636,7 +4674,7 @@ reference "fig:phc_stable"
  symmetry, e.g.
  the dielectric and gain functions themselves have chirality.
  Whether the chirality is due to the intensity pattern of a lasing mode
- or due to the geometry itself, the effects are the same.
+ or due to the geometry itself, the effects are similar.
 \end_layout
 
 \begin_layout Standard
@@ -4862,7 +4900,9 @@ binary tree
 
  of allowed possibilities, e.g.
  the first degenerate pair lases in clockwise mode, the second in counterclockwi
-se, and so on.
+se, and so on, and each branch of the tree has distinct lasing amplitudes
+ and frequencies.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5236,7 +5276,7 @@ name "sec:discretization_breaking"
 \end_layout
 
 \begin_layout Standard
-In many cases the 
+In many cases, the 
 \begin_inset Formula $C_{n\mathrm{v}}$
 \end_inset
 
@@ -5333,24 +5373,16 @@ key "ref-rotter_degeneracy"
 
 \end_inset
 
- found instances where artificially breaking a degeneracy on purpose, such
- as by introducing a wedge to a single location on the rim of a ring laser,
- can result in the circulating mode not existing near threshold as expected,
- but coming back 
+ found instances where intentionally breaking a degeneracy, such as by introduci
+ng a wedge at a single location on the rim of a ring laser, can result in
+ the circulating mode not existing near threshold as expected, but coming
+ back 
 \emph on
 into
 \emph default
  existence (once the pump strength is high enough above threshold and the
- nonlinearity is strong enough) as a modified version that is not perfectly
- 
-\begin_inset Quotes eld
-\end_inset
-
-circulating
-\begin_inset Quotes erd
-\end_inset
-
-, but nearly so.
+ nonlinearity is strong enough) as a modified version that is nearly the
+ degenerate circulating mode.
  We have found similar results in hexagonal (
 \begin_inset Formula $C_{6\mathrm{v}})$
 \end_inset
@@ -5385,15 +5417,14 @@ key "ref-lugiato-josa,ref-tamm"
 .
  Moreover, a discretization-induced error and a physical perturbation breaking
  the degeneracy are two distinct effects (even if their consequences are
- mathematically similar), and it is important to be able to study them independe
-ntly.
+ mathematically similar), and it is useful to be able to study them independentl
+y.
  When one is studying a physical symmetry-breaking defect, one does not
  want to accidentally observe an artificial effect of discretization instead.
- Consequently, degeneracy-splitting caused by discretization is a major
- practical problem for our SALT solver and requires a nontrivial solution.
- For a rigorous study of the circulating solution we therefore construct
- a small perturbation to the dielectric function to force a degeneracy in
- both the pump strength and the frequencies at threshold.
+ To eliminate numerical symmetry breaking at arbitrary pump strengths, we
+ therefore devised a solution: we construct a minimal perturbation to the
+ dielectric function that restores the degeneracy in both the pump strengths
+ and the frequencies at threshold.
  We discuss this method below.
  
 \begin_inset Float figure
@@ -5542,7 +5573,7 @@ name "fig:even_cylinder_modes"
 \end_layout
 
 \begin_layout Subsection
-Restoring the degeneracy using a perturbation to the dielectric 
+Restoring degeneracy by minimal perturbations 
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Forcing-the-degeneracy"
@@ -5569,9 +5600,17 @@ The basic idea is that we construct an artificial perturbation
 \end_inset
 
 .
- This is also reasonable because in the limit of infinite resolution, the
- perturbation required to force the degeneracy must approach zero.
- We construct the perturbation by solving a 
+ This is a good choice because in the limit of infinite resolution, the
+ perturbation 
+\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
+\end_inset
+
+ approaches zero.
+ We construct 
+\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
+\end_inset
+
+ by solving a 
 \emph on
 quadratic program
 \emph default
@@ -5582,7 +5621,7 @@ key "boyd"
 
 \end_inset
 
- (QP) with linear constraints which we obtain using perturbation theory.
+ (QP) with linear constraints that we obtain using perturbation theory.
  Not only does this uniquely (and cheaply) determine 
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
@@ -5602,7 +5641,7 @@ reference "fig:cylinder_resolution"
 
 \end_inset
 
- and so the minimum-norm 
+, and so the minimum-norm 
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
 
@@ -5826,17 +5865,22 @@ reference "fig:deps_scale"
 \begin_inset Formula $L_{2}$
 \end_inset
 
- norm decreases with higher resolution, satisfying our requirement that
- the dielectric perturbation should go to zero in the continuum limit.
- Once the degeneracy is forced for a lasing mode, the frequencies may still
- split if the pump strength is further increased, since the intensity profile
- changes, and as a result, slightly shifts the 
+ norm of 
+\begin_inset Formula $\delta\varepsilon(\mathbf{x})$
+\end_inset
+
+ decreases with resolution, satisfying our requirement that the dielectric
+ perturbation should go to zero in the continuum limit.
+ In principle, one must resolve for 
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
 
- required to force the degeneracy to machine precision.
- However, we have found this splitting to be negligible, as in the example
- given in Fig.
+ at each pump strength, since the hole-burning term changes the problem.
+ However, in practice we have found changes in 
+\begin_inset Formula $\delta\varepsilon$
+\end_inset
+
+ with pump strength to be negligible, as in Fig.
 \begin_inset space ~
 \end_inset
 
@@ -5847,20 +5891,11 @@ reference "fig:QP_stability"
 
 \end_inset
 
-, and that the correct circulating solution is still obtained.
- In general, the splitting is small when the intensity profiles of the lasing
- mode and its passive pole are similar, as in Fig.
-\begin_inset space ~
+, and one can typically use the same 
+\begin_inset Formula $\delta\varepsilon$
 \end_inset
 
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:even_cylinder_intensity"
-
-\end_inset
-
-.
+ for all pump strengths.
  In Appendix
 \begin_inset space ~
 \end_inset
@@ -6261,6 +6296,10 @@ name "fig:QP_stability"
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -6347,6 +6386,11 @@ name "fig:even_cylinder_intensity"
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Example with 
 \begin_inset Formula $C_{6\mathrm{v}}$
@@ -6413,7 +6457,7 @@ key "taflove"
 
  happens to only have mirror symmetry along the diagonals.
  Here, the lasing modes are TE (electric field in-plane and magnetic field
- out of plane), but there is a pair of degenerate threshold modes from the
+ out of plane), and there is a pair of degenerate threshold modes from the
  hexagon's 
 \begin_inset Formula $C_{6\mathrm{v}}$
 \end_inset
@@ -6430,14 +6474,6 @@ reference "fig:overview"
 \end_inset
 
 .
- The two are related to each other by linear combinations of sixfold and
- threefold rotations.
- However, these operations do not belong in the 
-\begin_inset Formula $C_{4\mathrm{v}}$
-\end_inset
-
- symmetry group of the discretized grid, so the degeneracy here is again
- only approximate.
  For a 
 \begin_inset Formula $100\times100$
 \end_inset
@@ -6474,9 +6510,9 @@ reference "eq:tensor_delta_epsilon"
 \end_inset
 
  here for simplicity.
- Again, only two iterations of QP are necessary to force the degeneracy
- down to machine precision, and the perturbation used to force the degeneracy
- is shown in Fig.
+ Only two iterations of QP are necessary to force the degeneracy down to
+ machine precision, and the perturbation used to force the degeneracy is
+ shown in Fig.
 \begin_inset space ~
 \end_inset
 
@@ -6500,7 +6536,7 @@ reference "eq:chiral definition"
 \end_inset
 
  as an initial guess for our numerical solver, and the intensity pattern
- of the resulting solution is shown in Fig.
+ of the resulting circulating solution is shown in Fig.
 \begin_inset space ~
 \end_inset
 
@@ -6912,7 +6948,7 @@ First, although we have reduced the question of stability of circulating
 
 -symmetric problem with a degenerate lasing threshold in which the circulating
  mode is unstable.
- (Since Ref.
+ Since Ref.
 \begin_inset space ~
 \end_inset
 
