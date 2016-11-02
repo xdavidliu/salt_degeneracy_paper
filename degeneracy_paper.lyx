@@ -159,8 +159,8 @@ Burkhardt
 \end_layout
 
 \begin_layout Affiliation
-Institute for Theoretical Physics, Vienna University of Technology, Vienna,
- Austria
+Institute for Theoretical Physics, Vienna University of Technology (TU Wien),
+ A-1040 Vienna, Austria
 \end_layout
 
 \begin_layout Author
@@ -172,8 +172,8 @@ Liertzer
 \end_layout
 
 \begin_layout Affiliation
-Institute for Theoretical Physics, Vienna University of Technology, Vienna,
- Austria
+Institute for Theoretical Physics, Vienna University of Technology (TU Wien),
+ A-1040 Vienna, Austria
 \end_layout
 
 \begin_layout Author
@@ -185,8 +185,8 @@ Rotter
 \end_layout
 
 \begin_layout Affiliation
-Institute for Theoretical Physics, Vienna University of Technology, Vienna,
- Austria
+Institute for Theoretical Physics, Vienna University of Technology (TU Wien),
+ A-1040 Vienna, Austria
 \end_layout
 
 \begin_layout Author
@@ -239,7 +239,7 @@ chiral
 \end_inset
 
  intensity pattern, which arises from spontaneous symmetry-breaking of mirror
- symmetry, and whose symmetry group requires that the degeneracy persist
+ symmetry, and whose symmetry group requires that the degeneracy persists
  even when nonlinear effects become important.
  Finally, we introduce a numerical technique to solve the degenerate SALT
  equations far above threshold even when spatial discretization artificially
@@ -473,9 +473,8 @@ reference "sub:Forcing-the-degeneracy"
 
 \end_inset
 
-) to address problems created by numerical symmetry breaking (e.g.
- by a low-symmetry computational grid) that would otherwise spoil the nonlinear
- SALT solutions.
+) to address problems created by numerical symmetry breaking (e.g., by a low-symme
+try computational grid) that would otherwise spoil the nonlinear SALT solutions.
 \end_layout
 
 \begin_layout Standard
@@ -521,11 +520,11 @@ key "ref-risken_instability,ref-bidirectional,ref-MBring,ref-breaking_cylindrica
  and found that far above the lasing threshold (where nonlinearities are
  strong) the circulating solution may become unstable (replaced by an oscillatin
 g limit-cycle solution).
- Conversely, they found that slightly breaking the symmetry caused the (now
- nearly degenerate) solution to become unstable (e.g.
- oscillating between clockwise and counterclockwise modes) in the vicinity
- of the threshold, but that a stable solution re-appears further above threshold
- by means of cooperative frequency locking
+ Conversely, it was found there that slightly breaking the symmetry caused
+ the (now nearly degenerate) solution to become unstable (e.g., oscillating
+ between clockwise and counterclockwise modes) in the vicinity of the threshold,
+ but that a stable solution re-appears further above threshold by means
+ of cooperative frequency locking
 \begin_inset space ~
 \end_inset
 
@@ -715,8 +714,8 @@ Degenerate pairs of standing-wave modes in a laser.
 \begin_inset Formula $\frac{\pi}{2}$
 \end_inset
 
- rotations of one another (here, the order of the irreducible representation
- is 
+ rotations of one another.
+ Here, the order of the irreducible representation (irrep) is 
 \begin_inset Formula $\ell=1$
 \end_inset
 
@@ -724,7 +723,7 @@ Degenerate pairs of standing-wave modes in a laser.
 \begin_inset Formula $C_{4\mathrm{v}}$
 \end_inset
 
-).
+.
  The 
 \begin_inset Formula $\frac{\pi}{2}$
 \end_inset
@@ -859,8 +858,7 @@ starting guess
  In the non-degenerate case, the starting guess is supplied by the threshold
  solution, but for a degenerate threshold there are infinitely many superpositio
 ns.
- Picking the wrong starting guess, e.g.
- the 
+ Picking the wrong starting guess, e.g., the 
 \begin_inset Formula $\sin(m\phi)$
 \end_inset
 
@@ -882,13 +880,12 @@ numerical
  effects when a practical computational method is applied to spatially discretiz
 e the SALT equations.
  In principle, what one would like to find from a degenerate SALT solver
- is a lasing mode (e.g.
- the clockwise circulating mode of a ring) with a passive pole (a pole of
- the Green's function linearized around the lasing solution) that coincides
- with the lasing frequency (there will be two possible lasing modes, e.g.
- clockwise and counterclockwise, but only one solution can exist at a time
- with nonzero amplitude due to the nonlinearity; which one is found will
- depend on the starting 
+ is a lasing mode (e.g., the clockwise circulating mode of a ring) with a
+ passive pole (a pole of the Green's function linearized around the lasing
+ solution) that coincides with the lasing frequency (there will be two possible
+ lasing modes, e.g., clockwise and counterclockwise, but only one solution
+ can exist at a time with nonzero amplitude due to the nonlinearity; which
+ one is found will depend on the starting 
 \begin_inset Quotes eld
 \end_inset
 
@@ -898,8 +895,7 @@ guess
 
  of the SALT solver).
  However, when one discretizes a microcavity geometry for a numerical solver,
- e.g.
- in a finite-difference or finite-element method, often the discretization
+ e.g., in a finite-difference or finite-element method, often the discretization
  itself breaks the symmetry and hence breaks the degeneracy slightly, causing
  the passive pole to separate from the lasing frequency.
  In a linear eigenproblem, this is at worst a minor annoyance, because from
@@ -920,10 +916,9 @@ key "inui_group,tinkham"
 
 .
  In the nonlinear problem, however, the splitting can prevent the desired
- solution (e.g.
- the circulating mode) from existing in the SALT equations, because the
- solver can no longer pick arbitrary superpositions of the formerly degenerate
- modes, as described in Sec.
+ solution (e.g., the circulating mode) from existing in the SALT equations,
+ because the solver can no longer pick arbitrary superpositions of the formerly
+ degenerate modes, as described in Sec.
 \begin_inset space ~
 \end_inset
 
@@ -1358,7 +1353,7 @@ reference "sec: degeneracy in Cn"
 
 \end_inset
 
-, our method will find it.
+), our method will find it.
  The literature on degenerate lasing modes has almost invariably dealt with
  whispering-gallery modes in microdisks and ring resonators 
 \begin_inset CommandInset citation
@@ -1449,8 +1444,7 @@ key "inui_group"
 \begin_inset Formula $n$
 \end_inset
 
--fold rotational symmetry without mirror symmetry, e.g.
- a 
+-fold rotational symmetry without mirror symmetry, e.g., a 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1781,7 +1775,7 @@ reference "sec: appendix stability calculations"
 \begin_inset Formula $\omega$
 \end_inset
 
- axis, then lasing solution is necessarily unstable, whereas SALT poles
+ axis, then a lasing solution is necessarily unstable, whereas SALT poles
  below the real axis cannot induce instability.
  If a pole lies 
 \emph on
@@ -1921,10 +1915,10 @@ reference "eq:maxwell--bloch"
 
 \end_inset
 
-) just above the lasing threshold in order to obtain insight about the nature
+) just above the lasing threshold in order to obtain insight into the nature
  of the degenerate solutions, as well as to determine the correct initial
- guess for the above-threshold regime (e.g.
- when solving for lasing modes using the method of Ref.
+ guess for the above-threshold regime (e.g., when solving for lasing modes
+ using the method of Ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1964,7 +1958,7 @@ The first lasing threshold occurs when
 \begin_inset Formula $D_{0}$
 \end_inset
 
- in increased to a value 
+ is increased to a value 
 \begin_inset Formula $D_{\mathrm{t}}$
 \end_inset
 
@@ -3106,7 +3100,7 @@ reference "eq:delta"
 
 \end_inset
 
-or alternatively a quadratic eigenvalue problem 
+or alternatively as quadratic eigenvalue problem 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ref-tisseur_quadratic_review"
@@ -3150,8 +3144,8 @@ The goal of the stability analysis is to find the eigenvalues
 
  is positive, then the lasing mode is unstable, while if all the eigenvalues
  have non-positive real parts, then the lasing mode is stable (with some
- technical care for zero eigenvalues and structural stability, described
- in Appendix
+ technical care required for zero eigenvalues and structural stability,
+ described in Appendix
 \begin_inset space ~
 \end_inset
 
@@ -3198,7 +3192,7 @@ es
 \begin_inset Formula $\sigma$
 \end_inset
 
- and hence evaluate the SALT stability for any pump strength above threshold.
+ and hence evaluated the SALT stability for any pump strength above threshold.
  Here, we focus on the regime slightly above threshold, and show that the
  equations can be solved analytically to lowest order in 
 \begin_inset Formula $d$
@@ -3418,7 +3412,7 @@ where
 \begin_inset Formula $b_{k}$
 \end_inset
 
- are arbitrary complex coefficients that will determined later at higher
+ are arbitrary complex coefficients that will be determined later at higher
  order (similarly to linear degenerate perturbation theory in quantum mechanics
  
 \begin_inset CommandInset citation
@@ -3619,7 +3613,7 @@ reference "eq:circulating lasing"
 
 \end_inset
 
-, the four eigenvalues are
+, the four eigenvalues are, in no particular order,
 \begin_inset Formula 
 \begin{align}
 \sigma_{1} & =0\nonumber \\
@@ -3770,7 +3764,7 @@ key "phc_book"
 , so at least one of the two non-zero eigenvalues here must have a positive
  real part (in practice, it is always the last eigenvalue), indicating that
  these standing lasing modes are always unstable.
- Figure.
+ Figure
 \begin_inset space ~
 \end_inset
 
@@ -3843,8 +3837,7 @@ where
 \begin_inset Formula $D_{0}(\mathbf{x})$
 \end_inset
 
- can be chosen (e.g.
- in terms of 
+ can be chosen (e.g., in terms of 
 \begin_inset Formula $4\ell$
 \end_inset
 
@@ -4185,7 +4178,7 @@ key "ref-rotter_degeneracy"
 \begin_inset Formula $d<z_{0}\gamma_{\parallel}$
 \end_inset
 
-,where 
+, where 
 \begin_inset Formula $z_{0}$
 \end_inset
 
@@ -4379,8 +4372,7 @@ reference "fig:lowQ_chirality"
 
 \end_inset
 
-) to its degenerate partner (right panel), e.g.
- they are not mirror flips.
+) to its degenerate partner (right panel), e.g., they are not mirror flips.
  However, there is still an exact degeneracy.
 \begin_inset Float figure
 wide false
@@ -4671,16 +4663,14 @@ reference "fig:phc_stable"
 \begin_inset Formula $C_{n}$
 \end_inset
 
- symmetry, e.g.
- the dielectric and gain functions themselves have chirality.
+ symmetry, e.g., the dielectric and gain functions themselves have chirality.
  Whether the chirality is due to the intensity pattern of a lasing mode
  or due to the geometry itself, the effects are similar.
 \end_layout
 
 \begin_layout Standard
 First, the presence of chirality affects the nature of the degeneracy between
- the lasing mode and its passive pole, e.g.
- the solution to Eq.
+ the lasing mode and its passive pole, e.g., the solution to Eq.
 \begin_inset space ~
 \end_inset
 
@@ -4898,10 +4888,9 @@ binary tree
 \begin_inset Quotes erd
 \end_inset
 
- of allowed possibilities, e.g.
- the first degenerate pair lases in clockwise mode, the second in counterclockwi
-se, and so on, and each branch of the tree has distinct lasing amplitudes
- and frequencies.
+ of allowed possibilities, e.g., the first degenerate pair lases in clockwise
+ mode, the second in counterclockwise, and so on, and each branch of the
+ tree has distinct lasing amplitudes and frequencies.
  
 \end_layout
 
@@ -5319,7 +5308,7 @@ after
 \emph default
 solving for both of the modes.
  However, for SALT (which is nonlinear), the coefficients of the superposition
- is a physical quantity that must be found by our solution method, as explained
+ are physical quantities that must be found by our solution method, as explained
  in Sec.
 \begin_inset space ~
 \end_inset
@@ -5487,7 +5476,7 @@ status open
 \begin_inset Formula $\Re(\mathbf{E}_{\mathrm{e,o}})$
 \end_inset
 
-] for cylinder with uniform dielectric 
+] for a cylinder with uniform dielectric 
 \begin_inset Formula $\varepsilon=5$
 \end_inset
 
@@ -5827,7 +5816,7 @@ reference "fig:even_cylinder_modes"
 
 \end_inset
 
- are shown in Fig.
+ is shown in Fig.
 \begin_inset space ~
 \end_inset
 
@@ -6154,7 +6143,7 @@ status open
 \begin_inset Formula $\ell$
 \end_inset
 
- modes of cylinder, where 
+ modes of the cylinder, where 
 \begin_inset Formula $h$
 \end_inset
 
@@ -6960,12 +6949,12 @@ key "ref-lige_condensation_arxiv"
 
 \end_inset
 
- [in which a lasing SALT solution at some pump strength above threshold
+ (in which a lasing SALT solution at some pump strength above threshold
  is transformed into a threshold SALT solution by designing the pump profile
- at threshold to match the hole-burning term at the higher pump strength]
+ at threshold to match the hole-burning term at the higher pump strength)
  could be used to translate these into an unstable threshold circulating
  mode.
- However, Ref.
+ However, the technique of Ref.
 \begin_inset space ~
 \end_inset
 
@@ -6977,8 +6966,7 @@ key "ref-lige_condensation_arxiv"
 \end_inset
 
  only translates one SALT solution into another, and does not translate
- the full Maxwell--Bloch solutions, e.g.
- it is independent of 
+ the full Maxwell--Bloch solutions since it does not keep track of 
 \begin_inset Formula $\gamma_{\parallel}$
 \end_inset
 
@@ -7099,15 +7087,27 @@ key "ref-rotter_degeneracy"
 \begin_layout Acknowledgments
 This work was supported in part by the Army Research Office through the
  Institute for Soldier Nanotechnologies (ISN), Grant No.
- W911NF-07-D-0004, by a grant from AIM Photonics through the MIT Microsystems
- Technology Laboratories, by the Vienna Science and Technology Fund (WWTF)
- through Project No.
- MA09-030 (LICOTOLI), and by the Austrian Science Fund (FWF) through Project
- No.
+ W911NF-07-D-0004, by a grant from AIM Photonics under agreement PAA-009
+ through the MIT Microsystems Technology Laboratories, and by the Austrian
+ Science Fund (FWF) through Project No.
  SFB NextLite F49-P10.
+ L.
+ G.
+ acknowledges partial support by NSF under Grant No.
+ DMR-1506987.
  We are also grateful to A.
  D.
- Stone for helpful discussions
+ Stone for helpful discussions.
+ This material is based on research sponsored by Air Force Research Laboratory
+ under agreement number FA8650-15-2-5220.
+ The U.S.
+ Government is authorized to reproduce and distribute reprints for Governmental
+ purposes notwithstanding any copyright notation thereon.
+ The views and conclusions contained herein are those of the authors and
+ should not be interpreted as necessarily representing the official policies
+ or endorsements, either expressed or implied, of Air Force Research Laboratory
+ or the U.S.
+ Government.
 \end_layout
 
 \begin_layout Section
@@ -7750,8 +7750,8 @@ key "inui_group,tinkham"
 \end_inset
 
 , conjugated inner products between functions belonging to different irreps
- always vanish [e.g.
- for circulating modes on a uniform ring, the integral 
+ always vanish [e.g., for circulating modes on a uniform ring, the integral
+ 
 \begin_inset Formula $\int d\phi\,e^{i\ell\phi}(e^{-i\ell\phi})^{\star}$
 \end_inset
 
@@ -10229,10 +10229,9 @@ name "sec:Determining-the-dielectric-perturbation"
 \end_layout
 
 \begin_layout Standard
-In this Appendix, we describe the processed used to force a degeneracy in
+In this Appendix, we describe the processe used to force a degeneracy in
  a geometry whose symmetry has been broken by the discretization scheme
- (e.g.
- a 
+ (e.g., a 
 \begin_inset Formula $C_{6\mathrm{v}}$
 \end_inset
 
@@ -10588,8 +10587,8 @@ reference "fig:QP_stability"
 \begin_inset Formula $\delta\omega$
 \end_inset
 
- is now a lasing pole, so the spatial hole-burning term need to be taken
- account for the perturbation theory (
+ is now a lasing pole, so the spatial hole-burning term needs to be accounted
+ for in the perturbation theory (
 \begin_inset Formula $\delta\omega^{\prime}$
 \end_inset
 
