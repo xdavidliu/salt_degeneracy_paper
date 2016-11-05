@@ -687,7 +687,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Degenerate pairs of standing-wave modes in a laser.
+(Color online) Degenerate pairs of standing-wave modes in a laser.
  For this uniform dielectric disk (top), which has 
 \begin_inset Formula $C_{\infty\mathrm{v}}$
 \end_inset
@@ -2790,8 +2790,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Lasing amplitudes (top) and frequency shifts (bottom) for 1d laser (periodic
- geometry with 
+(Color online) Lasing amplitudes (top) and frequency shifts (bottom) for
+ 1d laser (periodic geometry with 
 \begin_inset Formula $0<x<1$
 \end_inset
 
@@ -3995,8 +3995,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Stability eigenvalues for the circulating (top) and standing (bottom) lasing
- modes from Fig.
+(Color online) Stability eigenvalues for the circulating (top) and standing
+ (bottom) lasing modes from Fig.
 \begin_inset space ~
 \end_inset
 
@@ -4439,8 +4439,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The incorrect (left) intensity pattern, correct (center) intensity pattern
- for the pair of low-
+(Color online) The incorrect (left) intensity pattern, correct (center)
+ intensity pattern for the pair of low-
 \begin_inset Formula $Q$
 \end_inset
 
@@ -5469,6 +5469,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+(Color online) 
 \begin_inset Formula $\ell=8$
 \end_inset
 
@@ -5682,7 +5683,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Splitting in degeneracy due to discretization error for even-
+(Color online) Splitting in degeneracy due to discretization error for even-
 \begin_inset Formula $\ell$
 \end_inset
 
@@ -5954,7 +5955,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Dielectric perturbation 
+(Color online) Dielectric perturbation 
 \begin_inset Formula $\delta\varepsilon$
 \end_inset
 
@@ -6032,7 +6033,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Relative splitting in threshold pump strength 
+(Color online) Relative splitting in threshold pump strength 
 \begin_inset Formula $D_{t}$
 \end_inset
 
@@ -6128,6 +6129,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+(Color online) 
 \begin_inset Formula $L_{2}$
 \end_inset
 
@@ -6198,7 +6200,7 @@ name "fig:deps_scale"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -6331,7 +6333,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Intensity profiles for even-
+(Color online) Intensity profiles for even-
 \begin_inset Formula $\ell$
 \end_inset
 
@@ -6580,7 +6582,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Dielectric perturbation obtained from QP procedure for hexagonal cavity.
+(Color online) Dielectric perturbation obtained from QP procedure for hexagonal
+ cavity.
  Since the mode is TE (
 \begin_inset Formula $\mathbf{E}=E_{\mathrm{even}}\hat{\mathbf{x}}+E_{\mathrm{odd}}\hat{\mathbf{y}}$
 \end_inset
@@ -6667,7 +6670,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Intensity pattern for stable lasing mode for hexagonal cavity.
+(Color online) Intensity pattern for stable lasing mode for hexagonal cavity.
  The pattern appears to be six-fold symmetric, which is expected.
  Unlike in the right panel of Fig.
 \begin_inset space ~
