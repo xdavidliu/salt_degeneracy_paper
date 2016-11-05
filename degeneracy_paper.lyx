@@ -315,7 +315,7 @@ key "englund"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:overview"
 
 \end_inset
@@ -2114,7 +2114,7 @@ We begin with the situation of a degenerate threshold, where two modes
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:overview"
 
 \end_inset
@@ -2296,7 +2296,7 @@ reference "eq:lasing_ansatz"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:overview"
 
 \end_inset
@@ -4020,7 +4020,7 @@ status open
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:n=5 numerical results"
 
 \end_inset
@@ -4285,7 +4285,7 @@ Now, we illustrate the ideas of threshold perturbation theory with an example
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:overview"
 
 \end_inset
@@ -4334,7 +4334,7 @@ reference "sub:Stability-analysis summary"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:lowQ_chirality"
 
 \end_inset
@@ -4385,7 +4385,7 @@ reference "sec: appendix allowed lasing modes"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:lowQ_chirality"
 
 \end_inset
@@ -4563,7 +4563,7 @@ handedness
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:lowQ_chirality"
 
 \end_inset
@@ -4636,7 +4636,7 @@ lossy
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:lowQ_chirality"
 
 \end_inset
@@ -4671,7 +4671,7 @@ high
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:phc_stable"
 
 \end_inset
@@ -4738,7 +4738,7 @@ reference "eq:chiral definition"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:lowQ_chirality"
 
 \end_inset
@@ -5514,7 +5514,7 @@ status open
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:overview"
 
 \end_inset
@@ -5644,7 +5644,7 @@ key "boyd"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:cylinder_resolution"
 
 \end_inset
@@ -5830,7 +5830,7 @@ The resulting
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:even_cylinder_modes"
 
 \end_inset
@@ -5841,7 +5841,7 @@ reference "fig:even_cylinder_modes"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:even_cylinder_deps"
 
 \end_inset
@@ -5852,7 +5852,7 @@ reference "fig:even_cylinder_deps"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:even_cylinder_QP"
 
 \end_inset
@@ -5864,7 +5864,7 @@ reference "fig:even_cylinder_QP"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:deps_scale"
 
 \end_inset
@@ -5894,7 +5894,7 @@ reference "fig:deps_scale"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:QP_stability"
 
 \end_inset
@@ -6174,7 +6174,7 @@ status open
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:cylinder_resolution"
 
 \end_inset
@@ -6412,7 +6412,7 @@ An example of a hexagonal cavity is shown in Fig.
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:overview"
 
 \end_inset
@@ -6467,7 +6467,7 @@ key "taflove"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:overview"
 
 \end_inset
@@ -6517,7 +6517,7 @@ reference "eq:tensor_delta_epsilon"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:phc_deps"
 
 \end_inset
@@ -6541,7 +6541,7 @@ reference "eq:chiral definition"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:phc_stable"
 
 \end_inset
@@ -6697,7 +6697,7 @@ status open
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:lowQ_chirality"
 
 \end_inset
@@ -6709,7 +6709,7 @@ reference "fig:lowQ_chirality"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:lowQ_chirality"
 
 \end_inset
@@ -6859,7 +6859,7 @@ reference "sub:Forcing-the-degeneracy"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:cylinder_resolution"
 
 \end_inset
@@ -10573,7 +10573,7 @@ degeneracy that is maintained very far above threshold, as shown in Fig.
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:QP_stability"
 
 \end_inset
@@ -10665,7 +10665,7 @@ Here,
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:QP_stability"
 
 \end_inset
