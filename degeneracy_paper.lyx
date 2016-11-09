@@ -354,7 +354,7 @@ key "inui_group"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:overview"
 
 \end_inset
@@ -1512,7 +1512,7 @@ reference "sec: degeneracy in Cn"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:overview"
 
 \end_inset
@@ -2708,7 +2708,7 @@ reference "eq:single-mode-salt"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:n=5 numerical results"
 
 \end_inset
@@ -3788,7 +3788,7 @@ key "phc_book"
 
 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "fig:n=5 stability results"
 
 \end_inset
