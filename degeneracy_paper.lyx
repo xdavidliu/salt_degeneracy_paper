@@ -89,6 +89,7 @@ Liu
 \end_layout
 
 \begin_layout Author Email
+
 daveliu@mit.edu
 \end_layout
 
@@ -206,6 +207,7 @@ Johnson
 \end_layout
 
 \begin_layout Author Email
+
 stevenj@math.mit.edu
 \end_layout
 
@@ -1160,7 +1162,8 @@ reference "eq:Ddot MB equation"
 \begin_inset Formula $1/\gamma_{\parallel}$
 \end_inset
 
-; and in order to do so, the beating frequencies 
+.
+ In order to do so, the beating frequencies 
 \begin_inset Formula $\omega_{\mu}-\omega_{\nu}$
 \end_inset
 
@@ -1171,13 +1174,21 @@ reference "eq:Ddot MB equation"
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "fu_multifrequency_1991,tureci_self-consistent_2006,ge_steady-state_2010"
+key "fu_multifrequency_1991,tureci_self-consistent_2006,ge_quantitative_2008"
+
+\end_inset
+
+; that is, two modes is either exactly degenerate or situated very far apart
+ from each other in frequency space, with the latter case resulting in the
+ time-dependent beating component of the inversion having a negligible amplitude
+ compared to the stationary component 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haken_light:_1985"
 
 \end_inset
 
 .
- This condition is evidently true when any pair of modes is either exactly
- degenerate, or situated very far apart from each other in frequency space.
  When these conditions are met, Eq.
  
 \begin_inset CommandInset ref
@@ -5080,6 +5091,14 @@ key "ge_steady-state_2010,tureci_self-consistent_2006,direct_salt"
  effect of their spatial hole-burning is used to track the passive modes
  and add any mode (degenerate or nondegenerate) that crosses threshold to
  the list of lasing modes.
+ As in the case of non-degenerate SALT, the spacing between modes with different
+ frequencies must remain much larger than 
+\begin_inset Formula $\gamma_{\parallel}$
+\end_inset
+
+ in order for the stationary inversion approximation to remain valid (usually,
+ lasing frequencies do not appreciably deviate from their threshold values,
+ so this condition is often safely satisfied).
  The only aspects of our method requiring generalization are the threshold
  perturbation theory of Sec.
 \begin_inset space ~

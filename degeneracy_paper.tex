@@ -28,6 +28,7 @@
 
 \email{daveliu@mit.edu}
 
+\selectlanguage{english}%
 
 \affiliation{Department of Mathematics, Massachusetts Institute of Technology,
 Cambridge, Massachusetts 02139, USA}
@@ -91,6 +92,7 @@ Cambridge, Massachusetts 02139, USA}
 
 \email{stevenj@math.mit.edu}
 
+\selectlanguage{english}%
 
 \affiliation{Department of Mathematics, Massachusetts Institute of Technology,
 Cambridge, Massachusetts 02139, USA}
@@ -334,13 +336,15 @@ where $\Gamma(\omega_{\mu})\equiv\gamma_{\perp}/(\omega_{\mu}-\omega_{a}+i\gamma
 In order for the stationary inversion approximation $\dot{D}=0$ to
 be valid, the oscillating terms on the right-hand side of Eq.~(\ref{eq:Ddot MB equation})
 must average to zero on a timescale much faster than the relaxation
-timescale $1/\gamma_{\parallel}$; and in order to do so, the beating
+timescale $1/\gamma_{\parallel}$. In order to do so, the beating
 frequencies $\omega_{\mu}-\omega_{\nu}$ must be either exactly zero
-or much faster than the relaxation rate $\gamma_{\parallel}$ \cite{fu_multifrequency_1991,tureci_self-consistent_2006,ge_steady-state_2010}.
-This condition is evidently true when any pair of modes is either
-exactly degenerate, or situated very far apart from each other in
-frequency space. When these conditions are met, Eq. (\ref{eq:maxwell--bloch})
-reduces to the SALT equation \cite{ge_steady-state_2010,tureci_self-consistent_2006,tureci_ab_2009}
+or much faster than the relaxation rate $\gamma_{\parallel}$ \cite{fu_multifrequency_1991,tureci_self-consistent_2006,ge_quantitative_2008};
+that is, two modes is either exactly degenerate or situated very far
+apart from each other in frequency space, with the latter case resulting
+in the time-dependent beating component of the inversion having a
+negligible amplitude compared to the stationary component \cite{haken_light:_1985}.
+When these conditions are met, Eq. (\ref{eq:maxwell--bloch}) reduces
+to the SALT equation \cite{ge_steady-state_2010,tureci_self-consistent_2006,tureci_ab_2009}
 
 \begin{equation}
 \nabla\times\nabla\times\mathbf{E}_{\mu}=\omega_{\mu}^{2}\left[\varepsilon+\Gamma(\omega_{\mu})D\right]\mathbf{E}_{\mu},\label{eq:salt general}
@@ -1119,10 +1123,14 @@ SALT \cite{ge_steady-state_2010,tureci_self-consistent_2006,direct_salt},
 all lasing modes are solved simultaneously at first, and there the
 collective effect of their spatial hole-burning is used to track the
 passive modes and add any mode (degenerate or nondegenerate) that
-crosses threshold to the list of lasing modes. The only aspects of
-our method requiring generalization are the threshold perturbation
-theory of Sec.~\ref{sec:Threshold-perturbation-theory} and the \emph{quadratic
-program} \cite{boyd} (QP) method of Sec.~\ref{sub:Forcing-the-degeneracy}.
+crosses threshold to the list of lasing modes. As in the case of non-degenerate
+SALT, the spacing between modes with different frequencies must remain
+much larger than $\gamma_{\parallel}$ in order for the stationary
+inversion approximation to remain valid (usually, lasing frequencies
+do not appreciably deviate from their threshold values, so this condition
+is often safely satisfied). The only aspects of our method requiring
+generalization are the threshold perturbation theory of Sec.~\ref{sec:Threshold-perturbation-theory}
+and the \emph{quadratic program} \cite{boyd} (QP) method of Sec.~\ref{sub:Forcing-the-degeneracy}.
 For both aspects, we describe small tweaks to the methods presented
 in those sections that make them valid for the case of multimode lasing.
 
@@ -3068,6 +3076,5 @@ most pump strengths of physical interest.
   Algebra}}}\ (\bibinfo  {publisher} {SIAM},\ \bibinfo {year}
   {1997})\BibitemShut {NoStop}%
 \end{thebibliography}%
-
 
 \end{document}
