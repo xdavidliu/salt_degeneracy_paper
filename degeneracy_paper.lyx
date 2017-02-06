@@ -2179,7 +2179,7 @@ where
 \begin_inset Formula 
 \begin{align}
 \mathbf{E} & =\Gamma_{\mathrm{t}}^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right)+d^{3/2}\delta\mathbf{E},\nonumber \\
-\omega & =\omega_{\mathrm{t}}+\omega_{1}d+\mathcal{O}(d^{2})\label{eq:lasing_ansatz}
+\omega & =\omega_{\mathrm{t}}+\omega_{1}d+O(d^{2})\label{eq:lasing_ansatz}
 \end{align}
 
 \end_inset
@@ -3231,8 +3231,8 @@ es
  We begin by noting that the matrices can be expanded as
 \begin_inset Formula 
 \begin{align}
-\mathsf{A} & =\mathsf{A}_{0}+\mathsf{A}_{1/2}\sqrt{d}+\mathsf{A}_{1}d+\mathcal{O}(d^{3/2})\nonumber \\
-\mathsf{B} & =\mathsf{B}_{0}+\mathsf{B}_{1}d+\mathcal{O}(d^{2})\label{eq:matrix expansion}\\
+\mathsf{A} & =\mathsf{A}_{0}+\mathsf{A}_{1/2}\sqrt{d}+\mathsf{A}_{1}d+O(d^{3/2})\nonumber \\
+\mathsf{B} & =\mathsf{B}_{0}+\mathsf{B}_{1}d+O(d^{2})\label{eq:matrix expansion}\\
 \mathsf{C} & =\mathsf{C}_{0}\nonumber 
 \end{align}
 
@@ -3281,8 +3281,8 @@ reference "eq:delta"
  way:
 \begin_inset Formula 
 \begin{align}
-\mathsf{x} & =\mathsf{x}_{0}+\mathsf{x}_{1/2}\sqrt{d}+\mathsf{x}_{1}d+\mathcal{O}(d^{3/2})\nonumber \\
-\sigma & =\sigma_{0}+\sigma_{1/2}\sqrt{d}+\sigma_{1}d+\mathcal{O}(d^{3/2}).\label{eq:eigenpair expansion}
+\mathsf{x} & =\mathsf{x}_{0}+\mathsf{x}_{1/2}\sqrt{d}+\mathsf{x}_{1}d+O(d^{3/2})\nonumber \\
+\sigma & =\sigma_{0}+\sigma_{1/2}\sqrt{d}+\sigma_{1}d+O(d^{3/2}).\label{eq:eigenpair expansion}
 \end{align}
 
 \end_inset
@@ -7600,7 +7600,7 @@ reference "eq:threshold salt"
 \end_inset
 
  at threshold, we conclude that 
-\begin_inset Formula $\mathbf{E}=\mathcal{O}(\sqrt{d})$
+\begin_inset Formula $\mathbf{E}=O(\sqrt{d})$
 \end_inset
 
 , and that the profile should be some linear combination of the threshold
@@ -8427,7 +8427,7 @@ reference "eq:matrix expansion"
 \end_inset
 
 , by noting that 
-\begin_inset Formula $\omega=\omega_{\mathrm{t}}+\omega_{1}d+\mathcal{O}(d^{2})$
+\begin_inset Formula $\omega=\omega_{\mathrm{t}}+\omega_{1}d+O(d^{2})$
 \end_inset
 
 , 
@@ -8435,7 +8435,7 @@ reference "eq:matrix expansion"
 \end_inset
 
 , and 
-\begin_inset Formula $\mathbf{E},\mathbf{P}=\mathcal{O}(\sqrt{d})$
+\begin_inset Formula $\mathbf{E},\mathbf{P}=O(\sqrt{d})$
 \end_inset
 
 , according to Eq.
@@ -8766,7 +8766,7 @@ First order
 
 \begin_layout Standard
 At the next order, 
-\begin_inset Formula $\mathcal{O}(d)$
+\begin_inset Formula $O(d)$
 \end_inset
 
 , Eq.
@@ -9990,7 +9990,7 @@ and
 \end_inset
 
  is 
-\begin_inset Formula $\mathcal{O}(1)$
+\begin_inset Formula $O(1)$
 \end_inset
 
  with respect to 
@@ -10029,7 +10029,7 @@ Multiplying both sides by
 \end_inset
 
  and a single term of 
-\begin_inset Formula $\mathcal{O}(\gamma_{\parallel}^{-1})$
+\begin_inset Formula $O(\gamma_{\parallel}^{-1})$
 \end_inset
 
 : 
@@ -10040,7 +10040,7 @@ Multiplying both sides by
  We then have
 \begin_inset Formula 
 \begin{equation}
-\gamma_{\parallel}\sigma_{2}=\frac{\mathsf{x}_{0}^{T}\mathsf{A}_{1/2}\mathsf{f}_{3/2}}{\mathsf{x}_{0}^{T}\mathsf{B}_{0}\mathsf{x}_{0}}+\mathcal{O}(\gamma_{\parallel}).
+\gamma_{\parallel}\sigma_{2}=\frac{\mathsf{x}_{0}^{T}\mathsf{A}_{1/2}\mathsf{f}_{3/2}}{\mathsf{x}_{0}^{T}\mathsf{B}_{0}\mathsf{x}_{0}}+O(\gamma_{\parallel}).
 \end{equation}
 
 \end_inset
@@ -10054,7 +10054,7 @@ Carrying on to the next order results in
 \end_inset
 
 , where now 
-\begin_inset Formula $\mathsf{f}_{5/2}=\mathcal{O}(\gamma_{\parallel}^{-1})$
+\begin_inset Formula $\mathsf{f}_{5/2}=O(\gamma_{\parallel}^{-1})$
 \end_inset
 
  due to it including terms with 
@@ -10083,7 +10083,7 @@ Carrying on to the next order results in
 \end_inset
 
  are all 
-\begin_inset Formula $\mathcal{O}(\gamma_{\parallel}^{-m})$
+\begin_inset Formula $O(\gamma_{\parallel}^{-m})$
 \end_inset
 
 .
@@ -10120,7 +10120,7 @@ reference "eq:A matrix"
 
  being different from those of all the other matrices.
  Defining 
-\begin_inset Formula $s_{m+1}\equiv\gamma_{\parallel}^{m}\sigma_{m+1}=\mathcal{O}(1)$
+\begin_inset Formula $s_{m+1}\equiv\gamma_{\parallel}^{m}\sigma_{m+1}=O(1)$
 \end_inset
 
 , we obtain a full expansion for the exact Maxwell--Bloch eigenvalue (Eq.
