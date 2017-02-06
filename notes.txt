@@ -21,3 +21,23 @@ Then do "cat degeneracy_paper.bbl | pbcopy" and then go into degeneracy_paper.te
 \bibliography{references}
 
 with the stuff on the clipboard, i.e. the contents of the .bbl file
+
+=====
+
+UPDATE: Feb 6 paper accepted contingent on some minor revisions
+- they want me to change \mathcal{O} to O in figs 6 and 9
+ (there's a lot of mathcal{O}'s in the BODY too that they didn't mention
+so I went ahead and changed those too)
+The problem is that the pdf figures were made using a Matlab script, and 
+I don't have Matlab anymore. The dialup.athena matlab is too slow over ssh,
+so I used the one on Jdj. This is tricky, because the X window system
+stopped working, and the -nojvm option doesn't allow creation of figures, so
+I tweaked the source file for Fig6, resolution.m into resolutionB.m, then
+uploaded it to jdj, ran matlab using the -nodesktop (not -nojvm!) option.
+
+same thing with deps_scale.m and .pdf
+
+(note the changes for the .m files were:
+- first set fig to non-visibile so can plot without displaying window
+- change \mathcal{O} to O, of course
+- change last print statement to remove directory structure prefix
