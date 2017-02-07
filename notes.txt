@@ -41,3 +41,6 @@ same thing with deps_scale.m and .pdf
 - first set fig to non-visibile so can plot without displaying window
 - change \mathcal{O} to O, of course
 - change last print statement to remove directory structure prefix
+
+For the other two files, I simply used Paintbrush and put in larger
+numbers using Lyx and copy and paste

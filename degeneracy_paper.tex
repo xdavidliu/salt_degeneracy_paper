@@ -28,7 +28,6 @@
 
 \email{daveliu@mit.edu}
 
-\selectlanguage{english}%
 
 \affiliation{Department of Mathematics, Massachusetts Institute of Technology,
 Cambridge, Massachusetts 02139, USA}
@@ -92,7 +91,6 @@ Cambridge, Massachusetts 02139, USA}
 
 \email{stevenj@math.mit.edu}
 
-\selectlanguage{english}%
 
 \affiliation{Department of Mathematics, Massachusetts Institute of Technology,
 Cambridge, Massachusetts 02139, USA}
@@ -572,7 +570,7 @@ $D_{0}=D_{\mathrm{t}}(1+d)$ and $0<d\ll1$. We then expect the lasing
 mode slightly above threshold to be of the form
 \begin{align}
 \mathbf{E} & =\Gamma_{\mathrm{t}}^{-1}\sqrt{\gamma_{\parallel}d}\left(a_{1}\mathbf{E}_{1}+a_{2}\mathbf{E}_{2}\right)+d^{3/2}\delta\mathbf{E},\nonumber \\
-\omega & =\omega_{\mathrm{t}}+\omega_{1}d+\mathcal{O}(d^{2})\label{eq:lasing_ansatz}
+\omega & =\omega_{\mathrm{t}}+\omega_{1}d+O(d^{2})\label{eq:lasing_ansatz}
 \end{align}
 where the complex coefficients $a_{1,2}$ and the real eigenvalue
 shift $\omega_{1}$ are to be determined. The linear relation between
@@ -770,8 +768,8 @@ and show that the equations can be solved analytically to lowest order
 in $d$, and this is enough to evaluate near-threshold stability.
 We begin by noting that the matrices can be expanded as
 \begin{align}
-\mathsf{A} & =\mathsf{A}_{0}+\mathsf{A}_{1/2}\sqrt{d}+\mathsf{A}_{1}d+\mathcal{O}(d^{3/2})\nonumber \\
-\mathsf{B} & =\mathsf{B}_{0}+\mathsf{B}_{1}d+\mathcal{O}(d^{2})\label{eq:matrix expansion}\\
+\mathsf{A} & =\mathsf{A}_{0}+\mathsf{A}_{1/2}\sqrt{d}+\mathsf{A}_{1}d+O(d^{3/2})\nonumber \\
+\mathsf{B} & =\mathsf{B}_{0}+\mathsf{B}_{1}d+O(d^{2})\label{eq:matrix expansion}\\
 \mathsf{C} & =\mathsf{C}_{0}\nonumber 
 \end{align}
 (where $d$ is the relative pump increment above threshold, as introduced
@@ -781,8 +779,8 @@ lasing solutions $\mathbf{E}$ and other associated fields $\mathbf{P}$
 and $D$. As a result, the eigenvalues and eigenvectors can also be
 expanded this way:
 \begin{align}
-\mathsf{x} & =\mathsf{x}_{0}+\mathsf{x}_{1/2}\sqrt{d}+\mathsf{x}_{1}d+\mathcal{O}(d^{3/2})\nonumber \\
-\sigma & =\sigma_{0}+\sigma_{1/2}\sqrt{d}+\sigma_{1}d+\mathcal{O}(d^{3/2}).\label{eq:eigenpair expansion}
+\mathsf{x} & =\mathsf{x}_{0}+\mathsf{x}_{1/2}\sqrt{d}+\mathsf{x}_{1}d+O(d^{3/2})\nonumber \\
+\sigma & =\sigma_{0}+\sigma_{1/2}\sqrt{d}+\sigma_{1}d+O(d^{3/2}).\label{eq:eigenpair expansion}
 \end{align}
 We insert Eqs.~(\ref{eq:matrix expansion}) and (\ref{eq:eigenpair expansion})
 into Eq.~(\ref{eq:quadratic eigenproblem}) and solve order-by-order
@@ -1301,7 +1299,7 @@ we give a method that re-forces the degeneracy for pump strengths
 above threshold, if a machine precision degeneracy is desired.
 
 \begin{figure}
-\centerline{\includegraphics[scale=0.27]{redeps}$\quad$\includegraphics[scale=0.27]{imdeps}}\caption{(Color online) Dielectric perturbation $\delta\varepsilon$ obtained
+\centerline{\includegraphics[scale=0.1]{redeps}$\quad$\includegraphics[scale=0.1]{imdeps}}\caption{(Color online) Dielectric perturbation $\delta\varepsilon$ obtained
 by solving QP for threshold modes with $\ell=8$. The real part (left)
 has a dependence $\cos(2\ell\phi)$, while the imaginary part (right)
 is a more complicated function. \label{fig:even_cylinder_deps}}
@@ -1374,7 +1372,7 @@ then use Eq.~(\ref{eq:chiral definition}) as an initial guess for
 our numerical solver, and the intensity pattern of the resulting circulating
 solution is shown in Fig.~\ref{fig:phc_stable}. 
 \begin{figure}
-\centerline{\includegraphics[scale=0.27]{phc_depsxxR}$\qquad$\includegraphics[scale=0.27]{phc_depsxxI}}\caption{(Color online) Dielectric perturbation obtained from QP procedure
+\centerline{\includegraphics[scale=0.1]{phc_depsxxR}$\qquad$\includegraphics[scale=0.1]{phc_depsxxI}}\caption{(Color online) Dielectric perturbation obtained from QP procedure
 for hexagonal cavity. Since the mode is TE ($\mathbf{E}=E_{\mathrm{even}}\hat{\mathbf{x}}+E_{\mathrm{odd}}\hat{\mathbf{y}}$),
 we have allowed the perturbation to be a diagonally-anisotropic tensor,
 as in Eq.~(\ref{eq:tensor_delta_epsilon}). Shown here are the real
@@ -1590,9 +1588,9 @@ and the mode intensity, and we have
 \nabla\times\nabla\times\mathbf{E}=\omega^{2}\left[\varepsilon+D_{\mathrm{t}}\Gamma\left(1+d-\gamma_{\parallel}^{-1}\left|\Gamma\mathbf{E}\right|^{2}\right)\right]\mathbf{E}.\label{eq:expanded salt}
 \end{equation}
 Comparing with Eq.~(\ref{eq:threshold salt}) at threshold, we conclude
-that $\mathbf{E}=\mathcal{O}(\sqrt{d})$, and that the profile should
-be some linear combination of the threshold modes $\mathbf{E}_{1,2}$,
-as in Eq.~(\ref{eq:lasing_ansatz}). Inserting Eq.~(\ref{eq:lasing_ansatz})
+that $\mathbf{E}=O(\sqrt{d})$, and that the profile should be some
+linear combination of the threshold modes $\mathbf{E}_{1,2}$, as
+in Eq.~(\ref{eq:lasing_ansatz}). Inserting Eq.~(\ref{eq:lasing_ansatz})
 into Eq.~(\ref{eq:expanded salt}), noting that the zeroth-order
 terms vanish due to Eq.~(\ref{eq:threshold salt}), we obtain
 \begin{multline}
@@ -1761,8 +1759,8 @@ and
 \end{array}\right).
 \end{equation}
 We expand the matrices in powers of $\sqrt{d}$, as in Eq.~(\ref{eq:matrix expansion}),
-by noting that $\omega=\omega_{\mathrm{t}}+\omega_{1}d+\mathcal{O}(d^{2})$,
-$D_{0}=D_{\mathrm{t}}(1+d)$, and $\mathbf{E},\mathbf{P}=\mathcal{O}(\sqrt{d})$,
+by noting that $\omega=\omega_{\mathrm{t}}+\omega_{1}d+O(d^{2})$,
+$D_{0}=D_{\mathrm{t}}(1+d)$, and $\mathbf{E},\mathbf{P}=O(\sqrt{d})$,
 according to Eq.~(\ref{eq:lasing_ansatz}). Now expand Eq.~(\ref{eq:quadratic eigenproblem})
 and keep track of terms order-by-order using Eq.~(\ref{eq:eigenpair expansion}). 
 
@@ -1850,7 +1848,7 @@ by inspection of $\mathsf{A}_{0}$ that
 
 \subsection{First order}
 
-At the next order, $\mathcal{O}(d)$, Eq.~(\ref{eq:quadratic eigenproblem})
+At the next order, $O(d)$, Eq.~(\ref{eq:quadratic eigenproblem})
 is
 \begin{equation}
 (\mathsf{B}_{0}\sigma_{1}+\mathsf{A}_{1})\sum b_{k}\mathsf{v}_{k}+\mathsf{A}_{1/2}\mathsf{x}_{1/2}+\mathsf{A}_{0}\mathsf{x}_{1}=0.\label{eq:first order quadratic}
@@ -2257,7 +2255,7 @@ where
 \begin{equation}
 \mathsf{f}_{3/2}\equiv\mathsf{A}{}_{3/2}\mathsf{x}{}_{0}+\mathsf{A}{}_{1}\mathsf{x}{}_{1/2}+\mathsf{A}{}_{1/2}\mathsf{x}{}_{1}+\mathsf{B}_{0}\sigma_{1}\mathsf{x}{}_{1/2},
 \end{equation}
-and $\mathsf{f}_{3/2}$ is $\mathcal{O}(1)$ with respect to $\gamma_{\parallel}$,
+and $\mathsf{f}_{3/2}$ is $O(1)$ with respect to $\gamma_{\parallel}$,
 i.e. it goes to a constant as $\gamma_{\parallel}\rightarrow0$. Moving
 onto order $d^{2}$, we have
 \begin{multline}
@@ -2266,23 +2264,22 @@ onto order $d^{2}$, we have
 \end{multline}
 Multiplying both sides by $\mathsf{x}_{0}^{T}$ annihilates the $k=0$
 term, leaving only a single unknown $\sigma_{2}$ and a single term
-of $\mathcal{O}(\gamma_{\parallel}^{-1})$: $-\mathsf{A}_{1/2}\mathsf{x}_{3/2}=\gamma_{\parallel}^{-1}\mathsf{A}_{1/2}\mathsf{f}_{3/2}$.
+of $O(\gamma_{\parallel}^{-1})$: $-\mathsf{A}_{1/2}\mathsf{x}_{3/2}=\gamma_{\parallel}^{-1}\mathsf{A}_{1/2}\mathsf{f}_{3/2}$.
 We then have
 \begin{equation}
-\gamma_{\parallel}\sigma_{2}=\frac{\mathsf{x}_{0}^{T}\mathsf{A}_{1/2}\mathsf{f}_{3/2}}{\mathsf{x}_{0}^{T}\mathsf{B}_{0}\mathsf{x}_{0}}+\mathcal{O}(\gamma_{\parallel}).
+\gamma_{\parallel}\sigma_{2}=\frac{\mathsf{x}_{0}^{T}\mathsf{A}_{1/2}\mathsf{f}_{3/2}}{\mathsf{x}_{0}^{T}\mathsf{B}_{0}\mathsf{x}_{0}}+O(\gamma_{\parallel}).
 \end{equation}
 Carrying on to the next order results in $\sigma_{5/2}=0$ and $\mathsf{x}_{5/2}=-\gamma_{\parallel}^{-1}\mathsf{f}_{5/2}$,
-where now $\mathsf{f}_{5/2}=\mathcal{O}(\gamma_{\parallel}^{-1})$
-due to it including terms with $\sigma_{2}$ and $\mathsf{x}_{2}$.
-By continuing this process, we find that $\sigma_{m+\frac{1}{2}}=0$,
-and $\mathsf{x}_{m+\frac{1}{2}}$, $\sigma_{m+1}$, and $\mathsf{x}_{m+1}$
-are all $\mathcal{O}(\gamma_{\parallel}^{-m})$. This is made possible
-by the fact that the only place $\gamma_{\parallel}$ occurs in the
-entire problem is the very last matrix element of $\mathsf{A}_{0}$
+where now $\mathsf{f}_{5/2}=O(\gamma_{\parallel}^{-1})$ due to it
+including terms with $\sigma_{2}$ and $\mathsf{x}_{2}$. By continuing
+this process, we find that $\sigma_{m+\frac{1}{2}}=0$, and $\mathsf{x}_{m+\frac{1}{2}}$,
+$\sigma_{m+1}$, and $\mathsf{x}_{m+1}$ are all $O(\gamma_{\parallel}^{-m})$.
+This is made possible by the fact that the only place $\gamma_{\parallel}$
+occurs in the entire problem is the very last matrix element of $\mathsf{A}_{0}$
 in Eq.~(\ref{eq:A matrix}), as well as the fact that the $\mathsf{x}_{m+\frac{1}{2}}$
 and $\mathsf{x}_{m}$ have predictable nonzero patterns, due to the
 nonzero patterns of $\mathsf{A}_{m+\frac{1}{2}}$ being different
-from those of all the other matrices. Defining $s_{m+1}\equiv\gamma_{\parallel}^{m}\sigma_{m+1}=\mathcal{O}(1)$,
+from those of all the other matrices. Defining $s_{m+1}\equiv\gamma_{\parallel}^{m}\sigma_{m+1}=O(1)$,
 we obtain a full expansion for the exact Maxwell--Bloch eigenvalue
 (Eq.~(\ref{eq:eigenpair expansion})):
 \begin{equation}
@@ -3076,5 +3073,6 @@ most pump strengths of physical interest.
   Algebra}}}\ (\bibinfo  {publisher} {SIAM},\ \bibinfo {year}
   {1997})\BibitemShut {NoStop}%
 \end{thebibliography}%
+
 
 \end{document}

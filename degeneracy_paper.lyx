@@ -89,7 +89,6 @@ Liu
 \end_layout
 
 \begin_layout Author Email
-
 daveliu@mit.edu
 \end_layout
 
@@ -207,7 +206,6 @@ Johnson
 \end_layout
 
 \begin_layout Author Email
-
 stevenj@math.mit.edu
 \end_layout
 
@@ -5961,7 +5959,7 @@ centerline{
 \begin_inset Graphics
 	filename redeps.png
 	lyxscale 20
-	scale 27
+	scale 10
 
 \end_inset
 
@@ -5973,7 +5971,7 @@ centerline{
 \begin_inset Graphics
 	filename imdeps.png
 	lyxscale 20
-	scale 27
+	scale 10
 
 \end_inset
 
@@ -6589,7 +6587,7 @@ centerline{
 \begin_inset Graphics
 	filename phc_depsxxR.png
 	lyxscale 20
-	scale 27
+	scale 10
 
 \end_inset
 
@@ -6601,7 +6599,7 @@ centerline{
 \begin_inset Graphics
 	filename phc_depsxxI.png
 	lyxscale 20
-	scale 27
+	scale 10
 
 \end_inset
 
